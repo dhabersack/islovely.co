@@ -1,0 +1,9 @@
+- wrap_layout :scaffolding do
+  %article
+    %header
+      %h2= current_page.data.title
+
+      %p= current_page.data.date.strftime('%B %d, %Y')
+
+    = yield
+

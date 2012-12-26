@@ -1,0 +1,11 @@
+---
+title: Blog
+---
+
+- current_page.children.sort_by { |child| child.data.date }.reverse.each do |child|
+  %article
+    %header
+      %h3= link_to child.data.title, child.url
+      %p= child.data.date.strftime('%B %d, %Y')
+
+    %p= child.data.summary

@@ -1,0 +1,54 @@
+!!! 5
+%html{ lang: 'en' }
+  %head
+    %meta{ charset: 'utf-8' }
+    %meta{ name: 'description', content: "Portfolio of Dominik 'Dom' Habersack, a kickass freelancer based in Munich, Germany." }
+    %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1.0' }
+
+    -# always force latest IE rendering engine or request Chrome Frame
+    %meta{ content: 'IE=edge,chrome=1', 'http-equiv' => 'X-UA-Compatible' }
+
+    -# Use title if it is in the page's YAML frontmatter
+    %title #{ current_page.data.title + ' | ' unless data.page.page_class == 'home' }islovely
+
+    %link{ rel: 'stylesheet', type: 'text/css', href: '/assets/stylesheets/style.css' }
+
+    %link{ rel: 'shortcut icon', href: '/assets/images/theme/favicon.ico' }
+
+  %body{ class: data.page.page_class }
+    %header
+      %div
+        %h1= link_to 'islovely', '/'
+
+        %p Magnificent things made by Dom Habersack.
+
+    %nav
+      %ol
+        %li= link_to 'Home', '/'
+        %li= link_to 'Projects', '/projects/'
+        %li= link_to 'Blog', '/blog/'
+        %li= link_to 'Contact', '/contact/'
+
+    %section
+      = yield
+
+    %footer
+      %p
+        Copyright &copy; 2009-2012 #{ link_to 'Dominik Habersack', 'http://dominikhabersack.com/', title: 'hey this is cool' }<br>
+        = link_to 'Imprint', '/imprint/'
+
+    %script
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-13202125-5']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+      var ga = document.createElement('script'), s;
+      ga.type = 'text/javascript';
+      ga.async = true;
+      ga.src = ('https:' === document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
+      })();
+
+    -#= javascript_include_tag  'all'

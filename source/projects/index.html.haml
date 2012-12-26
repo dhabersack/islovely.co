@@ -1,0 +1,23 @@
+---
+page_class: projects
+title: Projects
+---
+
+%p
+  While I often support clients in their projects, the following websites have
+  been developed by myself from start to finish. Some, like my CSS-framework
+  #{ link_to 'Skeletal', 'http://dhabersack.github.com/skeletal/' }, are still
+  in active development.
+
+%p
+  Some non-website related projects can be found on
+  #{ link_to 'my GitHub profile', 'http://github.com/dhabersack/' }.
+
+- current_page.children.sort_by { |child| child.data.order }.reverse.each do |child|
+  %article
+    %h3= child.data.title
+
+    %p= child.data.summary
+
+    - %w(smartphone-to-tablet portrait-tablet default large-display).each do |breakpoint|
+      %img{ src: "#{ child.url }images/breakpoints/#{ breakpoint }.jpg", class: breakpoint }

@@ -1,0 +1,335 @@
+@import 'import.scss';
+@import 'base.scss';
+
+@font-face {
+  font: {
+    family: 'Lora';
+    style: normal;
+    weight: normal;
+  }
+  src: url('../fonts/Lora/regular.eot');
+  src: url('../fonts/Lora/regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Lora/regular.woff') format('woff'),
+       url('../fonts/Lora/regular.ttf') format('truetype'),
+       url('../fonts/Lora/regular.svg#LoraRegular') format('svg');
+}
+
+@font-face {
+  font: {
+    family: 'Lora';
+    style: italic;
+    weight: normal;
+  }
+  src: url('../fonts/Lora/italic.eot');
+  src: url('../fonts/Lora/italic.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Lora/italic.woff') format('woff'),
+       url('../fonts/Lora/italic.ttf') format('truetype'),
+       url('../fonts/Lora/italic.svg#LoraItalic') format('svg');
+}
+
+@font-face {
+  font: {
+    family: 'Lora';
+    style: normal;
+    weight: bold;
+  }
+  src: url('../fonts/Lora/bold.eot');
+  src: url('../fonts/Lora/bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Lora/bold.woff') format('woff'),
+       url('../fonts/Lora/bold.ttf') format('truetype'),
+       url('../fonts/Lora/bold.svg#LoraBold') format('svg');
+}
+
+@font-face {
+  font: {
+    family: 'Lora';
+    style: italic;
+    weight: bold;
+  }
+  src: url('../fonts/Lora/bold-italic.eot');
+  src: url('../fonts/Lora/bold-italic.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Lora/bold-italic.woff') format('woff'),
+       url('../fonts/Lora/bold-italic.ttf') format('truetype'),
+       url('../fonts/Lora/bold-italic.svg#LoraBoldItalic') format('svg');
+}
+
+@font-face {
+  font: {
+    family: 'Istok Web';
+    style: normal;
+    weight: normal;
+  }
+  src: url('../fonts/Istok-Web/regular.eot');
+  src: url('../fonts/Istok-Web/regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Istok-Web/regular.woff') format('woff'),
+       url('../fonts/Istok-Web/regular.ttf') format('truetype'),
+       url('../fonts/Istok-Web/regular.svg#IstokWebRegular') format('svg');
+}
+
+@font-face {
+  font: {
+    family: 'Istok Web';
+    style: italic;
+    weight: normal;
+  }
+  src: url('../fonts/Istok-Web/italic.eot');
+  src: url('../fonts/Istok-Web/italic.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Istok-Web/italic.woff') format('woff'),
+       url('../fonts/Istok-Web/italic.ttf') format('truetype'),
+       url('../fonts/Istok-Web/italic.svg#IstokWebItalic') format('svg');
+}
+
+@font-face {
+  font: {
+    family: 'Istok Web';
+    style: normal;
+    weight: bold;
+  }
+  src: url('../fonts/Istok-Web/bold.eot');
+  src: url('../fonts/Istok-Web/bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Istok-Web/bold.woff') format('woff'),
+       url('../fonts/Istok-Web/bold.ttf') format('truetype'),
+       url('../fonts/Istok-Web/bold.svg#IstokWebBold') format('svg');
+}
+
+@font-face {
+  font: {
+    family: 'Istok Web';
+    style: italic;
+    weight: bold;
+  }
+  src: url('../fonts/Istok-Web/bold-italic.eot');
+  src: url('../fonts/Istok-Web/bold-italic.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Istok-Web/bold-italic.woff') format('woff'),
+       url('../fonts/Istok-Web/bold-italic.ttf') format('truetype'),
+       url('../fonts/Istok-Web/bold-italic.svg#IstokWebBoldItalic') format('svg');
+}
+
+article {
+  > footer {
+    > p {
+      @include font-size(1.5em);
+
+      color: $color-neutral-darker;
+      font-style: italic;
+    }
+  }
+
+  > header {
+    > h2,
+    > h3,
+    > h4 {
+      margin-bottom: 0;
+    }
+
+    > p {
+      @include font-size(1.5em);
+
+      color: $color-neutral-darker;
+      font-style: italic;
+    }
+  }
+}
+
+body {
+  > footer {
+    padding-bottom: 0.6em;
+  }
+
+  > header {
+    background: $color-brand-lighter;
+    margin: 0;
+    padding: 1.8em 0;
+    text-align: center;
+    width: 100%;
+
+    @media (#{ $media-query-portrait-tablet }) {
+      padding: 2.4em 0;
+    }
+
+    @media (#{ $media-query-default }) {
+      padding: 3em 0;
+    }
+
+    @media (#{ $media-query-large-display }) {
+      padding: 3.6em 0;
+    }
+
+    a {
+      background: url('../images/theme/logo.png') no-repeat center 0.6em;
+      font-size: 2em;
+      padding: 3.6em 1em 1.05em;
+    }
+
+    > div {
+      @include grid($number-of-grid-columns, $margin: 0 auto, $padding: 1.2em 0);
+
+      position: relative;
+    }
+
+    h1 {
+      font-size: 1em;
+      margin-bottom: 2.4em;
+      position: relative;
+      z-index: 2;
+    }
+
+    p {
+      margin-bottom: 0;
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  > nav {
+    @include box-shadow(inset 0 1px 0px $color-brand-lighter);
+
+    background: $color-brand;
+    border: {
+      color: $color-brand-darker;
+      style: solid;
+      width: 0.1em 0 0.6em;
+    }
+    margin: 0 0 1.2em;
+    width: 100%;
+
+    @media (#{ $media-query-portrait-tablet }) {
+      margin-bottom: 1.8em;
+    }
+
+    @media (#{ $media-query-default }) {
+      margin-bottom: 2.4em;
+    }
+
+    @media (#{ $media-query-large-display }) {
+      margin-bottom: 3em;
+    }
+
+    a {
+      &,
+      &:visited {
+        color: $color-neutral-lightest;
+      }
+    }
+
+    > ol {
+      @include grid($number-of-grid-columns, $margin: 0 auto, $padding: 0.5em 0 0.6em);
+    }
+  }
+}
+
+.home {
+  article {
+    @include grid(8, $margin: 0 1gutter 1.8em 0, $media-queries: ('smartphone', 'smartphone-to-tablet', 'portrait-tablet'));
+    @include grid(4, $margin: 0 1gutter 3.6em 0, $media-queries: ('default', 'large-display'));
+
+    float: left;
+
+    &:nth-of-type(4n) {
+      margin-right: 0;
+    }
+
+    &:nth-of-type(4n + 1) {
+      clear: left;
+    }
+
+    @media (#{ $media-query-smartphone }) {
+      margin-bottom: 3.6em;
+    }
+
+    @media (#{ $media-query-smartphone-to-tablet }) {
+      &:nth-of-type(2n) {
+        margin-right: 0;
+      }
+
+      &:nth-of-type(2n + 1) {
+        clear: left;
+      }
+    }
+
+    @media (#{ $media-query-portrait-tablet }) {
+      &:nth-of-type(2n) {
+        margin-right: 0;
+      }
+
+      &:nth-of-type(2n + 1) {
+        clear: left;
+      }
+    }
+  }
+
+  h2 {
+    font-weight: bold;
+    margin-bottom: 1.125em; // 36px
+    text-align: center;
+    text-shadow: 0 3px 1px $color-neutral-lighter;
+
+    @media (#{ $media-query-portrait-tablet }) {
+      margin-bottom: 1.35em; // 54px
+    }
+
+    @media (#{ $media-query-default }) {
+      margin-bottom: 1.44em; // 72px
+    }
+
+    @media (#{ $media-query-large-display }) {
+      margin-bottom: 1.5em; // 90px
+    }
+  }
+
+  > nav {
+    margin-bottom: 3.6em;
+
+    @media (#{ $media-query-portrait-tablet }) {
+      margin-bottom: 5.4em;
+    }
+
+    @media (#{ $media-query-default }) {
+      margin-bottom: 7.2em;
+    }
+
+    @media (#{ $media-query-large-display }) {
+      margin-bottom: 9em;
+    }
+  }
+
+  p {
+    clear: both;
+  }
+}
+
+.projects {
+  article {
+    margin-bottom: 4.8em;
+    overflow: hidden;
+    padding-bottom: 2.4em;
+  }
+
+  img {
+    @include border-radius(0.2em);
+    @include box-shadow(0 0.1em 0.4em $color-neutral);
+
+    background: $color-neutral-darkest;
+    float: left;
+  }
+
+  p {
+    clear: both;
+  }
+
+  .smartphone-to-tablet {
+    @include grid(2, $margin: 0 1gutter 0.2em 5gutter, $padding: 0.5em);
+  }
+
+  .portrait-tablet {
+    @include grid(3, $margin: 0 1gutter 0.2em 0, $padding: 0.5em);
+  }
+
+  .default {
+    @include grid(4, $margin: 0 1gutter 0.2em 0, $padding: 0.5em);
+  }
+
+  .large-display {
+    @include grid(5, $margin: 0 0 0.2em, $padding: 0.5em);
+  }
+}

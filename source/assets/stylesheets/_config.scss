@@ -1,0 +1,74 @@
+@import 'colors.scss';
+@import 'fonts.scss';
+
+//--------------------------------//
+// COLORS                         //
+//--------------------------------//
+
+// color proxies
+$color-action:       $color-green;
+$color-alert:        $color-yellow;
+$color-brand:        $color-blue;
+$color-error:        $color-red;
+$color-highlight:    $color-yellow;
+$color-link:         $color-blue;
+$color-link-visited: $color-violet;
+$color-neutral:      $color-gray;
+
+
+//--------------------------------//
+// DEBUGGING                      //
+//--------------------------------//
+
+// debug mode displays a grid in the background (depending on the value of
+// `$number-of-grid-columns` set below)
+$is-in-debug-mode: false;
+
+
+//--------------------------------//
+// GRIDS                          //
+//--------------------------------//
+
+// number of columns that make up the horizontal grid; to make the math work out
+// even (and get background grids in debug-mode), set this to `12` or `16`
+$number-of-grid-columns: 16;
+
+// all vertical dimensions must be (or add up to) multiples of this base-height
+$vertical-grid-base-height: 0.6em;
+
+
+//--------------------------------//
+// TEXT                           //
+//--------------------------------//
+// font stacks
+$font-family-code:     $font-family-monospace;
+$font-family-headings: 'Istok Web', $font-family-sans-serif;
+$font-family-inputs:   $font-family-sans-serif;
+$font-family-quotes:   Lora, $font-family-serif;
+$font-family-content:  Lora, $font-family-serif;
+
+// typography: minimum ratio of `line-height` to `font-size`
+$minimum-line-height-to-font-size-ratio: 1.5;
+
+// available font-size and line-height combinations based on above defaults:
+//
+//   font-size  |   line-height    |    6px     |    10px
+// -------------+------------------+------------+------------
+//    10px      |  1.8em  /  18px  |  0.6em     |  1em
+//    12px      |  1.5em  /  18px  |  0.5em     |
+//    15px      |  1.6em  /  24px  |  0.4em     |
+//    16px      |  1.5em  /  24px  |  0.375em   |  0.625em
+//    20px      |  1.5em  /  30px  |  0.3em     |  0.5em
+//    24px      |  1.5em  /  36px  |  0.25em    |
+//    25px      |  1.68em /  42px  |  0.24em    |  0.4em
+//    30px      |  1.6em  /  48px  |  0.2em     |
+//    32px      |  1.5em  /  48px  |  0.1875em  |  0.3125em
+//    40px      |  1.5em  /  60px  |  0.15em    |  0.25em
+//    48px      |  1.5em  /  72px  |  0.125em   |
+//    50px      |  1.56em /  78px  |  0.12em    |  0.2em
+//    60px      |  1.5em  /  90px  |  0.1em     |
+//    75px      |  1.52em / 114px  |  0.08em    |
+//    80px      |  1.5em  / 120px  |  0.075em   |  0.125em
+//    96px      |  1.5em  / 144px  |  0.0625em  |
+//   100px      |  1.5em  / 150px  |  0.06em    |  0.1em
+//   120px      |  1.5em  / 180px  |  0.05em    |
