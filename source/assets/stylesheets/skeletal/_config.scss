@@ -40,12 +40,13 @@ $vertical-grid-base-height: 0.6em;
 //--------------------------------//
 // TEXT                           //
 //--------------------------------//
-// font stacks
+
+// font stack proxies
 $font-family-code:     $font-family-monospace;
 $font-family-headings: 'Istok Web', $font-family-sans-serif;
 $font-family-inputs:   $font-family-sans-serif;
-$font-family-quotes:   Lora, $font-family-serif;
-$font-family-content:  Lora, $font-family-serif;
+$font-family-quotes:   'Lora', $font-family-serif;
+$font-family-content:  'Lora', $font-family-serif;
 
 // typography: minimum ratio of `line-height` to `font-size`
 $minimum-line-height-to-font-size-ratio: 1.5;

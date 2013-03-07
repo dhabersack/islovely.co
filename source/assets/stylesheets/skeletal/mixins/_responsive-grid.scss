@@ -1,0 +1,232 @@
+// Set `margin`, `padding` and `width` for a container occupying a set number of
+// columns within the responsive grid.
+//
+// Parameters:
+// number-of-columns: number of columns this container should occupy
+// break-every-nth:   after how many items this container should break into a
+//                    new line
+// breakpoints:       list of breakpoints these settings should be used for; can
+//                    be one or more of 'small', 'medium', 'large' or
+//                    'extra-large'
+// center:            whether or not this container should be centered
+// last:              whether or not this element is the last on its level
+// margin-bottom:     the margin-bottom of this container
+// margin-top:        the margin-top of this container
+// offset:            number of columns this container should be offset to the
+//                    left; overwrites `$center` if set to anything but `0`
+// padding:           the padding of this container
+@mixin grid(
+    $number-of-columns,
+    $break-every-nth:   0,
+    $breakpoints:       ('small', 'medium', 'large', 'extra-large'),
+    $center:            false,
+    $last:              false,
+    $margin-bottom:     0,
+    $margin-top:        0,
+    $offset:            0,
+    $padding:           0
+) {
+  $does-include-small:       false;
+  $does-include-medium:      false;
+  $does-include-large:       false;
+  $does-include-extra-large: false;
+
+  @each $breakpoint in $breakpoints {
+         @if $breakpoint == 'small'       { $does-include-small:       true; }
+    @else if $breakpoint == 'medium'      { $does-include-medium:      true; }
+    @else if $breakpoint == 'large'       { $does-include-large:       true; }
+    @else if $breakpoint == 'extra-large' { $does-include-extra-large: true; }
+  }
+
+  // extract padding-values from parameter
+  $padding-top:    nth($padding, 1);
+  $padding-right:  $padding-top;
+  $padding-bottom: $padding-top;
+  $padding-left:   $padding-top;
+
+  // update padding-values
+  @if length($padding) >= 2 {
+    $padding-right: nth($padding, 2);
+    $padding-left:  $padding-right;
+  }
+
+  @if length($padding) >= 3 {
+    $padding-bottom: nth($padding, 3);
+  }
+
+  @if length($padding) >= 4 {
+    $padding-left: nth($padding, 4);
+  }
+
+  $horizontal-padding: $padding-right + $padding-left;
+
+  $margin-left: 0;
+
+  // overrride `$center` if `$offset` is given
+  @if $offset != 0 {
+    $center: false;
+  }
+
+  @if $does-include-small {
+    @media (#{ $media-query-small }) {
+      @if $offset != 0 {
+        $margin-left: grid-offset($offset, $grid-small-column-width, $grid-small-gutter-width);
+      }
+
+      $margin-right: $grid-small-gutter-width;
+
+      @if $last {
+        $margin-right: 0;
+      }
+
+      @if $center {
+        $margin-left: auto;
+        $margin-right: auto;
+      }
+
+      @include print-grid-values(
+        $media-query-small,
+        compress-directional-values($margin-top, $margin-right, $margin-bottom, $margin-left),
+        compress-directional-values($padding-top, $padding-right, $padding-bottom, $padding-left),
+        grid-width($number-of-columns, $grid-small-column-width, $grid-small-gutter-width, $horizontal-padding),
+        $break-every-nth
+      );
+    }
+  }
+
+  @if $does-include-medium {
+    @media (#{ $media-query-medium }) {
+      @if $offset != 0 {
+        $margin-left: grid-offset($offset, $grid-medium-column-width, $grid-medium-gutter-width);
+      }
+
+      $margin-right: $grid-medium-gutter-width;
+
+      @if $last {
+        $margin-right: 0;
+      }
+
+      @if $center {
+        $margin-left: auto;
+        $margin-right: auto;
+      }
+
+      @include print-grid-values(
+        $media-query-medium,
+        compress-directional-values($margin-top, $margin-right, $margin-bottom, $margin-left),
+        compress-directional-values($padding-top, $padding-right, $padding-bottom, $padding-left),
+        grid-width($number-of-columns, $grid-medium-column-width, $grid-medium-gutter-width, $horizontal-padding),
+        $break-every-nth
+      );
+    }
+  }
+
+  @if $does-include-large {
+    @media (#{ $media-query-large }) {
+      @if $offset != 0 {
+        $margin-left: grid-offset($offset, $grid-large-column-width, $grid-large-gutter-width);
+      }
+
+      $margin-right: $grid-large-gutter-width;
+
+      @if $last {
+        $margin-right: 0;
+      }
+
+      @if $center {
+        $margin-left: auto;
+        $margin-right: auto;
+      }
+
+      @include print-grid-values(
+        $media-query-large,
+        compress-directional-values($margin-top, $margin-right, $margin-bottom, $margin-left),
+        compress-directional-values($padding-top, $padding-right, $padding-bottom, $padding-left),
+        grid-width($number-of-columns, $grid-large-column-width, $grid-large-gutter-width, $horizontal-padding),
+        $break-every-nth
+      );
+    }
+  }
+
+  @if $does-include-extra-large {
+    @media (#{ $media-query-extra-large }) {
+      @if $offset != 0 {
+        $margin-left: grid-offset($offset, $grid-extra-large-column-width, $grid-extra-large-gutter-width);
+      }
+
+      $margin-right: $grid-extra-large-gutter-width;
+
+      @if $last {
+        $margin-right: 0;
+      }
+
+      @if $center {
+        $margin-left: auto;
+        $margin-right: auto;
+      }
+
+      @include print-grid-values(
+        $media-query-extra-large,
+        compress-directional-values($margin-top, $margin-right, $margin-bottom, $margin-left),
+        compress-directional-values($padding-top, $padding-right, $padding-bottom, $padding-left),
+        grid-width($number-of-columns, $grid-extra-large-column-width, $grid-extra-large-gutter-width, $horizontal-padding),
+        $break-every-nth
+      );
+    }
+  }
+
+  // default, one-column, mobile-first layout
+  margin: compress-directional-values($margin-top, 0, $margin-bottom);
+  padding: compress-directional-values($padding-top, 0, $padding-bottom);
+  width: 100%;
+}
+
+@mixin print-grid-values(
+    $breakpoint,
+    $margin,
+    $padding,
+    $width,
+    $break-every-nth
+) {
+  @media (#{ $breakpoint }) {
+    @if $break-every-nth != 0 {
+      float: left;
+
+      &:nth-of-type(#{ $break-every-nth }n) {
+        margin-right: 0;
+      }
+
+      &:nth-of-type(#{ $break-every-nth }n + 1) {
+        clear: both;
+      }
+    }
+
+    margin: $margin;
+    padding: $padding;
+    width: $width;
+  }
+}
+
+@function grid-offset($number-of-columns, $column-width, $gutter-width) {
+  @return $number-of-columns * ($column-width + $gutter-width);
+}
+
+@function grid-width($number-of-columns, $column-width, $gutter-width, $horizontal-padding) {
+  @return $number-of-columns * $column-width + ($number-of-columns - 1) * $gutter-width - $horizontal-padding;
+}
+
+// Shortens top-, right-, bottom- and left-values to their shorthand
+// representation.
+@function compress-directional-values($top: 0, $right: 0, $bottom: 0, $left: 0) {
+  @if $top == $right and $right == $bottom and $bottom == $left {
+    @return $top;
+  } @else if $right == $left {
+    @if $top == $bottom {
+      @return $top $right;
+    } @else {
+      @return $top $right $bottom;
+    }
+  } @else {
+    @return $top $right $bottom $left;
+  }
+}
