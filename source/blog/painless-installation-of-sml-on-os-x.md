@@ -45,7 +45,7 @@ Now you're all set and can install SML/NJ through Homebrew:
 
 Once SML is installed, you need to tell the operating system where to look for it. Edit your `PATH` to include `/usr/local/Cellar/smlnj/110.74/libexec/bin`. (Note that the exact path to use has been given to you after the installation, so yours might be slightly different from this one.)
 
-First, open your `.profile` in your text editor of choice:
+First, open your profile in your text editor of choice:
 
     $ open -t ~/.bash_profile
 
@@ -63,9 +63,9 @@ just add the new path after it like so:
 
 Mind the `:` after `/opt/local/sbin`, which is required to separate two paths.
 
-You can now reload your `.profile` with:
+You can now reload your profile with:
 
-    $ source ~/.profile
+    $ source ~/.bash_profile
 
 Your new `PATH` will also be loaded every time you open a new terminal session.
 
