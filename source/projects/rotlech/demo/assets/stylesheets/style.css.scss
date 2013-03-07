@@ -1,0 +1,512 @@
+@import 'skeletal/skeletal.scss';
+
+@include font-face(
+  $name: 'Amaranth',
+  $path: '../fonts/Amaranth/',
+  $eot:  'regular.eot',
+  $woff: 'regular.woff',
+  $ttf:  'regular.ttf',
+  $svg:  'regular.svg#AmaranthRegular'
+);
+
+@include font-face(
+  $name:  'Amaranth',
+  $path:  '../fonts/Amaranth/',
+  $eot:   'italic.eot',
+  $woff:  'italic.woff',
+  $ttf:   'italic.ttf',
+  $svg:   'italic.svg#AmaranthItalic',
+  $style: italic
+);
+
+@include font-face(
+  $name:  'Amaranth',
+  $path:  '../fonts/Amaranth/',
+  $eot:   'bold.eot',
+  $woff:  'bold.woff',
+  $ttf:   'bold.ttf',
+  $svg:   'bold.svg#AmaranthBold',
+  $weight: bold
+);
+
+@include font-face(
+  $name:  'Amaranth',
+  $path:  '../fonts/Amaranth/',
+  $eot:   'bold-italic.eot',
+  $woff:  'bold-italic.woff',
+  $ttf:   'bold-italic.ttf',
+  $svg:   'bold-italic.svg#AmaranthBoldItalic',
+  $style:  italic,
+  $weight: bold
+);
+
+@include font-face(
+  $name: 'Entypo',
+  $path: '../fonts/Entypo/',
+  $eot:  'regular.eot',
+  $woff: 'regular.woff',
+  $ttf:  'regular.ttf',
+  $svg:  'regular.svg#EntypoRegular'
+);
+
+@include font-face(
+  $name: 'Lora',
+  $path: '../fonts/Lora/',
+  $eot:  'regular.eot',
+  $woff: 'regular.woff',
+  $ttf:  'regular.ttf',
+  $svg:  'regular.svg#LoraRegular'
+);
+
+@include font-face(
+  $name:  'Lora',
+  $path:  '../fonts/Lora/',
+  $eot:   'italic.eot',
+  $woff:  'italic.woff',
+  $ttf:   'italic.ttf',
+  $svg:   'italic.svg#LoraItalic',
+  $style: italic
+);
+
+@include font-face(
+  $name:   'Lora',
+  $path:   '../fonts/Lora/',
+  $eot:    'bold.eot',
+  $woff:   'bold.woff',
+  $ttf:    'bold.ttf',
+  $svg:    'bold.svg#LoraBold',
+  $weight: bold
+);
+
+@include font-face(
+  $name:   'Lora',
+  $path:   '../fonts/Lora/',
+  $eot:    'bold-italic.eot',
+  $woff:   'bold-italic.woff',
+  $ttf:    'bold-italic.ttf',
+  $svg:    'bold-italic.svg#LoraBoldItalic',
+  $style:  italic,
+  $weight: bold
+);
+
+@include font-face(
+  $name:  'Pacifico',
+  $path:  '../fonts/Pacifico/',
+  $eot:   'regular.eot',
+  $woff:  'regular.woff',
+  $ttf:   'regular.ttf',
+  $svg:   'regular.svg#PacificoRegular'
+);
+
+body {
+  margin: 0;
+  width: 100%;
+
+  > footer {
+    @include box-shadow(inset 0 0 0.4em $color-neutral);
+
+    background: $color-neutral-lighter;
+    border-top: 0.1em solid $color-neutral;
+    margin: 1.1em 0 0 0;
+    padding: 0;
+    width: 100%;
+
+    > div {
+      @include grid($number-of-grid-columns, $center: true, $padding: 1.2em 0);
+
+      padding: 1.2em ($grid-small-gutter-width / 2);
+      width: $grid-small-column-width;
+    }
+
+    p {
+      @include font-size(1.2em);
+
+      color: $color-neutral-darker;
+      float: right;
+      margin-bottom: 1.2em;
+      text-shadow: 0 1px 2px $color-neutral-lightest;
+
+      &:last-of-type {
+        text-align: left;
+
+        @media (#{ $media-query-medium }) {
+          float: left;
+        }
+
+        @media (#{ $media-query-large }) {
+          float: left;
+        }
+
+        @media (#{ $media-query-extra-large }) {
+          float: left;
+        }
+      }
+    }
+  }
+
+  > header {
+    @include grid($number-of-grid-columns, $center: true);
+
+    overflow: hidden;
+
+    @media (#{ $media-query-extra-small }) {
+      padding: 0 $grid-extra-small-gutter-width;
+      width: $grid-extra-small-column-width;
+    }
+  }
+
+  nav {
+    float: right;
+    font-family: Lora, $font-family-content;
+    width: auto;
+
+    @media (#{ $media-query-medium }) {
+      margin-top: 1.8em;
+    }
+
+    @media (#{ $media-query-large }) {
+      margin-top: 2.7em;
+    }
+
+    @media (#{ $media-query-extra-large }) {
+      margin-top: 3.3em;
+    }
+
+    li {
+      margin-right: 1.5em;
+    }
+  }
+}
+
+button {
+  @include background-gradient($color-highlight-lighter, $color-highlight);
+  @include border-radius(0.125em);
+
+  border-color: $color-highlight-lightest $color-highlight-darker $color-highlight-darker $color-highlight-lightest;
+  color: $color-highlight-darkest;
+  display: block;
+  float: none;
+  height: 2.75em; // 44px
+  line-height: 2.75em; // 44px
+  margin: 1.5em auto 0.375em;
+  padding: 0 1.5em; // 0 24px
+  text-shadow: 0 1px 2px $color-highlight-lightest;
+
+  &:active {
+    @include box-shadow(inset 0 0.0625em 0.25em $color-highlight-darker);
+
+    background: $color-highlight;
+    border-color: $color-highlight-darker;
+    position: relative;
+    top: 1px;
+  }
+
+  &::before {
+    content: "x"; // download-icon
+    float: left;
+    font: {
+      family: Entypo;
+      size: 3em; // 48px
+    }
+    margin-right: 5px;
+  }
+}
+
+del {
+  color: $color-neutral;
+}
+
+form {
+  p {
+    text-align: center;
+    text-shadow: 0 1px 2px $color-neutral-darkest;
+  }
+}
+
+h1 {
+  color: $color-brand;
+  float: left;
+  font: {
+    family: Pacifico, $font-family-headings;
+    weight: normal;
+  }
+  margin-bottom: 0;
+  text-shadow: 0 1px 2px $color-neutral;
+
+  > a {
+    text-decoration: none;
+  }
+}
+
+ul {
+  list-style-position: outside;
+}
+
+.icon-heart {
+  font-family: Entypo;
+}
+
+#about {
+  @include grid($number-of-grid-columns, $padding: 2.4em 0, $center: true);
+
+  @media (#{ $media-query-extra-small }) {
+    padding: 0 $grid-extra-small-gutter-width;
+    width: $grid-extra-small-column-width;
+  }
+}
+
+#documentation {
+  @media (#{ $media-query-extra-small }) {
+    padding: 0 ($grid-extra-small-gutter-width / 2);
+    width: $grid-small-column-width;
+  }
+
+  img {
+    @include border-radius(0.2em);
+
+    display: block;
+    margin-bottom: 0;
+    margin: 0 2% 1.2em;
+    width: 96%;
+
+    @media (#{ $media-query-medium }) {
+      margin: 0 1.6% 1.2em;
+      width: 96.8%;
+    }
+
+    @media (#{ $media-query-large }) {
+      margin: 0 1.3% 1.2em;
+      width: 97.4%;
+    }
+
+    @media (#{ $media-query-extra-large }) {
+      margin: 0 1% 1.2em;
+      width: 98%;
+    }
+  }
+}
+
+#download-server {
+  button {
+    @include background-gradient($color-action-lighter, $color-action);
+
+    border-color: $color-action-lightest $color-action-darker $color-action-darker $color-action-lightest;
+    color: $color-action-darkest;
+    text-shadow: 0 1px 2px $color-action-lightest;
+
+    &:active {
+      @include box-shadow(inset 0 0.0625em 0.25em $color-action-darker);
+
+      background: $color-action;
+      border-color: $color-action-darker;
+    }
+
+    &::before {
+      content: "@"; // gear-icon
+    }
+  }
+}
+
+#hero {
+  background: url('../images/theme/background-hero.png') center top;
+  border: {
+     color: $color-neutral-darkest;
+     style: solid;
+     width: 0.1em 0;
+  }
+  color: $color-neutral-lightest;
+  padding-bottom: 4.1em;
+  text-shadow: 0 1px 2px $color-neutral-darker;
+
+  @media (#{ $media-query-extra-small }) {
+    padding: 1.2em $grid-extra-small-gutter-width;
+    width: $grid-extra-small-column-width;
+  }
+
+  > div {
+    @include grid($number-of-grid-columns, $padding: 2.4em 0, $center: true);
+
+    overflow: hidden;
+  }
+
+  h3 {
+    @include font-size(2em);
+
+    margin: 1.8em 0 0.6em; // 36px 0 12px
+
+    @media (#{ $media-query-large }) {
+      @include font-size(2.4em);
+
+      margin: 1.5em 0 0.5em; // 36px 0 12px
+    }
+
+    @media (#{ $media-query-extra-large }) {
+      @include font-size(3em);
+
+      margin: 1.2em 0 0.4em; // 36px 0 12px
+    }
+  }
+
+  img {
+    @include border-radius(0.2em);
+    @include grid($number-of-grid-columns, $breakpoints: ('small'));
+    @include grid(8, $last: true, $breakpoints: ('medium', 'large', 'extra-large'));
+
+    float: right;
+  }
+
+  section {
+    @include grid($number-of-grid-columns, $breakpoints: ('small'));
+    @include grid(8, $breakpoints: ('medium', 'large', 'extra-large'));
+
+    float: left;
+  }
+}
+
+#introduction {
+  @include grid($number-of-grid-columns, $padding: 2.4em 0, $center: true);
+
+  @media (#{ $media-query-extra-small }) {
+    padding: 0 $grid-extra-small-gutter-width;
+    width: $grid-extra-small-column-width;
+  }
+
+  li {
+    @include grid(8, $breakpoints: ('medium'), $break-every-nth: 2);
+    @include grid(4, $breakpoints: ('large', 'extra-large'), $break-every-nth: 4);
+
+    float: left;
+    font-size: 1em;
+  }
+
+  > ul {
+    list-style: none;
+    overflow: hidden;
+  }
+}
+
+#team {
+  @include box-shadow(inset 0 0 0.4em $color-neutral-darkest);
+
+  background: url('../images/theme/background.png') center top;
+  border: {
+     color: $color-neutral-darkest;
+     style: solid;
+     width: 0.1em 0;
+  }
+  color: $color-neutral-lightest;
+  padding-bottom: 4.1em;
+  width: 100%;
+
+  @media (#{ $media-query-extra-small }) {
+    padding: 1.2em ($grid-extra-small-gutter-width / 2);
+    width: $grid-extra-small-column-width;
+  }
+
+  > div {
+    @include grid($number-of-grid-columns, $padding: 2.4em 0, $center: true);
+
+    > p {
+      text-shadow: 0 1px 2px $color-neutral-darkest;
+    }
+  }
+
+  h3 {
+    text-shadow: 0 1px 2px $color-neutral-darkest;
+  }
+
+  h4 {
+    @include font-size(1.6em);
+
+    font-family: $font-family-content;
+  }
+
+  header {
+    border-top: 0.1em solid $color-neutral-lighter;
+    padding: 0.5em 0.5em 0.6em;
+  }
+
+  img {
+    @include border-radius(0.2em 0.2em 0 0);
+
+    width: 100%;
+  }
+
+  li {
+    @include border-radius(0.2em);
+    @include box-shadow(0 0.1em 0.2em $color-neutral-darkest);
+    @include grid(6, $margin-bottom: 0.6em, $breakpoints: ('small'));
+    @include grid(4, $margin-bottom: 1.2em, $breakpoints: ('medium'));
+    @include grid(3, $margin-bottom: 1.8em, $breakpoints: ('large', 'extra-large'));
+
+    background: $color-neutral-lightest;
+    color: $color-neutral-darkest;
+    float: left;
+    font-size: 1em;
+    margin-bottom: 0.6em;
+    position: relative;
+
+    @media (#{ $media-query-small }) {
+      &:nth-of-type(2n + 1) {
+        @include grid(6, $margin-bottom: 0.6em, $offset: 2, $breakpoints: ('small'));
+      }
+
+      &:nth-of-type(7) {
+        @include grid(6, $margin-bottom: 0.6em, $offset: 5, $breakpoints: ('small'));
+
+        clear: left;
+      }
+    }
+
+    @media (#{ $media-query-medium }) {
+      &:nth-of-type(3n + 1) {
+        @include grid(4, $margin-bottom: 1.2em, $offset: 2, $breakpoints: ('medium'));
+      }
+
+      &:nth-of-type(7) {
+        @include grid(4, $margin-bottom: 1.2em, $offset: 6, $breakpoints: ('medium'));
+
+        clear: left;
+      }
+    }
+
+    @media (#{ $media-query-large }) {
+      &:nth-of-type(4n + 1) {
+        @include grid(3, $margin-bottom: 1.2em, $offset: 2, $breakpoints: ('large'));
+      }
+
+      &:nth-of-type(5) {
+        @include grid(3, $margin-bottom: 1.2em, $offset: 3.5, $breakpoints: ('large'));
+
+        clear: left;
+      }
+    }
+
+    @media (#{ $media-query-extra-large }) {
+      &:nth-of-type(4n + 1) {
+        @include grid(3, $margin-bottom: 1.8em, $offset: 2, $breakpoints: ('extra-large'));
+      }
+
+      &:nth-of-type(5) {
+        @include grid(3, $margin-bottom: 1.8em, $offset: 3.5, $breakpoints: ('extra-large'));
+
+        clear: left;
+      }
+    }
+  }
+
+  ul {
+    @include grid($number-of-grid-columns, $padding: 0.6em 0, $center: true);
+
+    color: $color-neutral-darkest;
+    list-style: none;
+    overflow: hidden;
+
+    p {
+      @include font-size(1.2em);
+
+      color: $color-neutral-darker;
+      margin-bottom: 0;
+    }
+  }
+}
