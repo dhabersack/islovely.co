@@ -1,0 +1,9 @@
+- wrap_layout :scaffolding do
+  %h2= current_page.data.title
+
+  %section.project-description
+    = yield
+
+  %aside
+    - %w(extra-large large medium small).each do |breakpoint|
+      %img{ src: "#{ current_page.url }images/breakpoints/#{ breakpoint }.jpg" }

@@ -1,0 +1,658 @@
+@import 'skeletal/skeletal.scss';
+
+@font-face {
+  font: {
+    family: Amaranth;
+    style: normal;
+    weight: normal;
+  }
+  src: url('../fonts/Amaranth/regular.eot');
+  src: url('../fonts/Amaranth/regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Amaranth/regular.woff') format('woff'),
+       url('../fonts/Amaranth/regular.ttf') format('truetype'),
+       url('../fonts/Amaranth/regular.svg#AmaranthRegular') format('svg');
+}
+
+@font-face {
+  font: {
+    family: Amaranth;
+    style: italic;
+    weight: normal;
+  }
+  src: url('../fonts/Amaranth/italic.eot');
+  src: url('../fonts/Amaranth/italic.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Amaranth/italic.woff') format('woff'),
+       url('../fonts/Amaranth/italic.ttf') format('truetype'),
+       url('../fonts/Amaranth/italic.svg#AmaranthItalic') format('svg');
+}
+
+@font-face {
+  font: {
+    family: Amaranth;
+    style: normal;
+    weight: bold;
+  }
+  src: url('../fonts/Amaranth/bold.eot');
+  src: url('../fonts/Amaranth/bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Amaranth/bold.woff') format('woff'),
+       url('../fonts/Amaranth/bold.ttf') format('truetype'),
+       url('../fonts/Amaranth/bold.svg#AmaranthBold') format('svg');
+}
+
+@font-face {
+  font: {
+    family: Amaranth;
+    style: italic;
+    weight: bold;
+  }
+  src: url('../fonts/Amaranth/bold-italic.eot');
+  src: url('../fonts/Amaranth/bold-italic.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Amaranth/bold-italic.woff') format('woff'),
+       url('../fonts/Amaranth/bold-italic.ttf') format('truetype'),
+       url('../fonts/Amaranth/bold-italic.svg#AmaranthBoldItalic') format('svg');
+}
+
+@font-face {
+  font: {
+    family: Entypo;
+    style: normal;
+    weight: normal;
+  }
+  src: url('../fonts/Entypo/regular.eot');
+  src: url('../fonts/Entypo/regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Entypo/regular.woff') format('woff'),
+       url('../fonts/Entypo/regular.ttf') format('truetype'),
+       url('../fonts/Entypo/regular.svg#EntypoRegular') format('svg');
+}
+
+@font-face {
+  font: {
+    family: Lora;
+    style: normal;
+    weight: normal;
+  }
+  src: url('../fonts/Lora/regular.eot');
+  src: url('../fonts/Lora/regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Lora/regular.woff') format('woff'),
+       url('../fonts/Lora/regular.ttf') format('truetype'),
+       url('../fonts/Lora/regular.svg#LoraRegular') format('svg');
+}
+
+@font-face {
+  font: {
+    family: Lora;
+    style: italic;
+    weight: normal;
+  }
+  src: url('../fonts/Lora/italic.eot');
+  src: url('../fonts/Lora/italic.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Lora/italic.woff') format('woff'),
+       url('../fonts/Lora/italic.ttf') format('truetype'),
+       url('../fonts/Lora/italic.svg#LoraItalic') format('svg');
+}
+
+@font-face {
+  font: {
+    family: Lora;
+    style: normal;
+    weight: bold;
+  }
+  src: url('../fonts/Lora/bold.eot');
+  src: url('../fonts/Lora/bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Lora/bold.woff') format('woff'),
+       url('../fonts/Lora/bold.ttf') format('truetype'),
+       url('../fonts/Lora/bold.svg#LoraBold') format('svg');
+}
+
+@font-face {
+  font: {
+    family: Lora;
+    style: italic;
+    weight: bold;
+  }
+  src: url('../fonts/Lora/bold-italic.eot');
+  src: url('../fonts/Lora/bold-italic.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Lora/bold-italic.woff') format('woff'),
+       url('../fonts/Lora/bold-italic.ttf') format('truetype'),
+       url('../fonts/Lora/bold-italic.svg#LoraBoldItalic') format('svg');
+}
+
+@font-face {
+    font: {
+      family: Pacifico;
+      style: normal;
+      weight: normal;
+    }
+    src: url('../fonts/Pacifico/regular.eot');
+    src: url('../fonts/Pacifico/regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Pacifico/regular.woff') format('woff'),
+         url('../fonts/Pacifico/regular.ttf') format('truetype'),
+         url('../fonts/Pacifico/regular.svg#PacificoRegular') format('svg');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+  > footer {
+    @include box-shadow(inset 0 0 0.4em $color-neutral);
+
+    background: $color-neutral-lighter;
+    border-top: 0.1em solid $color-neutral;
+    margin: 1.1em 0 0 0;
+    padding: 0;
+    width: 100%;
+
+    > div {
+      @include grid($number-of-grid-columns, $margin: 0 auto, $padding: 1.2em 0);
+
+      @media (#{ $media-query-smartphone }) {
+        padding: 1.2em ($grid-smartphone-gutter-width / 2);
+        width: $grid-smartphone-column-width;
+      }
+    }
+
+    p {
+      @include font-size(1.2em);
+
+      color: $color-neutral-darker;
+      float: right;
+      margin-bottom: 1.2em;
+      text-shadow: 0 1px 2px $color-neutral-lightest;
+
+      &:last-of-type {
+        float: left;
+        text-align: left;
+
+        @media (#{ $media-query-smartphone }) {
+          clear: both;
+        }
+
+        @media (#{ $media-query-smartphone-to-tablet }) {
+          clear: both;
+        }
+      }
+    }
+  }
+
+  > header {
+    @media (#{ $media-query-smartphone }) {
+      padding: 0 ($grid-smartphone-gutter-width / 2);
+      width: $grid-smartphone-column-width;
+    }
+  }
+
+  nav {
+    float: right;
+    font-family: Lora, $font-family-content;
+    width: auto;
+
+    @media (#{ $media-query-smartphone }) {
+      clear: both;
+      float: none;
+    }
+
+    @media (#{ $media-query-smartphone-to-tablet }) {
+      clear: both;
+      float: none;
+    }
+
+    @media (#{ $media-query-portrait-tablet }) {
+      margin-top: 1.8em;
+    }
+
+    @media (#{ $media-query-default }) {
+      margin-top: 2.7em;
+    }
+
+    @media (#{ $media-query-large-display }) {
+      margin-top: 3.3em;
+    }
+
+    li {
+      margin-right: 1.5em;
+    }
+  }
+}
+
+button {
+  @include background-gradient($color-highlight-lighter, $color-highlight);
+  @include border-radius(0.125em);
+
+  border-color: $color-highlight-lightest $color-highlight-darker $color-highlight-darker $color-highlight-lightest;
+  color: $color-highlight-darkest;
+  display: block;
+  float: none;
+  height: 2.75em; // 44px
+  line-height: 2.75em; // 44px
+  margin: 1.5em auto 0.375em;
+  padding: 0 1.5em; // 0 24px
+  text-shadow: 0 1px 2px $color-highlight-lightest;
+
+  &:active {
+    @include box-shadow(inset 0 0.0625em 0.25em $color-highlight-darker);
+
+    background: $color-highlight;
+    border-color: $color-highlight-darker;
+    position: relative;
+    top: 1px;
+  }
+
+  &::before {
+    content: "x"; // download-icon
+    float: left;
+    font: {
+      family: Entypo;
+      size: 3em; // 48px
+    }
+    margin-right: 5px;
+  }
+}
+
+del {
+  color: $color-neutral;
+}
+
+form {
+  p {
+    text-align: center;
+    text-shadow: 0 1px 2px $color-neutral-darkest;
+  }
+}
+
+h1 {
+  color: $color-brand;
+  float: left;
+  font: {
+    family: Pacifico, $font-family-headings;
+    weight: normal;
+  }
+  margin-bottom: 0;
+  text-shadow: 0 1px 2px $color-neutral;
+
+  > a {
+    text-decoration: none;
+  }
+}
+
+ul {
+  list-style-position: outside;
+}
+
+.icon-heart {
+  font-family: Entypo;
+}
+
+#changelog,
+#documentation,
+#hero,
+#introduction,
+#team {
+  @media (#{ $media-query-smartphone }) {
+    padding: 2.4em 0;
+  }
+
+  @media (#{ $media-query-smartphone-to-tablet }) {
+    padding: 3em 0;
+  }
+
+  @media (#{ $media-query-portrait-tablet }) {
+    padding: 3.6em 0;
+  }
+
+  @media (#{ $media-query-default }) {
+    padding: 4.2em 0;
+  }
+
+  @media (#{ $media-query-large-display }) {
+    padding: 4.8em 0;
+  }
+}
+
+#changelog {
+  @media (#{ $media-query-smartphone }) {
+    padding: 0 ($grid-smartphone-gutter-width / 2);
+    width: $grid-smartphone-column-width;
+  }
+
+  dd {
+    @include grid($number-of-grid-columns, $margin: 0 0 1.8em, $media-queries: ('smartphone', 'smartphone-to-tablet'));
+    @include grid(12, $margin: 0 0 2.4em, $media-queries: ('portrait-tablet', 'default', 'large-display'));
+
+    float: right;
+    font-size: 1em;
+    padding: 0;
+    position: relative;
+
+    > p {
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  dl {
+    overflow: hidden;
+  }
+
+  dt {
+    @include grid($number-of-grid-columns, $margin: 0 0 1.2em, $padding: 0.4em 0 0, $media-queries: ('smartphone', 'smartphone-to-tablet'));
+    @include grid(4, $margin: 0 0 1.2em, $padding: 0.4em 0 0, $media-queries: ('portrait-tablet', 'default', 'large-display'));
+
+    clear: both;
+    float: left;
+    font-size: 1em;
+    text-align: right;
+
+    @media (#{ $media-query-smartphone }) {
+      margin-bottom: 0.6em;
+      text-align: left;
+    }
+
+    @media (#{ $media-query-smartphone-to-tablet }) {
+      margin-bottom: 0.6em;
+      text-align: left;
+    }
+  }
+
+  h4 {
+    font-size: 1.8em;
+    line-height: 1em;
+
+    @media (#{ $media-query-default }) {
+      font-size: 2.5em;
+    }
+
+    @media (#{ $media-query-large-display }) {
+      font-size: 3em;
+    }
+  }
+}
+
+#documentation {
+  @media (#{ $media-query-smartphone }) {
+    padding: 0 ($grid-smartphone-gutter-width / 2);
+    width: $grid-smartphone-column-width;
+  }
+
+  img {
+    @include border-radius(0.2em);
+
+    display: block;
+    margin-bottom: 0;
+    margin: 0 2% 1.2em;
+    width: 96%;
+
+    @media (#{ $media-query-smartphone-to-tablet }) {
+    }
+
+    @media (#{ $media-query-portrait-tablet }) {
+      margin: 0 1.6% 1.2em;
+      width: 96.8%;
+    }
+
+    @media (#{ $media-query-default }) {
+      margin: 0 1.3% 1.2em;
+      width: 97.4%;
+    }
+
+    @media (#{ $media-query-large-display }) {
+      margin: 0 1% 1.2em;
+      width: 98%;
+    }
+  }
+}
+
+#download-client {}
+
+#download-server {
+  button {
+    @include background-gradient($color-action-lighter, $color-action);
+
+    border-color: $color-action-lightest $color-action-darker $color-action-darker $color-action-lightest;
+    color: $color-action-darkest;
+    text-shadow: 0 1px 2px $color-action-lightest;
+
+    &:active {
+      @include box-shadow(inset 0 0.0625em 0.25em $color-action-darker);
+
+      background: $color-action;
+      border-color: $color-action-darker;
+    }
+
+    &::before {
+      content: "@"; // gear-icon
+    }
+  }
+}
+
+#hero {
+  background: url('../images/theme/background-hero.png') center top;
+  border: {
+     color: $color-neutral-darkest;
+     style: solid;
+     width: 0.1em 0;
+  }
+  color: $color-neutral-lightest;
+  padding-bottom: 4.1em;
+  text-shadow: 0 1px 2px $color-neutral-darker;
+  width: 100%;
+
+  @media (#{ $media-query-smartphone }) {
+    padding: 1.2em ($grid-smartphone-gutter-width / 2);
+    width: $grid-smartphone-column-width;
+  }
+
+  > div {
+    @include grid($number-of-grid-columns, $margin: 0 auto);
+
+    overflow: hidden;
+  }
+
+  h3 {
+    @include font-size(2em);
+
+    margin: 1.8em 0 0.6em; // 36px 0 12px
+
+    @media (#{ $media-query-default }) {
+      @include font-size(2.4em);
+
+      margin: 1.5em 0 0.5em; // 36px 0 12px
+    }
+
+    @media (#{ $media-query-large-display }) {
+      @include font-size(3em);
+
+      margin: 1.2em 0 0.4em; // 36px 0 12px
+    }
+  }
+
+  img {
+    @include border-radius(0.2em);
+    @include grid($number-of-grid-columns, $margin: 0, $media-queries: ('smartphone', 'smartphone-to-tablet'));
+    @include grid(8, $margin: 0, $media-queries: ('portrait-tablet', 'default', 'large-display'));
+
+    float: right;
+  }
+
+  section {
+    @include grid($number-of-grid-columns, $margin: 0, $media-queries: ('smartphone', 'smartphone-to-tablet'));
+    @include grid(8, $margin: 0, $media-queries: ('portrait-tablet', 'default', 'large-display'));
+
+    float: left;
+  }
+}
+
+#introduction {
+  @media (#{ $media-query-smartphone }) {
+    padding: 0 ($grid-smartphone-gutter-width / 2);
+    width: $grid-smartphone-column-width;
+  }
+
+  li {
+    @include grid(4, $margin: 0 1gutter 0 0, $media-queries: ('default', 'large-display'));
+    @include grid(8, $margin: 0 1gutter 0 0, $media-queries: ('smartphone', 'smartphone-to-tablet', 'portrait-tablet'));
+
+    float: left;
+    font-size: 1em;
+
+    @media (#{ $media-query-smartphone-to-tablet }) {
+      &:nth-of-type(2n + 1) {
+        clear: left;
+      }
+
+      &:nth-of-type(2n + 2) {
+        margin-right: 0;
+      }
+    }
+
+    @media (#{ $media-query-portrait-tablet }) {
+      &:nth-of-type(2n + 1) {
+        clear: left;
+      }
+
+      &:nth-of-type(2n + 2) {
+        margin-right: 0;
+      }
+    }
+
+    &:nth-of-type(4n + 4) {
+      margin-right: 0;
+    }
+  }
+
+  > ul {
+    list-style: none;
+    overflow: hidden;
+  }
+}
+
+#team {
+  @include box-shadow(inset 0 0 0.4em $color-neutral-darkest);
+
+  background: url('../images/theme/background.png') center top;
+  border: {
+     color: $color-neutral-darkest;
+     style: solid;
+     width: 0.1em 0;
+  }
+  color: $color-neutral-lightest;
+  padding-bottom: 4.1em;
+  width: 100%;
+
+  @media (#{ $media-query-smartphone }) {
+    padding: 1.2em ($grid-smartphone-gutter-width / 2);
+    width: $grid-smartphone-column-width;
+  }
+
+  > div {
+    @include grid($number-of-grid-columns, $margin: 0 auto);
+
+    > p {
+      text-shadow: 0 1px 2px $color-neutral-darkest;
+    }
+  }
+
+  h3 {
+    text-shadow: 0 1px 2px $color-neutral-darkest;
+  }
+
+  h4 {
+    @include font-size(1.6em);
+
+    font-family: $font-family-content;
+  }
+
+  header {
+    border-top: 0.1em solid $color-neutral-lighter;
+    padding: 0.5em 0.5em 0.6em;
+  }
+
+  img {
+    @include border-radius(0.2em 0.2em 0 0);
+
+    width: 100%;
+  }
+
+  li {
+    @include border-radius(0.2em);
+    @include box-shadow(0 0.1em 0.2em $color-neutral-darkest);
+    @include grid(6, $margin: 0 1gutter 0.6em 0, $media-queries: ('smartphone', 'smartphone-to-tablet'));
+    @include grid(4, $margin: 0 1gutter 1.2em 0, $media-queries: ('portrait-tablet'));
+    @include grid(3, $margin: 0 1gutter 1.8em 0, $media-queries: ('default', 'large-display'));
+
+    background: $color-neutral-lightest;
+    color: $color-neutral-darkest;
+    float: left;
+    font-size: 1em;
+    position: relative;
+
+    @media (#{ $media-query-large-display }) {
+      &:nth-of-type(4n + 1) {
+        @include grid(3, $margin: 0 1gutter 1.8em 10gutter, $media-queries: ('large-display'));
+      }
+
+      &:nth-of-type(5) {
+        @include grid(3, $margin: 0 1gutter 1.8em 17.5gutter, $media-queries: ('large-display'));
+
+        clear: left;
+      }
+    }
+
+    @media (#{ $media-query-default }) {
+      &:nth-of-type(4n + 1) {
+        @include grid(3, $margin: 0 1gutter 1.2em 10gutter, $media-queries: ('default'));
+      }
+
+      &:nth-of-type(5) {
+        @include grid(3, $margin: 0 1gutter 1.2em 17.5gutter, $media-queries: ('default'));
+
+        clear: left;
+      }
+    }
+
+    @media (#{ $media-query-portrait-tablet }) {
+      &:nth-of-type(3n + 1) {
+        @include grid(4, $margin: 0 1gutter 1.2em 10gutter, $media-queries: ('portrait-tablet'));
+      }
+
+      &:nth-of-type(7) {
+        @include grid(4, $margin: 0 1gutter 1.2em 30gutter, $media-queries: ('portrait-tablet'));
+
+        clear: left;
+      }
+    }
+
+    @media (#{ $media-query-smartphone-to-tablet }) {
+      &:nth-of-type(2n + 1) {
+        @include grid(6, $margin: 0 1gutter 0.6em 10gutter, $media-queries: ('smartphone-to-tablet'));
+      }
+
+      &:nth-of-type(7) {
+        @include grid(6, $margin: 0 1gutter 0.6em 25gutter, $media-queries: ('smartphone-to-tablet'));
+
+        clear: left;
+      }
+    }
+
+    @media (#{ $media-query-smartphone }) {
+      margin-bottom: 0.6em;
+    }
+  }
+
+  ul {
+    @include grid($number-of-grid-columns, $margin: 0 auto 1.2em);
+
+    color: $color-neutral-darkest;
+    list-style: none;
+    overflow: hidden;
+
+    p {
+      @include font-size(1.2em);
+
+      color: $color-neutral-darker;
+      margin-bottom: 0;
+    }
+  }
+}

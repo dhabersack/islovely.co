@@ -15,9 +15,6 @@ title: Projects
 
 - current_page.children.sort_by { |child| child.data.order }.reverse.each do |child|
   %article
-    %h3= child.data.title
+    %h3= link_to child.data.title, child.url
 
-    %p= child.data.summary
-
-    - %w(smartphone-to-tablet portrait-tablet default large-display).each do |breakpoint|
-      %img{ src: "#{ child.url }images/breakpoints/#{ breakpoint }.jpg", class: breakpoint }
+    =link_to image_tag("#{ child.url }images/breakpoints/extra-large.jpg"), child.url
