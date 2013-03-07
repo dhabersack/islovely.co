@@ -9,8 +9,8 @@ $content-to-column-ratio: 0.8;
 $gutter-to-column-ratio:  1 - $content-to-column-ratio;
 
 // widths used in responsive grid at different stages
-$grid-extra-small-column-width: 92%;
-$grid-extra-small-gutter-width: 4%;
+$grid-extra-small-column-width: 96%;
+$grid-extra-small-gutter-width: 2%;
 
 $grid-small-column-width:       ($breakpoint-small       / $number-of-grid-columns) * $content-to-column-ratio;
 $grid-small-gutter-width:       ($breakpoint-small       / $number-of-grid-columns) * $gutter-to-column-ratio;
