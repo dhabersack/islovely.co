@@ -1,110 +1,97 @@
 @import 'skeletal/skeletal.scss';
 
 @include font-face(
-  $name:      'Lora',
-  $path:      '../fonts/Lora/',
-  $eot:       'regular.eot',
-  $iefix-eot: 'regular.eot?#iefix',
-  $woff:      'regular.woff',
-  $ttf:       'regular.ttf',
-  $svg:       'regular.svg#LoraRegular'
+  $name: 'Entypo Social',
+  $path: '/assets/fonts/Entypo-Social/',
+  $eot:  'regular.eot',
+  $woff: 'regular.woff',
+  $ttf:  'regular.ttf',
+  $svg:  'regular.svg#entypo-social'
 );
 
 @include font-face(
-  $name:      'Lora',
-  $path:      '../fonts/Lora/',
-  $eot:       'italic.eot',
-  $iefix-eot: 'italic.eot?#iefix',
-  $woff:      'italic.woff',
-  $ttf:       'italic.ttf',
-  $svg:       'italic.svg#LoraItalic',
-  $style:     italic
+  $name: 'Lora',
+  $path: '/assets/fonts/Lora/',
+  $eot:  'regular.eot',
+  $woff: 'regular.woff',
+  $ttf:  'regular.ttf',
+  $svg:  'regular.svg#LoraRegular'
 );
 
 @include font-face(
-  $name:      'Lora',
-  $path:      '../fonts/Lora/',
-  $eot:       'bold.eot',
-  $iefix-eot: 'bold.eot?#iefix',
-  $woff:      'bold.woff',
-  $ttf:       'bold.ttf',
-  $svg:       'bold.svg#LoraBold',
-  $weight:    bold
+  $name:  'Lora',
+  $path:  '/assets/fonts/Lora/',
+  $eot:   'italic.eot',
+  $woff:  'italic.woff',
+  $ttf:   'italic.ttf',
+  $svg:   'italic.svg#LoraItalic',
+  $style: italic
 );
 
 @include font-face(
-  $name:      'Lora',
-  $path:      '../fonts/Lora/',
-  $eot:       'bold-italic.eot',
-  $iefix-eot: 'bold-italic.eot?#iefix',
-  $woff:      'bold-italic.woff',
-  $ttf:       'bold-italic.ttf',
-  $svg:       'bold-italic.svg#LoraBoldItalic',
-  $style:     italic,
-  $weight:    bold
+  $name:   'Lora',
+  $path:   '/assets/fonts/Lora/',
+  $eot:    'bold.eot',
+  $woff:   'bold.woff',
+  $ttf:    'bold.ttf',
+  $svg:    'bold.svg#LoraBold',
+  $weight: bold
 );
 
 @include font-face(
-  $name:      'Istok Web',
-  $path:      '../fonts/Istok-Web/',
-  $eot:       'regular.eot',
-  $iefix-eot: 'regular.eot?#iefix',
-  $woff:      'regular.woff',
-  $ttf:       'regular.ttf',
-  $svg:       'regular.svg#IstokWebRegular'
+  $name:   'Lora',
+  $path:   '/assets/fonts/Lora/',
+  $eot:    'bold-italic.eot',
+  $woff:   'bold-italic.woff',
+  $ttf:    'bold-italic.ttf',
+  $svg:    'bold-italic.svg#LoraBoldItalic',
+  $style:  italic,
+  $weight: bold
 );
 
 @include font-face(
-  $name:      'Istok Web',
-  $path:      '../fonts/Istok-Web/',
-  $eot:       'italic.eot',
-  $iefix-eot: 'italic.eot?#iefix',
-  $woff:      'italic.woff',
-  $ttf:       'italic.ttf',
-  $svg:       'italic.svg#IstokWebItalic',
-  $style:     italic
+  $name: 'Istok Web',
+  $path: '/assets/fonts/Istok-Web/',
+  $eot:  'regular.eot',
+  $woff: 'regular.woff',
+  $ttf:  'regular.ttf',
+  $svg:  'regular.svg#IstokWebRegular'
 );
 
 @include font-face(
-  $name:      'Istok Web',
-  $path:      '../fonts/Istok-Web/',
-  $eot:       'bold.eot',
-  $iefix-eot: 'bold.eot?#iefix',
-  $woff:      'bold.woff',
-  $ttf:       'bold.ttf',
-  $svg:       'bold.svg#IstokWebBold',
-  $weight:    bold
+  $name:  'Istok Web',
+  $path:  '/assets/fonts/Istok-Web/',
+  $eot:   'italic.eot',
+  $woff:  'italic.woff',
+  $ttf:   'italic.ttf',
+  $svg:   'italic.svg#IstokWebItalic',
+  $style: italic
 );
 
 @include font-face(
-  $name:      'Istok Web',
-  $path:      '../fonts/Istok-Web/',
-  $eot:       'bold-italic.eot',
-  $iefix-eot: 'bold-italic.eot?#iefix',
-  $woff:      'bold-italic.woff',
-  $ttf:       'bold-italic.ttf',
-  $svg:       'bold-italic.svg#IstokWebBoldItalic',
-  $style:     italic,
-  $weight:    bold
+  $name:   'Istok Web',
+  $path:   '/assets/fonts/Istok-Web/',
+  $eot:    'bold.eot',
+  $woff:   'bold.woff',
+  $ttf:    'bold.ttf',
+  $svg:    'bold.svg#IstokWebBold',
+  $weight: bold
+);
+
+@include font-face(
+  $name:   'Istok Web',
+  $path:   '/assets/fonts/Istok-Web/',
+  $eot:    'bold-italic.eot',
+  $woff:   'bold-italic.woff',
+  $ttf:    'bold-italic.ttf',
+  $svg:    'bold-italic.svg#IstokWebBoldItalic',
+  $style:  italic,
+  $weight: bold
 );
 
 article {
-  > footer {
-    > p {
-      @include font-size(1.5em);
-
-      color: $color-neutral-darker;
-      font-style: italic;
-    }
-  }
-
+  > footer,
   > header {
-    > h2,
-    > h3,
-    > h4 {
-      margin-bottom: 0;
-    }
-
     > p {
       @include font-size(1.5em);
 
@@ -120,43 +107,28 @@ body {
     width: 100%;
   }
 
-  > footer {
-    background: $color-neutral-lighter;
-    border: 0.1em solid transparentize($color-neutral-darkest, 0.8);
-    padding: 4.7em 0 2.4em;
-    text-align: center;
-
-    > div {
-      @include grid($number-of-grid-columns, $center: true, $padding: 0 0 0.6em);
-
-      @media (#{ $media-query-extra-small }) {
-        padding: 0 $grid-extra-small-gutter-width;
-        width: $grid-extra-small-column-width;
-      }
-    }
-  }
-
   > header {
     background: $color-brand-lighter;
     margin: 0;
-    padding: 1.8em 0;
+    padding: 2.4em 0;
     text-align: center;
     width: 100%;
 
     @media (#{ $media-query-medium }) {
-      padding: 2.4em 0;
-    }
-
-    @media (#{ $media-query-large }) {
       padding: 3em 0;
     }
 
+    @media (#{ $media-query-large }) {
+      padding: 4.2em 0;
+    }
+
     @media (#{ $media-query-extra-large }) {
-      padding: 3.6em 0;
+      padding: 6.6em 0;
     }
 
     a {
       background: url('../images/theme/logo.png') no-repeat center 0.6em;
+      background-size: 3em 2.4em;
       font-size: 2em;
       padding: 3.6em 1em 1.05em;
     }
@@ -167,14 +139,14 @@ body {
       position: relative;
 
       @media (#{ $media-query-extra-small }) {
-        padding: 0 $grid-extra-small-gutter-width;
+        padding: 1.2em $grid-extra-small-gutter-width;
         width: $grid-extra-small-column-width;
       }
     }
 
     h1 {
       font-size: 1em;
-      margin-bottom: 2.4em;
+      margin: 0;
       position: relative;
       z-index: 2;
     }
@@ -194,6 +166,7 @@ body {
       width: 0.1em 0;
     }
     margin-bottom: 1.2em;
+    padding: 1.1em 0;
     width: 100%;
 
     @media (#{ $media-query-medium }) {
@@ -216,22 +189,73 @@ body {
     }
 
     > ol {
-      @include grid($number-of-grid-columns, $center: true, $padding: 0.5em 0);
+      @include grid($number-of-grid-columns, $center: true);
 
-      @media (#{ $media-query-extra-small }) {
-        padding: 0.5em $grid-extra-small-gutter-width;
-        width: $grid-extra-small-column-width;
-      }
+      padding: 0 $grid-extra-small-gutter-width;
+      width: $grid-extra-small-column-width;
     }
   }
 
   > section {
     @include grid($number-of-grid-columns, $center: true);
 
-    @media (#{ $media-query-extra-small }) {
-      padding: 0 $grid-extra-small-gutter-width;
-      width: $grid-extra-small-column-width;
+    padding: 0 $grid-extra-small-gutter-width;
+    width: $grid-extra-small-column-width;
+  }
+}
+
+footer {
+  background: $color-neutral-lighter;
+  border-top: 0.1em solid transparentize($color-neutral-darkest, 0.8);
+  clear: both;
+  padding: 4.7em 0 2.4em;
+  text-align: center;
+
+  @media (#{ $media-query-medium }) {
+    padding: 5.3em 0 3em;
+  }
+
+  @media (#{ $media-query-large }) {
+    padding: 6.5em 0 4.2em;
+  }
+
+  @media (#{ $media-query-extra-large }) {
+    padding: 8.9em 0 6.6em;
+  }
+
+  > div {
+    @include grid($number-of-grid-columns, $center: true, $padding: 0 0 0.6em);
+
+    padding: 0 $grid-extra-small-gutter-width 0.6em;
+    width: $grid-extra-small-column-width;
+  }
+
+  li {
+    @include font-size(8em);
+
+    display: inline-block;
+    line-height: 1em;
+    margin: 0 0.0625em;
+  }
+
+  ol {
+    font-family: 'Entypo Social';
+    list-style: none;
+    margin-bottom: 0;
+
+    a {
+      text-decoration: none;
+      text-shadow: 0 -1px 0 $color-neutral-darker;
+
+      &,
+      &:visited {
+        color: $color-neutral-darkest;
+      }
     }
+  }
+
+  p {
+    margin-bottom: 0;
   }
 }
 
@@ -241,45 +265,28 @@ h3 {
 
 .home {
   article {
-    @include grid(8, $margin-bottom: 1.8em, $breakpoints: ('medium'), $break-every-nth: 2);
-    @include grid(4, $margin-bottom: 3.6em, $breakpoints: ('large', 'extra-large'), $break-every-nth: 4);
+    @include grid(8, $break-every-nth: 2, $margin-bottom: 1.2em, $breakpoints: ('medium'));
+    @include grid(4, $break-every-nth: 4, $margin-bottom: 2.4em, $breakpoints: ('large', 'extra-large'));
 
     float: left;
-    margin-bottom: 3.6em;
+    margin-bottom: 1.2em;
   }
 
   h2 {
-    font-weight: bold;
-    margin-bottom: 1.125em; // 36px
+    margin: 1.125em 0; // 36px 0
     text-align: center;
-    text-shadow: 0 3px 1px $color-neutral-lighter;
+    text-shadow: 0 1px 2px $color-neutral-lighter;
 
     @media (#{ $media-query-medium }) {
-      margin-bottom: 1.35em; // 54px
+      margin: 1.35em 0; // 54px 0
     }
 
     @media (#{ $media-query-large }) {
-      margin-bottom: 1.44em; // 72px
+      margin: 1.44em 0; // 72px 0
     }
 
     @media (#{ $media-query-extra-large }) {
-      margin-bottom: 1.5em; // 90px
-    }
-  }
-
-  > nav {
-    margin-bottom: 3.6em;
-
-    @media (#{ $media-query-medium }) {
-      margin-bottom: 5.4em;
-    }
-
-    @media (#{ $media-query-large }) {
-      margin-bottom: 7.2em;
-    }
-
-    @media (#{ $media-query-extra-large }) {
-      margin-bottom: 9em;
+      margin: 1.5em 0; // 90px 0
     }
   }
 
@@ -288,51 +295,83 @@ h3 {
   }
 }
 
+.iframe-youtube {
+  @include grid($number-of-grid-columns, $margin-bottom: 1.2em, $center: true);
+
+  height: 32.4em;
+
+  @media (#{ $media-query-medium }) {
+    height: 48em;
+  }
+
+  @media (#{ $media-query-large }) {
+    height: 63.6em;
+  }
+
+  @media (#{ $media-query-extra-large }) {
+    height: 79.2em;
+  }
+}
+
+.project {
+  overflow: hidden;
+
+  aside {
+    @include grid($number-of-grid-columns, $breakpoints: ('small'));
+    @include grid(10, $offset: 1, $last: true, $breakpoints: ('medium', 'large', 'extra-large'));
+
+    float: left;
+
+    > img {
+      @include border-radius(0.2em);
+      @include box-shadow(0 0 0.2em $color-neutral-darkest);
+
+      $number-of-breakpoints: 4;
+      @for $i from 1 through $number-of-breakpoints {
+        &:nth-of-type(#{ $number-of-breakpoints - $i + 1 }) {
+          // `small` breaks grid for smoother transition between breakpoints
+          @include grid(($i + 1) * 3.2, $margin-bottom: 2.4em, $center: true, $breakpoints: ('small'));
+          @include grid(($i + 1) * 2, $margin-bottom: 2.4em, $center: true, $breakpoints: ('medium', 'large', 'extra-large'));
+        }
+      }
+
+      @media (#{ $media-query-extra-small }) {
+        &:nth-of-type(2) {
+          margin: 0 auto 2.4em;
+          width: 80%;
+        }
+
+        &:nth-of-type(3) {
+          margin: 0 auto 2.4em;
+          width: 60%;
+        }
+
+        &:nth-of-type(4) {
+          margin: 0 auto 2.4em;
+          width: 40%;
+        }
+      }
+    }
+  }
+}
+
+.project-description {
+  @include grid($number-of-grid-columns, $breakpoints: ('small'));
+  @include grid(5, $breakpoints: ('medium', 'large', 'extra-large'));
+
+  float: left;
+}
+
 .projects {
   article {
     margin-bottom: 4.8em;
-    overflow: hidden;
-    padding-bottom: 2.4em;
   }
 
   img {
     @include border-radius(0.2em);
-    @include box-shadow(0 0.1em 0.4em $color-neutral);
-
-    float: left;
-
-    @media (#{ $media-query-extra-small }) {
-      display: none;
-    }
-  }
-
-  p {
-    clear: both;
-  }
-
-  .smartphone-to-tablet {
-    @include grid(6, $margin-bottom: 2em, $offset: 3, $breakpoints: ('small', 'medium'));
-    @include grid(2, $margin-bottom: 0.2em, $offset: 1, $breakpoints: ('large', 'extra-large'));
-  }
-
-  .portrait-tablet {
-    @include grid(9, $margin-bottom: 2em, $offset: 2, $breakpoints: ('small', 'medium'));
-    @include grid(3, $margin-bottom: 0.2em, $breakpoints: ('large', 'extra-large'));
-  }
-
-  .default {
-    @include grid(12, $margin-bottom: 2em, $offset: 2, $breakpoints: ('small', 'medium'));
-    @include grid(4, $margin-bottom: 0.2em, $breakpoints: ('large', 'extra-large'));
-  }
-
-  .large-display {
-    @include grid(15, $margin-bottom: 2em, $offset: 2, $breakpoints: ('small', 'medium'));
-    @include grid(5, $margin-bottom: 0.2em, $breakpoints: ('large', 'extra-large'));
-
-    @media (#{ $media-query-extra-small }) {
-      display: block;
-      padding: 1%;
-      width: 98%;
-    }
+    @include box-shadow(0 0 0.2em $color-neutral-darkest);
+    @include grid($number-of-grid-columns, $breakpoints: ('small', 'medium'));
+    @include grid(14, $center: true, $breakpoints: ('large'));
+    @include grid(12, $center: true, $breakpoints: ('extra-large'));
   }
 }
