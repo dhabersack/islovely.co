@@ -1,9 +1,12 @@
 ---
 layout: project
-order: 20
+order: 10
 page_class: project
 title: Johanna Beyer Photography
 ---
 
-summary: Johanna Beyer is a freelance photographer who displays her work on
-<a href="http://johannabeyer.com/" title="Photography portfolio of Johanna Beyer">her portfolio</a>.
+Johanna Beyer is a freelance photographer displaying her work on her portfolio.
+
+Any potential distractions have been left out in order to keep the focus on her pictures.
+
+[Visit site](http://johannabeyer.com/ "Photography portfolio of Johanna Beyer")
