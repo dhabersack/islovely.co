@@ -22,6 +22,9 @@
   -webkit-transform: $transform;
       -ms-transform: $transform;
           transform: $transform;
+
+  // prevent jagged edges
+  -webkit-backface-visibility: hidden;
 }
 
 @mixin transition($transition) {

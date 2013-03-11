@@ -10,7 +10,8 @@ html {
   background-color: $color-neutral-lightest;
   overflow-y: scroll;
 
-  -webkit-text-size-adjust: 100%; // prevent font scaling in landscape on Safari on iOS
+  // prevent font scaling in landscape on Safari on iOS
+  -webkit-text-size-adjust: 100%;
 }
 
 
@@ -50,7 +51,7 @@ nav {
   li {
     float: left;
     font-size: 1em;
-    margin-right: 2em;
+    margin-right: 1em;
 
     &:last-of-type {
       margin-right: 0;
@@ -328,7 +329,7 @@ ol {
     position: inside;
     type: decimal;
   }
-  margin-bottom: 1.2em;
+  margin-bottom: 2.4em;
 
   > li {
     @include font-size(1.6em);
@@ -358,7 +359,7 @@ ul {
     position: inside;
     style-type: disc;
   }
-  margin-bottom: 1.2em;
+  margin-bottom: 2.4em;
 
   > li {
     @include font-size(1.6em);
