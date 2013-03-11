@@ -285,10 +285,10 @@ The more levels there are in a selector, the more times each resulting list
 needs to be iterated over again.
 
 While extending a selector will often result in a condensed list, unnecessary
-extensions generate wasted filtering-cycles. In the above example, adding `html
-> body > section > article >` in front of the selector would force the browser
-to filter the result **four more times without altering the list** before it
-could assert a match.
+extensions generate wasted filtering-cycles. In the above example, adding
+`html > body > section > article >` in front of the selector would force the
+browser to filter the result **four more times without altering the list**
+before it could assert a match.
 
 
 ### Identification loops
