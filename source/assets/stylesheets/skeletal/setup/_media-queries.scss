@@ -1,0 +1,54 @@
+// breakpoints used in media queries
+$breakpoint-small:        48em;
+$breakpoint-medium:       72em;
+$breakpoint-large:        96em;
+$breakpoint-extra-large: 120em;
+
+// proportion of full column-width that is taken up by content or gutter
+$content-to-column-ratio: 0.8;
+$gutter-to-column-ratio:  1 - $content-to-column-ratio;
+
+// widths used in responsive grid at different stages
+$grid-extra-small-column-width: 96%;
+$grid-extra-small-gutter-width: 2%;
+
+$grid-small-column-width:       ($breakpoint-small       / $number-of-grid-columns) * $content-to-column-ratio;
+$grid-small-gutter-width:       ($breakpoint-small       / $number-of-grid-columns) * $gutter-to-column-ratio;
+
+$grid-medium-column-width:      ($breakpoint-medium      / $number-of-grid-columns) * $content-to-column-ratio;
+$grid-medium-gutter-width:      ($breakpoint-medium      / $number-of-grid-columns) * $gutter-to-column-ratio;
+
+$grid-large-column-width:       ($breakpoint-large       / $number-of-grid-columns) * $content-to-column-ratio;
+$grid-large-gutter-width:       ($breakpoint-large       / $number-of-grid-columns) * $gutter-to-column-ratio;
+
+$grid-extra-large-column-width: ($breakpoint-extra-large / $number-of-grid-columns) * $content-to-column-ratio;
+$grid-extra-large-gutter-width: ($breakpoint-extra-large / $number-of-grid-columns) * $gutter-to-column-ratio;
+
+// Using the default values, the following sizes are used in the grid:
+//
+//                ||      12 columns      ||      16 columns      |
+//    breakpoint  ||  content  |  gutter  ||  content  |  gutter  |
+// ---------------++-----------+----------++-----------+----------+
+//         480px  ||     32px  |     8px  ||     24px  |     6px  |
+//         720px  ||     48px  |    12px  ||     36px  |     9px  |
+//         960px  ||     64px  |    16px  ||     48px  |    12px  |
+//        1200px  ||     80px  |    20px  ||     60px  |    15px  |
+
+// minimum widths are pixel-values based on the breakpoints set above
+$min-width-small:       $breakpoint-small       / 1em * 10px;
+$min-width-medium:      $breakpoint-medium      / 1em * 10px;
+$min-width-large:       $breakpoint-large       / 1em * 10px;
+$min-width-extra-large: $breakpoint-extra-large / 1em * 10px;
+
+// maximum widths are based on minimum widths of their successing breakpoints
+$max-width-extra-small: $min-width-small       - 1px;
+$max-width-small:       $min-width-medium      - 1px;
+$max-width-medium:      $min-width-large       - 1px;
+$max-width-large:       $min-width-extra-large - 1px;
+
+// actual media queries to be used in @media-directives
+$media-query-extra-small:                                              'max-width: #{ $max-width-extra-small }';
+$media-query-small:       'min-width: #{ $min-width-small       }) and (max-width: #{ $max-width-small       }';
+$media-query-medium:      'min-width: #{ $min-width-medium      }) and (max-width: #{ $max-width-medium      }';
+$media-query-large:       'min-width: #{ $min-width-large       }) and (max-width: #{ $max-width-large       }';
+$media-query-extra-large: 'min-width: #{ $min-width-extra-large }';

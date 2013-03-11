@@ -1,0 +1,1034 @@
+@import 'import.scss';
+@import 'reset.scss';
+
+//--------------------------------//
+// ROOT ELEMENT                   //
+//--------------------------------//
+
+// root element
+html {
+  background-color: $color-neutral-lightest;
+  overflow-y: scroll;
+
+  // prevent font scaling in landscape on Safari on iOS
+  -webkit-text-size-adjust: 100%;
+}
+
+
+//--------------------------------//
+// SECTIONS                       //
+//--------------------------------//
+
+// main content
+body {
+  background-color: inherit;
+  color: $color-neutral-darkest;
+  font: 62.5%/1 $font-family-content; // 10px/10px
+
+  @media (#{ $media-query-extra-small }) {
+    margin: 0 $grid-extra-small-gutter-width;
+    width: $grid-extra-small-column-width;
+  }
+}
+
+// generic section
+section {
+  display: block;
+}
+
+// section with navigation links
+nav {
+  @include grid($number-of-grid-columns, $margin-bottom: 1.2em, $padding: 0.6em 0, $center: true);
+
+  display: block;
+  font-family: $font-family-headings;
+
+  a {
+    display: block;
+    font-size: 1em;
+  }
+
+  li {
+    float: left;
+    font-size: 1em;
+    margin-right: 1em;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  > ol {
+    list-style: none;
+    margin-bottom: 0;
+    overflow: hidden;
+  }
+}
+
+// independently distributable or reusable, self-contained composition
+article {
+  display: block;
+  margin-bottom: 1.2em;
+}
+
+// content tangentially related to content around aside element; separate from
+// that content (pull quotes, sidebars, advertising, …)
+aside {
+  display: block;
+  margin-bottom: 1.2em;
+}
+
+// headings
+h1, h2, h3, h4, h5, h6 {
+  font: {
+    family: $font-family-headings;
+    weight: normal;
+  }
+}
+
+// heading with highest rank
+h1 {
+  @include font-size(2.4em);
+
+  font-weight: bold;
+  margin-bottom: 0.5em; // 12px
+
+  > a {
+    display: inline-block;
+
+    &:active,
+    &:focus,
+    &:link,
+    &:visited {
+      color: inherit;
+    }
+  }
+}
+
+// heading with second-highest rank
+h2 {
+  @include font-size(3.2em);
+
+  margin-bottom: 0.1875em; // 6px
+
+  @media (#{ $media-query-medium }) {
+    @include font-size(4em);
+
+    margin-bottom: 0.15em; // 6px
+  }
+
+  @media (#{ $media-query-large }) {
+    @include font-size(5em);
+
+    margin-bottom: 0.12em; // 6px
+  }
+
+  @media (#{ $media-query-extra-large }) {
+    @include font-size(6em);
+
+    margin-bottom: 0.1em; // 6px
+  }
+}
+
+// heading with third-highest rank
+h3 {
+  @include font-size(2.5em);
+
+  margin-bottom: 0.24em; // 6px
+
+  @media (#{ $media-query-medium }) {
+    @include font-size(3.2em);
+
+    margin-bottom: 0.1875em; // 6px
+  }
+
+  @media (#{ $media-query-large }) {
+    @include font-size(4em);
+
+    margin-bottom: 0.15em; // 6px
+  }
+
+  @media (#{ $media-query-extra-large }) {
+    @include font-size(5em);
+
+    margin-bottom: 0.12em; // 6px
+  }
+}
+
+// heading with fourth-highest rank
+h4 {
+  @include font-size(2em);
+
+  margin-bottom: 0.3em; // 6px
+
+  @media (#{ $media-query-medium }) {
+    @include font-size(2.5em);
+
+    margin-bottom: 0.24em; // 6px
+  }
+
+  @media (#{ $media-query-large }) {
+    @include font-size(3.2em);
+
+    margin-bottom: 0.1875em; // 6px
+  }
+
+  @media (#{ $media-query-extra-large }) {
+    @include font-size(4em);
+
+    margin-bottom: 0.15em; // 6px
+  }
+}
+
+// heading with fifth-highest rank
+h5 {
+  @include font-size(1.6em);
+
+  margin-bottom: 0.375em; // 6px
+
+  @media (#{ $media-query-medium }) {
+    @include font-size(2em);
+
+    margin-bottom: 0.3em; // 6px
+  }
+
+  @media (#{ $media-query-large }) {
+    @include font-size(2.4em);
+
+    margin-bottom: 0.25em; // 6px
+  }
+
+  @media (#{ $media-query-extra-large }) {
+    @include font-size(3em);
+
+    margin-bottom: 0.2em; // 6px
+  }
+}
+
+// heading with lowest rank
+h6 {
+  @include font-size(1.6em);
+
+  margin-bottom: 0.375em; // 6px
+
+  @media (#{ $media-query-extra-large }) {
+    @include font-size(2em);
+
+    margin-bottom: 0.3em; // 6px
+  }
+}
+
+// group of headings
+hgroup {}
+
+// introductory or navigational aids
+header {
+  display: block;
+}
+
+// footer for nearest ancestor sectioning content or sectioning root element,
+// (information about its section such as author, links to related documents,
+// copyright data, …)
+footer {
+  display: block;
+  overflow: hidden;
+
+  li {
+    @include font-size(1.5em);
+
+    margin-bottom: 0;
+  }
+
+  p {
+    @include font-size(1.5em);
+  }
+}
+
+// contact information for its nearest article or body element ancestor
+address {
+  font-style: italic;
+}
+
+
+//--------------------------------//
+// GROUPING CONTENT               //
+//--------------------------------//
+
+// paragraph
+p {
+  @include font-size(1.6em);
+
+  margin-bottom: 1.5em; // 24px
+
+  @media (#{ $media-query-extra-large }) {
+    @include font-size(2em);
+  }
+}
+
+// paragraph-level thematic break
+hr {
+  border: {
+    color: $color-neutral-darker;
+    style: solid;
+    width: 0.1em 0 0 0; // 1px
+  }
+  margin: 1.1em 6em 1.2em; // 11px 60px 12px
+}
+
+// preformatted text
+pre {
+  @include border-radius(0.125em); // 2px
+  @include box-shadow(inset 0 0 0.125em $color-neutral-darkest); // 2px
+  @include font-size(1.6em);
+
+  background: $color-neutral-lighter;
+  font-family: $font-family-code;
+  margin-bottom: 1.5em; // 24px
+  padding: 0.375em 0.625em; // 6px 10px
+
+  // code block as generated by Markdown
+  > code {
+    @include border-radius(0);
+    @include box-shadow(0 0 0 transparent);
+
+    background: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+// section that is quoted from another source
+blockquote {
+  @include border-radius(0.2em);
+  @include box-shadow(0 0 0.1em $color-neutral-darkest);
+
+  background: $color-neutral-lighter;
+  font: {
+    family: $font-family-quotes;
+    style: italic;
+  }
+  margin: 0 6em 2.4em;
+  padding: 1.2em 2em;
+
+  > cite {
+    &::before {
+      content: '– ';
+    }
+  }
+
+  > p {
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// ordered list
+ol {
+  list-style: {
+    position: inside;
+    type: decimal;
+  }
+  margin-bottom: 2.4em;
+
+  > li {
+    @include font-size(1.6em);
+
+    @media (#{ $media-query-extra-large }) {
+      @include font-size(2em);
+    }
+
+    > ol {
+      list-style-type: lower-alpha;
+      margin-bottom: 0;
+
+      > li > ol {
+        list-style-type: lower-roman;
+      }
+    }
+
+    > ul {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// unordered list
+ul {
+  list-style: {
+    position: inside;
+    style-type: disc;
+  }
+  margin-bottom: 2.4em;
+
+  > li {
+    @include font-size(1.6em);
+
+    @media (#{ $media-query-extra-large }) {
+      @include font-size(2em);
+    }
+
+    > ol {
+      margin-bottom: 0;
+    }
+
+    > ul {
+      list-style-type: circle;
+      margin-bottom: 0;
+
+      > li > ul {
+        list-style-type: square;
+      }
+    }
+  }
+}
+
+li > ol,
+li > ul {
+  > li {
+    font-size: 1em; // 15px
+    line-height: 1.6em; // 24px
+    margin-left: 1.2em; // 18px
+  }
+}
+
+// definition list
+dl {
+  margin-bottom: 1.2em; // 12px
+}
+
+// definition term
+dt {
+  @include font-size(1.6em);
+
+  font: {
+    family: $font-family-headings;
+    weight: bold;
+  }
+
+  @media (#{ $media-query-medium }) {
+    @include font-size(2em);
+  }
+
+  @media (#{ $media-query-large }) {
+    @include font-size(2em);
+  }
+
+  @media (#{ $media-query-extra-large }) {
+    @include font-size(2em);
+  }
+}
+
+// definition description
+dd {
+  @include font-size(1.6em);
+
+  margin: 0 0 0.75em 1.25em; // 0 0 12px 20px
+}
+
+// self-contained, single unit referenced from main flow of document
+figure {
+  @include border-radius(0.2em);
+  @include box-shadow(0 0 0.1em $color-neutral-darkest);
+
+  background: $color-neutral-lighter;
+  margin: 0 0 2.4em;
+  padding: 1.2em 0 0;
+
+  > img {
+    margin: 0 auto 1.2em;
+  }
+}
+
+// caption of figure element's contents
+figcaption {
+  @include font-size(1.5em);
+
+  background: $color-neutral;
+  font: {
+    family: $font-family-headings;
+    style: italic;
+  }
+  padding: 0.4em 1em; // 6px 15px
+  text-align: center;
+}
+
+// groups its children, has no special meaning at all
+div {}
+
+
+//--------------------------------//
+// TEXT-LEVEL SEMANTICS           //
+//--------------------------------//
+
+// hyperlink
+a {
+  color: $color-link;
+  text-decoration: underline;
+
+  &:active {}
+
+  &:focus {
+    outline: 1px dotted $color-neutral-darkest;
+  }
+
+  &:link {}
+
+  &:visited {
+    color: $color-link-visited;
+  }
+}
+
+// emphasized text
+em {
+  font-style: italic;
+}
+
+// text of strong importance
+strong {
+  font-weight: bold;
+}
+
+// side comments such as small print
+small {}
+
+// no longer accurate or relevant
+s {}
+
+// title of a work being quoted or mentioned in passing
+cite {
+  @include font-size(1.2em);
+
+  font: {
+    style: italic;
+    weight: bold;
+  }
+}
+
+// phrasing content quoted from another source
+q {
+  @include border-radius(0.125em); // 2px
+  @include box-shadow(0 0 0.0625em $color-neutral-darker); // 1px
+
+  background: $color-neutral;
+  display: inline-block;
+  font: {
+    family: $font-family-quotes;
+    style: italic;
+  }
+  margin: 0 0.125em; // 0 2px
+  padding: 0 0.3125em; // 0 5px
+
+  &::after {
+    content: '"';
+  }
+
+  &::before {
+    content: '"';
+  }
+}
+
+// definition term
+dfn {
+  font-style: italic;
+}
+
+// abbreviation or acronym
+abbr {
+  border-bottom: 0.0625em dotted; // 1px
+  cursor: help;
+  font-variant: normal;
+  letter-spacing: 0.0625em; // 1px
+  text-transform: uppercase;
+}
+
+// date/time
+time {}
+
+// fragment of computer code
+code {
+  @include border-radius(0.125em); // 2px
+  @include box-shadow(inset 0 0 0.125em $color-neutral-darkest); // 2px
+
+  background: $color-neutral-lighter;
+  display: inline-block;
+  font-family: $font-family-code;
+  margin: 0 0.125em; // 0 2px
+  padding: 0 0.3125em; // 0 5px
+}
+
+var {
+  font: {
+    family: $font-family-code;
+    style: italic;
+  }
+}
+
+// sample computer code
+samp {
+  font-family: $font-family-code;
+}
+
+kbd {
+  font-family: $font-family-code;
+}
+
+sub,
+sup {
+  font-size: 0.6em;
+  position: relative;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+// italic text
+i {
+  font-style: italic;
+}
+
+// bold text
+b {
+  font-weight: bold;
+}
+
+u {}
+
+// marked text
+mark {
+  @include border-radius(0.125em); // 2px
+  @include box-shadow(0 0 0.0625em $color-neutral-darkest); // 1px
+
+  background: $color-highlight-lighter;
+  color: inherit;
+  display: inline-block;
+  margin: 0 0.125em; // 0 2px
+  padding: 0 0.3125em; // 0 5px
+}
+
+ruby {}
+
+rt {}
+
+rp {}
+
+bdi {}
+
+bdo {}
+
+span {}
+
+wbr {}
+
+
+//--------------------------------//
+// EDITS                          //
+//--------------------------------//
+
+// inserted text
+ins {
+  border-bottom: 0.0625em dashed;
+  text-decoration: none;
+}
+
+// deleted text
+del {
+  color: $color-neutral-darkest;
+  text-decoration: line-through;
+}
+
+
+//--------------------------------//
+// EMBEDDED CONTENT               //
+//--------------------------------//
+
+img {
+  display: block;
+}
+
+iframe {}
+
+embed {}
+
+object {}
+
+video {}
+
+// sound element
+audio {}
+
+// graphics canvas
+canvas {}
+
+map {}
+
+area {}
+
+
+//--------------------------------//
+// TABULAR DATA                   //
+//--------------------------------//
+
+// table
+table {
+  background: $color-neutral-lightest;
+  border: {
+    collapse: collapse;
+    radius: 0.2em;
+    spacing: 0;
+  }
+  margin-bottom: 2.4em; // 24px
+  width: 100%;
+}
+
+// table caption
+caption {}
+
+col {}
+
+// table body
+tbody {
+  th {
+    font-weight: normal;
+  }
+
+  > tr {
+    &:nth-child(odd) {
+      background: $color-neutral-lighter;
+    }
+  }
+}
+
+// table header
+thead {
+  font-family: $font-family-headings;
+}
+
+// table footer
+tfoot {
+  > tr {
+    border-bottom: none;
+  }
+}
+
+// table row
+tr {
+  border-bottom: 0.1em solid $color-neutral-darker; // 1px
+}
+
+// table data cell
+td {
+  @include font-size(1.6em);
+
+  padding: 0 0.625em; // 0 10px
+}
+
+// table header cell
+th {
+  @include font-size(1.6em);
+
+  font-weight: bold;
+  padding: 0.1875em 0.625em; // 3px 10px
+  text-align: left;
+}
+
+
+//--------------------------------//
+// FORMS                          //
+//--------------------------------//
+
+form {
+  margin-bottom: 2.4em; // 24px
+  overflow: hidden;
+
+  > fieldset {
+    > legend {
+      position: absolute;
+      text-indent: -999em; // negative a lot
+    }
+  }
+}
+
+fieldset {
+  // TODO check effect of clear: left
+  clear: left;
+  line-height: 1; // helps set vertical alignment of radio buttons and checkboxes; probably unnecessary
+
+  > div {
+    margin-bottom: 1.2em;
+    overflow: hidden;
+    position: relative;
+
+    > label {
+      &[data-unit] {
+        &::after {
+          color: $color-neutral-darker;
+          content: attr(data-unit);
+          font-size: 0.75em; // 12px
+          line-height: 2.5em; // 30px
+          position: absolute;
+          left: 20em; // 240px
+          text-align: right;
+          top: 2.5em; // 30px
+          width: 2.5em; // 30px
+        }
+
+        + input[type="text"] {
+          padding-right: 3.0625em; // 49px
+          width: 14.0625em; // 225px
+        }
+      }
+    }
+
+    > p {
+      @include font-size(1.2em);
+
+      clear: left;
+      color: $color-neutral-darker;
+      margin-bottom: 0;
+    }
+
+    > span {
+      float: left;
+      font-size: 1.2em;
+      line-height: 2.5em; // 30px
+    }
+  }
+
+  > fieldset {
+    @include border-radius(0.2em); // 2px
+
+    border: 0.1em solid $color-neutral-darker;
+    margin-bottom: 1.2em;
+    padding: 0.5em 0.9em 1.1em;
+
+    > div {
+      margin-bottom: 0;
+    }
+
+    > legend {
+      padding: 0 0.625em; // 10px
+    }
+  }
+}
+
+legend {
+  @include font-size(1.6em);
+
+  color: $color-neutral-darkest;
+  font: {
+    family: $font-family-headings;
+    weight: bold;
+  }
+  letter-spacing: 0.025em;
+}
+
+label {
+  display: block;
+  float: left;
+  font: {
+    family: $font-family-headings;
+    size: 1.6em;
+  }
+  line-height: 1.875em; // 30px
+}
+
+input {
+  &[type="checkbox"],
+  &[type="radio"] {
+    // TODO not happy with use of em-values on top of unknown base value
+    float: left;
+    font-size: 1.6em; // 16px
+    height: 1.875em; // 30px
+    margin: 0 0.625em 0 0; // 0 10px 0 0
+    padding: 0;
+  }
+
+  &[type="color"] {
+    @include border-radius(0.125em);
+
+    border: none;
+    clear: left;
+    float: left;
+    font: 1.6em/1em $font-family-inputs; // 16px/16px
+    padding: 0;
+    width: 60px;
+  }
+
+  &[type="date"],
+  &[type="datetime"],
+  &[type="datetime-local"],
+  &[type="email"],
+  &[type="month"],
+  &[type="number"],
+  &[type="password"],
+  &[type="search"],
+  &[type="tel"],
+  &[type="text"],
+  &[type="time"],
+  &[type="url"],
+  &[type="week"] {
+    background: $color-neutral-lightest;
+    border: {
+      color: $color-neutral-darker $color-neutral $color-neutral $color-neutral-darker;
+      radius: 0.125em; // 2px
+      style: solid;
+      width: 0.0625em; /* 1px */
+    }
+    clear: left;
+    float: left;
+    font: 1.6em/1em $font-family-inputs; // 16px/16px
+    height: 1em; // 16px
+    margin: 0 0.625em 0 0; // 0 10px 0 0
+    padding: 0.375em 0.25em; // 6px 4px
+    width: 16.875em; // 270px
+    width: 18.125em; // 160px
+
+    &:focus {
+      border-color: $color-link;
+    }
+  }
+
+  &[type="file"] {}
+
+  &[type="hidden"] {}
+
+  &[type="range"] {
+    clear: left;
+    float: left;
+  }
+
+  // button elements
+  &[type="submit"],
+  &[type="image"],
+  &[type="reset"],
+  &[type="button"] {
+    @extend button;
+  }
+}
+
+// push buttons
+button {
+  @include background-gradient($color-neutral-lightest, $color-neutral-lighter);
+  @include font-size(1.6em);
+
+  border: {
+    color: $color-neutral $color-neutral-darker $color-neutral-darker $color-neutral;
+    radius: 0.125em; // 2px
+    style: solid;
+    width: 0.0625em; /* 1px */
+  }
+  color: $color-neutral-darkest;
+  cursor: pointer;
+  float: left;
+  font-family: $font-family-sans-serif;
+  height: 2.625em; // 42px
+  margin: 0 0.3125em 0 0; // 0 5px 0 0
+  padding: 0 1.1875em; // 0 19px
+
+  &:active {
+    @include background-gradient($color-neutral-lighter, $color-neutral-lightest);
+
+    border-color: $color-neutral-darkest;
+  }
+
+  &[disabled] {
+    background: $color-neutral-lighter;
+    color: $color-neutral;
+    text-shadow: 0 -1px 0 $color-neutral-lightest;
+  }
+}
+
+select {
+  // TODO style selects
+  clear: left;
+  float: left;
+  margin: 0 0.5em 0 0; // ~5px
+
+  ~ select {
+    clear: none; // only clear first select, following ones will be in line
+  }
+}
+
+datalist {}
+
+optgroup {}
+
+option {}
+
+textarea {
+  background: $color-neutral-lightest;
+  border: {
+    color: $color-neutral-darker $color-neutral $color-neutral $color-neutral-darker;
+    radius: 0.125em; // 2px
+    style: solid;
+    width: 0.0625em; // 1px
+  }
+  clear: left;
+  float: left;
+  font: 1.6em/1.5em $font-family-sans-serif; // 16px/24px
+  margin: 0;
+  min-height: 9em; // 114px
+  padding: 0.3125em 0.25em; // 5px 4px
+  width: 35.628em; // 570px
+
+  &:focus {
+    border-color: $color-brand-lighter;
+  }
+}
+
+keygen {}
+
+output {}
+
+progress {}
+
+meter {}
+
+
+//--------------------------------//
+// INTERACTIVE ELEMENTS           //
+//--------------------------------//
+
+details {}
+
+summary {}
+
+command {}
+
+menu {}
+
+
+//--------------------------------//
+// DEBUGGING                      //
+//--------------------------------//
+@if $is-in-debug-mode {
+  * {
+    background-color: $color-debug !important;
+  }
+
+  html {
+    background: repeat-y center top;
+
+    @media (#{ $media-query-small }) {
+      background-image: url('../images/grids/small-#{ $number-of-grid-columns }-columns.png');
+    }
+
+    @media (#{ $media-query-medium }) {
+      background-image: url('../images/grids/medium-#{ $number-of-grid-columns }-columns.png');
+    }
+
+    @media (#{ $media-query-large }) {
+      background-image: url('../images/grids/large-#{ $number-of-grid-columns }-columns.png');
+    }
+
+    @media (#{ $media-query-extra-large }) {
+      background-image: url('../images/grids/extra-large-#{ $number-of-grid-columns }-columns.png');
+    }
+  }
+}

@@ -1,0 +1,14 @@
+---
+page_class: projects
+title: Projects
+---
+
+%p
+  The following is a selection of my work. Some non-website related projects can
+  be found on #{ link_to 'my GitHub profile', 'http://github.com/dhabersack/' }.
+
+- current_page.children.sort_by { |child| child.data.order }.reverse.each do |child|
+  %article
+    %h3= link_to child.data.title, child.url
+
+    =link_to image_tag("#{ child.url }images/breakpoints/extra-extra-large.jpg"), child.url

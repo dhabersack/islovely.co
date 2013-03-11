@@ -1,0 +1,33 @@
+// Add a vertical background gradient to the element starting from the first and
+// transitioning downwards to the second color.
+@mixin background-gradient($color-top, $color-bottom) {
+  background-color: $color-bottom;
+
+  background-image: -webkit-gradient(linear, left top, left bottom, from($color-top), to($color-bottom));
+  background-image: -webkit-linear-gradient(top, $color-top, $color-bottom);
+  background-image:         linear-gradient(top, $color-top, $color-bottom); /* standard, but currently unimplemented */
+}
+
+@mixin border-radius($border-radius) {
+  -webkit-border-radius: $border-radius;
+          border-radius: $border-radius;
+}
+
+@mixin box-shadow($box-shadow) {
+  -webkit-box-shadow: $box-shadow;
+          box-shadow: $box-shadow;
+}
+
+@mixin transform($transform) {
+  -webkit-transform: $transform;
+      -ms-transform: $transform;
+          transform: $transform;
+
+  // prevent jagged edges
+  -webkit-backface-visibility: hidden;
+}
+
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+          transition: $transition;
+}

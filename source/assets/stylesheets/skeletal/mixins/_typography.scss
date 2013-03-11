@@ -1,0 +1,54 @@
+// Generate @font-face directive.
+//
+// $name:   the name of this font
+// $path,   the path to the font files (including the trailing `/`)
+// $eot:    the filename of the EOT-file
+// $woff:   the filename of the WOFF-file
+// $ttf:    the filename of the TTF-file
+// $svg:    the filename of the SVG-file (including `#NAME` if required)
+// $style:  the style of this font
+// $weight: the weight of this font
+@mixin font-face($name,
+    $path,
+    $eot:       '',
+    $woff:      '',
+    $ttf:       '',
+    $svg:       '',
+    $style:     normal,
+    $weight:    normal) {
+  $paths: ();
+  @if $eot  != '' { $paths: append($paths, #{ url('#{ $path + $eot  }?#iefix') format('embedded-opentype') }, comma); }
+  @if $woff != '' { $paths: append($paths, #{ url('#{ $path + $woff }'       ) format('woff')              }, comma); }
+  @if $ttf  != '' { $paths: append($paths, #{ url('#{ $path + $ttf  }'       ) format('truetype')          }, comma); }
+  @if $svg  != '' { $paths: append($paths, #{ url('#{ $path + $svg  }'       ) format('svg')               }, comma); }
+
+  @font-face {
+    font: {
+      family: $name;
+      style: $style;
+      weight: $weight;
+    }
+
+    @if $eot != '' {
+      src: url('#{ $path + $eot }');
+    }
+
+    @if length($paths) != 0 {
+      src: $paths;
+    }
+  }
+}
+
+// Set `font-size` as well as appropriate `line-height`.
+@mixin font-size($font-size) {
+  $base-line-height: ($font-size * $minimum-line-height-to-font-size-ratio) / $vertical-grid-base-height;
+
+  // round up to nearest whole number if `$base-line-height` is not an integer
+  $delta: (floor($base-line-height * 1000 - floor($base-line-height) * 1000));
+  @if ($delta != 0) {
+    $base-line-height: ceil($base-line-height);
+  }
+
+  font-size: $font-size;
+  line-height: (($base-line-height * $vertical-grid-base-height) / $font-size)#{ unit($font-size) };
+}

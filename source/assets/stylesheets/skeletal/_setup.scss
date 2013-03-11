@@ -1,0 +1,54 @@
+@import 'config.scss';
+@import 'setup/media-queries.scss';
+
+// Additional setup based on given configuration.
+
+//--------------------------------//
+// COLORS                         //
+//--------------------------------//
+
+// percentage amounts to adjust colors by
+$amount-lightest: 25%;
+$amount-lighter:  15%;
+$amount-darker:   25%;
+$amount-darkest:  50%;
+
+$color-action-lightest:       lighten($color-action,       $amount-lightest);
+$color-action-lighter:        lighten($color-action,       $amount-lighter);
+$color-action-darker:          darken($color-action,       $amount-darker);
+$color-action-darkest:         darken($color-action,       $amount-darkest);
+
+$color-alert-lightest:        lighten($color-alert,        $amount-lightest);
+$color-alert-lighter:         lighten($color-alert,        $amount-lighter);
+$color-alert-darker:           darken($color-alert,        $amount-darker);
+$color-alert-darkest:          darken($color-alert,        $amount-darkest);
+
+$color-brand-lightest:        lighten($color-brand,        $amount-lightest);
+$color-brand-lighter:         lighten($color-brand,        $amount-lighter);
+$color-brand-darker:           darken($color-brand,        $amount-darker);
+$color-brand-darkest:          darken($color-brand,        $amount-darkest);
+
+$color-error-lightest:        lighten($color-error,        $amount-lightest);
+$color-error-lighter:         lighten($color-error,        $amount-lighter);
+$color-error-darker:           darken($color-error,        $amount-darker);
+$color-error-darkest:          darken($color-error,        $amount-darkest);
+
+$color-highlight-lightest:    lighten($color-highlight,    $amount-lightest);
+$color-highlight-lighter:     lighten($color-highlight,    $amount-lighter);
+$color-highlight-darker:       darken($color-highlight,    $amount-darker);
+$color-highlight-darkest:      darken($color-highlight,    $amount-darkest);
+
+$color-link-lightest:         lighten($color-link,         $amount-lightest);
+$color-link-lighter:          lighten($color-link,         $amount-lighter);
+$color-link-darker:            darken($color-link,         $amount-darker);
+$color-link-darkest:           darken($color-link,         $amount-darkest);
+
+$color-link-visited-lightest: lighten($color-link-visited, $amount-lightest);
+$color-link-visited-lighter:  lighten($color-link-visited, $amount-lighter);
+$color-link-visited-darker:    darken($color-link-visited, $amount-darker);
+$color-link-visited-darkest:   darken($color-link-visited, $amount-darkest);
+
+$color-neutral-lightest:      lighten($color-neutral,      $amount-lightest);
+$color-neutral-lighter:       lighten($color-neutral,      $amount-lighter);
+$color-neutral-darker:         darken($color-neutral,      $amount-darker);
+$color-neutral-darkest:        darken($color-neutral,      $amount-darkest);

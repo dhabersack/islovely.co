@@ -1,0 +1,8 @@
+// Do not use these in stylesheets directly but reference them through their
+// proxies set in `_config.scss`.
+
+// Font stacks are based on
+// http://unitinteractive.com/blog/2008/06/26/better-css-font-stacks/
+$font-family-monospace: 'Courier New', Courier, monospace;
+$font-family-sans-serif: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$font-family-serif:      Georgia, Times, 'Times New Roman', serif;
