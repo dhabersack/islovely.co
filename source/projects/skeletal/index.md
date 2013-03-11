@@ -1,6 +1,6 @@
 ---
 layout: project
-order: 1
+order: 0
 page_class: project
 title: Skeletal
 ---
@@ -19,5 +19,5 @@ thus stays maintainable and flexible. The framework harnesses the power of SASS,
 using its variables and mixins to provide its flexible, fully responsive grid
 and easy access to new features introduced in CSS3.
 
-All my current projects are built on Skeletal. Another live demo is available
-[on GitHub](http://dhabersack.github.com/skeletal/ "Skeletal on GitHub").
+All my current projects are built on Skeletal. A live demo is available [on
+GitHub](http://dhabersack.github.com/skeletal/ "Skeletal on GitHub").
