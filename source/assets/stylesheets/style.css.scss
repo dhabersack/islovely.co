@@ -1,12 +1,12 @@
 @import 'skeletal/skeletal.scss';
 
 @include font-face(
-  $name: 'Entypo Social',
-  $path: '/assets/fonts/Entypo-Social/',
-  $eot:  'regular.eot',
-  $woff: 'regular.woff',
-  $ttf:  'regular.ttf',
-  $svg:  'regular.svg#entypo-social'
+  $name: 'islovely Icons',
+  $path: '/assets/fonts/islovely-Icons/',
+  $eot:  'icons.eot',
+  $woff: 'icons.woff',
+  $ttf:  'icons.ttf',
+  $svg:  'icons.svg#islovely-Icons'
 );
 
 @include font-face(
@@ -231,17 +231,24 @@ footer {
   }
 
   li {
-    @include font-size(8em);
+    @include font-size(5em);
 
     display: inline-block;
-    line-height: 1em;
+//    line-height: 1em;
     margin: 0 0.0625em;
   }
 
   ol {
-    font-family: 'Entypo Social';
+    font-family: 'islovely Icons';
     list-style: none;
     margin-bottom: 0;
+
+    -webkit-font-feature-settings: "liga", "dlig";
+       -moz-font-feature-settings: "liga=1, dlig=1";
+       -moz-font-feature-settings: "liga", "dlig";
+        -ms-font-feature-settings: "liga", "dlig";
+         -o-font-feature-settings: "liga", "dlig";
+            font-feature-settings: "liga", "dlig";
 
     a {
       text-decoration: none;
