@@ -333,7 +333,7 @@ while **75% failed the lecture**.
 
 ### Conclusion
 
-The actual result, when considering the entire lecture, is _far_ below the
+The actual result, when considering the entire lecture, lies _far_ below the
 official success rate of 47%. Even when considering “barely passing” a success,
 only one out of four students actually succeeded.
 
