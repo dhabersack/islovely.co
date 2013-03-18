@@ -1,0 +1,14 @@
+@import 'skeletal/skeletal.scss';
+
+#contingency-table {
+  td,
+  th {
+    text-align: center;
+  }
+
+  tr {
+    th:first-of-type {
+      text-align: right;
+    }
+  }
+}
