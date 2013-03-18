@@ -24,11 +24,6 @@ body {
   background-color: inherit;
   color: $color-neutral-darkest;
   font: 62.5%/1 $font-family-content; // 10px/10px
-
-  @media (#{ $media-query-extra-small }) {
-    margin: 0 $grid-extra-small-gutter-width;
-    width: $grid-extra-small-column-width;
-  }
 }
 
 // generic section
@@ -38,8 +33,6 @@ section {
 
 // section with navigation links
 nav {
-  @include grid($number-of-grid-columns, $margin-bottom: 1.2em, $padding: 0.6em 0, $center: true);
-
   display: block;
   font-family: $font-family-headings;
 
@@ -693,10 +686,6 @@ col {}
 
 // table body
 tbody {
-  th {
-    font-weight: normal;
-  }
-
   > tr {
     &:nth-child(odd) {
       background: $color-neutral-lighter;
@@ -732,7 +721,10 @@ td {
 th {
   @include font-size(1.6em);
 
-  font-weight: bold;
+  font: {
+    family: $font-family-headings;
+    weight: bold;
+  }
   padding: 0.1875em 0.625em; // 3px 10px
   text-align: left;
 }
@@ -860,19 +852,7 @@ input {
     width: 60px;
   }
 
-  &[type="date"],
-  &[type="datetime"],
-  &[type="datetime-local"],
-  &[type="email"],
-  &[type="month"],
-  &[type="number"],
-  &[type="password"],
-  &[type="search"],
-  &[type="tel"],
-  &[type="text"],
-  &[type="time"],
-  &[type="url"],
-  &[type="week"] {
+  &[type="text"] {
     background: $color-neutral-lightest;
     border: {
       color: $color-neutral-darker $color-neutral $color-neutral $color-neutral-darker;
@@ -898,17 +878,22 @@ input {
 
   &[type="hidden"] {}
 
+  @each $type in (date, datetime, datetime-local, email, month, number, password, search, tel, time, url, week) {
+    &[type="#{ $type }"] {
+      @extend input[type="text"];
+    }
+  }
+
   &[type="range"] {
     clear: left;
     float: left;
   }
 
   // button elements
-  &[type="submit"],
-  &[type="image"],
-  &[type="reset"],
-  &[type="button"] {
-    @extend button;
+  @each $type in (submit, image, reset, button) {
+    &[type="#{ $type }"] {
+      @extend button;
+    }
   }
 }
 

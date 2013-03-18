@@ -9,6 +9,7 @@
 $color-action:       $color-green;
 $color-alert:        $color-yellow;
 $color-brand:        $color-blue;
+$color-debug:        rgba($color-red, 0.0625);
 $color-error:        $color-red;
 $color-highlight:    $color-yellow;
 $color-link:         $color-blue;
@@ -30,7 +31,7 @@ $is-in-debug-mode: false;
 //--------------------------------//
 
 // number of columns that make up the horizontal grid; to make the math work out
-// even (and get background grids in debug-mode), set this to `12` or `16`
+// even (and get background grids in debug-mode), set this to `12`, `16` or `24`
 $number-of-grid-columns: 16;
 
 // all vertical dimensions must be (or add up to) multiples of this base-height
@@ -43,10 +44,10 @@ $vertical-grid-base-height: 0.6em;
 
 // font stack proxies
 $font-family-code:     $font-family-monospace;
-$font-family-headings: 'Istok Web', $font-family-sans-serif;
+$font-family-headings: $font-family-sans-serif;
 $font-family-inputs:   $font-family-sans-serif;
-$font-family-quotes:   'Lora', $font-family-serif;
-$font-family-content:  'Lora', $font-family-serif;
+$font-family-quotes:   $font-family-serif;
+$font-family-content:  $font-family-serif;
 
 // typography: minimum ratio of `line-height` to `font-size`
 $minimum-line-height-to-font-size-ratio: 1.5;
