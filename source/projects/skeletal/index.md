@@ -1,4 +1,5 @@
 ---
+description: An open source frontend-framework based on Sass.
 layout: project
 order: 0
 page_class: project

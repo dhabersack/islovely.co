@@ -1,4 +1,5 @@
 ---
+description: A photography-based website theme created for Johanna Beyer of johannabeyer.com.
 layout: project
 order: 10
 page_class: project

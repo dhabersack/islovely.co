@@ -1,4 +1,5 @@
 ---
+description: My personal portfolio, built using Middleman and Skeletal.
 layout: project
 order: 20
 page_class: project

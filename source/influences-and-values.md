@@ -1,4 +1,5 @@
 ---
+description: Individuals and businesses I take inspiration from.
 title: Influences &amp; Values
 ---
 

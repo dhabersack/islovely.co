@@ -1,4 +1,5 @@
 ---
+description: A project created as part of a group assignment in college.
 layout: project
 order: 30
 page_class: project

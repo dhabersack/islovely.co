@@ -1,4 +1,5 @@
 ---
+description: Imprint with address and further acknowledgements.
 title: Imprint
 ---
 
