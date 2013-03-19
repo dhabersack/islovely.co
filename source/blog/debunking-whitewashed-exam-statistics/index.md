@@ -6,6 +6,13 @@ summary: The official statistics of a recent exam give off an incorrectly positi
 title: Debunking whitewashed exam statistics
 ---
 
+**Edit (March 19, 2013):** I updated my calculations at the end to no longer
+include phantom students. While their inclusion was meant to highlight a
+disregard of their needs, I inadvertently and unfairly ended up distorting the
+numbers in favor of my argument.
+
+<hr>
+
 In
 “[Why students fail entry-level programming exams](/blog/why-students-fail-entry-level-programming-exams/)”
 I referenced a lecture in which the resit was scheduled six months after the
@@ -313,29 +320,32 @@ measuring the lecture‘s success.
 
 #### Combining the findings
 
-Estimating the number of phantom students at a realistic 47, only 25% (116 out
-of 450 students) passed after both exams. To put it differently, **one out of
-four students passed the lecture.**
+Even when ignoring the likely existence of phantom students, only 29% (116 out
+of 403 students) passed after both exams. To put it differently, **fewer than
+one out of three students passed the lecture.**
 
 When taking out grades below B-, the number of “successful” attendants drops
-from 116 to 48, which leaves 11% (48 out of 450 students).
+from 116 to 48, which leaves only 12% (48 out of 403 students).
 
 This result is still a tiny bit too optimistic, because it potentially counts
 the five students that took both exams twice, which is incorrect if their
 results fell into the considered range both times.
 
 The outcome does not change by a lot when accounting for that possibility: **one
-out of ten students successfully passed the lecture**.
+out of nine students successfully passed the lecture**.
 
 Several others passed with a more limited understanding of what has been taught,
-while **75% failed the lecture**.
+while **71% failed the lecture**.
+
+When assuming any number of phantom students, these numbers shift in favor of
+“failing”.
 
 
 ### Conclusion
 
 The actual result, when considering the entire lecture, lies _far_ below the
 official success rate of 47%. Even when considering “barely passing” a success,
-only one out of four students actually succeeded.
+fewer than one out of three students actually succeeded.
 
 The only aspect under which this is acceptable is if this lecture was aimed at
 weeding out beginners struggling with the subject by not giving them a fighting
