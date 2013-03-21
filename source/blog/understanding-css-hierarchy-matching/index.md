@@ -1,7 +1,7 @@
 ---
 date: 2012-12-27
+description: In order to improve your stylesheets, you first need to understand how browsers match CSS-selectors and HTML.
 layout: post
-summary: In order to improve your stylesheets, you first need to understand how browsers match CSS-selectors and HTML.
 title: Understanding CSS hierarchy-matching
 ---
 

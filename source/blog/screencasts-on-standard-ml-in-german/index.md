@@ -1,7 +1,7 @@
 ---
 date: 2013-03-12
+description: A well-intentioned but ultimately unfair move by a lecture’s organizers inspired me to record a number of screencasts on functional programming.
 layout: post
-summary: An unfair move by a lecture’s organizers inspired me to record a number of screencasts on functional programming.
 title: Screencasts on Standard ML in German
 ---
 

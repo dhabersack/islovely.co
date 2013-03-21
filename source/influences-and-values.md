@@ -1,5 +1,5 @@
 ---
-description: Individuals and businesses I take inspiration from.
+description: Individuals, businesses and projects I take inspiration from.
 title: Influences &amp; Values
 ---
 

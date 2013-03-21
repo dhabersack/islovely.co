@@ -1,4 +1,5 @@
 ---
+description: Ways to get in contact with me.
 title: Contact
 ---
 

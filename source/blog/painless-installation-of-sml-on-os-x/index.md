@@ -1,7 +1,7 @@
 ---
 date: 2012-07-30
+description: The Homebrew package manager takes the pain out of installing SML/NJ on your system. Follow these steps for a hassle- and clutter-free installation.
 layout: post
-summary: The official installation process for SML/NJ on a Mac is a hassle and may leave hard-to-remove files on your system. The Homebrew package manager takes the pain out of this process if you follow a few easy steps.
 title: Painless installation of SML on OS X
 ---
 

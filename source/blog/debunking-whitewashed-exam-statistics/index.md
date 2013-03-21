@@ -1,8 +1,8 @@
 ---
 date: 2013-03-18
+description: The official statistics of a recent exam present an incorrectly positive picture. When taking a closer look, the numbers turn out to be a lot worse.
 layout: post
 stylesheet: style.css
-summary: The official statistics of a recent exam give off an incorrectly positive picture. When taking a closer look at the results, the numbers turn out to be a lot worse.
 title: Debunking whitewashed exam statistics
 ---
 

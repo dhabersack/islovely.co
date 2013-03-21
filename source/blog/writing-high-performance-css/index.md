@@ -1,7 +1,7 @@
 ---
 date: 2012-12-28
+description: Aside from the established best practices for reducing load times, a few things that can be done to stylesheets to make browsers render pages faster.
 layout: post
-summary: Aside from the well-established best practices for reducing page load times on the web, there are a few things that can be done to stylesheets to make browsers render pages faster.
 title: Writing high-performance CSS
 ---
 

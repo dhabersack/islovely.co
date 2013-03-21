@@ -1,5 +1,5 @@
 ---
-description: An open source frontend-framework based on Sass.
+description: An open source frontend-framework based on Sass. Skeletal offers a clean starting point as well as many advanced features.
 layout: project
 order: 0
 page_class: project

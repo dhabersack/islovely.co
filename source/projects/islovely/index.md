@@ -1,5 +1,5 @@
 ---
-description: My personal portfolio, built using Middleman and Skeletal.
+description: My personal portfolio/blog, built using Middleman and Skeletal.
 layout: project
 order: 20
 page_class: project
