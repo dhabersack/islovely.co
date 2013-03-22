@@ -1,0 +1,376 @@
+---
+date: 2012-12-27
+description: In order to improve your stylesheets, you first need to understand how browsers match CSS-selectors and HTML.
+layout: post
+title: Understanding CSS hierarchy-matching
+---
+
+%p
+  To get a feel for how CSS-selectors should be written, you need to understand
+  how browsers match them to the related markup. The following tries to give a
+  top-level description that might not be entirely accurate but should still
+  give you a good enough idea of how CSS and HTML get combined during rendering.
+
+%p
+  <strong>Note:</strong> Writing this, I realized that this is probably not how
+  it actually works, as using regular expressions to match selectors and
+  hierarchies would obviate the need for repeated identification-cycles.
+  Nevertheless, thinking of the process this way helps writing simpler
+  selectors, so the model remains valid.
+
+
+%h3 Finding hierarchies
+
+%p
+  Consider a site with the following markup:
+
+%pre
+  :preserve
+    &lt;html&gt;
+      &lt;head&gt;
+        // head omitted
+      &lt;/head&gt;
+
+      &lt;body&gt;
+        &lt;header&gt;
+          &lt;h1&gt;Site title&lt;/h1&gt;
+        &lt;/header&gt;
+
+        &lt;nav&gt;
+          &lt;ol&gt;
+            &lt;li&gt;
+              &lt;a href="#"&gt;Link&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+              &lt;a href="#"&gt;Link&lt;/a&gt;
+            &lt;/li&gt;
+          &lt;/ol&gt;
+        &lt;/nav&gt;
+
+        &lt;section&gt;
+          &lt;article&gt;
+            &lt;header&gt;
+              &lt;h2&gt;Article title&lt;/h2&gt;
+
+              &lt;p&gt;Date&lt;/p&gt;
+            &lt;/header&gt;
+
+            &lt;p&gt;Content&lt;/p&gt;
+
+            &lt;p&gt;Content with &lt;a href="#"&gt;link&lt;/a&gt;&lt;/p&gt;
+
+            &lt;ul&gt;
+              &lt;li&gt;
+                &lt;a href="#"&gt;Link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href="#"&gt;Link&lt;/a&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/article&gt;
+        &lt;/section&gt;
+      &lt;/body&gt;
+    &lt;/html&gt;
+
+%p
+  When discarding the content and chaining all tags together according to their
+  nesting, the path to each tag can be extracted:
+
+%table
+  %thead
+    %tr
+      %th Tag
+      %th Hierarchy
+
+  %tbody
+    %tr
+      %th html
+      %td html
+    %tr
+      %th body
+      %td html body
+    %tr
+      %th header
+      %td html body header
+    %tr
+      %th h1
+      %td html body header h1
+    %tr
+      %th nav
+      %td html body nav
+    %tr
+      %th ol
+      %td html body nav ol
+    %tr
+      %th li
+      %td html body nav ol li
+    %tr
+      %th a
+      %td html body nav ol li a
+    %tr
+      %th li
+      %td html body nav ol li
+    %tr
+      %th a
+      %td html body nav ol li a
+    %tr
+      %th section
+      %td html body section
+    %tr
+      %th article
+      %td html body section article
+    %tr
+      %th header
+      %td html body section article header
+    %tr
+      %th h2
+      %td html body section article header h2
+    %tr
+      %th p
+      %td html body section article header p
+    %tr
+      %th p
+      %td html body section article p
+    %tr
+      %th p
+      %td html body section article p
+    %tr
+      %th a
+      %td html body section article p a
+    %tr
+      %th ul
+      %td html body section article ul
+    %tr
+      %th li
+      %td html body section article ul li
+    %tr
+      %th a
+      %td html body section article ul li a
+    %tr
+      %th li
+      %td html body section article ul li
+    %tr
+      %th a
+      %td html body section article ul li a
+
+%p
+  Note that some tags share the same hierarchy.
+
+%p
+  While each hierarchy could be used as a (bad) CSS-selector, think of them as
+  an attribute we add to each tag that we now match against selectors.
+
+
+%h3 Matching simple selectors
+
+%p
+  <strong>Selectors are matched to markup from right to left.</strong>
+  Single-tag selectors are simplest and instruct the browser to ignore all
+  elements whose hierarchy does not end in the exact tag given.
+
+%p
+  For example, matching the above table against the selector <code>li</code>
+  would trim it down to just four elements:
+
+%table
+  %thead
+    %tr
+      %th Tag
+      %th Hierarchy
+
+  %tbody
+    %tr
+      %th li
+      %td html body nav ol <strong>li</strong>
+    %tr
+      %th li
+      %td html body nav ol <strong>li</strong>
+    %tr
+      %th li
+      %td html body section article ul <strong>li</strong>
+    %tr
+      %th li
+      %td html body section article ul <strong>li</strong>
+
+%p
+  The browser only had to filter the initial table a single time to find these
+  elements and can now apply the styles set with the selector.
+
+
+%h3 Matching multi-level selectors
+
+%p
+  As soon as we chain selectors the browser has to iterate over intermediate
+  results multiple times, potentially filtering them with every step.
+
+%p
+  When applying a rule such as <code>ul &gt; li</code>, the browser again starts
+  at the rightmost tag and filters the hierarchy-table to end up with the same
+  result as before:
+
+%table
+  %thead
+    %tr
+      %th Tag
+      %th Hierarchy
+
+  %tbody
+    %tr
+      %th li
+      %td html body nav ol <strong>li</strong>
+    %tr
+      %th li
+      %td html body nav ol <strong>li</strong>
+    %tr
+      %th li
+      %td html body section article ul <strong>li</strong>
+    %tr
+      %th li
+      %td html body section article ul <strong>li</strong>
+
+%p
+  This list now gets filtered again to identify all <code>li</code>-tags nested
+  <em>directly below</em> a <code>ul</code>-tag:
+
+%table
+  %thead
+    %tr
+      %th Tag
+      %th Hierarchy
+
+  %tbody
+    %tr
+      %th li
+      %td html body section article <strong>ul &gt; li</strong>
+    %tr
+      %th li
+      %td html body section article <strong>ul &gt; li</strong>
+
+%p
+  The more levels there are in a selector, the more times each resulting list
+  needs to be iterated over again.
+
+%p
+  While extending a selector will often result in a condensed list, unnecessary
+  extensions generate wasted filtering-cycles. In the above example, adding
+  <code>html &gt; body &gt; section &gt; article &gt;</code> in front of the selector would
+  force the browser to filter the result <strong>four more times without
+  altering the list</strong> before it could assert a match.
+
+
+%h3 Identification loops
+
+%p
+  While every level adds a new iteration over a filtered list of
+  potentially-matching tags, some selectors require a more complex analysis of a
+  single element’s hierarchy. While the child-selector (<code>&gt;</code>) only
+  requires a check of the direct parent tag, a descendant-selector (space) might
+  force the browser to walk up the entire hierarchy trying to find a match.
+
+%p
+  For example, <code>nav a</code> first filters out all elements whose hierarchy
+  does not end in an <code>a</code>-tag, resulting in the following list:
+
+%table
+  %thead
+    %tr
+      %th Tag
+      %th Hierarchy
+
+  %tbody
+    %tr
+      %th a
+      %td html body nav ol li <strong>a</strong>
+    %tr
+      %th a
+      %td html body nav ol li <strong>a</strong>
+    %tr
+      %th a
+      %td html body section article p <strong>a</strong>
+    %tr
+      %th a
+      %td html body section article ul li <strong>a</strong>
+    %tr
+      %th a
+      %td html body section article ul li <strong>a</strong>
+
+%p
+  When adding <code>nav</code> to the selector, the browser has to execute a
+  more detailed analysis of each element’s hierarchy. For the first element, it
+  has to go through the following steps:
+
+%table
+  %thead
+    %tr
+      %th Iteration
+      %th Hierarchy
+      %th Result
+
+  %tbody
+    %tr
+      %th 1
+      %td html body nav ol <strong>li a</strong>
+      %td <code>nav</code> not found, continue&hellip;
+    %tr
+      %th 2
+      %td html body nav <strong>ol</strong> li <strong>a</strong>
+      %td <code>nav</code> not found, continue&hellip;
+    %tr
+      %th 3
+      %td html body <strong>nav</strong> ol li <strong>a</strong>
+      %td <code>nav</code> found, match
+
+%p
+  The browser can stop walking up this element’s hierarchy as soon as a match is
+  found and continue with the next element. In contrast to that, the last
+  element from the initial list gets matched against <code>nav a</code> as
+  follows:
+
+%table
+  %thead
+    %tr
+      %th Iteration
+      %th Hierarchy
+      %th Result
+
+  %tbody
+    %tr
+      %th 1
+      %td html body section article ul <strong>li a</strong>
+      %td <code>nav</code> not found, continue&hellip;
+    %tr
+      %th 2
+      %td html body section article <strong>ul</strong> li <strong>a</strong>
+      %td <code>nav</code> not found, continue&hellip;
+    %tr
+      %th 3
+      %td html body section <strong>article</strong> ul li <strong>a</strong>
+      %td <code>nav</code> not found, continue&hellip;
+    %tr
+      %th 4
+      %td html body <strong>section</strong> article ul li <strong>a</strong>
+      %td <code>nav</code> not found, continue&hellip;
+    %tr
+      %th 5
+      %td html <strong>body</strong> section article ul li <strong>a</strong>
+      %td <code>nav</code> not found, continue&hellip;
+    %tr
+      %th 6
+      %td <strong>html</strong> body section article ul li <strong>a</strong>
+      %td <code>nav</code> not found, no match
+
+%p
+  For elements that only match the end of a selector but not its beginning, the
+  browser has to walk up the entire hierarchy before it can assess that the
+  element definitely does not match.
+
+%p
+  In real-world examples, pages usually contain a much higher number of elements
+  with deeper and more complex hierarchies. Since the matching-process has to be
+  repeated for every element remaining after each filtering-step, it is best to
+  <strong>keep nesting of markup to a minimum</strong> and <strong>use selectors
+  that match or fail as quickly as possible</strong>.
+
+%p
+  You can read more recommendations on doing the latter in my post on
+  #{ link_to 'writing high-performance CSS', '/blog/writing-high-performance-css/' }.
