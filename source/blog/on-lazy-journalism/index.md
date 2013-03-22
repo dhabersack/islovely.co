@@ -32,12 +32,12 @@ the story of his accident. While reading the
 [first article I came across](http://nzherald.co.nz/nz/news/article.cfm?c_id=1&objectid=10818437 'Kiwi skydiving instructor killed in base jump - National - NZ Herald News'),
 my heart suddenly stopped. My tweet was quoted and I mentioned by name:
 
-
 > “He was found dead at the scene, police said. A German friend, Dom Habersack
 > paid tribute to Mr McCandlish on Twitter. ‘The skydiving world hast lost a
 > legend. Watch over us, Alan McCandlish. I am glad to have known you.’ The
 > adrenalin junkie had been touring Europe’s base jumping hot-spots&hellip;”
-
+>
+> <cite>NZ Herald</cite>
 
 My initial confusion quickly turned into anger after realising that there would
 have been countless other messages that should have been mentioned instead, some
