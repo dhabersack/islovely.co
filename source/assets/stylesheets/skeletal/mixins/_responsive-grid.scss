@@ -1,3 +1,5 @@
+@import 'functions.scss';
+
 // Set `margin`, `padding` and `width` for a container occupying a set number of
 // columns within the responsive grid.
 //
@@ -88,7 +90,7 @@
         $media-query-small,
         compress-directional-values($margin-top, $margin-right, $margin-bottom, $margin-left),
         compress-directional-values($padding-top, $padding-right, $padding-bottom, $padding-left),
-        grid-width($number-of-columns, $grid-small-column-width, $grid-small-gutter-width, $horizontal-padding),
+        grid-width($number-of-columns, small) - $horizontal-padding,
         $break-every-nth
       );
     }
@@ -115,7 +117,7 @@
         $media-query-medium,
         compress-directional-values($margin-top, $margin-right, $margin-bottom, $margin-left),
         compress-directional-values($padding-top, $padding-right, $padding-bottom, $padding-left),
-        grid-width($number-of-columns, $grid-medium-column-width, $grid-medium-gutter-width, $horizontal-padding),
+        grid-width($number-of-columns, 'medium') - $horizontal-padding,
         $break-every-nth
       );
     }
@@ -142,7 +144,7 @@
         $media-query-large,
         compress-directional-values($margin-top, $margin-right, $margin-bottom, $margin-left),
         compress-directional-values($padding-top, $padding-right, $padding-bottom, $padding-left),
-        grid-width($number-of-columns, $grid-large-column-width, $grid-large-gutter-width, $horizontal-padding),
+        grid-width($number-of-columns, 'large') - $horizontal-padding,
         $break-every-nth
       );
     }
@@ -169,7 +171,7 @@
         $media-query-extra-large,
         compress-directional-values($margin-top, $margin-right, $margin-bottom, $margin-left),
         compress-directional-values($padding-top, $padding-right, $padding-bottom, $padding-left),
-        grid-width($number-of-columns, $grid-extra-large-column-width, $grid-extra-large-gutter-width, $horizontal-padding),
+        grid-width($number-of-columns, 'extra-large') - $horizontal-padding,
         $break-every-nth
       );
     }
@@ -209,24 +211,4 @@
 
 @function grid-offset($number-of-columns, $column-width, $gutter-width) {
   @return $number-of-columns * ($column-width + $gutter-width);
-}
-
-@function grid-width($number-of-columns, $column-width, $gutter-width, $horizontal-padding) {
-  @return $number-of-columns * $column-width + ($number-of-columns - 1) * $gutter-width - $horizontal-padding;
-}
-
-// Shortens top-, right-, bottom- and left-values to their shorthand
-// representation.
-@function compress-directional-values($top: 0, $right: 0, $bottom: 0, $left: 0) {
-  @if $top == $right and $right == $bottom and $bottom == $left {
-    @return $top;
-  } @else if $right == $left {
-    @if $top == $bottom {
-      @return $top $right;
-    } @else {
-      @return $top $right $bottom;
-    }
-  } @else {
-    @return $top $right $bottom $left;
-  }
 }
