@@ -12,13 +12,14 @@ based on an accumulation of code I tend to reuse a lot throughout all of my
 web-based projects.
 
 It puts an emphasis on readability and clean organization to make the sites
-using it as simple and user-friendly as possible. Responsiveness is baked right
-in, so every layout automatically adapts to a range of devices and screen sizes.
+using it simple and user-friendly. Responsiveness is baked right in, so every
+layout automatically adapts to a range of devices and screen sizes.
 
 Skeletal is clean and keeps markup free from additional attributes or IDs and
-thus stays maintainable and flexible. The framework harnesses the power of SASS,
-using its variables and mixins to provide its flexible, fully responsive grid
-and easy access to new features introduced in CSS3.
+thus stays maintainable and flexible. The framework harnesses the power of
+[Sass](http://sass-lang.com/), using its variables and mixins to provide its
+flexible, fully responsive grid and easy access to new features introduced in
+CSS3.
 
 All my current projects are built on Skeletal. A live demo is available [on
 GitHub](http://dhabersack.github.com/skeletal/ "Skeletal on GitHub").
