@@ -45,7 +45,7 @@ $keyword-declaration:         '.kd';
 $keyword-namespace:           '.kn';
 $keyword-pseudo:              '.kp';  // done
 $keyword-reserved:            '.kr';
-$keyword-type:                '.kt';
+$keyword-type:                '.kt';  // done
 $literal-number:              '.m';
 $literal-number-float:        '.mf';
 $literal-number-hex:          '.mh';
@@ -77,7 +77,7 @@ $name-function:               '.nf';  // done
 $name-label:                  '.nl';
 $name-namespace:              '.nn';
 $name-tag:                    '.nt';  // done
-$name-variable:               '.nv';
+$name-variable:               '.nv';  // done
 $name-variable-class:         '.vc';
 $name-variable-global:        '.vg';
 $name-variable-instance:      '.vi';
@@ -196,9 +196,8 @@ color: #000;
   font-weight: bold;
 }
 
-#{ $keyword-type } { background: $color-red;
-  color: #458;
-  font-weight: bold;
+#{ $keyword-type } {
+  color: $color-blue;
 }
 
 #{ $literal-number } { background: $color-red;
@@ -322,8 +321,9 @@ color: #000;
   color: darker($color-blue);
 }
 
-#{ $name-variable } { background: $color-red;
-  color: #008080;
+#{ $name-variable } {
+  color: darker($color-green);
+  font-weight: bold;
 }
 
 #{ $name-variable-class } { background: $color-red;
