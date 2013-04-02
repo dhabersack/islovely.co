@@ -2,10 +2,10 @@
 
 @mixin button(
     $background-color: $color-neutral-lighter,
-    $icon:             '',
-    $color-variation:  12%
+    $icon:             ''
 ) {
-  $font-size: 1.6em;
+  $color-variation: 12%;
+  $font-size:       1.6em;
 
   @include border-radius(0.125em); // 2px
 
@@ -21,6 +21,7 @@
   line-height: normal;
   margin: 0 $grid-extra-small-gutter-width 0.75em 0;
   padding: 0.5em 1.1875em; // 8px 19px
+  -webkit-appearance: none;
 
   @media (#{ $media-query-small }) {
     margin-right: $grid-small-gutter-width / $font-size * 1em;
@@ -58,8 +59,7 @@
   }
 
   &:active {
-    @include background-gradient($background-color, lighten($background-color, $color-variation));
-
+    background-color: lighten($background-color, $color-variation);
     border-color: darken($background-color, $color-variation * 2);
   }
 
@@ -107,6 +107,7 @@
   margin: 0 $grid-extra-small-gutter-width 0.75em 0;
   padding: $padding-vertical $padding-horizontal;
   width: 90%;
+  -webkit-appearance: none;
 
   @if $does-include-small {
     @media (#{ $media-query-small }) {
