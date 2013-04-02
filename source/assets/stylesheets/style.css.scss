@@ -1,3 +1,4 @@
+@import 'pygments.scss';
 @import 'skeletal/skeletal.scss';
 
 @include font-face(
@@ -154,7 +155,7 @@ body {
     }
 
     p {
-      margin-bottom: 0;
+      margin-bottom: 0.8em; // 12px
     }
   }
 
@@ -369,5 +370,15 @@ h3 {
     @include grid($number-of-grid-columns, $breakpoints: ('small', 'medium'));
     @include grid(14, $center: true, $breakpoints: ('large'));
     @include grid(12, $center: true, $breakpoints: ('extra-large'));
+  }
+}
+
+#subscribe-to-rss {
+  &::after {
+    @include enable-ligatures();
+
+    content: 'RSS';
+    font-family: 'islovely Icons';
+    margin-left: 0.2em; // 3px
   }
 }
