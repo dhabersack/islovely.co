@@ -85,8 +85,8 @@ $operator:                    '.o';  // done
 $operator-word:               '.ow';
 $text-whitespace:             '.w';
 
-#{ $comment } { background: $color-red;
-  color: #998;
+#{ $comment } {
+  color: lighter($color-blue);
   font-style: italic;
 }
 
@@ -224,10 +224,6 @@ color: #000;
   color: #099;
 }
 
-#{ $literal-string-backtick } { background: $color-red;
-  color: #d01040;
-}
-
 #{ $literal-string-char } { background: $color-red;
   color: #d01040;
 }
@@ -237,6 +233,7 @@ color: #000;
 }
 
 #{ $literal-string },
+#{ $literal-string-backtick },
 #{ $literal-string-double },
 #{ $literal-string-single } {
   color: darker($color-green);

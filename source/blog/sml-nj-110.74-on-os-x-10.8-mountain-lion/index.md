@@ -14,7 +14,7 @@ additional tuning is required.
 
 Note that this bug
 [will be fixed in SML/NJ 110.75](http://smlnj-gforge.cs.uchicago.edu/tracker/index.php?func=detail&aid=94&group_id=33&atid=215 'smlnj-gforge: SML/NJ Bugs: Detail: 94 Running on OS X Mountain Lion').
-(**Update:** 110.75 is now available.)
+(<strong>Update:</strong> 110.75 is now available.)
 
 When running version 110.74 on Mountain Lion, the command
 
@@ -45,11 +45,11 @@ http://www.smlnj.org/
 https://github.com/mxcl/homebrew/commits/master/Library/Formula/smlnj.rb
 ==> Caveats
 This formula spews ML files all over lib, and puts hidden subfolders in bin.
-Because of this, we've installed it to:
+Because of this, we’ve installed it to:
   /usr/local/Cellar/smlnj/110.74/libexec
-and we haven't linked it into /usr/local
+and we haven’t linked it into /usr/local
 
-You'll need to add:
+You’ll need to add:
   /usr/local/Cellar/smlnj/110.74/libexec/bin
 to your PATH.
 

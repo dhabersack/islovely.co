@@ -161,7 +161,7 @@ nested deeper than absolutely necessary to be unambiguous.
 
 Consider the following CSS as written in [Sass](http://sass-lang.com/ 'Sass - Syntactically Swesome Stylesheets'):
 
-```sass
+```scss
 dl {
   overflow: hidden;
 
@@ -181,7 +181,7 @@ While this makes it obvious that definition terms and definition descriptions
 are always nested in definition lists, this is the only way they _can_ appear,
 so the nesting should be removed and the rules rewritten as:
 
-```sass
+```scss
 dd {
   clear: left;
 }
