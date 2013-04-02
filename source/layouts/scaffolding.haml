@@ -16,9 +16,6 @@
 
     %link{ :rel => 'stylesheet', :type => 'text/css', :href => '/assets/stylesheets/style.css' }
 
-    - if current_page.data.stylesheet
-      %link{ :rel => 'stylesheet', :type => 'text/css', :href => current_page.url + current_page.data.stylesheet }
-
     %link{ :rel => 'shortcut icon', :href => '/assets/images/theme/favicon.ico' }
 
   %body{ :class => data.page.page_class }
