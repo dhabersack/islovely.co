@@ -2,7 +2,6 @@
 date: 2013-03-18
 description: The official statistics of a recent exam present an incorrectly positive picture. When taking a closer look, the numbers turn out to be a lot worse.
 layout: post
-stylesheet: style.css
 title: Debunking whitewashed exam statistics
 ---
 
@@ -138,7 +137,7 @@ From this, the following conclusion has been drawn:
       <th>passed</th>
       <td>35% (75)</td>
       <td>50% (46)</td>
-      <td><mark>47%</mark> (116)</td>
+      <td><strong>47%</strong> (116)</td>
     </tr>
   </tbody>
 </table>
