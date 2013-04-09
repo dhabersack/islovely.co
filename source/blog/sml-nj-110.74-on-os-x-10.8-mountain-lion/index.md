@@ -18,27 +18,27 @@ Note that this bug
 
 When running version 110.74 on Mountain Lion, the command
 
-```bash
+```console
 $ sml
 ```
 
 results in a not overly helpful but easily resolved error:
 
-```bash
-  sml: unable to determine architecture/operating system
+```console
+sml: unable to determine architecture/operating system
 ```
 
 What happens here is that SML is unable to handle the operating system number of
 Mountain Lion, so we need to tell it how to interpret that. In order to do so,
 we first need to figure out which directory Homebrew installed SML to. Running
 
-```bash
+```console
 $ brew info smlnj
 ```
 
 gives us an output similar to the following:
 
-```bash
+```console
 smlnj: stable 110.74
 http://www.smlnj.org/
 /usr/local/Cellar/smlnj/110.74 (3950 files, 69M) *
@@ -62,7 +62,7 @@ From this, we can tell that SML has been installed to
 Open the file `bin/.arch-n-opsys` located in this directory in your text editor
 of choice:
 
-```bash
+```console
 $ open -t /usr/local/Cellar/smlnj/110.74/libexec/bin/.arch-n-opsys
 ```
 
@@ -95,7 +95,7 @@ that the file is read-only, but you will have to overwrite the contents here.
 
 After that, running
 
-```bash
+```console
 $ sml
 ```
 
