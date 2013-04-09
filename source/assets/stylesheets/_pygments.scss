@@ -33,8 +33,8 @@ $generic-emph:                '.ge';
 $generic-error:               '.gr';
 $generic-heading:             '.gh';
 $generic-inserted:            '.gi';
-$generic-output:              '.go';
-$generic-prompt:              '.gp';
+$generic-output:              '.go';  // done
+$generic-prompt:              '.gp';  // done
 $generic-strong:              '.gs';
 $generic-subheading:          '.gu';
 $generic-traceback:           '.gt';
@@ -144,12 +144,13 @@ color: #000;
   color: #000;
 }
 
-#{ $generic-output } { background: $color-red;
-  color: #888;
+#{ $generic-output } {
+  color: darkest($color-gray);
 }
 
-#{ $generic-prompt } { background: $color-red;
-  color: #555;
+#{ $generic-prompt } {
+  color: darker($color-blue);
+  font-weight: bold;
 }
 
 #{ $generic-strong } { background: $color-red;
@@ -319,8 +320,7 @@ color: #000;
 }
 
 #{ $name-variable } {
-  color: darker($color-green);
-  font-weight: bold;
+  color: darker($color-red);
 }
 
 #{ $name-variable-class } { background: $color-red;
