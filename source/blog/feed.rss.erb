@@ -1,0 +1,17 @@
+---
+feed:
+  description: The blog-feed of islovely.co
+  title: islovely Blog
+  url: http://islovely.co/blog/
+layout: rss
+---
+
+<% current_page.siblings.sort_by { |sibling| sibling.data.date }.reverse.each do |post| %>
+  <item>
+    <title><%= post.data.title %></title>
+    <description><%= post.data.description %></description>
+    <link>http://islovely.co/<%= post.url %></link>
+    <guid>http://islovely.co/<%= post.url %></guid>
+    <pubDate><%= Date.parse("#{ post.data.date }").strftime('%a, %d %b %Y %T %z') %></pubDate>
+  </item>
+<% end %>

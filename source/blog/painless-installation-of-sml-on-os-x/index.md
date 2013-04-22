@@ -1,7 +1,7 @@
 ---
 date: 2012-07-30
+description: The Homebrew package manager takes the pain out of installing SML/NJ on your system. Follow these steps for a hassle- and clutter-free installation.
 layout: post
-summary: The official installation process for SML/NJ on a Mac is a hassle and may leave hard-to-remove files on your system. The Homebrew package manager takes the pain out of this process if you follow a few easy steps.
 title: Painless installation of SML on OS X
 ---
 
@@ -33,14 +33,18 @@ Installing Homebrew is a one-liner, which you can find in
 [their GitHub wiki](https://github.com/mxcl/homebrew/wiki/installation 'Installation instructions on the Homebrew GitHub-wiki').
 The command you need to run is:
 
-    $ ruby <(curl -fsSk https://raw.github.com/mxcl/homebrew/go)
+```console
+$ ruby <(curl -fsSk https://raw.github.com/mxcl/homebrew/go)
+```
 
 (Check their wiki if this command fails for you in case they changed it since.)
 
 If you already have Homebrew installed on your system, make sure it is up to
 date:
 
-    $ brew update
+```console
+$ brew update
+```
 
 
 #### Install/update Xcode
@@ -61,7 +65,9 @@ install the “Command Line Tools”.
 
 Now you are all set and can install SML/NJ through Homebrew:
 
-    $ brew install smlnj
+```console
+$ brew install smlnj
+```
 
 
 #### Update your `PATH`
@@ -73,30 +79,42 @@ so yours might be slightly different from this one.)
 
 First, open your profile in your text editor of choice:
 
-    $ open -t ~/.bash_profile
+```console
+$ open -t ~/.bash_profile
+```
 
 If this file does not include an `export PATH`-directive yet, simply add this
 line:
 
-    export PATH=/usr/local/Cellar/smlnj/110.74/libexec/bin:$PATH
+```bash
+export PATH=/usr/local/Cellar/smlnj/110.74/libexec/bin:$PATH
+```
 
 If an `export PATH`-directive does exist, just add the path to SML after it. So
 if you have something like:
 
-    export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+```bash
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+```
 
 just add the new path after it like so:
 
-    export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/Cellar/smlnj/110.74/libexec/bin:$PATH
+```bash
+export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/Cellar/smlnj/110.74/libexec/bin:$PATH
+```
 
 Mind the `:` after `/opt/local/sbin`, which is required to separate two paths.
 
 You can now reload your profile with:
 
-    $ source ~/.bash_profile
+```console
+$ source ~/.bash_profile
+```
 
 Your new `PATH` will also be loaded every time you open a new terminal session.
 
 Now that you are all done, you can start SML/NJ by typing:
 
-    $ sml
+```console
+$ sml
+```

@@ -1,3 +1,14 @@
+// Enables ligature for the current element. Useful when using icon-fonts with
+// semantic identifiers.
+@mixin enable-ligatures() {
+  -webkit-font-feature-settings: 'liga', 'dlig';
+     -moz-font-feature-settings: 'liga=1, dlig=1';
+     -moz-font-feature-settings: 'liga', 'dlig';
+      -ms-font-feature-settings: 'liga', 'dlig';
+       -o-font-feature-settings: 'liga', 'dlig';
+          font-feature-settings: 'liga', 'dlig';
+}
+
 // Generate @font-face directive.
 //
 // $name:   the name of this font

@@ -1,0 +1,144 @@
+@import 'functions.scss';
+
+@mixin button(
+    $background-color: $color-neutral-lighter,
+    $icon:             ''
+) {
+  $color-variation: 12%;
+  $font-size:       1.6em;
+
+  @include border-radius(0.125em); // 2px
+
+  background: $background-color;
+  border: 0.0625em solid darken($background-color, $color-variation); // 1px
+  color: $color-neutral-darkest;
+  cursor: pointer;
+  float: left;
+  font: {
+    size: $font-size;
+    family: $font-family-sans-serif;
+  }
+  line-height: normal;
+  margin: 0 $grid-extra-small-gutter-width 0.75em 0;
+  padding: 0.5em 1.1875em; // 8px 19px
+  -webkit-appearance: none;
+
+  @media (#{ $media-query-small }) {
+    margin-right: $grid-small-gutter-width / $font-size * 1em;
+  }
+
+  @media (#{ $media-query-medium }) {
+    margin-right: $grid-medium-gutter-width / $font-size * 1em;
+  }
+
+  @media (#{ $media-query-large }) {
+    margin-right: $grid-large-gutter-width / $font-size * 1em;
+  }
+
+  @media (#{ $media-query-extra-large }) {
+    margin-right: $grid-extra-large-gutter-width / $font-size * 1em;
+  }
+
+  // remove additional padding in Firefox
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+
+  @if $icon != '' {
+    &::before {
+      content: $icon;
+      float: left;
+      font: {
+        family: 'Skeletal Icons';
+        size: 1.25em; // 20px
+      }
+      line-height: 0.8em; // 16px
+      margin: 0 0.125em 0 0; // 0 5px 0 0
+    }
+  }
+
+  &:active {
+    background-color: lighten($background-color, $color-variation);
+    border-color: darken($background-color, $color-variation * 2);
+  }
+
+  &[disabled] {
+    background: $color-neutral-lighter;
+    color: $color-neutral;
+  }
+}
+
+
+@mixin textfield(
+    $number-of-columns: $number-of-grid-columns / 2,
+    $background-color:  $color-neutral-lightest,
+    $border-color:      $color-neutral,
+    $breakpoints:       ('small', 'medium', 'large', 'extra-large')
+) {
+  $border-width: 0.0625em; // 1px
+  $font-size: 1.6em;
+  $padding-vertical: 0.3125em; // 5px
+  $padding-horizontal: 0.5625em; // 4px
+  $extra-horizontal-padding: 2 * ($padding-horizontal + $border-width);
+
+  $does-include-small:       false;
+  $does-include-medium:      false;
+  $does-include-large:       false;
+  $does-include-extra-large: false;
+
+  @each $breakpoint in $breakpoints {
+         @if $breakpoint == 'small'       { $does-include-small:       true; }
+    @else if $breakpoint == 'medium'      { $does-include-medium:      true; }
+    @else if $breakpoint == 'large'       { $does-include-large:       true; }
+    @else if $breakpoint == 'extra-large' { $does-include-extra-large: true; }
+  }
+
+  @include border-radius(0.125em); // 2px
+  @include font-size($font-size);
+
+  background: $background-color;
+  border: $border-width solid $border-color;
+  clear: left;
+  color: $color-neutral-darkest;
+  float: left;
+  font-family: $font-family-inputs;
+  height: 1.5em; // 24px
+  margin: 0 $grid-extra-small-gutter-width 0.75em 0;
+  padding: $padding-vertical $padding-horizontal;
+  width: 90%;
+  -webkit-appearance: none;
+
+  @if $does-include-small {
+    @media (#{ $media-query-small }) {
+      margin-right: $grid-small-gutter-width / $font-size * 1em;
+      width: (grid-width($number-of-columns, $breakpoint: 'small') / $font-size) - $extra-horizontal-padding;
+    }
+  }
+
+  @if $does-include-medium {
+    @media (#{ $media-query-medium }) {
+      margin-right: $grid-medium-gutter-width / $font-size * 1em;
+      width: (grid-width($number-of-columns, $breakpoint: 'medium') / $font-size) - $extra-horizontal-padding;
+    }
+  }
+
+  @if $does-include-large {
+    @media (#{ $media-query-large }) {
+      margin-right: $grid-large-gutter-width / $font-size * 1em;
+      width: (grid-width($number-of-columns, $breakpoint: 'large') / $font-size) - $extra-horizontal-padding;
+    }
+  }
+
+  @if $does-include-extra-large {
+    @media (#{ $media-query-extra-large }) {
+      margin-right: $grid-extra-large-gutter-width;
+      margin-right: $grid-extra-large-gutter-width / $font-size * 1em;
+      width: (grid-width($number-of-columns, $breakpoint: 'extra-large') / $font-size) - $extra-horizontal-padding;
+    }
+  }
+
+  &:focus {
+    border-color: $color-highlight;
+  }
+}

@@ -2,11 +2,7 @@
 # Compass
 ###
 
-# Susy grids in Compass
-# First: gem install susy --pre
-# require 'susy'
-
-# Change Compass configuration
+# change compass configuration
 compass_config do |config|
   config.line_comments = false
   config.output_style = :compressed
@@ -49,15 +45,23 @@ end
 #   end
 # end
 
+# Assets
 set :css_dir, 'assets/stylesheets'
 set :images_dir, 'assets/images'
 set :js_dir, 'assets/javascripts'
 
-# pretty URLs (/blog/ instead of /blog.html)
+# Haml
+set :haml, { :attr_wrapper => '"', :format => :html5, :ugly => true }
+
+# Markdown
+set :markdown_engine, :redcarpet
+set :markdown, :tables => true, :autolink => true, :gh_blockcode => true, :fenced_code_blocks => true, :no_intra_emphasis => true
+
+# Pretty URLs (/blog/ instead of /blog.html)
 activate :directory_indexes
 
-# Haml
-set :haml, { :attr_wrapper => '"', :format => :html5 }
+# Syntax highlighting
+activate :syntax
 
 # Build-specific configuration
 configure :build do

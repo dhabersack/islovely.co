@@ -2,7 +2,10 @@
 %html{ :lang => 'en' }
   %head
     %meta{ :charset => 'utf-8' }
-    %meta{ :name => 'description', :content => "Portfolio of Dominik 'Dom' Habersack, a kickass freelancer based in Munich, Germany." }
+
+    - if current_page.data.description
+      %meta{ :name => 'description', :content => "#{ current_page.data.description }" }
+
     %meta{ :name => 'viewport',    :content => 'width=device-width, initial-scale=1.0' }
 
     -# always force latest IE rendering engine or request Chrome Frame
@@ -28,20 +31,24 @@
         %li= link_to 'Projects', '/projects/'
         %li= link_to 'Blog', '/blog/'
         %li= link_to 'Influences &amp; Values', '/influences-and-values/'
+        %li= link_to 'Résumé', '/resume/'
         %li= link_to 'Contact', '/contact/'
-        %li= link_to 'Imprint', '/imprint/'
 
     %section
-      = yield
+      ~ yield
 
     %footer
       %div
         %p
-          Copyright &copy; 2013, Dom Habersack, #{ link_to 'islovely.co', 'http://islovely.co/', title: 'Portfolio of Dom Habersack' }
+          Copyright &copy; 2013<br>
+          Dom Habersack, #{ link_to 'islovely.co', 'http://islovely.co/', title: 'Portfolio of Dom Habersack' }<br>
+          #{ link_to 'Imprint', '/imprint/' }
+
+        %p#subscribe-to-rss= link_to 'Blog feed', 'http://feeds.feedburner.com/islovely-blog'
 
         %ol
-          %li= link_to '&#62208;', 'http://github.com/dhabersack', title: 'dhabersack on GitHub'
-          %li= link_to '&#62217;', 'http://twitter.com/dhabersack', title: '@dhabersack on Twitter'
+          %li= link_to 'GitHub', 'http://github.com/dhabersack', title: 'dhabersack on GitHub'
+          %li= link_to 'Twitter', 'http://twitter.com/dhabersack', title: '@dhabersack on Twitter'
 
     = partial 'partials/google-analytics'
 

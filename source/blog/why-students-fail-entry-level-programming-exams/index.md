@@ -1,7 +1,7 @@
 ---
-date: 2013-03-08
+date: 2013-03-11
+description: The common approach to teaching development is rarely tailored to newcomers, which often results in high failure rates and large numbers of dropouts.
 layout: post
-summary: The common approach to teaching software development is rarely tailored to newcomers, which often results in high failure rates in exams and large numbers of dropouts.
 title: Why students fail entry-level programming exams
 ---
 

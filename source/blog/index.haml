@@ -1,10 +1,11 @@
 ---
+description: Articles on education, development, and media.
 title: Blog
 ---
 
-- current_page.children.sort_by { |child| child.data.date }.reverse.each do |child|
+- current_page.children.delete_if { |child| child.ext == '.rss' }.sort_by { |child| child.data.date }.reverse.each do |child|
   %article
     %header
       %h3= link_to child.data.title, child.url
 
-    %p= child.data.summary
+    %p= child.data.description

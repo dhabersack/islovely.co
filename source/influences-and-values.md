@@ -1,4 +1,5 @@
 ---
+description: Individuals, businesses and projects I take inspiration from.
 title: Influences &amp; Values
 ---
 
@@ -39,7 +40,8 @@ need to turn browsing the web into a sad and unpleasant ordeal.
 While observing several flaws in our current educational system, I developed a
 passion for passing my knowledge on to those new to the industry.
 
-Companies such as [Codecademy](http://codecademy.com/),
+Institutions and companies such as [Coursera](http://coursera.org/),
+[Codecademy](http://codecademy.com/),
 [Treehouse](http://referrals.trhou.se/dhabersack),
 [Khan Academy](http://www.khanacademy.org/) and others are revolutionizing the
 way we learn. Their efforts get me excited for the future, which I want to

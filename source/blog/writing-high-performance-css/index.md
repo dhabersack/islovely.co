@@ -1,7 +1,7 @@
 ---
 date: 2012-12-28
+description: Aside from the established best practices for reducing load times, a few things that can be done to stylesheets to make browsers render pages faster.
 layout: post
-summary: Aside from the well-established best practices for reducing page load times on the web, there are a few things that can be done to stylesheets to make browsers render pages faster.
 title: Writing high-performance CSS
 ---
 
@@ -31,7 +31,7 @@ can be achieved by applying these techniques:
 
 If you are not sure how CSS gets applied to markup, you should first read my
 post on
-[understanding CSS hierarchy-matching](../understanding-css-hierarchy-matching/).
+[understanding CSS hierarchy-matching](/blog/understanding-css-hierarchy-matching/).
 It aims at giving a top-level overview essential for understanding the remaining
 recommendations.
 
@@ -119,15 +119,19 @@ only be used if safely applicable. Clean markup always trumps short selectors.
 
 In accordance with the above rules, these selectors:
 
-    header nav ul li a#login {}
-    table > thead > tr > th {}
-    ul.navigation > li a {}
+```css
+header nav ul li a#login {}
+table > thead > tr > th {}
+ul.navigation > li a {}
+```
 
 can safely be rewritten as:
 
-    #login {}
-    thead th {}
-    .navigation a {}
+```css
+#login {}
+thead th {}
+.navigation a {}
+```
 
 
 ### Efficient rules
@@ -144,6 +148,7 @@ are absolutely required and avoided in all other situations.
 To avoid IE from slowing down a whole lot, pseudo-elements like `:hover` should
 not be applied to non-link elements.
 
+
 ### Performance impact of CSS preprocessors
 
 Preprocessors **do not impact the performance** of CSS when used correctly.
@@ -154,40 +159,43 @@ nesting selectors, which does increase the ability to easily find selectors
 because they can be organized to more closely mimic markup, but should never be
 nested deeper than absolutely necessary to be unambiguous.
 
-Consider the following CSS as written in
-[Sass](http://sass-lang.com/ 'Sass - Syntactically Swesome Stylesheets'):
+Consider the following CSS as written in [Sass](http://sass-lang.com/ 'Sass - Syntactically Swesome Stylesheets'):
 
-    dl {
-      overflow: hidden;
+```scss
+dl {
+  overflow: hidden;
 
-      > dd {
-        clear: left;
-      }
+  > dd {
+    clear: left;
+  }
 
-      > dd,
-      > dt {
-        float: left;
-        width: 50%;
-      }
-    }
+  > dd,
+  > dt {
+    float: left;
+    width: 50%;
+  }
+}
+```
 
 While this makes it obvious that definition terms and definition descriptions
 are always nested in definition lists, this is the only way they _can_ appear,
 so the nesting should be removed and the rules rewritten as:
 
-    dd {
-      clear: left;
-    }
+```scss
+dd {
+  clear: left;
+}
 
-    dd,
-    dt {
-      float: left;
-      width: 50%;
-    }
+dd,
+dt {
+  float: left;
+  width: 50%;
+}
 
-    dl {
-      overflow: hidden;
-    }
+dl {
+  overflow: hidden;
+}
+```
 
 Preprocessors do not result in a decrease in performance when respecting the
 aforementioned rules, assuming they are deployed as static assets and not

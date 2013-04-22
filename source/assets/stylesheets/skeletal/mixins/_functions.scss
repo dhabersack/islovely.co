@@ -1,0 +1,36 @@
+// Shortens top-, right-, bottom- and left-values to their shorthand
+// representation.
+@function compress-directional-values(
+    $top:    0,
+    $right:  0,
+    $bottom: 0,
+    $left:   0
+) {
+  @if $top == $right and $right == $bottom and $bottom == $left {
+    @return $top;
+  } @else if $right == $left {
+    @if $top == $bottom {
+      @return $top $right;
+    } @else {
+      @return $top $right $bottom;
+    }
+  } @else {
+    @return $top $right $bottom $left;
+  }
+}
+
+
+@function grid-width(
+    $number-of-columns,
+    $breakpoint
+) {
+  @if $breakpoint == 'small' {
+    @return $number-of-columns * $grid-small-column-width       + ($number-of-columns - 1) * $grid-small-gutter-width;
+  } @else if $breakpoint == 'medium' {
+    @return $number-of-columns * $grid-medium-column-width      + ($number-of-columns - 1) * $grid-medium-gutter-width;
+  } @else if $breakpoint == 'large' {
+    @return $number-of-columns * $grid-large-column-width       + ($number-of-columns - 1) * $grid-large-gutter-width;
+  } @else if $breakpoint == 'extra-large' {
+    @return $number-of-columns * $grid-extra-large-column-width + ($number-of-columns - 1) * $grid-extra-large-gutter-width;
+  }
+}

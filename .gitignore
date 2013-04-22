@@ -1,5 +1,5 @@
 .DS_Store
 .bundle/
-build/
 .sass-cache/
-/vendor/bundle
+build/
+vendor/bundle/
