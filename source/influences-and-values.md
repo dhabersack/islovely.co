@@ -10,14 +10,14 @@ interesting and makes our work more enjoyable.
 
 ### Clean and simple
 
-Tools such as [Sass](http://sass-lang.com/),
-[CoffeeScript](http://coffeescript.org/) and the occasional
-[Haml](http://haml.info/) enable me to write cleaner, more elegant code. Having
-to write less in order to achieve something keeps code obvious, which makes it
-harder to hide obscure bugs in it.
+My carefully honed and solid toolchain contains projects such as
+[Sass](http://sass-lang.com/), [CoffeeScript](http://coffeescript.org/) and the
+occasional [Haml](http://haml.info/), all of which enable me to write cleaner,
+more elegant code more quickly. Having to write less in order to achieve
+something keeps code obvious, which makes it harder to hide obscure bugs in it.
 
 Its simplicity makes [Ruby](http://ruby-lang.org/) my programming language of
-choice while I avoid the complexities of Java and XML whenever possible. Coding
+choice, while I avoid the complexities of Java and XML whenever possible. Coding
 should be fun, not feel like you are shooting yourself in the foot.
 
 If extra effort needs to be put into making either code or product simpler and
