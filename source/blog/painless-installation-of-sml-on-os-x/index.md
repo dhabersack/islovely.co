@@ -118,3 +118,12 @@ Now that you are all done, you can start SML/NJ by typing:
 ```console
 $ sml
 ```
+
+
+### One more thing
+
+You are probably reading this article because you are currently attending a
+lecture on functional programming at the LMU in Munich, Germany. If so, these
+[screencasts on SML](/blog/screencasts-on-standard-ml-in-german/ 'Screencasts on Standard ML in German')
+I created while attending this lecture myself should help you hit the ground
+running.
