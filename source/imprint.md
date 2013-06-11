@@ -1,5 +1,5 @@
 ---
-description: Imprint and further acknowledgements.
+description: Imprint and acknowledgements.
 title: Imprint
 ---
 
@@ -10,11 +10,6 @@ Tel: 0157 77808615<br>
 Email: <dom@islovely.co>
 
 USt-IdNr.: DE 266202016
-
-
-### Acknowledgements
-
-Entypo pictograms by Daniel Bruce &mdash; [entypo.com](http://entypo.com/)
 
 
 ### Privacy policy
