@@ -1,13 +1,25 @@
-// Enables ligature for the current element. Useful when using icon-fonts with
-// semantic identifiers.
-@mixin enable-ligatures() {
-  -webkit-font-feature-settings: 'liga', 'dlig';
-     -moz-font-feature-settings: 'liga=1, dlig=1';
-     -moz-font-feature-settings: 'liga', 'dlig';
-      -ms-font-feature-settings: 'liga', 'dlig';
-       -o-font-feature-settings: 'liga', 'dlig';
-          font-feature-settings: 'liga', 'dlig';
-}
+// available font-size and line-height combinations based on above defaults:
+//
+//   font-size  |   line-height    |    6px     |    10px
+// -------------+------------------+------------+------------
+//    10px      |  1.8em  /  18px  |  0.6em     |  1em
+//    12px      |  1.5em  /  18px  |  0.5em     |
+//    15px      |  1.6em  /  24px  |  0.4em     |
+//    16px      |  1.5em  /  24px  |  0.375em   |  0.625em
+//    20px      |  1.5em  /  30px  |  0.3em     |  0.5em
+//    24px      |  1.5em  /  36px  |  0.25em    |
+//    25px      |  1.68em /  42px  |  0.24em    |  0.4em
+//    30px      |  1.6em  /  48px  |  0.2em     |
+//    32px      |  1.5em  /  48px  |  0.1875em  |  0.3125em
+//    40px      |  1.5em  /  60px  |  0.15em    |  0.25em
+//    48px      |  1.5em  /  72px  |  0.125em   |
+//    50px      |  1.56em /  78px  |  0.12em    |  0.2em
+//    60px      |  1.5em  /  90px  |  0.1em     |
+//    75px      |  1.52em / 114px  |  0.08em    |
+//    80px      |  1.5em  / 120px  |  0.075em   |  0.125em
+//    96px      |  1.5em  / 144px  |  0.0625em  |
+//   100px      |  1.5em  / 150px  |  0.06em    |  0.1em
+//   120px      |  1.5em  / 180px  |  0.05em    |
 
 // Generate @font-face directive.
 //
@@ -48,18 +60,4 @@
       src: $paths;
     }
   }
-}
-
-// Set `font-size` as well as appropriate `line-height`.
-@mixin font-size($font-size) {
-  $base-line-height: ($font-size * $minimum-line-height-to-font-size-ratio) / $vertical-grid-base-height;
-
-  // round up to nearest whole number if `$base-line-height` is not an integer
-  $delta: (floor($base-line-height * 1000 - floor($base-line-height) * 1000));
-  @if ($delta != 0) {
-    $base-line-height: ceil($base-line-height);
-  }
-
-  font-size: $font-size;
-  line-height: (($base-line-height * $vertical-grid-base-height) / $font-size)#{ unit($font-size) };
 }
