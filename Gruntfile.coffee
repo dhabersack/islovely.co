@@ -9,7 +9,12 @@ module.exports = (grunt) ->
         sourceMap: true
       run:
         files:
-          'source/assets/javascripts/<%= pkg.name %>.js': 'source/assets/javascripts/<%= pkg.name %>.coffee'
+          'assets/javascripts/<%= pkg.name %>.js': 'assets/javascripts/<%= pkg.name %>.coffee'
+
+    connect:
+      server:
+        options:
+          port: 1506
 
     jshint:
       options:
@@ -23,7 +28,7 @@ module.exports = (grunt) ->
         trailing: true
       run:
         files:
-          src: 'source/assets/javascripts/<%= pkg.name %>.js'
+          src: 'assets/javascripts/<%= pkg.name %>.js'
 
     sass:
       options:
@@ -31,7 +36,7 @@ module.exports = (grunt) ->
         style: 'compressed'
       run:
         files:
-          'source/assets/stylesheets/style.css': 'source/assets/stylesheets/style.scss'
+          'assets/stylesheets/style.css': 'assets/stylesheets/style.scss'
 
     uglify:
       options:
@@ -39,27 +44,28 @@ module.exports = (grunt) ->
         report: 'min'
       run:
         files:
-          'source/assets/javascripts/<%= pkg.name %>.min.js': 'source/assets/javascripts/<%= pkg.name %>.js'
+          'assets/javascripts/<%= pkg.name %>.min.js': 'assets/javascripts/<%= pkg.name %>.js'
 
     watch:
       options:
         livereload: true
       content:
-        files: ['content/**/*']
+        files: '**/*.md'
       markup:
-        files: ['site/snippets/*.php', 'site/templates/*.php'] # TODO
+        files: '**/*.haml'
       script:
-        files: 'source/assets/javascripts/*.coffee'
+        files: 'assets/javascripts/*.coffee'
         tasks: ['coffee', 'jshint', 'uglify']
       stylesheets:
-        files: 'source/assets/stylesheets/**/*.scss'
+        files: 'assets/stylesheets/**/*.scss'
         tasks: 'sass'
 
   # Load plugins
   grunt.loadNpmTasks 'grunt-contrib-coffee'
+  grunt.loadNpmTasks 'grunt-contrib-connect'
   grunt.loadNpmTasks 'grunt-contrib-jshint'
   grunt.loadNpmTasks 'grunt-contrib-sass'
   grunt.loadNpmTasks 'grunt-contrib-uglify'
   grunt.loadNpmTasks 'grunt-contrib-watch'
 
-  grunt.registerTask 'default', ['sass', 'coffee', 'jshint', 'uglify', 'watch']
+  grunt.registerTask 'default', ['connect', 'sass', 'coffee', 'jshint', 'uglify', 'watch']
