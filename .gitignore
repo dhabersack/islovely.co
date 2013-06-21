@@ -1,5 +1,7 @@
+**/*.swp
 .DS_Store
 .bundle/
 .sass-cache/
 build/
-vendor/bundle/
+node_modules/
+vendor/
