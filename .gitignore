@@ -1,3 +1,4 @@
+**/*.js.map
 **/*.swp
 .DS_Store
 .bundle/
