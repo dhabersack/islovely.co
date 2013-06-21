@@ -76,11 +76,11 @@ nesting, the path to each tag can be extracted:
 |---------|-------------------------------------|
 | html    | html                                |
 | body    | html body                           |
-| header  |  html body header                   |
+| header  | html body header                    |
 | h1      | html body header h1                 |
 | nav     | html body nav                       |
 | ol      | html body nav ol                    |
-| li      |  html body nav ol li                |
+| li      | html body nav ol li                 |
 | a       | html body nav ol li a               |
 | li      | html body nav ol li                 |
 | a       | html body nav ol li a               |
