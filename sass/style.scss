@@ -6,23 +6,65 @@
 @import 'setup.scss';
 
 body {
+  background: $color-neutral-lightest;
   font-size: 62.5%;
+}
+
+footer {
+  background: $color-neutral-lighter;
+  padding: 1.2em 2%;
+
+  li {
+    margin-bottom: 0;
+  }
+
+  ol {
+    list-style: none;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+h2 {
+  font-size: 2em;
+  line-height: 1.8em; // 36px
+  margin-bottom: 0.6em; // 12px
+}
+
+header {
+  background: $color-brand-lighter;
+  padding: 3.6em 2%;
 }
 
 li {
   font-size: 1.6em;
   line-height: 1.5em;
-  margin-bottom: 1.5em;
 }
 
 nav {
+  background: $color-brand;
+  padding: 1.2em 2%;
+
+  a {
+    color: $color-neutral-lightest;
+  }
+
   li {
-    display: inline-block;
-    margin-bottom: 0;
+    float: left;
+    margin-right: 1.125em; // 20px
   }
 
   > ol {
     list-style: none;
+    margin: 0 auto;
+    overflow: hidden;
   }
 }
 
@@ -37,6 +79,6 @@ p {
   margin-bottom: 1.5em;
 }
 
-.active {
-  font-weight: bold;
+section {
+  padding: 1.2em 2%;
 }
