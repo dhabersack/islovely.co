@@ -1,12 +1,42 @@
 @import 'normalize.scss';
-@import 'sass/imports.scss';
+@import 'mixins.scss';
+@import 'config.scss';
+@import 'icons.scss';
+@import 'media-queries.scss';
+@import 'setup.scss';
 
 body {
   font-size: 62.5%;
+}
+
+li {
+  font-size: 1.6em;
+  line-height: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+nav {
+  li {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+
+  > ol {
+    list-style: none;
+  }
+}
+
+ol {
+  margin: 0;
+  padding: 0;
 }
 
 p {
   font-size: 1.6em;
   line-height: 1.5em;
   margin-bottom: 1.5em;
+}
+
+.active {
+  font-weight: bold;
 }
