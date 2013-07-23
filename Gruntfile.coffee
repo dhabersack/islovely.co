@@ -7,9 +7,19 @@ module.exports = (grunt) ->
     coffee:
       options:
         sourceMap: true
-      run:
+      compile:
         files:
-          'assets/javascripts/<%= pkg.name %>.js': 'assets/javascripts/<%= pkg.name %>.coffee'
+          'js/<%= pkg.name %>.js': [
+            'js/application.coffee'
+            'js/router.coffee'
+            'js/store.coffee'
+            'js/controllers/**/*.coffee'
+            'js/models/**/*.coffee'
+            'js/helpers.coffee'
+          ]
+       server:
+         files:
+           'server/server.js': 'server/server.coffee'
 
     connect:
       server:
@@ -22,21 +32,26 @@ module.exports = (grunt) ->
         curly: true
         devel: true
         eqeqeq: true
+        globals:
+          'DS': true
+          'Ember': true
+          'Portfolio': true
+          'Showdown': true
         undef: true
         unused: true
         strict: true
         trailing: true
       run:
         files:
-          src: 'assets/javascripts/<%= pkg.name %>.js'
+          src: 'js/<%= pkg.name %>.js'
 
     sass:
       options:
         bundleExec: true
         style: 'compressed'
-      run:
+      compile:
         files:
-          'assets/stylesheets/style.css': 'assets/stylesheets/style.scss'
+          'style.css': 'sass/style.scss'
 
     uglify:
       options:
@@ -44,7 +59,14 @@ module.exports = (grunt) ->
         report: 'min'
       run:
         files:
-          'assets/javascripts/<%= pkg.name %>.min.js': 'assets/javascripts/<%= pkg.name %>.js'
+          '<%= pkg.name %>.min.js': [
+            'components/jquery/jquery.js'
+            'components/handlebars/handlebars.js'
+            'components/ember/ember.js'
+            'components/ember-data-shim/ember-data.js'
+            'js/templates.js'
+            'js/<%= pkg.name %>.js'
+          ]
 
     watch:
       options:
@@ -52,13 +74,13 @@ module.exports = (grunt) ->
       content:
         files: '**/*.md'
       markup:
-        files: '**/*.haml'
+        files: '**/*.html'
       script:
-        files: 'assets/javascripts/*.coffee'
-        tasks: ['coffee', 'jshint', 'uglify']
+        files: ['js/**/*.coffee', 'server/**/*.coffee']
+        tasks: 'compile:js'
       stylesheets:
-        files: 'assets/stylesheets/**/*.scss'
-        tasks: 'sass'
+        files: 'sass/**/*.scss'
+        tasks: 'compile:css'
 
   # Load plugins
   grunt.loadNpmTasks 'grunt-contrib-coffee'
@@ -68,4 +90,8 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-uglify'
   grunt.loadNpmTasks 'grunt-contrib-watch'
 
-  grunt.registerTask 'default', ['connect', 'sass', 'coffee', 'jshint', 'uglify', 'watch']
+  grunt.registerTask 'build', ['compile', 'uglify']
+  grunt.registerTask 'compile', ['compile:css', 'compile:js']
+  grunt.registerTask 'compile:css', 'sass'
+  grunt.registerTask 'compile:js', ['coffee', 'jshint']
+  grunt.registerTask 'default', ['compile', 'connect', 'watch']
