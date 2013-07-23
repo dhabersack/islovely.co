@@ -15,11 +15,13 @@ footer {
   padding: 1.2em 2%;
 
   li {
+    display: inline-block;
     margin-bottom: 0;
   }
 
   ol {
     list-style: none;
+    text-align: center;
   }
 }
 
@@ -32,15 +34,46 @@ h6 {
   margin: 0;
 }
 
+h1 {
+  font-size: 1.6em;
+  line-height: 1.5em; // 24px
+  text-align: center;
+
+  > a {
+    display: block;
+
+    &::before {
+      background: url('images/logo.png') no-repeat center center;
+      content: '';
+      display: block;
+      margin-bottom: 0.75em; // 12px
+      width: 100%;
+      height: 6em; // 96em
+    }
+  }
+}
+
 h2 {
   font-size: 2em;
   line-height: 1.8em; // 36px
   margin-bottom: 0.6em; // 12px
 }
 
+h3 {
+  font-size: 1.6em;
+  line-height: 1.5em; // 24px
+  margin-bottom: 0.75em; // 12px
+}
+
 header {
   background: $color-brand-lighter;
   padding: 3.6em 2%;
+}
+
+img {
+  display: block;
+  margin: 0 auto 1.2em;
+  width: 100%;
 }
 
 li {
@@ -76,9 +109,46 @@ ol {
 p {
   font-size: 1.6em;
   line-height: 1.5em;
-  margin-bottom: 1.5em;
+  margin: 0 0 1.5em;
 }
 
 section {
   padding: 1.2em 2%;
+
+  > nav {
+    background: none;
+    padding: 0;
+
+    > a {
+      color: $color-link;
+      font-size: 1.6em;
+      line-height: 1.5em; // 24px
+    }
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.extra-large {
+  width: 100%;
+}
+
+.large {
+  width: 80%;
+}
+
+.medium {
+  width: 60%;
+}
+
+.small {
+  width: 40%;
+}
+
+#clients,
+#posts {
+  list-style: none;
 }
