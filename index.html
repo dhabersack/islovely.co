@@ -1,66 +1,122 @@
----
-description: Portfolio of Dominik ‘Dom’ Habersack, a consultant and developer based in Munich, Germany.
-page_class: home
-title: Helping businesses get more business.
----
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 
-%article
-  %h4 Very content.
+    <title>islovely</title>
 
-  %p
-    The most amazing marketing is worthless if your customers cannot get to the
-    content they are looking for.
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
 
-  %p
-    I take a human-first approach to set your site up with your customers in
-    mind, making it as easy as possible for them to find your content. Keep your
-    clients happy and they will keep coming back for more.
+  <body>
+    <script type="text/x-handlebars" id="application">
+      <header>
+        <h1>{{#linkTo 'index'}}islovely{{/linkTo}}</h1>
+      </header>
 
+      <nav>
+        <ol>
+          <li>
+            {{#linkTo 'index'}}Home{{/linkTo}}
+          </li>
+          <li>
+            {{#linkTo 'clients'}}Clients{{/linkTo}}
+          </li>
+          <li>
+            {{#linkTo 'posts'}}Posts{{/linkTo}}
+          </li>
+          <li><a href="/influences-and-values">Influences &amp; Values</a></li>
+          <li><a href="/resume">Résumé</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ol>
+      </nav>
 
-%article
-  %h4 Responsi<del>ve</del><ins>ble</ins>.
+      <section>
+        {{outlet}}
+      </section>
 
-  %p
-    Your customers are everywhere: on desktop computers, tablets and
-    smartphones. Stop punching them in the face when they want to talk to you.
+      <footer>
+        <p>
+          Copyright &copy; 2013<br>
+          Dom Habersack, <a href="http://islovely.co/" title="Portfolio of Dom Habersack">islovely.co</a><br>
+          <a href="/imprint">Imprint</a>
+        </p>
 
-  %p
-    In order for you to always be there for them, I can help you go where they
-    are to provide them with the very best experience on any device.
+        <ol>
+          <li>
+            <a href="http://twitter.com/dhabersack" title="@dhabersack on Twitter">Twitter</a>
+          </li>
+          <li>
+            <a href="http://github.com/dhabersack" title="dhabersack on GitHub">GitHub</a>
+          </li>
+        </ol>
+      </footer>
+    </script>
 
+    <script type="text/x-handlebars" data-template-name="client">
+      <nav>
+        {{#linkTo 'clients'}}&larr; Clients{{/linkTo}}
+      </nav>
 
-%article
-  %h4 Tech-agnostic.
+      <h2>{{name}}</h2>
 
-  %p
-    Regardless of the technologies your website runs on, the techniques for
-    improving it remain the same.
+      {{#each images}}
+        <h3>{{title}}</h3>
+        <img {{bindAttr src="url" class="breakpoint"}}>
+      {{/each}}
+    </script>
 
-  %p
-    While I specialize in
-    #{ link_to 'Shopify', 'http://shopify.com/?ref=islovely' }- and
-    #{ link_to 'WordPress', 'http://wordpress.org/' }-themes as well as Ruby on
-    Rails-applications, I have worked with several different platforms and can
-    help you get any site back in shape.
+    <script type="text/x-handlebars" data-template-name="clients">
+      <h2>Clients</h2>
 
+      <ol id="clients">
+        {{#each model}}
+          <li>
+            {{#linkTo 'client' this}}{{name}}{{/linkTo}}
+          </li>
+        {{/each}}
+      </ol>
+    </script>
 
-%article
-  %h4 Tutorrific.
+    <script type="text/x-handlebars" data-template-name="post">
+      <nav>
+        {{#linkTo 'posts'}}&larr; Posts{{/linkTo}}
+      </nav>
 
-  %p
-    I offer one-on-one-tutoring as well as group-seminars on topics from the
-    basics of programming to webdesign on request.
+      <h2>{{title}}</h2>
 
-  %p
-    If you want to bring your in-house team up to speed or are only just
-    getting started developing, we can set up a training plan to kickstart that
-    process.
+      {{markdown body}}
+    </script>
 
+    <script type="text/x-handlebars" data-template-name="posts">
+      <h2>Posts</h2>
 
-%h3 Availability
+      <ol id="posts">
+        {{#each model}}
+          <li>
+            {{#linkTo 'post' this}}{{title}}{{/linkTo}}<br>
+          </li>
+        {{/each}}
+      </ol>
+    </script>
 
-%p
-  While enrolled in
-  #{ link_to 'Ludwig-Maximilians-Universität München', 'http://www.uni-muenchen.de/' }’s
-  Media Informatics-program until the summer of 2014, I am currently available
-  as a freelance consultant and developer.
+    <script type="text/x-handlebars" data-template-name="projects">
+      <p>
+        The following is a selection of my work. Some non-website related projects can
+        be found on my GitHub profile, http://github.com/dhabersack/.
+      </p>
+    </script>
+
+    <!-- = partial 'partials/google-analytics' -->
+
+    <script src="components/jquery/jquery.js"></script>
+    <script src="components/handlebars/handlebars.js"></script>
+    <script src="components/ember/ember.js"></script>
+    <script src="components/ember-data-shim/ember-data.js"></script>
+    <script src="components/showdown/compressed/showdown.js"></script>
+    <script src="js/islovely.js"></script>
+  </body>
+</html>
