@@ -1,7 +1,6 @@
 ---
 date: 2012-12-28
 description: Aside from the established best practices for reducing load times, a few things that can be done to stylesheets to make browsers render pages faster.
-layout: post
 title: Writing high-performance CSS
 ---
 

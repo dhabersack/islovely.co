@@ -1,7 +1,6 @@
 ---
 date: 2012-07-27
 description: I reflect on the bogus “journalism” that has led to me undeservedly and repeatedly being quoted on the death of a former colleague.
-layout: post
 title: On lazy journalism
 ---
 

@@ -1,7 +1,6 @@
 ---
 date: 2013-05-29
 description: grunt-contrib-sass does not work with the current version of Node.js. Downgrading Node.js to an earlier version fixes this problem.
-layout: post
 title: grunt-contrib-sass and Node.js 0.10.8
 ---
 

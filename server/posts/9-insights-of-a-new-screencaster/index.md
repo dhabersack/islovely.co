@@ -1,7 +1,6 @@
 ---
 date: 2013-03-19
 description: Planning, recording and publishing my first screencasts taught me a few basics to look out for when getting started in the field of infoproducts.
-layout: post
 title: Insights of a new screencaster
 ---
 

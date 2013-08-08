@@ -1,7 +1,6 @@
 ---
 date: 2012-08-05
 description: Additional configuration is required to make Mountain Lion and the version of SML/NJ currently being installed via Homebrew play together nicely again.
-layout: post
 title: SML/NJ 110.74 on OS X 10.8 Mountain Lion
 ---
 
