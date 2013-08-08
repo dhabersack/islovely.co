@@ -28,6 +28,9 @@
           <li>
             {{#linkTo 'posts'}}Posts{{/linkTo}}
           </li>
+          <li>
+            {{#linkTo 'pages'}}Pages{{/linkTo}}
+          </li>
           <li><a href="/influences-and-values">Influences &amp; Values</a></li>
           <li><a href="/resume">Résumé</a></li>
           <li><a href="/contact">Contact</a></li>
@@ -61,7 +64,9 @@
         {{#linkTo 'clients'}}&larr; Clients{{/linkTo}}
       </nav>
 
-      <h2>{{name}}</h2>
+      <h2>{{title}}</h2>
+
+      {{markdown body}}
 
       {{#each images}}
         <h3>{{title}}</h3>
@@ -75,11 +80,34 @@
       <ol id="clients">
         {{#each model}}
           <li>
-            {{#linkTo 'client' this}}{{name}}{{/linkTo}}
+            {{#linkTo 'client' this}}{{title}}{{/linkTo}}
           </li>
         {{/each}}
       </ol>
     </script>
+
+    <script type="text/x-handlebars" data-template-name="page">
+      <nav>
+        {{#linkTo 'pages'}}&larr; Pages{{/linkTo}}
+      </nav>
+
+      <h2>{{title}}</h2>
+
+      {{markdown body}}
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="pages">
+      <h2>Pages</h2>
+
+      <ol id="pages">
+        {{#each model}}
+          <li>
+            {{#linkTo 'page' this}}{{title}}{{/linkTo}}
+          </li>
+        {{/each}}
+      </ol>
+    </script>
+
 
     <script type="text/x-handlebars" data-template-name="post">
       <nav>
@@ -97,7 +125,7 @@
       <ol id="posts">
         {{#each model}}
           <li>
-            {{#linkTo 'post' this}}{{title}}{{/linkTo}}<br>
+            {{#linkTo 'post' this}}{{title}}{{/linkTo}}
           </li>
         {{/each}}
       </ol>
