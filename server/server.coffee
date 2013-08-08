@@ -50,17 +50,10 @@ console.log "Listening on port #{ port }"
 parseFile = (file, type, response) ->
   name_elements = /(\d+)-(.+)/.exec file
 
-  # object = {
-  #   id: name_elements[1]
-  #   slug: name_elements[2]
-  # }
-
   fs.readFile "#{ file }/index.md", 'utf8', (error, data) ->
     console.log error if error
 
-    # add extracted fields to page
     fields = extractFields data
-    # object[key] = fields[key] for key of fields
     fields.id = name_elements[1]
     fields.slug = name_elements[2]
 
