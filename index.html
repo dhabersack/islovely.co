@@ -31,9 +31,9 @@
           <li>
             {{#linkTo 'pages'}}Pages{{/linkTo}}
           </li>
-          <li><a href="/influences-and-values">Influences &amp; Values</a></li>
-          <li><a href="/resume">Résumé</a></li>
-          <li><a href="/contact">Contact</a></li>
+          <li><a href="/#/pages/influences-and-values">Influences &amp; Values</a></li>
+          <li><a href="/#/pages/resume">Résumé</a></li>
+          <li><a href="/#/pages/contact">Contact</a></li>
         </ol>
       </nav>
 
@@ -45,7 +45,7 @@
         <p>
           Copyright &copy; 2013<br>
           Dom Habersack, <a href="http://islovely.co/" title="Portfolio of Dom Habersack">islovely.co</a><br>
-          <a href="/imprint">Imprint</a>
+          <a href="/#/pages/imprint">Imprint</a>
         </p>
 
         <ol>
@@ -77,7 +77,7 @@
     <script type="text/x-handlebars" data-template-name="clients">
       <h2>Clients</h2>
 
-      <ol id="clients">
+      <ol>
         {{#each model}}
           <li>
             {{#linkTo 'client' this}}{{title}}{{/linkTo}}
@@ -122,7 +122,7 @@
     <script type="text/x-handlebars" data-template-name="posts">
       <h2>Posts</h2>
 
-      <ol id="posts">
+      <ol>
         {{#each model}}
           <li>
             {{#linkTo 'post' this}}{{title}}{{/linkTo}}
