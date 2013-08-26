@@ -26,6 +26,16 @@ module.exports = (grunt) ->
         options:
           port: 1506
 
+    grunticon:
+      icons:
+        options:
+          src: 'vectors'
+          dest: 'grunticon'
+          customselectors:
+            'github-logo': '.github.logo'
+            'islovely-logo': '.islovely.logo'
+            'twitter-logo': '.twitter.logo'
+
     jshint:
       options:
         browser: true
@@ -72,15 +82,21 @@ module.exports = (grunt) ->
       options:
         livereload: true
       content:
-        files: '**/*.md'
+        files: 'server/**/*.md'
+      grunt:
+        files: ['package.json', 'Gruntfile.coffee']
+        tasks: 'compile'
       markup:
-        files: '**/*.html'
+        files: 'index.html'
       script:
         files: ['js/**/*.coffee', 'server/**/*.coffee']
         tasks: 'compile:js'
       stylesheets:
         files: 'sass/**/*.scss'
         tasks: 'compile:css'
+      vectors:
+        files: 'vectors/**/*'
+        tasks: 'grunticon'
 
   # Load plugins
   grunt.loadNpmTasks 'grunt-contrib-coffee'
@@ -89,9 +105,10 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-sass'
   grunt.loadNpmTasks 'grunt-contrib-uglify'
   grunt.loadNpmTasks 'grunt-contrib-watch'
+  grunt.loadNpmTasks 'grunt-grunticon'
 
   grunt.registerTask 'build', ['compile', 'uglify']
-  grunt.registerTask 'compile', ['compile:css', 'compile:js']
+  grunt.registerTask 'compile', ['grunticon', 'compile:css', 'compile:js']
   grunt.registerTask 'compile:css', 'sass'
   grunt.registerTask 'compile:js', ['coffee', 'jshint']
   grunt.registerTask 'default', ['compile', 'connect', 'watch']
