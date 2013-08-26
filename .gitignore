@@ -4,7 +4,6 @@
 .DS_Store
 .bundle/
 .sass-cache/
-build/
-components/
+bower_components/
 node_modules/
 vendor/
