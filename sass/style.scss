@@ -1,13 +1,25 @@
-@import 'normalize.scss';
-@import 'mixins.scss';
-@import 'config.scss';
-@import 'icons.scss';
+@import 'colors.scss';
+@import 'fonts.scss';
 @import 'media-queries.scss';
-@import 'setup.scss';
+@import 'mixins.scss';
+@import 'normalize.scss';
+
+a {
+  color: $color-link;
+
+  &:visited {
+    color: $color-link-visited;
+  }
+}
 
 body {
   background: $color-neutral-lightest;
-  font-size: 62.5%;
+  color: $color-neutral-darkest;
+  font: {
+    family: $font-family-content;
+    size: 62.5%;
+    weight: 400;
+  }
 }
 
 footer {
@@ -17,7 +29,7 @@ footer {
   li {
     background-position: top center;
     display: inline-block;
-    margin-bottom: 0;
+    margin: 0 0.625em;
     padding-top: 2.625em; // 42px
   }
 
@@ -33,13 +45,29 @@ h3,
 h4,
 h5,
 h6 {
+  font: {
+    family: $font-family-headings;
+    weight: 700;
+  }
   margin: 0;
 }
 
+h1 {
+  font-size: 4em;
+  line-height: 1.5em; // 60px
+  margin-bottom: 0.3em; // 12px
+}
+
+h2 {
+  font-size: 3.2em;
+  line-height: 1.5em; // 48px
+  margin-bottom: 0.375em; // 12px
+}
+
 h3 {
-  font-size: 2em;
-  line-height: 1.8em; // 36px
-  margin-bottom: 0.6em; // 12px
+  font-size: 2.4em;
+  line-height: 1.5em; // 36px
+  margin-bottom: 0.5em; // 12px
 }
 
 h4 {
@@ -58,7 +86,7 @@ header {
   > a {
     background-position: top center;
     display: block;
-    padding-top: 120px;
+    padding-top: 11.25em;
   }
 }
 
@@ -78,7 +106,10 @@ nav {
   padding: 1.2em 2%;
 
   a {
-    color: $color-neutral-lightest;
+    &,
+    &:visited {
+      color: $color-neutral-lightest;
+    }
   }
 
   li {
@@ -104,17 +135,32 @@ p {
   margin: 0 0 1.5em;
 }
 
+pre {
+  border-left: 0.25em solid $color-neutral-darkest;
+  font-size: 1.6em;
+  line-height: 1.5em; // 24px
+  margin: 0 0 1.5em;
+  padding-left: 0.6875em; // 11px
+}
+
 section {
   padding: 1.2em 2%;
 
+  // subnavigation
   > nav {
     background: none;
     padding: 0;
 
-    > a {
-      color: $color-link;
+    a {
+      display: inline-block;
       font-size: 1.6em;
       line-height: 1.5em; // 24px
+      padding: 0.75em 0; // 12px 0
+
+      &,
+      &:visited {
+        color: $color-link;
+      }
     }
   }
 }
