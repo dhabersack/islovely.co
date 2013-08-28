@@ -4,23 +4,15 @@ description: In order to improve your stylesheets, you first need to understand 
 title: Understanding CSS hierarchy-matching
 ---
 
-To get a feel for how CSS-selectors should be written, you need to understand
-how browsers match them to the related markup. The following tries to give a
-top-level description that might not be entirely accurate but should still give
-you a good enough idea of how CSS and HTML get combined during rendering.
+To get a feel for how CSS-selectors should be written, you need to understand how browsers match them to the related markup. The following tries to give a top-level description that might not be entirely accurate but should still give you a good enough idea of how CSS and HTML get combined during rendering.
 
-**Note:** Writing this, I realized that this is probably not how it actually
-works, as using regular expressions to match selectors and hierarchies would
-obviate the need for repeated identification-cycles. Nevertheless, thinking of
-the process this way helps writing simpler selectors, so the model remains
-valid.
-
+**Note:** Writing this, I realized that this is probably not how it actually works, as using regular expressions to match selectors and hierarchies would obviate the need for repeated identification-cycles. Nevertheless, thinking of the process this way helps writing simpler selectors, so the model remains valid.
 
 ### Finding hierarchies
 
 Consider a site with the following markup:
 
-```html
+```
 <html>
   <head>
     // head omitted

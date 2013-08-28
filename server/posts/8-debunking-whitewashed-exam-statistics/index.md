@@ -30,7 +30,7 @@ These statistics leave a lot to be desired, with important pieces of information
 missing from the conclusion.
 
 
-### What they are selling
+## What they are selling
 
 The officials combined the statistics of both exams in one contingency table. In
 the following representation, the y-axis describes the first exam while the
@@ -149,14 +149,14 @@ The reason for this surprising conclusion is simple: it is **misleading and
 masks vital information**.
 
 
-### Why I am not buying it
+## Why I am not buying it
 
 There are several flaws in the argumentation that are not exactly hidden, but it
 requires a closer look in order to see how these statistics are misrepresenting
 the facts.
 
 
-#### Resources seem more valuable than students
+### Resources seem more valuable than students
 
 The first problem is an insult directed towards students. It does not appear in
 the data directly but has been added to the provided statistics: the officials
@@ -212,7 +212,7 @@ Blaming those you were meant to teach for not learning is not going to motivate
 them to try harder.
 
 
-#### Exam and lecture are not independent
+### Exam and lecture are not independent
 
 The conclusion gives off the impression that 100% of exams have been graded when
 they clearly have not. The number of graded exams has been given way more
@@ -243,7 +243,7 @@ students).
 Let that sink in for a minute.
 
 
-#### “Passing” does not equal success
+### “Passing” does not equal success
 
 A student needs to achieve a minimum score of 40% in order to pass an exam.
 Knowing only those 40% does not mean someone understood the topic, it means they
@@ -287,7 +287,7 @@ The groups are distributed unevenly, but roughly represent the actual
 classification.
 
 
-#### Phantoms not considered
+### Phantoms not considered
 
 The contingency table only combines information tracked for the exams:
 
@@ -316,7 +316,7 @@ not surprise me. These phantom students are not being taken into account when
 measuring the lecture‘s success.
 
 
-#### Combining the findings
+### Combining the findings
 
 Even when ignoring the likely existence of phantom students, only 29% (116 out
 of 403 students) passed after both exams. To put it differently, **fewer than
@@ -339,7 +339,7 @@ When assuming any number of phantom students, these numbers shift in favor of
 “failing”.
 
 
-### Conclusion
+## Conclusion
 
 The actual result, when considering the entire lecture, lies _far_ below the
 official success rate of 47%. Even when considering “barely passing” a success,

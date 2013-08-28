@@ -4,40 +4,31 @@ description: Additional configuration is required to make Mountain Lion and the 
 title: SML/NJ 110.74 on OS X 10.8 Mountain Lion
 ---
 
-I previously went over
-[how to install SML on OS X via Homebrew](/blog/painless-installation-of-sml-on-os-x/ 'Painless installation of SML on OS X'),
-which currently installs version 110.74 of SML/NJ. Unfortunately, this version
-does not work with the recently released OS X 10.8 Mountain Lion out of the box.
-If you are running both SML and OS X at these version numbers, some light
-additional tuning is required.
+I previously went over [how to install SML on OS X via Homebrew](/blog/painless-installation-of-sml-on-os-x/ 'Painless installation of SML on OS X'), which currently installs version 110.74 of SML/NJ. Unfortunately, this version does not work with the recently released OS X 10.8 Mountain Lion out of the box.  If you are running both SML and OS X at these version numbers, some light additional tuning is required.
 
-Note that this bug
-[will be fixed in SML/NJ 110.75](http://smlnj-gforge.cs.uchicago.edu/tracker/index.php?func=detail&aid=94&group_id=33&atid=215 'smlnj-gforge: SML/NJ Bugs: Detail: 94 Running on OS X Mountain Lion').
-(<strong>Update:</strong> 110.75 is now available.)
+Note that this bug [will be fixed in SML/NJ 110.75](http://smlnj-gforge.cs.uchicago.edu/tracker/index.php?func=detail&aid=94&group_id=33&atid=215 'smlnj-gforge: SML/NJ Bugs: Detail: 94 Running on OS X Mountain Lion').  (<strong>Update:</strong> 110.75 is now available.)
 
 When running version 110.74 on Mountain Lion, the command
 
-```console
+```
 $ sml
 ```
 
 results in a not overly helpful but easily resolved error:
 
-```console
+```
 sml: unable to determine architecture/operating system
 ```
 
-What happens here is that SML is unable to handle the operating system number of
-Mountain Lion, so we need to tell it how to interpret that. In order to do so,
-we first need to figure out which directory Homebrew installed SML to. Running
+What happens here is that SML is unable to handle the operating system number of Mountain Lion, so we need to tell it how to interpret that. In order to do so, we first need to figure out which directory Homebrew installed SML to. Running
 
-```console
+```
 $ brew info smlnj
 ```
 
 gives us an output similar to the following:
 
-```console
+```
 smlnj: stable 110.74
 http://www.smlnj.org/
 /usr/local/Cellar/smlnj/110.74 (3950 files, 69M) *
@@ -55,19 +46,17 @@ to your PATH.
 Improvements are welcome.
 ```
 
-From this, we can tell that SML has been installed to
-`/usr/local/Cellar/smlnj/110.74/libexec`.
+From this, we can tell that SML has been installed to `/usr/local/Cellar/smlnj/110.74/libexec`.
 
-Open the file `bin/.arch-n-opsys` located in this directory in your text editor
-of choice:
+Open the file `bin/.arch-n-opsys` located in this directory in your text editor of choice:
 
-```console
+```
 $ open -t /usr/local/Cellar/smlnj/110.74/libexec/bin/.arch-n-opsys
 ```
 
 Inside, you will find the following instructions, starting at line 63:
 
-```bash
+```
 case `uname -r` in
    8*) OPSYS=darwin; HEAP_OPSYS=darwin ;; # MacOS X 10.4
    9*) OPSYS=darwin; HEAP_OPSYS=darwin ;; # MacOS X 10.5
@@ -76,10 +65,9 @@ case `uname -r` in
     *) exit 1;;
 ```
 
-As you may have noticed, OS X version 10.8 is not listed here yet. Simply add a
-line covering version number _12_  (as returned by `uname -r`) to this list:
+As you may have noticed, OS X version 10.8 is not listed here yet. Simply add a line covering version number _12_  (as returned by `uname -r`) to this list:
 
-```bash
+```
 case `uname -r` in
    8*) OPSYS=darwin; HEAP_OPSYS=darwin ;; # MacOS X 10.4
    9*) OPSYS=darwin; HEAP_OPSYS=darwin ;; # MacOS X 10.5
@@ -89,12 +77,11 @@ case `uname -r` in
     *) exit 1;;
 ```
 
-When trying to save the change, your text editor is probably going to tell you
-that the file is read-only, but you will have to overwrite the contents here.
+When trying to save the change, your text editor is probably going to tell you that the file is read-only, but you will have to overwrite the contents here.
 
 After that, running
 
-```console
+```
 $ sml
 ```
 
