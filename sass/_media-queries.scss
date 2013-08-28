@@ -1,5 +1,5 @@
 // media queries to use in @media-directives
-$small:       'min-width: 400px';
-$medium:      'min-width: 600px';
-$large:       'min-width: 800px';
-$extra-large: 'min-width: 1000px';
+$query-small:       ('min-width: 400px');
+$query-medium:      ('min-width: 600px');
+$query-large:       ('min-width: 800px');
+$query-extra-large: ('min-width: 1000px');

@@ -25,17 +25,17 @@ body {
 footer {
   background: $color-neutral-lighter;
   padding: 1.2em 2%;
+  text-align: center;
 
   li {
     background-position: top center;
     display: inline-block;
-    margin: 0 0.625em;
+    margin: 0 0.625em; // 0 10px
     padding-top: 2.625em; // 42px
   }
 
   ol {
     list-style: none;
-    text-align: center;
   }
 }
 
@@ -90,6 +90,13 @@ header {
   }
 }
 
+hr {
+  background: $color-neutral;
+  border: 0;
+  height: 0.1em;
+  margin-bottom: 2.3em;
+}
+
 img {
   display: block;
   margin: 0 auto 1.2em;
@@ -125,7 +132,8 @@ nav {
 }
 
 ol {
-  margin: 0;
+  list-style-position: inside;
+  margin: 0 0 2.4em;
   padding: 0;
 }
 
@@ -165,8 +173,15 @@ section {
   }
 }
 
+table {
+  font-size: 1.6em;
+  line-height: 1.5em; // 24px
+  margin-bottom: 1.5em; // 24px
+}
+
 ul {
-  margin: 0;
+  list-style-position: inside;
+  margin: 0 0 2.4em;
   padding: 0;
 }
 
@@ -184,4 +199,24 @@ ul {
 
 .small {
   width: 40%;
+}
+
+.videoContainer {
+  margin: 0 auto;
+  width: 100%;
+
+  > div {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+  }
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
