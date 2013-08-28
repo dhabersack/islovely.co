@@ -96,6 +96,18 @@
       {{markdown body}}
     </script>
 
+    <script type="text/x-handlebars" data-template-name="pages">
+      <h1>Pages</h1>
+
+      <ol id="pages">
+        {{#each model}}
+          <li>
+            {{#linkTo 'page' this}}{{title}}{{/linkTo}}
+          </li>
+        {{/each}}
+      </ol>
+    </script>
+
     <script type="text/x-handlebars" data-template-name="post">
       <nav>
         {{#linkTo 'posts'}}&larr; Posts{{/linkTo}}
