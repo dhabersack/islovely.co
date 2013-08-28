@@ -35,9 +35,6 @@
           <li>
             {{#linkTo 'posts'}}Posts{{/linkTo}}
           </li>
-          <li>
-            {{#linkTo 'pages'}}Pages{{/linkTo}}
-          </li>
           <li><a href="/#/pages/influences-and-values">Influences &amp; Values</a></li>
           <li><a href="/#/pages/resume">Résumé</a></li>
           <li><a href="/#/pages/contact">Contact</a></li>
@@ -94,27 +91,10 @@
     </script>
 
     <script type="text/x-handlebars" data-template-name="page">
-      <nav>
-        {{#linkTo 'pages'}}&larr; Pages{{/linkTo}}
-      </nav>
-
       <h1>{{title}}</h1>
 
       {{markdown body}}
     </script>
-
-    <script type="text/x-handlebars" data-template-name="pages">
-      <h1>Pages</h1>
-
-      <ol id="pages">
-        {{#each model}}
-          <li>
-            {{#linkTo 'page' this}}{{title}}{{/linkTo}}
-          </li>
-        {{/each}}
-      </ol>
-    </script>
-
 
     <script type="text/x-handlebars" data-template-name="post">
       <nav>
