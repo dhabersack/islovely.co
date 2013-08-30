@@ -21,6 +21,29 @@ server.get '/clients/:slug', (request, response) ->
     # response.statusCode = 404
     # response.send 'Error 404: no client found'
 
+server.get '/:toplevel/:slug/images/:filename', (request, response) ->
+  toplevel = request.params.toplevel
+  slug = request.params.slug
+  filename = request.params.filename
+
+  fs.readdir toplevel, (error, files) ->
+    return console.log error if error
+
+    for file in files
+      # ignore invisible files
+      if not /^\..*/.test file
+        name_elements = /(\d+)-(.+)/.exec file
+        directorySlug = name_elements[2]
+
+        if directorySlug is slug
+          directory = "#{ toplevel }/#{ file }"
+
+          fs.readFile "#{ directory }/images/#{ filename }", (error, data) ->
+            console.log error if error
+
+            response.header 'Content-Type', 'image/png'
+            response.end data, 'binary'
+
 server.get '/pages', (request, response) ->
   parseIndex 'pages', response
 
@@ -33,9 +56,6 @@ server.get '/posts', (request, response) ->
 server.get '/posts/:slug', (request, response) ->
   parseFileBySlug 'post', 'posts', request.params.slug, parseFile, response
 
-server.get '/test', (request, response) ->
-  response.send 'test'
-
 port = process.env.PORT || 1986
 server.listen port
 console.log "Listening on port #{ port }"
@@ -47,6 +67,10 @@ console.log "Listening on port #{ port }"
 # Helpers
 ####
 
+findDirectoryBySlug = (topLevel, slug) ->
+  console.log "topLevel: #{ topLevel }"
+  console.log "slug: #{ slug }"
+
 parseFile = (file, type, response) ->
   name_elements = /(\d+)-(.+)/.exec file
 
@@ -57,9 +81,19 @@ parseFile = (file, type, response) ->
     fields.id = name_elements[1]
     fields.slug = name_elements[2]
 
-    (json = {})[type] = fields
-    response.send json
+    fs.readdir "#{ file }/images", (error, files) ->
+      # send result now if no image-directory exist
+      if error
+        (json = {})[type] = fields
+        response.send json
+        return console.log error
 
+      images = []
+      images.push { url: file } for file in files
+      fields.images = images
+
+      (json = {})[type] = fields
+      response.send json
 
 parseIndex = (directory, response) ->
   fs.readdir directory, (error, files) ->
