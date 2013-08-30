@@ -12,6 +12,7 @@ module.exports = (grunt) ->
           'js/<%= pkg.name %>.js': [
             'js/application.coffee'
             'js/router.coffee'
+            'js/adapter.coffee'
             'js/store.coffee'
             'js/controllers/**/*.coffee'
             'js/models/**/*.coffee'

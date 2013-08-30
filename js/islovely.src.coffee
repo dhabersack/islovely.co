@@ -43,24 +43,26 @@ Portfolio.PostsRoute = Ember.Route.extend
   model: () ->
     Portfolio.Post.find()
 
+Portfolio.Adapter = DS.RESTAdapter.extend()
+
+Portfolio.Adapter.reopen { url: 'http://localhost:1986' }
+
 Portfolio.Store = DS.Store.extend
-  revision: 12
-  adapter: 'DS.RESTAdapter'
-
-DS.RESTAdapter.reopen { url: 'http://localhost:1986' }
-
-Portfolio.BreakpointImage = DS.Model.extend
-  breakpoint: DS.attr 'string'
-  client: DS.belongsTo 'Portfolio.Client'
-  title: DS.attr 'string'
-  url: DS.attr 'string'
+  revision: 13
+  adapter: 'Portfolio.Adapter'
 
 Portfolio.Client = DS.Model.extend
   body: DS.attr 'string'
   description: DS.attr 'string'
-  images: DS.hasMany 'Portfolio.BreakpointImage'
+  images: DS.hasMany 'Portfolio.Image'
   slug: DS.attr 'string'
   title: DS.attr 'string'
+  url: DS.attr 'string'
+
+DS.RESTAdapter.map 'Portfolio.Client',
+  images: { embedded: 'always' }
+
+Portfolio.Image = DS.Model.extend
   url: DS.attr 'string'
 
 Portfolio.Page = DS.Model.extend
