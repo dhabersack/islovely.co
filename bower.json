@@ -2,8 +2,8 @@
   "name": "islovely",
   "private": "true",
   "dependencies": {
-    "ember": "~1.0.0-rc.8",
-    "ember-data-shim": "~0.0.13",
+    "ember": "~1.0.0",
+    "ember-data-shim": "~0.0.14",
     "handlebars": "1.0.0",
     "jquery": "~2.0.3",
     "showdown": "~0.3.1"
