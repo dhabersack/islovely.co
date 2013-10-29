@@ -7,7 +7,7 @@ module.exports = (grunt) ->
     coffee:
       options:
         sourceMap: true
-      compile:
+      run:
         files:
           'js/<%= pkg.name %>.js': [
             'js/application.coffee'
@@ -18,14 +18,26 @@ module.exports = (grunt) ->
             'js/models/**/*.coffee'
             'js/helpers.coffee'
           ]
-       server:
-         files:
-           'server/server.js': 'server/server.coffee'
+      server:
+        files:
+          'server/server.js': 'server/server.coffee'
 
     connect:
       server:
         options:
           port: 1506
+
+    cssmin:
+      option:
+        report: 'min'
+      css:
+        files:
+          'style.css': 'sass/style.css'
+      grunticon:
+        files:
+          'grunticon/icons.data.png.min.css': 'grunticon/icons.data.png.css'
+          'grunticon/icons.data.svg.min.css': 'grunticon/icons.data.svg.css'
+          'grunticon/icons.fallback.min.css': 'grunticon/icons.fallback.css'
 
     grunticon:
       icons:
@@ -57,12 +69,9 @@ module.exports = (grunt) ->
           src: 'js/<%= pkg.name %>.js'
 
     sass:
-      options:
-        bundleExec: true
-        style: 'compressed'
       compile:
         files:
-          'style.css': 'sass/style.scss'
+          'sass/style.css': 'sass/style.scss'
 
     uglify:
       options:
@@ -97,19 +106,21 @@ module.exports = (grunt) ->
         tasks: 'compile:css'
       vectors:
         files: 'vectors/**/*'
-        tasks: 'grunticon'
+        tasks: 'compile:vectors'
 
   # Load plugins
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-contrib-connect'
+  grunt.loadNpmTasks 'grunt-contrib-cssmin'
   grunt.loadNpmTasks 'grunt-contrib-jshint'
-  grunt.loadNpmTasks 'grunt-contrib-sass'
   grunt.loadNpmTasks 'grunt-contrib-uglify'
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-grunticon'
+  grunt.loadNpmTasks 'grunt-sass'
 
   grunt.registerTask 'build', ['compile', 'uglify']
-  grunt.registerTask 'compile', ['grunticon', 'compile:css', 'compile:js']
-  grunt.registerTask 'compile:css', 'sass'
+  grunt.registerTask 'compile', ['compile:vectors', 'compile:css', 'compile:js']
+  grunt.registerTask 'compile:css', ['sass', 'cssmin:css']
   grunt.registerTask 'compile:js', ['coffee', 'jshint']
+  grunt.registerTask 'compile:vectors', ['grunticon', 'cssmin:grunticon']
   grunt.registerTask 'default', ['compile', 'connect', 'watch']
