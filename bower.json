@@ -1,6 +1,6 @@
 {
   "name": "islovely",
-  "version": "0.2.0",
+  "private": "true",
   "dependencies": {
     "ember": "~1.0.0-rc.8",
     "ember-data-shim": "~0.0.13",
