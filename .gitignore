@@ -1,5 +1,9 @@
+**/*.js
+**/*.js.map
+**/*.swp
 .DS_Store
 .bundle/
 .sass-cache/
-build/
-vendor/bundle/
+bower_components/
+node_modules/
+vendor/

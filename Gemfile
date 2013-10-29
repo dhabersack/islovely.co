@@ -1,5 +1,3 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
-gem 'middleman', '~>3.0.7'
-gem 'middleman-syntax'
-gem 'redcarpet'
+gem 'sass', '~>3.2.10'
