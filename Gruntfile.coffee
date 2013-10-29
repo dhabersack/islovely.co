@@ -45,9 +45,8 @@ module.exports = (grunt) ->
           src: 'vectors'
           dest: 'grunticon'
           customselectors:
-            'github-logo': '.github.logo'
-            'islovely-logo': '.islovely.logo'
-            'twitter-logo': '.twitter.logo'
+            'github-logo': '.github.logo::before'
+            'twitter-logo': '.twitter.logo::before'
 
     jshint:
       options:
