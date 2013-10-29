@@ -48,7 +48,6 @@ Portfolio.Adapter = DS.RESTAdapter.extend()
 Portfolio.Adapter.reopen { url: 'http://localhost:1986' }
 
 Portfolio.Store = DS.Store.extend
-  revision: 13
   adapter: 'Portfolio.Adapter'
 
 Portfolio.Client = DS.Model.extend
@@ -64,6 +63,10 @@ DS.RESTAdapter.map 'Portfolio.Client',
 
 Portfolio.Image = DS.Model.extend
   url: DS.attr 'string'
+
+  absoluteUrl: (->
+    "http://localhost:1986/#{ @get 'url' }"
+  ).property 'url'
 
 Portfolio.Page = DS.Model.extend
   body: DS.attr 'string'

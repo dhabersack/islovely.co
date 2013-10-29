@@ -9,7 +9,8 @@
     <title>islovely</title>
 
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Istok+Web:400,700,400italic,700italic'>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic">
+
 
     <script>
     /* grunticon Stylesheet Loader | https://github.com/filamentgroup/grunticon | (c) 2012 Scott Jehl, Filament Group, Inc. | MIT license. */
@@ -22,24 +23,24 @@
     <script type="text/x-handlebars" id="application">
       <header>
         {{#linkTo 'index' class="islovely logo"}}<span>islovely</span>{{/linkTo}}
-      </header>
 
-      <nav>
-        <ol>
-          <li>
-            {{#linkTo 'index'}}Home{{/linkTo}}
-          </li>
-          <li>
-            {{#linkTo 'clients'}}Clients{{/linkTo}}
-          </li>
-          <li>
-            {{#linkTo 'posts'}}Posts{{/linkTo}}
-          </li>
-          <li><a href="/#/pages/influences-and-values">Influences &amp; Values</a></li>
-          <li><a href="/#/pages/resume">Résumé</a></li>
-          <li><a href="/#/pages/contact">Contact</a></li>
-        </ol>
-      </nav>
+        <nav>
+          <ol>
+            <li>
+              {{#linkTo 'index'}}Home{{/linkTo}}
+            </li>
+            <li>
+              {{#linkTo 'clients'}}Clients{{/linkTo}}
+            </li>
+            <li>
+              {{#linkTo 'posts'}}Posts{{/linkTo}}
+            </li>
+            <li><a href="/#/pages/influences-and-values">Influences &amp; Values</a></li>
+            <li><a href="/#/pages/resume">Résumé</a></li>
+            <li><a href="/#/pages/contact">Contact</a></li>
+          </ol>
+        </nav>
+      </header>
 
       <section>
         {{outlet}}
@@ -72,10 +73,13 @@
 
       {{markdown body}}
 
-      {{#each images}}
-        <h2>{{title}}</h2>
-        <img {{bindAttr src="url" class="breakpoint"}}>
-      {{/each}}
+      {{#if images}}
+        <h2>Images</h2>
+
+        {{#each images}}
+          <img {{bindAttr src="absoluteUrl"}}>
+        {{/each}}
+      {{/if}}
     </script>
 
     <script type="text/x-handlebars" data-template-name="clients">
@@ -88,6 +92,10 @@
           </li>
         {{/each}}
       </ol>
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="index">
+      <h1>index</h1>
     </script>
 
     <script type="text/x-handlebars" data-template-name="page">

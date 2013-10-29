@@ -4,37 +4,25 @@ description: The official statistics of a recent exam present an incorrectly pos
 title: Debunking whitewashed exam statistics
 ---
 
-**Edit (March 19, 2013):** I updated my calculations at the end to no longer
-include phantom students. While their inclusion was meant to highlight a
-disregard of their needs, I inadvertently and unfairly ended up distorting the
-numbers in favor of my argument.
+**Edit (March 19, 2013):** I updated my calculations at the end to no longer include phantom students. While their inclusion was meant to highlight a disregard of their needs, I inadvertently and unfairly ended up distorting the numbers in favor of my argument.
 
 <hr>
 
-In
-“[Why students fail entry-level programming exams](/blog/why-students-fail-entry-level-programming-exams/)”
-I referenced a lecture in which the resit was scheduled six months after the
-original exam. Said lecture did not offer any help in the interim, which I
-assumed would not yield an improved outcome over the first exam.
+In “[Why students fail entry-level programming exams](/blog/why-students-fail-entry-level-programming-exams/)” I referenced a lecture in which the resit was scheduled six months after the original exam. Said lecture did not offer any help in the interim, which I assumed would not yield an improved outcome over the first exam.
 
 The results are in. I was right on target.
 
-The official statistics for both exams as well as a provided summary are
-mirrored here:
+The official statistics for both exams as well as a provided summary are mirrored here:
 
 - [First exam](statistics-first-exam.pdf)
 - [Second exam](statistics-second-exam.pdf)
 - [Contingency table and conclusion](contingency-table.pdf)
 
-These statistics leave a lot to be desired, with important pieces of information
-missing from the conclusion.
-
+These statistics leave a lot to be desired, with important pieces of information missing from the conclusion.
 
 ## What they are selling
 
-The officials combined the statistics of both exams in one contingency table. In
-the following representation, the y-axis describes the first exam while the
-x-axis describes the resit:
+The officials combined the statistics of both exams in one contingency table. In the following representation, the y-axis describes the first exam while the x-axis describes the resit:
 
 <table id="contingency-table">
   <thead>
@@ -141,20 +129,13 @@ From this, the following conclusion has been drawn:
   </tbody>
 </table>
 
-This table is meant to highlight one thing: 116 out of 247 students passed the
-exam. A quota of 47% is unexpectedly high, considering how “advanced” the topic
-is for many beginners attending the lecture.
+This table is meant to highlight one thing: 116 out of 247 students passed the exam. A quota of 47% is unexpectedly high, considering how “advanced” the topic is for many beginners attending the lecture.
 
-The reason for this surprising conclusion is simple: it is **misleading and
-masks vital information**.
-
+The reason for this surprising conclusion is simple: it is **misleading and masks vital information**.
 
 ## Why I am not buying it
 
-There are several flaws in the argumentation that are not exactly hidden, but it
-requires a closer look in order to see how these statistics are misrepresenting
-the facts.
-
+There are several flaws in the argumentation that are not exactly hidden, but it requires a closer look in order to see how these statistics are misrepresenting the facts.
 
 ### Resources seem more valuable than students
 
@@ -254,7 +235,7 @@ required in order to pass. The lower grades have been achieved most often in
 both cases:
 
 <figure>
-  <img src="stacked-graph.png" alt="Combined results of both exams.">
+  <img src="http://localhost:1986/posts/debunking-whitewashed-exam-statistics/images/stacked-graph.png" alt="Combined results of both exams.">
   <figcaption>
     Combined results of both exams.
   </figcaption>
@@ -265,7 +246,7 @@ can be grouped together into a single class, represented in the following chart
 by a score of zero:
 
 <figure>
-  <img src="stacked-graph-grouped.png" alt="Results with all scores representing failure grouped together.">
+  <img src="http://localhost:1986/posts/debunking-whitewashed-exam-statistics/images/stacked-graph-grouped.png" alt="Results with all scores representing failure grouped together.">
   <figcaption>
     Results with all scores representing failure grouped together.
   </figcaption>
@@ -277,7 +258,7 @@ into a group of “passed successfully” and the remaining grades into “passe
 get the following graph:
 
 <figure>
-  <img src="stacked-graph-classes.png" alt="Results grouped into ‘passed successfully’, ‘passed’ and ‘failed’.">
+  <img src="http://localhost:1986/posts/debunking-whitewashed-exam-statistics/images/stacked-graph-classes.png" alt="Results grouped into ‘passed successfully’, ‘passed’ and ‘failed’.">
   <figcaption>
     Results grouped into ‘passed successfully’, ‘passed’ and ‘failed’.
   </figcaption>

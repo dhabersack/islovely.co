@@ -32,8 +32,8 @@ server.get '/:toplevel/:slug/images/:filename', (request, response) ->
     for file in files
       # ignore invisible files
       if not /^\..*/.test file
-        name_elements = /(\d+)-(.+)/.exec file
-        directorySlug = name_elements[2]
+        nameElements = /(\d+)-(.+)/.exec file
+        directorySlug = nameElements[2]
 
         if directorySlug is slug
           directory = "#{ toplevel }/#{ file }"
@@ -72,14 +72,14 @@ findDirectoryBySlug = (topLevel, slug) ->
   console.log "slug: #{ slug }"
 
 parseFile = (file, type, response) ->
-  name_elements = /(\d+)-(.+)/.exec file
+  nameElements = /(\d+)-(.+)/.exec file
 
   fs.readFile "#{ file }/index.md", 'utf8', (error, data) ->
     console.log error if error
 
     fields = extractFields data
-    fields.id = name_elements[1]
-    fields.slug = name_elements[2]
+    fields.id = nameElements[1]
+    fields.slug = nameElements[2]
 
     fs.readdir "#{ file }/images", (error, files) ->
       # send result now if no image-directory exist
@@ -89,7 +89,7 @@ parseFile = (file, type, response) ->
         return console.log error
 
       images = []
-      images.push { url: file } for file in files
+      images.push { name: file } if not /^\..*/.test file for file in files
       fields.images = images
 
       (json = {})[type] = fields
@@ -112,10 +112,10 @@ parseIndex = (directory, response) ->
 
           fields = extractFields data
 
-          name_elements = /(\d+)-(.+)/.exec files[index]
-          if name_elements
-            fields.id = name_elements[1]
-            fields.slug = name_elements[2]
+          nameElements = /(\d+)-(.+)/.exec files[index]
+          if nameElements
+            fields.id = nameElements[1]
+            fields.slug = nameElements[2]
 
           pages.push fields
           remaining--
@@ -131,18 +131,18 @@ parseIndex = (directory, response) ->
         response.send json if remaining - invisibles == 0
 
 extractFields = (data) ->
-  is_in_frontmatter = false
+  isInFrontmatter = false
   body = ''
   fields = {}
 
   for line in data.split "\n"
     if /^---$/.test line
-      is_in_frontmatter = not is_in_frontmatter
+      isInFrontmatter = not isInFrontmatter
     else
-      if is_in_frontmatter
-        key_value = /(.+?)\s*:\s*(.+)/.exec line
-        key = key_value[1]
-        value = key_value[2]
+      if isInFrontmatter
+        keyValue = /(.+?)\s*:\s*(.+)/.exec line
+        key = keyValue[1]
+        value = keyValue[2]
 
         fields[key] = value
       else

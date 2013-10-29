@@ -24,6 +24,7 @@ body {
 
 footer {
   background: $color-neutral-lighter;
+  clear: both;
   padding: 1.2em 2%;
   text-align: center;
 
@@ -77,16 +78,20 @@ h4 {
 }
 
 header {
-  background: $color-brand-lighter;
-  font-size: 1.6em;
-  line-height: 1.5em; // 24px
-  padding: 3.6em 2%;
-  text-align: center;
+  @media (#{ $query-large }) {
+    @include grid(1, 3);
+
+    float: left;
+  }
 
   > a {
     background-position: top center;
     display: block;
-    padding-top: 11.25em;
+    padding-top: 24em;
+  }
+
+  span {
+    display: none;
   }
 }
 
@@ -109,19 +114,21 @@ li {
 }
 
 nav {
-  background: $color-brand;
+  font-family: $font-family-headings;
   padding: 1.2em 2%;
 
   a {
-    &,
-    &:visited {
-      color: $color-neutral-lightest;
-    }
+    display: block;
   }
 
   li {
     float: left;
     margin-right: 1.125em; // 20px
+
+    @media (#{ $query-large }) {
+      float: none;
+      margin: 0;
+    }
   }
 
   > ol {
@@ -152,11 +159,16 @@ pre {
 }
 
 section {
-  padding: 1.2em 2%;
+  @media (#{ $query-large }) {
+    @include grid(2, 3);
+
+    float: right;
+  }
 
   // subnavigation
   > nav {
     background: none;
+    font-family: $font-family-content;
     padding: 0;
 
     a {
@@ -202,7 +214,7 @@ ul {
 }
 
 .videoContainer {
-  margin: 0 auto;
+  margin: 0 auto 2.4em;
   width: 100%;
 
   > div {
