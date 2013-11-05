@@ -1,7 +1,6 @@
 ---
 date: 2013-03-29
 description: TODO
-layout: post
 title: Adding include_all? to Ruby arrays
 ---
 

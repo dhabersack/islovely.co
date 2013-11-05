@@ -1,8 +1,7 @@
 ---
 date: 2013-03-28
-layout: post
-summary: 
-title: 
+description: description
+title: title
 ---
 
 In Germany, an increasing number of students enrol in college when they are 18 years old, sometimes younger.
