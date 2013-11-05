@@ -18,9 +18,9 @@ module.exports = (grunt) ->
             'js/models/**/*.coffee'
             'js/helpers.coffee'
           ]
-      server:
-        files:
-          'server/server.js': 'server/server.coffee'
+      # server:
+      #   files:
+      #     'server/server.js': 'server/server.coffee'
 
     connect:
       server:
@@ -66,6 +66,11 @@ module.exports = (grunt) ->
       run:
         files:
           src: 'js/<%= pkg.name %>.js'
+      server:
+        options:
+          node: true
+        files:
+          src: 'server/server.js'
 
     sass:
       compile:
@@ -98,7 +103,7 @@ module.exports = (grunt) ->
       markup:
         files: 'index.html'
       script:
-        files: ['js/**/*.coffee', 'server/**/*.coffee']
+        files: ['js/**/*.coffee', 'server/server.js']
         tasks: 'compile:js'
       stylesheets:
         files: 'sass/**/*.scss'
