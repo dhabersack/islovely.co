@@ -62,11 +62,12 @@ DS.RESTAdapter.map 'Portfolio.Client',
   images: { embedded: 'always' }
 
 Portfolio.Image = DS.Model.extend
-  url: DS.attr 'string'
+  base64: DS.attr 'string'
+  mime: DS.attr 'string'
 
-  absoluteUrl: (->
-    "http://localhost:1986/#{ @get 'url' }"
-  ).property 'url'
+  src: (->
+    "data:#{ @get 'mime' };base64,#{ @get 'base64' }"
+  ).property 'base64', 'mime'
 
 Portfolio.Page = DS.Model.extend
   body: DS.attr 'string'

@@ -1,6 +1,7 @@
 Portfolio.Image = DS.Model.extend
-  url: DS.attr 'string'
+  base64: DS.attr 'string'
+  mime: DS.attr 'string'
 
-  absoluteUrl: (->
-    "http://localhost:1986/#{ @get 'url' }"
-  ).property 'url'
+  src: (->
+    "data:#{ @get 'mime' };base64,#{ @get 'base64' }"
+  ).property 'base64', 'mime'
