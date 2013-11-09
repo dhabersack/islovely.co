@@ -71,6 +71,12 @@
 
       {{markdown body}}
 
+      {{#if url}}
+        <p>
+          <a {{bindAttr href=url title=title}}>Visit site</a>
+        </p>
+      {{/if}}
+
       {{#if images}}
         <h2>Images</h2>
 
