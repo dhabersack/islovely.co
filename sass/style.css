@@ -298,7 +298,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-.responsive-container {
+.responsive-container, footer, header, section {
   margin: 0 auto;
   width: 96%; }
 

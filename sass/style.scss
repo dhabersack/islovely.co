@@ -28,6 +28,8 @@ body {
 }
 
 footer {
+  @extend .responsive-container;
+
   ol {
     list-style: none;
   }
@@ -71,6 +73,8 @@ h4 {
 }
 
 header {
+  @extend .responsive-container;
+
   > a {
     font-size: 2.4em;
     line-height: 1.5em; // 36px
@@ -133,6 +137,8 @@ pre {
 }
 
 section {
+  @extend .responsive-container;
+
   // subnavigation
   > nav {
     font-family: $font-family-content;
