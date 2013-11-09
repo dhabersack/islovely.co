@@ -8,9 +8,7 @@ A few weeks ago Alan McCandlish, a Kiwi and former colleague of mine, died basej
 
 <blockquote class="twitter-tweet">
   <p>
-    The skydiving world has lost a legend. Watch over us, Alan McCandlish. I am
-    glad to have known you. <a href="http://t.co/yXp7s81J"
-    title="http://yfrog.com/odel6nuj">yfrog.com/odel6nuj</a>
+    The skydiving world has lost a legend. Watch over us, Alan McCandlish. I am glad to have known you. <a href="http://t.co/yXp7s81J" title="http://yfrog.com/odel6nuj">yfrog.com/odel6nuj</a>
   </p>
   &mdash; Dom Habersack (@dhabersack)
   <a href="https://twitter.com/dhabersack/status/222050696650960898"
@@ -22,11 +20,7 @@ Although I did not know Alan very well, we did work together for a few months ba
 
 Shortly after the news of his death, news outlets in New Zealand started running the story of his accident. While reading the [first article I came across](http://nzherald.co.nz/nz/news/article.cfm?c_id=1&objectid=10818437 'Kiwi skydiving instructor killed in base jump - National - NZ Herald News'), my heart suddenly stopped. My tweet was quoted and I mentioned by name:
 
-> “He was found dead at the scene, police said. A German friend, Dom Habersack
-> paid tribute to Mr McCandlish on Twitter. ‘The skydiving world hast lost a
-> legend. Watch over us, Alan McCandlish. I am glad to have known you.’ The
-> adrenalin junkie had been touring Europe’s base jumping hot-spots&hellip;”
->
+> “He was found dead at the scene, police said. A German friend, Dom Habersack, paid tribute to Mr McCandlish on Twitter. ‘The skydiving world hast lost a legend. Watch over us, Alan McCandlish. I am glad to have known you.’ The adrenalin junkie had been touring Europe’s base jumping hot-spots&hellip;”
 > <cite>NZ Herald</cite>
 
 My initial confusion quickly turned into anger after realising that there would have been countless other messages that should have been mentioned instead, some of them nearly bringing me to tears. How come I am the one being quoted here?
