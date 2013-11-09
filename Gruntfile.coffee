@@ -30,9 +30,11 @@ module.exports = (grunt) ->
           port: 1506
 
     cssmin:
-      option:
+      options:
         report: 'min'
       css:
+        options:
+          banner: '/*! <%= pkg.name %> v<%= pkg.version %> */'
         files:
           'style.css': 'sass/style.css'
       grunticon:

@@ -4,6 +4,11 @@
 @import 'mixins.scss';
 @import 'normalize.scss';
 
+.responsive-container {
+  margin: 0 auto;
+  width: 96%;
+}
+
 a {
   color: $color-link;
 
@@ -167,21 +172,21 @@ ul {
   }
 }
 
-.screenshot-extra-large {
-  width: 100%;
-}
-
-.screenshot-large {
-  width: 80%;
-}
-
-.screenshot-medium {
-  width: 60%;
-}
-
-.screenshot-small {
-  width: 40%;
-}
+// .screenshot-extra-large {
+//   width: 100%;
+// }
+// 
+// .screenshot-large {
+//   width: 80%;
+// }
+// 
+// .screenshot-medium {
+//   width: 60%;
+// }
+// 
+// .screenshot-small {
+//   width: 40%;
+// }
 
 .videoContainer {
   margin: 0 auto 2.4em;
