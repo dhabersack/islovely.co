@@ -19,14 +19,14 @@
   });
 
   server.get('/:directory', function(request, response) {
-    var directory, pages;
+    var directory;
     directory = request.params.directory;
-    pages = [];
     return fs.readdir(directory, function(error, files) {
-      var file, path, remainingFiles, _i, _len, _results;
+      var file, pages, path, remainingFiles, _i, _len, _results;
       if (error) {
         return send404(response, error);
       }
+      pages = [];
       remainingFiles = files.length;
       _results = [];
       for (_i = 0, _len = files.length; _i < _len; _i++) {
@@ -40,65 +40,17 @@
         } else {
           path = "" + directory + "/" + file;
           _results.push(fs.readFile("" + path + "/index.md", 'utf8', function(error, data) {
-            var fields;
+            var currentFile, fields, _ref;
             if (error) {
               return send404(response, error);
             }
             fields = extractFields(data);
-            return fs.readdir("" + path + "/images", function(error, imageFiles) {
-              var currentFile, imageFile, remainingImages, _j, _len1, _ref, _ref1, _results1;
-              if (error) {
-                currentFile = files[files.length - remainingFiles];
-                _ref = splitName(currentFile), fields.id = _ref[0], fields.slug = _ref[1];
-                pages.push(fields);
-                if ((remainingFiles -= 1) === 0) {
-                  return sendMultipleResult(response, directory, pages);
-                }
-              } else {
-                fields.images = [];
-                remainingImages = imageFiles.length;
-                _results1 = [];
-                for (_j = 0, _len1 = imageFiles.length; _j < _len1; _j++) {
-                  imageFile = imageFiles[_j];
-                  if (isInvisibleFile(imageFile)) {
-                    if ((remainingImages -= 1) === 0) {
-                      currentFile = files[files.length - remainingFiles];
-                      _ref1 = splitName(currentFile), fields.id = _ref1[0], fields.slug = _ref1[1];
-                      pages.push(fields);
-                      if ((remainingFiles -= 1) === 0) {
-                        _results1.push(sendMultipleResult(response, directory, pages));
-                      } else {
-                        _results1.push(void 0);
-                      }
-                    } else {
-                      _results1.push(void 0);
-                    }
-                  } else {
-                    _results1.push(fs.readFile("" + path + "/images/" + imageFile, function(error, data) {
-                      var _ref2;
-                      if (error) {
-                        return send404(response, error);
-                      }
-                      fields.images.push({
-                        base64: data.length,
-                        file: imageFile,
-                        path: path,
-                        mime: 'image/png'
-                      });
-                      if ((remainingImages -= 1) === 0) {
-                        currentFile = files[files.length - remainingFiles];
-                        _ref2 = splitName(currentFile), fields.id = _ref2[0], fields.slug = _ref2[1];
-                        pages.push(fields);
-                        if ((remainingFiles -= 1) === 0) {
-                          return sendMultipleResult(response, directory, pages);
-                        }
-                      }
-                    }));
-                  }
-                }
-                return _results1;
-              }
-            });
+            currentFile = files[files.length - remainingFiles];
+            _ref = splitName(currentFile), fields.id = _ref[0], fields.slug = _ref[1];
+            pages.push(fields);
+            if ((remainingFiles -= 1) === 0) {
+              return sendMultipleResult(response, directory, pages);
+            }
           }));
         }
       }

@@ -15,11 +15,11 @@ server.all('*', (request, response, next) ->
 
 server.get('/:directory', (request, response) ->
   directory = request.params.directory
-  pages = []
 
   fs.readdir(directory, (error, files) ->
     return send404(response, error) if error
 
+    pages = []
     remainingFiles = files.length
 
     for file in files
@@ -33,50 +33,13 @@ server.get('/:directory', (request, response) ->
           return send404(response, error) if error
 
           fields = extractFields(data)
+          currentFile = files[files.length - remainingFiles]
+          [fields.id, fields.slug] = splitName(currentFile)
 
-          fs.readdir("#{ path }/images", (error, imageFiles) ->
-            if error
-              # no images directory found
-              currentFile = files[files.length - remainingFiles]
-              [fields.id, fields.slug] = splitName(currentFile)
-              pages.push(fields)
+          pages.push(fields)
 
-              if (remainingFiles -= 1) is 0
-                sendMultipleResult(response, directory, pages)
-            else
-              fields.images = []
-              remainingImages = imageFiles.length
-
-              for imageFile in imageFiles
-                if isInvisibleFile(imageFile)
-                  if (remainingImages -= 1) is 0
-                    currentFile = files[files.length - remainingFiles]
-                    [fields.id, fields.slug] = splitName(currentFile)
-                    pages.push(fields)
-
-                    if (remainingFiles -= 1) is 0
-                      sendMultipleResult(response, directory, pages)
-                else
-                  fs.readFile("#{ path }/images/#{ imageFile }", (error, data) ->
-                    return send404(response, error) if error
-
-                    fields.images.push({
-                      # base64: new Buffer(data).toString('base64')
-                      base64: data.length
-                      file: imageFile
-                      path: path
-                      mime: 'image/png'
-                    })
-
-                    if (remainingImages -= 1) is 0
-                      currentFile = files[files.length - remainingFiles]
-                      [fields.id, fields.slug] = splitName(currentFile)
-                      pages.push(fields)
-
-                      if (remainingFiles -= 1) is 0
-                        sendMultipleResult(response, directory, pages)
-                  )
-          )
+          if (remainingFiles -= 1) is 0
+            sendMultipleResult(response, directory, pages)
         )
   )
 )
