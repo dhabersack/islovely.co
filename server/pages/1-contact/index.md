@@ -1,6 +1,6 @@
 ---
-description: Ways to get in contact with me.
 title: Contact
+description: Ways to get in contact with me.
 ---
 
 If you want to talk business, shoot me an email at <dom@islovely.co>.

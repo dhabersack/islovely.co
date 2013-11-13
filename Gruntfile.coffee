@@ -1,8 +1,6 @@
 'use strict'
 
 module.exports = (grunt) ->
-  require('time-grunt')(grunt)
-
   grunt.initConfig
     pkg: grunt.file.readJSON 'package.json'
 
@@ -20,9 +18,9 @@ module.exports = (grunt) ->
             'js/models/**/*.coffee'
             'js/helpers.coffee'
           ]
-      # server:
-      #   files:
-      #     'server/server.js': 'server/server.coffee'
+      server:
+        files:
+          'server/server.js': 'server/server.coffee'
 
     connect:
       server:
@@ -58,11 +56,13 @@ module.exports = (grunt) ->
         curly: true
         devel: true
         eqeqeq: true
+        expr: true
         globals:
           'DS': true
           'Ember': true
           'Portfolio': true
           'Showdown': true
+        loopfunc: true
         undef: true
         unused: true
         strict: true
@@ -107,7 +107,7 @@ module.exports = (grunt) ->
       markup:
         files: 'index.html'
       script:
-        files: ['js/**/*.coffee', 'server/server.js']
+        files: ['js/**/*.coffee', 'server/server.coffee']
         tasks: 'compile:js'
       stylesheets:
         files: 'sass/**/*.scss'
