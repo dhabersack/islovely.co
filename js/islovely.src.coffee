@@ -53,21 +53,9 @@ Portfolio.Store = DS.Store.extend
 Portfolio.Client = DS.Model.extend
   body: DS.attr 'string'
   description: DS.attr 'string'
-  images: DS.hasMany 'Portfolio.Image'
   slug: DS.attr 'string'
   title: DS.attr 'string'
   url: DS.attr 'string'
-
-DS.RESTAdapter.map 'Portfolio.Client',
-  images: { embedded: 'always' }
-
-Portfolio.Image = DS.Model.extend
-  base64: DS.attr 'string'
-  mime: DS.attr 'string'
-
-  src: (->
-    "data:#{ @get 'mime' };base64,#{ @get 'base64' }"
-  ).property 'base64', 'mime'
 
 Portfolio.Page = DS.Model.extend
   body: DS.attr 'string'
@@ -78,9 +66,9 @@ Portfolio.Page = DS.Model.extend
 
 Portfolio.Post = DS.Model.extend
   body: DS.attr 'string'
+  description: DS.attr 'string'
   publishedAt: DS.attr 'date'
   slug: DS.attr 'string'
-  teaser: DS.attr 'string'
   title: DS.attr 'string'
 
 showdown = new Showdown.converter()
