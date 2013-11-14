@@ -65,31 +65,7 @@ server.get('/:directory/:slug', (request, response) ->
       fields = extractFields(data)
       [fields.id, fields.slug] = splitName(match)
 
-      fs.readdir("#{ path }/images/", (error, files) ->
-        return sendSingularResult(response, singularName, fields) if error
-
-        images = []
-        remainingImages = files.length
-
-        for file in files
-          if isInvisibleFile(file)
-            if (remainingImages -= 1) is 0
-              fields.images = images
-              return sendSingularResult(response, singularName, fields)
-          else
-            fs.readFile("#{ path }/images/#{ file }", (error, data) ->
-              return send404(response, error) if error
-
-              images.push({
-                base64: new Buffer(data).toString('base64')
-                mime: 'image/png'
-              })
-
-              if (remainingImages -= 1) is 0
-                fields.images = images
-                sendSingularResult(response, singularName, fields)
-            )
-      )
+      return sendSingularResult(response, singularName, fields)
     )
   )
 )
@@ -107,7 +83,9 @@ server.get('/:directory/:slug/:filename', (request, response) ->
         [id, directorySlug] = splitName(file)
 
         if directorySlug is slug
-          fs.readFile("#{ directory }/#{ file }/images/#{ filename }", (error, data) ->
+          path = "#{ directory }/#{ file }/images/#{ filename }"
+
+          fs.readFile(path, (error, data) ->
             return send404(response, error) if error
 
             response.header('Content-Type', 'image/png')
@@ -162,7 +140,6 @@ send404 = (response, error) ->
   console.log(error)
   response.statusCode = 404
   response.end('404: Not Found')
-
 
 server.listen(port)
 console.log("Listening on port #{ port }")

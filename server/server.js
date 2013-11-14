@@ -84,37 +84,7 @@
         }
         fields = extractFields(data);
         _ref = splitName(match), fields.id = _ref[0], fields.slug = _ref[1];
-        return fs.readdir("" + path + "/images/", function(error, files) {
-          var images, remainingImages, _j, _len1;
-          if (error) {
-            return sendSingularResult(response, singularName, fields);
-          }
-          images = [];
-          remainingImages = files.length;
-          for (_j = 0, _len1 = files.length; _j < _len1; _j++) {
-            file = files[_j];
-            if (isInvisibleFile(file)) {
-              if ((remainingImages -= 1) === 0) {
-                fields.images = images;
-                return sendSingularResult(response, singularName, fields);
-              }
-            } else {
-              fs.readFile("" + path + "/images/" + file, function(error, data) {
-                if (error) {
-                  return send404(response, error);
-                }
-                images.push({
-                  base64: new Buffer(data).toString('base64'),
-                  mime: 'image/png'
-                });
-                if ((remainingImages -= 1) === 0) {
-                  fields.images = images;
-                  return sendSingularResult(response, singularName, fields);
-                }
-              });
-            }
-          }
-        });
+        return sendSingularResult(response, singularName, fields);
       });
     });
   });
@@ -125,7 +95,7 @@
     filename = request.params.filename;
     slug = request.params.slug;
     return fs.readdir(directory, function(error, files) {
-      var directorySlug, file, id, _i, _len, _ref, _results;
+      var directorySlug, file, id, path, _i, _len, _ref, _results;
       if (error) {
         return send404(response, error);
       }
@@ -135,7 +105,8 @@
         if (!isInvisibleFile(file)) {
           _ref = splitName(file), id = _ref[0], directorySlug = _ref[1];
           if (directorySlug === slug) {
-            _results.push(fs.readFile("" + directory + "/" + file + "/images/" + filename, function(error, data) {
+            path = "" + directory + "/" + file + "/images/" + filename;
+            _results.push(fs.readFile(path, function(error, data) {
               if (error) {
                 return send404(response, error);
               }
