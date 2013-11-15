@@ -76,25 +76,20 @@
           <a {{bindAttr href=url title=title}}>Visit site</a>
         </p>
       {{/if}}
-
-      {{#if images}}
-        <h2>Images</h2>
-
-        {{#each images}}
-          <img {{bindAttr src=src}}>
-        {{/each}}
-      {{/if}}
     </script>
 
     <script type="text/x-handlebars" data-template-name="clients">
       <h1>Clients</h1>
 
-      <ol>
-        {{#each model}}
-          <li>
-            {{#linkTo 'client' this}}{{title}}{{/linkTo}}
-          </li>
-        {{/each}}
+      {{#each model}}
+        <article>
+          <h2>{{#linkTo 'client' this}}{{title}}{{/linkTo}}</h2>
+
+          <p>
+            {{description}}
+          </p>
+        </article>
+      {{/each}}
       </ol>
     </script>
 
@@ -137,12 +132,15 @@
     <script type="text/x-handlebars" data-template-name="posts">
       <h1>Posts</h1>
 
-      <ol>
-        {{#each model}}
-          <li>
-            {{#linkTo 'post' this}}{{title}}{{/linkTo}}
-          </li>
-        {{/each}}
+      {{#each model}}
+        <article>
+          <h2>{{#linkTo 'post' this}}{{title}}{{/linkTo}}</h2>
+
+          <p>
+            {{description}}
+          </p>
+        </article>
+      {{/each}}
       </ol>
     </script>
 
