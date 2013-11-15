@@ -25,6 +25,7 @@ module.exports = (grunt) ->
     connect:
       server:
         options:
+          hostname: '*'
           port: 1506
 
     cssmin:
