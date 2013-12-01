@@ -9,18 +9,18 @@ module.exports = (grunt) ->
         sourceMap: true
       run:
         files:
-          'js/<%= pkg.name %>.js': [
-            'js/application.coffee'
-            'js/router.coffee'
-            'js/adapter.coffee'
-            'js/store.coffee'
-            'js/controllers/**/*.coffee'
-            'js/models/**/*.coffee'
-            'js/helpers.coffee'
+          '<%= pkg.name %>.js': [
+            'coffee/application.coffee'
+            'coffee/router.coffee'
+            'coffee/adapter.coffee'
+            'coffee/store.coffee'
+            'coffee/controllers/**/*.coffee'
+            'coffee/models/**/*.coffee'
+            'coffee/helpers.coffee'
           ]
       server:
         files:
-          'server/server.js': 'server/server.coffee'
+          'server.js': 'coffee/server/server.coffee'
 
     connect:
       server:
@@ -79,12 +79,12 @@ module.exports = (grunt) ->
         trailing: true
       run:
         files:
-          src: 'js/<%= pkg.name %>.js'
+          src: '<%= pkg.name %>.js'
       server:
         options:
           node: true
         files:
-          src: 'server/server.js'
+          src: 'server.js'
 
     sass:
       compile:
@@ -102,22 +102,21 @@ module.exports = (grunt) ->
             'components/handlebars/handlebars.js'
             'components/ember/ember.js'
             'components/ember-data-shim/ember-data.js'
-            'js/templates.js'
-            'js/<%= pkg.name %>.js'
+            '<%= pkg.name %>.js'
           ]
 
     watch:
       options:
         livereload: true
       content:
-        files: 'server/**/*.md'
+        files: 'content/**/*.md'
       grunt:
         files: ['package.json', 'Gruntfile.coffee']
         tasks: 'compile'
       markup:
         files: 'index.html'
       script:
-        files: ['js/**/*.coffee', 'server/server.coffee']
+        files: 'coffee/**/*.coffee'
         tasks: 'compile:js'
       stylesheets:
         files: 'sass/**/*.scss'

@@ -15,8 +15,9 @@ server.all('*', (request, response, next) ->
 
 server.get('/:directory', (request, response) ->
   directory = request.params.directory
+  directoryPath = "content/#{ directory }"
 
-  fs.readdir(directory, (error, files) ->
+  fs.readdir(directoryPath, (error, files) ->
     return send404(response, error) if error
 
     pages = []
@@ -27,7 +28,7 @@ server.get('/:directory', (request, response) ->
         if (remainingFiles -= 1) is 0
           sendMultipleResult(response, directory, pages)
       else
-        path = "#{ directory }/#{ file }"
+        path = "#{ directoryPath }/#{ file }"
 
         fs.readFile("#{ path }/index.md", 'utf8', (error, data) ->
           return send404(response, error) if error
@@ -47,9 +48,10 @@ server.get('/:directory', (request, response) ->
 server.get('/:directory/:slug', (request, response) ->
   slug = request.params.slug
   directory = request.params.directory
+  directoryPath = "content/#{ directory }"
   singularName = inflect.singularize(directory)
 
-  fs.readdir(directory, (error, files) ->
+  fs.readdir(directoryPath, (error, files) ->
     return send404(response, error) if error
 
     for file in files
@@ -57,7 +59,7 @@ server.get('/:directory/:slug', (request, response) ->
         if file.indexOf(slug) isnt -1
           match = file
 
-    path = "#{ directory }/#{ match }"
+    path = "#{ directoryPath }/#{ match }"
 
     fs.readFile("#{ path }/index.md", 'utf8', (error, data) ->
       return send404(response, error) if error
@@ -72,10 +74,11 @@ server.get('/:directory/:slug', (request, response) ->
 
 server.get('/:directory/:slug/:filename', (request, response) ->
   directory = request.params.directory
+  directoryPath = "content/#{ directory }"
   filename = request.params.filename
   slug = request.params.slug
 
-  fs.readdir(directory, (error, files) ->
+  fs.readdir(directoryPath, (error, files) ->
     return send404(response, error) if error
 
     for file in files
@@ -83,7 +86,7 @@ server.get('/:directory/:slug/:filename', (request, response) ->
         [id, directorySlug] = splitName(file)
 
         if directorySlug is slug
-          path = "#{ directory }/#{ file }/images/#{ filename }"
+          path = "#{ directoryPath }/#{ file }/images/#{ filename }"
 
           fs.readFile(path, (error, data) ->
             return send404(response, error) if error

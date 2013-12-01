@@ -19,9 +19,10 @@
   });
 
   server.get('/:directory', function(request, response) {
-    var directory;
+    var directory, directoryPath;
     directory = request.params.directory;
-    return fs.readdir(directory, function(error, files) {
+    directoryPath = "content/" + directory;
+    return fs.readdir(directoryPath, function(error, files) {
       var file, pages, path, remainingFiles, _i, _len, _results;
       if (error) {
         return send404(response, error);
@@ -38,7 +39,7 @@
             _results.push(void 0);
           }
         } else {
-          path = "" + directory + "/" + file;
+          path = "" + directoryPath + "/" + file;
           _results.push(fs.readFile("" + path + "/index.md", 'utf8', function(error, data) {
             var currentFile, fields, _ref;
             if (error) {
@@ -59,11 +60,12 @@
   });
 
   server.get('/:directory/:slug', function(request, response) {
-    var directory, singularName, slug;
+    var directory, directoryPath, singularName, slug;
     slug = request.params.slug;
     directory = request.params.directory;
+    directoryPath = "content/" + directory;
     singularName = inflect.singularize(directory);
-    return fs.readdir(directory, function(error, files) {
+    return fs.readdir(directoryPath, function(error, files) {
       var file, match, path, _i, _len;
       if (error) {
         return send404(response, error);
@@ -76,7 +78,7 @@
           }
         }
       }
-      path = "" + directory + "/" + match;
+      path = "" + directoryPath + "/" + match;
       return fs.readFile("" + path + "/index.md", 'utf8', function(error, data) {
         var fields, _ref;
         if (error) {
@@ -90,11 +92,12 @@
   });
 
   server.get('/:directory/:slug/:filename', function(request, response) {
-    var directory, filename, slug;
+    var directory, directoryPath, filename, slug;
     directory = request.params.directory;
+    directoryPath = "content/" + directory;
     filename = request.params.filename;
     slug = request.params.slug;
-    return fs.readdir(directory, function(error, files) {
+    return fs.readdir(directoryPath, function(error, files) {
       var directorySlug, file, id, path, _i, _len, _ref, _results;
       if (error) {
         return send404(response, error);
@@ -105,7 +108,7 @@
         if (!isInvisibleFile(file)) {
           _ref = splitName(file), id = _ref[0], directorySlug = _ref[1];
           if (directorySlug === slug) {
-            path = "" + directory + "/" + file + "/images/" + filename;
+            path = "" + directoryPath + "/" + file + "/images/" + filename;
             _results.push(fs.readFile(path, function(error, data) {
               if (error) {
                 return send404(response, error);
