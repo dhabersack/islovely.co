@@ -47,9 +47,18 @@ module.exports = (grunt) ->
         options:
           src: 'vectors'
           dest: 'grunticon'
+          colors:
+            blue: '#3581fc'
+            gray: '#bdbdbd'
+            green: '#23db2a'
+            orange: '#ff9949'
+            red: '#e33d27'
+            violet: '#904fff'
+            yellow: '#ffe226'
           customselectors:
             'github-logo': '.github.logo::before'
             'twitter-logo': '.twitter.logo::before'
+            'islovely-logo-blue': '.islovely.logo::before'
 
     jshint:
       options:
