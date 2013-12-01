@@ -49,7 +49,8 @@ Portfolio.PostsRoute = Ember.Route.extend
 
 Portfolio.Adapter = DS.RESTAdapter.extend()
 
-Portfolio.Adapter.reopen { url: 'http://localhost:1986' }
+# Portfolio.Adapter.reopen { url: 'http://localhost:1986' }
+Portfolio.Adapter.reopen { url: 'http://islovely.herokuapp.com' }
 
 Portfolio.Store = DS.Store.extend
   adapter: 'Portfolio.Adapter'

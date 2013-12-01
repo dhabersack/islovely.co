@@ -10,7 +10,7 @@ Do you want to reach a broader audience and <mark>get more customers</mark>? Do 
 
 I am Dom Habersack, a consultant and developer based in Munich, Germany, and **I can do all that for you**.
 
-<img src="http://localhost:1986/pages/index/dom.png" id="avatar">
+<img src="http://islovely.heroku.com/pages/index/dom.png" id="avatar">
 
 Whether you have an existing site that is not performing well or want to create a new site, web application, or online store: I can help you reach your goals.
 

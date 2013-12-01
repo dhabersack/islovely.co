@@ -79,7 +79,7 @@
   Portfolio.Adapter = DS.RESTAdapter.extend();
 
   Portfolio.Adapter.reopen({
-    url: 'http://localhost:1986'
+    url: 'http://islovely.herokuapp.com'
   });
 
   Portfolio.Store = DS.Store.extend({
