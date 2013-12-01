@@ -36,6 +36,12 @@
     }
   });
 
+  Portfolio.IndexRoute = Ember.Route.extend({
+    model: function() {
+      return Portfolio.Page.find('index');
+    }
+  });
+
   Portfolio.PageRoute = Ember.Route.extend({
     model: function(params) {
       return Portfolio.Page.find(params.page_slug);

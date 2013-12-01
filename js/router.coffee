@@ -17,6 +17,10 @@ Portfolio.ClientsRoute = Ember.Route.extend
   model: () ->
     Portfolio.Client.find()
 
+Portfolio.IndexRoute = Ember.Route.extend
+  model: () ->
+    Portfolio.Page.find 'index'
+
 Portfolio.PageRoute = Ember.Route.extend
   model: (params) ->
     Portfolio.Page.find params.page_slug

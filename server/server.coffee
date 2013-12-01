@@ -106,10 +106,10 @@ extractFields = (data) ->
       if isInFrontmatter
         [key, value] = splitFrontmatter(line)
         fields[key] = value
-      else if line
+      else
         lines.push(line)
 
-  fields.body = lines.join('\n\n')
+  fields.body = lines.join('\n')
   fields
 
 isInvisibleFile = (file) ->

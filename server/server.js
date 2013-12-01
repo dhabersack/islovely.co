@@ -138,12 +138,12 @@
         if (isInFrontmatter) {
           _ref1 = splitFrontmatter(line), key = _ref1[0], value = _ref1[1];
           fields[key] = value;
-        } else if (line) {
+        } else {
           lines.push(line);
         }
       }
     }
-    fields.body = lines.join('\n\n');
+    fields.body = lines.join('\n');
     return fields;
   };
 
