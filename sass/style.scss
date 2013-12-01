@@ -4,11 +4,6 @@
 @import 'mixins.scss';
 @import 'normalize.scss';
 
-.responsive-container {
-  margin: 0 auto;
-  width: 96%;
-}
-
 a {
   color: $color-link;
 
@@ -28,10 +23,19 @@ body {
 }
 
 footer {
-  @extend .responsive-container;
+  background: $color-neutral-lighter;
+  color: $color-neutral-darker;
+  overflow: hidden;
+  padding: 2.4em 0;
+  text-align: center;
+
+  > div {
+    @extend .responsive-container;
+  }
 
   ol {
     list-style: none;
+    margin-bottom: 0;
   }
 }
 
@@ -49,21 +53,21 @@ h6 {
 }
 
 h1 {
-  font-size: 4em;
-  line-height: 1.5em; // 60px
-  margin-bottom: 0.3em; // 12px
+  font-size: 3em;
+  line-height: 1.6em; // 48px
+  margin-bottom: 0.4em; // 12px
 }
 
 h2 {
-  font-size: 3.2em;
-  line-height: 1.5em; // 48px
-  margin-bottom: 0.375em; // 12px
-}
-
-h3 {
   font-size: 2.4em;
   line-height: 1.5em; // 36px
   margin-bottom: 0.5em; // 12px
+}
+
+h3 {
+  font-size: 2em;
+  line-height: 1.8em; // 36px
+  margin-bottom: 0.6em; // 12px
 }
 
 h4 {
@@ -73,11 +77,40 @@ h4 {
 }
 
 header {
-  @extend .responsive-container;
+  margin-bottom: 1.2em;
 
-  > a {
-    font-size: 2.4em;
-    line-height: 1.5em; // 36px
+  > div {
+    @extend .responsive-container;
+
+    padding: 1.2em 0;
+    text-align: center;
+
+    > a {
+      font-size: 2.5em;
+      line-height: 1.44em; // 36px
+      text-decoration: none;
+
+      &,
+      &:visited {
+        color: $color-neutral-darkest;
+      }
+    }
+  }
+
+  > nav {
+    background: $color-brand;
+    padding: 1.2em 0;
+
+    a {
+      &,
+      &:visited {
+        color: $color-neutral-lightest;
+      }
+    }
+
+    > ol {
+      @extend .responsive-container;
+    }
   }
 }
 
@@ -97,6 +130,12 @@ li {
   line-height: 1.5em; // 24px
 }
 
+mark {
+  background: $color-highlight-lighter;
+  color: $color-highlight-darkest;
+  padding: 0.0625em 0.125em; // 1px 2px
+}
+
 nav {
   font-family: $font-family-headings;
 
@@ -106,7 +145,7 @@ nav {
 
   li {
     float: left;
-    margin-right: 1.125em; // 20px
+    margin-right: 0.625em; // 10px
   }
 
   > ol {
@@ -147,7 +186,7 @@ section {
     a {
       display: inline-block;
       font-size: 1.6em;
-      line-height: 1.5em; // 24px
+      line-height: 1.5em;
 
       &,
       &:visited {
@@ -155,6 +194,14 @@ section {
       }
     }
   }
+
+  // p {
+  //   @media (#{ $query-medium }) {
+  //     font-size: 2em;
+  //     line-height: 1.8em; // 36px
+  //     margin-bottom: 1.8em; // 36px
+  //   }
+  // }
 }
 
 table {
@@ -169,30 +216,73 @@ ul {
   padding: 0;
 }
 
-.logo {
-  &::before {
-    content: '';
-    display: inline-block;
-    width: 40px;
-    height: 24px;
+.call-to-action {
+  @include border-radius(0.125em); // 2px
+
+  background: $color-highlight-lighter;
+  display: inline-block;
+  padding: 0.375em 0.625em; // 6px 10px
+
+  &,
+  &:visited {
+    color: $color-neutral-darkest;
+  }
+
+  &:hover {
+    background: $color-highlight-lightest;
   }
 }
 
-// .screenshot-extra-large {
-//   width: 100%;
-// }
-// 
-// .screenshot-large {
-//   width: 80%;
-// }
-// 
-// .screenshot-medium {
-//   width: 60%;
-// }
-// 
-// .screenshot-small {
-//   width: 40%;
-// }
+.call-to-action-container {
+  text-align: center;
+}
+
+.call-to-action-primary {
+  @extend .call-to-action;
+
+  background: $color-action;
+  padding: 0.75em 1.25em; // 12px 20px
+
+  &,
+  &:visited {
+    color: $color-action-darkest;
+  }
+
+  &:hover {
+    background: $color-action-lighter;
+  }
+}
+
+.logo {
+  position: relative;
+  display: inline-block;
+  padding-left: 1.5625em; // 30px
+
+  &::before {
+    background-size: contain;
+    background-position: center center;
+    content: '';
+    height: 1.25em;
+    position: absolute;
+    width: 1.25em;
+    left: 0;
+  }
+
+  &.islovely {
+    padding-left: 2.6em; // 65px
+    line-height: 2.4em; // 60px
+
+    &::before {
+      width: 2.4em; // 60px
+      height: 2.4em; // 60px
+    }
+  }
+}
+
+.responsive-container {
+  margin: 0 auto;
+  width: 96%;
+}
 
 .videoContainer {
   margin: 0 auto 2.4em;
@@ -212,4 +302,11 @@ ul {
     width: 100%;
     height: 100%;
   }
+}
+
+#avatar {
+  border-radius: 50%;
+  margin: 0 auto;
+  width: 49%;
+  width: 16em; // 256px
 }
