@@ -1,6 +1,6 @@
 ---
-description: Imprint and acknowledgements.
 title: Imprint
+description: Imprint and acknowledgements.
 ---
 
 __Dominik Habersack__  
@@ -10,7 +10,6 @@ Tel: 0157 77808615
 Email: <dom@islovely.co>
 
 USt-IdNr.: DE 266202016
-
 
 ### Privacy policy
 
