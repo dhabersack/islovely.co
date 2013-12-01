@@ -20,7 +20,9 @@
   <body>
     <script type="text/x-handlebars" id="application">
       <header>
-        {{#linkTo 'index'}}islovely{{/linkTo}}
+        <div>
+          {{#linkTo 'index' class="islovely logo"}}islovely{{/linkTo}}
+        </div>
 
         <nav>
           <ol>
@@ -30,10 +32,13 @@
             <li>
               {{#linkTo 'clients'}}Clients{{/linkTo}}
             </li>
+            </li>
+            <li><a href="/#/pages/for-employers">For employers</a></li>
+            <li><a href="/#/pages/for-recruiters">For recruiters</a></li>
+            <!--li><a href="/#/pages/influences-and-values">Influences &amp; Values</a></li-->
             <li>
               {{#linkTo 'posts'}}Posts{{/linkTo}}
             </li>
-            <li><a href="/#/pages/influences-and-values">Influences &amp; Values</a></li>
             <li><a href="/#/pages/resume">Résumé</a></li>
             <li><a href="/#/pages/contact">Contact</a></li>
           </ol>
@@ -45,21 +50,23 @@
       </section>
 
       <footer>
-        <p>
-          Copyright &copy; 2013<br>
-          Dom Habersack, <a href="http://islovely.co/" title="Portfolio of Dom Habersack">islovely.co</a><br>
-          <a href="/#/pages/imprint">Imprint</a>
-        </p>
+        <div>
+          <p>
+            Copyright &copy; 2013<br>
+            Dom Habersack, <a href="http://islovely.co/" title="Portfolio of Dom Habersack">islovely.co</a><br>
+            <a href="/#/pages/imprint">Imprint</a>
+          </p>
 
-        <ol>
-          <li class="twitter logo">
-            <a href="http://twitter.com/dhabersack" title="@dhabersack on Twitter">Twitter</a>
-          </li>
-          <li class="github logo">
-            <a href="http://github.com/dhabersack" title="dhabersack on GitHub">GitHub</a>
-          </li>
-        </ol>
-      </footer>
+          <ol>
+            <li>
+              <a href="http://twitter.com/dhabersack" class="logo twitter" title="@dhabersack on Twitter">@dhabersack</a>
+            </li>
+            <li>
+              <a href="http://github.com/dhabersack" class="logo github" title="dhabersack on GitHub">dhabersack</a>
+            </li>
+          </ol>
+          </div>
+    </footer>
     </script>
 
     <script type="text/x-handlebars" data-template-name="client">
@@ -73,7 +80,7 @@
 
       {{#if url}}
         <p>
-          <a {{bindAttr href=url title=title}}>Visit site</a>
+          <a {{bindAttr href=url title=title}} class="call-to-action">Visit site</a>
         </p>
       {{/if}}
     </script>
@@ -94,11 +101,9 @@
     </script>
 
     <script type="text/x-handlebars" data-template-name="index">
-      <h1>I can help your business make more money</h1>
+      <h1>{{title}}</h1>
 
-      <p>
-        If you would like to hire me, I have prepared a <a href="#">description of my workflow</a> so you know what to expect when working with me.
-      </p>
+      {{markdown body}}
     </script>
 
     <script type="text/x-handlebars" data-template-name="page">
