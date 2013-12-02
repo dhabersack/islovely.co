@@ -269,12 +269,12 @@ ul {
   }
 
   &.islovely {
-    padding-left: 2.6em; // 65px
-    line-height: 2.4em; // 60px
+    padding-left: 2.2em; // 55px
+    line-height: 1.92em; // 60px
 
     &::before {
-      width: 2.4em; // 60px
-      height: 2.4em; // 60px
+      width: 1.92em; // 60px
+      height: 1.92em; // 60px
     }
   }
 }
