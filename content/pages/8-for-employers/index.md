@@ -9,5 +9,5 @@ My freelancing business allows me to get to know many different industries, and 
 While most of my projects span only a couple of weeks, longer-term engagements are certainly possible. If you like me to support your company in an endeavor, please feel free to contact me.
 
 <p class="call-to-action-container">
-  <a href="/#/pages/for-employers" class="call-to-action-primary">Let us talk about your project</a>
+  <a href="/#/pages/for-employers" class="call-to-action">Let us talk about your project</a>
 </p>
