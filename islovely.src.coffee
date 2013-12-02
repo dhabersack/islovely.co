@@ -3,81 +3,98 @@
 window.Portfolio = Ember.Application.create()
 
 Portfolio.Router.map () ->
-  this.resource 'client', path: '/clients/:client_slug'
-  this.resource 'clients'
-  this.resource 'page', path: '/pages/:page_slug'
-  this.resource 'pages'
-  this.resource 'post', path: '/posts/:post_slug'
-  this.resource 'posts'
+  this.resource('client', { path: '/clients/:client_slug' })
+  this.resource('clients')
+
+  this.resource('page', { path: '/pages/:page_slug' })
+  this.resource('pages')
+
+  this.resource('post', { path: '/posts/:post_slug' })
+  this.resource('posts')
 
 Portfolio.ClientRoute = Ember.Route.extend
   model: (params) ->
-    Portfolio.Client.find params.client_slug
+    this.store.find('client', params.client_slug)
 
   serialize: (model) ->
-    { client_slug: model.get 'slug' }
+    { client_slug: model.get('slug') }
 
 Portfolio.ClientsRoute = Ember.Route.extend
   model: () ->
-    Portfolio.Client.find()
+    this.store.find('client')
 
 Portfolio.IndexRoute = Ember.Route.extend
   model: () ->
-    Portfolio.Page.find 'index'
+    this.store.find('page', 'index')
 
 Portfolio.PageRoute = Ember.Route.extend
   model: (params) ->
-    Portfolio.Page.find params.page_slug
+    this.store.find('page', params.page_slug)
 
   serialize: (model) ->
-    { page_slug: model.get 'slug' }
+    { page_slug: model.get('slug') }
 
 Portfolio.PagesRoute = Ember.Route.extend
   model: () ->
-    Portfolio.Page.find()
+    this.store.find('page')
 
 Portfolio.PostRoute = Ember.Route.extend
   model: (params) ->
-    Portfolio.Post.find params.post_slug
+    this.store.find('post', params.post_slug)
 
   serialize: (model) ->
-    { post_slug: model.get 'slug' }
+    { post_slug: model.get('slug') }
 
 Portfolio.PostsRoute = Ember.Route.extend
   model: () ->
-    Portfolio.Post.find()
+    this.store.find('post')
 
-Portfolio.Adapter = DS.RESTAdapter.extend()
+Portfolio.ApplicationAdapter = DS.RESTAdapter.extend(
+  # host: 'http://localhost:1986'
+  host: 'http://islovely.herokuapp.com'
+)
 
-Portfolio.Adapter.reopen { url: 'http://localhost:1986' }
-# Portfolio.Adapter.reopen { url: 'http://islovely.heroku.com' }
+Portfolio.Client = DS.Model.extend(
+  body:        DS.attr('string')
+  description: DS.attr('string')
+  slug:        DS.attr('string')
+  title:       DS.attr('string')
+  url:         DS.attr('string')
+)
 
-Portfolio.Store = DS.Store.extend
-  adapter: 'Portfolio.Adapter'
+Portfolio.Page = DS.Model.extend(
+  body:        DS.attr('string')
+  description: DS.attr('string')
+  slug:        DS.attr('string')
+  title:       DS.attr('string')
+)
 
-Portfolio.Client = DS.Model.extend
-  body: DS.attr 'string'
-  description: DS.attr 'string'
-  slug: DS.attr 'string'
-  title: DS.attr 'string'
-  url: DS.attr 'string'
-
-Portfolio.Page = DS.Model.extend
-  body: DS.attr 'string'
-  description: DS.attr 'string'
-  publishedAt: DS.attr 'date'
-  slug: DS.attr 'string'
-  title: DS.attr 'string'
-
-Portfolio.Post = DS.Model.extend
-  body: DS.attr 'string'
-  description: DS.attr 'string'
-  publishedAt: DS.attr 'date'
-  slug: DS.attr 'string'
-  title: DS.attr 'string'
+Portfolio.Post = DS.Model.extend(
+  body:        DS.attr('string')
+  description: DS.attr('string')
+  published:   DS.attr('date')
+  slug:        DS.attr('string')
+  title:       DS.attr('string')
+)
 
 showdown = new Showdown.converter()
 
 Ember.Handlebars.registerBoundHelper('markdown', (input) ->
-  new Ember.Handlebars.SafeString showdown.makeHtml input
+  # markdown = "{{#linkTo 'page' 'imprint'}}imprint{{/linkTo}}"
+  # console.log("markdown: #{ markdown }")
+
+  # html = showdown.makeHtml(markdown)
+  # console.log("html: #{ html }")
+
+  # template = Ember.Handlebars.compile(html)
+  # console.log("template: #{ template }")
+
+  # executed = template(this)
+  # console.log(executed)
+
+  new Ember.Handlebars.SafeString(showdown.makeHtml(input))
+)
+
+Ember.Handlebars.registerBoundHelper('date', (input) ->
+  new Ember.Handlebars.SafeString(moment(input).format('MMMM Do, YYYY'))
 )

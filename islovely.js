@@ -21,7 +21,7 @@
 
   Portfolio.ClientRoute = Ember.Route.extend({
     model: function(params) {
-      return Portfolio.Client.find(params.client_slug);
+      return this.store.find('client', params.client_slug);
     },
     serialize: function(model) {
       return {
@@ -32,19 +32,19 @@
 
   Portfolio.ClientsRoute = Ember.Route.extend({
     model: function() {
-      return Portfolio.Client.find();
+      return this.store.find('client');
     }
   });
 
   Portfolio.IndexRoute = Ember.Route.extend({
     model: function() {
-      return Portfolio.Page.find('index');
+      return this.store.find('page', 'index');
     }
   });
 
   Portfolio.PageRoute = Ember.Route.extend({
     model: function(params) {
-      return Portfolio.Page.find(params.page_slug);
+      return this.store.find('page', params.page_slug);
     },
     serialize: function(model) {
       return {
@@ -55,13 +55,13 @@
 
   Portfolio.PagesRoute = Ember.Route.extend({
     model: function() {
-      return Portfolio.Page.find();
+      return this.store.find('page');
     }
   });
 
   Portfolio.PostRoute = Ember.Route.extend({
     model: function(params) {
-      return Portfolio.Post.find(params.post_slug);
+      return this.store.find('post', params.post_slug);
     },
     serialize: function(model) {
       return {
@@ -72,18 +72,12 @@
 
   Portfolio.PostsRoute = Ember.Route.extend({
     model: function() {
-      return Portfolio.Post.find();
+      return this.store.find('post');
     }
   });
 
-  Portfolio.Adapter = DS.RESTAdapter.extend();
-
-  Portfolio.Adapter.reopen({
-    url: 'http://localhost:1986'
-  });
-
-  Portfolio.Store = DS.Store.extend({
-    adapter: 'Portfolio.Adapter'
+  Portfolio.ApplicationAdapter = DS.RESTAdapter.extend({
+    host: 'http://islovely.herokuapp.com'
   });
 
   Portfolio.Client = DS.Model.extend({
@@ -97,7 +91,6 @@
   Portfolio.Page = DS.Model.extend({
     body: DS.attr('string'),
     description: DS.attr('string'),
-    publishedAt: DS.attr('date'),
     slug: DS.attr('string'),
     title: DS.attr('string')
   });
@@ -105,7 +98,7 @@
   Portfolio.Post = DS.Model.extend({
     body: DS.attr('string'),
     description: DS.attr('string'),
-    publishedAt: DS.attr('date'),
+    published: DS.attr('date'),
     slug: DS.attr('string'),
     title: DS.attr('string')
   });
@@ -114,6 +107,10 @@
 
   Ember.Handlebars.registerBoundHelper('markdown', function(input) {
     return new Ember.Handlebars.SafeString(showdown.makeHtml(input));
+  });
+
+  Ember.Handlebars.registerBoundHelper('date', function(input) {
+    return new Ember.Handlebars.SafeString(moment(input).format('MMMM Do, YYYY'));
   });
 
 }).call(this);

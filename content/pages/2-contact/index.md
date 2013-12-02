@@ -2,8 +2,6 @@
 title: Contact
 description: Ways to get in contact with me.
 ---
-
-
 <div id="wufoo-zrds7zg1dilj6q">
 Fill out my <a href="https://islovely.wufoo.com/forms/zrds7zg1dilj6q">online form</a>.
 </div>

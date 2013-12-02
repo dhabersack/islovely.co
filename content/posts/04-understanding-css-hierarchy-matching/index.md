@@ -1,9 +1,8 @@
 ---
-date: 2012-12-27
-description: In order to improve your stylesheets, you first need to understand how browsers match CSS-selectors and HTML.
 title: Understanding CSS hierarchy-matching
+description: In order to improve your stylesheets, you first need to understand how browsers match CSS-selectors and HTML.
+published: 2012-12-27
 ---
-
 To get a feel for how CSS-selectors should be written, you need to understand how browsers match them to the related markup. The following tries to give a top-level description that might not be entirely accurate but should still give you a good enough idea of how CSS and HTML get combined during rendering.
 
 **Note:** Writing this, I realized that this is probably not how it actually works, as using regular expressions to match selectors and hierarchies would obviate the need for repeated identification-cycles. Nevertheless, thinking of the process this way helps writing simpler selectors, so the model remains valid.
@@ -15,7 +14,7 @@ Consider a site with the following markup:
 ```
 <html>
   <head>
-    // head omitted
+    <!-- omitted -->
   </head>
 
   <body>
@@ -63,31 +62,108 @@ Consider a site with the following markup:
 When discarding the content and chaining all tags together according to their
 nesting, the path to each tag can be extracted:
 
-| Tag     | Hierarchy                           |
-|---------|-------------------------------------|
-| html    | html                                |
-| body    | html body                           |
-| header  | html body header                    |
-| h1      | html body header h1                 |
-| nav     | html body nav                       |
-| ol      | html body nav ol                    |
-| li      | html body nav ol li                 |
-| a       | html body nav ol li a               |
-| li      | html body nav ol li                 |
-| a       | html body nav ol li a               |
-| section | html body section                   |
-| article | html body section article           |
-| header  | html body section article header    |
-| h2      | html body section article header h2 |
-| p       | html body section article header p  |
-| p       | html body section article p         |
-| p       | html body section article p         |
-| a       | html body section article p a       |
-| ul      | html body section article ul        |
-| li      | html body section article ul li     |
-| a       | html body section article ul li a   |
-| li      | html body section article ul li     |
-| a       | html body section article ul li a   |
+<table>
+  <thead>
+    <tr>
+      <th>Tag</th>
+      <th>Hierarchy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>html</th>
+      <td>html</td>
+    </tr>
+    <tr>
+      <th>body</th>
+      <td>html body</td>
+    </tr>
+    <tr>
+      <th>header</th>
+      <td>html body header</td>
+    </tr>
+    <tr>
+      <th>h1</th>
+      <td>html body header h1</td>
+    </tr>
+    <tr>
+      <th>nav</th>
+      <td>html body nav</td>
+    </tr>
+    <tr>
+      <th>ol</th>
+      <td>html body nav ol</td>
+    </tr>
+    <tr>
+      <th>li</th>
+      <td>html body nav ol li</td>
+    </tr>
+    <tr>
+      <th>a</th>
+      <td>html body nav ol li a</td>
+    </tr>
+    <tr>
+      <th>li</th>
+      <td>html body nav ol li</td>
+    </tr>
+    <tr>
+      <th>a</th>
+      <td>html body nav ol li a</td>
+    </tr>
+    <tr>
+      <th>section</th>
+      <td>html body section</td>
+    </tr>
+    <tr>
+      <th>article</th>
+      <td>html body section article</td>
+    </tr>
+    <tr>
+      <th>header</th>
+      <td>html body section article header</td>
+    </tr>
+    <tr>
+      <th>h2</th>
+      <td>html body section article header h2</td>
+    </tr>
+    <tr>
+      <th>p</th>
+      <td>html body section article header p</td>
+    </tr>
+    <tr>
+      <th>p</th>
+      <td>html body section article p</td>
+    </tr>
+    <tr>
+      <th>p</th>
+      <td>html body section article p</td>
+    </tr>
+    <tr>
+      <th>a</th>
+      <td>html body section article p a</td>
+    </tr>
+    <tr>
+      <th>ul</th>
+      <td>html body section article ul</td>
+    </tr>
+    <tr>
+      <th>li</th>
+      <td>html body section article ul li</td>
+    </tr>
+    <tr>
+      <th>a</th>
+      <td>html body section article ul li a</td>
+    </tr>
+    <tr>
+      <th>li</th>
+      <td>html body section article ul li</td>
+    </tr>
+    <tr>
+      <th>a</th>
+      <td>html body section article ul li a</td>
+    </tr>
+  </tbody>
+</table>
 
 Note that some tags share the same hierarchy.
 
@@ -104,12 +180,32 @@ does not end in the exact tag given.
 For example, matching the above table against the selector `li` would trim it
 down to just four elements:
 
-| Tag | Hierarchy                           |
-|-----|-------------------------------------|
-| li  | html body nav ol **li**             |
-| li  | html body nav ol **li**             |
-| li  | html body section article ul **li** |
-| li  | html body section article ul **li** |
+<table>
+  <thead>
+    <tr>
+      <th>Tag</th>
+      <th>Hierarchy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>li</th>
+      <td>html body nav ol <strong>li</strong></td>
+    </tr>
+    <tr>
+      <th>li</th>
+      <td>html body nav ol <strong>li</strong></td>
+    </tr>
+    <tr>
+      <th>li</th>
+      <td>html body section article ul <strong>li</strong></td>
+    </tr>
+    <tr>
+      <th>li</th>
+      <td>html body section article ul <strong>li</strong></td>
+    </tr>
+  </tbody>
+</table>
 
 The browser only had to filter the initial table a single time to find these
 elements and can now apply the styles set with the selector.
@@ -124,20 +220,54 @@ When applying a rule such as <code>ul > li</code>, the browser again starts
 at the rightmost tag and filters the hierarchy-table to end up with the same
 result as before:
 
-| Tag | Hierarchy                           |
-|-----|-------------------------------------|
-| li  | html body nav ol **li**             |
-| li  | html body nav ol **li**             |
-| li  | html body section article ul **li** |
-| li  | html body section article ul **li** |
+<table>
+  <thead>
+    <tr>
+      <th>Tag</th>
+      <th>Hierarchy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>li</th>
+      <td>html body nav ol <strong>li</strong></td>
+    </tr>
+    <tr>
+      <th>li</th>
+      <td>html body nav ol <strong>li</strong></td>
+    </tr>
+    <tr>
+      <th>li</th>
+      <td>html body section article ul <strong>li</strong></td>
+    </tr>
+    <tr>
+      <th>li</th>
+      <td>html body section article ul <strong>li</strong></td>
+    </tr>
+  </tbody>
+</table>
 
 This list now gets filtered again to identify all `li`-tags nested _directly
 below_ a `ul`-tag:
 
-| Tag | Hierarchy                             |
-|-----|---------------------------------------|
-| li  | html body section article **ul > li** |
-| li  | html body section article **ul > li** |
+<table>
+  <thead>
+    <tr>
+      <th>Tag</th>
+      <th>Hierarchy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>li</th>
+      <td>html body section article <strong>ul > li</strong></td>
+    </tr>
+    <tr>
+      <th>li</th>
+      <td>html body section article <strong>ul > li</strong></td>
+    </tr>
+  </tbody>
+</table>
 
 The more levels there are in a selector, the more times each resulting list
 needs to be iterated over again.
@@ -160,36 +290,113 @@ to walk up the entire hierarchy trying to find a match.
 For example, `nav a` first filters out all elements whose hierarchy does not end
 in an `a`-tag, resulting in the following list:
 
-| Tag | Hierarchy                             |
-|-----|---------------------------------------|
-| a   | html body nav ol li **a**             |
-| a   | html body nav ol li **a**             |
-| a   | html body section article p **a**     |
-| a   | html body section article ul li **a** |
-| a   | html body section article ul li **a** |
+<table>
+  <thead>
+    <tr>
+      <th>Tag</th>
+      <th>Hierarchy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>a</th>
+      <td>html body nav ol li <strong>a</strong></td>
+    </tr>
+    <tr>
+      <th>a</th>
+      <td>html body nav ol li <strong>a</strong></td>
+    </tr>
+    <tr>
+      <th>a</th>
+      <td>html body section article p <strong>a</strong></td>
+    </tr>
+    <tr>
+      <th>a</th>
+      <td>html body section article ul li <strong>a</strong></td>
+    </tr>
+    <tr>
+      <th>a</th>
+      <td>html body section article ul li <strong>a</strong></td>
+    </tr>
+  </tbody>
+</table>
 
 When adding `nav` to the selector, the browser has to execute a more detailed
 analysis of each element’s hierarchy. For the first element, it has to go
 through the following steps:
 
-| Iteration | Hierarchy                     | Result                            |
-|-----------|-------------------------------|-----------------------------------|
-| 1         | html body nav ol **li a**     | `nav` not found, continue&hellip; |
-| 2         | html body nav **ol** li **a** | `nav` not found, continue&hellip; |
-| 3         | html body **nav** ol li **a** | `nav` found, match                |
+<table>
+  <thead>
+    <tr>
+      <th>Iteration</th>
+      <th>Hierarchy</th>
+      <th>Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>html body nav ol <strong>li a</strong></td>
+      <td><code>nav</code> not found, continue&hellip;</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>html body nav <strong>ol</strong> li <strong>a</strong></td>
+      <td><code>nav</code> not found, continue&hellip;</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>html body <strong>nav</strong> ol li <strong>a</strong></td>
+      <td><code>nav</code> found, match</td>
+    </tr>
+  </tbody>
+</table>
 
 The browser can stop walking up this element’s hierarchy as soon as a match is
 found and continue with the next element. In contrast to that, the last element
 from the initial list gets matched against `nav a` as follows:
 
-| Iteration | Hierarchy                                 | Result                            |
-|-----------|-------------------------------------------|-----------------------------------|
-| 1         | html body section article ul **li a**     | `nav` not found, continue&hellip; |
-| 2         | html body section article **ul** li **a** | `nav` not found, continue&hellip; |
-| 3         | html body section **article** ul li **a** | `nav` not found, continue&hellip; |
-| 4         | html body **section** article ul li **a** | `nav` not found, continue&hellip; |
-| 5         | html **body** section article ul li **a** | `nav` not found, continue&hellip; |
-| 6         | **html** body section article ul li **a** | `nav` not found, no match         |
+<table>
+  <thead>
+    <tr>
+      <th>Iteration</th>
+      <th>Hierarchy</th>
+      <th>Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>html body section article ul <strong>li a</strong></td>
+      <td><code>nav</code> not found, continue&hellip;</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>html body section article <strong>ul</strong> li <strong>a</strong></td>
+      <td><code>nav</code> not found, continue&hellip;</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>html body section <strong>article</strong> ul li <strong>a</strong></td>
+      <td><code>nav</code> not found, continue&hellip;</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>html body <strong>section</strong> article ul li <strong>a</strong></td>
+      <td><code>nav</code> not found, continue&hellip;</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>html <strong>body</strong> section article ul li <strong>a</strong></td>
+      <td><code>nav</code> not found, continue&hellip;</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td><strong>html</strong> body section article ul li <strong>a</strong></td>
+      <td><code>nav</code> not found, no match</td>
+    </tr>
+  </tbody>
+</table>
 
 For elements that only match the end of a selector but not its beginning, the
 browser has to walk up the entire hierarchy before it can assess that the

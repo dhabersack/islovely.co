@@ -1,9 +1,8 @@
 ---
-date: 2013-03-11
-description: The common approach to teaching development is rarely tailored to newcomers, which often results in high failure rates and large numbers of dropouts.
 title: Why students fail entry-level programming exams
+description: The common approach to teaching development is rarely tailored to newcomers, which often results in high failure rates and large numbers of dropouts.
+published: 2013-03-11
 ---
-
 During our second semester, we were introduced to functional programming. At this point, many students had only just taken their first steps with object-oriented programming and were overwhelmed by this new and entirely different way of writing code. Many did not get an appropriate chance to fully understand the first concept they had just been exposed to, and this rapid succession of new paradigms hurt their understanding of both.
 
 Understandably, this lecture’s failure rate was incredibly high. Of the 364 registered participants, __more than 68% failed the exam__, many by not showing up. On the other end of the spectrum, only __8.5% got a B or better__. This is unacceptable should not be written off as an unchangeable characteristic of the field.
@@ -60,7 +59,7 @@ If you had them run into problems by writing code without these tools first, the
 
 ## Where do we go from here?
 
-The main point I am trying to make is that beginners' courses are not usually aimed at beginners. If we want to introduce more people to our profession, their first impression cannot be one of not being welcome.
+The main point I am trying to make is that beginners‘ courses are not usually aimed at beginners. If we want to introduce more people to our profession, their first impression cannot be one of not being welcome.
 
 We need to reconsider our audience and be more inclusive towards people without any prior knowledge. Programming has to be fun and achievable in order for them to want to keep going, not complicated and intimidating.
 

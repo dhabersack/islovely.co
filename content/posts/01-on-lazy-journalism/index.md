@@ -1,9 +1,8 @@
 ---
-date: 2012-07-27
-description: I reflect on the bogus “journalism” that has led to me undeservedly and repeatedly being quoted on the death of a former colleague.
 title: On lazy journalism
+description: I reflect on the bogus “journalism” that has led to me undeservedly and repeatedly being quoted on the death of a former colleague.
+published: 2012-07-27
 ---
-
 A few weeks ago Alan McCandlish, a Kiwi and former colleague of mine, died basejumping in Switzerland. Many friends paid tribute to him on social media, most of them via Facebook. I, on the other hand, took a slightly more “public” approach and sent out a tweet:
 
 <blockquote class="twitter-tweet">

@@ -1,9 +1,8 @@
 ---
-date: 2013-03-12
-description: A well-intentioned but ultimately unfair move by a lecture’s organizers inspired me to record a number of screencasts on functional programming.
 title: Screencasts on Standard ML in German
+description: A well-intentioned but ultimately unfair move by a lecture’s organizers inspired me to record a number of screencasts on functional programming.
+published: 2013-03-12
 ---
-
 The first exam in a lecture on functional programming saw a failure rate of over 68%, which I have written about in my previous post on [why students fail entry-level programming exams](/blog/why-students-fail-entry-level-programming-exams/). The resit had been scheduled on a date almost exactly six months later, with no additional lectures or support of any kind in between. Students that failed the initial exam were expected to work through the contents again, this time entirely on their own.
 
 It should be obvious that the results would largely remain the same. If students did not understand the topic the first time around, chances are that being left to their own devices with the same material would not yield a different outcome.  In fact, one should expect them to do even worse, considering the interference by additional lectures in the meantime.
@@ -14,15 +13,15 @@ The series consists of 18 episodes ranging in duration from eight minutes to jus
 
 The individual videos are:
 
-01. [Datentypen](http://youtu.be/DExIYnh1b5A) (32:54)
-02. [Berechnungen mit einfachen Datentypen](http://youtu.be/kHczyI6-IQ8) (47:58)
-03. [Berechnungen mit Tupeln, Verbunden und Listen](http://youtu.be/98xy4wS16HY) (25:58)
-04. [Kontrollfluss und Funktionen](http://youtu.be/09icasbUSOs) (34:45)
-05. [Rekursion](http://youtu.be/ALxoIaZRdzQ) (41:04)
-06. [Auswertungsreihenfolge](http://youtu.be/xxCehEeT63A) (46:53)
-07. [Lokale Variablen und Endrekursion](http://youtu.be/jGU-ZgLlSuE) (39:30)
-08. [Pattern Matching und Verarbeitung von Listen](http://youtu.be/Gz7OXe5ueSA) (53:27)
-09. [Benutzerdefinierte Datentypen](http://youtu.be/I-NZqrvQztM) (1:03:47)
+1. [Datentypen](http://youtu.be/DExIYnh1b5A) (32:54)
+2. [Berechnungen mit einfachen Datentypen](http://youtu.be/kHczyI6-IQ8) (47:58)
+3. [Berechnungen mit Tupeln, Verbunden und Listen](http://youtu.be/98xy4wS16HY) (25:58)
+4. [Kontrollfluss und Funktionen](http://youtu.be/09icasbUSOs) (34:45)
+5. [Rekursion](http://youtu.be/ALxoIaZRdzQ) (41:04)
+6. [Auswertungsreihenfolge](http://youtu.be/xxCehEeT63A) (46:53)
+7. [Lokale Variablen und Endrekursion](http://youtu.be/jGU-ZgLlSuE) (39:30)
+8. [Pattern Matching und Verarbeitung von Listen](http://youtu.be/Gz7OXe5ueSA) (53:27)
+9. [Benutzerdefinierte Datentypen](http://youtu.be/I-NZqrvQztM) (1:03:47)
 10. [Sichtbarkeit](http://youtu.be/Zm5ZN4OPnLs) (24:06)
 11. [Currying und Funktionen höherer Ordnung](http://youtu.be/kMmad05B4DA) (35:37)
 12. [Exceptions](http://youtu.be/p1iy4E15jF8) (24:13)

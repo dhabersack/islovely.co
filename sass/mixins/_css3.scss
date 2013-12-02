@@ -1,6 +1,6 @@
 // Add a vertical background gradient to the element starting from the first and
 // transitioning downwards to the second color.
-@mixin background-gradient($color-top, $color-bottom) {
+@mixin linear-gradient($color-top, $color-bottom) {
   background-color: $color-bottom;
 
   background-image: -webkit-gradient(linear, left top, left bottom, from($color-top), to($color-bottom));

@@ -1,9 +1,8 @@
 ---
-date: 2012-08-05
-description: Additional configuration is required to make Mountain Lion and the version of SML/NJ currently being installed via Homebrew play together nicely again.
 title: SML/NJ 110.74 on OS X 10.8 Mountain Lion
+description: Additional configuration is required to make Mountain Lion and the version of SML/NJ currently being installed via Homebrew play together nicely again.
+published: 2012-08-05
 ---
-
 I previously went over [how to install SML on OS X via Homebrew](/blog/painless-installation-of-sml-on-os-x/ 'Painless installation of SML on OS X'), which currently installs version 110.74 of SML/NJ. Unfortunately, this version does not work with the recently released OS X 10.8 Mountain Lion out of the box.  If you are running both SML and OS X at these version numbers, some light additional tuning is required.
 
 Note that this bug [will be fixed in SML/NJ 110.75](http://smlnj-gforge.cs.uchicago.edu/tracker/index.php?func=detail&aid=94&group_id=33&atid=215 'smlnj-gforge: SML/NJ Bugs: Detail: 94 Running on OS X Mountain Lion').  (<strong>Update:</strong> 110.75 is now available.)

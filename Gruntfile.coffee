@@ -72,6 +72,7 @@ module.exports = (grunt) ->
           'Ember': true
           'Portfolio': true
           'Showdown': true
+          'moment': true
         loopfunc: true
         undef: true
         unused: true

@@ -32,21 +32,32 @@
             <li>
               {{#linkTo 'clients'}}Clients{{/linkTo}}
             </li>
+            <li>
+              {{#linkTo 'page' 'for-employers'}}For employers{{/linkTo}}
             </li>
-            <li><a href="/#/pages/for-employers">For employers</a></li>
-            <li><a href="/#/pages/for-recruiters">For recruiters</a></li>
-            <!--li><a href="/#/pages/influences-and-values">Influences &amp; Values</a></li-->
+            <li>
+              {{#linkTo 'page' 'for-recruiters'}}For recruiters{{/linkTo}}
+            </li>
+            <!--li>
+              {{#linkTo 'page' 'influences-and-values'}}Influences &amp; Values{{/linkTo}}
+            </li-->
             <li>
               {{#linkTo 'posts'}}Posts{{/linkTo}}
             </li>
-            <li><a href="/#/pages/resume">Résumé</a></li>
-            <li><a href="/#/pages/contact">Contact</a></li>
+            <li>
+              {{#linkTo 'page' 'resume'}}R&eacute;sum&eacute;{{/linkTo}}
+            </li>
+            <li>
+              {{#linkTo 'page' 'contact'}}Contact{{/linkTo}}
+            </li>
           </ol>
         </nav>
       </header>
 
       <section>
-        {{outlet}}
+        <div>
+          {{outlet}}
+        </div>
       </section>
 
       <footer>
@@ -54,7 +65,7 @@
           <p>
             Copyright &copy; 2013<br>
             Dom Habersack, <a href="http://islovely.co/" title="Portfolio of Dom Habersack">islovely.co</a><br>
-            <a href="/#/pages/imprint">Imprint</a>
+            {{#linkTo 'page' 'imprint'}}Imprint{{/linkTo}}
           </p>
 
           <ol>
@@ -80,7 +91,7 @@
 
       {{#if url}}
         <p>
-          <a {{bindAttr href=url title=title}} class="call-to-action">Visit site</a>
+          <a {{bindAttr href=url title=title}}>Visit site</a>
         </p>
       {{/if}}
     </script>
@@ -131,6 +142,12 @@
 
       <h1>{{title}}</h1>
 
+      {{#if published}}
+        <p id="published">
+          Published on {{date published}}.
+        </p>
+      {{/if}}
+
       {{markdown body}}
     </script>
 
@@ -161,8 +178,9 @@
     <script src="bower_components/jquery/jquery.js"></script>
     <script src="bower_components/handlebars/handlebars.js"></script>
     <script src="bower_components/ember/ember.js"></script>
-    <script src="bower_components/ember-data-shim/ember-data.js"></script>
-    <script src="bower_components/showdown/compressed/showdown.js"></script>
+    <script src="bower_components/ember-data/ember-data.js"></script>
+    <script src="bower_components/showdown/src/showdown.js"></script>
+    <script src="bower_components/momentjs/moment.js"></script>
     <script src="islovely.js"></script>
   </body>
 </html>

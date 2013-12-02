@@ -20,6 +20,10 @@ body {
     size: 62.5%;
     weight: 400;
   }
+
+  // @media (#{ $query-large }) {
+  //   width: 960px;
+  // }
 }
 
 footer {
@@ -28,6 +32,12 @@ footer {
   overflow: hidden;
   padding: 2.4em 0;
   text-align: center;
+
+  @media (#{ $query-large }) {
+    background: none;
+    float: left;
+    width: 33%;
+  }
 
   > div {
     @extend .responsive-container;
@@ -79,6 +89,11 @@ h4 {
 header {
   margin-bottom: 1.2em;
 
+  @media (#{ $query-large }) {
+    float: left;
+    width: 33%;
+  }
+
   > div {
     @extend .responsive-container;
 
@@ -97,11 +112,23 @@ header {
     }
   }
 
+  li {
+    float: left;
+    margin-right: 0.625em; // 10px
+
+    @media (#{ $query-large }) {
+      float: none;
+      text-align: center;
+    }
+  }
+
   > nav {
     background: $color-brand;
-    padding: 1.2em 0;
+    padding: 0.6em 0;
 
     a {
+      padding: 0.375em 0; // 6px 0
+
       &,
       &:visited {
         color: $color-neutral-lightest;
@@ -143,11 +170,6 @@ nav {
     display: block;
   }
 
-  li {
-    float: left;
-    margin-right: 0.625em; // 10px
-  }
-
   > ol {
     list-style: none;
     margin: 0 auto;
@@ -172,14 +194,22 @@ pre {
   font-size: 1.6em;
   line-height: 1.5em; // 24px
   margin: 0 0 1.5em; // 0 0 24px
+  overflow: scroll;
   padding-left: 0.6875em; // 11px
 }
 
 section {
-  @extend .responsive-container;
+  @media (#{ $query-large }) {
+    float: right;
+    width: 67%;
+  }
+
+  > div {
+    @extend .responsive-container;
+  }
 
   // subnavigation
-  > nav {
+  nav {
     font-family: $font-family-content;
     padding: 0;
 
@@ -208,6 +238,30 @@ table {
   font-size: 1.6em;
   line-height: 1.5em; // 24px
   margin-bottom: 1.5em; // 24px
+  width: 100%;
+}
+
+tbody {
+  tr {
+    &:nth-of-type(even) {
+      background: $color-neutral-lighter;
+    }
+  }
+}
+
+td {
+  padding: 0.1875em 0.625em; // 3px 5px
+}
+
+th {
+  padding: 0.375em 0.625em; // 6px 5px
+  text-align: left;
+}
+
+thead {
+  tr {
+    background: $color-neutral;
+  }
 }
 
 ul {
@@ -218,30 +272,10 @@ ul {
 
 .call-to-action {
   @include border-radius(0.125em); // 2px
+  @include linear-gradient($color-action-lighter, $color-action);
 
-  background: $color-highlight-lighter;
-  display: inline-block;
-  padding: 0.375em 0.625em; // 6px 10px
-
-  &,
-  &:visited {
-    color: $color-neutral-darkest;
-  }
-
-  &:hover {
-    background: $color-highlight-lightest;
-  }
-}
-
-.call-to-action-container {
-  text-align: center;
-}
-
-.call-to-action-primary {
-  @extend .call-to-action;
-
-  background: $color-action;
-  padding: 0.75em 1.25em; // 12px 20px
+  border: 0.0625em solid $color-action; // 1px
+  padding: 0.6875em 1.1875em; // 11px 19px
 
   &,
   &:visited {
@@ -251,6 +285,10 @@ ul {
   &:hover {
     background: $color-action-lighter;
   }
+}
+
+.call-to-action-container {
+  text-align: center;
 }
 
 .logo {
@@ -309,4 +347,14 @@ ul {
   margin: 0 auto;
   width: 49%;
   width: 16em; // 256px
+}
+
+#published {
+  color: $color-neutral-darker;
+  font: {
+    size: 1.5em;
+    style: italic;
+  }
+  line-height: 1.6em; // 24px
+  margin-bottom: 1.6em; // 24px
 }

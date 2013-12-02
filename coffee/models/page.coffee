@@ -1,6 +1,6 @@
-Portfolio.Page = DS.Model.extend
-  body: DS.attr 'string'
-  description: DS.attr 'string'
-  publishedAt: DS.attr 'date'
-  slug: DS.attr 'string'
-  title: DS.attr 'string'
+Portfolio.Page = DS.Model.extend(
+  body:        DS.attr('string')
+  description: DS.attr('string')
+  slug:        DS.attr('string')
+  title:       DS.attr('string')
+)

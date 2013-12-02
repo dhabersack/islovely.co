@@ -1,44 +1,46 @@
 Portfolio.Router.map () ->
-  this.resource 'client', path: '/clients/:client_slug'
-  this.resource 'clients'
-  this.resource 'page', path: '/pages/:page_slug'
-  this.resource 'pages'
-  this.resource 'post', path: '/posts/:post_slug'
-  this.resource 'posts'
+  this.resource('client', { path: '/clients/:client_slug' })
+  this.resource('clients')
+
+  this.resource('page', { path: '/pages/:page_slug' })
+  this.resource('pages')
+
+  this.resource('post', { path: '/posts/:post_slug' })
+  this.resource('posts')
 
 Portfolio.ClientRoute = Ember.Route.extend
   model: (params) ->
-    Portfolio.Client.find params.client_slug
+    this.store.find('client', params.client_slug)
 
   serialize: (model) ->
-    { client_slug: model.get 'slug' }
+    { client_slug: model.get('slug') }
 
 Portfolio.ClientsRoute = Ember.Route.extend
   model: () ->
-    Portfolio.Client.find()
+    this.store.find('client')
 
 Portfolio.IndexRoute = Ember.Route.extend
   model: () ->
-    Portfolio.Page.find 'index'
+    this.store.find('page', 'index')
 
 Portfolio.PageRoute = Ember.Route.extend
   model: (params) ->
-    Portfolio.Page.find params.page_slug
+    this.store.find('page', params.page_slug)
 
   serialize: (model) ->
-    { page_slug: model.get 'slug' }
+    { page_slug: model.get('slug') }
 
 Portfolio.PagesRoute = Ember.Route.extend
   model: () ->
-    Portfolio.Page.find()
+    this.store.find('page')
 
 Portfolio.PostRoute = Ember.Route.extend
   model: (params) ->
-    Portfolio.Post.find params.post_slug
+    this.store.find('post', params.post_slug)
 
   serialize: (model) ->
-    { post_slug: model.get 'slug' }
+    { post_slug: model.get('slug') }
 
 Portfolio.PostsRoute = Ember.Route.extend
   model: () ->
-    Portfolio.Post.find()
+    this.store.find('post')

@@ -1,9 +1,8 @@
 ---
-date: 2012-07-30
-description: The Homebrew package manager takes the pain out of installing SML/NJ on your system. Follow these steps for a hassle- and clutter-free installation.
 title: Painless installation of SML on OS X
+description: The Homebrew package manager takes the pain out of installing SML/NJ on your system. Follow these steps for a hassle- and clutter-free installation.
+published: 2012-07-30
 ---
-
 Studying Computer Science of any kind, you will be asked to install a wide range of software you will use for one semester and are unlikely to ever need again afterwards.
 
 [SML/NJ](http://smlnj.org/ 'Standard ML of New Jersey') is a popular choice in functional programming lectures, but since it is not incredibly widespread, installing it can be a hassle. You could follow their [official installation instructions](http://smlnj.org/install/index.html 'Installation instructions for SML/NJ'), but you will end up with bits and pieces of it scattered throughout your entire system with little hope of ever getting rid of the entire thing.
@@ -57,25 +56,11 @@ First, open your profile in your text editor of choice:
 $ open -t ~/.bash_profile
 ```
 
-If this file does not include an `export PATH`-directive yet, simply add this line:
+Add an `export PATH`-directive to this file:
 
 ```
 export PATH=/usr/local/Cellar/smlnj/110.74/libexec/bin:$PATH
 ```
-
-If an `export PATH`-directive does exist, just add the path to SML after it. So if you have something like:
-
-```
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-```
-
-just add the new path after it like so:
-
-```
-export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/Cellar/smlnj/110.74/libexec/bin:$PATH
-```
-
-Mind the `:` after `/opt/local/sbin`, which is required to separate two paths.
 
 You can now reload your profile with:
 
@@ -94,3 +79,5 @@ $ sml
 ## One more thing
 
 You are probably reading this article because you are currently attending a lecture on functional programming at the LMU in Munich, Germany. If so, these [screencasts on SML](/blog/screencasts-on-standard-ml-in-german/ 'Screencasts on Standard ML in German') I created while attending this lecture myself should help you hit the ground running.
+
+{{#linkTo 'page' 'imprint'}}HEYO{{/linkTo}}
