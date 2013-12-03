@@ -1,13 +1,13 @@
 ---
-description: A summary of my educational and professional background.
 title: Résumé
+description: A summary of my educational and professional background.
 ---
 
 ## Education
 
 ### B.Sc. Media Informatics, Human-Computer-Interaction at [Ludwig-Maximilians-Universität München](http://www.uni-muenchen.de/index.html)
 
-#### October 2012 to present
+#### October 2011 to present
 
 In order to deepen my primarily self-taught knowledge and move more into human-computer-interaction, I enrolled in a college program with that exact focus.
 
