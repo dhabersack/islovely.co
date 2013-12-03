@@ -50,8 +50,8 @@ Portfolio.PostsRoute = Ember.Route.extend
     this.store.find('post')
 
 Portfolio.ApplicationAdapter = DS.RESTAdapter.extend(
-  # host: 'http://localhost:1986'
-  host: 'http://islovely.herokuapp.com'
+  host: 'http://localhost:1986'
+  # host: 'http://islovely.herokuapp.com'
 )
 
 Portfolio.Client = DS.Model.extend(
@@ -80,18 +80,6 @@ Portfolio.Post = DS.Model.extend(
 showdown = new Showdown.converter()
 
 Ember.Handlebars.registerBoundHelper('markdown', (input) ->
-  # markdown = "{{#linkTo 'page' 'imprint'}}imprint{{/linkTo}}"
-  # console.log("markdown: #{ markdown }")
-
-  # html = showdown.makeHtml(markdown)
-  # console.log("html: #{ html }")
-
-  # template = Ember.Handlebars.compile(html)
-  # console.log("template: #{ template }")
-
-  # executed = template(this)
-  # console.log(executed)
-
   new Ember.Handlebars.SafeString(showdown.makeHtml(input))
 )
 
