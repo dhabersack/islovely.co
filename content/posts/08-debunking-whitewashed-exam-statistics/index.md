@@ -7,15 +7,15 @@ published: 2013-03-18
 
 <hr>
 
-In “[Why students fail entry-level programming exams](/blog/why-students-fail-entry-level-programming-exams/)” I referenced a lecture in which the resit was scheduled six months after the original exam. Said lecture did not offer any help in the interim, which I assumed would not yield an improved outcome over the first exam.
+In “[Why students fail entry-level programming exams](/#/posts/why-students-fail-entry-level-programming-exams/)” I referenced a lecture in which the resit was scheduled six months after the original exam. Said lecture did not offer any help in the interim, which I assumed would not yield an improved outcome over the first exam.
 
 The results are in. I was right on target.
 
 The official statistics for both exams as well as a provided summary are mirrored here:
 
-- [First exam](statistics-first-exam.pdf)
-- [Second exam](statistics-second-exam.pdf)
-- [Contingency table and conclusion](contingency-table.pdf)
+- [First exam](http://islovely.herokuapp.com/posts/debunking-whitewashed-exam-statistics/statistics-first-exam.pdf)
+- [Second exam](http://islovely.herokuapp.com/posts/debunking-whitewashed-exam-statistics/statistics-second-exam.pdf)
+- [Contingency table and conclusion](http://islovely.herokuapp.com/posts/debunking-whitewashed-exam-statistics/contingency-table.pdf)
 
 These statistics leave a lot to be desired, with important pieces of information missing from the conclusion.
 
@@ -189,7 +189,7 @@ A student needs to achieve a minimum score of 40% in order to pass an exam.  Kno
 Both exams had a maximum score of 18 points, with a minimum of eight being required in order to pass. The lower grades have been achieved most often in both cases:
 
 <figure>
-  <img src="http://localhost:1986/posts/debunking-whitewashed-exam-statistics/stacked-graph.png" alt="Combined results of both exams.">
+  <img src="http://islovely.herokuapp.com/posts/debunking-whitewashed-exam-statistics/stacked-graph.png" alt="Combined results of both exams.">
   <figcaption>
     Combined results of both exams.
   </figcaption>
@@ -198,7 +198,7 @@ Both exams had a maximum score of 18 points, with a minimum of eight being requi
 Since there is no practical difference between scores of seven and lower, they can be grouped together into a single class, represented in the following chart by a score of zero:
 
 <figure>
-  <img src="http://localhost:1986/posts/debunking-whitewashed-exam-statistics/stacked-graph-grouped.png" alt="Results with all scores representing failure grouped together.">
+  <img src="http://islovely.herokuapp.com/posts/debunking-whitewashed-exam-statistics/stacked-graph-grouped.png" alt="Results with all scores representing failure grouped together.">
   <figcaption>
     Results with all scores representing failure grouped together.
   </figcaption>
@@ -207,7 +207,7 @@ Since there is no practical difference between scores of seven and lower, they c
 Even out of those that passed, the lower grades should not be considered successes. If we combine the top third of grades (13 to 18 out of 18 points) into a group of “passed successfully” and the remaining grades into “passed”, we get the following graph:
 
 <figure>
-  <img src="http://localhost:1986/posts/debunking-whitewashed-exam-statistics/stacked-graph-classes.png" alt="Results grouped into ‘passed successfully’, ‘passed’ and ‘failed’.">
+  <img src="http://islovely.herokuapp.com/posts/debunking-whitewashed-exam-statistics/stacked-graph-classes.png" alt="Results grouped into ‘passed successfully’, ‘passed’ and ‘failed’.">
   <figcaption>
     Results grouped into ‘passed successfully’, ‘passed’ and ‘failed’.
   </figcaption>
