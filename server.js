@@ -1,12 +1,14 @@
 (function() {
   'use strict';
-  var express, extractFields, fs, inflect, isInvisibleFile, isSeparator, port, send404, sendMultipleResult, sendSingularResult, server, splitFrontmatter, splitName;
+  var express, extractFields, fs, inflect, isInvisibleFile, isSeparator, mime, port, send404, sendMultipleResult, sendSingularResult, server, splitFrontmatter, splitName;
 
   express = require('express');
 
   inflect = require('i')();
 
   fs = require('fs');
+
+  mime = require('mime');
 
   port = process.env.PORT || 1986;
 
@@ -108,12 +110,12 @@
         if (!isInvisibleFile(file)) {
           _ref = splitName(file), id = _ref[0], directorySlug = _ref[1];
           if (directorySlug === slug) {
-            path = "" + directoryPath + "/" + file + "/images/" + filename;
+            path = "" + directoryPath + "/" + file + "/files/" + filename;
             _results.push(fs.readFile(path, function(error, data) {
               if (error) {
                 return send404(response, error);
               }
-              response.header('Content-Type', 'image/png');
+              response.header('Content-Type', mime.lookup(filename));
               return response.end(data, 'binary');
             }));
           } else {

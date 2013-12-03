@@ -4,6 +4,7 @@
 express = require('express')
 inflect = require('i')()
 fs = require('fs')
+mime = require('mime')
 port = process.env.PORT || 1986
 server = express()
 
@@ -86,12 +87,12 @@ server.get('/:directory/:slug/:filename', (request, response) ->
         [id, directorySlug] = splitName(file)
 
         if directorySlug is slug
-          path = "#{ directoryPath }/#{ file }/images/#{ filename }"
+          path = "#{ directoryPath }/#{ file }/files/#{ filename }"
 
           fs.readFile(path, (error, data) ->
             return send404(response, error) if error
 
-            response.header('Content-Type', 'image/png')
+            response.header('Content-Type', mime.lookup(filename))
             response.end(data, 'binary')
           )
   )
