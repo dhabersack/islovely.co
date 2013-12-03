@@ -35,7 +35,7 @@ $ brew upgrade
 ```
 
 I had run earlier to update all packages installed through
-[Homebrew](http://mxcl.github.io/homebrew/) also updated my installation of Node.js from version 0.10.6 to 0.10.8. However, that new version of Node.js does not currently work with grunt-contrib-sass.
+[Homebrew](http://brew.sh/) also updated my installation of Node.js from version 0.10.6 to 0.10.8. However, that new version of Node.js does not currently work with grunt-contrib-sass.
 
 To get it working again, we need to temporarily downgrade Node.js to an earlier version. Homebrew allows us to install different versions of the same package and switch between them.
 

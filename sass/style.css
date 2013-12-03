@@ -310,6 +310,13 @@ body {
   font-size: 62.5%;
   font-weight: 400; }
 
+figcaption {
+  color: #7d7d7d;
+  font-size: 1.5em;
+  line-height: 1.6em;
+  text-align: center;
+  font-style: italic; }
+
 footer {
   background: #e3e3e3;
   color: #7d7d7d;
@@ -388,7 +395,8 @@ hr {
   margin-bottom: 2.3em; }
 
 img {
-  display: block; }
+  display: block;
+  margin: 0 auto; }
 
 li {
   font-size: 1.6em;
@@ -521,7 +529,6 @@ ul {
 
 #avatar {
   border-radius: 50%;
-  margin: 0 auto;
   width: 49%;
   width: 16em; }
 

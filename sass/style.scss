@@ -26,6 +26,14 @@ body {
   // }
 }
 
+figcaption {
+  color: $color-neutral-darker;
+  font-size: 1.5em;
+  line-height: 1.6em; // 24px
+  text-align: center;
+  font-style: italic;
+}
+
 footer {
   background: $color-neutral-lighter;
   color: $color-neutral-darker;
@@ -151,6 +159,7 @@ hr {
 
 img {
   display: block;
+  margin: 0 auto;
 }
 
 li {
@@ -345,7 +354,6 @@ ul {
 
 #avatar {
   border-radius: 50%;
-  margin: 0 auto;
   width: 49%;
   width: 16em; // 256px
 }
