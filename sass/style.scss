@@ -35,6 +35,7 @@ footer {
 
   @media (#{ $query-large }) {
     background: none;
+    clear: left;
     float: left;
     width: 33%;
   }

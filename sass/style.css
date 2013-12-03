@@ -319,6 +319,7 @@ footer {
   @media (min-width: 960px) {
     footer {
       background: none;
+      clear: left;
       float: left;
       width: 33%; } }
   footer ol {
