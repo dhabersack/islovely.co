@@ -1,9 +1,8 @@
 ---
-date: 2013-05-29
-description: grunt-contrib-sass does not work with the current version of Node.js. Downgrading Node.js to an earlier version fixes this problem.
 title: grunt-contrib-sass and Node.js 0.10.8
+description: grunt-contrib-sass does not work with the current version of Node.js. Downgrading Node.js to an earlier version fixes this problem.
+published: 2013-05-29
 ---
-
 Over the last few weeks, I have become a massive fan of [Grunt](http://gruntjs.com/). Amongst other things, it makes development with [Sass](http://sass-lang.com/) and [CoffeeScript](http://coffeescript.org/) much easier by running their compile-processes automatically and reloading the browser via LiveReload. It basically gives you frontend-superpowers.
 
 Grunt has given such a big boost to my productivity that suddenly losing part of it felt like the worst thing that could happen. Even more so considering that a client deadline was rapidly approaching at the time.

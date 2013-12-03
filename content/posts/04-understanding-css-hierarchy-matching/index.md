@@ -59,8 +59,7 @@ Consider a site with the following markup:
 </html>
 ```
 
-When discarding the content and chaining all tags together according to their
-nesting, the path to each tag can be extracted:
+When discarding the content and chaining all tags together according to their nesting, the path to each tag can be extracted:
 
 <table>
   <thead>
@@ -170,15 +169,11 @@ Note that some tags share the same hierarchy.
 While each hierarchy could be used as a (bad) CSS-selector, think of them as an
 attribute we add to each tag that we now match against selectors.
 
-
 ### Matching simple selectors
 
-**Selectors are matched to markup from right to left.**  Single-tag selectors
-are simplest and instruct the browser to ignore all elements whose hierarchy
-does not end in the exact tag given.
+**Selectors are matched to markup from right to left.**  Single-tag selectors are simplest and instruct the browser to ignore all elements whose hierarchy does not end in the exact tag given.
 
-For example, matching the above table against the selector `li` would trim it
-down to just four elements:
+For example, matching the above table against the selector `li` would trim it down to just four elements:
 
 <table>
   <thead>
@@ -207,18 +202,13 @@ down to just four elements:
   </tbody>
 </table>
 
-The browser only had to filter the initial table a single time to find these
-elements and can now apply the styles set with the selector.
-
+The browser only had to filter the initial table a single time to find these elements and can now apply the styles set with the selector.
 
 ### Matching multi-level selectors
 
-As soon as we chain selectors the browser has to iterate over intermediate
-results multiple times, potentially filtering them with every step.
+As soon as we chain selectors the browser has to iterate over intermediate results multiple times, potentially filtering them with every step.
 
-When applying a rule such as <code>ul > li</code>, the browser again starts
-at the rightmost tag and filters the hierarchy-table to end up with the same
-result as before:
+When applying a rule such as <code>ul > li</code>, the browser again starts at the rightmost tag and filters the hierarchy-table to end up with the same result as before:
 
 <table>
   <thead>
@@ -247,8 +237,7 @@ result as before:
   </tbody>
 </table>
 
-This list now gets filtered again to identify all `li`-tags nested _directly
-below_ a `ul`-tag:
+This list now gets filtered again to identify all `li`-tags nested _directly below_ a `ul`-tag:
 
 <table>
   <thead>
@@ -269,26 +258,15 @@ below_ a `ul`-tag:
   </tbody>
 </table>
 
-The more levels there are in a selector, the more times each resulting list
-needs to be iterated over again.
+The more levels there are in a selector, the more times each resulting list needs to be iterated over again.
 
-While extending a selector will often result in a condensed list, unnecessary
-extensions generate wasted filtering-cycles. In the above example, adding
-`html > body > section > article >` in front of the selector would force the
-browser to filter the result **four more times without altering the list**
-before it could assert a match.
-
+While extending a selector will often result in a condensed list, unnecessary extensions generate wasted filtering-cycles. In the above example, adding `html > body > section > article >` in front of the selector would force the browser to filter the result **four more times without altering the list** before it could assert a match.
 
 ### Identification loops
 
-While every level adds a new iteration over a filtered list of
-potentially-matching tags, some selectors require a more complex analysis of a
-single element’s hierarchy. While the child-selector (`>`) only requires a check
-of the direct parent tag, a descendant-selector (space) might force the browser
-to walk up the entire hierarchy trying to find a match.
+While every level adds a new iteration over a filtered list of potentially-matching tags, some selectors require a more complex analysis of a single element’s hierarchy. While the child-selector (`>`) only requires a check of the direct parent tag, a descendant-selector (space) might force the browser to walk up the entire hierarchy trying to find a match.
 
-For example, `nav a` first filters out all elements whose hierarchy does not end
-in an `a`-tag, resulting in the following list:
+For example, `nav a` first filters out all elements whose hierarchy does not end in an `a`-tag, resulting in the following list:
 
 <table>
   <thead>
@@ -321,9 +299,7 @@ in an `a`-tag, resulting in the following list:
   </tbody>
 </table>
 
-When adding `nav` to the selector, the browser has to execute a more detailed
-analysis of each element’s hierarchy. For the first element, it has to go
-through the following steps:
+When adding `nav` to the selector, the browser has to execute a more detailed analysis of each element’s hierarchy. For the first element, it has to go through the following steps:
 
 <table>
   <thead>
@@ -352,9 +328,7 @@ through the following steps:
   </tbody>
 </table>
 
-The browser can stop walking up this element’s hierarchy as soon as a match is
-found and continue with the next element. In contrast to that, the last element
-from the initial list gets matched against `nav a` as follows:
+The browser can stop walking up this element’s hierarchy as soon as a match is found and continue with the next element. In contrast to that, the last element from the initial list gets matched against `nav a` as follows:
 
 <table>
   <thead>
@@ -398,15 +372,8 @@ from the initial list gets matched against `nav a` as follows:
   </tbody>
 </table>
 
-For elements that only match the end of a selector but not its beginning, the
-browser has to walk up the entire hierarchy before it can assess that the
-element definitely does not match.
+For elements that only match the end of a selector but not its beginning, the browser has to walk up the entire hierarchy before it can assess that the element definitely does not match.
 
-In real-world examples, pages usually contain a much higher number of elements
-with deeper and more complex hierarchies. Since the matching-process has to be
-repeated for every element remaining after each filtering-step, it is best to
-**keep nesting of markup to a minimum** and **use selectors that match or fail
-as quickly as possible**.
+In real-world examples, pages usually contain a much higher number of elements with deeper and more complex hierarchies. Since the matching-process has to be repeated for every element remaining after each filtering-step, it is best to **keep nesting of markup to a minimum** and **use selectors that match or fail as quickly as possible**.
 
-You can read more recommendations on doing the latter in my post on
-[writing high-performance CSS](/blog/writing-high-performance-css/).
+You can read more recommendations on doing the latter in my post on [writing high-performance CSS](/#/posts/writing-high-performance-css/).

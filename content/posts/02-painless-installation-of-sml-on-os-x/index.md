@@ -9,7 +9,7 @@ Studying Computer Science of any kind, you will be asked to install a wide range
 
 ## Installing SML/NJ through Homebrew
 
-The [Homebrew package manager](http://mxcl.github.com/homebrew/ 'Homebrew package manager for OS X') makes installing SML/NJ on OS X not only much easier, but it will also uninstall all of SML when you are done with it, leaving no dead files on your system.
+The [Homebrew package manager](http://brew.sh/ 'Homebrew package manager for OS X') makes installing SML/NJ on OS X not only much easier, but it will also uninstall all of SML when you are done with it, leaving no dead files on your system.
 
 To install SML/NJ through Homebrew, just follow these steps.
 
@@ -78,6 +78,4 @@ $ sml
 
 ## One more thing
 
-You are probably reading this article because you are currently attending a lecture on functional programming at the LMU in Munich, Germany. If so, these [screencasts on SML](/blog/screencasts-on-standard-ml-in-german/ 'Screencasts on Standard ML in German') I created while attending this lecture myself should help you hit the ground running.
-
-{{#linkTo 'page' 'imprint'}}HEYO{{/linkTo}}
+You are probably reading this article because you are currently attending a lecture on functional programming at the LMU in Munich, Germany. If so, these [screencasts on SML](/#/posts/screencasts-on-standard-ml-in-german/ 'Screencasts on Standard ML in German') I created while attending this lecture myself should help you hit the ground running.

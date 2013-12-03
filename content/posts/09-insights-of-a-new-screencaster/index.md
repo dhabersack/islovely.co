@@ -1,10 +1,9 @@
 ---
-date: 2013-03-19
-description: Planning, recording and publishing my first screencasts taught me a few basics to look out for when getting started in the field of infoproducts.
 title: Insights of a new screencaster
+description: Planning, recording and publishing my first screencasts taught me a few basics to look out for when getting started in the field of infoproducts.
+published: 2013-03-19
 ---
-
-I recently created a series of screencasts for students having to resit an exam after six months of not having any contact with the subject. I wrote about these videos [in another post](/blog/screencasts-on-standard-ml-in-german/).
+I recently created a series of screencasts for students having to resit an exam after six months of not having any contact with the subject. I wrote about these videos [in another post](/#/posts/screencasts-on-standard-ml-in-german/).
 
 While this was not my first experience teaching programming, my previous times had always been in person. This experiment was my first time planning, recording and publishing screencasts, during which I learned a few basic rules on what to do and what to avoid.
 
