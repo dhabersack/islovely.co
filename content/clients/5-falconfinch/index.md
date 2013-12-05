@@ -9,4 +9,4 @@ Body Falcon & Finch
 
 more body
 
-<img src="http://islovely.herokuapps.com/clients/falconfinch/screenshot.png">
+<img src="http://islovely.herokuapp.com/clients/falconfinch/screenshot.png">

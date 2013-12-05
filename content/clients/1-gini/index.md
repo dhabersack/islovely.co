@@ -13,4 +13,4 @@ The accessibility of the content across different devices had already been a foc
 
 During development, I moved to a **fluid responsive layout**. This means that the layout adapts to any screensize, making the site more accessible to more users.
 
-<img src="http://islovely.herokuapps.com/clients/gini/screenshot.png">
+<img src="http://islovely.herokuapp.com/clients/gini/screenshot.png">

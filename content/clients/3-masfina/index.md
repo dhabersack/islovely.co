@@ -6,4 +6,4 @@ Being an interior design agency, **Masfina** wanted their work to be presented t
 
 With little need for a large repository of plugins, we opted to use the content management system [Kirby](http://getkirby.com/).
 
-<img src="http://islovely.herokuapps.com/clients/masfina/screenshot.png">
+<img src="http://islovely.herokuapp.com/clients/masfina/screenshot.png">

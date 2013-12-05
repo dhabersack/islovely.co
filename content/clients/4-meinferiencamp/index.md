@@ -5,4 +5,4 @@ url: http://meinferiencamp.de/
 ---
 **Mein Feriencamp** is a local initiative whose goal is enabling children to experience their environment in friendly settings.
 
-<img src="http://islovely.herokuapps.com/clients/meinferiencamp/screenshot.png">
+<img src="http://islovely.herokuapp.com/clients/meinferiencamp/screenshot.png">
