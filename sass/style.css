@@ -310,6 +310,9 @@ body {
   font-size: 62.5%;
   font-weight: 400; }
 
+code {
+  font-family: 'Source Code Pro', 'Courier New', Courier, monospace; }
+
 figcaption {
   color: #7d7d7d;
   font-size: 1.5em;
@@ -428,6 +431,7 @@ p {
 
 pre {
   border-left: 0.25em solid #3e3e3e;
+  font-family: 'Source Code Pro', 'Courier New', Courier, monospace;
   font-size: 1.6em;
   line-height: 1.5em;
   margin: 0 0 1.5em;

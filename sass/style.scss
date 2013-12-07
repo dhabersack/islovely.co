@@ -26,6 +26,10 @@ body {
   // }
 }
 
+code {
+  font-family: $font-family-code;
+}
+
 figcaption {
   color: $color-neutral-darker;
   font-size: 1.5em;
@@ -201,7 +205,10 @@ p {
 
 pre {
   border-left: 0.25em solid $color-neutral-darkest; // 4px
-  font-size: 1.6em;
+  font: {
+    family: $font-family-code;
+    size: 1.6em;
+  }
   line-height: 1.5em; // 24px
   margin: 0 0 1.5em; // 0 0 24px
   overflow: scroll;
