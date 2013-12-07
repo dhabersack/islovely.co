@@ -99,7 +99,7 @@
     <script type="text/x-handlebars" data-template-name="clients">
       <h1>Clients</h1>
 
-      {{#each model}}
+      {{#each this}}
         <article>
           <h2>{{#linkTo 'client' this}}{{title}}{{/linkTo}}</h2>
 
@@ -154,7 +154,7 @@
     <script type="text/x-handlebars" data-template-name="posts">
       <h1>Posts</h1>
 
-      {{#each model}}
+      {{#each this}}
         <article>
           <h2>{{#linkTo 'post' this}}{{title}}{{/linkTo}}</h2>
 

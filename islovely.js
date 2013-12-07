@@ -77,7 +77,17 @@
   });
 
   Portfolio.ApplicationAdapter = DS.RESTAdapter.extend({
-    host: 'http://islovely.herokuapp.com'
+    host: 'http://api.islovely.co'
+  });
+
+  Portfolio.ClientsController = Ember.ArrayController.extend({
+    sortProperties: ['id'],
+    sortAscending: false
+  });
+
+  Portfolio.PostsController = Ember.ArrayController.extend({
+    sortProperties: ['id'],
+    sortAscending: false
   });
 
   Portfolio.Client = DS.Model.extend({
