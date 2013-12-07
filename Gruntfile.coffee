@@ -18,9 +18,6 @@ module.exports = (grunt) ->
             'coffee/models/**/*.coffee'
             'coffee/helpers.coffee'
           ]
-      server:
-        files:
-          'server.js': 'coffee/server/server.coffee'
 
     connect:
       server:
@@ -73,7 +70,6 @@ module.exports = (grunt) ->
           'Portfolio': true
           'Showdown': true
           'moment': true
-        loopfunc: true
         undef: true
         unused: true
         strict: true
@@ -81,11 +77,6 @@ module.exports = (grunt) ->
       run:
         files:
           src: '<%= pkg.name %>.js'
-      server:
-        options:
-          node: true
-        files:
-          src: 'server.js'
 
     sass:
       compile:
@@ -109,8 +100,6 @@ module.exports = (grunt) ->
     watch:
       options:
         livereload: true
-      content:
-        files: 'content/**/*.md'
       grunt:
         files: ['package.json', 'Gruntfile.coffee']
         tasks: 'compile'
