@@ -82,12 +82,32 @@
 
   Portfolio.ClientsController = Ember.ArrayController.extend({
     sortProperties: ['id'],
-    sortAscending: false
+    sortAscending: false,
+    sortFunction: function(x, y) {
+      if (x === y) {
+        return 0;
+      }
+      if (parseInt(x, 10) < parseInt(y, 10)) {
+        return -1;
+      } else {
+        return 1;
+      }
+    }
   });
 
   Portfolio.PostsController = Ember.ArrayController.extend({
     sortProperties: ['id'],
-    sortAscending: false
+    sortAscending: false,
+    sortFunction: function(x, y) {
+      if (x === y) {
+        return 0;
+      }
+      if (parseInt(x, 10) < parseInt(y, 10)) {
+        return -1;
+      } else {
+        return 1;
+      }
+    }
   });
 
   Portfolio.Client = DS.Model.extend({
