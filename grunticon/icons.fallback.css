@@ -8,3 +8,6 @@
 
 .icon-twitter-logo,
 .twitter.logo::before { background-image: url(png/twitter-logo.png); background-repeat: no-repeat; }
+
+.icon-xing-logo,
+.xing.logo::before { background-image: url(png/xing-logo.png); background-repeat: no-repeat; }
