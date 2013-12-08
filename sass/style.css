@@ -401,6 +401,11 @@ img {
   display: block;
   margin: 0 auto; }
 
+label {
+  display: block;
+  font-size: 1.6em;
+  line-height: 1.5em; }
+
 li {
   font-size: 1.6em;
   line-height: 1.5em; }
