@@ -364,6 +364,7 @@ ul {
   margin-bottom: 0.75em; // 12px
   padding: 0.1875em 0.5%; // 3px 2%
   width: 99%;
+  -webkit-appearance: none;
 
   &:focus {
     background: $color-highlight-lightest;

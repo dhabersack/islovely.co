@@ -530,7 +530,8 @@ ul {
   line-height: 1.5em;
   margin-bottom: 0.75em;
   padding: 0.1875em 0.5%;
-  width: 99%; }
+  width: 99%;
+  -webkit-appearance: none; }
   .formfield:focus, input[type="email"]:focus, input[type="text"]:focus, textarea:focus {
     background: #fff2a5;
     outline: none; }
