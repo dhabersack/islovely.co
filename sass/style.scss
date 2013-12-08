@@ -26,6 +26,22 @@ body {
   // }
 }
 
+button {
+  @include border-radius(0.125em); // 2px
+  @include linear-gradient($color-neutral-lighter, $color-neutral);
+
+  border: 0.0625em solid $color-neutral;
+  color: $color-neutral-darkest;
+  display: block;
+  font-size: 1.6em;
+  line-height: 1.5em; // 24px
+  padding: 0.1875em 1.1875em; // 3px 19px
+
+  &:hover {
+    background: $color-neutral;
+  }
+}
+
 code {
   font-family: $font-family-code;
 }
@@ -60,6 +76,10 @@ footer {
     list-style: none;
     margin-bottom: 0;
   }
+}
+
+form {
+  margin-bottom: 2.4em;
 }
 
 h1,
@@ -164,6 +184,17 @@ hr {
 img {
   display: block;
   margin: 0 auto;
+}
+
+input {
+  &[type="email"],
+  &[type="text"] {
+    @extend .formfield;
+
+    &:focus {
+      @extend .formfield:focus;
+    }
+  }
 }
 
 label {
@@ -272,6 +303,14 @@ tbody {
   }
 }
 
+textarea {
+  @extend .formfield;
+
+  &:focus {
+    @extend .formfield:focus;
+  }
+}
+
 td {
   padding: 0.1875em 0.625em; // 3px 5px
 }
@@ -312,6 +351,24 @@ ul {
 
 .call-to-action-container {
   text-align: center;
+}
+
+.formfield {
+  @include box-shadow(0 0 0.0625em $color-neutral-darkest); // 0 0 1px
+  @include border-radius(0.125em); // 2px
+
+  border: 0;
+  color: $color-neutral-darkest;
+  font-size: 1.6em;
+  line-height: 1.5em; // 24px
+  margin-bottom: 0.75em; // 12px
+  padding: 0.1875em 0.5%; // 3px 2%
+  width: 99%;
+
+  &:focus {
+    background: $color-highlight-lightest;
+    outline: none;
+  }
 }
 
 .logo {
