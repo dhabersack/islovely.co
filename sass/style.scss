@@ -20,10 +20,6 @@ body {
     size: 62.5%;
     weight: 400;
   }
-
-  // @media (#{ $query-large }) {
-  //   width: 960px;
-  // }
 }
 
 button {
@@ -278,14 +274,6 @@ section {
       }
     }
   }
-
-  // p {
-  //   @media (#{ $query-medium }) {
-  //     font-size: 2em;
-  //     line-height: 1.8em; // 36px
-  //     margin-bottom: 1.8em; // 36px
-  //   }
-  // }
 }
 
 table {
