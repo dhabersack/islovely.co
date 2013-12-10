@@ -324,7 +324,7 @@ ul {
   @include border-radius(0.125em); // 2px
   @include linear-gradient($color-action-lighter, $color-action);
 
-  border: 0.0625em solid $color-action; // 1px
+  border: 0.0625em solid $color-action-darker; // 1px
   padding: 0.6875em 1.1875em; // 11px 19px
 
   &,
