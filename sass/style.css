@@ -509,12 +509,12 @@ ul {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#ffea72), to(#ffe226));
   background-image: -webkit-linear-gradient(top, #ffea72, #ffe226);
   background-image: linear-gradient(top, #ffea72, #ffe226);
-  border: 0.0625em solid #a58d00;
+  border: 0.0625em solid #bfa200;
   padding: 0.6875em 1.1875em; }
   .call-to-action, .call-to-action:visited {
     color: #262000; }
   .call-to-action:hover {
-    background: #ffea72; }
+    background: #ffe226; }
 
 .call-to-action-container {
   text-align: center; }

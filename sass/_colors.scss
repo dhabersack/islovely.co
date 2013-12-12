@@ -25,7 +25,7 @@ $amount-darkest:  50%;
 
 $color-action-lightest:       lighten($color-action,       $amount-lightest);
 $color-action-lighter:        lighten($color-action,       $amount-lighter);
-$color-action-darker:          darken($color-action,       $amount-darker);
+$color-action-darker:          darken($color-action,       20%);
 $color-action-darkest:         darken($color-action,       $amount-darkest);
 
 $color-alert-lightest:        lighten($color-alert,        $amount-lightest);
@@ -45,7 +45,7 @@ $color-error-darkest:          darken($color-error,        $amount-darkest);
 
 $color-highlight-lightest:    lighten($color-highlight,    $amount-lightest);
 $color-highlight-lighter:     lighten($color-highlight,    $amount-lighter);
-$color-highlight-darker:       darken($color-highlight,    10%);
+$color-highlight-darker:       darken($color-highlight,    $amount-darker);
 $color-highlight-darkest:      darken($color-highlight,    $amount-darkest);
 
 $color-link-lightest:         lighten($color-link,         $amount-lightest);
