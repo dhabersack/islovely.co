@@ -2,7 +2,7 @@
 
 module.exports = (grunt) ->
   grunt.initConfig
-    pkg: grunt.file.readJSON 'package.json'
+    pkg: grunt.file.readJSON('package.json')
 
     coffee:
       options:
@@ -91,10 +91,12 @@ module.exports = (grunt) ->
       run:
         files:
           '<%= pkg.name %>.min.js': [
-            'components/jquery/jquery.js'
-            'components/handlebars/handlebars.js'
-            'components/ember/ember.js'
-            'components/ember-data-shim/ember-data.js'
+            'bower_components/jquery/jquery.min.js'
+            'bower_components/handlebars/handlebars.js'
+            'bower_components/ember/ember.min.js'
+            'bower_components/ember-data/ember-data.min.js'
+            'bower_components/showdown/compressed/showdown.js'
+            'bower_components/momentjs/min/moment.min.js'
             '<%= pkg.name %>.js'
           ]
 
