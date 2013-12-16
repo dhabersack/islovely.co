@@ -12,8 +12,16 @@ a {
   }
 }
 
+html {
+  background: {
+    color: $color-neutral-lightest;
+    position: center;
+  }
+  height: auto !important;
+  min-height: 100%;
+}
+
 body {
-  background: $color-neutral-lightest;
   color: $color-neutral-darkest;
   font: {
     family: $font-family-content;
@@ -116,7 +124,7 @@ h4 {
 }
 
 header {
-  margin-bottom: 1.2em;
+  background: $color-neutral-lightest;
 
   @media (#{ $query-large }) {
     float: left;
@@ -249,6 +257,9 @@ pre {
 }
 
 section {
+  background: $color-neutral-lightest;
+  overflow: hidden;
+
   @media (#{ $query-large }) {
     float: right;
     width: 67%;

@@ -54,7 +54,7 @@ module.exports = (grunt) ->
             yellow: '#ffe226'
           customselectors:
             'github-logo': '.github.logo::before'
-            'islovely-logo-blue': '.islovely.logo::before'
+            'islovely-logo-blue': '.islovely.logo::before, html'
             'twitter-logo': '.twitter.logo::before'
             'xing-logo': '.xing.logo::before'
 

@@ -303,8 +303,13 @@ a {
   a:visited {
     color: #904fff; }
 
+html {
+  background-color: #fdfdfd;
+  background-position: center;
+  height: auto !important;
+  min-height: 100%; }
+
 body {
-  background: #fdfdfd;
   color: #3e3e3e;
   font-family: 'Lato', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 62.5%;
@@ -381,7 +386,7 @@ h4 {
   margin-bottom: 0.75em; }
 
 header {
-  margin-bottom: 1.2em; }
+  background: #fdfdfd; }
   @media (min-width: 960px) {
     header {
       float: left;
@@ -463,19 +468,22 @@ pre {
   overflow: scroll;
   padding-left: 0.6875em; }
 
-@media (min-width: 960px) {
-  section {
-    float: right;
-    width: 67%; } }
-section nav {
-  font-family: 'Lato', Arial, 'Helvetica Neue', Helvetica, sans-serif;
-  padding: 0; }
-  section nav a {
-    display: inline-block;
-    font-size: 1.6em;
-    line-height: 1.5em; }
-    section nav a, section nav a:visited {
-      color: #3581fc; }
+section {
+  background: #fdfdfd;
+  overflow: hidden; }
+  @media (min-width: 960px) {
+    section {
+      float: right;
+      width: 67%; } }
+  section nav {
+    font-family: 'Lato', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    padding: 0; }
+    section nav a {
+      display: inline-block;
+      font-size: 1.6em;
+      line-height: 1.5em; }
+      section nav a, section nav a:visited {
+        color: #3581fc; }
 
 table {
   font-size: 1.6em;
