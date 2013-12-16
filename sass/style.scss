@@ -26,7 +26,7 @@ button {
   @include border-radius(0.125em); // 2px
   @include linear-gradient($color-neutral-lighter, $color-neutral);
 
-  border: 0.0625em solid $color-neutral;
+  border: 0.0625em solid darken($color-neutral, 12%); // 1px
   color: $color-neutral-darkest;
   display: block;
   font-size: 1.6em;
@@ -324,7 +324,7 @@ ul {
   @include border-radius(0.125em); // 2px
   @include linear-gradient($color-action-lighter, $color-action);
 
-  border: 0.0625em solid $color-action-darker; // 1px
+  border: 0.0625em solid darken($color-action, 15%); // 1px
   padding: 0.6875em 1.1875em; // 11px 19px
 
   &,

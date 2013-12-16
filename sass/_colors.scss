@@ -25,7 +25,7 @@ $amount-darkest:  50%;
 
 $color-action-lightest:       lighten($color-action,       $amount-lightest);
 $color-action-lighter:        lighten($color-action,       $amount-lighter);
-$color-action-darker:          darken($color-action,       20%);
+$color-action-darker:          darken($color-action,       $amount-darker);
 $color-action-darkest:         darken($color-action,       $amount-darkest);
 
 $color-alert-lightest:        lighten($color-alert,        $amount-lightest);
