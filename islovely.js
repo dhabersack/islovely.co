@@ -19,7 +19,18 @@
     return this.resource('posts');
   });
 
-  Portfolio.ClientRoute = Ember.Route.extend({
+  Portfolio.Route = Ember.Route.extend({
+    renderTemplate: function(controller, model) {
+      var title;
+      this.render();
+      if (this.title) {
+        title = this.title(model);
+      }
+      document.title = title ? "" + title + " | islovely" : 'islovely';
+    }
+  });
+
+  Portfolio.ClientRoute = Portfolio.Route.extend({
     model: function(params) {
       return this.store.find('client', params.client_slug);
     },
@@ -27,22 +38,28 @@
       return {
         client_slug: model.get('slug')
       };
+    },
+    title: function(model) {
+      return model.get('title');
     }
   });
 
-  Portfolio.ClientsRoute = Ember.Route.extend({
+  Portfolio.ClientsRoute = Portfolio.Route.extend({
     model: function() {
       return this.store.find('client');
+    },
+    title: function() {
+      return 'Clients';
     }
   });
 
-  Portfolio.IndexRoute = Ember.Route.extend({
+  Portfolio.IndexRoute = Portfolio.Route.extend({
     model: function() {
       return this.store.find('page', 'index');
     }
   });
 
-  Portfolio.PageRoute = Ember.Route.extend({
+  Portfolio.PageRoute = Portfolio.Route.extend({
     model: function(params) {
       return this.store.find('page', params.page_slug);
     },
@@ -50,16 +67,22 @@
       return {
         page_slug: model.get('slug')
       };
+    },
+    title: function(model) {
+      return model.get('title');
     }
   });
 
-  Portfolio.PagesRoute = Ember.Route.extend({
+  Portfolio.PagesRoute = Portfolio.Route.extend({
     model: function() {
       return this.store.find('page');
+    },
+    title: function() {
+      return 'Pages';
     }
   });
 
-  Portfolio.PostRoute = Ember.Route.extend({
+  Portfolio.PostRoute = Portfolio.Route.extend({
     model: function(params) {
       return this.store.find('post', params.post_slug);
     },
@@ -67,12 +90,18 @@
       return {
         post_slug: model.get('slug')
       };
+    },
+    title: function(model) {
+      return model.get('title');
     }
   });
 
-  Portfolio.PostsRoute = Ember.Route.extend({
+  Portfolio.PostsRoute = Portfolio.Route.extend({
     model: function() {
       return this.store.find('post');
+    },
+    title: function() {
+      return 'Posts';
     }
   });
 
