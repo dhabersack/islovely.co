@@ -118,19 +118,18 @@ module.exports = (grunt) ->
         files: 'vectors/**/*'
         tasks: 'compile:vectors'
 
-  # Load plugins
-  grunt.loadNpmTasks 'grunt-contrib-coffee'
-  grunt.loadNpmTasks 'grunt-contrib-connect'
-  grunt.loadNpmTasks 'grunt-contrib-cssmin'
-  grunt.loadNpmTasks 'grunt-contrib-jshint'
-  grunt.loadNpmTasks 'grunt-contrib-uglify'
-  grunt.loadNpmTasks 'grunt-contrib-watch'
-  grunt.loadNpmTasks 'grunt-grunticon'
-  grunt.loadNpmTasks 'grunt-sass'
+  grunt.loadNpmTasks('grunt-contrib-coffee')
+  grunt.loadNpmTasks('grunt-contrib-connect')
+  grunt.loadNpmTasks('grunt-contrib-cssmin')
+  grunt.loadNpmTasks('grunt-contrib-jshint')
+  grunt.loadNpmTasks('grunt-contrib-uglify')
+  grunt.loadNpmTasks('grunt-contrib-watch')
+  grunt.loadNpmTasks('grunt-grunticon')
+  grunt.loadNpmTasks('grunt-sass')
 
-  grunt.registerTask 'build', ['compile', 'uglify']
-  grunt.registerTask 'compile', ['compile:vectors', 'compile:css', 'compile:js']
-  grunt.registerTask 'compile:css', ['sass', 'cssmin:css']
-  grunt.registerTask 'compile:js', ['coffee', 'jshint']
-  grunt.registerTask 'compile:vectors', ['grunticon', 'cssmin:grunticon']
-  grunt.registerTask 'default', ['compile', 'connect', 'watch']
+  grunt.registerTask('build', ['compile', 'uglify'])
+  grunt.registerTask('compile', ['compile:vectors', 'compile:css', 'compile:js'])
+  grunt.registerTask('compile:css', ['sass', 'cssmin:css'])
+  grunt.registerTask('compile:js', ['coffee', 'jshint'])
+  grunt.registerTask('compile:vectors', ['grunticon', 'cssmin:grunticon'])
+  grunt.registerTask('default', ['compile', 'connect', 'watch'])
