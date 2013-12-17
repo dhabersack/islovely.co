@@ -21,37 +21,37 @@
     <script type="text/x-handlebars" id="application">
       <header>
         <div>
-          {{#linkTo 'index' class="islovely logo"}}islovely{{/linkTo}}
+          {{linkTo 'islovely' 'index' class="islovely logo"}}
         </div>
 
         <nav>
           <ol>
             <li>
-              {{#linkTo 'index'}}Home{{/linkTo}}
+              {{linkTo 'Home' 'index'}}
             </li>
             <li>
-              {{#linkTo 'clients'}}Clients{{/linkTo}}
+              {{linkTo 'Clients' 'clients'}}
             </li>
             <li>
-              {{#linkTo 'page' 'services'}}Services{{/linkTo}}
+              {{linkTo 'Services' 'page' 'services'}}
             </li>
             <li>
-              {{#linkTo 'page' 'process'}}Process{{/linkTo}}
+              {{linkTo 'Process' 'page' 'process'}}
             </li>
             <li>
-              {{#linkTo 'page' 'request-a-proposal'}}Request a proposal{{/linkTo}}
+              {{linkTo 'Request a proposal' 'page' 'request-a-proposal'}}
             </li>
             <li>
-              {{#linkTo 'page' 'regarding-recruitment'}}Regarding recruitment{{/linkTo}}
+              {{linkTo 'Regarding recruitment' 'page' 'regarding-recruitment'}}
             </li>
             <li>
-              {{#linkTo 'page' 'about'}}About{{/linkTo}}
+              {{linkTo 'About' 'page' 'about'}}
             </li>
             <li>
-              {{#linkTo 'posts'}}Posts{{/linkTo}}
+              {{linkTo 'Posts' 'posts'}}
             </li>
             <li>
-              {{#linkTo 'page' 'contact'}}Contact{{/linkTo}}
+              {{linkTo 'Contact' 'page' 'contact'}}
             </li>
           </ol>
         </nav>
@@ -68,7 +68,7 @@
           <p>
             Copyright &copy; 2013<br>
             Dom Habersack, <a href="http://islovely.co/" title="Portfolio of Dom Habersack">islovely.co</a><br>
-            {{#linkTo 'page' 'imprint'}}Imprint{{/linkTo}}
+            {{linkTo 'Imprint' 'page' 'imprint'}}
           </p>
 
           <ol>
@@ -88,7 +88,7 @@
 
     <script type="text/x-handlebars" data-template-name="client">
       <nav>
-        {{#linkTo 'clients'}}&larr; Clients{{/linkTo}}
+        {{linkTo '&larr; Clients' 'clients'}}
       </nav>
 
       <h1>{{title}}</h1>
@@ -107,7 +107,7 @@
 
       {{#each this}}
         <article>
-          <h2>{{#linkTo 'client' this}}{{title}}{{/linkTo}}</h2>
+          <h2>{{linkTo title 'client' this}}</h2>
 
           <p>
             {{description}}
@@ -135,7 +135,7 @@
       <ol id="pages">
         {{#each model}}
           <li>
-            {{#linkTo 'page' this}}{{title}}{{/linkTo}}
+            {{linkTo title 'page' this}}
           </li>
         {{/each}}
       </ol>
@@ -143,7 +143,7 @@
 
     <script type="text/x-handlebars" data-template-name="post">
       <nav>
-        {{#linkTo 'posts'}}&larr; Posts{{/linkTo}}
+        {{linkTo '&larr; Posts' 'posts'}}
       </nav>
 
       <h1>{{title}}</h1>
@@ -162,7 +162,7 @@
 
       {{#each this}}
         <article>
-          <h2>{{#linkTo 'post' this}}{{title}}{{/linkTo}}</h2>
+          <h2>{{linkTo title 'post' this}}</h2>
 
           <p>
             {{description}}
