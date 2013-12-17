@@ -3,7 +3,7 @@
   "private": "true",
   "dependencies": {
     "ember": "~1.2.0",
-    "ember-data": "~1.0.0-beta.3",
+    "ember-data": "~1.0.0-beta.2",
     "handlebars": ">= 1.1.0",
     "jquery": "~2.0.3",
     "showdown": "~0.3.1",
