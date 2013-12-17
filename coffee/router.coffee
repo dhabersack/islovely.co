@@ -8,6 +8,10 @@ Portfolio.Router.map () ->
   this.resource('post', { path: '/posts/:post_slug' })
   this.resource('posts')
 
+Portfolio.Router.reopen(
+  location: 'hashbang'
+)
+
 Portfolio.Route = Ember.Route.extend(
   renderTemplate: (controller, model) ->
     this.render()

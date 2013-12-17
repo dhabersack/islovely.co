@@ -4,6 +4,34 @@
 
   window.Portfolio = Ember.Application.create();
 
+  Ember.Location.registerImplementation('hashbang', Ember.HashLocation.extend({
+    getURL: function() {
+      return Ember.get(this, 'location').hash.substr(2);
+    },
+    setURL: function(path) {
+      Ember.get(this, 'location').hash = "!" + path;
+      return Ember.set(this, 'lastSetURL', "!" + path);
+    },
+    onUpdateURL: function(callback) {
+      var guid;
+      guid = Ember.guidFor(this);
+      return Ember.$(window).bind("hashchange.ember-location-{ guid }", function() {
+        return Ember.run(function() {
+          var path;
+          path = location.hash.substr(2);
+          if (Ember.get(this, 'lastSetURL') === path) {
+            return;
+          }
+          Ember.set(this, 'lastSetURL', null);
+          return callback(location.hash.substr(2));
+        });
+      });
+    },
+    formatURL: function(url) {
+      return "#!" + url;
+    }
+  }));
+
   Portfolio.Router.map(function() {
     this.resource('client', {
       path: '/clients/:client_slug'
@@ -17,6 +45,10 @@
       path: '/posts/:post_slug'
     });
     return this.resource('posts');
+  });
+
+  Portfolio.Router.reopen({
+    location: 'hashbang'
   });
 
   Portfolio.Route = Ember.Route.extend({
