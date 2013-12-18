@@ -56,6 +56,8 @@ module.exports = (grunt) ->
             'github-logo': '.github.logo::before'
             'islovely-logo-blue': '.islovely.logo::before, html'
             'twitter-logo': '.twitter.logo::before'
+            'stackoverflow-logo': '.stackoverflow.logo::before'
+            'stackoverflow-careers-logo': '.stackoverflow-careers.logo::before'
             'xing-logo': '.xing.logo::before'
 
     jshint:

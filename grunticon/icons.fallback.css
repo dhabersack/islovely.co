@@ -6,6 +6,12 @@
 
 .icon-islovely-logo { background-image: url(png/islovely-logo.png); background-repeat: no-repeat; }
 
+.icon-stackoverflow-careers-logo,
+.stackoverflow-careers.logo::before { background-image: url(png/stackoverflow-careers-logo.png); background-repeat: no-repeat; }
+
+.icon-stackoverflow-logo,
+.stackoverflow.logo::before { background-image: url(png/stackoverflow-logo.png); background-repeat: no-repeat; }
+
 .icon-twitter-logo,
 .twitter.logo::before { background-image: url(png/twitter-logo.png); background-repeat: no-repeat; }
 
