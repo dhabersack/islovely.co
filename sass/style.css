@@ -303,12 +303,6 @@ a {
   a:visited {
     color: #904fff; }
 
-html {
-  background-color: #fdfdfd;
-  background-position: center;
-  height: auto !important;
-  min-height: 100%; }
-
 body {
   color: #3e3e3e;
   font-family: 'Lato', Arial, 'Helvetica Neue', Helvetica, sans-serif;

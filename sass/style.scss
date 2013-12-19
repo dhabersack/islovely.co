@@ -12,15 +12,6 @@ a {
   }
 }
 
-html {
-  background: {
-    color: $color-neutral-lightest;
-    position: center;
-  }
-  height: auto !important;
-  min-height: 100%;
-}
-
 body {
   color: $color-neutral-darkest;
   font: {

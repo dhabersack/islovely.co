@@ -2,7 +2,7 @@
 .github.logo::before { background-image: url(png/github-logo.png); background-repeat: no-repeat; }
 
 .icon-islovely-logo-blue,
-.islovely.logo::before, html { background-image: url(png/islovely-logo-blue.png); background-repeat: no-repeat; }
+.islovely.logo::before { background-image: url(png/islovely-logo-blue.png); background-repeat: no-repeat; }
 
 .icon-islovely-logo { background-image: url(png/islovely-logo.png); background-repeat: no-repeat; }
 
