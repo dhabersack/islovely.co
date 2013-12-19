@@ -4,6 +4,12 @@ module.exports = (grunt) ->
   grunt.initConfig
     pkg: grunt.file.readJSON('package.json')
 
+    clean:
+      postsnapshots:
+        src: 'snapshots-build'
+      presnapshots:
+        src: ['snapshots', 'snapshots-build']
+
     coffee:
       options:
         sourceMap: true
@@ -19,12 +25,6 @@ module.exports = (grunt) ->
             'coffee/models/**/*.coffee'
             'coffee/helpers.coffee'
           ]
-
-    connect:
-      server:
-        options:
-          hostname: '*'
-          port: 1506
 
     cssmin:
       options:
@@ -59,6 +59,67 @@ module.exports = (grunt) ->
             'twitter-logo': '.twitter.logo::before'
             'xing-logo': '.xing.logo::before'
 
+    htmlmin:
+      options:
+        collapseWhitespace: true
+        removeComments: true
+        removeEmptyAttributes: true
+      snapshots:
+        cwd: 'snapshots-build/'
+        dest: 'snapshots/'
+        expand: true
+        src: '*.html'
+
+    htmlSnapshot:
+      run:
+        options:
+          fileNamePrefix: ''
+          removeLinkTags: true
+          removeScripts: true
+          replaceStrings: [
+            { 'ember-application': '' }
+            { 'ember-view': '' }
+            { 'ember\\d+': '' }
+            { 'class=".*?"': '' }
+            { 'id=".*?"': '' }
+          ]
+          sanitize: (requestUri) ->
+            requestUri = requestUri.replace(/^#!\//g, '')
+            if requestUri is '' then 'index' else requestUri.replace(/\//g, '-')
+          sitePath: 'http://localhost:8000'
+          snapshotPath: 'snapshots-build/'
+          urls: [
+            ''
+
+            '#!/clients'
+            '#!/clients/gini'
+            '#!/clients/falconfinch'
+            '#!/clients/meinferiencamp'
+            '#!/clients/masfina'
+            '#!/clients/johannabeyer'
+
+            '#!/pages'
+            '#!/pages/about'
+            '#!/pages/contact'
+            '#!/pages/imprint'
+            '#!/pages/process'
+            '#!/pages/regarding-recruitment'
+            '#!/pages/request-a-proposal'
+            '#!/pages/services'
+
+            '#!/posts'
+            '#!/posts/debunking-whitewashed-exam-statistics'
+            '#!/posts/grunt-contrib-sass-and-node-js-0-10-8'
+            '#!/posts/insights-of-a-new-screencaster'
+            '#!/posts/on-lazy-journalism'
+            '#!/posts/painless-installation-of-sml-on-os-x'
+            '#!/posts/screencasts-on-standard-ml-in-german'
+            '#!/posts/sml-nj-110.74-on-os-x-10.8-mountain-lion'
+            '#!/posts/understanding-css-hierarchy-matching'
+            '#!/posts/why-students-fail-entry-level-programming-exams'
+            '#!/posts/writing-high-performance-css'
+          ]
+
     jshint:
       options:
         browser: true
@@ -79,6 +140,12 @@ module.exports = (grunt) ->
       run:
         files:
           src: '<%= pkg.name %>.js'
+
+    php:
+      server:
+        options:
+          hostname: '0.0.0.0'
+          keepalive: true
 
     sass:
       compile:
@@ -119,13 +186,16 @@ module.exports = (grunt) ->
         files: 'vectors/**/*'
         tasks: 'compile:vectors'
 
+  grunt.loadNpmTasks('grunt-contrib-clean')
   grunt.loadNpmTasks('grunt-contrib-coffee')
-  grunt.loadNpmTasks('grunt-contrib-connect')
   grunt.loadNpmTasks('grunt-contrib-cssmin')
+  grunt.loadNpmTasks('grunt-contrib-htmlmin')
   grunt.loadNpmTasks('grunt-contrib-jshint')
   grunt.loadNpmTasks('grunt-contrib-uglify')
   grunt.loadNpmTasks('grunt-contrib-watch')
   grunt.loadNpmTasks('grunt-grunticon')
+  grunt.loadNpmTasks('grunt-html-snapshot')
+  grunt.loadNpmTasks('grunt-php')
   grunt.loadNpmTasks('grunt-sass')
 
   grunt.registerTask('build', ['compile', 'uglify'])
@@ -133,4 +203,6 @@ module.exports = (grunt) ->
   grunt.registerTask('compile:css', ['sass', 'cssmin:css'])
   grunt.registerTask('compile:js', ['coffee', 'jshint'])
   grunt.registerTask('compile:vectors', ['grunticon', 'cssmin:grunticon'])
-  grunt.registerTask('default', ['compile', 'connect', 'watch'])
+  grunt.registerTask('default', ['compile', 'watch'])
+  grunt.registerTask('snapshot', ['clean:presnapshots', 'htmlSnapshot', 'htmlmin:snapshots', 'clean:postsnapshots'])
+

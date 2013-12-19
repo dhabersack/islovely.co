@@ -1,3 +1,9 @@
+<?php
+if (array_key_exists('_escaped_fragment_', $_GET)):
+  $page = 'snapshots/' . str_replace('/', '-', substr($_GET['_escaped_fragment_'], 1)) . '.html';
+  include $page;
+else:
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -71,7 +77,7 @@
             {{linkTo 'Imprint' 'page' 'imprint'}}
           </p>
 
-          <ol>
+          <ul>
             <li>
               <a href="http://github.com/dhabersack" class="logo github" title="dhabersack on GitHub">dhabersack</a>
             </li>
@@ -81,7 +87,7 @@
             <li>
               <a href="http://xing.com/profiles/Dominik_Habersack" class="logo xing" title="Dominik Habersack on XING">Dominik Habersack</a>
             </li>
-          </ol>
+          </ul>
         </div>
       </footer>
     </script>
@@ -172,8 +178,6 @@
       </ol>
     </script>
 
-    <!-- = partial 'partials/google-analytics' -->
-
     <script src="bower_components/jquery/jquery.js"></script>
     <script src="bower_components/handlebars/handlebars.js"></script>
     <script src="bower_components/ember/ember.js"></script>
@@ -183,3 +187,4 @@
     <script src="islovely.js"></script>
   </body>
 </html>
+<?php endif; ?>
