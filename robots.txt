@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /*.ico
-Disallow: /*.md
-Disallow: /*.scss
+
+Sitemap: http://islovely.co/sitemap.xml

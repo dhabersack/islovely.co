@@ -1,5 +1,37 @@
 'use strict'
 
+urls = [
+  '#!/'
+
+  '#!/clients'
+  '#!/clients/gini'
+  '#!/clients/falconfinch'
+  '#!/clients/meinferiencamp'
+  '#!/clients/masfina'
+  '#!/clients/johannabeyer'
+
+  '#!/pages'
+  '#!/pages/about'
+  '#!/pages/contact'
+  '#!/pages/imprint'
+  '#!/pages/process'
+  '#!/pages/regarding-recruitment'
+  '#!/pages/request-a-proposal'
+  '#!/pages/services'
+
+  '#!/posts'
+  '#!/posts/debunking-whitewashed-exam-statistics'
+  '#!/posts/grunt-contrib-sass-and-node-js-0-10-8'
+  '#!/posts/insights-of-a-new-screencaster'
+  '#!/posts/on-lazy-journalism'
+  '#!/posts/painless-installation-of-sml-on-os-x'
+  '#!/posts/screencasts-on-standard-ml-in-german'
+  '#!/posts/sml-nj-110.74-on-os-x-10.8-mountain-lion'
+  '#!/posts/understanding-css-hierarchy-matching'
+  '#!/posts/why-students-fail-entry-level-programming-exams'
+  '#!/posts/writing-high-performance-css'
+]
+
 module.exports = (grunt) ->
   grunt.initConfig
     pkg: grunt.file.readJSON('package.json')
@@ -8,7 +40,7 @@ module.exports = (grunt) ->
       postsnapshots:
         src: 'snapshots-build'
       presnapshots:
-        src: ['snapshots', 'snapshots-build']
+        src: ['sitemap.xml', 'snapshots', 'snapshots-build']
 
     coffee:
       options:
@@ -25,6 +57,11 @@ module.exports = (grunt) ->
             'coffee/models/**/*.coffee'
             'coffee/helpers.coffee'
           ]
+
+    concat:
+      sitemap:
+        src: ['sitemap-src/header.xml', 'sitemap-src/list.xml', 'sitemap-src/footer.xml']
+        dest: 'sitemap.xml'
 
     cssmin:
       options:
@@ -88,37 +125,7 @@ module.exports = (grunt) ->
             if requestUri is '' then 'index' else requestUri.replace(/\//g, '-')
           sitePath: 'http://localhost:8000'
           snapshotPath: 'snapshots-build/'
-          urls: [
-            ''
-
-            '#!/clients'
-            '#!/clients/gini'
-            '#!/clients/falconfinch'
-            '#!/clients/meinferiencamp'
-            '#!/clients/masfina'
-            '#!/clients/johannabeyer'
-
-            '#!/pages'
-            '#!/pages/about'
-            '#!/pages/contact'
-            '#!/pages/imprint'
-            '#!/pages/process'
-            '#!/pages/regarding-recruitment'
-            '#!/pages/request-a-proposal'
-            '#!/pages/services'
-
-            '#!/posts'
-            '#!/posts/debunking-whitewashed-exam-statistics'
-            '#!/posts/grunt-contrib-sass-and-node-js-0-10-8'
-            '#!/posts/insights-of-a-new-screencaster'
-            '#!/posts/on-lazy-journalism'
-            '#!/posts/painless-installation-of-sml-on-os-x'
-            '#!/posts/screencasts-on-standard-ml-in-german'
-            '#!/posts/sml-nj-110.74-on-os-x-10.8-mountain-lion'
-            '#!/posts/understanding-css-hierarchy-matching'
-            '#!/posts/why-students-fail-entry-level-programming-exams'
-            '#!/posts/writing-high-performance-css'
-          ]
+          urls: urls
 
     jshint:
       options:
@@ -151,6 +158,10 @@ module.exports = (grunt) ->
       compile:
         files:
           'sass/style.css': 'sass/style.scss'
+
+    shell:
+      createSitemapList:
+        command: "echo '  <url><loc>http://islovely.co/#{ urls.join('</loc></url>\n  <url><loc>http://islovely.co/') }</loc></url>' > sitemap-src/list.xml"
 
     uglify:
       options:
@@ -188,6 +199,7 @@ module.exports = (grunt) ->
 
   grunt.loadNpmTasks('grunt-contrib-clean')
   grunt.loadNpmTasks('grunt-contrib-coffee')
+  grunt.loadNpmTasks('grunt-contrib-concat')
   grunt.loadNpmTasks('grunt-contrib-cssmin')
   grunt.loadNpmTasks('grunt-contrib-htmlmin')
   grunt.loadNpmTasks('grunt-contrib-jshint')
@@ -197,6 +209,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks('grunt-html-snapshot')
   grunt.loadNpmTasks('grunt-php')
   grunt.loadNpmTasks('grunt-sass')
+  grunt.loadNpmTasks('grunt-shell')
 
   grunt.registerTask('build', ['compile', 'uglify'])
   grunt.registerTask('compile', ['compile:vectors', 'compile:css', 'compile:js'])
@@ -204,5 +217,6 @@ module.exports = (grunt) ->
   grunt.registerTask('compile:js', ['coffee', 'jshint'])
   grunt.registerTask('compile:vectors', ['grunticon', 'cssmin:grunticon'])
   grunt.registerTask('default', ['compile', 'watch'])
-  grunt.registerTask('snapshot', ['clean:presnapshots', 'htmlSnapshot', 'htmlmin:snapshots', 'clean:postsnapshots'])
+  grunt.registerTask('sitemap', ['shell:createSitemapList', 'concat:sitemap'])
+  grunt.registerTask('snapshot', ['clean:presnapshots', 'htmlSnapshot', 'htmlmin:snapshots', 'clean:postsnapshots', 'sitemap'])
 
