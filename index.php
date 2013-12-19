@@ -1,6 +1,10 @@
 <?php
 if (array_key_exists('_escaped_fragment_', $_GET)):
-  $page = 'snapshots/' . str_replace('/', '-', substr($_GET['_escaped_fragment_'], 1)) . '.html';
+  $escaped_fragment = $_GET['_escaped_fragment_'];
+  $without_leading_slash = substr($escaped_fragment, 1);
+  $with_dashes = str_replace('/', '-', $without_leading_slash);
+  $filename = strlen($with_dashes) === 0 ? 'index' : $with_dashes;
+  $page = 'snapshots/' . $filename . '.html';
   include $page;
 else:
 ?>
