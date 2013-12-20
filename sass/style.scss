@@ -13,6 +13,7 @@ a {
 }
 
 body {
+  background: $color-neutral-lightest;
   color: $color-neutral-darkest;
   font: {
     family: $font-family-content;
@@ -50,7 +51,6 @@ figcaption {
 }
 
 footer {
-  background: $color-neutral-lighter;
   color: $color-neutral-darker;
   overflow: hidden;
   padding: 2.4em 0;
@@ -115,8 +115,6 @@ h4 {
 }
 
 header {
-  background: $color-neutral-lightest;
-
   @media (#{ $query-large }) {
     float: left;
     width: 33%;
@@ -248,7 +246,6 @@ pre {
 }
 
 section {
-  background: $color-neutral-lightest;
   overflow: hidden;
 
   @media (#{ $query-large }) {

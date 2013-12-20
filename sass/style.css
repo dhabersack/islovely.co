@@ -304,6 +304,7 @@ a {
     color: #904fff; }
 
 body {
+  background: #fdfdfd;
   color: #3e3e3e;
   font-family: 'Lato', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 62.5%;
@@ -336,7 +337,6 @@ figcaption {
   font-style: italic; }
 
 footer {
-  background: #e3e3e3;
   color: #7d7d7d;
   overflow: hidden;
   padding: 2.4em 0;
@@ -379,35 +379,33 @@ h4 {
   line-height: 1.5em;
   margin-bottom: 0.75em; }
 
-header {
-  background: #fdfdfd; }
-  @media (min-width: 960px) {
-    header {
-      float: left;
-      width: 33%; } }
-  header > div {
-    padding: 1.2em 0;
-    text-align: center; }
-    header > div > a {
-      font-size: 2.5em;
-      line-height: 1.44em;
-      text-decoration: none; }
-      header > div > a, header > div > a:visited {
-        color: #3e3e3e; }
-  header li {
+@media (min-width: 960px) {
+  header {
     float: left;
-    margin-right: 0.625em; }
-    @media (min-width: 960px) {
-      header li {
-        float: none;
-        text-align: center; } }
-  header > nav {
-    background: #3581fc;
-    padding: 0.6em 0; }
-    header > nav a {
-      padding: 0.375em 0; }
-      header > nav a, header > nav a:visited {
-        color: #fdfdfd; }
+    width: 33%; } }
+header > div {
+  padding: 1.2em 0;
+  text-align: center; }
+  header > div > a {
+    font-size: 2.5em;
+    line-height: 1.44em;
+    text-decoration: none; }
+    header > div > a, header > div > a:visited {
+      color: #3e3e3e; }
+header li {
+  float: left;
+  margin-right: 0.625em; }
+  @media (min-width: 960px) {
+    header li {
+      float: none;
+      text-align: center; } }
+header > nav {
+  background: #3581fc;
+  padding: 0.6em 0; }
+  header > nav a {
+    padding: 0.375em 0; }
+    header > nav a, header > nav a:visited {
+      color: #fdfdfd; }
 
 hr {
   background: #bdbdbd;
@@ -463,7 +461,6 @@ pre {
   padding-left: 0.6875em; }
 
 section {
-  background: #fdfdfd;
   overflow: hidden; }
   @media (min-width: 960px) {
     section {
