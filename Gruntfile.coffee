@@ -105,7 +105,7 @@ module.exports = (grunt) ->
         cwd: 'snapshots-build/'
         dest: 'snapshots/'
         expand: true
-        src: '*.html'
+        src: '**/*.html'
 
     htmlSnapshot:
       run:
@@ -122,8 +122,9 @@ module.exports = (grunt) ->
           ]
           sanitize: (requestUri) ->
             requestUri = requestUri.replace(/^#!\//g, '')
-            if requestUri is '' then 'index' else requestUri.replace(/\//g, '-')
-          sitePath: 'http://localhost:8000'
+            # if requestUri is '' then 'index' else requestUri.replace(/\//g, '-')
+            if requestUri is '' then 'index' else requestUri
+          sitePath: 'http://localhost'
           snapshotPath: 'snapshots-build/'
           urls: urls
 
