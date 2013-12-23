@@ -141,6 +141,7 @@ module.exports = (grunt) ->
           'Portfolio': true
           'Showdown': true
           'moment': true
+          '$': true
         undef: true
         unused: true
         strict: true
