@@ -336,6 +336,11 @@ figcaption {
   text-align: center;
   font-style: italic; }
 
+figure > img {
+  -webkit-border-radius: 0.2em;
+  border-radius: 0.2em;
+  border: 0.1em solid #7d7d7d; }
+
 footer {
   background: #e3e3e3;
   color: #7d7d7d;
@@ -587,9 +592,8 @@ ul {
   margin-bottom: 1.6em; }
 
 #wireframes {
-  background: #e33d27;
+  margin-bottom: 2.4em;
   overflow: hidden; }
-  #wireframes > img {
+  #wireframes > figure {
     float: left;
-    margin-bottom: 2.4em;
     margin-right: 2%; }

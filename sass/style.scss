@@ -50,6 +50,14 @@ figcaption {
   font-style: italic;
 }
 
+figure {
+  > img {
+    @include border-radius(0.2em);
+
+    border: 0.1em solid $color-neutral-darker;
+  }
+}
+
 footer {
   background: $color-neutral-lighter;
   color: $color-neutral-darker;
@@ -428,12 +436,12 @@ ul {
 }
 
 #wireframes {
-  background: $red;
+  // background: $red;
+  margin-bottom: 2.4em;
   overflow: hidden;
 
-  > img {
+  > figure {
     float: left;
-    margin-bottom: 2.4em;
     margin-right: $grid-gutter-width;
   }
 }
