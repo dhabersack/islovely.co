@@ -59,10 +59,16 @@
         title = this.title(model);
       }
       document.title = title ? "" + title + " | islovely" : 'islovely';
+      if (this.description) {
+        $('meta[name=description]').attr('content', this.description(model));
+      }
     }
   });
 
   Portfolio.ClientRoute = Portfolio.Route.extend({
+    description: function(model) {
+      return model.get('description');
+    },
     model: function(params) {
       return this.store.find('client', params.client_slug);
     },
@@ -77,6 +83,9 @@
   });
 
   Portfolio.ClientsRoute = Portfolio.Route.extend({
+    description: function() {
+      return 'A selection of client projects I have worked on.';
+    },
     model: function() {
       return this.store.find('client');
     },
@@ -86,12 +95,18 @@
   });
 
   Portfolio.IndexRoute = Portfolio.Route.extend({
+    description: function(model) {
+      return model.get('description');
+    },
     model: function() {
       return this.store.find('page', 'index');
     }
   });
 
   Portfolio.PageRoute = Portfolio.Route.extend({
+    description: function(model) {
+      return model.get('description');
+    },
     model: function(params) {
       return this.store.find('page', params.page_slug);
     },
@@ -106,6 +121,9 @@
   });
 
   Portfolio.PagesRoute = Portfolio.Route.extend({
+    description: function() {
+      return 'Find more information about me and the services I offer.';
+    },
     model: function() {
       return this.store.find('page');
     },
@@ -115,6 +133,9 @@
   });
 
   Portfolio.PostRoute = Portfolio.Route.extend({
+    description: function(model) {
+      return model.get('description');
+    },
     model: function(params) {
       return this.store.find('post', params.post_slug);
     },
@@ -129,6 +150,9 @@
   });
 
   Portfolio.PostsRoute = Portfolio.Route.extend({
+    description: function() {
+      return 'Articles on technology, development, consulting, and teaching.';
+    },
     model: function() {
       return this.store.find('post');
     },

@@ -98,6 +98,7 @@ module.exports = (grunt) ->
 
     htmlmin:
       options:
+        collapseBooleanAttributes: true
         collapseWhitespace: true
         removeComments: true
         removeEmptyAttributes: true
@@ -117,14 +118,21 @@ module.exports = (grunt) ->
             { 'ember-application': '' }
             { 'ember-view': '' }
             { 'ember\\d+': '' }
+
             { 'class=".*?"': '' }
             { 'id=".*?"': '' }
+
+            { '<div.*?>': '' }
+            { '</div>': '' }
+            { '<span.*?>': '' }
+            { '</span>': '' }
+
+            { '<noscript>.*?</noscript>': '' }
           ]
           sanitize: (requestUri) ->
             requestUri = requestUri.replace(/^#!\//g, '')
-            # if requestUri is '' then 'index' else requestUri.replace(/\//g, '-')
             if requestUri is '' then 'index' else requestUri
-          sitePath: 'http://localhost'
+          sitePath: 'http://localhost/islovely/'
           snapshotPath: 'snapshots-build/'
           urls: urls
 
