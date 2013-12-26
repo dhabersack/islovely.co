@@ -426,3 +426,14 @@ ul {
   line-height: 1.6em; // 24px
   margin-bottom: 1.6em; // 24px
 }
+
+#wireframes {
+  background: $red;
+  overflow: hidden;
+
+  > img {
+    float: left;
+    margin-bottom: 2.4em;
+    margin-right: $grid-gutter-width;
+  }
+}

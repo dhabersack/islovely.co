@@ -585,3 +585,11 @@ ul {
   font-style: italic;
   line-height: 1.6em;
   margin-bottom: 1.6em; }
+
+#wireframes {
+  background: #e33d27;
+  overflow: hidden; }
+  #wireframes > img {
+    float: left;
+    margin-bottom: 2.4em;
+    margin-right: 2%; }
