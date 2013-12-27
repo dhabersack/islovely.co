@@ -347,12 +347,6 @@ footer {
   overflow: hidden;
   padding: 2.4em 0;
   text-align: center; }
-  @media (min-width: 960px) {
-    footer {
-      background: none;
-      clear: left;
-      float: left;
-      width: 33%; } }
   footer ul {
     list-style: none;
     margin-bottom: 0; }
@@ -385,10 +379,6 @@ h4 {
   line-height: 1.5em;
   margin-bottom: 0.75em; }
 
-@media (min-width: 960px) {
-  header {
-    float: left;
-    width: 33%; } }
 header > div {
   padding: 1.2em 0;
   text-align: center; }
@@ -401,15 +391,10 @@ header > div {
 header li {
   float: left;
   margin-right: 0.625em; }
-  @media (min-width: 960px) {
-    header li {
-      float: none;
-      text-align: center; } }
 header > nav {
-  background: #3581fc;
-  padding: 0.6em 0; }
+  background: #3581fc; }
   header > nav a {
-    padding: 0.375em 0; }
+    padding: 0.75em 0; }
     header > nav a, header > nav a:visited {
       color: #fdfdfd; }
 
@@ -468,10 +453,6 @@ pre {
 
 section {
   overflow: hidden; }
-  @media (min-width: 960px) {
-    section {
-      float: right;
-      width: 67%; } }
   section nav {
     font-family: 'Lato', Arial, 'Helvetica Neue', Helvetica, sans-serif;
     padding: 0; }
@@ -481,6 +462,10 @@ section {
       line-height: 1.5em; }
       section nav a, section nav a:visited {
         color: #3581fc; }
+  @media (min-width: 640px) {
+    section li, section p {
+      font-size: 2em;
+      line-height: 1.8em; } }
 
 table {
   font-size: 1.6em;

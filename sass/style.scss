@@ -65,13 +65,6 @@ footer {
   padding: 2.4em 0;
   text-align: center;
 
-  @media (#{ $query-large }) {
-    background: none;
-    clear: left;
-    float: left;
-    width: 33%;
-  }
-
   > div {
     @extend .responsive-container;
   }
@@ -124,11 +117,6 @@ h4 {
 }
 
 header {
-  @media (#{ $query-large }) {
-    float: left;
-    width: 33%;
-  }
-
   > div {
     @extend .responsive-container;
 
@@ -150,19 +138,13 @@ header {
   li {
     float: left;
     margin-right: 0.625em; // 10px
-
-    @media (#{ $query-large }) {
-      float: none;
-      text-align: center;
-    }
   }
 
   > nav {
     background: $color-brand;
-    padding: 0.6em 0;
 
     a {
-      padding: 0.375em 0; // 6px 0
+      padding: 0.75em 0; // 12px 0
 
       &,
       &:visited {
@@ -257,11 +239,6 @@ pre {
 section {
   overflow: hidden;
 
-  @media (#{ $query-large }) {
-    float: right;
-    width: 67%;
-  }
-
   > div {
     @extend .responsive-container;
   }
@@ -280,6 +257,14 @@ section {
       &:visited {
         color: $color-link;
       }
+    }
+  }
+
+  li,
+  p {
+    @media (#{ $query-medium }) {
+      font-size: 2em;
+      line-height: 1.8em;
     }
   }
 }
