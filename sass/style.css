@@ -452,7 +452,8 @@ pre {
   padding-left: 0.6875em; }
 
 section {
-  overflow: hidden; }
+  overflow: hidden;
+  padding-top: 1.2em; }
   section nav {
     font-family: 'Lato', Arial, 'Helvetica Neue', Helvetica, sans-serif;
     padding: 0; }

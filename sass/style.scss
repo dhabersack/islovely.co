@@ -238,6 +238,7 @@ pre {
 
 section {
   overflow: hidden;
+  padding-top: 1.2em;
 
   > div {
     @extend .responsive-container;
