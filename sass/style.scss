@@ -51,6 +51,8 @@ figcaption {
 }
 
 figure {
+  margin-bottom: 2.4em;
+
   > img {
     @include border-radius(0.2em);
 
@@ -261,11 +263,11 @@ section {
     }
   }
 
-  li,
   p {
     @media (#{ $query-medium }) {
       font-size: 2em;
-      line-height: 1.8em;
+      line-height: 1.8em; // 36px
+      margin-bottom: 1.8em; // 36px
     }
   }
 }
@@ -433,14 +435,4 @@ ul {
   }
   line-height: 1.6em; // 24px
   margin-bottom: 1.6em; // 24px
-}
-
-#wireframes {
-  margin-bottom: 2.4em;
-  overflow: hidden;
-
-  > figure {
-    float: left;
-    margin-right: $grid-gutter-width;
-  }
 }

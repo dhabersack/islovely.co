@@ -336,10 +336,12 @@ figcaption {
   text-align: center;
   font-style: italic; }
 
-figure > img {
-  -webkit-border-radius: 0.2em;
-  border-radius: 0.2em;
-  border: 0.1em solid #7d7d7d; }
+figure {
+  margin-bottom: 2.4em; }
+  figure > img {
+    -webkit-border-radius: 0.2em;
+    border-radius: 0.2em;
+    border: 0.1em solid #7d7d7d; }
 
 footer {
   background: #e3e3e3;
@@ -464,9 +466,10 @@ section {
       section nav a, section nav a:visited {
         color: #3581fc; }
   @media (min-width: 640px) {
-    section li, section p {
+    section p {
       font-size: 2em;
-      line-height: 1.8em; } }
+      line-height: 1.8em;
+      margin-bottom: 1.8em; } }
 
 table {
   font-size: 1.6em;
@@ -583,10 +586,3 @@ ul {
   font-style: italic;
   line-height: 1.6em;
   margin-bottom: 1.6em; }
-
-#wireframes {
-  margin-bottom: 2.4em;
-  overflow: hidden; }
-  #wireframes > figure {
-    float: left;
-    margin-right: 2%; }
