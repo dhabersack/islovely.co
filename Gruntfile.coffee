@@ -221,10 +221,9 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks('grunt-sass')
   grunt.loadNpmTasks('grunt-shell')
 
-  grunt.registerTask('build', ['compile', 'uglify'])
   grunt.registerTask('compile', ['compile:vectors', 'compile:css', 'compile:js'])
   grunt.registerTask('compile:css', ['sass', 'cssmin:css'])
-  grunt.registerTask('compile:js', ['coffee', 'jshint'])
+  grunt.registerTask('compile:js', ['coffee', 'jshint', 'uglify'])
   grunt.registerTask('compile:vectors', ['grunticon', 'cssmin:grunticon'])
   grunt.registerTask('default', ['compile', 'watch'])
   grunt.registerTask('sitemap', ['shell:createSitemapList', 'concat:sitemap'])
