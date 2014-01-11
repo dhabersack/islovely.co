@@ -30,9 +30,6 @@
               {{linkTo 'Home' 'index'}}
             </li>
             <li>
-              {{linkTo 'Clients' 'clients'}}
-            </li>
-            <li>
               {{linkTo 'Services' 'page' 'services'}}
             </li>
             <li>
@@ -84,37 +81,6 @@
           </ul>
         </div>
       </footer>
-    </script>
-
-    <script type="text/x-handlebars" data-template-name="client">
-      <nav>
-        {{linkTo '&larr; Clients' 'clients'}}
-      </nav>
-
-      <h1>{{title}}</h1>
-
-      {{markdown body}}
-
-      {{#if url}}
-        <p>
-          <a {{bindAttr href=url title=title}}>Visit site</a>
-        </p>
-      {{/if}}
-    </script>
-
-    <script type="text/x-handlebars" data-template-name="clients">
-      <h1>Clients</h1>
-
-      {{#each this}}
-        <article>
-          <h2>{{linkTo title 'client' this}}</h2>
-
-          <p>
-            {{description}}
-          </p>
-        </article>
-      {{/each}}
-      </ol>
     </script>
 
     <script type="text/x-handlebars" data-template-name="index">

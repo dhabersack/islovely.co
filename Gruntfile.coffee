@@ -3,13 +3,6 @@
 urls = [
   '#!/'
 
-  '#!/clients'
-  '#!/clients/gini'
-  '#!/clients/falconfinch'
-  '#!/clients/meinferiencamp'
-  '#!/clients/masfina'
-  '#!/clients/johannabeyer'
-
   '#!/pages'
   '#!/pages/about'
   '#!/pages/contact'
