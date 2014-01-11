@@ -149,6 +149,10 @@ header {
   li {
     float: left;
     margin-right: 0.625em; // 10px
+
+    &:last-of-type {
+      margin-right: 0;
+    }
   }
 
   > nav {
