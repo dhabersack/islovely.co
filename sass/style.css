@@ -322,7 +322,8 @@ button {
   display: block;
   font-size: 1.6em;
   line-height: 1.5em;
-  padding: 0.1875em 1.1875em; }
+  padding: 0.1875em 1.1875em;
+  text-decoration: underline; }
   button:hover {
     background: #bdbdbd; }
 
@@ -349,6 +350,7 @@ footer {
   overflow: hidden;
   padding: 2.4em 0;
   text-align: center; }
+  @media (min-width: 960px) { }
   footer ul {
     list-style: none;
     margin-bottom: 0; }
@@ -384,6 +386,7 @@ h4 {
 header > div {
   padding: 1.2em 0;
   text-align: center; }
+  @media (min-width: 960px) { }
   header > div > a {
     font-size: 2.5em;
     line-height: 1.44em;
@@ -394,11 +397,13 @@ header li {
   float: left;
   margin-right: 0.625em; }
 header > nav {
-  background: #3581fc; }
+  background: #3581fc;
+  padding: 0.6em 0; }
   header > nav a {
-    padding: 0.75em 0; }
+    padding: 6px 0; }
     header > nav a, header > nav a:visited {
       color: #fdfdfd; }
+  @media (min-width: 960px) { }
 
 hr {
   background: #bdbdbd;
@@ -410,6 +415,7 @@ img {
   display: block;
   margin: 0 auto; }
 
+@media (min-width: 640px) { }
 
 label {
   display: block;
@@ -456,6 +462,7 @@ pre {
 section {
   overflow: hidden;
   padding-top: 1.2em; }
+  @media (min-width: 960px) { }
   section nav {
     font-family: 'Lato', Arial, 'Helvetica Neue', Helvetica, sans-serif;
     padding: 0; }
@@ -465,11 +472,6 @@ section {
       line-height: 1.5em; }
       section nav a, section nav a:visited {
         color: #3581fc; }
-  @media (min-width: 640px) {
-    section p {
-      font-size: 2em;
-      line-height: 1.8em;
-      margin-bottom: 1.8em; } }
 
 table {
   font-size: 1.6em;
@@ -513,7 +515,7 @@ ul {
 .call-to-action-container {
   text-align: center; }
 
-.formfield, input[type="email"], input[type="text"], textarea {
+.formfield, input[type="email"], input[type="text"], textarea, .formfield-medium {
   -webkit-box-shadow: 0 0 0.0625em #3e3e3e;
   box-shadow: 0 0 0.0625em #3e3e3e;
   -webkit-border-radius: 0.125em;
@@ -529,6 +531,10 @@ ul {
   .formfield:focus, input[type="email"]:focus, input[type="text"]:focus, textarea:focus {
     background: #fff2a5;
     outline: none; }
+
+@media (min-width: 640px) {
+  .formfield-medium, input[type="email"], input[type="text"] {
+    width: 47%; } }
 
 .logo {
   position: relative;
@@ -552,6 +558,11 @@ ul {
 .responsive-container, footer > div, header > div, header > nav > ol, section > div {
   margin: 0 auto;
   width: 96%; }
+
+@media (min-width: 960px) {
+  .responsive-container-large, footer > div, header > div, header > nav > ol, section > div {
+    margin: 0 auto;
+    width: 92em; } }
 
 .videoContainer {
   margin: 0 auto 2.4em;
@@ -578,7 +589,7 @@ ul {
 #avatar {
   border-radius: 50%;
   width: 49%;
-  width: 16em; }
+  width: 12em; }
 
 #published {
   color: #7d7d7d;

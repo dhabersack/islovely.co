@@ -32,6 +32,7 @@ button {
   font-size: 1.6em;
   line-height: 1.5em; // 24px
   padding: 0.1875em 1.1875em; // 3px 19px
+  text-decoration: underline;
 
   &:hover {
     background: $color-neutral;
@@ -69,6 +70,10 @@ footer {
 
   > div {
     @extend .responsive-container;
+
+    @media (#{ $query-large }) {
+      @extend .responsive-container-large;
+    }
   }
 
   ul {
@@ -125,6 +130,10 @@ header {
     padding: 1.2em 0;
     text-align: center;
 
+    @media (#{ $query-large }) {
+      @extend .responsive-container-large;
+    }
+
     > a {
       font-size: 2.5em;
       line-height: 1.44em; // 36px
@@ -144,9 +153,10 @@ header {
 
   > nav {
     background: $color-brand;
+    padding: 0.6em 0;
 
     a {
-      padding: 0.75em 0; // 12px 0
+      padding: 6px 0;
 
       &,
       &:visited {
@@ -156,6 +166,10 @@ header {
 
     > ol {
       @extend .responsive-container;
+
+      @media (#{ $query-large }) {
+        @extend .responsive-container-large;
+      }
     }
   }
 }
@@ -179,6 +193,10 @@ input {
 
     &:focus {
       @extend .formfield:focus;
+    }
+
+    @media (#{ $query-medium }) {
+      @extend .formfield-medium;
     }
   }
 }
@@ -244,6 +262,10 @@ section {
 
   > div {
     @extend .responsive-container;
+
+    @media (#{ $query-large }) {
+      @extend .responsive-container-large;
+    }
   }
 
   // subnavigation
@@ -260,14 +282,6 @@ section {
       &:visited {
         color: $color-link;
       }
-    }
-  }
-
-  p {
-    @media (#{ $query-medium }) {
-      font-size: 2em;
-      line-height: 1.8em; // 36px
-      margin-bottom: 1.8em; // 36px
     }
   }
 }
@@ -356,6 +370,14 @@ ul {
   }
 }
 
+@media (#{ $query-medium }) {
+  .formfield-medium {
+    @extend .formfield;
+
+    width: 47%;
+  }
+}
+
 .logo {
   position: relative;
   display: inline-block;
@@ -385,6 +407,13 @@ ul {
 .responsive-container {
   margin: 0 auto;
   width: 96%;
+}
+
+@media (#{ $query-large }) {
+  .responsive-container-large {
+    margin: 0 auto;
+    width: 92em;
+  }
 }
 
 .videoContainer {
@@ -424,7 +453,7 @@ ul {
 #avatar {
   border-radius: 50%;
   width: 49%;
-  width: 16em; // 256px
+  width: 12em; // 192px
 }
 
 #published {
