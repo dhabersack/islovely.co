@@ -31,7 +31,7 @@ button {
   display: block;
   font-size: 1.6em;
   line-height: 1.5em; // 24px
-  padding: 0.1875em 1.1875em; // 3px 19px
+  padding: 0.6875em 1.1875em; // 11px 19px
   text-decoration: underline;
 
   &:hover {
@@ -335,6 +335,7 @@ ul {
   @include linear-gradient($color-action-lighter, $color-action);
 
   border: 0.0625em solid darken($color-action, 15%); // 1px
+  display: inline-block;
   padding: 0.6875em 1.1875em; // 11px 19px
 
   &,
