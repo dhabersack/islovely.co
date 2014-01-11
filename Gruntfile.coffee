@@ -189,7 +189,7 @@ module.exports = (grunt) ->
         files: ['package.json', 'Gruntfile.coffee']
         tasks: 'compile'
       markup:
-        files: 'index.php'
+        files: 'index.html'
       script:
         files: 'coffee/**/*.coffee'
         tasks: 'compile:js'
