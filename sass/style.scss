@@ -137,6 +137,7 @@ header {
     > a {
       font-size: 2.5em;
       line-height: 1.44em; // 36px
+      margin-bottom: 0.48em; // 12px
       text-decoration: none;
 
       &,
@@ -178,7 +179,7 @@ header {
   }
 
   p {
-    // margin-bottom: 0;
+    margin-bottom: 0;
   }
 }
 

@@ -390,6 +390,7 @@ header > div {
   header > div > a {
     font-size: 2.5em;
     line-height: 1.44em;
+    margin-bottom: 0.48em;
     text-decoration: none; }
     header > div > a, header > div > a:visited {
       color: #3e3e3e; }
@@ -406,6 +407,8 @@ header > nav {
     header > nav a, header > nav a:visited {
       color: #fdfdfd; }
   @media (min-width: 960px) { }
+header p {
+  margin-bottom: 0; }
 
 hr {
   background: #bdbdbd;
