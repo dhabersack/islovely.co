@@ -172,15 +172,7 @@ module.exports = (grunt) ->
         report: 'min'
       run:
         files:
-          '<%= pkg.name %>.min.js': [
-            'bower_components/jquery/jquery.min.js'
-            'bower_components/handlebars/handlebars.js'
-            'bower_components/ember/ember.min.js'
-            'bower_components/ember-data/ember-data.min.js'
-            'bower_components/showdown/compressed/showdown.js'
-            'bower_components/momentjs/min/moment.min.js'
-            '<%= pkg.name %>.js'
-          ]
+          '<%= pkg.name %>.min.js': '<%= pkg.name %>.js'
 
     watch:
       options:
