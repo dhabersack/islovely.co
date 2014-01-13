@@ -386,6 +386,9 @@ h4 {
 header > div {
   padding: 1.2em 0;
   text-align: center; }
+  @media (min-width: 640px) {
+    header > div {
+      position: relative; } }
   @media (min-width: 960px) { }
   header > div > a {
     font-size: 2.5em;
@@ -394,6 +397,16 @@ header > div {
     text-decoration: none; }
     header > div > a, header > div > a:visited {
       color: #3e3e3e; }
+    @media (min-width: 640px) {
+      header > div > a {
+        margin-bottom: 0; } }
+  header > div > p {
+    margin-bottom: 0; }
+    @media (min-width: 640px) {
+      header > div > p {
+        position: absolute;
+        top: 0.75em;
+        right: 0; } }
 header li {
   float: left;
   margin-right: 0.625em; }
@@ -407,8 +420,6 @@ header > nav {
     header > nav a, header > nav a:visited {
       color: #fdfdfd; }
   @media (min-width: 960px) { }
-header p {
-  margin-bottom: 0; }
 
 hr {
   background: #bdbdbd;

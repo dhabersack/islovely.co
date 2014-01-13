@@ -130,6 +130,10 @@ header {
     padding: 1.2em 0;
     text-align: center;
 
+    @media (#{ $query-medium }) {
+      position: relative;
+    }
+
     @media (#{ $query-large }) {
       @extend .responsive-container-large;
     }
@@ -143,6 +147,20 @@ header {
       &,
       &:visited {
         color: $color-neutral-darkest;
+      }
+
+      @media (#{ $query-medium }) {
+        margin-bottom: 0;
+      }
+    }
+
+    > p {
+      margin-bottom: 0;
+
+      @media (#{ $query-medium }) {
+        position: absolute;
+        top: 0.75em; // 18px
+        right: 0;
       }
     }
   }
@@ -176,10 +194,6 @@ header {
         @extend .responsive-container-large;
       }
     }
-  }
-
-  p {
-    margin-bottom: 0;
   }
 }
 
