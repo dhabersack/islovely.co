@@ -323,6 +323,7 @@ button {
   font-size: 1.6em;
   line-height: 1.5em;
   padding: 0.6875em 1.1875em;
+  padding: 5px 14px;
   text-decoration: underline; }
   button:hover {
     background: #bdbdbd; }
@@ -350,10 +351,13 @@ footer {
   overflow: hidden;
   padding: 2.4em 0;
   text-align: center; }
+  footer button {
+    margin: 0 auto; }
   @media (min-width: 960px) { }
-  footer ul {
-    list-style: none;
+  footer form {
     margin-bottom: 0; }
+  footer ul {
+    list-style: none; }
 
 form {
   margin-bottom: 2.4em; }
@@ -436,7 +440,8 @@ img {
 label {
   display: block;
   font-size: 1.6em;
-  line-height: 1.5em; }
+  line-height: 1.5em;
+  margin-bottom: 0.375em; }
 
 li {
   font-size: 1.6em;

@@ -32,6 +32,7 @@ button {
   font-size: 1.6em;
   line-height: 1.5em; // 24px
   padding: 0.6875em 1.1875em; // 11px 19px
+  padding: 5px 14px;
   text-decoration: underline;
 
   &:hover {
@@ -68,6 +69,10 @@ footer {
   padding: 2.4em 0;
   text-align: center;
 
+  button {
+    margin: 0 auto;
+  }
+
   > div {
     @extend .responsive-container;
 
@@ -76,9 +81,12 @@ footer {
     }
   }
 
+  form {
+    margin-bottom: 0;
+  }
+
   ul {
     list-style: none;
-    margin-bottom: 0;
   }
 }
 
@@ -228,6 +236,7 @@ label {
   display: block;
   font-size: 1.6em;
   line-height: 1.5em; // 24px
+  margin-bottom: 0.375em; // 6px
 }
 
 li {
