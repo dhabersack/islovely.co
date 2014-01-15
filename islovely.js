@@ -1,6 +1,7 @@
 (function() {
   'use strict';
-  var showdown;
+  var showdown,
+    _this = this;
 
   window.Portfolio = Ember.Application.create();
 
@@ -10,19 +11,19 @@
     },
     setURL: function(path) {
       Ember.get(this, 'location').hash = "!" + path;
-      return Ember.set(this, 'lastSetURL', "!" + path);
+      Ember.set(this, 'lastSetURL', "!" + path);
     },
     onUpdateURL: function(callback) {
       var guid;
-      guid = Ember.guidFor(this);
+      guid = Ember.guidFor(_this);
       return Ember.$(window).bind("hashchange.ember-location-{ guid }", function() {
         return Ember.run(function() {
           var path;
           path = location.hash.substr(2);
-          if (Ember.get(this, 'lastSetURL') === path) {
+          if (Ember.get(_this, 'lastSetURL') === path) {
             return;
           }
-          Ember.set(this, 'lastSetURL', null);
+          Ember.set(_this, 'lastSetURL', null);
           return callback(location.hash.substr(2));
         });
       });
