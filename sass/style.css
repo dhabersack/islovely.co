@@ -435,7 +435,6 @@ img {
   display: block;
   margin: 0 auto; }
 
-@media (min-width: 640px) { }
 
 label {
   display: block;
@@ -503,6 +502,7 @@ table {
 tbody tr:nth-of-type(even) {
   background: #e3e3e3; }
 
+@media (min-width: 640px) { }
 
 td {
   padding: 0.1875em 0.625em; }
@@ -537,7 +537,7 @@ ul {
 .call-to-action-container {
   text-align: center; }
 
-.formfield, input[type="email"], input[type="text"], textarea, .formfield-medium {
+.formfield, input[type="email"], input[type="text"], textarea {
   -webkit-box-shadow: 0 0 0.0625em #3e3e3e;
   box-shadow: 0 0 0.0625em #3e3e3e;
   -webkit-border-radius: 0.125em;
@@ -547,16 +547,24 @@ ul {
   font-size: 1.6em;
   line-height: 1.5em;
   margin-bottom: 0.75em;
-  padding: 0.1875em 0.5%;
-  width: 99%;
+  padding: 0.375em 2%;
+  width: 96%;
   -webkit-appearance: none; }
   .formfield:focus, input[type="email"]:focus, input[type="text"]:focus, textarea:focus {
     background: #fff2a5;
     outline: none; }
 
 @media (min-width: 640px) {
-  .formfield-medium, input[type="email"], input[type="text"] {
+  .formfield, input[type="email"], input[type="text"], textarea {
+    padding-left: 1%;
+    padding-right: 1%;
     width: 47%; } }
+
+@media (min-width: 640px) {
+  .textfield, textarea {
+    padding-left: 1%;
+    padding-right: 1%;
+    width: 98%; } }
 
 .logo {
   position: relative;
