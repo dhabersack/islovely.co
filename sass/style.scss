@@ -456,15 +456,26 @@ ul {
     width: 1.25em;
     left: 0;
   }
+}
 
-  &.islovely {
-    padding-left: 2.2em; // 55px
-    line-height: 1.92em; // 60px
+.logo-github,
+.logo-islovely,
+.logo-twitter,
+.logo-xing {
+  @extend .logo;
 
-    &::before {
-      width: 1.92em; // 60px
-      height: 1.92em; // 60px
-    }
+  &::before {
+    @extend .logo::before;
+  }
+}
+
+.logo-islovely {
+  padding-left: 2.2em; // 55px
+  line-height: 1.92em; // 60px
+
+  &::before {
+    width: 1.92em; // 60px
+    height: 1.92em; // 60px
   }
 }
 

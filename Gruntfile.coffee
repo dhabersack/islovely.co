@@ -83,10 +83,10 @@ module.exports = (grunt) ->
             violet: '#904fff'
             yellow: '#ffe226'
           customselectors:
-            'github-logo': '.github.logo::before'
-            'islovely-logo-blue': '.islovely.logo::before'
-            'twitter-logo': '.twitter.logo::before'
-            'xing-logo': '.xing.logo::before'
+            'logo-github': '.logo-github::before'
+            'logo-islovely-blue': '.logo-islovely::before'
+            'logo-twitter': '.logo-twitter::before'
+            'logo-xing': '.logo-xing::before'
 
     htmlmin:
       options:
