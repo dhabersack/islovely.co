@@ -1,6 +1,6 @@
 (function() {
   'use strict';
-  var showdown,
+  var lastUrl, showdown,
     _this = this;
 
   window.Portfolio = Ember.Application.create();
@@ -48,7 +48,22 @@
     return this.resource('posts');
   });
 
-  Portfolio.Router.reopen({
+  Portfolio.Router.reopen(lastUrl = void 0, {
+    didTransition: function(infos) {
+      var _this = this;
+      this._super(infos);
+      if (!window.ga) {
+        return;
+      }
+      return Ember.run.next(function() {
+        var url;
+        url = _this.get('url');
+        if (url !== lastUrl) {
+          lastUrl = url;
+          return ga('send', 'pageview', url);
+        }
+      });
+    },
     location: 'hashbang'
   });
 

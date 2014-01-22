@@ -139,6 +139,7 @@ module.exports = (grunt) ->
         globals:
           'DS': true
           'Ember': true
+          'ga': true
           'Portfolio': true
           'Showdown': true
           'moment': true

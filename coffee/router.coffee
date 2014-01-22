@@ -1,25 +1,39 @@
 Portfolio.Router.map () ->
-  this.resource('client', { path: '/clients/:client_slug' })
-  this.resource('clients')
+  @resource('client', { path: '/clients/:client_slug' })
+  @resource('clients')
 
-  this.resource('page', { path: '/pages/:page_slug' })
-  this.resource('pages')
+  @resource('page', { path: '/pages/:page_slug' })
+  @resource('pages')
 
-  this.resource('post', { path: '/posts/:post_slug' })
-  this.resource('posts')
+  @resource('post', { path: '/posts/:post_slug' })
+  @resource('posts')
 
 Portfolio.Router.reopen(
+  lastUrl = undefined
+
+  didTransition: (infos) ->
+    @_super(infos)
+
+    return unless window.ga
+
+    Ember.run.next =>
+      url = @get('url')
+
+      if (url isnt lastUrl)
+        lastUrl = url
+        ga('send', 'pageview', url)
+
   location: 'hashbang'
 )
 
 Portfolio.Route = Ember.Route.extend(
   renderTemplate: (controller, model) ->
-    this.render()
+    @render()
 
-    title = this.title(model) if this.title
+    title = @title(model) if @title
     document.title = if title then "#{ title } | islovely" else 'islovely'
 
-    $('meta[name=description]').attr('content', this.description(model)) if this.description
+    $('meta[name=description]').attr('content', @description(model)) if @description
 
     return
 )
@@ -29,7 +43,7 @@ Portfolio.ClientRoute = Portfolio.Route.extend(
     model.get('description')
 
   model: (params) ->
-    this.store.find('client', params.client_slug)
+    @store.find('client', params.client_slug)
 
   serialize: (model) ->
     { client_slug: model.get('slug') }
@@ -43,7 +57,7 @@ Portfolio.ClientsRoute = Portfolio.Route.extend(
     'A selection of client projects I have worked on.'
 
   model: () ->
-    this.store.find('client')
+    @store.find('client')
 
   title: () ->
     'Clients'
@@ -54,7 +68,7 @@ Portfolio.IndexRoute = Portfolio.Route.extend(
     model.get('description')
 
   model: () ->
-    this.store.find('page', 'index')
+    @store.find('page', 'index')
 
   title: (model) ->
     model.get('title')
@@ -65,7 +79,7 @@ Portfolio.PageRoute = Portfolio.Route.extend(
     model.get('description')
 
   model: (params) ->
-    this.store.find('page', params.page_slug)
+    @store.find('page', params.page_slug)
 
   serialize: (model) ->
     { page_slug: model.get('slug') }
@@ -79,7 +93,7 @@ Portfolio.PagesRoute = Portfolio.Route.extend(
     'Find more information about me and the services I offer.'
 
   model: () ->
-    this.store.find('page')
+    @store.find('page')
 
   title: () ->
     'Pages'
@@ -90,7 +104,7 @@ Portfolio.PostRoute = Portfolio.Route.extend(
     model.get('description')
 
   model: (params) ->
-    this.store.find('post', params.post_slug)
+    @store.find('post', params.post_slug)
 
   serialize: (model) ->
     { post_slug: model.get('slug') }
@@ -104,7 +118,7 @@ Portfolio.PostsRoute = Portfolio.Route.extend(
     'Articles on technology, development, consulting, and teaching.'
 
   model: () ->
-    this.store.find('post')
+    @store.find('post')
 
   title: () ->
     'Posts'
