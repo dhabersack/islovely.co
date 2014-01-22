@@ -3,7 +3,6 @@
 urls = [
   '#!/'
 
-  '#!/pages'
   '#!/pages/about'
   '#!/pages/contact'
   '#!/pages/imprint'
