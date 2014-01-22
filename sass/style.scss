@@ -12,6 +12,16 @@ a {
   }
 }
 
+blockquote {
+  @extend .block-content;
+
+  border-color: $color-highlight;
+
+  > p {
+    font-size: 1em;
+  }
+}
+
 body {
   background: $color-neutral-lightest;
   color: $color-neutral-darkest;
@@ -273,15 +283,12 @@ p {
 }
 
 pre {
-  border-left: 0.25em solid $color-neutral-darkest; // 4px
-  font: {
-    family: $font-family-code;
-    size: 1.6em;
-  }
-  line-height: 1.5em; // 24px
-  margin: 0 0 1.5em; // 0 0 24px
+  @extend .block-content;
+
+  border-color: $color-neutral-darkest;
+  font-family: $font-family-code;
   overflow: scroll;
-  padding-left: 0.6875em; // 11px
+
 }
 
 section {
@@ -360,6 +367,17 @@ ul {
   list-style-position: inside;
   margin: 0 0 2.4em;
   padding: 0;
+}
+
+.block-content {
+  border-left: {
+    style: solid;
+    width: 0.25em; // 4px
+  }
+  font-size: 1.6em;
+  line-height: 1.5em; // 24px
+  margin: 0 0 1.5em; // 0 0 24px
+  padding-left: 0.6875em; // 11px
 }
 
 .call-to-action {

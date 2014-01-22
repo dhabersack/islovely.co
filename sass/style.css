@@ -303,6 +303,11 @@ a {
   a:visited {
     color: #904fff; }
 
+blockquote {
+  border-color: #ffe226; }
+  blockquote > p {
+    font-size: 1em; }
+
 body {
   background: #fdfdfd;
   color: #3e3e3e;
@@ -471,13 +476,9 @@ p {
   margin: 0 0 1.5em; }
 
 pre {
-  border-left: 0.25em solid #3e3e3e;
+  border-color: #3e3e3e;
   font-family: 'Source Code Pro', 'Courier New', Courier, monospace;
-  font-size: 1.6em;
-  line-height: 1.5em;
-  margin: 0 0 1.5em;
-  overflow: scroll;
-  padding-left: 0.6875em; }
+  overflow: scroll; }
 
 section {
   overflow: hidden;
@@ -518,6 +519,14 @@ ul {
   list-style-position: inside;
   margin: 0 0 2.4em;
   padding: 0; }
+
+.block-content, blockquote, pre {
+  border-left-style: solid;
+  border-left-width: 0.25em;
+  font-size: 1.6em;
+  line-height: 1.5em;
+  margin: 0 0 1.5em;
+  padding-left: 0.6875em; }
 
 .call-to-action {
   -webkit-border-radius: 0.125em;
