@@ -57,6 +57,7 @@
       }
       return Ember.run.next(function() {
         var url;
+        window.scrollTo(0, 0);
         url = _this.get('url');
         if (url !== lastUrl) {
           lastUrl = url;

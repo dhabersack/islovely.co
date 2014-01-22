@@ -48,8 +48,9 @@ Portfolio.Router.reopen(
     return unless window.ga
 
     Ember.run.next =>
-      url = @get('url')
+      window.scrollTo(0, 0)
 
+      url = @get('url')
       if (url isnt lastUrl)
         lastUrl = url
         ga('send', 'pageview', url)
