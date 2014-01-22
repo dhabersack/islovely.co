@@ -304,7 +304,8 @@ a {
     color: #904fff; }
 
 blockquote {
-  border-color: #ffe226; }
+  border-color: #ffea72;
+  font-style: italic; }
   blockquote > p {
     font-size: 1em; }
 

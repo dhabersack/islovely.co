@@ -15,7 +15,8 @@ a {
 blockquote {
   @extend .block-content;
 
-  border-color: $color-highlight;
+  border-color: $color-highlight-lighter;
+  font-style: italic;
 
   > p {
     font-size: 1em;
