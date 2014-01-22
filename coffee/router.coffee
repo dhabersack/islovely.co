@@ -55,6 +55,9 @@ Portfolio.IndexRoute = Portfolio.Route.extend(
 
   model: () ->
     this.store.find('page', 'index')
+
+  title: (model) ->
+    model.get('title')
 )
 
 Portfolio.PageRoute = Portfolio.Route.extend(

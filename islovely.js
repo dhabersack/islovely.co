@@ -101,6 +101,9 @@
     },
     model: function() {
       return this.store.find('page', 'index');
+    },
+    title: function(model) {
+      return model.get('title');
     }
   });
 
