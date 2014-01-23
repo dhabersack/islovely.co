@@ -1,7 +1,4 @@
 Portfolio.Router.map () ->
-  @resource('client', { path: '/clients/:client_slug' })
-  @resource('clients')
-
   @resource('page', { path: '/pages/:page_slug' })
   @resource('pages')
 
@@ -37,31 +34,6 @@ Portfolio.Route = Ember.Route.extend(
     $('meta[name=description]').attr('content', @description(model)) if @description
 
     return
-)
-
-Portfolio.ClientRoute = Portfolio.Route.extend(
-  description: (model) ->
-    model.get('description')
-
-  model: (params) ->
-    @store.find('client', params.client_slug)
-
-  serialize: (model) ->
-    { client_slug: model.get('slug') }
-
-  title: (model) ->
-    model.get('title')
-)
-
-Portfolio.ClientsRoute = Portfolio.Route.extend(
-  description: () ->
-    'A selection of client projects I have worked on.'
-
-  model: () ->
-    @store.find('client')
-
-  title: () ->
-    'Clients'
 )
 
 Portfolio.IndexRoute = Portfolio.Route.extend(

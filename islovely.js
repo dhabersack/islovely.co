@@ -34,10 +34,6 @@
   }));
 
   Portfolio.Router.map(function() {
-    this.resource('client', {
-      path: '/clients/:client_slug'
-    });
-    this.resource('clients');
     this.resource('page', {
       path: '/pages/:page_slug'
     });
@@ -79,35 +75,6 @@
       if (this.description) {
         $('meta[name=description]').attr('content', this.description(model));
       }
-    }
-  });
-
-  Portfolio.ClientRoute = Portfolio.Route.extend({
-    description: function(model) {
-      return model.get('description');
-    },
-    model: function(params) {
-      return this.store.find('client', params.client_slug);
-    },
-    serialize: function(model) {
-      return {
-        client_slug: model.get('slug')
-      };
-    },
-    title: function(model) {
-      return model.get('title');
-    }
-  });
-
-  Portfolio.ClientsRoute = Portfolio.Route.extend({
-    description: function() {
-      return 'A selection of client projects I have worked on.';
-    },
-    model: function() {
-      return this.store.find('client');
-    },
-    title: function() {
-      return 'Clients';
     }
   });
 
@@ -185,21 +152,6 @@
     host: 'http://api.islovely.co'
   });
 
-  Portfolio.ClientsController = Ember.ArrayController.extend({
-    sortProperties: ['id'],
-    sortAscending: false,
-    sortFunction: function(x, y) {
-      if (x === y) {
-        return 0;
-      }
-      if (parseInt(x, 10) < parseInt(y, 10)) {
-        return -1;
-      } else {
-        return 1;
-      }
-    }
-  });
-
   Portfolio.PostsController = Ember.ArrayController.extend({
     sortProperties: ['id'],
     sortAscending: false,
@@ -213,14 +165,6 @@
         return 1;
       }
     }
-  });
-
-  Portfolio.Client = DS.Model.extend({
-    body: DS.attr('string'),
-    description: DS.attr('string'),
-    slug: DS.attr('string'),
-    title: DS.attr('string'),
-    url: DS.attr('string')
   });
 
   Portfolio.Page = DS.Model.extend({
