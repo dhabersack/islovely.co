@@ -1,6 +1,6 @@
 Ember.Location.registerImplementation('hashbang', Ember.HashLocation.extend({
   getURL: function() {
-    Ember.get(this, 'location').hash.substr(2);
+    return Ember.get(this, 'location').hash.substr(2);
   },
 
   setURL: function(path) {

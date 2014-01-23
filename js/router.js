@@ -7,16 +7,10 @@ App.Router.map(function() {
 });
 
 App.Router.reopen({
-  // lastUrl: undefined,
-
   location: 'hashbang',
 
   didTransition: function(infos) {
     this._super(infos);
-
-    if (!window.ga) {
-      return;
-    }
 
     Ember.run.scheduleOnce('afterRender', this, 'scrollToTop');
     Ember.run.scheduleOnce('afterRender', this, 'sendAnalytics');
@@ -28,15 +22,11 @@ App.Router.reopen({
   },
 
   sendAnalytics: function() {
-    console.log(this.router);
-    // var url = this.get('url');
+    if (!window.ga) {
+      return;
+    }
 
-    // if (url !== this.lastUrl) {
-       // lastUrl = url;
-       console.log('TODO HERE');
-       // console.log(url);
-       // ga('send', 'pageview', url);
-    // }
+    ga('send', 'pageview', this.get('url'));
   }
 });
 
