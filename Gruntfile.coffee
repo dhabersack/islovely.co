@@ -136,13 +136,13 @@ module.exports = (grunt) ->
         eqeqeq: true
         expr: true
         globals:
+          '$': true
+          'App': true
           'DS': true
           'Ember': true
           'ga': true
-          'Portfolio': true
-          'Showdown': true
           'moment': true
-          '$': true
+          'Showdown': true
         undef: true
         unused: true
         strict: true

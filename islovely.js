@@ -33,7 +33,7 @@
     }
   }));
 
-  Portfolio.Router.map(function() {
+  App.Router.map(function() {
     this.resource('page', {
       path: '/pages/:page_slug'
     });
@@ -44,7 +44,7 @@
     return this.resource('posts');
   });
 
-  Portfolio.Router.reopen(lastUrl = void 0, {
+  App.Router.reopen(lastUrl = void 0, {
     didTransition: function(infos) {
       var _this = this;
       this._super(infos);
@@ -64,7 +64,7 @@
     location: 'hashbang'
   });
 
-  Portfolio.Route = Ember.Route.extend({
+  App.Route = Ember.Route.extend({
     renderTemplate: function(controller, model) {
       var title;
       this.render();
@@ -78,7 +78,7 @@
     }
   });
 
-  Portfolio.IndexRoute = Portfolio.Route.extend({
+  App.IndexRoute = App.Route.extend({
     description: function(model) {
       return model.get('description');
     },
@@ -90,7 +90,7 @@
     }
   });
 
-  Portfolio.PageRoute = Portfolio.Route.extend({
+  App.PageRoute = App.Route.extend({
     description: function(model) {
       return model.get('description');
     },
@@ -107,7 +107,7 @@
     }
   });
 
-  Portfolio.PagesRoute = Portfolio.Route.extend({
+  App.PagesRoute = App.Route.extend({
     description: function() {
       return 'Find more information about me and the services I offer.';
     },
@@ -119,7 +119,7 @@
     }
   });
 
-  Portfolio.PostRoute = Portfolio.Route.extend({
+  App.PostRoute = App.Route.extend({
     description: function(model) {
       return model.get('description');
     },
@@ -136,7 +136,7 @@
     }
   });
 
-  Portfolio.PostsRoute = Portfolio.Route.extend({
+  App.PostsRoute = App.Route.extend({
     description: function() {
       return 'Articles on technology, development, consulting, and teaching.';
     },
@@ -148,11 +148,11 @@
     }
   });
 
-  Portfolio.ApplicationAdapter = DS.RESTAdapter.extend({
+  App.ApplicationAdapter = DS.RESTAdapter.extend({
     host: 'http://api.islovely.co'
   });
 
-  Portfolio.PostsController = Ember.ArrayController.extend({
+  App.PostsController = Ember.ArrayController.extend({
     sortProperties: ['id'],
     sortAscending: false,
     sortFunction: function(x, y) {
@@ -167,14 +167,14 @@
     }
   });
 
-  Portfolio.Page = DS.Model.extend({
+  App.Page = DS.Model.extend({
     body: DS.attr('string'),
     description: DS.attr('string'),
     slug: DS.attr('string'),
     title: DS.attr('string')
   });
 
-  Portfolio.Post = DS.Model.extend({
+  App.Post = DS.Model.extend({
     body: DS.attr('string'),
     description: DS.attr('string'),
     published: DS.attr('date'),

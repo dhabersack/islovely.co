@@ -1,4 +1,4 @@
-Portfolio.PostsController = Ember.ArrayController.extend(
+App.PostsController = Ember.ArrayController.extend(
   sortProperties: ['id']
   sortAscending: false
 

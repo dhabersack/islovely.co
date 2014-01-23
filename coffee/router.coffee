@@ -1,11 +1,11 @@
-Portfolio.Router.map () ->
+App.Router.map () ->
   @resource('page', { path: '/pages/:page_slug' })
   @resource('pages')
 
   @resource('post', { path: '/posts/:post_slug' })
   @resource('posts')
 
-Portfolio.Router.reopen(
+App.Router.reopen(
   lastUrl = undefined
 
   didTransition: (infos) ->
@@ -24,7 +24,7 @@ Portfolio.Router.reopen(
   location: 'hashbang'
 )
 
-Portfolio.Route = Ember.Route.extend(
+App.Route = Ember.Route.extend(
   renderTemplate: (controller, model) ->
     @render()
 
@@ -36,7 +36,7 @@ Portfolio.Route = Ember.Route.extend(
     return
 )
 
-Portfolio.IndexRoute = Portfolio.Route.extend(
+App.IndexRoute = App.Route.extend(
   description: (model) ->
     model.get('description')
 
@@ -47,7 +47,7 @@ Portfolio.IndexRoute = Portfolio.Route.extend(
     model.get('title')
 )
 
-Portfolio.PageRoute = Portfolio.Route.extend(
+App.PageRoute = App.Route.extend(
   description: (model) ->
     model.get('description')
 
@@ -61,7 +61,7 @@ Portfolio.PageRoute = Portfolio.Route.extend(
     model.get('title')
 )
 
-Portfolio.PagesRoute = Portfolio.Route.extend(
+App.PagesRoute = App.Route.extend(
   description: () ->
     'Find more information about me and the services I offer.'
 
@@ -72,7 +72,7 @@ Portfolio.PagesRoute = Portfolio.Route.extend(
     'Pages'
 )
 
-Portfolio.PostRoute = Portfolio.Route.extend(
+App.PostRoute = App.Route.extend(
   description: (model) ->
     model.get('description')
 
@@ -86,7 +86,7 @@ Portfolio.PostRoute = Portfolio.Route.extend(
     model.get('title')
 )
 
-Portfolio.PostsRoute = Portfolio.Route.extend(
+App.PostsRoute = App.Route.extend(
   description: () ->
     'Articles on technology, development, consulting, and teaching.'
 

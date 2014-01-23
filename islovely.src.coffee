@@ -29,14 +29,14 @@ Ember.Location.registerImplementation('hashbang', Ember.HashLocation.extend(
     "#!#{ url }"
 ))
 
-Portfolio.Router.map () ->
+App.Router.map () ->
   @resource('page', { path: '/pages/:page_slug' })
   @resource('pages')
 
   @resource('post', { path: '/posts/:post_slug' })
   @resource('posts')
 
-Portfolio.Router.reopen(
+App.Router.reopen(
   lastUrl = undefined
 
   didTransition: (infos) ->
@@ -55,7 +55,7 @@ Portfolio.Router.reopen(
   location: 'hashbang'
 )
 
-Portfolio.Route = Ember.Route.extend(
+App.Route = Ember.Route.extend(
   renderTemplate: (controller, model) ->
     @render()
 
@@ -67,7 +67,7 @@ Portfolio.Route = Ember.Route.extend(
     return
 )
 
-Portfolio.IndexRoute = Portfolio.Route.extend(
+App.IndexRoute = App.Route.extend(
   description: (model) ->
     model.get('description')
 
@@ -78,7 +78,7 @@ Portfolio.IndexRoute = Portfolio.Route.extend(
     model.get('title')
 )
 
-Portfolio.PageRoute = Portfolio.Route.extend(
+App.PageRoute = App.Route.extend(
   description: (model) ->
     model.get('description')
 
@@ -92,7 +92,7 @@ Portfolio.PageRoute = Portfolio.Route.extend(
     model.get('title')
 )
 
-Portfolio.PagesRoute = Portfolio.Route.extend(
+App.PagesRoute = App.Route.extend(
   description: () ->
     'Find more information about me and the services I offer.'
 
@@ -103,7 +103,7 @@ Portfolio.PagesRoute = Portfolio.Route.extend(
     'Pages'
 )
 
-Portfolio.PostRoute = Portfolio.Route.extend(
+App.PostRoute = App.Route.extend(
   description: (model) ->
     model.get('description')
 
@@ -117,7 +117,7 @@ Portfolio.PostRoute = Portfolio.Route.extend(
     model.get('title')
 )
 
-Portfolio.PostsRoute = Portfolio.Route.extend(
+App.PostsRoute = App.Route.extend(
   description: () ->
     'Articles on technology, development, consulting, and teaching.'
 
@@ -128,11 +128,11 @@ Portfolio.PostsRoute = Portfolio.Route.extend(
     'Posts'
 )
 
-Portfolio.ApplicationAdapter = DS.RESTAdapter.extend(
+App.ApplicationAdapter = DS.RESTAdapter.extend(
   host: 'http://api.islovely.co'
 )
 
-Portfolio.PostsController = Ember.ArrayController.extend(
+App.PostsController = Ember.ArrayController.extend(
   sortProperties: ['id']
   sortAscending: false
 
@@ -141,14 +141,14 @@ Portfolio.PostsController = Ember.ArrayController.extend(
     if parseInt(x, 10) < parseInt(y, 10) then -1 else 1
 )
 
-Portfolio.Page = DS.Model.extend(
+App.Page = DS.Model.extend(
   body:        DS.attr('string')
   description: DS.attr('string')
   slug:        DS.attr('string')
   title:       DS.attr('string')
 )
 
-Portfolio.Post = DS.Model.extend(
+App.Post = DS.Model.extend(
   body:        DS.attr('string')
   description: DS.attr('string')
   published:   DS.attr('date')

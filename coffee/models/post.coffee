@@ -1,4 +1,4 @@
-Portfolio.Post = DS.Model.extend(
+App.Post = DS.Model.extend(
   body:        DS.attr('string')
   description: DS.attr('string')
   published:   DS.attr('date')
