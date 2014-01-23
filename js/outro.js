@@ -1,1 +1,1 @@
-}(window));
+}).call(this);

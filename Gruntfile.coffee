@@ -185,7 +185,7 @@ module.exports = (grunt) ->
       markup:
         files: 'index.html'
       script:
-        files: jsfiles
+        files: 'js/**/*.js'
         tasks: 'compile:js'
       stylesheets:
         files: 'sass/**/*.scss'

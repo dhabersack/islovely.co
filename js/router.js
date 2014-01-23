@@ -35,11 +35,9 @@ App.Route = Ember.Route.extend({
     this.render();
 
     var title = 'islovely';
-
     if (this.title) {
       title = this.title(model) + ' | islovely';
     }
-
     document.title = title;
 
     if (this.description) {
@@ -82,7 +80,7 @@ App.PageRoute = App.Route.extend({
 
 App.PagesRoute = App.Route.extend({
   description: function() {
-    return 'Find more information about me and the services I offer.';
+    return 'Information about me and the services I offer.';
   },
 
   model: function() {
@@ -114,7 +112,7 @@ App.PostRoute = App.Route.extend({
 
 App.PostsRoute = App.Route.extend({
   description: function() {
-    return 'Articles on technology, development, consulting, and teaching.';
+    return 'Articles on development, consulting, and teaching.';
   },
 
   model: function() {
