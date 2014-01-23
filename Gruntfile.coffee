@@ -1,5 +1,16 @@
 'use strict'
 
+jsfiles = [
+  'js/application.js'
+  'js/location.js'
+  'js/router.js'
+  'js/adapter.js'
+  'js/store.js'
+  'js/controllers/**/*.js'
+  'js/models/**/*.js'
+  'js/helpers.js'
+]
+
 urls = [
   '#!/'
 
@@ -34,23 +45,14 @@ module.exports = (grunt) ->
       presnapshots:
         src: ['sitemap.xml', 'snapshots', 'snapshots-build']
 
-    coffee:
-      options:
-        sourceMap: true
-      run:
+    concat:
+      js:
         files:
           '<%= pkg.name %>.js': [
-            'coffee/application.coffee'
-            'coffee/location.coffee'
-            'coffee/router.coffee'
-            'coffee/adapter.coffee'
-            'coffee/store.coffee'
-            'coffee/controllers/**/*.coffee'
-            'coffee/models/**/*.coffee'
-            'coffee/helpers.coffee'
+            'js/intro.js'
+            jsfiles
+            'js/outro.js'
           ]
-
-    concat:
       sitemap:
         src: ['sitemap-src/header.xml', 'sitemap-src/list.xml', 'sitemap-src/footer.xml']
         dest: 'sitemap.xml'
@@ -183,7 +185,7 @@ module.exports = (grunt) ->
       markup:
         files: 'index.html'
       script:
-        files: 'coffee/**/*.coffee'
+        files: jsfiles
         tasks: 'compile:js'
       stylesheets:
         files: 'sass/**/*.scss'
@@ -193,7 +195,6 @@ module.exports = (grunt) ->
         tasks: 'compile:vectors'
 
   grunt.loadNpmTasks('grunt-contrib-clean')
-  grunt.loadNpmTasks('grunt-contrib-coffee')
   grunt.loadNpmTasks('grunt-contrib-concat')
   grunt.loadNpmTasks('grunt-contrib-cssmin')
   grunt.loadNpmTasks('grunt-contrib-htmlmin')
@@ -208,7 +209,7 @@ module.exports = (grunt) ->
 
   grunt.registerTask('compile', ['compile:vectors', 'compile:css', 'compile:js'])
   grunt.registerTask('compile:css', ['sass', 'cssmin:css'])
-  grunt.registerTask('compile:js', ['coffee', 'jshint', 'uglify'])
+  grunt.registerTask('compile:js', ['concat:js', 'jshint', 'uglify'])
   grunt.registerTask('compile:vectors', ['grunticon', 'cssmin:grunticon'])
   grunt.registerTask('default', ['compile', 'watch'])
   grunt.registerTask('sitemap', ['shell:createSitemapList', 'concat:sitemap'])
