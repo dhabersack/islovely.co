@@ -176,11 +176,7 @@ App.PostsController = Ember.ArrayController.extend({
       return 0;
     }
 
-    if (parseInt(x, 10) < parseInt(y, 10)) {
-      return -1;
-    } else {
-      return 1;
-    }
+    return (parseInt(x, 10) < parseInt(y, 10)) ? -1 : 1;
   }
 });
 
