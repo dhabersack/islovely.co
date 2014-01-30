@@ -544,9 +544,6 @@ ul {
   .call-to-action:hover {
     background: #ffe226; }
 
-.call-to-action-container {
-  text-align: center; }
-
 .formfield, input[type="email"], input[type="text"], textarea {
   -webkit-box-shadow: 0 0 0.0625em #3e3e3e;
   box-shadow: 0 0 0.0625em #3e3e3e;
