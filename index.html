@@ -43,6 +43,9 @@
               {{link-to 'About' 'page' 'about'}}
             </li>
             <li>
+              {{link-to 'Projects' 'projects'}}
+            </li>
+            <li>
               {{link-to 'Posts' 'posts'}}
             </li>
             <li>
@@ -146,6 +149,31 @@
       {{#each this}}
         <article>
           <h2>{{link-to title 'post' this}}</h2>
+
+          <p>
+            {{description}}
+          </p>
+        </article>
+      {{/each}}
+      </ol>
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="project">
+      <nav>
+        {{link-to '&larr; Projects' 'projects'}}
+      </nav>
+
+      <h1>{{title}}</h1>
+
+      {{markdown body}}
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="projects">
+      <h1>Projects</h1>
+
+      {{#each this}}
+        <article>
+          <h2>{{link-to title 'project' this}}</h2>
 
           <p>
             {{description}}

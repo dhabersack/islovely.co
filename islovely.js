@@ -43,6 +43,9 @@ App.Router.map(function() {
 
   this.resource('posts');
   this.resource('post', { path: '/posts/:post_slug' });
+
+  this.resource('projects');
+  this.resource('project', { path: '/projects/:project_slug' });
 });
 
 App.Router.reopen({
@@ -160,6 +163,38 @@ App.PostsRoute = App.Route.extend({
 
   title: function() {
     return 'Posts';
+  }
+});
+
+App.ProjectRoute = App.Route.extend({
+  description: function(model) {
+    return model.get('description');
+  },
+
+  model: function(params) {
+    return this.store.find('project', params.project_slug);
+  },
+
+  serialize: function(model) {
+    return { project_slug: model.get('slug') };
+  },
+
+  title: function(model) {
+    return model.get('title');
+  }
+});
+
+App.ProjectsRoute = App.Route.extend({
+  description: function() {
+    return 'A list of my projects and open source software.';
+  },
+
+  model: function() {
+    return this.store.find('project');
+  },
+
+  title: function() {
+    return 'Projects';
   }
 });
 
