@@ -312,7 +312,7 @@ blockquote {
 body {
   background: #fdfdfd;
   color: #3e3e3e;
-  font-family: 'Lato', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'PT Serif', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 62.5%;
   font-weight: 400; }
 
@@ -369,7 +369,7 @@ form {
   margin-bottom: 2.4em; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Lato', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'PT Serif', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-weight: 700;
   margin: 0; }
 
@@ -458,7 +458,7 @@ mark {
   padding: 0.0625em 0.125em; }
 
 nav {
-  font-family: 'Lato', Arial, 'Helvetica Neue', Helvetica, sans-serif; }
+  font-family: 'PT Serif', Arial, 'Helvetica Neue', Helvetica, sans-serif; }
   nav a {
     display: block; }
   nav > ol {
@@ -486,7 +486,7 @@ section {
   padding-top: 1.2em; }
   @media (min-width: 960px) { }
   section nav {
-    font-family: 'Lato', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    font-family: 'PT Serif', Arial, 'Helvetica Neue', Helvetica, sans-serif;
     padding: 0; }
     section nav a {
       display: inline-block;
