@@ -16,11 +16,8 @@ blockquote {
   @extend .block-content;
 
   border-color: $color-highlight-lighter;
+  color: $color-neutral-darker;
   font-style: italic;
-
-  > p {
-    font-size: 1em;
-  }
 }
 
 body {
@@ -94,6 +91,10 @@ footer {
 
   form {
     margin-bottom: 0;
+
+    p {
+      margin-bottom: 0.375em; // 6px
+    }
   }
 
   ul {
@@ -119,15 +120,37 @@ h6 {
 }
 
 h1 {
-  font-size: 3em;
-  line-height: 1.6em; // 48px
-  margin-bottom: 0.4em; // 12px
+  font-size: 3.2em;
+  line-height: 1.5em; // 48px
+  margin-bottom: 0.375em; // 12px
+
+  @media (#{ $query-medium }) {
+    font-size: 4em;
+    margin-bottom: 0.3em; // 12px
+  }
+
+  @media (#{ $query-large }) {
+    font-size: 4.8em;
+    margin-bottom: 0.25em; // 12px
+  }
 }
 
 h2 {
   font-size: 2.4em;
   line-height: 1.5em; // 36px
   margin-bottom: 0.5em; // 12px
+
+  @media (#{ $query-medium }) {
+    font-size: 3em;
+    line-height: 1.6em; // 48px
+    margin-bottom: 0.4em; // 12px
+  }
+
+  @media (#{ $query-large }) {
+    font-size: 4em;
+    line-height: 1.5em; // 60px
+    margin-bottom: 0.3em; // 12px
+  }
 }
 
 h3 {
@@ -193,6 +216,11 @@ header {
     &:last-of-type {
       margin-right: 0;
     }
+
+    @media (#{ $query-large }) {
+      font-size: 2em;
+      line-height: 1.8em; // 36px
+    }
   }
 
   > nav {
@@ -241,8 +269,21 @@ input {
 label {
   display: block;
   font-size: 1.6em;
+  font-weight: 700;
   line-height: 1.5em; // 24px
   margin-bottom: 0.375em; // 6px
+
+  @media (#{ $query-medium }) {
+    font-size: 2em;
+    line-height: 1.8em; // 36px
+    margin-bottom: 0.3em; // 6px
+  }
+
+  @media (#{ $query-large }) {
+    font-size: 2.4em;
+    line-height: 1.5em; // 36px
+    margin-bottom: 0.25em; // 6px
+  }
 }
 
 li {
@@ -295,11 +336,38 @@ section {
   overflow: hidden;
   padding-top: 1.2em;
 
+  blockquote {
+    > p {
+      font-size: 1em;
+
+      @media (#{ $query-medium }) {
+        font-size: 1.25em; // 20px
+      }
+
+      @media (#{ $query-large }) {
+        font-size: 1.5em; // 24px
+      }
+    }
+  }
+
   > div {
     @extend .responsive-container;
 
     @media (#{ $query-large }) {
       @extend .responsive-container-large;
+    }
+  }
+
+  li,
+  p {
+    @media (#{ $query-medium }) {
+      font-size: 2em;
+      line-height: 1.8em; // 36px
+    }
+
+    @media (#{ $query-large }) {
+      font-size: 2.4em;
+      line-height: 1.5em; // 36px
     }
   }
 
@@ -317,6 +385,16 @@ section {
       &:visited {
         color: $color-link;
       }
+    }
+  }
+
+  p {
+    @media (#{ $query-medium }) {
+      margin-bottom: 1.8em; // 36px
+    }
+
+    @media (#{ $query-large }) {
+      margin-bottom: 1.5em; // 36px
     }
   }
 }

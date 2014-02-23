@@ -305,14 +305,13 @@ a {
 
 blockquote {
   border-color: #ffea72;
+  color: #7d7d7d;
   font-style: italic; }
-  blockquote > p {
-    font-size: 1em; }
 
 body {
   background: #fdfdfd;
   color: #3e3e3e;
-  font-family: 'Lato', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'PT Serif', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 62.5%;
   font-weight: 400; }
 
@@ -362,6 +361,8 @@ footer {
   @media (min-width: 960px) { }
   footer form {
     margin-bottom: 0; }
+    footer form p {
+      margin-bottom: 0.375em; }
   footer ul {
     list-style: none; }
 
@@ -369,19 +370,37 @@ form {
   margin-bottom: 2.4em; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Lato', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'PT Serif', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-weight: 700;
   margin: 0; }
 
 h1 {
-  font-size: 3em;
-  line-height: 1.6em;
-  margin-bottom: 0.4em; }
+  font-size: 3.2em;
+  line-height: 1.5em;
+  margin-bottom: 0.375em; }
+  @media (min-width: 640px) {
+    h1 {
+      font-size: 4em;
+      margin-bottom: 0.3em; } }
+  @media (min-width: 960px) {
+    h1 {
+      font-size: 4.8em;
+      margin-bottom: 0.25em; } }
 
 h2 {
   font-size: 2.4em;
   line-height: 1.5em;
   margin-bottom: 0.5em; }
+  @media (min-width: 640px) {
+    h2 {
+      font-size: 3em;
+      line-height: 1.6em;
+      margin-bottom: 0.4em; } }
+  @media (min-width: 960px) {
+    h2 {
+      font-size: 4em;
+      line-height: 1.5em;
+      margin-bottom: 0.3em; } }
 
 h3 {
   font-size: 2em;
@@ -424,6 +443,10 @@ header {
     margin-right: 0.625em; }
     header li:last-of-type {
       margin-right: 0; }
+    @media (min-width: 960px) {
+      header li {
+        font-size: 2em;
+        line-height: 1.8em; } }
   header > nav a {
     padding: 0.375em 0; }
     header > nav a, header > nav a:visited {
@@ -444,8 +467,19 @@ img {
 label {
   display: block;
   font-size: 1.6em;
+  font-weight: 700;
   line-height: 1.5em;
   margin-bottom: 0.375em; }
+  @media (min-width: 640px) {
+    label {
+      font-size: 2em;
+      line-height: 1.8em;
+      margin-bottom: 0.3em; } }
+  @media (min-width: 960px) {
+    label {
+      font-size: 2.4em;
+      line-height: 1.5em;
+      margin-bottom: 0.25em; } }
 
 li {
   font-size: 1.6em;
@@ -457,7 +491,7 @@ mark {
   padding: 0.0625em 0.125em; }
 
 nav {
-  font-family: 'Lato', Arial, 'Helvetica Neue', Helvetica, sans-serif; }
+  font-family: 'PT Serif', Arial, 'Helvetica Neue', Helvetica, sans-serif; }
   nav a {
     display: block; }
   nav > ol {
@@ -483,9 +517,25 @@ pre {
 section {
   overflow: hidden;
   padding-top: 1.2em; }
+  section blockquote > p {
+    font-size: 1em; }
+    @media (min-width: 640px) {
+      section blockquote > p {
+        font-size: 1.25em; } }
+    @media (min-width: 960px) {
+      section blockquote > p {
+        font-size: 1.5em; } }
   @media (min-width: 960px) { }
+  @media (min-width: 640px) {
+    section li, section p {
+      font-size: 2em;
+      line-height: 1.8em; } }
+  @media (min-width: 960px) {
+    section li, section p {
+      font-size: 2.4em;
+      line-height: 1.5em; } }
   section nav {
-    font-family: 'Lato', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    font-family: 'PT Serif', Arial, 'Helvetica Neue', Helvetica, sans-serif;
     padding: 0; }
     section nav a {
       display: inline-block;
@@ -493,6 +543,12 @@ section {
       line-height: 1.5em; }
       section nav a, section nav a:visited {
         color: #3581fc; }
+  @media (min-width: 640px) {
+    section p {
+      margin-bottom: 1.8em; } }
+  @media (min-width: 960px) {
+    section p {
+      margin-bottom: 1.5em; } }
 
 table {
   font-size: 1.6em;
