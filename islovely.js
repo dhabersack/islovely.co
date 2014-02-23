@@ -180,6 +180,19 @@ App.PostsController = Ember.ArrayController.extend({
   }
 });
 
+App.ProjectsController = Ember.ArrayController.extend({
+  sortAscending: false,
+  sortProperties: ['id'],
+
+  sortFunction: function(x, y) {
+    if (x === y) {
+      return 0;
+    }
+
+    return (parseInt(x, 10) < parseInt(y, 10)) ? -1 : 1;
+  }
+});
+
 App.Page = DS.Model.extend({
   body:        DS.attr('string'),
   description: DS.attr('string'),
@@ -191,6 +204,13 @@ App.Post = DS.Model.extend({
   body:        DS.attr('string'),
   description: DS.attr('string'),
   published:   DS.attr('date'),
+  slug:        DS.attr('string'),
+  title:       DS.attr('string')
+});
+
+App.Project = DS.Model.extend({
+  body:        DS.attr('string'),
+  description: DS.attr('string'),
   slug:        DS.attr('string'),
   title:       DS.attr('string')
 });
