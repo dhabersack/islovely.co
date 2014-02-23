@@ -393,42 +393,41 @@ h4 {
   line-height: 1.5em;
   margin-bottom: 0.75em; }
 
-header > div {
-  padding: 1.2em 0;
-  text-align: center; }
-  @media (min-width: 640px) {
-    header > div {
-      position: relative; } }
-  @media (min-width: 960px) { }
-  header > div > a {
-    font-size: 2.5em;
-    line-height: 1.44em;
-    margin-bottom: 0.48em;
-    text-decoration: none; }
-    header > div > a, header > div > a:visited {
-      color: #3e3e3e; }
+header {
+  background: #b3cffe; }
+  header > div {
+    padding: 1.2em 0;
+    text-align: center; }
     @media (min-width: 640px) {
-      header > div > a {
-        margin-bottom: 0; } }
-  header > div > p {
-    margin-bottom: 0; }
-    @media (min-width: 640px) {
-      header > div > p {
-        position: absolute;
-        top: 0.75em;
-        right: 0; } }
-header li {
-  float: left;
-  margin-right: 0.625em; }
-  header li:last-of-type {
-    margin-right: 0; }
-header > nav {
-  background: #3581fc;
-  padding: 0.6em 0; }
+      header > div {
+        position: relative; } }
+    @media (min-width: 960px) { }
+    header > div > a {
+      font-size: 2.5em;
+      line-height: 1.44em;
+      margin-bottom: 0.48em;
+      text-decoration: none; }
+      header > div > a, header > div > a:visited {
+        color: #3e3e3e; }
+      @media (min-width: 640px) {
+        header > div > a {
+          margin-bottom: 0; } }
+    header > div > p {
+      margin-bottom: 0; }
+      @media (min-width: 640px) {
+        header > div > p {
+          position: absolute;
+          top: 0.75em;
+          right: 0; } }
+  header li {
+    float: left;
+    margin-right: 0.625em; }
+    header li:last-of-type {
+      margin-right: 0; }
   header > nav a {
-    padding: 6px 0; }
+    padding: 0.375em 0; }
     header > nav a, header > nav a:visited {
-      color: #fdfdfd; }
+      color: #3e3e3e; }
   @media (min-width: 960px) { }
 
 hr {
