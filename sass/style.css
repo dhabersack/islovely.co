@@ -311,7 +311,7 @@ blockquote {
 body {
   background: #fdfdfd;
   color: #3e3e3e;
-  font-family: 'PT Serif', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'PT Serif', Georgia, Times, 'Times New Roman', serif;
   font-size: 62.5%;
   font-weight: 400; }
 
@@ -370,7 +370,7 @@ form {
   margin-bottom: 2.4em; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'PT Serif', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'PT Serif', Georgia, Times, 'Times New Roman', serif;
   font-weight: 700;
   margin: 0; }
 
@@ -491,7 +491,7 @@ mark {
   padding: 0.0625em 0.125em; }
 
 nav {
-  font-family: 'PT Serif', Arial, 'Helvetica Neue', Helvetica, sans-serif; }
+  font-family: 'PT Serif', Georgia, Times, 'Times New Roman', serif; }
   nav a {
     display: block; }
   nav > ol {
@@ -535,7 +535,7 @@ section {
       font-size: 2.4em;
       line-height: 1.5em; } }
   section nav {
-    font-family: 'PT Serif', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    font-family: 'PT Serif', Georgia, Times, 'Times New Roman', serif;
     padding: 0; }
     section nav a {
       display: inline-block;
@@ -643,11 +643,12 @@ ul {
 
 
 .logo-islovely {
-  padding-left: 2.2em;
-  line-height: 1.92em; }
+  font-family: 'Lato', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  line-height: 1.92em;
+  padding-left: 2.2em; }
   .logo-islovely::before {
-    width: 1.92em;
-    height: 1.92em; }
+    height: 1.92em;
+    width: 1.92em; }
 
 .responsive-container, footer > div, header > div, header > nav > ol, section > div {
   margin: 0 auto;

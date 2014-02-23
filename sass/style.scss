@@ -268,8 +268,10 @@ input {
 
 label {
   display: block;
-  font-size: 1.6em;
-  font-weight: 700;
+  font: {
+    size: 1.6em;
+    weight: 700;
+  }
   line-height: 1.5em; // 24px
   margin-bottom: 0.375em; // 6px
 
@@ -543,12 +545,13 @@ ul {
 }
 
 .logo-islovely {
-  padding-left: 2.2em; // 55px
+  font-family: $font-family-branding;
   line-height: 1.92em; // 60px
+  padding-left: 2.2em; // 55px
 
   &::before {
-    width: 1.92em; // 60px
     height: 1.92em; // 60px
+    width: 1.92em; // 60px
   }
 }
 
