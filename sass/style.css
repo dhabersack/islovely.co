@@ -413,7 +413,7 @@ h4 {
   margin-bottom: 0.75em; }
 
 header {
-  background: #b3cffe; }
+  margin-bottom: 2.4em; }
   header > div {
     padding: 1.2em 0;
     text-align: center; }
@@ -439,19 +439,18 @@ header {
           top: 0.75em;
           right: 0; } }
   header li {
-    float: left;
-    margin-right: 0.625em; }
-    header li:last-of-type {
-      margin-right: 0; }
+    display: inline;
+    margin: 0 0.3125em; }
     @media (min-width: 960px) {
       header li {
         font-size: 2em;
-        line-height: 1.8em; } }
+        line-height: 1.8em;
+        margin: 0 0.5em; } }
   header > nav a {
     padding: 0.375em 0; }
-    header > nav a, header > nav a:visited {
-      color: #3e3e3e; }
-  @media (min-width: 960px) { }
+  header > nav > ol {
+    text-align: center; }
+    @media (min-width: 960px) { }
 
 hr {
   background: #bdbdbd;
@@ -493,7 +492,7 @@ mark {
 nav {
   font-family: 'PT Serif', Georgia, Times, 'Times New Roman', serif; }
   nav a {
-    display: block; }
+    display: inline-block; }
   nav > ol {
     list-style: none;
     margin: 0 auto;
@@ -515,8 +514,7 @@ pre {
   overflow: scroll; }
 
 section {
-  overflow: hidden;
-  padding-top: 1.2em; }
+  overflow: hidden; }
   section blockquote > p {
     font-size: 1em; }
     @media (min-width: 640px) {

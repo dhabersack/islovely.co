@@ -166,7 +166,7 @@ h4 {
 }
 
 header {
-  background: $color-brand-lightest;
+  margin-bottom: 2.4em;
 
   > div {
     @extend .responsive-container;
@@ -210,31 +210,25 @@ header {
   }
 
   li {
-    float: left;
-    margin-right: 0.625em; // 10px
-
-    &:last-of-type {
-      margin-right: 0;
-    }
+    display: inline;
+    margin: 0 0.3125em; // 0 5px
 
     @media (#{ $query-large }) {
       font-size: 2em;
       line-height: 1.8em; // 36px
+      margin: 0 0.5em; // 0 10px
     }
   }
 
   > nav {
     a {
       padding: 0.375em 0; // 12px 0
-
-      &,
-      &:visited {
-        color: $color-neutral-darkest;
-      }
     }
 
     > ol {
       @extend .responsive-container;
+
+      text-align: center;
 
       @media (#{ $query-large }) {
         @extend .responsive-container-large;
@@ -303,7 +297,7 @@ nav {
   font-family: $font-family-headings;
 
   a {
-    display: block;
+    display: inline-block;
   }
 
   > ol {
@@ -336,7 +330,6 @@ pre {
 
 section {
   overflow: hidden;
-  padding-top: 1.2em;
 
   blockquote {
     > p {
