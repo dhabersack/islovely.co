@@ -386,11 +386,16 @@ section {
     a {
       display: inline-block;
       font-size: 1.6em;
-      line-height: 1.5em;
+      line-height: 1.5em; // 24px
 
       &,
       &:visited {
         color: $color-link;
+      }
+
+      @media (#{ $query-large }) {
+        font-size: 2em;
+        line-height: 1.8em; // 36px
       }
     }
   }
@@ -619,4 +624,10 @@ ul {
   }
   line-height: 1.6em; // 24px
   margin-bottom: 1.6em; // 24px
+
+  @media (#{ $query-large }) {
+    font-size: 2em;
+    line-height: 1.8em; // 26px
+    margin-bottom: 1.2em; // 24px
+  }
 }

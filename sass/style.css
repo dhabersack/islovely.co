@@ -551,6 +551,10 @@ section {
       line-height: 1.5em; }
       section nav a, section nav a:visited {
         color: #3581fc; }
+      @media (min-width: 960px) {
+        section nav a {
+          font-size: 2em;
+          line-height: 1.8em; } }
   @media (min-width: 640px) {
     section p {
       margin-bottom: 1.8em; } }
@@ -699,3 +703,8 @@ ul {
   font-style: italic;
   line-height: 1.6em;
   margin-bottom: 1.6em; }
+  @media (min-width: 960px) {
+    #published {
+      font-size: 2em;
+      line-height: 1.8em;
+      margin-bottom: 1.2em; } }
