@@ -455,7 +455,7 @@ header {
       header li {
         font-size: 2em;
         line-height: 1.8em;
-        margin: 0 0.5em; } }
+        margin: 0 0.25em; } }
   header > nav a {
     padding: 0.375em 0; }
   header > nav > ol {
