@@ -157,6 +157,18 @@ h3 {
   font-size: 2em;
   line-height: 1.8em; // 36px
   margin-bottom: 0.6em; // 12px
+
+  @media (#{ $query-medium }) {
+    font-size: 2.5em;
+    line-height: 1.68em; // 42px
+    margin-bottom: 0.48em; // 12px
+  }
+
+  @media (#{ $query-large }) {
+    font-size: 3em;
+    line-height: 1.6em; // 48em;
+    margin-bottom: 0.4em; // 12px
+  }
 }
 
 h4 {
