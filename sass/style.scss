@@ -83,10 +83,6 @@ footer {
 
   > div {
     @extend .responsive-container;
-
-    @media (#{ $query-large }) {
-      @extend .responsive-container-large;
-    }
   }
 
   form {
@@ -190,10 +186,6 @@ header {
       position: relative;
     }
 
-    @media (#{ $query-large }) {
-      @extend .responsive-container-large;
-    }
-
     > a {
       font-size: 2.5em;
       line-height: 1.44em; // 36px
@@ -225,7 +217,7 @@ header {
     display: inline;
     margin: 0 0.3125em; // 0 5px
 
-    @media (#{ $query-large }) {
+    @media (#{ $query-medium }) {
       font-size: 2em;
       line-height: 1.8em; // 36px
       margin: 0 0.25em; // 0 5px
@@ -241,10 +233,6 @@ header {
       @extend .responsive-container;
 
       text-align: center;
-
-      @media (#{ $query-large }) {
-        @extend .responsive-container-large;
-      }
     }
   }
 }
@@ -281,13 +269,13 @@ label {
   line-height: 1.5em; // 24px
   margin-bottom: 0.375em; // 6px
 
-  @media (#{ $query-medium }) {
+  @media (#{ $query-small }) {
     font-size: 2em;
     line-height: 1.8em; // 36px
     margin-bottom: 0.3em; // 6px
   }
 
-  @media (#{ $query-large }) {
+  @media (#{ $query-medium }) {
     font-size: 2.4em;
     line-height: 1.5em; // 36px
     margin-bottom: 0.25em; // 6px
@@ -347,11 +335,11 @@ section {
     > p {
       font-size: 1em;
 
-      @media (#{ $query-medium }) {
+      @media (#{ $query-small }) {
         font-size: 1.25em; // 20px
       }
 
-      @media (#{ $query-large }) {
+      @media (#{ $query-medium }) {
         font-size: 1.5em; // 24px
       }
     }
@@ -359,20 +347,16 @@ section {
 
   > div {
     @extend .responsive-container;
-
-    @media (#{ $query-large }) {
-      @extend .responsive-container-large;
-    }
   }
 
   li,
   p {
-    @media (#{ $query-medium }) {
+    @media (#{ $query-small }) {
       font-size: 2em;
       line-height: 1.8em; // 36px
     }
 
-    @media (#{ $query-large }) {
+    @media (#{ $query-medium }) {
       font-size: 2.4em;
       line-height: 1.5em; // 36px
     }
@@ -393,7 +377,7 @@ section {
         color: $color-link;
       }
 
-      @media (#{ $query-large }) {
+      @media (#{ $query-small }) {
         font-size: 2em;
         line-height: 1.8em; // 36px
       }
@@ -401,11 +385,11 @@ section {
   }
 
   p {
-    @media (#{ $query-medium }) {
+    @media (#{ $query-small }) {
       margin-bottom: 1.8em; // 36px
     }
 
-    @media (#{ $query-large }) {
+    @media (#{ $query-medium }) {
       margin-bottom: 1.5em; // 36px
     }
   }
@@ -431,10 +415,6 @@ textarea {
 
   &:focus {
     @extend .formfield:focus;
-  }
-
-  @media (#{ $query-medium }) {
-    @extend .textfield;
   }
 }
 
@@ -507,7 +487,7 @@ ul {
   }
 }
 
-@media (#{ $query-medium }) {
+@media (#{ $query-small }) {
   .formfield {
     padding: {
       left: 1%;
@@ -517,7 +497,7 @@ ul {
   }
 }
 
-@media (#{ $query-medium }) {
+@media (#{ $query-small }) {
   .textfield {
     padding: {
       left: 1%;
@@ -568,13 +548,30 @@ ul {
 
 .responsive-container {
   margin: 0 auto;
-  width: 96%;
+  width: 92%;
+}
+
+@media (#{ $query-small }) {
+  .responsive-container {
+    width: 90%;
+  }
+}
+
+@media (#{ $query-medium }) {
+  .responsive-container {
+    width: 86%;
+  }
 }
 
 @media (#{ $query-large }) {
-  .responsive-container-large {
-    margin: 0 auto;
-    width: 92em;
+  .responsive-container {
+    width: 80%;
+  }
+}
+
+@media (#{ $query-extra-large }) {
+  .responsive-container {
+    width: 96em;
   }
 }
 
@@ -626,7 +623,7 @@ ul {
   line-height: 1.6em; // 24px
   margin-bottom: 1.6em; // 24px
 
-  @media (#{ $query-large }) {
+  @media (#{ $query-medium }) {
     font-size: 2em;
     line-height: 1.8em; // 26px
     margin-bottom: 1.2em; // 24px

@@ -358,7 +358,6 @@ footer {
   text-align: center; }
   footer button {
     margin: 0 auto; }
-  @media (min-width: 960px) { }
   footer form {
     margin-bottom: 0; }
     footer form p {
@@ -378,7 +377,7 @@ h1 {
   font-size: 3.2em;
   line-height: 1.5em;
   margin-bottom: 0.375em; }
-  @media (min-width: 640px) {
+  @media (min-width: 720px) {
     h1 {
       font-size: 4em;
       margin-bottom: 0.3em; } }
@@ -391,7 +390,7 @@ h2 {
   font-size: 2.4em;
   line-height: 1.5em;
   margin-bottom: 0.5em; }
-  @media (min-width: 640px) {
+  @media (min-width: 720px) {
     h2 {
       font-size: 3em;
       line-height: 1.6em;
@@ -406,7 +405,7 @@ h3 {
   font-size: 2em;
   line-height: 1.8em;
   margin-bottom: 0.6em; }
-  @media (min-width: 640px) {
+  @media (min-width: 720px) {
     h3 {
       font-size: 2.5em;
       line-height: 1.68em;
@@ -427,10 +426,9 @@ header {
   header > div {
     padding: 1.2em 0;
     text-align: center; }
-    @media (min-width: 640px) {
+    @media (min-width: 720px) {
       header > div {
         position: relative; } }
-    @media (min-width: 960px) { }
     header > div > a {
       font-size: 2.5em;
       line-height: 1.44em;
@@ -438,12 +436,12 @@ header {
       text-decoration: none; }
       header > div > a, header > div > a:visited {
         color: #3e3e3e; }
-      @media (min-width: 640px) {
+      @media (min-width: 720px) {
         header > div > a {
           margin-bottom: 0; } }
     header > div > p {
       margin-bottom: 0; }
-      @media (min-width: 640px) {
+      @media (min-width: 720px) {
         header > div > p {
           position: absolute;
           top: 0.75em;
@@ -451,7 +449,7 @@ header {
   header li {
     display: inline;
     margin: 0 0.3125em; }
-    @media (min-width: 960px) {
+    @media (min-width: 720px) {
       header li {
         font-size: 2em;
         line-height: 1.8em;
@@ -460,7 +458,6 @@ header {
     padding: 0.375em 0; }
   header > nav > ol {
     text-align: center; }
-    @media (min-width: 960px) { }
 
 hr {
   background: #bdbdbd;
@@ -479,12 +476,12 @@ label {
   font-weight: 700;
   line-height: 1.5em;
   margin-bottom: 0.375em; }
-  @media (min-width: 640px) {
+  @media (min-width: 480px) {
     label {
       font-size: 2em;
       line-height: 1.8em;
       margin-bottom: 0.3em; } }
-  @media (min-width: 960px) {
+  @media (min-width: 720px) {
     label {
       font-size: 2.4em;
       line-height: 1.5em;
@@ -527,18 +524,17 @@ section {
   overflow: hidden; }
   section blockquote > p {
     font-size: 1em; }
-    @media (min-width: 640px) {
+    @media (min-width: 480px) {
       section blockquote > p {
         font-size: 1.25em; } }
-    @media (min-width: 960px) {
+    @media (min-width: 720px) {
       section blockquote > p {
         font-size: 1.5em; } }
-  @media (min-width: 960px) { }
-  @media (min-width: 640px) {
+  @media (min-width: 480px) {
     section li, section p {
       font-size: 2em;
       line-height: 1.8em; } }
-  @media (min-width: 960px) {
+  @media (min-width: 720px) {
     section li, section p {
       font-size: 2.4em;
       line-height: 1.5em; } }
@@ -551,14 +547,14 @@ section {
       line-height: 1.5em; }
       section nav a, section nav a:visited {
         color: #3581fc; }
-      @media (min-width: 960px) {
+      @media (min-width: 480px) {
         section nav a {
           font-size: 2em;
           line-height: 1.8em; } }
-  @media (min-width: 640px) {
+  @media (min-width: 480px) {
     section p {
       margin-bottom: 1.8em; } }
-  @media (min-width: 960px) {
+  @media (min-width: 720px) {
     section p {
       margin-bottom: 1.5em; } }
 
@@ -571,7 +567,6 @@ table {
 tbody tr:nth-of-type(even) {
   background: #e3e3e3; }
 
-@media (min-width: 640px) { }
 
 td {
   padding: 0.1875em 0.625em; }
@@ -628,14 +623,14 @@ ul {
     background: #fff2a5;
     outline: none; }
 
-@media (min-width: 640px) {
+@media (min-width: 480px) {
   .formfield, input[type="email"], input[type="text"], textarea {
     padding-left: 1%;
     padding-right: 1%;
     width: 47%; } }
 
-@media (min-width: 640px) {
-  .textfield, textarea {
+@media (min-width: 480px) {
+  .textfield {
     padding-left: 1%;
     padding-right: 1%;
     width: 98%; } }
@@ -664,12 +659,23 @@ ul {
 
 .responsive-container, footer > div, header > div, header > nav > ol, section > div {
   margin: 0 auto;
-  width: 96%; }
+  width: 92%; }
+
+@media (min-width: 480px) {
+  .responsive-container, footer > div, header > div, header > nav > ol, section > div {
+    width: 90%; } }
+
+@media (min-width: 720px) {
+  .responsive-container, footer > div, header > div, header > nav > ol, section > div {
+    width: 86%; } }
 
 @media (min-width: 960px) {
-  .responsive-container-large, footer > div, header > div, header > nav > ol, section > div {
-    margin: 0 auto;
-    width: 92em; } }
+  .responsive-container, footer > div, header > div, header > nav > ol, section > div {
+    width: 80%; } }
+
+@media (min-width: 1200px) {
+  .responsive-container, footer > div, header > div, header > nav > ol, section > div {
+    width: 96em; } }
 
 .videoContainer {
   margin: 0 auto 2.4em;
@@ -703,7 +709,7 @@ ul {
   font-style: italic;
   line-height: 1.6em;
   margin-bottom: 1.6em; }
-  @media (min-width: 960px) {
+  @media (min-width: 720px) {
     #published {
       font-size: 2em;
       line-height: 1.8em;
