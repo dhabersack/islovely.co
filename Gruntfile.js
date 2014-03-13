@@ -13,7 +13,6 @@ var jsfiles = [
 
 var urls = [
   '#!/',
-
   '#!/pages/about',
   '#!/pages/contact',
   '#!/pages/imprint',
@@ -21,7 +20,6 @@ var urls = [
   '#!/pages/regarding-recruitment',
   '#!/pages/request-a-proposal',
   '#!/pages/services',
-
   '#!/posts',
   '#!/posts/debunking-whitewashed-exam-statistics',
   '#!/posts/grunt-contrib-sass-and-node-js-0-10-8',
@@ -33,7 +31,6 @@ var urls = [
   '#!/posts/understanding-css-hierarchy-matching',
   '#!/posts/why-students-fail-entry-level-programming-exams',
   '#!/posts/writing-high-performance-css',
-
   '#!/projects/handpicked-js',
   '#!/projects/page-blur',
   '#!/projects/respaintive',
