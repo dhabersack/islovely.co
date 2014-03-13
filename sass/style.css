@@ -475,7 +475,6 @@ header {
         color: #3e3e3e; }
   header li {
     display: inline-block;
-    margin: 0 0.3125em;
     margin: 0 0.1875em; }
     @media (min-width: 720px) {
       header li {
