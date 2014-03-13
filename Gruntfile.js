@@ -32,7 +32,12 @@ var urls = [
   '#!/posts/sml-nj-110.74-on-os-x-10.8-mountain-lion',
   '#!/posts/understanding-css-hierarchy-matching',
   '#!/posts/why-students-fail-entry-level-programming-exams',
-  '#!/posts/writing-high-performance-css'
+  '#!/posts/writing-high-performance-css',
+
+  '#!/projects/handpicked-js',
+  '#!/projects/page-blur',
+  '#!/projects/respaintive',
+  '#!/projects/smileylist'
 ];
 
 module.exports = function(grunt) {
@@ -202,7 +207,7 @@ module.exports = function(grunt) {
 
     shell: {
       createSitemapList: {
-        command: "echo '  <url><loc>http://islovely.co/#{ urls.join('</loc></url>\n  <url><loc>http://islovely.co/') }</loc></url>' > sitemap-src/list.xml"
+        command: "echo '  <url><loc>http://islovely.co/" + urls.join('</loc></url>\n  <url><loc>http://islovely.co/') + "</loc></url>' > sitemap-src/list.xml"
       }
     },
 
