@@ -395,27 +395,35 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0; }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 2.4em;
   line-height: 1.5em;
-  margin-bottom: 0.375em; }
+  margin-bottom: 0.25em; }
+  @media (min-width: 480px) {
+    h1 {
+      font-size: 3.2em;
+      margin-bottom: 0.1875em; } }
   @media (min-width: 720px) {
     h1 {
       font-size: 4em;
-      margin-bottom: 0.3em; } }
+      margin-bottom: 0.15em; } }
   @media (min-width: 960px) {
     h1 {
       font-size: 4.8em;
       margin-bottom: 0.25em; } }
 
 h2 {
-  font-size: 2.4em;
+  font-size: 2em;
   line-height: 1.5em;
-  margin-bottom: 0.5em; }
+  margin-bottom: 0.3em; }
+  @media (min-width: 480px) {
+    h2 {
+      font-size: 2.4em;
+      margin-bottom: 0.25em; } }
   @media (min-width: 720px) {
     h2 {
       font-size: 3em;
       line-height: 1.6em;
-      margin-bottom: 0.4em; } }
+      margin-bottom: 0.3em; } }
   @media (min-width: 960px) {
     h2 {
       font-size: 4em;
@@ -423,14 +431,19 @@ h2 {
       margin-bottom: 0.3em; } }
 
 h3 {
-  font-size: 2em;
-  line-height: 1.8em;
-  margin-bottom: 0.6em; }
+  font-size: 1.6em;
+  line-height: 1.5em;
+  margin-bottom: 0.375em; }
+  @media (min-width: 480px) {
+    h3 {
+      font-size: 2em;
+      line-height: 1.5em;
+      margin-bottom: 0.3em; } }
   @media (min-width: 720px) {
     h3 {
       font-size: 2.5em;
       line-height: 1.68em;
-      margin-bottom: 0.48em; } }
+      margin-bottom: 0.24em; } }
   @media (min-width: 960px) {
     h3 {
       font-size: 3em;
@@ -439,8 +452,9 @@ h3 {
 
 h4 {
   font-size: 1.6em;
+  font-style: italic;
   line-height: 1.5em;
-  margin-bottom: 0.75em; }
+  margin-bottom: 0.375em; }
 
 header {
   margin-bottom: 2.4em; }
@@ -473,7 +487,7 @@ header {
     @media (min-width: 720px) {
       header li {
         font-size: 2em;
-        line-height: 1.8em;
+        line-height: 1.5em;
         margin: 0 0.25em; } }
   header > nav a {
     padding: 0.375em 0; }
@@ -500,7 +514,7 @@ label {
   @media (min-width: 480px) {
     label {
       font-size: 2em;
-      line-height: 1.8em;
+      line-height: 1.5em;
       margin-bottom: 0.3em; } }
   @media (min-width: 720px) {
     label {
@@ -554,13 +568,13 @@ section {
   @media (min-width: 480px) {
     section li, section p {
       font-size: 2em;
-      line-height: 1.8em; } }
+      line-height: 1.5em; } }
   @media (min-width: 720px) {
     section li, section p {
-      font-size: 2.4em;
-      line-height: 1.5em; } }
+      font-size: 2.4em; } }
   section nav {
     font-family: 'PT Serif', Georgia, Times, 'Times New Roman', serif;
+    margin-bottom: 0.6em;
     padding: 0; }
     section nav a {
       display: inline-block;
@@ -568,14 +582,10 @@ section {
       line-height: 1.5em; }
       section nav a, section nav a:visited {
         color: #3581fc; }
-      @media (min-width: 480px) {
+      @media (min-width: 720px) {
         section nav a {
-          font-size: 2em;
-          line-height: 1.8em; } }
+          font-size: 2em; } }
   @media (min-width: 480px) {
-    section p {
-      margin-bottom: 1.8em; } }
-  @media (min-width: 720px) {
     section p {
       margin-bottom: 1.5em; } }
 
@@ -646,14 +656,9 @@ ul {
 
 @media (min-width: 480px) {
   .formfield, input[type="email"], input[type="text"], textarea {
-    padding-left: 1%;
-    padding-right: 1%;
-    width: 47%; } }
-
-@media (min-width: 480px) {
-  .textfield {
-    padding-left: 1%;
-    padding-right: 1%;
+    font-size: 2em;
+    line-height: 1.5em;
+    padding: 0.3em 1%;
     width: 98%; } }
 
 .logo, .logo-github, .logo-linkedin, .logo-islovely, .logo-twitter, .logo-xing {
@@ -733,5 +738,5 @@ ul {
   @media (min-width: 720px) {
     #published {
       font-size: 2em;
-      line-height: 1.8em;
+      line-height: 1.5em;
       margin-bottom: 1.2em; } }

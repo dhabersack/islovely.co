@@ -117,13 +117,18 @@ h6 {
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.5em; // 48px
-  margin-bottom: 0.375em; // 12px
+  font-size: 2.4em;
+  line-height: 1.5em; // 36px
+  margin-bottom: 0.25em; // 6px
+
+  @media (#{ $query-small }) {
+    font-size: 3.2em;
+    margin-bottom: 0.1875em; // 6px
+  }
 
   @media (#{ $query-medium }) {
     font-size: 4em;
-    margin-bottom: 0.3em; // 12px
+    margin-bottom: 0.15em; // 6px
   }
 
   @media (#{ $query-large }) {
@@ -133,14 +138,19 @@ h1 {
 }
 
 h2 {
-  font-size: 2.4em;
-  line-height: 1.5em; // 36px
-  margin-bottom: 0.5em; // 12px
+  font-size: 2em;
+  line-height: 1.5em; // 30px
+  margin-bottom: 0.3em; // 6px
+
+  @media (#{ $query-small }) {
+    font-size: 2.4em;
+    margin-bottom: 0.25em; // 6px
+  }
 
   @media (#{ $query-medium }) {
     font-size: 3em;
     line-height: 1.6em; // 48px
-    margin-bottom: 0.4em; // 12px
+    margin-bottom: 0.3em; // 6px
   }
 
   @media (#{ $query-large }) {
@@ -151,14 +161,20 @@ h2 {
 }
 
 h3 {
-  font-size: 2em;
-  line-height: 1.8em; // 36px
-  margin-bottom: 0.6em; // 12px
+  font-size: 1.6em;
+  line-height: 1.5em; // 24px
+  margin-bottom: 0.375em; // 6px
+
+  @media (#{ $query-small }) {
+    font-size: 2em;
+    line-height: 1.5em; // 30px
+    margin-bottom: 0.3em; // 6px
+  }
 
   @media (#{ $query-medium }) {
     font-size: 2.5em;
     line-height: 1.68em; // 42px
-    margin-bottom: 0.48em; // 12px
+    margin-bottom: 0.24em; // 6px
   }
 
   @media (#{ $query-large }) {
@@ -169,9 +185,12 @@ h3 {
 }
 
 h4 {
-  font-size: 1.6em;
+  font: {
+    size: 1.6em;
+    style: italic;
+  }
   line-height: 1.5em; // 24px
-  margin-bottom: 0.75em; // 12px
+  margin-bottom: 0.375em; // 6px
 }
 
 header {
@@ -220,7 +239,7 @@ header {
 
     @media (#{ $query-medium }) {
       font-size: 2em;
-      line-height: 1.8em; // 36px
+      line-height: 1.5em; // 30px
       margin: 0 0.25em; // 0 5px
     }
   }
@@ -272,7 +291,7 @@ label {
 
   @media (#{ $query-small }) {
     font-size: 2em;
-    line-height: 1.8em; // 36px
+    line-height: 1.5em; // 30px
     margin-bottom: 0.3em; // 6px
   }
 
@@ -354,18 +373,18 @@ section {
   p {
     @media (#{ $query-small }) {
       font-size: 2em;
-      line-height: 1.8em; // 36px
+      line-height: 1.5em; // 30px
     }
 
     @media (#{ $query-medium }) {
       font-size: 2.4em;
-      line-height: 1.5em; // 36px
     }
   }
 
   // subnavigation
   nav {
     font-family: $font-family-content;
+    margin-bottom: 0.6em;
     padding: 0;
 
     a {
@@ -378,20 +397,15 @@ section {
         color: $color-link;
       }
 
-      @media (#{ $query-small }) {
+      @media (#{ $query-medium }) {
         font-size: 2em;
-        line-height: 1.8em; // 36px
       }
     }
   }
 
   p {
     @media (#{ $query-small }) {
-      margin-bottom: 1.8em; // 36px
-    }
-
-    @media (#{ $query-medium }) {
-      margin-bottom: 1.5em; // 36px
+      margin-bottom: 1.5em; // 30px
     }
   }
 }
@@ -490,20 +504,9 @@ ul {
 
 @media (#{ $query-small }) {
   .formfield {
-    padding: {
-      left: 1%;
-      right: 1%;
-    }
-    width: 47%;
-  }
-}
-
-@media (#{ $query-small }) {
-  .textfield {
-    padding: {
-      left: 1%;
-      right: 1%;
-    }
+    font-size: 2em;
+    line-height: 1.5em; // 30px
+    padding: 0.3em 1%; // 6px 1%
     width: 98%;
   }
 }
@@ -626,7 +629,7 @@ ul {
 
   @media (#{ $query-medium }) {
     font-size: 2em;
-    line-height: 1.8em; // 26px
+    line-height: 1.5em; // 30px
     margin-bottom: 1.2em; // 24px
   }
 }
