@@ -234,7 +234,7 @@ header {
   }
 
   li {
-    display: inline;
+    display: inline-block;
     margin: 0 0.3125em; // 0 5px
 
     @media (#{ $query-medium }) {

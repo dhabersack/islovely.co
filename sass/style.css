@@ -482,7 +482,7 @@ header {
           top: 0.75em;
           right: 0; } }
   header li {
-    display: inline;
+    display: inline-block;
     margin: 0 0.3125em; }
     @media (min-width: 720px) {
       header li {
