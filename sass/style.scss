@@ -511,6 +511,15 @@ ul {
   }
 }
 
+@media (#{ $query-medium }) {
+  input {
+    &[type="email"],
+    &[type="text"] {
+      width: 64%;
+    }
+  }
+}
+
 .logo {
   position: relative;
   display: inline-block;
