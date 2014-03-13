@@ -348,11 +348,14 @@ button {
   display: block;
   font-size: 1.6em;
   line-height: 1.5em;
-  padding: 0.6875em 1.1875em;
-  padding: 5px 14px;
+  padding: 0.3125em 0.875em;
   text-decoration: underline; }
   button:hover {
     background: #bdbdbd; }
+  @media (min-width: 720px) {
+    button {
+      font-size: 2em;
+      padding: 0.4em 0.95em; } }
 
 code {
   font-family: 'Source Code Pro', 'Courier New', Courier, monospace; }
@@ -383,6 +386,9 @@ footer {
     margin-bottom: 0; }
     footer form p {
       margin-bottom: 0.375em; }
+  @media (min-width: 720px) {
+    footer li, footer p {
+      font-size: 2em; } }
   footer ul {
     list-style: none; }
 
@@ -461,29 +467,16 @@ header {
   header > div {
     padding: 1.2em 0;
     text-align: center; }
-    @media (min-width: 720px) {
-      header > div {
-        position: relative; } }
     header > div > a {
       font-size: 2.5em;
       line-height: 1.44em;
-      margin-bottom: 0.48em;
       text-decoration: none; }
       header > div > a, header > div > a:visited {
         color: #3e3e3e; }
-      @media (min-width: 720px) {
-        header > div > a {
-          margin-bottom: 0; } }
-    header > div > p {
-      margin-bottom: 0; }
-      @media (min-width: 720px) {
-        header > div > p {
-          position: absolute;
-          top: 0.75em;
-          right: 0; } }
   header li {
     display: inline-block;
-    margin: 0 0.3125em; }
+    margin: 0 0.3125em;
+    margin: 0 0.1875em; }
     @media (min-width: 720px) {
       header li {
         font-size: 2em;
