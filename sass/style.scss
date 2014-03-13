@@ -338,6 +338,17 @@ pre {
   font-family: $font-family-code;
   overflow: scroll;
 
+  > code {
+    @media (#{ $query-small }) {
+      font-size: 1.25em; // 20px
+      line-height: 1.5em; // 30px
+    }
+
+    @media (#{ $query-medium }) {
+      font-size: 1.5em; // 24px
+      line-height: 1.5em; // 36px
+    }
+  }
 }
 
 section {
@@ -365,7 +376,6 @@ section {
   p {
     @media (#{ $query-small }) {
       font-size: 2em;
-      line-height: 1.5em; // 30px
     }
 
     @media (#{ $query-medium }) {
