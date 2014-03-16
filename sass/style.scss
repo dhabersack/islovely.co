@@ -213,10 +213,27 @@ header {
     padding: 1.2em 0;
     text-align: center;
 
+    @media (#{ $query-medium }) {
+      padding: 2.4em 0;
+    }
+
+    @media (#{ $query-large }) {
+      position: relative;
+    }
+
     > a {
       font-size: 2.5em;
       line-height: 1.44em; // 36px
+      margin-bottom: 0.48em; // 12px
       text-decoration: none;
+
+      @media (#{ $query-medium }) {
+        margin-bottom: 0.96em; // 24px
+      }
+
+      @media (#{ $query-large }) {
+        margin-bottom: 0;
+      }
 
       &,
       &:visited {
@@ -245,6 +262,20 @@ header {
       @extend .responsive-container;
 
       text-align: center;
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+
+    @media (#{ $query-medium }) {
+      font-size: 2em;
+    }
+
+    @media (#{ $query-large }) {
+      position: absolute;
+      top: 0.9em; // 12px
+      right: 0;
     }
   }
 }

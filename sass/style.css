@@ -467,10 +467,23 @@ header {
   header > div {
     padding: 1.2em 0;
     text-align: center; }
+    @media (min-width: 720px) {
+      header > div {
+        padding: 2.4em 0; } }
+    @media (min-width: 960px) {
+      header > div {
+        position: relative; } }
     header > div > a {
       font-size: 2.5em;
       line-height: 1.44em;
+      margin-bottom: 0.48em;
       text-decoration: none; }
+      @media (min-width: 720px) {
+        header > div > a {
+          margin-bottom: 0.96em; } }
+      @media (min-width: 960px) {
+        header > div > a {
+          margin-bottom: 0; } }
       header > div > a, header > div > a:visited {
         color: #3e3e3e; }
   header li {
@@ -485,6 +498,16 @@ header {
     padding: 0.375em 0; }
   header > nav > ol {
     text-align: center; }
+  header p {
+    margin-bottom: 0; }
+    @media (min-width: 720px) {
+      header p {
+        font-size: 2em; } }
+    @media (min-width: 960px) {
+      header p {
+        position: absolute;
+        top: 0.9em;
+        right: 0; } }
 
 hr {
   background: #bdbdbd;
