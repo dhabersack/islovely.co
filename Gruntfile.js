@@ -94,25 +94,23 @@ module.exports = function(grunt) {
     grunticon: {
       icons: {
         options: {
-          src: 'vectors',
-          dest: 'grunticon',
           colors: {
-            blue: '#3581fc',
-            gray: '#bdbdbd',
-            green: '#23db2a',
-            orange: '#ff9949',
-            red: '#e33d27',
-            violet: '#904fff',
-            yellow: '#ffe226'
+            brand: '#3581fc'
           },
           customselectors: {
-            'logo-github': '.logo-github::before',
-            'logo-linkedin': '.logo-linkedin::before',
-            'logo-islovely-blue': '.logo-islovely::before',
-            'logo-twitter': '.logo-twitter::before',
-            'logo-xing': '.logo-xing::before'
+            'logo-github': ['.logo-github::before'],
+            'logo-linkedin': ['.logo-linkedin::before'],
+            'logo-islovely-brand': ['.logo-islovely::before'],
+            'logo-twitter': ['.logo-twitter::before'],
+            'logo-xing': ['.logo-xing::before']
           }
-        }
+        },
+        files: [{
+          expand: true,
+          cwd: 'vectors',
+          src: ['*.svg', '*.png'],
+          dest: 'grunticon'
+        }]
       }
     },
 
@@ -225,7 +223,7 @@ module.exports = function(grunt) {
         livereload: true
       },
       grunt: {
-        files: ['package.json', 'Gruntfile.coffee'],
+        files: ['package.json', 'Gruntfile.js'],
         tasks: 'compile'
       },
       markup: {
