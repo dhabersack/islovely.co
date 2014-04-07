@@ -1,33 +1,39 @@
-Ember.Location.registerImplementation('hashbang', Ember.HashLocation.extend({
-  getURL: function() {
-    return Ember.get(this, 'location').hash.substr(2);
-  },
+App.initializer({
+  name: 'hashbang-location',
 
-  setURL: function(path) {
-    Ember.get(this, 'location').hash = '!' + path;
-    Ember.set(this, 'lastSetURL', '!' + path);
-  },
+  initialize: function(container, application) {
+    application.register('location:hashbang', Ember.HashLocation.extend({
+      getURL: function() {
+        return Ember.get(this, 'location').hash.substr(2);
+      },
 
-  onUpdateURL: function(callback) {
-    var that = this,
-        guid = Ember.guidFor(this);
+      setURL: function(path) {
+        Ember.get(this, 'location').hash = '!' + path;
+        Ember.set(this, 'lastSetURL', '!' + path);
+      },
 
-    Ember.$(window).bind('hashchange.ember-location-' + guid, function() {
-      Ember.run(function() {
-        var path = location.hash.substr(2);
+      onUpdateURL: function(callback) {
+        var that = this,
+            guid = Ember.guidFor(this);
 
-        if (Ember.get(that, 'lastSetURL') === path) {
-          return;
-        }
+        Ember.$(window).bind('hashchange.ember-location-' + guid, function() {
+          Ember.run(function() {
+            var path = location.hash.substr(2);
 
-        Ember.set(that, 'lastSetURL', null);
+            if (Ember.get(that, 'lastSetURL') === path) {
+              return;
+            }
 
-        callback(location.hash.substr(2));
-      });
-    });
-  },
+            Ember.set(that, 'lastSetURL', null);
 
-  formatURL: function(url) {
-    return '#!' + url;
+            callback(location.hash.substr(2));
+          });
+        });
+      },
+
+      formatURL: function(url) {
+        return '#!' + url;
+      }
+    }));
   }
-}));
+});
