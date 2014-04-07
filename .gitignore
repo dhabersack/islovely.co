@@ -1,6 +1,4 @@
 **/*.js.map
-**/*.swp
-.DS_Store
 .bundle/
 .sass-cache/
 bower_components/
