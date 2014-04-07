@@ -166,24 +166,7 @@ module.exports = function(grunt) {
 
     jshint: {
       options: {
-        browser: true,
-        curly: true,
-        devel: true,
-        eqeqeq: true,
-        expr: true,
-        globals: {
-          '$': true,
-          'App': true,
-          'DS': true,
-          'Ember': true,
-          'ga': true,
-          'moment': true,
-          'Showdown': true
-        },
-        undef: true,
-        unused: true,
-        strict: true,
-        trailing: true
+        jshintrc: true
       },
       run: {
         files: {
@@ -230,7 +213,7 @@ module.exports = function(grunt) {
         files: 'index.html'
       },
       script: {
-        files: 'js/**/*.js',
+        files: ['.jshintrc', 'js/**/*.js'],
         tasks: 'compile:js'
       },
       stylesheets: {
