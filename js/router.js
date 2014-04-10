@@ -7,6 +7,8 @@ App.Router.map(function() {
 
   this.resource('projects');
   this.resource('project', { path: '/projects/:project_slug' });
+
+  this.route('error', { path: '*path' });
 });
 
 App.Router.reopen({

@@ -732,6 +732,10 @@ ul {
   .responsive-container, footer > div, header, header > nav > ol, section > div {
     width: 96em; } }
 
+.round-image, #avatar, #fourOhFour {
+  border-radius: 50%;
+  width: 12em; }
+
 .videoContainer {
   margin: 0 auto 2.4em;
   width: 100%; }
@@ -754,9 +758,7 @@ ul {
 .wireframe.large {
   width: 28.8em; }
 
-#avatar {
-  border-radius: 50%;
-  width: 12em; }
+
 
 #published {
   color: #7d7d7d;

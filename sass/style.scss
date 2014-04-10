@@ -624,6 +624,11 @@ ul {
   }
 }
 
+.round-image {
+  border-radius: 50%;
+  width: 12em; // 192px
+}
+
 .videoContainer {
   margin: 0 auto 2.4em;
   width: 100%;
@@ -659,8 +664,11 @@ ul {
 }
 
 #avatar {
-  border-radius: 50%;
-  width: 12em; // 192px
+  @extend .round-image;
+}
+
+#fourOhFour {
+  @extend .round-image;
 }
 
 #published {
