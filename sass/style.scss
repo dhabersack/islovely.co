@@ -205,40 +205,35 @@ h4 {
 }
 
 header {
-  margin-bottom: 2.4em;
+  @extend .responsive-container;
 
-  > div {
-    @extend .responsive-container;
+  margin-bottom: 1.2em;
+  padding-top: 1.2em;
+  text-align: center;
 
-    padding: 1.2em 0;
-    text-align: center;
+  @media (#{ $query-large }) {
+    margin-bottom: 2.4em;
+    position: relative;
+  }
+
+  > a {
+    font-size: 2.5em;
+    line-height: 1.44em; // 36px
+    margin-bottom: 0.48em; // 12px
+    text-decoration: none;
 
     @media (#{ $query-medium }) {
-      padding: 2.4em 0;
+      margin-bottom: 0.96em; // 24px
     }
 
     @media (#{ $query-large }) {
-      position: relative;
+      margin-bottom: 0;
+      padding: 12px 0;
     }
 
-    > a {
-      font-size: 2.5em;
-      line-height: 1.44em; // 36px
-      margin-bottom: 0.48em; // 12px
-      text-decoration: none;
-
-      @media (#{ $query-medium }) {
-        margin-bottom: 0.96em; // 24px
-      }
-
-      @media (#{ $query-large }) {
-        margin-bottom: 0;
-      }
-
-      &,
-      &:visited {
-        color: $color-neutral-darkest;
-      }
+    &,
+    &:visited {
+      color: $color-neutral-darkest;
     }
   }
 
@@ -253,7 +248,7 @@ header {
 
     @media (#{ $query-medium }) {
       font-size: 2.4em;
-      margin: 0 0.25em; // 0 6px
+      margin: 0 0.375em; // 0 9px
     }
   }
 
@@ -270,10 +265,11 @@ header {
   }
 
   p {
-    margin-bottom: 0;
+    margin-bottom: 0.75em; // 12px
 
-    @media (#{ $query-medium }) {
+    @media (#{ $query-small }) {
       font-size: 2em;
+      margin-bottom: 0.6em; // 12px
     }
 
     @media (#{ $query-large }) {
@@ -597,7 +593,10 @@ ul {
 }
 
 .responsive-container {
-  margin: 0 auto;
+  margin: {
+    left: auto;
+    right: auto;
+  }
   width: 92%;
 }
 

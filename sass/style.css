@@ -463,29 +463,27 @@ h4 {
   margin-bottom: 0.375em; }
 
 header {
-  margin-bottom: 2.4em; }
-  header > div {
-    padding: 1.2em 0;
-    text-align: center; }
+  margin-bottom: 1.2em;
+  padding-top: 1.2em;
+  text-align: center; }
+  @media (min-width: 960px) {
+    header {
+      margin-bottom: 2.4em;
+      position: relative; } }
+  header > a {
+    font-size: 2.5em;
+    line-height: 1.44em;
+    margin-bottom: 0.48em;
+    text-decoration: none; }
     @media (min-width: 720px) {
-      header > div {
-        padding: 2.4em 0; } }
+      header > a {
+        margin-bottom: 0.96em; } }
     @media (min-width: 960px) {
-      header > div {
-        position: relative; } }
-    header > div > a {
-      font-size: 2.5em;
-      line-height: 1.44em;
-      margin-bottom: 0.48em;
-      text-decoration: none; }
-      @media (min-width: 720px) {
-        header > div > a {
-          margin-bottom: 0.96em; } }
-      @media (min-width: 960px) {
-        header > div > a {
-          margin-bottom: 0; } }
-      header > div > a, header > div > a:visited {
-        color: #3e3e3e; }
+      header > a {
+        margin-bottom: 0;
+        padding: 12px 0; } }
+    header > a, header > a:visited {
+      color: #3e3e3e; }
   header li {
     display: inline-block;
     margin: 0 0.1875em; }
@@ -496,16 +494,17 @@ header {
     @media (min-width: 720px) {
       header li {
         font-size: 2.4em;
-        margin: 0 0.25em; } }
+        margin: 0 0.375em; } }
   header > nav a {
     padding: 0.375em 0; }
   header > nav > ol {
     text-align: center; }
   header p {
-    margin-bottom: 0; }
-    @media (min-width: 720px) {
+    margin-bottom: 0.75em; }
+    @media (min-width: 480px) {
       header p {
-        font-size: 2em; } }
+        font-size: 2em;
+        margin-bottom: 0.6em; } }
     @media (min-width: 960px) {
       header p {
         position: absolute;
@@ -712,24 +711,25 @@ ul {
     height: 1.92em;
     width: 1.92em; }
 
-.responsive-container, footer > div, header > div, header > nav > ol, section > div {
-  margin: 0 auto;
+.responsive-container, footer > div, header, header > nav > ol, section > div {
+  margin-left: auto;
+  margin-right: auto;
   width: 92%; }
 
 @media (min-width: 480px) {
-  .responsive-container, footer > div, header > div, header > nav > ol, section > div {
+  .responsive-container, footer > div, header, header > nav > ol, section > div {
     width: 90%; } }
 
 @media (min-width: 720px) {
-  .responsive-container, footer > div, header > div, header > nav > ol, section > div {
+  .responsive-container, footer > div, header, header > nav > ol, section > div {
     width: 86%; } }
 
 @media (min-width: 960px) {
-  .responsive-container, footer > div, header > div, header > nav > ol, section > div {
+  .responsive-container, footer > div, header, header > nav > ol, section > div {
     width: 80%; } }
 
 @media (min-width: 1200px) {
-  .responsive-container, footer > div, header > div, header > nav > ol, section > div {
+  .responsive-container, footer > div, header, header > nav > ol, section > div {
     width: 96em; } }
 
 .videoContainer {
