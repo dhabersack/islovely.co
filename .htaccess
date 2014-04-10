@@ -3,6 +3,8 @@ Options -Indexes
 
 # Redirect crawlers
 RewriteEngine On
+RewriteCond %{QUERY_STRING} ^_escaped_fragment_=/*$
+RewriteRule ^$ /snapshots/index.html [L]
 RewriteCond %{QUERY_STRING} ^_escaped_fragment_=/(.*?)/*$
 RewriteRule ^$ /snapshots/%1\.html [L]
 
