@@ -2,6 +2,7 @@
   "bitwise": true,
   "browser": true,
   "curly": true,
+  /*"devel": true,*/
   "eqeqeq": true,
   "esnext": true,
   /*"expr": true,*/
