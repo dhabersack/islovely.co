@@ -4,23 +4,6 @@
 .logo-islovely::before,
 .icon-logo-islovely-brand { background-image: url('png/logo-islovely-brand.png'); background-repeat: no-repeat; }
 
-.logo-github::before,
-.icon-logo-github { background-image: url('png/logo-github.png'); background-repeat: no-repeat; }
-
-.logo-islovely::before,
-.icon-logo-islovely-brand { background-image: url('png/logo-islovely-brand.png'); background-repeat: no-repeat; }
-
-.icon-logo-islovely { background-image: url('png/logo-islovely.png'); background-repeat: no-repeat; }
-
-.logo-linkedin::before,
-.icon-logo-linkedin { background-image: url('png/logo-linkedin.png'); background-repeat: no-repeat; }
-
-.logo-twitter::before,
-.icon-logo-twitter { background-image: url('png/logo-twitter.png'); background-repeat: no-repeat; }
-
-.logo-xing::before,
-.icon-logo-xing { background-image: url('png/logo-xing.png'); background-repeat: no-repeat; }
-
 .icon-logo-islovely { background-image: url('png/logo-islovely.png'); background-repeat: no-repeat; }
 
 .logo-linkedin::before,

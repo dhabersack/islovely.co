@@ -105,8 +105,30 @@ footer {
     }
   }
 
+  li {
+    display: inline-block;
+    margin: 0 0.125em 0.375em; // 0 5px 6px
+
+    @media (#{ $query-small }) {
+      margin: {
+        left: 0.375em; // 5px
+        right: 0.375em; // 5px
+      }
+    }
+
+    @media (#{ $query-medium }) {
+      margin: {
+        left: 0.25em; // 5px
+        right: 0.25em; // 5px
+      }
+    }
+  }
+
   ul {
     list-style: none;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
   }
 }
 
@@ -559,12 +581,14 @@ ul {
   padding-left: 1.5625em; // 30px
 
   &::before {
-    background-size: contain;
-    background-position: center center;
+    background: {
+      position: center center;
+      size: contain;
+    }
     content: '';
-    height: 1.25em;
+    height: 1.5em; // 24px
     position: absolute;
-    width: 1.25em;
+    width: 1.25em; // 20px
     left: 0;
   }
 }
