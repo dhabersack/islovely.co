@@ -89,7 +89,7 @@ figure {
     }
   }
 
-  > img {
+  img {
     @include border-radius(0.2em);
 
     border: 0.1em solid $color-neutral-darker;

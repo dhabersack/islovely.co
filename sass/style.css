@@ -381,7 +381,7 @@ figure {
     figure {
       margin-left: 6em;
       margin-right: 6em; } }
-  figure > img {
+  figure img {
     -webkit-border-radius: 0.2em;
     border-radius: 0.2em;
     border: 0.1em solid #7d7d7d;
