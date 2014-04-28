@@ -191,12 +191,9 @@ module.exports = function(grunt) {
         banner: '/*! <%= pkg.name %> <%= pkg.version %> */\n',
         report: 'min'
       },
-      run: {
+      js: {
         files: {
-          '<%= pkg.name %>.min.js': [
-            '<%= pkg.name %>.js',
-            'bower_components/picturefill/picturefill.js'
-          ]
+          '<%= pkg.name %>.min.js': '<%= pkg.name %>.js'
         }
       }
     },
