@@ -1,0 +1,19 @@
+{
+  "name": "islovely.co",
+  "version": "1.2.0",
+  "authors": [
+    "Dominik Habersack <dom@islovely.co>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "picturefill": "~2.0.0"
+  }
+}

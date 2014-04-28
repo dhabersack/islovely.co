@@ -193,7 +193,10 @@ module.exports = function(grunt) {
       },
       js: {
         files: {
-          '<%= pkg.name %>.min.js': '<%= pkg.name %>.js'
+          '<%= pkg.name %>.min.js': [
+            '<%= pkg.name %>.js',
+            'bower_components/picturefill/dist/picturefill.js'
+          ]
         }
       }
     },
@@ -203,7 +206,7 @@ module.exports = function(grunt) {
         livereload: true
       },
       grunt: {
-        files: ['package.json', 'Gruntfile.js'],
+        files: ['Gruntfile.js', 'package.json'],
         tasks: 'compile'
       },
       markup: {
