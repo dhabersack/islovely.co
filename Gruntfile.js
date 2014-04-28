@@ -193,7 +193,10 @@ module.exports = function(grunt) {
       },
       run: {
         files: {
-          '<%= pkg.name %>.min.js': '<%= pkg.name %>.js'
+          '<%= pkg.name %>.min.js': [
+            '<%= pkg.name %>.js',
+            'bower_components/picturefill/picturefill.js'
+          ]
         }
       }
     },
