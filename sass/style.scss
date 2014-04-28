@@ -66,12 +66,34 @@ figcaption {
 }
 
 figure {
-  margin-bottom: 2.4em;
+  margin: 0 1em 2.4em;
+
+  @media (#{ $query-small }) {
+    margin: {
+      left: 2em;
+      right: 2em;
+    }
+  }
+
+  @media (#{ $query-medium }) {
+    margin: {
+      left: 4em;
+      right: 4em;
+    }
+  }
+
+  @media (#{ $query-large }) {
+    margin: {
+      left: 6em;
+      right: 6em;
+    }
+  }
 
   > img {
     @include border-radius(0.2em);
 
     border: 0.1em solid $color-neutral-darker;
+    width: 100%;
   }
 }
 

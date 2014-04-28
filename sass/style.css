@@ -368,11 +368,24 @@ figcaption {
   font-style: italic; }
 
 figure {
-  margin-bottom: 2.4em; }
+  margin: 0 1em 2.4em; }
+  @media (min-width: 480px) {
+    figure {
+      margin-left: 2em;
+      margin-right: 2em; } }
+  @media (min-width: 720px) {
+    figure {
+      margin-left: 4em;
+      margin-right: 4em; } }
+  @media (min-width: 960px) {
+    figure {
+      margin-left: 6em;
+      margin-right: 6em; } }
   figure > img {
     -webkit-border-radius: 0.2em;
     border-radius: 0.2em;
-    border: 0.1em solid #7d7d7d; }
+    border: 0.1em solid #7d7d7d;
+    width: 100%; }
 
 footer {
   background: #e3e3e3;
