@@ -17,10 +17,10 @@ App.Router.reopen({
   didTransition: function(infos) {
     this._super(infos);
 
+    Ember.run.scheduleOnce('afterRender', this, 'picturefill');
     Ember.run.scheduleOnce('afterRender', this, 'scrollToTop');
     Ember.run.scheduleOnce('afterRender', this, 'sendAnalytics');
   },
-
 
   scrollToTop: function() {
     window.scrollTo(0, 0);
