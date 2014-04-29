@@ -6,6 +6,7 @@ module.exports = {
   ],
   'compile:css': [
     'sass',
+    'cmq',
     'newer:cssmin:css'
   ],
   'compile:js': [
