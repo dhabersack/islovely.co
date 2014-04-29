@@ -1,6 +1,10 @@
 # Disable access to directory indexes
 Options -Indexes
 
+<ifmodule mod_deflate.c>
+AddOutputFilterByType DEFLATE application/json application/x-javascript application/xml application/xml+rss text/css text/javascript text/js text/plain text/xml
+</ifmodule>
+
 # Redirect crawlers
 RewriteEngine On
 RewriteCond %{QUERY_STRING} ^_escaped_fragment_=/*$
