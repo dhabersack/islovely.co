@@ -714,17 +714,6 @@ ul {
 	padding: 0;
 }
 
-.block-content,
-blockquote,
-pre {
-	border-left-style: solid;
-	border-left-width: 0.25em;
-	font-size: 1.6em;
-	line-height: 1.5em;
-	margin: 0 0 1.5em;
-	padding-left: 0.6875em;
-}
-
 .call-to-action {
 	-webkit-border-radius: 0.125em;
 	border-radius: 0.125em;
@@ -746,75 +735,6 @@ pre {
 	background: #ffe226;
 }
 
-.focusable:focus,
-a:focus,
-a:focus:visited,
-button:focus {
-	background: #fff2a5;
-	color: #262000;
-	outline: 0;
-}
-
-.formfield,
-input[type="email"],
-input[type="text"],
-textarea {
-	-webkit-box-shadow: 0 0 0.0625em #3e3e3e;
-	box-shadow: 0 0 0.0625em #3e3e3e;
-	-webkit-border-radius: 0.125em;
-	border-radius: 0.125em;
-	border: 0;
-	color: #3e3e3e;
-	font-size: 1.6em;
-	line-height: 1.5em;
-	margin-bottom: 0.75em;
-	padding: 0.375em 2%;
-	width: 96%;
-	-webkit-appearance: none;
-}
-
-.formfield:focus,
-input[type="email"]:focus,
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="text"]:focus,
-textarea:focus,
-textarea:focus {
-	background: #fff2a5;
-	outline: none;
-}
-
-.logo,
-.logo-github,
-.logo-linkedin,
-.logo-islovely,
-.logo-twitter,
-.logo-xing {
-	position: relative;
-	display: inline-block;
-	padding-left: 1.5625em;
-}
-
-.logo::before,
-.logo-github::before,
-.logo-linkedin::before,
-.logo-islovely::before,
-.logo-twitter::before,
-.logo-xing::before,
-.logo-github::before,
-.logo-linkedin::before,
-.logo-islovely::before,
-.logo-twitter::before,
-.logo-xing::before {
-	background-position: center center;
-	background-size: contain;
-	content: '';
-	height: 1.5em;
-	position: absolute;
-	width: 1.25em;
-	left: 0;
-}
-
 .logo-islovely {
 	font-family: 'Lato', Arial, 'Helvetica Neue', Helvetica, sans-serif;
 	line-height: 1.92em;
@@ -824,23 +744,6 @@ textarea:focus {
 .logo-islovely::before {
 	height: 1.92em;
 	width: 1.92em;
-}
-
-.responsive-container,
-footer > div,
-header,
-header > nav > ol,
-main > div {
-	margin-left: auto;
-	margin-right: auto;
-	width: 92%;
-}
-
-.round-image,
-#avatar,
-#fourOhFour {
-	border-radius: 50%;
-	width: 12em;
 }
 
 .videoContainer {
@@ -881,6 +784,87 @@ main > div {
 	font-style: italic;
 	line-height: 1.6em;
 	margin-bottom: 1.6em;
+}
+
+blockquote,
+pre {
+	border-left-style: solid;
+	border-left-width: 0.25em;
+	font-size: 1.6em;
+	line-height: 1.5em;
+	margin: 0 0 1.5em;
+	padding-left: 0.6875em;
+}
+
+a:focus,
+a:visited:focus:focus,
+button:focus {
+	background: #fff2a5;
+	color: #262000;
+	outline: 0;
+}
+
+input[type="email"],
+input[type="text"],
+textarea {
+	-webkit-box-shadow: 0 0 0.0625em #3e3e3e;
+	box-shadow: 0 0 0.0625em #3e3e3e;
+	-webkit-border-radius: 0.125em;
+	border-radius: 0.125em;
+	border: 0;
+	color: #3e3e3e;
+	font-size: 1.6em;
+	line-height: 1.5em;
+	margin-bottom: 0.75em;
+	padding: 0.375em 2%;
+	width: 96%;
+	-webkit-appearance: none;
+}
+
+input[type="email"]:focus,
+input[type="text"]:focus,
+textarea:focus {
+	background: #fff2a5;
+	outline: none;
+}
+
+.logo-github,
+.logo-linkedin,
+.logo-islovely,
+.logo-twitter,
+.logo-xing {
+	position: relative;
+	display: inline-block;
+	padding-left: 1.5625em;
+}
+
+.logo-github::before,
+.logo-linkedin::before,
+.logo-islovely::before,
+.logo-twitter::before,
+.logo-xing::before {
+	background-position: center center;
+	background-size: contain;
+	content: '';
+	height: 1.5em;
+	position: absolute;
+	width: 1.25em;
+	left: 0;
+}
+
+footer > div,
+header,
+header > nav > ol,
+main > div {
+	margin-left: auto;
+	margin-right: auto;
+	width: 92%;
+}
+
+#avatar,
+#fourOhFour {
+	border-radius: 50%;
+	width: 12em;
 }
 
 @media (min-width: 480px) {
@@ -945,7 +929,6 @@ pre > code {
 	line-height: 1.5em;
 }
 
-.formfield,
 input[type="email"],
 input[type="text"],
 textarea {
@@ -955,7 +938,6 @@ textarea {
 	width: 98%;
 }
 
-.responsive-container,
 footer > div,
 header,
 header > nav > ol,
@@ -1042,18 +1024,17 @@ input[type="text"] {
 	width: 64%;
 }
 
-.responsive-container,
+#published {
+	font-size: 2em;
+	line-height: 1.5em;
+	margin-bottom: 1.2em;
+}
+
 footer > div,
 header,
 header > nav > ol,
 main > div {
 	width: 86%;
-}
-
-#published {
-	font-size: 2em;
-	line-height: 1.5em;
-	margin-bottom: 1.2em;
 }
 
 }
@@ -1098,7 +1079,6 @@ header p {
 	right: 0;
 }
 
-.responsive-container,
 footer > div,
 header,
 header > nav > ol,
@@ -1110,7 +1090,6 @@ main > div {
 
 @media (min-width: 1200px) {
 
-.responsive-container,
 footer > div,
 header,
 header > nav > ol,

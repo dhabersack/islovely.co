@@ -6,7 +6,7 @@
 @import 'normalize';
 
 a {
-  @extend .focusable;
+  @extend %focusable;
 
   color: $color-link;
 
@@ -14,13 +14,13 @@ a {
     color: $color-link-visited;
 
     &:focus {
-      @extend .focusable;
+      @extend %focusable;
     }
   }
 }
 
 blockquote {
-  @extend .block-content;
+  @extend %block-content;
 
   border-color: $color-highlight-lighter;
   color: $color-neutral-darker;
@@ -38,7 +38,7 @@ body {
 }
 
 button {
-  @extend .focusable;
+  @extend %focusable;
 
   @include border-radius(0.125em); // 2px
   @include linear-gradient($color-neutral-lighter, $color-neutral);
@@ -117,7 +117,7 @@ footer {
   }
 
   > div {
-    @extend .responsive-container;
+    @extend %responsive-container;
   }
 
   form {
@@ -257,7 +257,7 @@ h4 {
 }
 
 header {
-  @extend .responsive-container;
+  @extend %responsive-container;
 
   margin-bottom: 1.2em;
   padding-top: 1.2em;
@@ -310,7 +310,7 @@ header {
     }
 
     > ol {
-      @extend .responsive-container;
+      @extend %responsive-container;
 
       text-align: center;
     }
@@ -347,11 +347,7 @@ img {
 input {
   &[type="email"],
   &[type="text"] {
-    @extend .formfield;
-
-    &:focus {
-      @extend .formfield:focus;
-    }
+    @extend %formfield;
   }
 }
 
@@ -400,7 +396,7 @@ main {
   }
 
   > div {
-    @extend .responsive-container;
+    @extend %responsive-container;
   }
 
   li,
@@ -476,7 +472,7 @@ p {
 }
 
 pre {
-  @extend .block-content;
+  @extend %block-content;
 
   border-color: $color-neutral-darkest;
   font-family: $font-family-code;
@@ -511,11 +507,7 @@ tbody {
 }
 
 textarea {
-  @extend .formfield;
-
-  &:focus {
-    @extend .formfield:focus;
-  }
+  @extend %formfield;
 }
 
 td {
@@ -539,17 +531,6 @@ ul {
   padding: 0;
 }
 
-.block-content {
-  border-left: {
-    style: solid;
-    width: 0.25em; // 4px
-  }
-  font-size: 1.6em;
-  line-height: 1.5em; // 24px
-  margin: 0 0 1.5em; // 0 0 24px
-  padding-left: 0.6875em; // 11px
-}
-
 .call-to-action {
   @include border-radius(0.125em); // 2px
   @include linear-gradient($color-action-lighter, $color-action);
@@ -568,42 +549,6 @@ ul {
   }
 }
 
-.focusable {
-  &:focus {
-    background: $color-highlight-lightest;
-    color: $color-highlight-darkest;
-    outline: 0;
-  }
-}
-
-.formfield {
-  @include box-shadow(0 0 0.0625em $color-neutral-darkest); // 0 0 1px
-  @include border-radius(0.125em); // 2px
-
-  border: 0;
-  color: $color-neutral-darkest;
-  font-size: 1.6em;
-  line-height: 1.5em; // 24px
-  margin-bottom: 0.75em; // 12px
-  padding: 0.375em 2%; // 6px 0.5%
-  width: 96%;
-  -webkit-appearance: none;
-
-  &:focus {
-    background: $color-highlight-lightest;
-    outline: none;
-  }
-}
-
-@media (#{ $query-small }) {
-  .formfield {
-    font-size: 2em;
-    line-height: 1.5em; // 30px
-    padding: 0.3em 1%; // 6px 1%
-    width: 98%;
-  }
-}
-
 @media (#{ $query-medium }) {
   input {
     &[type="email"],
@@ -613,34 +558,12 @@ ul {
   }
 }
 
-.logo {
-  position: relative;
-  display: inline-block;
-  padding-left: 1.5625em; // 30px
-
-  &::before {
-    background: {
-      position: center center;
-      size: contain;
-    }
-    content: '';
-    height: 1.5em; // 24px
-    position: absolute;
-    width: 1.25em; // 20px
-    left: 0;
-  }
-}
-
 .logo-github,
 .logo-linkedin,
 .logo-islovely,
 .logo-twitter,
 .logo-xing {
-  @extend .logo;
-
-  &::before {
-    @extend .logo::before;
-  }
+  @extend %logo;
 }
 
 .logo-islovely {
@@ -652,43 +575,6 @@ ul {
     height: 1.92em; // 60px
     width: 1.92em; // 60px
   }
-}
-
-.responsive-container {
-  margin: {
-    left: auto;
-    right: auto;
-  }
-  width: 92%;
-}
-
-@media (#{ $query-small }) {
-  .responsive-container {
-    width: 90%;
-  }
-}
-
-@media (#{ $query-medium }) {
-  .responsive-container {
-    width: 86%;
-  }
-}
-
-@media (#{ $query-large }) {
-  .responsive-container {
-    width: 80%;
-  }
-}
-
-@media (#{ $query-extra-large }) {
-  .responsive-container {
-    width: 96em;
-  }
-}
-
-.round-image {
-  border-radius: 50%;
-  width: 12em; // 192px
 }
 
 .videoContainer {
@@ -726,11 +612,11 @@ ul {
 }
 
 #avatar {
-  @extend .round-image;
+  @extend %round-image;
 }
 
 #fourOhFour {
-  @extend .round-image;
+  @extend %round-image;
 }
 
 #published {
@@ -747,4 +633,106 @@ ul {
     line-height: 1.5em; // 30px
     margin-bottom: 1.2em; // 24px
   }
+}
+
+%block-content {
+  border-left: {
+    style: solid;
+    width: 0.25em; // 4px
+  }
+  font-size: 1.6em;
+  line-height: 1.5em; // 24px
+  margin: 0 0 1.5em; // 0 0 24px
+  padding-left: 0.6875em; // 11px
+}
+
+%focusable {
+  &:focus {
+    background: $color-highlight-lightest;
+    color: $color-highlight-darkest;
+    outline: 0;
+  }
+}
+
+%formfield {
+  @include box-shadow(0 0 0.0625em $color-neutral-darkest); // 0 0 1px
+  @include border-radius(0.125em); // 2px
+
+  border: 0;
+  color: $color-neutral-darkest;
+  font-size: 1.6em;
+  line-height: 1.5em; // 24px
+  margin-bottom: 0.75em; // 12px
+  padding: 0.375em 2%; // 6px 0.5%
+  width: 96%;
+  -webkit-appearance: none;
+
+  &:focus {
+    background: $color-highlight-lightest;
+    outline: none;
+  }
+}
+
+@media (#{ $query-small }) {
+  %formfield {
+    font-size: 2em;
+    line-height: 1.5em; // 30px
+    padding: 0.3em 1%; // 6px 1%
+    width: 98%;
+  }
+}
+
+%logo {
+  position: relative;
+  display: inline-block;
+  padding-left: 1.5625em; // 30px
+
+  &::before {
+    background: {
+      position: center center;
+      size: contain;
+    }
+    content: '';
+    height: 1.5em; // 24px
+    position: absolute;
+    width: 1.25em; // 20px
+    left: 0;
+  }
+}
+
+%responsive-container {
+  margin: {
+    left: auto;
+    right: auto;
+  }
+  width: 92%;
+}
+
+@media (#{ $query-small }) {
+  %responsive-container {
+    width: 90%;
+  }
+}
+
+@media (#{ $query-medium }) {
+  %responsive-container {
+    width: 86%;
+  }
+}
+
+@media (#{ $query-large }) {
+  %responsive-container {
+    width: 80%;
+  }
+}
+
+@media (#{ $query-extra-large }) {
+  %responsive-container {
+    width: 96em;
+  }
+}
+
+%round-image {
+  border-radius: 50%;
+  width: 12em; // 192px
 }
