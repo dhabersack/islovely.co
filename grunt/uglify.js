@@ -6,8 +6,8 @@ module.exports = {
   js: {
     files: {
       '<%= package.name %>.min.js': [
-        '<%= package.name %>.js',
-        'bower_components/picturefill/dist/picturefill.js'
+        'bower_components/picturefill/dist/picturefill.js',
+        '<%= package.name %>.js'
       ]
     }
   }
