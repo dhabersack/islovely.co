@@ -15,14 +15,14 @@
 
   <body>
     <script type="text/x-handlebars" id="application">
-      <header>
+      <header role="banner">
         {{link-to 'islovely' 'index' class='logo-islovely'}}
 
         <p>
           {{link-to 'Request a proposal' 'page' 'contact' class='call-to-action'}}
         </p>
 
-        <nav>
+        <nav role="navigation">
           <ol>
             <li>
               {{link-to 'Home' 'index'}}
@@ -43,13 +43,13 @@
         </nav>
       </header>
 
-      <section>
+      <main role="main">
         <div>
           {{outlet}}
         </div>
-      </section>
+      </main>
 
-      <footer>
+      <footer role="contentinfo">
         <div>
           <p>
             Copyright &copy; 2014<br>

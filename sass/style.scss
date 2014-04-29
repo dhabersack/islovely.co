@@ -6,10 +6,16 @@
 @import 'normalize';
 
 a {
+  @extend .focusable;
+
   color: $color-link;
 
   &:visited {
     color: $color-link-visited;
+
+    &:focus {
+      @extend .focusable;
+    }
   }
 }
 
@@ -32,6 +38,8 @@ body {
 }
 
 button {
+  @extend .focusable;
+
   @include border-radius(0.125em); // 2px
   @include linear-gradient($color-neutral-lighter, $color-neutral);
 
@@ -374,59 +382,7 @@ li {
   line-height: 1.5em; // 24px
 }
 
-mark {
-  background: $color-highlight-lighter;
-  color: $color-highlight-darkest;
-  padding: 0.0625em 0.125em; // 1px 2px
-}
-
-nav {
-  font-family: $font-family-headings;
-
-  a {
-    display: inline-block;
-  }
-
-  > ol {
-    list-style: none;
-    margin: 0 auto;
-    overflow: hidden;
-  }
-}
-
-ol {
-  list-style-position: inside;
-  margin: 0 0 2.4em;
-  padding: 0;
-}
-
-p {
-  font-size: 1.6em;
-  line-height: 1.5em; // 24px
-  margin: 0 0 1.5em; // 0 0 24px
-}
-
-pre {
-  @extend .block-content;
-
-  border-color: $color-neutral-darkest;
-  font-family: $font-family-code;
-  overflow: scroll;
-
-  > code {
-    @media (#{ $query-small }) {
-      font-size: 1.25em; // 20px
-      line-height: 1.5em; // 30px
-    }
-
-    @media (#{ $query-medium }) {
-      font-size: 1.5em; // 24px
-      line-height: 1.5em; // 36px
-    }
-  }
-}
-
-section {
+main {
   overflow: hidden;
 
   blockquote {
@@ -483,6 +439,58 @@ section {
   p {
     @media (#{ $query-small }) {
       margin-bottom: 1.5em; // 30px
+    }
+  }
+}
+
+mark {
+  background: $color-highlight-lighter;
+  color: $color-highlight-darkest;
+  padding: 0.0625em 0.125em; // 1px 2px
+}
+
+nav {
+  font-family: $font-family-headings;
+
+  a {
+    display: inline-block;
+  }
+
+  > ol {
+    list-style: none;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+}
+
+ol {
+  list-style-position: inside;
+  margin: 0 0 2.4em;
+  padding: 0;
+}
+
+p {
+  font-size: 1.6em;
+  line-height: 1.5em; // 24px
+  margin: 0 0 1.5em; // 0 0 24px
+}
+
+pre {
+  @extend .block-content;
+
+  border-color: $color-neutral-darkest;
+  font-family: $font-family-code;
+  overflow: scroll;
+
+  > code {
+    @media (#{ $query-small }) {
+      font-size: 1.25em; // 20px
+      line-height: 1.5em; // 30px
+    }
+
+    @media (#{ $query-medium }) {
+      font-size: 1.5em; // 24px
+      line-height: 1.5em; // 36px
     }
   }
 }
@@ -557,6 +565,14 @@ ul {
 
   &:hover {
     background: $color-action;
+  }
+}
+
+.focusable {
+  &:focus {
+    background: $color-highlight-lightest;
+    color: $color-highlight-darkest;
+    outline: 0;
   }
 }
 

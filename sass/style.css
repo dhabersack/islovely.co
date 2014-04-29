@@ -621,6 +621,31 @@ li {
 	line-height: 1.5em;
 }
 
+main {
+	overflow: hidden;
+}
+
+main blockquote > p {
+	font-size: 1em;
+}
+
+main nav {
+	font-family: 'PT Serif', Georgia, Times, 'Times New Roman', serif;
+	margin-bottom: 0.6em;
+	padding: 0;
+}
+
+main nav a {
+	display: inline-block;
+	font-size: 1.6em;
+	line-height: 1.5em;
+}
+
+main nav a,
+main nav a:visited {
+	color: #3581fc;
+}
+
 mark {
 	background: #ffea72;
 	color: #262000;
@@ -657,31 +682,6 @@ pre {
 	border-color: #3e3e3e;
 	font-family: 'Source Code Pro', 'Courier New', Courier, monospace;
 	overflow: scroll;
-}
-
-section {
-	overflow: hidden;
-}
-
-section blockquote > p {
-	font-size: 1em;
-}
-
-section nav {
-	font-family: 'PT Serif', Georgia, Times, 'Times New Roman', serif;
-	margin-bottom: 0.6em;
-	padding: 0;
-}
-
-section nav a {
-	display: inline-block;
-	font-size: 1.6em;
-	line-height: 1.5em;
-}
-
-section nav a,
-section nav a:visited {
-	color: #3581fc;
 }
 
 table {
@@ -744,6 +744,15 @@ pre {
 
 .call-to-action:hover {
 	background: #ffe226;
+}
+
+.focusable:focus,
+a:focus,
+a:focus:visited,
+button:focus {
+	background: #fff2a5;
+	color: #262000;
+	outline: 0;
 }
 
 .formfield,
@@ -821,7 +830,7 @@ textarea:focus {
 footer > div,
 header,
 header > nav > ol,
-section > div {
+main > div {
 	margin-left: auto;
 	margin-right: auto;
 	width: 92%;
@@ -918,22 +927,22 @@ label {
 	margin-bottom: 0.3em;
 }
 
-pre > code {
-	font-size: 1.25em;
-	line-height: 1.5em;
-}
-
-section blockquote > p {
+main blockquote > p {
 	font-size: 1.25em;
 }
 
-section li,
-section p {
+main li,
+main p {
 	font-size: 2em;
 }
 
-section p {
+main p {
 	margin-bottom: 1.5em;
+}
+
+pre > code {
+	font-size: 1.25em;
+	line-height: 1.5em;
 }
 
 .formfield,
@@ -950,7 +959,7 @@ textarea {
 footer > div,
 header,
 header > nav > ol,
-section > div {
+main > div {
 	width: 90%;
 }
 
@@ -1010,22 +1019,22 @@ label {
 	margin-bottom: 0.25em;
 }
 
-pre > code {
-	font-size: 1.5em;
-	line-height: 1.5em;
-}
-
-section blockquote > p {
+main blockquote > p {
 	font-size: 1.5em;
 }
 
-section li,
-section p {
+main li,
+main p {
 	font-size: 2.4em;
 }
 
-section nav a {
+main nav a {
 	font-size: 2em;
+}
+
+pre > code {
+	font-size: 1.5em;
+	line-height: 1.5em;
 }
 
 input[type="email"],
@@ -1037,7 +1046,7 @@ input[type="text"] {
 footer > div,
 header,
 header > nav > ol,
-section > div {
+main > div {
 	width: 86%;
 }
 
@@ -1093,7 +1102,7 @@ header p {
 footer > div,
 header,
 header > nav > ol,
-section > div {
+main > div {
 	width: 80%;
 }
 
@@ -1105,7 +1114,7 @@ section > div {
 footer > div,
 header,
 header > nav > ol,
-section > div {
+main > div {
 	width: 96em;
 }
 
