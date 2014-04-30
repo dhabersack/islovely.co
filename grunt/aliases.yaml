@@ -1,18 +1,15 @@
 compile:
-  - compile:vectors
-  - compile:css
-  - compile:js
-compile:css:
+  - vectors
+  - css
+  - js
+css:
   - sass
   - cmq
   - newer:cssmin:css
-compile:js:
+js:
   - newer:concat:js
   - newer:jshint
   - newer:uglify
-compile:vectors:
-  - grunticon
-  - newer:cssmin:grunticon
 default:
   - compile
   - watch
@@ -25,3 +22,6 @@ snapshot:
   - htmlmin:snapshots
   - clean:postsnapshots
   - sitemap
+vectors:
+  - grunticon
+  - newer:cssmin:grunticon

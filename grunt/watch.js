@@ -11,14 +11,14 @@ module.exports = {
   },
   script: {
     files: ['.jshintrc', 'js/**/*.js'],
-    tasks: 'compile:js'
+    tasks: 'js'
   },
   stylesheets: {
     files: 'sass/**/*.scss',
-    tasks: 'compile:css'
+    tasks: 'css'
   },
   vectors: {
     files: 'vectors/**/*',
-    tasks: 'compile:vectors'
+    tasks: 'vectors'
   }
 };
