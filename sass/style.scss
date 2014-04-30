@@ -697,20 +697,6 @@ ul {
   }
 }
 
-.wireframe {
-  &.small {
-    width: 12.8em;
-  }
-
-  &.medium {
-    width: 19.2em;
-  }
-
-  &.large {
-    width: 28.8em;
-  }
-}
-
 #avatar {
   @extend %round-image;
 }
