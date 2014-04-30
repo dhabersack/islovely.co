@@ -3,7 +3,7 @@ module.exports = {
     livereload: true
   },
   grunt: {
-    files: ['Gruntfile.js', 'grunt/**/*.js', 'package.json'],
+    files: ['Gruntfile.js', 'grunt/**/*', 'package.json'],
     tasks: 'compile'
   },
   markup: {

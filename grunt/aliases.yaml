@@ -4,6 +4,7 @@ compile:
   - js
 css:
   - sass
+  - autoprefixer
   - cmq
   - newer:cssmin:css
 js:

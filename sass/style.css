@@ -208,6 +208,7 @@ figure {
 
 hr {
 	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
 	box-sizing: content-box;
 	height: 0;
 }
@@ -331,6 +332,8 @@ input {
 
 input[type="checkbox"],
 input[type="radio"] {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
 	box-sizing: border-box; /* 1 */
 	padding: 0; /* 2 */
 }
@@ -445,11 +448,10 @@ button:focus {
 input[type="email"],
 input[type="text"],
 textarea {
+	border: 0;
+	border-radius: 0.125em;
 	-webkit-box-shadow: 0 0 0.0625em #3e3e3e;
 	box-shadow: 0 0 0.0625em #3e3e3e;
-	-webkit-border-radius: 0.125em;
-	border-radius: 0.125em;
-	border: 0;
 	color: #3e3e3e;
 	font-size: 1.6em;
 	line-height: 1.5em;
@@ -482,6 +484,7 @@ textarea:focus {
 .logo-twitter::before,
 .logo-xing::before {
 	background-position: center center;
+	-webkit-background-size: contain;
 	background-size: contain;
 	content: '';
 	height: 1.5em;
@@ -528,13 +531,12 @@ body {
 }
 
 button {
-	-webkit-border-radius: 0.125em;
-	border-radius: 0.125em;
 	background-color: #bdbdbd;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#e3e3e3), to(#bdbdbd));
 	background-image: -webkit-linear-gradient(top, #e3e3e3, #bdbdbd);
 	background-image: linear-gradient(to bottom, #e3e3e3, #bdbdbd);
 	border: 0.0625em solid #9e9e9e;
+	border-radius: 0.125em;
 	color: #3e3e3e;
 	display: block;
 	font-size: 1.6em;
@@ -564,9 +566,8 @@ figure {
 }
 
 figure img {
-	-webkit-border-radius: 0.2em;
-	border-radius: 0.2em;
 	border: 0.1em solid #7d7d7d;
+	border-radius: 0.2em;
 	width: 100%;
 }
 
@@ -796,13 +797,12 @@ ul {
 }
 
 .call-to-action {
-	-webkit-border-radius: 0.125em;
-	border-radius: 0.125em;
 	background-color: #ffe226;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#ffea72), to(#ffe226));
 	background-image: -webkit-linear-gradient(top, #ffea72, #ffe226);
 	background-image: linear-gradient(to bottom, #ffea72, #ffe226);
 	border: 0.0625em solid #d8b800;
+	border-radius: 0.125em;
 	display: inline-block;
 	padding: 0.6875em 1.1875em;
 }

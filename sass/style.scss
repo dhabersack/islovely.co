@@ -25,10 +25,9 @@
 }
 
 %formfield {
-  @include box-shadow(0 0 0.0625em $color-neutral-darkest); // 0 0 1px
-  @include border-radius(0.125em); // 2px
-
   border: 0;
+  border-radius: 0.125em; // 2px
+  box-shadow: 0 0 0.0625em $color-neutral-darkest; // 0 0 1px
   color: $color-neutral-darkest;
   font-size: 1.6em;
   line-height: 1.5em; // 24px
@@ -142,10 +141,10 @@ body {
 button {
   @extend %focusable;
 
-  @include border-radius(0.125em); // 2px
   @include linear-gradient($color-neutral-lighter, $color-neutral);
 
   border: 0.0625em solid darken($color-neutral, 12%); // 1px
+  border-radius: 0.125em; // 2px
   color: $color-neutral-darkest;
   display: block;
   font-size: 1.6em;
@@ -200,9 +199,8 @@ figure {
   }
 
   img {
-    @include border-radius(0.2em);
-
     border: 0.1em solid $color-neutral-darker;
+    border-radius: 0.2em;
     width: 100%;
   }
 }
@@ -634,10 +632,10 @@ ul {
 }
 
 .call-to-action {
-  @include border-radius(0.125em); // 2px
   @include linear-gradient($color-action-lighter, $color-action);
 
   border: 0.0625em solid darken($color-action, 15%); // 1px
+  border-radius: 0.125em; // 2px
   display: inline-block;
   padding: 0.6875em 1.1875em; // 11px 19px
 
