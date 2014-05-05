@@ -440,8 +440,8 @@ pre {
 a:focus,
 a:visited:focus:focus,
 button:focus {
-	background: #fff2a5;
-	color: #262000;
+	background: #ffec80;
+	color: black;
 	outline: 0;
 }
 
@@ -464,7 +464,7 @@ textarea {
 input[type="email"]:focus,
 input[type="text"]:focus,
 textarea:focus {
-	background: #fff2a5;
+	background: #ffec80;
 	outline: none;
 }
 
@@ -509,15 +509,15 @@ main > div {
 }
 
 a {
-	color: #3581fc;
+	color: #0074d9;
 }
 
 a:visited {
-	color: #904fff;
+	color: #b10dc9;
 }
 
 blockquote {
-	border-color: #ffea72;
+	border-color: #ffe44d;
 	color: #7d7d7d;
 	font-style: italic;
 }
@@ -725,12 +725,12 @@ main nav a {
 
 main nav a,
 main nav a:visited {
-	color: #3581fc;
+	color: #0074d9;
 }
 
 mark {
-	background: #ffea72;
-	color: #262000;
+	background: #ffe44d;
+	color: black;
 	padding: 0.0625em 0.125em;
 }
 
@@ -797,11 +797,11 @@ ul {
 }
 
 .call-to-action {
-	background-color: #ffe226;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#ffea72), to(#ffe226));
-	background-image: -webkit-linear-gradient(top, #ffea72, #ffe226);
-	background-image: linear-gradient(to bottom, #ffea72, #ffe226);
-	border: 0.0625em solid #d8b800;
+	background-color: #ffdc00;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#ffe44d), to(#ffdc00));
+	background-image: -webkit-linear-gradient(top, #ffe44d, #ffdc00);
+	background-image: linear-gradient(to bottom, #ffe44d, #ffdc00);
+	border: 0.0625em solid #b39800;
 	border-radius: 0.125em;
 	display: inline-block;
 	padding: 0.6875em 1.1875em;
@@ -809,11 +809,11 @@ ul {
 
 .call-to-action,
 .call-to-action:visited {
-	color: #262000;
+	color: black;
 }
 
 .call-to-action:hover {
-	background: #ffe226;
+	background: #ffdc00;
 }
 
 .logo-islovely {

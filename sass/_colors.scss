@@ -1,10 +1,18 @@
-$blue:   #3581fc;
-$gray:   #bdbdbd;
-$green:  #23db2a;
-$orange: #ff9949;
-$red:    #e33d27;
-$violet: #904fff;
-$yellow: #ffe226;
+// Colors (except for `gray`) are based on http://clrs.cc/
+$aqua:    #7fdbff;
+$blue:    #0074d9;
+$fuchsia: #f012be;
+$gray:    #bdbdbd;
+$green:   #2ecc40;
+$lime:    #01ff70;
+$maroon:  #85144b;
+$navy:    #001f3f;
+$olive:   #3d9970;
+$orange:  #ff851b;
+$purple:  #b10dc9;
+$red:     #ff4136;
+$teal:    #39cccc;
+$yellow:  #ffdc00;
 
 // color proxies
 $color-action:       $yellow;
@@ -14,7 +22,7 @@ $color-debug:        rgba($red, 0.0625);
 $color-error:        $red;
 $color-highlight:    $yellow;
 $color-link:         $blue;
-$color-link-visited: $violet;
+$color-link-visited: $purple;
 $color-neutral:      $gray;
 
 // percentage amounts to adjust colors by
