@@ -1,7 +1,11 @@
 module.exports = {
   compile: {
+    options: {
+      bundleExec: true,
+      sourcemap: 'none'
+    },
     files: {
-      'sass/style.css': 'sass/style.scss'
+      'public/style.css': 'sass/style.scss'
     }
   }
 };

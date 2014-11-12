@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="grunt-contrib-sass does not work with the current version of Node.js. Downgrading Node.js to an earlier version fixes this problem.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <title>grunt-contrib-sass and Node.js 0.10.8 | islovely</title>
+
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400|PT+Serif:400,400italic,700|Source+Code+Pro">
+    <noscript><link rel="stylesheet" href="/icons.fallback.css"></noscript>
+  </head>
+
+  <body>
+    <header role="banner">
+      <a href="/">islovely</a>
+    </header>
+
+    <nav role="navigation">
+      <ol>
+        <li><a href="/">Home</a>
+        <li><a href="/projects">Projects</a>
+        <li><a href="/posts">Posts</a>
+        <li><a href="/about">About</a>
+        <li><a href="/contact">Contact</a>
+      </ol>
+    </nav>
+
+    <main role="main">
+
+
+<h1>grunt-contrib-sass and Node.js 0.10.8</h1>
+
+<p>Over the last few weeks, I have become a massive fan of <a href="http://gruntjs.com/">Grunt</a>. Amongst other things, it makes development with <a href="http://sass-lang.com/">Sass</a> and <a href="http://coffeescript.org/">CoffeeScript</a> much easier by running their compile-processes automatically and reloading the browser via LiveReload. It basically gives you frontend-superpowers.</p>
+
+<p>Grunt has given such a big boost to my productivity that suddenly losing part of it felt like the worst thing that could happen. Even more so considering that a client deadline was rapidly approaching at the time.</p>
+
+<p>Seemingly out of nowhere, <a href="https://github.com/gruntjs/grunt-contrib-sass">grunt-contrib-sass</a> failed with the following error message:</p>
+
+<p><code>bash
+Assertion failed:
+(!uv__io_active(&amp;stream-&gt;io_watcher, UV_POLLOUT)
+|| !ngx_queue_empty(&amp;stream-&gt;write_completed_queue)
+|| !ngx_queue_empty(&amp;stream-&gt;write_queue)
+|| stream-&gt;shutdown_req != NULL
+|| stream-&gt;connect_req != NULL), function uv_read_stop,
+file ../deps/uv/src/unix/stream.c, line 1319.
+</code></p>
+
+<p>The source of the problem was surprisingly difficult to pin down, primarily because the error message is rather cryptic. Some assertion failed, that is nice. It even tells me the file and exact line this error occured on, which I tracked down to a file in the <a href="https://github.com/joyent/node/blob/master/deps/uv/src/unix/stream.c">Node.js-repository</a>:</p>
+
+<p><code>c
+s = handle-&gt;select;
+</code></p>
+
+<p>Unfortunately, this does not help at all.</p>
+
+<p>It took a few good hours to figure out what had happened. Turns out that the innocent-looking</p>
+
+<p><code>bash
+$ brew update
+$ brew upgrade
+</code></p>
+
+<p>I had run earlier to update all packages installed through
+<a href="http://brew.sh/">Homebrew</a> also updated my installation of Node.js from version 0.10.6 to 0.10.8. However, that new version of Node.js does not currently work with grunt-contrib-sass.</p>
+
+<p>To get it working again, we need to temporarily downgrade Node.js to an earlier version. Homebrew allows us to install different versions of the same package and switch between them.</p>
+
+<p>First, you need to change to <code>/usr/local/</code>, which is where Homebrew lives by default:</p>
+
+<p><code>bash
+$ cd /usr/local/
+</code></p>
+
+<p>There you can request a list of all versions of <code>node</code> that are available via Homebrew:</p>
+
+<p><code>bash
+$ brew versions node
+0.10.8   git checkout ee99542 Library/Formula/node.rb
+0.10.7   git checkout e44f345 Library/Formula/node.rb
+0.10.6   git checkout 8583540 Library/Formula/node.rb
+0.10.5   git checkout 3b589c5 Library/Formula/node.rb
+[...]
+</code></p>
+
+<p>Homebrew even provides the <code>git</code>-command you need to run to install the version. Run these commands to install 0.10.7:</p>
+
+<p><code>bash
+$ git checkout e44f345 Library/Formula/node.rb
+$ brew unlink node
+$ brew install node
+</code></p>
+
+<p>After the installation is done, version 0.10.7 is going to be active, while 0.10.8 is still installed.</p>
+
+<p><code>bash
+$ node --version
+v0.10.7
+$ brew list --versions node
+node 0.10.7 0.10.8
+</code></p>
+
+<p>With 0.10.7 active, grunt-contrib-sass once again purrs like a cat and does its thing.</p>
+
+<p>If you want to switch between installed versions later, you can do so by running <code>brew switch &lt;formula&gt; &lt;version&gt;</code>:</p>
+
+<p><code>bash
+$ brew switch node 0.10.8
+Cleaning /usr/local/Cellar/node/0.10.7
+Cleaning /usr/local/Cellar/node/0.10.8
+5 links created for /usr/local/Cellar/node/0.10.8
+</code></p>
+
+
+
+    </main>
+
+    <footer role="contentinfo">
+        <p>
+          Copyright &copy; 2014<br>
+          Dom Habersack, <a href="/" title="Portfolio of Dom Habersack">islovely.co</a><br>
+          
+        </p>
+
+        <ul>
+          <li>
+            <a href="http://github.com/dhabersack" class="logo-github">GitHub</a>
+          </li>
+          <li>
+            <a href="http://twitter.com/dhabersack" class="logo-twitter">Twitter</a>
+          </li>
+        </ul>
+
+        <form action="http://islovely.us5.list-manage.com/subscribe/post?u=fefc2ec4108769b84b68f81f7&amp;id=1e9d2ac4ec" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+          <p>
+            Learn how to use code to solve problems on <a href="http://problemthinking.org">my newsletter</a>:
+          </p>
+
+          <input type="email" name="EMAIL" id="mce-email" placeholder="you@yourdomain.com">
+
+          <input type="text" style="position: absolute; left: -5000px;" name="b_fefc2ec4108769b84b68f81f7_1e9d2ac4ec" value="">
+
+          <button type="submit" name="subscribe">Sign up</button>
+        </form>
+      </div>
+    </footer>
+
+    <script>
+    window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.createElementNS||!t.document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||window.opera&&-1===navigator.userAgent.indexOf("Chrome")),o=function(o){var r=t.document.createElement("link"),a=t.document.getElementsByTagName("script")[0];r.rel="stylesheet",r.href=e[o&&n?0:o?1:2],a.parentNode.insertBefore(r,a)},r=new t.Image;r.onerror=function(){o(!1)},r.onload=function(){o(1===r.width&&1===r.height)},r.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="}};
+    grunticon(['icons.svg.css', 'icons.png.css', 'icons.fallback.css']);
+    </script>
+
+    <script>
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      },
+      i[r].l = 1 * new Date();
+      a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-13202125-5', 'islovely.co');
+    ga('set', 'anonymizeIp', true);
+    </script>
+  </body>
+</html>
+

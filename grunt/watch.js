@@ -2,9 +2,13 @@ module.exports = {
   options: {
     livereload: true
   },
+  content: {
+    files: ['site/**/*'],
+    tasks: ['jekyll', 'compile']
+  },
   grunt: {
     files: ['Gruntfile.js', 'grunt/**/*', 'package.json'],
-    tasks: 'compile'
+    tasks: ['jekyll', 'compile']
   },
   markup: {
     files: 'index.html'

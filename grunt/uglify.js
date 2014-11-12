@@ -5,7 +5,7 @@ module.exports = {
   },
   js: {
     files: {
-      '<%= package.name %>.min.js': [
+      'public/<%= package.name %>.min.js': [
         'bower_components/picturefill/dist/picturefill.js',
         '<%= package.name %>.js'
       ]

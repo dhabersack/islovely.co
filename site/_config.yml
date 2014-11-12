@@ -1,0 +1,9 @@
+include: ['.htaccess']
+permalink: /:categories/:title
+show_drafts: true
+defaults:
+  -
+    scope:
+      path: ''
+    values:
+      layout: 'default'

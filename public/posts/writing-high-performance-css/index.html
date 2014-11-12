@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Aside from the established best practices for reducing load times, a few things that can be done to stylesheets to make browsers render pages faster.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <title>Writing high-performance CSS | islovely</title>
+
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400|PT+Serif:400,400italic,700|Source+Code+Pro">
+    <noscript><link rel="stylesheet" href="/icons.fallback.css"></noscript>
+  </head>
+
+  <body>
+    <header role="banner">
+      <a href="/">islovely</a>
+    </header>
+
+    <nav role="navigation">
+      <ol>
+        <li><a href="/">Home</a>
+        <li><a href="/projects">Projects</a>
+        <li><a href="/posts">Posts</a>
+        <li><a href="/about">About</a>
+        <li><a href="/contact">Contact</a>
+      </ol>
+    </nav>
+
+    <main role="main">
+
+
+<h1>Writing high-performance CSS</h1>
+
+<p><strong>Disclaimer:</strong> Browsers are incredibly fast at parsing CSS, which makes gains through optimization marginal at best. There are a lot of other areas to tackle first to improve load times, like lowering the number of requests as well as file sizes of assets such as stylesheets, images and JavaScript.</p>
+
+<p>Because they are not going to have a massive impact on performance, stylesheet-optimizations should always be <strong>motivated by readability and maintainability first</strong>. There are a few simple rules on how to write CSS that benefit these areas as well as performance without requiring major changes to your current workflow.</p>
+
+<p>Any benefit you will see after following these rules is likely primarily due to ending up with smaller files. Consider the following a collection of “best practices” when it comes to writing not only efficient but also clean CSS.</p>
+
+<h2 id="efficient-selectors">Efficient selectors</h2>
+
+<p>The rule of thumb is to always <strong>use the simplest selector that matches</strong>, which can be achieved by applying these techniques:</p>
+
+<h3 id="understand-hierarchy-matching">Understand hierarchy-matching</h3>
+
+<p>If you are not sure how CSS gets applied to markup, you should first read my post on <a href="#!/posts/understanding-css-hierarchy-matching">understanding CSS hierarchy-matching</a>. It aims at giving a top-level overview essential for understanding the remaining recommendations.</p>
+
+<p>Once you feel comfortable with this subject, you should see why the star selector (<code>*</code>) should never be used: it forces the browser to evaluate every single element on the page without limitation.</p>
+
+<h3 id="drop-nonessential-selectors">Drop nonessential selectors</h3>
+
+<p>Selectors are evaluated from right to left, so make sure that the rightmost selector in your chain is as specific as possible. This often completely removes the need for some or all of the other selectors in the chain, which should be dropped whenever they are not absolutely required.</p>
+
+<p>Elements in a selector should be omitted if they try to mimic HTML too closely without increasing clarity. For example, <code>table tr td</code> can be shortened to <code>td</code>, because every table data-tag is going to appear in this manner. The same applies to all other types: use only what you need to unambiguously identify the element you are looking for.</p>
+
+<h3 id="favor-child-selectors-over-descendant-selectors">Favor child selectors over descendant selectors</h3>
+
+<p>Descendant selectors (spaces) usually perform worst because they require the entire hierarchy to be searched for all occurrences of the rightmost selector. For example, <code>p a</code> forces a browser to search all links on a page before checking which of them is nested in a paragraph <em>somewhere</em> in its hierarchy. The more of these you add, the more loops will have to be executed to figure out if a selector does or does not match the element(s) found initially.</p>
+
+<p>Child selectors (<code>&gt;</code>) perform slightly better than descendant selectors because they only have to check one additional layer of parental tags for all occurrences of the element on their right side, but should still only be used if they cannot be avoided.</p>
+
+<h3 id="prefer-tag-less-class--and-id-selectors">Prefer tag-less class- and ID-selectors</h3>
+
+<p>Class- and ID-selectors match fastest and should be used whenever possible.</p>
+
+<p>Never tag-qualify when using an ID since it already is the most explicit selector and only tag-qualify when using a class when unavoidable. <code>tag#id</code> should always be <code>#id</code>, <code>tag.class</code> should be <code>.class</code> if possible, meaning all cases where the given class is only ever found with the same tag.</p>
+
+<h3 id="use-one-id-per-chain-at-most">Use one ID per chain at most</h3>
+
+<p>Since an ID is unique on any given page, requiring it to appear in another unique element results in a wasted cycle of the rendering engine.</p>
+
+<p>You can nest one ID in a page-level class (usually set on the <code>body</code>-tag) if it behaves differently on different pages, but selectors should never contain multiple IDs. In most cases, you want to drop as many selectors as you can left of the rightmost ID: <code>.post #content header #author a</code> should be <code>.post #author a</code> or <code>#author a</code>, depending on whether or not you need the page-level class.</p>
+
+<h3 id="go-with-short-instead-of-clever">Go with short instead of clever</h3>
+
+<p>The longer a selector is, the longer it will take the browser to match it to an element in the DOM. Selectors with fewer levels are not only easier to read but are also going to perform better. Always go for removing a level when deciding between using multiple child selectors or removing a level.</p>
+
+<h3 id="with-great-powerhellip">With great power…</h3>
+
+<p>Since classes perform second-best, adding a class of its own name to each tag would have a significant increase in performance in all browsers, i.e. writing <code>&lt;h1 class="h1"&gt;</code> so it can be selected with <code>.h1</code>. However, this is a maintenance-nightmare. Do not do this unless rendering is a major bottleneck, which is <em>very</em> unlikely.</p>
+
+<p>If a selector consisting of multiple tags contains a class somewhere, a new class could be added to the last element and used as the only selector. For example, <code>.main header h1</code> could be condensed to a single class, with the heading gaining this class in the markup (<code>&lt;h1 class="main-header-heading"&gt;</code>). This is going to have a negative effect on the markup in most cases and should only be used if safely applicable. Clean markup always trumps short selectors.</p>
+
+<h3 id="examples">Examples</h3>
+
+<p>In accordance with the above rules, these selectors:</p>
+
+<p><code>css
+header nav ul li a#login {}
+table &gt; thead &gt; tr &gt; th {}
+ul.navigation &gt; li a {}
+</code></p>
+
+<p>can safely be rewritten as:</p>
+
+<p><code>css
+#login {}
+thead th {}
+.navigation a {}
+</code></p>
+
+<h2 id="efficient-rules">Efficient rules</h2>
+
+<p>Browser hacks relating to selectors (like <code>* html</code>) should be avoided because they tend to require redefinition of both the problem properties and all other properties, leading to duplicate code.</p>
+
+<p>If hacks cannot be avoided, property hacks like the star for IE7 and earlier (i.e. <code>*margin: 0;</code>) and the underscore for IE6 and earlier (i.e. <code>_margin: 0;</code>) should be used. These hacks should be used if IE-filters like <code>AlphaImageLoader</code> are absolutely required and avoided in all other situations.</p>
+
+<p>To avoid IE from slowing down a whole lot, pseudo-elements like <code>:hover</code> should not be applied to non-link elements.</p>
+
+<h2 id="performance-impact-of-css-preprocessors">Performance impact of CSS preprocessors</h2>
+
+<p>Preprocessors <strong>do not impact the performance</strong> of CSS when used correctly.</p>
+
+<p>Writing bad stylesheets for preprocessing will result in bad stylesheets just the same as writing bad plain text stylesheets will. The primary concern lies in nesting selectors, which does increase the ability to easily find selectors because they can be organized to more closely mimic markup, but should never be nested deeper than absolutely necessary to be unambiguous.</p>
+
+<p>Consider the following CSS as written in <a href="http://sass-lang.com/" title="Sass - Syntactically Swesome Stylesheets">Sass</a>:</p>
+
+<p>```scss
+dl {
+  overflow: hidden;</p>
+
+<blockquote>
+  <p>dd {
+    clear: left;
+  }</p>
+</blockquote>
+
+<blockquote>
+  <p>dd,
+dt {
+    float: left;
+    width: 50%;
+  }
+}
+```</p>
+</blockquote>
+
+<p>While this makes it obvious that definition terms and definition descriptions are always nested in definition lists, this is the only way they <em>can</em> appear, so the nesting should be removed and the rules rewritten as:</p>
+
+<p>```scss
+dd {
+  clear: left;
+}</p>
+
+<p>dd,
+dt {
+  float: left;
+  width: 50%;
+}</p>
+
+<p>dl {
+  overflow: hidden;
+}
+```</p>
+
+<p>Preprocessors do not result in a decrease in performance when respecting the aforementioned rules, assuming they are deployed as static assets and not processed client-side.</p>
+
+<p>Styles should not require JavaScript to run on the client side, so all stylesheets running through preprocessors should be compiled and minified before deployment. Both Sass and <a href="http://lesscss.org/" title="LESS « The Dynamic Stylesheet language">Less</a> offer this functionality out of the box. To compress stylesheets in Sass, compile your files with the <code>--style compressed</code> flag set.</p>
+
+<h2 id="stylesheet-delivery">Stylesheet delivery</h2>
+
+<p>In addition to minification, stylesheets should be gzipped before delivery for a further decrease in filesize. Browsers have been able to deal with gzipped CSS-files for a long time. This is a server-side configuration (mod_gzip in Apache 1.3, mod_deflate in Apache 2.x).</p>
+
+<h2 id="further-reading">Further reading</h2>
+
+<p>The information in this post has mostly been rounded up from these sources, which may contain additional information for those that want to learn more about the topic:</p>
+
+<ul>
+  <li><a href="https://developers.google.com/speed/docs/best-practices/rendering" title="Optimize browser rendering">Optimize browser rendering (Google Developers)</a></li>
+  <li><a href="https://developers.google.com/speed/articles/optimizing-css" title="CSS: Using every declaration just once">CSS: Using every declaration just once (Google Developers)</a></li>
+  <li><a href="http://developer.mozilla.org/en/Writing_Efficient_CSS" title="Writing efficient CSS">Writing efficient CSS (Mozilla Developer Network)</a></li>
+  <li><a href="http://eddiewelker.com/2011/04/06/high-performance-css-code-design/" title="High Performance CSS code design">High Performance CSS code design (Eddie Welker)</a></li>
+  <li><a href="http://css-tricks.com/efficiently-rendering-css/" title="Efficiently Rendering CSS">Efficiently Rendering CSS (CSS-Tricks)</a></li>
+</ul>
+
+
+    </main>
+
+    <footer role="contentinfo">
+        <p>
+          Copyright &copy; 2014<br>
+          Dom Habersack, <a href="/" title="Portfolio of Dom Habersack">islovely.co</a><br>
+          
+        </p>
+
+        <ul>
+          <li>
+            <a href="http://github.com/dhabersack" class="logo-github">GitHub</a>
+          </li>
+          <li>
+            <a href="http://twitter.com/dhabersack" class="logo-twitter">Twitter</a>
+          </li>
+        </ul>
+
+        <form action="http://islovely.us5.list-manage.com/subscribe/post?u=fefc2ec4108769b84b68f81f7&amp;id=1e9d2ac4ec" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+          <p>
+            Learn how to use code to solve problems on <a href="http://problemthinking.org">my newsletter</a>:
+          </p>
+
+          <input type="email" name="EMAIL" id="mce-email" placeholder="you@yourdomain.com">
+
+          <input type="text" style="position: absolute; left: -5000px;" name="b_fefc2ec4108769b84b68f81f7_1e9d2ac4ec" value="">
+
+          <button type="submit" name="subscribe">Sign up</button>
+        </form>
+      </div>
+    </footer>
+
+    <script>
+    window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.createElementNS||!t.document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||window.opera&&-1===navigator.userAgent.indexOf("Chrome")),o=function(o){var r=t.document.createElement("link"),a=t.document.getElementsByTagName("script")[0];r.rel="stylesheet",r.href=e[o&&n?0:o?1:2],a.parentNode.insertBefore(r,a)},r=new t.Image;r.onerror=function(){o(!1)},r.onload=function(){o(1===r.width&&1===r.height)},r.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="}};
+    grunticon(['icons.svg.css', 'icons.png.css', 'icons.fallback.css']);
+    </script>
+
+    <script>
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      },
+      i[r].l = 1 * new Date();
+      a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-13202125-5', 'islovely.co');
+    ga('set', 'anonymizeIp', true);
+    </script>
+  </body>
+</html>
+

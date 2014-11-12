@@ -8,21 +8,14 @@ css:
   - cmq
   - newer:cssmin:css
 js:
-  - newer:concat:js
   - newer:jshint
   - newer:uglify
 default:
+  - jekyll
   - compile
+  - browserSync
   - watch
-sitemap:
-  - shell:createSitemapList
-  - newer:concat:sitemap
-snapshot:
-  - clean:presnapshots
-  - htmlSnapshot
-  - htmlmin:snapshots
-  - clean:postsnapshots
-  - sitemap
 vectors:
   - grunticon
   - newer:cssmin:grunticon
+  - copy:grunticon

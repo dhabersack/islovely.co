@@ -1,7 +1,7 @@
 module.exports = {
   run: {
     files: {
-      'sass': ['sass/style.css']
+      'public': ['public/style.css']
     }
   }
 };

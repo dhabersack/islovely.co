@@ -7,14 +7,14 @@ module.exports = {
       banner:  '/*! <%= package.name %> v<%= package.version %> */'
     },
     files: {
-      'style.css': 'sass/style.css'
+      'public/style.css': 'public/style.css'
     }
   },
   grunticon: {
     files: {
-      'grunticon/icons.data.png.min.css': 'grunticon/icons.data.png.css',
-      'grunticon/icons.data.svg.min.css': 'grunticon/icons.data.svg.css',
-      'grunticon/icons.fallback.min.css': 'grunticon/icons.fallback.css'
+      'public/icons.png.css': 'grunticon/icons.data.png.css',
+      'public/icons.svg.css': 'grunticon/icons.data.svg.css',
+      'public/icons.fallback.css': 'grunticon/icons.fallback.css'
     }
   }
 };

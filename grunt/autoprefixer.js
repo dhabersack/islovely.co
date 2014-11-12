@@ -11,6 +11,6 @@ module.exports = {
     cascade: true
   },
   run: {
-    src: 'sass/style.css'
+    src: 'public/style.css'
   }
 };

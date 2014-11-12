@@ -1,0 +1,36 @@
+$query-small:       ('min-width: 480px');
+$query-medium:      ('min-width: 720px');
+$query-large:       ('min-width: 960px');
+$query-extra-large: ('min-width: 1200px');
+
+%responsive-container {
+  margin: {
+    left: auto;
+    right: auto;
+  }
+  width: 92%;
+}
+
+@media (#{ $query-small }) {
+  %responsive-container {
+    width: 90%;
+  }
+}
+
+@media (#{ $query-medium }) {
+  %responsive-container {
+    width: 86%;
+  }
+}
+
+@media (#{ $query-large }) {
+  %responsive-container {
+    width: 80%;
+  }
+}
+
+@media (#{ $query-extra-large }) {
+  %responsive-container {
+    width: 96em;
+  }
+}

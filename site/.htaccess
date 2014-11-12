@@ -1,0 +1,32 @@
+# Disable access to directory indexes
+Options -Indexes
+
+<ifmodule mod_deflate.c>
+AddOutputFilterByType DEFLATE application/javascript application/json application/x-javascript application/xml application/xml+rss text/css text/javascript text/js text/plain text/xml
+</ifmodule>
+
+# Redirect crawlers
+RewriteEngine On
+RewriteCond %{QUERY_STRING} ^_escaped_fragment_=/*$
+RewriteRule ^$ /snapshots/index.html [L]
+RewriteCond %{QUERY_STRING} ^_escaped_fragment_=/(.*?)/*$
+RewriteRule ^$ /snapshots/%1\.html [L]
+
+# Redirects
+Redirect 301 /blog/2012/08/05/sml-nj-110.74-on-os-x-10.8-mountain-lion.html /blog/sml-nj-110.74-on-os-x-10.8-mountain-lion/
+Redirect 301 /blog/2012/07/30/painless-installation-of-sml-on-os-x.html /blog/painless-installation-of-sml-on-os-x/
+Redirect 301 /blog/2012/07/27/on-lazy-journalism.html /blog/on-lazy-journalism/
+
+#
+# Switch to Ember.js
+#
+
+# Map all projects to root
+RewriteRule ^projects /#!/ [R=301,NE,L]
+
+# Map posts and pages to new locations
+Redirect 301 /blog                  /#!/posts
+Redirect 301 /contact               /#!/pages/contact
+Redirect 301 /imprint               /#!/pages/imprint
+Redirect 301 /influences-and-values /#!/pages/about
+Redirect 301 /resume                /#!/pages/about
