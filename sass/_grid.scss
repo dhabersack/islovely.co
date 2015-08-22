@@ -1,7 +1,0 @@
-$grid-gutter-width: 2%;
-
-@mixin grid($columns, $total_columns) {
-  $single_column_width: ((100% - ($total_columns - 1) * $grid-gutter-width) / $total_columns);
-
-  width: ($columns * $single_column_width + ($columns - 1) * $grid-gutter-width);
-}

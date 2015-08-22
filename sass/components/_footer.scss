@@ -1,0 +1,34 @@
+.footer {
+  background: $color-neutral-lightest;
+  overflow: hidden;
+  padding: {
+    bottom: 2.4em;
+    top: 2.4em;
+  }
+  text-align: center;
+
+  &__about {
+    @media ($query-extra-small) {
+      font-size: 1.6rem;
+    }
+
+    @media ($query-small) {
+      font-size: 2rem;
+    }
+  }
+
+  &__content {
+    @extend %responsive-container;
+  }
+
+  &__profile {
+    @media ($query-small) {
+      font-size: 2rem;
+    }
+  }
+
+  &__profiles {
+    list-style: none;
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,18 @@
+---
+title: Posts
+permalink: /posts/
+---
+
+{% for post in site.posts %}
+  <article>
+    <h2>
+      <a href="{{ post.url | prepend: site.baseurl }}">
+        {{ post.title }}
+      </a>
+    </h2>
+
+    <time>{{ post.date | date: "%b %-d, %Y" }}</time>
+
+    {{ post.excerpt | markdownify }}
+  </article>
+{% endfor %}

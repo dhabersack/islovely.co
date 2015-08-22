@@ -1,72 +1,93 @@
-// Colors (except for `gray`) are based on http://clrs.cc/
-$aqua:    #7fdbff;
-$blue:    #0074d9;
-$fuchsia: #f012be;
-$gray:    #bdbdbd;
-$green:   #2ecc40;
-$lime:    #01ff70;
-$maroon:  #85144b;
-$navy:    #001f3f;
-$olive:   #3d9970;
-$orange:  #ff851b;
-$purple:  #b10dc9;
-$red:     #ff4136;
-$teal:    #39cccc;
-$yellow:  #ffdc00;
+$_colors: (
+  blue:   #5992e0,
+  gray:   #aaaaaa,
+  green:  #8fe974,
+  purple: #8e62c9,
+  red:    #b74e44,
+  yellow: #ffd171
+);
 
-// color proxies
-$color-action:       $yellow;
-$color-alert:        $yellow;
-$color-brand:        #3581fc;
-$color-debug:        rgba($red, 0.0625);
-$color-error:        $red;
-$color-highlight:    $yellow;
-$color-link:         $blue;
-$color-link-visited: $purple;
-$color-neutral:      $gray;
+$_shades: (
+  blue: (
+    base:             map-get($_colors, blue),
+    lighter:  lighten(map-get($_colors, blue), 10%),
+    lightest: lighten(map-get($_colors, blue), 20%),
+    darker:    darken(map-get($_colors, blue), 10%),
+    darkest:   darken(map-get($_colors, blue), 20%)
+  ),
+  gray: (
+    base:             map-get($_colors, gray),
+    lighter:  lighten(map-get($_colors, gray), 15%),
+    lightest: lighten(map-get($_colors, gray), 30%),
+    darker:    darken(map-get($_colors, gray), 20%),
+    darkest:   darken(map-get($_colors, gray), 40%)
+  ),
+  green: (
+    base:             map-get($_colors, green),
+    lighter:  lighten(map-get($_colors, green), 10%),
+    lightest: lighten(map-get($_colors, green), 20%),
+    darker:    darken(map-get($_colors, green), 20%),
+    darkest:   darken(map-get($_colors, green), 40%)
+  ),
+  purple: (
+    base:             map-get($_colors, purple),
+    lighter:  lighten(map-get($_colors, purple), 10%),
+    lightest: lighten(map-get($_colors, purple), 20%),
+    darker:    darken(map-get($_colors, purple), 20%),
+    darkest:   darken(map-get($_colors, purple), 40%)
+  ),
+  red: (
+    base:             map-get($_colors, red),
+    lighter:  lighten(map-get($_colors, red), 10%),
+    lightest: lighten(map-get($_colors, red), 20%),
+    darker:    darken(map-get($_colors, red), 10%),
+    darkest:   darken(map-get($_colors, red), 20%)
+  ),
+  yellow: (
+    base:             map-get($_colors, yellow),
+    lighter:  lighten(map-get($_colors, yellow), 10%),
+    lightest: lighten(map-get($_colors, yellow), 20%),
+    darker:    darken(map-get($_colors, yellow), 10%),
+    darkest:   darken(map-get($_colors, yellow), 20%)
+  )
+);
 
-// percentage amounts to adjust colors by
-$amount-lightest: 25%;
-$amount-lighter:  15%;
-$amount-darker:   25%;
-$amount-darkest:  50%;
+@function get-shade($color, $hue) {
+  @return map-get(map-get($_shades, $color), $hue);
+}
 
-$color-action-lightest:       lighten($color-action,       $amount-lightest);
-$color-action-lighter:        lighten($color-action,       $amount-lighter);
-$color-action-darker:          darken($color-action,       $amount-darker);
-$color-action-darkest:         darken($color-action,       $amount-darkest);
+$color-brand:                 get-shade(blue, base);
+$color-brand-lighter:         get-shade(blue, lighter);
+$color-brand-lightest:        get-shade(blue, lightest);
+$color-brand-darker:          get-shade(blue, darker);
+$color-brand-darkest:         get-shade(blue, darkest);
 
-$color-alert-lightest:        lighten($color-alert,        $amount-lightest);
-$color-alert-lighter:         lighten($color-alert,        $amount-lighter);
-$color-alert-darker:           darken($color-alert,        $amount-darker);
-$color-alert-darkest:          darken($color-alert,        $amount-darkest);
+$color-error:                 get-shade(red, base);
+$color-error-lighter:         get-shade(red, lighter);
+$color-error-lightest:        get-shade(red, lightest);
+$color-error-darker:          get-shade(red, darker);
+$color-error-darkest:         get-shade(red, darkest);
 
-$color-brand-lightest:        lighten($color-brand,        $amount-lightest);
-$color-brand-lighter:         lighten($color-brand,        $amount-lighter);
-$color-brand-darker:           darken($color-brand,        $amount-darker);
-$color-brand-darkest:          darken($color-brand,        $amount-darkest);
+$color-highlight:             get-shade(yellow, base);
+$color-highlight-lighter:     get-shade(yellow, lighter);
+$color-highlight-lightest:    get-shade(yellow, lightest);
+$color-highlight-darker:      get-shade(yellow, darker);
+$color-highlight-darkest:     get-shade(yellow, darkest);
 
-$color-error-lightest:        lighten($color-error,        $amount-lightest);
-$color-error-lighter:         lighten($color-error,        $amount-lighter);
-$color-error-darker:           darken($color-error,        $amount-darker);
-$color-error-darkest:          darken($color-error,        $amount-darkest);
+$color-link:                  get-shade(blue, base);
+$color-link-lighter:          get-shade(blue, lighter);
+$color-link-lightest:         get-shade(blue, lightest);
+$color-link-darker:           get-shade(blue, darker);
+$color-link-darkest:          get-shade(blue, darkest);
 
-$color-highlight-lightest:    lighten($color-highlight,    $amount-lightest);
-$color-highlight-lighter:     lighten($color-highlight,    $amount-lighter);
-$color-highlight-darker:       darken($color-highlight,    $amount-darker);
-$color-highlight-darkest:      darken($color-highlight,    $amount-darkest);
+$color-link-visited:          get-shade(purple, base);
+$color-link-visited-lighter:  get-shade(purple, lighter);
+$color-link-visited-lightest: get-shade(purple, lightest);
+$color-link-visited-darker:   get-shade(purple, darker);
+$color-link-visited-darkest:  get-shade(purple, darkest);
 
-$color-link-lightest:         lighten($color-link,         $amount-lightest);
-$color-link-lighter:          lighten($color-link,         $amount-lighter);
-$color-link-darker:            darken($color-link,         $amount-darker);
-$color-link-darkest:           darken($color-link,         $amount-darkest);
-
-$color-link-visited-lightest: lighten($color-link-visited, $amount-lightest);
-$color-link-visited-lighter:  lighten($color-link-visited, $amount-lighter);
-$color-link-visited-darker:    darken($color-link-visited, $amount-darker);
-$color-link-visited-darkest:   darken($color-link-visited, $amount-darkest);
-
-$color-neutral-lightest:      lighten($color-neutral,      $amount-lightest);
-$color-neutral-lighter:       lighten($color-neutral,      $amount-lighter);
-$color-neutral-darker:         darken($color-neutral,      $amount-darker);
-$color-neutral-darkest:        darken($color-neutral,      $amount-darkest);
+$color-neutral:               get-shade(gray, base);
+$color-neutral-lighter:       get-shade(gray, lighter);
+$color-neutral-lightest:      get-shade(gray, lightest);
+$color-neutral-darker:        get-shade(gray, darker);
+$color-neutral-darkest:       get-shade(gray, darkest);

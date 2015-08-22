@@ -1,0 +1,30 @@
+email: dom@islovely.co
+title: islovely
+github: dhabersack
+twitter: dhabersack
+
+baseurl: ''
+exclude: [Gemfile, Gemfile.lock, README.md]
+gems:
+  - jekyll-sitemap
+host: '0.0.0.0'
+keep_files: [style.css]
+safe: true
+url: 'http://islovely.co'
+
+markdown: redcarpet
+permalink: /posts/:title/
+collections:
+  pages:
+    output: true
+    permalink: /:title/
+defaults:
+  - scope:
+      path: ''
+    values:
+      layout: 'page'
+  - scope:
+      path: ''
+      type: 'posts'
+    values:
+      layout: 'post'

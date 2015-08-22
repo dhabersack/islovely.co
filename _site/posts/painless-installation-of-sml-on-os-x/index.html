@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Studying Computer Science of any kind, you will be asked to install a wide range of software you will use for one semester and are unlikely to ever need agai...">
+
+    <title>Painless installation of SML on OS X | islovely</title>
+
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Cardo:400,400italic,700|Source+Code+Pro">
+    <link rel="canonical" href="http://islovely.co/posts/painless-installation-of-sml-on-os-x/">
+  </head>
+
+  <body>
+    <header
+        class="header">
+      <a
+          class="header__link"
+          href="/">
+        islovely
+      </a>
+    </header>
+
+    <nav
+        class="navigation">
+      <ol
+          class="navigation__list">
+        <li
+            class="navigation__item">
+          <a
+              class="navigation__link"
+              href="/">
+            Home
+          </a>
+        </li>
+        <li
+            class="navigation__item">
+          <a
+              class="navigation__link"
+              href="/posts">
+            Posts
+          </a>
+        </li>
+        <li
+            class="navigation__item">
+          <a
+              class="navigation__link"
+              href="/about">
+            About
+          </a>
+        </li>
+        <li
+            class="navigation__item">
+          <a
+              class="navigation__link"
+              href="/contact">
+            Contact
+          </a>
+        </li>
+      </ol>
+    </nav>
+
+    <main>
+      <nav
+    class="back-navigation">
+  <a
+      class="back-navigation__link"
+      href="/posts">
+    &larr; Posts
+  </a>
+</nav>
+
+<h1>
+  Painless installation of SML on OS X
+</h1>
+
+<p
+    class="post__byline">
+  by Dom Habersack (<a href="http://twitter.com/dhabersack">@dhabersack</a>), published Jul 30, 2012
+</p>
+
+<p>Studying Computer Science of any kind, you will be asked to install a wide range of software you will use for one semester and are unlikely to ever need again afterwards.</p>
+
+<p><a href="http://smlnj.org/" title="Standard ML of New Jersey">SML/NJ</a> is a popular choice in functional programming lectures, but since it is not incredibly widespread, installing it can be a hassle. You could follow their <a href="http://smlnj.org/install/index.html" title="Installation instructions for SML/NJ">official installation instructions</a>, but you will end up with bits and pieces of it scattered throughout your entire system with little hope of ever getting rid of the entire thing.</p>
+
+<h2>Installing SML/NJ through Homebrew</h2>
+
+<p>The <a href="http://brew.sh/" title="Homebrew package manager for OS X">Homebrew package manager</a> makes installing SML/NJ on OS X not only much easier, but it will also uninstall all of SML when you are done with it, leaving no dead files on your system.</p>
+
+<p>To install SML/NJ through Homebrew, just follow these steps.</p>
+
+<h3>Install/update Homebrew</h3>
+
+<p>Installing Homebrew is a one-liner, which you can find in <a href="https://github.com/mxcl/homebrew/wiki/installation" title="Installation instructions on the Homebrew GitHub-wiki">their GitHub wiki</a>. The command you need to run is:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ ruby &lt;(curl -fsSk https://raw.github.com/mxcl/homebrew/go)
+</code></pre></div>
+<p>(Check their wiki if this command fails for you in case they changed it since.)</p>
+
+<p>If you already have Homebrew installed on your system, make sure it is up to
+date:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ brew update
+</code></pre></div>
+<h3>Install/update Xcode</h3>
+
+<p>Install Xcode or make sure you are running at least Xcode 4.3.3. Both installation and update are available through the <a href="http://itunes.apple.com/us/app/xcode/id497799835" title="Xcode on the Mac App Store">Mac App Store</a>. Xcode is a free download.</p>
+
+<h3>Install Command Line Tools</h3>
+
+<p>Start Xcode, then go to “Preferences&hellip; - Downloads - Components” and install the “Command Line Tools”.</p>
+
+<h3>Install SML/NJ</h3>
+
+<p>Now you are all set and can install SML/NJ through Homebrew:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ brew install smlnj
+</code></pre></div>
+<h3>Update your <code>PATH</code></h3>
+
+<p>Once SML is installed, you need to tell the operating system where to look for it. Edit your <code>PATH</code> to include <code>/usr/local/Cellar/smlnj/110.74/libexec/bin</code>. (Note that the exact path to use has been given to you after the installation, so yours might be slightly different from this one.)</p>
+
+<p>First, open your profile in your text editor of choice:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ open -t ~/.bash_profile
+</code></pre></div>
+<p>Add an <code>export PATH</code>-directive to this file:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">export PATH=/usr/local/Cellar/smlnj/110.74/libexec/bin:$PATH
+</code></pre></div>
+<p>You can now reload your profile with:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ source ~/.bash_profile
+</code></pre></div>
+<p>Your new <code>PATH</code> will also be loaded every time you open a new terminal session.</p>
+
+<p>Now that you are all done, you can start SML/NJ by typing:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ sml
+</code></pre></div>
+<h2>One more thing</h2>
+
+<p>You are probably reading this article because you are currently attending a lecture on functional programming at the LMU in Munich, Germany. If so, these <a href="#!/posts/screencasts-on-standard-ml-in-german" title="Screencasts on Standard ML in German">screencasts on SML</a> I created while attending this lecture myself should help you hit the ground running.</p>
+
+
+<aside
+    class="author-bio">
+  <h1
+      class="author-bio__headline">
+    About Dom
+  </h1>
+
+  <div
+      class="author-bio__content">
+    <div
+        class="author-bio__headshot-container">
+      <img
+          class="author-bio__headshot"
+          src="/assets/dom.jpg">
+    </div>
+
+    <p
+        class="author-bio__teaser">
+      I work with companies on improving their products to serve their
+      customers better. If your product does not meet your business goals,
+      contact me at <a href="mailto:dom@islovely.co">dom@islovely.co</a>
+      today so we can start working on a solution!
+    </p>
+  </div>
+</aside>
+
+    </main>
+
+    <footer
+        class="footer">
+      <div
+          class="footer__content">
+        <p
+            class="footer__about">
+          Copyright &copy; 2015<br>
+          Dom Habersack, <a href="mailto:dom@islovely.co">dom@islovely.co</a><br>
+          Based in Munich, Germany.<br>
+          <a href="/imprint">Imprint</a>
+        </p>
+
+        <ol
+            class="footer__profiles">
+          <li
+              class="footer__profile">
+            <a
+                href="https://twitter.com/dhabersack">
+              @dhabersack on Twitter
+            </a>
+          </li>
+          <li
+              class="footer__profile">
+            <a
+                href="https://github.com/dhabersack">
+              dhabersack on GitHub
+            </a>
+          </li>
+        </ol>
+      </div>
+    </footer>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('set', 'anonymizeIp', true);
+    ga('create', 'UA-13202125-5', 'auto');
+    ga('send', 'pageview');
+    </script>
+  </body>
+</html>

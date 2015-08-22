@@ -1,0 +1,191 @@
+* {
+  &,
+  &::after,
+  &::before {
+    box-sizing: inherit;
+  }
+}
+
+a {
+  color: $color-link;
+
+  &:hover {
+    color: $color-link-darker;
+  }
+
+  &:visited {
+    color: $color-link-visited;
+  }
+}
+
+body {
+  color: $color-neutral-darkest;
+  font-family: $font-stack-content;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.5em;
+  margin: 0;
+}
+
+h1 {
+  font-size: 3.2rem;
+  margin-bottom: 0.1875em; // 6px
+
+  @media ($query-extra-small) {
+    font-size: 3.6rem;
+    margin-bottom: 0.3em; // 12px
+  }
+}
+
+h2 {
+  font-size: 2.4rem;
+  margin-bottom: 0.25em; // 6px
+
+  @media ($query-extra-small) {
+    font-size: 3.2rem;
+    margin-bottom: 0.1875em; // 6px
+  }
+}
+
+h3 {
+  font-size: 2rem;
+  margin-bottom: 0.3em; // 6px
+
+  @media ($query-extra-small) {
+    font-size: 2.4rem;
+    margin-bottom: 0.25em; // 6px
+  }
+}
+
+h4 {
+  font-size: 1.6rem;
+  margin-bottom: 0.375em; // 6px
+}
+
+h5 {
+  font-size: 1.6rem;
+}
+
+h6 {
+  font: {
+    size: 1.6rem;
+    style: italic;
+  }
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 10px
+}
+
+img {
+  display: block;
+  margin-bottom: 1.2rem;
+  max-width: 100%;
+}
+
+li {
+  font-size: 1.6rem;
+  line-height: 1.5em; // 24px
+}
+
+main {
+  @extend %responsive-container;
+
+  flex: 1;
+}
+
+mark {
+  background: $color-highlight;
+  color: $color-neutral-darkest;
+  padding: 0 0.25em; // 0 4px
+}
+
+ol,
+ul {
+  list-style-position: inside;
+  margin: 0 0 2.4em;
+  padding: 0;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5em; // 24px
+  margin: 0 0 1.5em; // 0 0 24px
+
+  @media ($query-extra-small) {
+    font-size: 2rem;
+  }
+
+  @media ($query-small) {
+    font-size: 2.4rem;
+  }
+}
+
+pre {
+  background: $color-neutral-lightest;
+  font: {
+    family: $font-stack-code;
+    size: 1.6rem;
+  }
+  line-height: 1.5em; // 24px
+  margin: 0 0 0.75em; // 0 0 12px
+  overflow: scroll;
+  padding: 0.375em 0.3125em; // 6px 5px
+
+  @media ($query-extra-small) {
+    font-size: 2rem;
+    padding: 0.3em 0.5em; // 6px 10px
+  }
+
+  @media ($query-small) {
+    padding: 0.6em 1em; // 12px 20px
+  }
+}
+
+table {
+  font-size: 1.6rem;
+  line-height: 1.5em; // 24px
+  margin-bottom: 1.5em; // 24px
+}
+
+tbody {
+}
+
+td,
+th {
+  border: 0.0625em solid $color-neutral-lighter; // 1px
+  padding: 0.3125em 0.5625em; // 5px 9px
+}
+
+td {
+}
+
+tfoot {
+}
+
+th {
+}
+
+thead {
+}
+
+time {
+  color: $color-neutral-darker;
+  font-size: 1.6rem;
+  font-style: italic;
+  line-height: 1.5em; // 24px
+}
+
+tr {
+}

@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: http://islovely.co/sitemap.xml

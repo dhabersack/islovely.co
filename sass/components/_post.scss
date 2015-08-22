@@ -1,0 +1,18 @@
+.post {
+  &__byline {
+    color: $color-neutral-darker;
+    font-size: 1.5rem;
+    font-style: italic;
+    line-height: 1.6em; // 24px
+    margin-bottom: 0.8em; // 12px
+
+    @media ($query-extra-small) {
+      font-size: 2rem;
+      margin-bottom: 0.6rem; // 12px
+    }
+
+    @media ($query-small) {
+      margin-bottom: 0.9em; // 18px
+    }
+  }
+}

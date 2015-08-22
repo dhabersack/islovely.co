@@ -1,36 +1,38 @@
-$query-small:       ('min-width: 480px');
-$query-medium:      ('min-width: 720px');
-$query-large:       ('min-width: 960px');
-$query-extra-large: ('min-width: 1200px');
+$query-extra-small: 'min-width: #{  4 * 12 }rem';
+$query-small:       'min-width: #{  5 * 12 }rem';
+$query-medium:      'min-width: #{  6 * 12 }rem';
+$query-large:       'min-width: #{  8 * 12 }rem';
+$query-extra-large: 'min-width: #{ 10 * 12 }rem';
 
 %responsive-container {
-  margin: {
-    left: auto;
-    right: auto;
-  }
-  width: 92%;
-}
+  margin: 0 2%;
 
-@media (#{ $query-small }) {
-  %responsive-container {
-    width: 90%;
+  @media ($query-small) {
+    margin: {
+      left: 4%;
+      right: 4%;
+    }
   }
-}
 
-@media (#{ $query-medium }) {
-  %responsive-container {
-    width: 86%;
+  @media ($query-medium) {
+    margin: {
+      left: 8%;
+      right: 8%;
+    }
   }
-}
 
-@media (#{ $query-large }) {
-  %responsive-container {
-    width: 80%;
+  @media ($query-large) {
+    margin: {
+      left: 16%;
+      right: 16%;
+    }
   }
-}
 
-@media (#{ $query-extra-large }) {
-  %responsive-container {
-    width: 96em;
+  @media ($query-extra-large) {
+    margin: {
+      left: auto;
+      right: auto;
+    }
+    width: 72rem;
   }
 }

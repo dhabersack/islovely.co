@@ -1,0 +1,8 @@
+$_stacks: (
+  monospace:  ('Courier New', Courier, monospace),
+  sans-serif: (Arial, 'Helvetica Neue', Helvetica, sans-serif),
+  serif:      (Cardo, Georgia, Times, 'Times New Roman', serif)
+);
+
+$font-stack-content: map-get($_stacks, serif);
+$font-stack-code:    map-get($_stacks, monospace);
