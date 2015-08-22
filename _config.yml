@@ -8,8 +8,9 @@ exclude: [Gemfile, Gemfile.lock, README.md]
 gems:
   - jekyll-sitemap
 host: '0.0.0.0'
-keep_files: [style.css]
 safe: true
+sass:
+  style: :compressed
 url: 'http://islovely.co'
 
 markdown: redcarpet

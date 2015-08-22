@@ -13,6 +13,6 @@ permalink: /posts/
 
     <time>{{ post.date | date: "%b %-d, %Y" }}</time>
 
-    {{ post.excerpt | markdownify }}
+    {{ post.description | markdownify }}
   </article>
 {% endfor %}

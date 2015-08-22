@@ -1,20 +1,20 @@
 .footer {
   background: $color-neutral-lightest;
+  font-size: 1.6rem;
+  line-height: 1.5em; // 24px
   overflow: hidden;
   padding: {
-    bottom: 2.4em;
-    top: 2.4em;
+    bottom: 1.5em; // 24px
+    top: 1.5em; // 24px
   }
   text-align: center;
 
-  &__about {
-    @media ($query-extra-small) {
-      font-size: 1.6rem;
-    }
+  @media ($query-small) {
+    font-size: 2rem;
+  }
 
-    @media ($query-small) {
-      font-size: 2rem;
-    }
+  &__about {
+    font-size: inherit;
   }
 
   &__content {
@@ -22,9 +22,7 @@
   }
 
   &__profile {
-    @media ($query-small) {
-      font-size: 2rem;
-    }
+    font-size: inherit;
   }
 
   &__profiles {

@@ -19,12 +19,12 @@ a {
 }
 
 body {
+  @include display-flex;
+  @include flex-direction(column);
+
   color: $color-neutral-darkest;
   font-family: $font-stack-content;
   min-height: 100vh;
-
-  display: flex;
-  flex-direction: column;
 }
 
 h1,
@@ -45,6 +45,11 @@ h1 {
     font-size: 3.6rem;
     margin-bottom: 0.3em; // 12px
   }
+
+  @media ($query-small) {
+    font-size: 4rem;
+    margin-bottom: 0.3em; // 12px
+  }
 }
 
 h2 {
@@ -55,6 +60,11 @@ h2 {
     font-size: 3.2rem;
     margin-bottom: 0.1875em; // 6px
   }
+
+  @media ($query-small) {
+    font-size: 3.6rem;
+    margin-bottom: 0.3em; // 12px
+  }
 }
 
 h3 {
@@ -64,6 +74,11 @@ h3 {
   @media ($query-extra-small) {
     font-size: 2.4rem;
     margin-bottom: 0.25em; // 6px
+  }
+
+  @media ($query-small) {
+    font-size: 3.2rem;
+    margin-bottom: 0.1875em; // 6px
   }
 }
 
@@ -83,6 +98,16 @@ h6 {
   }
 }
 
+hr {
+  border: {
+    width: 0 0 0.1rem; // 0 0 1px
+    style: solid;
+    color: $color-neutral;
+  }
+  height: 0.1rem;
+  margin: 0 8% 0.5rem; // 0 5% 5px
+}
+
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 10px
@@ -97,12 +122,19 @@ img {
 li {
   font-size: 1.6rem;
   line-height: 1.5em; // 24px
+
+  @media ($query-extra-small) {
+    font-size: 2rem;
+  }
+
+  @media ($query-small) {
+    font-size: 2.4rem;
+  }
 }
 
 main {
   @extend %responsive-container;
-
-  flex: 1;
+  @include flex(1);
 }
 
 mark {
@@ -154,30 +186,25 @@ pre {
 }
 
 table {
-  font-size: 1.6rem;
-  line-height: 1.5em; // 24px
-  margin-bottom: 1.5em; // 24px
-}
-
-tbody {
+  margin-bottom: 2.4em; // 24px
 }
 
 td,
 th {
   border: 0.0625em solid $color-neutral-lighter; // 1px
+  font-size: 1.6rem;
+  line-height: 1.5em; // 24px
   padding: 0.3125em 0.5625em; // 5px 9px
-}
 
-td {
-}
+  @media ($query-extra-small) {
+    font-size: 2rem;
+    padding: 0.25em 0.7em; // 5px 14px
+  }
 
-tfoot {
-}
-
-th {
-}
-
-thead {
+  @media ($query-small) {
+    font-size: 2.4rem;
+    padding: 0.125em 0.625em; // 3px 15px
+  }
 }
 
 time {
@@ -185,7 +212,12 @@ time {
   font-size: 1.6rem;
   font-style: italic;
   line-height: 1.5em; // 24px
-}
 
-tr {
+  @media ($query-extra-small) {
+    font-size: 2rem;
+  }
+
+  @media ($query-small) {
+    font-size: 2.4rem;
+  }
 }
