@@ -4,11 +4,11 @@ github: dhabersack
 twitter: dhabersack
 
 baseurl: ''
-exclude: [Gemfile, Gemfile.lock, README.md]
+exclude: [Capfile, config, Gemfile, Gemfile.lock, README.md]
 gems:
   - jekyll-sitemap
 host: '0.0.0.0'
-safe: true
+safe: false
 sass:
   style: :compressed
 url: 'http://islovely.co'

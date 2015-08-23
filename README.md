@@ -1,9 +1,3 @@
-# Server for islovely.co
+# Dom Habersack’s personal portfolio/blog
 
-## License
-
-The following directories and their contents are Copyright Dominik Habersack. You may not reuse anything therein without my permission:
-
-- content/
-
-All other directories and files are MIT licensed.
+My portfolio is built using Jekyll and hosted on DigitalOcean.
