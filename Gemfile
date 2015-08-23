@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'github-pages'
+gem 'capistrano', '2.15.5'
+gem 'jekyll'
 gem 'jekyll-sitemap'
