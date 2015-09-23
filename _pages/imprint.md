@@ -1,7 +1,7 @@
 ---
 title: Imprint
 permalink: /imprint/
-description: Imprint and acknowledgements.
+excerpt: Imprint and acknowledgements.
 ---
 __Dominik Habersack__  
 Lazarettstr. 8  

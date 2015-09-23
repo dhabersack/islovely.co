@@ -1,6 +1,6 @@
 ---
 title: Serve your customers better in six weeks.
-description: Dom Habersack is a consultant and developer based in Munich, Germany.
+excerpt: Dom Habersack is a consultant and developer based in Munich, Germany.
 ---
 Do you want to reach a broader audience and <mark>get more customers</mark>? Do you want to identify bottlenecks in your website and <mark>increase conversions</mark>? Do you want to improve the effectiveness of your pages and <mark>earn more money</mark>?
 

@@ -1,6 +1,6 @@
 ---
 title: Smileylist
-description: A nine-issue newsletter on functional programming in SML.
+excerpt: A nine-issue newsletter on functional programming in SML.
 ---
 Reacting to a lack in support provided to students by the department organizing a lecture on functional programming, I ran a short newsletter on the subject spanning nine regular issues and two supporting messages organizing in-person tutoring.
 

@@ -1,6 +1,6 @@
 ---
 title: How to name color-variables in Sass
-description: Even through CSS-preprocessors brought variables to our stylesheets years ago, they are still being used incorrectly in many places.
+excerpt: Even through CSS-preprocessors brought variables to our stylesheets years ago, they are still being used incorrectly in many places.
 ---
 One of the first benefits we gained from having variables in our CSS through preprocessors was finally consolidating all our color-values in a central location. No longer do we need to go through all stylesheets in search of a hex-value of the color blue that marketing wants to have changed to a slightly different shade of blue, but now we only need to adjust the value of a single variable. This removes an element of error, as missing a line somewhere suddenly becomes a lot less likely.
 

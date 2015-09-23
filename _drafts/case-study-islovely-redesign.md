@@ -1,5 +1,5 @@
 ---
-description: description
+excerpt: description
 title: islovely
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Debunking whitewashed exam statistics
-description: The official statistics of a recent exam present an incorrectly positive picture. When taking a closer look, the numbers turn out to be a lot worse.
+excerpt: The official statistics of a recent exam present an incorrectly positive picture. When taking a closer look, the numbers turn out to be a lot worse.
 ---
 **Edit (March 19, 2013):** I updated my calculations at the end to no longer include phantom students. While their inclusion was meant to highlight a disregard of their needs, I inadvertently and unfairly ended up distorting the numbers in favor of my argument.
 

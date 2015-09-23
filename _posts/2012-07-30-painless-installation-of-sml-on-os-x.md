@@ -1,6 +1,6 @@
 ---
 title: Painless installation of SML on OS X
-description: The Homebrew package manager takes the pain out of installing SML/NJ on your system. Follow these steps for a hassle- and clutter-free installation.
+excerpt: The Homebrew package manager takes the pain out of installing SML/NJ on your system. Follow these steps for a hassle- and clutter-free installation.
 ---
 Studying Computer Science of any kind, you will be asked to install a wide range of software you will use for one semester and are unlikely to ever need again afterwards.
 

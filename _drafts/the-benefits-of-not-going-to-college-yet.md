@@ -1,6 +1,6 @@
 ---
 date: 2013-03-28
-description: description
+excerpt: description
 title: title
 ---
 

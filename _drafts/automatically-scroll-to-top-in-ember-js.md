@@ -1,6 +1,6 @@
 ---
 date: 2014-01-24
-description: description
+excerpt: description
 title: Scroll to top after transitions in Ember.js
 ---
 In Ember.js, the window does not automatically scroll back to the top after a transition happens. This means that if you follow a link, the content of your `{{outlet}}` will be replaced, but you may not 

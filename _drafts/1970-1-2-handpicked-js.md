@@ -1,6 +1,6 @@
 ---
 title: Handpicked.js
-description: A JavaScript-library that replaces select boxes with textfields on demand, enabling users to add new values to a selection on the fly.
+excerpt: A JavaScript-library that replaces select boxes with textfields on demand, enabling users to add new values to a selection on the fly.
 ---
 Forms often include fields for which a user has to select a value from a predefined list of options.
 

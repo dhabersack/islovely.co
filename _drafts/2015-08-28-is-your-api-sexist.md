@@ -1,6 +1,6 @@
 ---
 title: Is your API sexist?
-description: Gender is not a Boolean.
+excerpt: Gender is not a Boolean.
 ---
 I recently came across an API-endpoint so unbelievable I mistook it for a joke at first. The following illustrates my issue with it while omitting most irrelevant attributes:
 

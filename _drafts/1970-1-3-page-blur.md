@@ -1,6 +1,6 @@
 ---
 title: Page Blur
-description: An extension for Google Chrome that blurs the contents of a website.
+excerpt: An extension for Google Chrome that blurs the contents of a website.
 ---
 This extension for Google Chrome is inspired by a [video on user interface design](http://youtu.be/r2CbbBLVaPk) published by the Australia-based agency [Squareweave](https://www.squareweave.com.au/).
 
