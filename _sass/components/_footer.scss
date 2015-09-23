@@ -21,12 +21,17 @@
     @extend %responsive-container;
   }
 
+  &__feed {
+    font-size: inherit;
+    margin-bottom: 0;
+  }
+
   &__profile {
     font-size: inherit;
   }
 
   &__profiles {
     list-style: none;
-    margin-bottom: 0;
+    margin-bottom: 1.5em; // 24px
   }
 }

@@ -3,9 +3,15 @@ title: islovely
 github: dhabersack
 twitter: dhabersack
 
+name: islovely.co
+description: Posts from the portolio of Dom Habersack.
+url: http://islovely.co/posts
+author: Dom Habersack
+
 baseurl: ''
 exclude: [Capfile, config, Gemfile, Gemfile.lock, README.md]
 gems:
+  - jekyll-feed
   - jekyll-sitemap
 host: '0.0.0.0'
 safe: false
