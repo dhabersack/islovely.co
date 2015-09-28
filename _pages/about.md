@@ -9,7 +9,7 @@ My work is responsive and highly performant all the way through, putting your cu
 
 The list of the tools and technologies I work with most frequently covers, among others: HTML5, CSS3, Sass, JavaScript, Angular.js, Ember.js, Node.js, jQuery, Gulp, Grunt, Bower, and Git.
 
-I share my knowledge through this site, lectures, screencasts, and [my newsletter on problemthinking](http://problemthinking.org/). You can find me on [Twitter](http://twitter.com/dhabersack) and [GitHub](http://github.com/dhabersack).
+I share my knowledge through this site, lectures, screencasts, and [my newsletter on problemthinking](http://problemthinking.org/). You can find me on [Twitter](http://twitter.com/{{ site.twitter }}) and [GitHub](http://github.com/{{ site.github }}).
 
 Oh, and I occasionally jump out of planes despite being crazy scared of heights.
 
