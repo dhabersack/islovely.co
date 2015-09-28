@@ -8,8 +8,8 @@ A few weeks ago Alan McCandlish, a Kiwi and former colleague of mine, died basej
   <p>
     The skydiving world has lost a legend. Watch over us, Alan McCandlish. I am glad to have known you. <a href="http://t.co/yXp7s81J" title="http://yfrog.com/odel6nuj">yfrog.com/odel6nuj</a>
   </p>
-  &mdash; Dom Habersack (@dhabersack)
-  <a href="https://twitter.com/dhabersack/status/222050696650960898" data-datetime="2012-07-08T19:33:06+00:00">July 8, 2012</a>
+  &mdash; Dom Habersack (@soverydom)
+  <a href="https://twitter.com/soverydom/status/222050696650960898" data-datetime="2012-07-08T19:33:06+00:00">July 8, 2012</a>
 </blockquote>
 <script src="http://platform.twitter.com/widgets.js" charset="utf-8"> </script>
 
