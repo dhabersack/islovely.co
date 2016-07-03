@@ -19,7 +19,6 @@ sass:
   style: :compressed
 url: 'http://islovely.co'
 
-markdown: redcarpet
 permalink: /posts/:title/
 collections:
   pages:
