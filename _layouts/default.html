@@ -9,7 +9,7 @@
     <title>{{ page.title }} | {{ site.title }}</title>
 
     <link rel="stylesheet" href="{{ site.baseurl }}/style.css">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Cardo:400,400italic,700|Source+Code+Pro">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Code+Pro">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   </head>
 
@@ -72,7 +72,7 @@
           class="footer__content">
         <p
             class="footer__about">
-          Copyright &copy; 2015<br>
+          Copyright &copy; {{ site.time | date:"%Y" }}<br>
           Dom Habersack,
 
           <a

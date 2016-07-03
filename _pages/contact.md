@@ -1,7 +1,7 @@
 ---
-title: Contact
-permalink: /contact/
 excerpt: Get in touch with me.
+permalink: /contact/
+title: Contact
 ---
 For most types of requests, you can reach me via email at <{{ site.email }}>.
 

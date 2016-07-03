@@ -8,6 +8,7 @@
 
 a {
   color: $color-link;
+  display: inline-block;
 
   &:hover {
     color: $color-link-darker;
@@ -23,7 +24,10 @@ body {
   @include flex-direction(column);
 
   color: $color-neutral-darkest;
-  font-family: $font-stack-content;
+  font: {
+    family: $font-stack-content;
+    weight: 300;
+  }
   min-height: 100vh;
 }
 
@@ -39,6 +43,10 @@ h3,
 h4,
 h5,
 h6 {
+  font: {
+    family: $font-stack-headings;
+    weight: 600;
+  }
   line-height: 1.5em;
   margin: 0;
 }

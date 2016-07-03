@@ -1,7 +1,7 @@
 ---
-title: About
-permalink: /about/
 excerpt: Information on my person and why I do the things that I do.
+permalink: /about/
+title: About
 ---
 I do my best work on the web, where I have been working with businesses on improving their products since 2009. With a focus on UI and UX, I work hard to make it easier for your customers to interact with you.
 
