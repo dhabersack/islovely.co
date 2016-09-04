@@ -1,0 +1,206 @@
+.highlight {
+  margin: 0;
+
+  // name builtin pseudo
+  .bp {}
+
+  // comment
+  .c {
+
+    // single
+    &1 {}
+
+    // multiline
+    &m {}
+
+    // preproc
+    &p {}
+
+    // special
+    &s {}
+  }
+
+
+  // error
+  .err {}
+
+  .g {
+    /* NOOP */
+
+    // deleted
+    &d {
+
+      // specific
+      .x {}
+    }
+
+    // emphasis
+    &e {}
+
+    // heading
+    &h {}
+
+    // inserted
+    &i {
+
+      // specific
+      .x {}
+    }
+
+    // output
+    &o {}
+
+    // prompt
+    &p {}
+
+    // error
+    &r {}
+
+    // strong
+    &s {}
+
+    // traceback
+    &t {}
+
+    // subheading
+    &u {}
+  }
+
+  // literal number integer long
+  .il {}
+
+  // keyword
+  .k {
+
+    // constant
+    &c {}
+
+    // declaration
+    &d {}
+
+    // pseudo
+    &p {}
+
+    // reserved
+    &r {}
+
+    // type
+    &t {}
+  }
+
+  // literal number
+  .m {
+
+    // float
+    &f {}
+
+    // hex
+    &h {}
+
+    // integer
+    &i {}
+
+    // oct
+    &o {}
+  }
+
+  // name
+  .n {
+    /* NOOP */
+
+    // attribute
+    &a {}
+
+    // builtin
+    &b {}
+
+    // class
+    &c {}
+
+    // constant
+    &o {}
+
+    // entity
+    &i {}
+
+    // exception
+    &e {}
+
+    // function
+    &f {}
+
+    // namespace
+    &n {}
+
+    // tag
+    &t {}
+
+    // variable
+    &v {}
+  }
+
+  // operator
+  .o {
+
+    // word
+    &w {}
+  }
+
+  // literal string
+  .s {
+
+    // single
+    &1 {}
+
+    // double
+    &2 {}
+
+    // backtick
+    &b {}
+
+    // char
+    &c {}
+
+    // doc
+    &d {}
+
+    // escape
+    &e {}
+
+    // heredoc
+    &h {}
+
+    // interpol
+    &i {}
+
+    // regex
+    &r {}
+
+    // symbol
+    &s {}
+
+    // other
+    &x {}
+  }
+
+  // name variable
+  .v {
+    /* NOOP */
+
+    // class
+    &c {}
+
+    // global
+    &g {}
+
+    // instance
+    &i {}
+  }
+
+  // whitespace
+  .w {}
+}
+
+[class^=language-] {
+  padding: 0;
+}
