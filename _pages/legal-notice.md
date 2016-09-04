@@ -1,7 +1,7 @@
 ---
-excerpt: Imprint and acknowledgements.
-permalink: /imprint/
-title: Imprint
+excerpt: Legal notice and acknowledgements.
+permalink: /legal-notice/
+title: Legal notice
 ---
 __Dominik Habersack__  
 Lazarettstr. 8  
