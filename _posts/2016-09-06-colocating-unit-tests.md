@@ -14,18 +14,16 @@ Assume our application contains a search form. Under the traditional approach, w
 
 {% highlight plaintext %}
 +-- app/
-|   +-- controllers/
-|   |   +-- search-form-controller.js
-|   |   +-- ...
-|   |
-|   +-- views/
-|       +-- search-form.html
-|       +-- ...
-|
-+-- assets/
-    +-- css/
-        +-- search-form.css
-        +-- ...
+    +-- controllers/
+    |   +-- search-form-controller.js
+    |   +-- ...
+    +-- views/
+    |   +-- search-form.html
+    |   +-- ...
+    +-- assets/
+        +-- css/
+            +-- search-form.css
+            +-- ...
 {% endhighlight %}
 
 As more features get added to our codebase, these directories will grow in size, and we will find ourselves with long lists of files that have little to do with each other. Their only shared characteristic lies in the fact that they are of the same file-type and serve similar purposes. Locating a specific file becomes difficult, and will pretty much require the use of a “search and open”-feature in our editor of choice or enough willpower to comb through our entire application over and over again, only to eventually miss one file anyways.
@@ -34,12 +32,12 @@ Rather than spreading a piece of functionality out across several directories, w
 
 {% highlight plaintext %}
 +-- app/
-   +-- components/
-       +-- search-form/
-       |   +-- search-form.css
-       |   +-- search-form.html
-       |   +-- search-form-controller.js
-       +-- ...
+    +-- components/
+        +-- search-form/
+        |   +-- search-form.css
+        |   +-- search-form.html
+        |   +-- search-form-controller.js
+        +-- ...
 {% endhighlight %}
 
 While having templates, stylesheets, and JavaScript-files in a single directory takes some getting used to, this approach makes it possible to quickly identify all files that make up a feature. All files related to the search form can be found in exactly one location, removing the need to hunt for them, if that necessity were to ever come up.
@@ -52,12 +50,12 @@ Frequently, tests are put in a `test/`-directory in the root of our application,
 
 {% highlight plaintext %}
 +-- app/
-|  +-- components/
-|      +-- search-form/
-|      |   +-- search-form.css
-|      |   +-- search-form.html
-|      |   +-- search-form-controller.js
-|      +-- ...
+|   +-- components/
+|       +-- search-form/
+|       |   +-- search-form.css
+|       |   +-- search-form.html
+|       |   +-- search-form-controller.js
+|       +-- ...
 +-- test/
     +-- end-to-end/
     |   +-- searching.js
@@ -75,13 +73,13 @@ End-to-end and other kinds of tests potentially cover multiple “units” at th
 
 {% highlight plaintext %}
 +-- app/
-|  +-- components/
-|      +-- search-form/
-|      |   +-- search-form.css
-|      |   +-- search-form.html
-|      |   +-- search-form-controller.js
-|      |   +-- search-form-controller.spec.js
-|      +-- ...
+|   +-- components/
+|       +-- search-form/
+|       |   +-- search-form.css
+|       |   +-- search-form.html
+|       |   +-- search-form-controller.js
+|       |   +-- search-form-controller.spec.js
+|       +-- ...
 +-- test/
     +-- end-to-end/
         +-- searching.js
