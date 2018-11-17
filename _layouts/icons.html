@@ -5,7 +5,14 @@ layout: default
   This is the icons-template.
 </p>
 
-{ content }
+{{ content }}
+
+{% for icon in site.data.icons %}
+  <div>
+    <p>{{ icon.name }}</p>
+    {{ icon.svg }}
+  </div>
+{% endfor %}
 
 <p>
   This is the end of that template.

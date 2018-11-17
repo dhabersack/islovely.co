@@ -1,0 +1,8 @@
+- name: news
+  svg: <p>news</p>
+
+- name: plane
+  svg: <strong>plane</strong>
+
+- name: cloud
+  svg: <a href="google.com">cloud</a>
