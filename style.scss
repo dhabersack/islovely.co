@@ -1,6 +1,13 @@
 ---
 ---
 
-@import 'base';
-@import 'header';
-@import 'footer';
+@import
+  'variables/colors',
+  'variables/fonts',
+
+  'base',
+
+  'components/footer',
+  'components/header',
+  'components/layout',
+  'components/navigation';
