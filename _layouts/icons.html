@@ -1,22 +1,13 @@
 ---
 layout: default
 ---
-<p>
-  This is the icons-template.
-</p>
 
 {{ content }}
 
-{% for icon in site.data.icons %}
-  <div>
-    <p>{{ icon.name }}</p>
-
-    <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">                  
-      <path d="{{ icon.path }}" />
-    </svg>
-  </div>
-{% endfor %}
-
-<p>
-  This is the end of that template.
-</p>
+<div class="icons">
+  {% for icon in site.data.icons %}
+    <div class="icons__icon">
+      {% include icon.html icon=icon %}
+    </div>
+  {% endfor %}
+</div>

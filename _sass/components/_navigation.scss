@@ -1,1 +1,16 @@
 .navigation {}
+
+.navigation__item {}
+
+.navigation__item + .navigation__item {
+  margin-left: 1em;
+}
+
+.navigation__link {
+  font-size: 1.6rem;
+}
+
+.navigation__list {
+  display: flex;
+  list-style: none;
+}
