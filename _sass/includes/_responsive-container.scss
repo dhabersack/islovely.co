@@ -1,0 +1,28 @@
+:root {
+  --responsive-container-horizontal-margin: 2%;
+
+  @media ($query-extra-small) {
+    --responsive-container-horizontal-margin: 4%;
+  }
+
+  @media ($query-small) {
+    --responsive-container-horizontal-margin: 6%;
+  }
+
+  @media ($query-medium) {
+    --responsive-container-horizontal-margin: 8%;
+  }
+
+  @media ($query-large) {
+    --responsive-container-horizontal-margin: 10%;
+  }
+
+  @media ($query-extra-large) {
+    --responsive-container-horizontal-margin: 12%;
+  }
+}
+
+@mixin responsive-container {
+  margin-left: var(--responsive-container-horizontal-margin);
+  margin-right: var(--responsive-container-horizontal-margin);
+}

@@ -1,13 +1,14 @@
 ---
 layout: default
 ---
+<div class="main main--icons">
+  {{ content }}
 
-{{ content }}
-
-<div class="icons">
-  {% for icon in site.data.icons %}
-    <div class="icons__icon">
-      {% include icon.html icon=icon %}
-    </div>
-  {% endfor %}
+  <div class="icons">
+    {% for icon in site.data.icons %}
+      <div class="icons__icon">
+        {% include icon.html icon=icon %}
+      </div>
+    {% endfor %}
+  </div>
 </div>
