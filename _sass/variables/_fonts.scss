@@ -2,7 +2,7 @@ $_stacks: (
   serif: (source-serif-pro, serif),
   sans-serif: (soleil, sans-serif),
   monospace: (monospace)
-)
+);
 
 $font-stack-headings: map-get($_stacks, serif);
 $font-stack-copy: map-get($_stacks, sans-serif);
