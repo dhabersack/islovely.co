@@ -3,18 +3,3 @@ $_gutter: 2vw;
 @function columns($columns, $total) {
   @return calc((100% - #{($total - 1) * $_gutter}) / #{$total} * #{$columns} + #{($columns - 1) * $_gutter});
 }
-
-div {
-  width: columns(1, 12);
-  width: columns(2, 12);
-  width: columns(3, 12);
-  width: columns(4, 12);
-  width: columns(5, 12);
-  width: columns(6, 12);
-  width: columns(7, 12);
-  width: columns(8, 12);
-  width: columns(9, 12);
-  width: columns(10, 12);
-  width: columns(11, 12);
-  width: columns(12, 12);
-}
