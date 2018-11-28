@@ -1,5 +1,54 @@
-.footer {}
+.footer {
+  background: #F2F4F5;
+  padding: 2.4em 0;
+}
 
 .footer__content {
   @include responsive-container;
 }
+
+.footer__inbound-links {
+  margin-bottom: 2.4em;
+}
+
+.footer__links {
+  display: flex;
+  list-style: none;
+}
+
+.footer__link {
+  font-size: 1.6rem;
+}
+
+
+.footer__link.footer__link--dribbble,
+.footer__link.footer__link--github,
+.footer__link.footer__link--mastodon,
+.footer__link.footer__link--twitter {
+  padding-left: 24px;
+  position: relative;
+}
+
+.footer__link.footer__link--dribbble::before,
+.footer__link.footer__link--github::before,
+.footer__link.footer__link--mastodon::before,
+.footer__link.footer__link--twitter::before {
+  background: currentColor;
+  border-radius: 50%;
+  content: '';
+  display: block;
+  font-size: 1rem;
+  height: 2.4em;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 2.4em;
+}
+
+.footer__link.footer__link--dribbble {}
+
+.footer__link.footer__link--github {}
+
+.footer__link.footer__link--mastodon {}
+
+.footer__link.footer__link--twitter {}

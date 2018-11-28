@@ -3,18 +3,34 @@
 .navigation__item {}
 
 .navigation__item + .navigation__item {
-  margin-left: 1em;
+  margin-left: 2em;
 }
 
 .navigation__link {
+  color: #424242;
+  display: inline-block;
   font-size: 1.6rem;
+  line-height: 1.5; /* 24px */
+  text-decoration: none;
+}
+
+.navigation__link:visited {
+  color: #424242;
 }
 
 .navigation__link--hire-me {
-  background: #b4d455;
+  background: #1d84de;
+  border-radius: 4px;
+  color: #fefefe;
+  padding: 0.5625em 0.9375em; /* 9px 15px */
+
+  background: #ec008c;
+  background: -webkit-linear-gradient(to left, #fc6767, #ec008c);
+  background: linear-gradient(to left, #fc6767, #ec008c);
 }
 
 .navigation__list {
+  align-items: center;
   display: flex;
   list-style: none;
 }

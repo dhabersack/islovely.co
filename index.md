@@ -1,9 +1,17 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: home
 title: Home
 ---
-
 This is the homepage.
+
+- UI/UX Design
+
+- Design Sprints  
+  I can help you facilitate Design Sprints.
+
+- Lifecycle emails
+
+- A/B Testing
+
+- JavaScript Workshops
+  React, Vue, vanilla JavaScript

@@ -3,4 +3,5 @@ title: Work
 ---
 This is what I work on.
 
-* [Icons](/work/icons)
+* [Lovelicons](/work/icons)
+* [Warren for Mastodon](/work/warren-for-mastodon)

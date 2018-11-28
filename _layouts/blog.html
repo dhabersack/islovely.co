@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<div class="blog">
+  {{ content }}
+
+  <div class="blog__post-teasers">
+    {% for post in site.posts %}
+      <div class="blog__post-teaser">
+        {% include post-teaser.html post=post %}
+      </div>
+    {% endfor %}
+  </div>
+</div>
+

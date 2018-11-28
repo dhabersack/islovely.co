@@ -4,6 +4,19 @@
   box-sizing: inherit;
 }
 
+a {
+  color: $color-link;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: $color-link;
+}
+
 body {
   color: $color-body-copy;
   font-family: $font-stack-copy;
@@ -18,11 +31,19 @@ h4,
 h5,
 h6 {
   font-family: $font-stack-headings;
+  margin: 0;
 }
 
 h1 {
   font-size: 2.4rem;
   line-height: 1.375; /* 33px */
+  margin-bottom: 0.5em; /* 12px */
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 1.35; /* 27px */
+  margin-bottom: 0.6em; /* 12px */
 }
 
 html {

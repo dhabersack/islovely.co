@@ -1,4 +1,8 @@
-.header {}
+.header {
+  // background: #ebf9fa;
+  background: #fefefe;
+  padding: 1.8em 0;
+}
 
 .header__content {
   @include responsive-container;

@@ -7,7 +7,10 @@
 .layout__content {
   @include responsive-container;
 
+  background: #f7f9fa;
   flex: 1 0 auto;
+  padding-bottom: 6em;
+  padding-top: 4.8em;
 }
 
 .layout__footer {

@@ -1,0 +1,95 @@
+.post-teaser {
+  background: #fefefe;
+  border-radius: 0.6em;
+  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.04);
+  height: 100%;
+  overflow: hidden;
+}
+
+.post-teaser__category {
+  background: #f2f4f5;
+  border-radius: 1em; /* 12px */
+  border-radius: 0.25em; /* 3px */
+  color: #726e6c;
+  display: inline-block;
+  font-size: 1.2rem;
+  line-height: 1.5; /* 18px */
+  padding: 0.25em 0.5em; /* 3px 6px */
+}
+
+.post-teaser__category--css {
+  background: #f5f5c4;
+  color: #808003;
+}
+
+.post-teaser__category--design {
+  background: #d7f5c4;
+  color: #358003;
+}
+
+.post-teaser__category--education {
+  background: #f5e1c4;
+  color: #804e03;
+}
+
+.post-teaser__category--gender-equality {
+  background: #e0c4f5;
+  color: #4b0380;
+}
+
+.post-teaser__category--inspiration {
+  background: #c4f5f2;
+  color: #038079;
+}
+
+.post-teaser__category--language-hacks {
+  background: #f5c4c4;
+  color: #800303;
+}
+
+.post-teaser__category--rant {
+  background: #f5c4f0;
+  color: #800373;
+}
+
+.post-teaser__category--software-architecture {
+  background: #c8e3fa;
+  color: #02427a;
+}
+
+.post-teaser__content {
+  padding: 1.2em 1.5em;
+}
+
+.post-teaser__excerpt {}
+
+.post-teaser__excerpt > p:last-of-type {
+  margin-bottom: 0;
+}
+
+.post-teaser__header {
+  align-items: center;
+  display: flex;
+  font-family: $font-stack-headings;
+  margin-bottom: 0.9em;
+}
+
+.post-teaser__heading {
+  font-size: 2rem;
+  margin-bottom: 0.3em; /* 6px */
+}
+
+.post-teaser__hero {
+  background: #eb5050;
+  padding-top: 56.25%;
+}
+
+.post-teaser__link {}
+
+.post-teaser__timestamp {
+  color: #726e6c;
+  display: block;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-right: 0.75em; /* 9px */
+}
