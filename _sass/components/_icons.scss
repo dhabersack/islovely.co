@@ -9,3 +9,34 @@
   flex-basis: columns(2, 12);
   margin-bottom: 2.4em;
 }
+
+.icons.icons--more {
+  display: grid;
+  grid-column-gap: 2vw;
+  grid-row-gap: 2.4em;
+  grid-template-columns: 1fr;
+
+  @media ($query-extra-small) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media ($query-small) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media ($query-medium) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  @media ($query-large) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  @media ($query-extra-large) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+.icons.icons--more .icons__icon {
+  background: green;
+}
