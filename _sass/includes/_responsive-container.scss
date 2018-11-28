@@ -18,7 +18,8 @@
   }
 
   @media ($query-extra-large) {
-    --responsive-container-horizontal-margin: 12%;
+    $max-width: 128em;
+    --responsive-container-horizontal-margin: calc((100vw - #{ $max-width }) / 2);
   }
 }
 
