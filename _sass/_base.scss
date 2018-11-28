@@ -1,4 +1,11 @@
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
 body {
+  color: $color-body-copy;
   font-family: $font-stack-copy;
   margin: 0;
   padding: 0;
@@ -19,8 +26,20 @@ h1 {
 }
 
 html {
+  box-sizing: border-box;
   font-size: 62.5%; /* 10px */
   line-height: 1.5;
+}
+
+li {
+  font-size: 1.6rem;
+  line-height: 1.5; /* 24px */
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5; /* 24px */
+  margin: 0 0 1.5em; /* 24px */
 }
 
 ol {

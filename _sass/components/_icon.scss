@@ -1,11 +1,18 @@
 .icon {
   align-items: center;
   display: flex;
-  flex-direction: column;
+  height: 100%;
 }
 
-.icon__label {}
+.icon__label {
+  font-size: 1.2rem;
+  line-height: 1.5; /* 18px */
+  margin-bottom: 0;
+  white-space: nowrap;
+}
 
 .icon__svg {
-  // fill: #bada55;
+  fill: currentColor;
+  flex-shrink: 0;
+  margin-right: 0.5em;
 }

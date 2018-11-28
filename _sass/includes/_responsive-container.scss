@@ -1,29 +1,28 @@
 :root {
-  --responsive-container-horizontal-margin: 2%;
+  --responsive-container-horizontal-padding: 2%;
 
   @media ($query-extra-small) {
-    --responsive-container-horizontal-margin: 4%;
+    --responsive-container-horizontal-padding: 4%;
   }
 
   @media ($query-small) {
-    --responsive-container-horizontal-margin: 6%;
+    --responsive-container-horizontal-padding: 6%;
   }
 
   @media ($query-medium) {
-    --responsive-container-horizontal-margin: 8%;
+    --responsive-container-horizontal-padding: 8%;
   }
 
   @media ($query-large) {
-    --responsive-container-horizontal-margin: 10%;
+    --responsive-container-horizontal-padding: 10%;
   }
 
   @media ($query-extra-large) {
-    $max-width: 128em;
-    --responsive-container-horizontal-margin: calc((100vw - #{ $max-width }) / 2);
+    --responsive-container-horizontal-padding: calc(50vw - 54em);
   }
 }
 
 @mixin responsive-container {
-  margin-left: var(--responsive-container-horizontal-margin);
-  margin-right: var(--responsive-container-horizontal-margin);
+  padding-left: var(--responsive-container-horizontal-padding);
+  padding-right: var(--responsive-container-horizontal-padding);
 }

@@ -5,9 +5,15 @@
 }
 
 .layout__content {
+  @include responsive-container;
+
   flex: 1 0 auto;
 }
 
-.layout__footer {}
+.layout__footer {
+  flex: none;
+}
 
-.layout__header {}
+.layout__header {
+  flex: none;
+}
