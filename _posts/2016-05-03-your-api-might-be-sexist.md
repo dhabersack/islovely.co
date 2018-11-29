@@ -77,7 +77,7 @@ We could also drop the Boolean attributes and instead use `gender` as a field wi
 
 From there, it is only a small leap to my preferred option, which is to drop gender-attributes entirely and **go gender-neutral**.
 
-Do you *need* to know the gender of a person, or do you *want* to know it? If you only use this information to switch between “Dear Mr. Doe” and “Dear Mrs. Doe” in the emails you send out, is that really a business-critical feature that you absolutely must have? Chances are it is not necessary for your product to show the exact pronoun in the first place, and you are creating this problem artifially.
+Do you *need* to know the gender of a person, or do you *want* to know it? If you only use this information to switch between “Dear Mr. Doe” and “Dear Mrs. Doe” in the emails you send out, is that really a business-critical feature that you absolutely must have? Chances are it is not necessary for your product to show the exact pronoun in the first place, and you are creating this problem artificially.
 
 Not only does dropping gender-related information avoid the issue at hand, removing gender as a differentiating factor is also the easiest to implement. There will be fewer conditionals in your code, and therefore fewer opportunities to make mistakes.
 
