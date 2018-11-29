@@ -1,0 +1,55 @@
+.category-tag {
+  background: #f2f4f5;
+  border-radius: 1em; /* 12px */
+  border-radius: 0.25em; /* 3px */
+  color: #726e6c;
+  display: inline-block;
+  font-size: 1.2rem;
+  line-height: 1.5; /* 18px */
+  padding: 0.25em 0.5em; /* 3px 6px */
+}
+
+.category-tag--css {
+  background: $color-tag__background--frontend;
+  color: $color-tag__text--frontend;
+}
+
+.category-tag--design {
+  background: $color-tag__background--design;
+  color: $color-tag__text--design;
+}
+
+.category-tag--education {
+  background: $color-tag__background--education;
+  color: $color-tag__text--education;
+}
+
+.category-tag--functional-programming {
+  background: $color-tag__background--code;
+  color: $color-tag__text--code;
+}
+
+.category-tag--gender-equality {
+  background: $color-tag__background--society;
+  color: $color-tag__text--society;
+}
+
+.category-tag--inspiration {
+  background: $color-tag__background--inspiration;
+  color: $color-tag__text--inspiration;
+}
+
+.category-tag--language-hacks {
+  background: $color-tag__background--language;
+  color: $color-tag__text--language;
+}
+
+.category-tag--rant {
+  background: $color-tag__background--rant;
+  color: $color-tag__text--rant;
+}
+
+.category-tag--software-architecture {
+  background: $color-tag__background--code;
+  color: $color-tag__text--code;
+}

@@ -2,16 +2,19 @@
 ---
 
 @import
+  'functions/columns',
+  'functions/hsb',
+
   'variables/colors',
   'variables/fonts',
   'variables/media-queries',
-
-  'functions/columns',
 
   'includes/responsive-container',
 
   'base',
 
+  'components/categories',
+  'components/category-tag',
   'components/footer',
   'components/header',
   'components/icon',

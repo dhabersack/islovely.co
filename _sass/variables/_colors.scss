@@ -1,5 +1,55 @@
-$_color-blue: #1d84de;
+@function _get-color-map-for-hue($hue) {
+  @return (
+    lightest: hsb($hue, 20, 98),
+    lighter:  hsb($hue, 66, 94),
+    medium:   hsb($hue, 87, 87),
+    darker:   hsb($hue, 95, 72),
+    darkest:  hsb($hue, 98, 48)
+  );
+}
+
+$_colors: (
+  red:       _get_color-map-for-hue(12),
+  orange:    _get_color-map-for-hue(36),
+  yellow:    _get_color-map-for-hue(60),
+  green:     _get_color-map-for-hue(96),
+  turquoise: _get_color-map-for-hue(177),
+  blue:      _get-color-map-for-hue(208),
+  purple:    _get-color-map-for-hue(275),
+  magenta:   _get-color-map-for-hue(306)
+);
+
+@function _color($color, $shade) {
+  @return map-get(map-get($_colors, $color), $shade);
+}
+
 $_color-neutral--darkest: #424242;
 
 $color-body-copy: $_color-neutral--darkest;
-$color-link: $_color-blue;
+
+
+$color-link: _color(blue, medium);
+
+$color-tag__background--code: _color(blue, lightest);
+$color-tag__text--code: _color(blue, darkest);
+
+$color-tag__background--design: _color(green, lightest);
+$color-tag__text--design: _color(green, darkest);
+
+$color-tag__background--education: _color(orange, lightest);
+$color-tag__text--education: _color(orange, darkest);
+
+$color-tag__background--frontend: _color(yellow, lightest);
+$color-tag__text--frontend: _color(yellow, darkest);
+
+$color-tag__background--inspiration: _color(turquoise, lightest);
+$color-tag__text--inspiration: _color(turquoise, darkest);
+
+$color-tag__background--language: _color(red, lightest);
+$color-tag__text--language: _color(red, darkest);
+
+$color-tag__background--rant: _color(magenta, lightest);
+$color-tag__text--rant: _color(magenta, darkest);
+
+$color-tag__background--society: _color(purple, lightest);
+$color-tag__text--society: _color(purple, darkest);
