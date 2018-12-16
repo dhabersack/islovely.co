@@ -18,7 +18,8 @@ a:visited {
 }
 
 body {
-  color: $color-body-copy;
+  background: $color-body__background;
+  color: $color-body__text;
   font-family: $font-stack-copy;
   margin: 0;
   padding: 0;

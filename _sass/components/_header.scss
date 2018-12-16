@@ -1,5 +1,4 @@
 .header {
-  // background: #ebf9fa;
   background: #fefefe;
   padding: 1.8em 0;
 }
@@ -8,12 +7,15 @@
   @include responsive-container;
 
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .header__logo {
+  display: inline-block;
   font-size: 1.6rem;
   line-height: 1.5;
+  margin: 0 auto 0.75em; /* 0 auto 12px */
 }
 
 .header__navigation {}

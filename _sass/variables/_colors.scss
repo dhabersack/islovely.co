@@ -25,8 +25,10 @@ $_colors: (
 
 $_color-neutral--darkest: #424242;
 
-$color-body-copy: $_color-neutral--darkest;
+$color-body__background: #f7f9fa;
+$color-body__text: $_color-neutral--darkest;
 
+$color-navigation__link: _color(blue, darker);
 
 $color-link: _color(blue, medium);
 
