@@ -1,8 +1,8 @@
 .category-tag {
-  background: #f2f4f5;
+  background: $color-tag__background;
   border-radius: 1em; /* 12px */
   border-radius: 0.25em; /* 3px */
-  color: #726e6c;
+  color: $color-tag__text;
   display: inline-block;
   font-size: 1.2rem;
   line-height: 1.5; /* 18px */
@@ -10,46 +10,46 @@
 }
 
 .category-tag--css {
-  background: $color-tag__background--frontend;
-  color: $color-tag__text--frontend;
+  background: $color-tag--frontend__background;
+  color: $color-tag--frontend__text;
 }
 
 .category-tag--design {
-  background: $color-tag__background--design;
-  color: $color-tag__text--design;
+  background: $color-tag--design__background;
+  color: $color-tag--design__text;
 }
 
 .category-tag--education {
-  background: $color-tag__background--education;
-  color: $color-tag__text--education;
+  background: $color-tag--education__background;
+  color: $color-tag--education__text;
 }
 
 .category-tag--functional-programming {
-  background: $color-tag__background--code;
-  color: $color-tag__text--code;
+  background: $color-tag--code__background;
+  color: $color-tag--code__text;
 }
 
 .category-tag--gender-equality {
-  background: $color-tag__background--society;
-  color: $color-tag__text--society;
+  background: $color-tag--society__background;
+  color: $color-tag--society__text;
 }
 
 .category-tag--inspiration {
-  background: $color-tag__background--inspiration;
-  color: $color-tag__text--inspiration;
+  background: $color-tag--inspiration__background;
+  color: $color-tag--inspiration__text;
 }
 
 .category-tag--language-hacks {
-  background: $color-tag__background--language;
-  color: $color-tag__text--language;
+  background: $color-tag--language__background;
+  color: $color-tag--language__text;
 }
 
 .category-tag--rant {
-  background: $color-tag__background--rant;
-  color: $color-tag__text--rant;
+  background: $color-tag--rant__background;
+  color: $color-tag--rant__text;
 }
 
 .category-tag--software-architecture {
-  background: $color-tag__background--code;
-  color: $color-tag__text--code;
+  background: $color-tag--code__background;
+  color: $color-tag--code__text;
 }
