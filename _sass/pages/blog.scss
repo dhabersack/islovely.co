@@ -1,24 +1,12 @@
-:root {
-  --post-teasers-grid-column-gap: 2vw;
-
-  @media ($query-medium) {
-    --post-teasers-grid-column-gap: 1.5vw;
-  }
-
-  @media ($query-large) {
-    --post-teasers-grid-column-gap: 1vw;
-  }
-}
-
 .blog {}
 
 .blog__post-teaser {
-  margin-bottom: 1.2em;
+  margin-bottom: 1.8em;
 }
 
 .blog__post-teasers {
   display: grid;
-  grid-column-gap: var(--post-teasers-grid-column-gap);
+  grid-column-gap: 2vw;
   grid-row-gap: 0.6em;
   grid-template-columns: repeat(auto-fit, minmax(24em, 1fr));
 }

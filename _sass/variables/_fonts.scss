@@ -4,6 +4,7 @@ $_stacks: (
   monospace: (monospace)
 );
 
+$font-stack-code:     map-get($_stacks, monospace);
+$font-stack-copy:     map-get($_stacks, serif);
 $font-stack-headings: map-get($_stacks, sans-serif);
-$font-stack-copy: map-get($_stacks, serif);
-$font-stack-code: map-get($_stacks, monospace);
+$font-stack-tables:   map-get($_stacks, sans-serif);

@@ -12,10 +12,15 @@
 }
 
 .header__logo {
+  color: $color-logo;
   display: inline-block;
   font-size: 1.6rem;
   line-height: 1.5;
   margin: 0 auto 0.75em; /* 0 auto 12px */
+}
+
+.header__logo:visited {
+  color: $color-logo;
 }
 
 .header__navigation {}

@@ -12,12 +12,17 @@
 }
 
 .footer__links {
+  justify-content: center;
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
 }
 
 .footer__link {
+  display: block;
   font-size: 1.6rem;
+  line-height: 1.5; /* 24px */
+  margin: 0 0.625em 0.5625em; /* 0 10px 9px */
 }
 
 
@@ -25,7 +30,7 @@
 .footer__link.footer__link--github,
 .footer__link.footer__link--mastodon,
 .footer__link.footer__link--twitter {
-  padding-left: 24px;
+  padding-left: 1.75em; /* 28px */
   position: relative;
 }
 
@@ -33,8 +38,9 @@
 .footer__link.footer__link--github::before,
 .footer__link.footer__link--mastodon::before,
 .footer__link.footer__link--twitter::before {
-  background: currentColor;
-  border-radius: 50%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
   content: '';
   display: block;
   font-size: 1rem;
@@ -45,10 +51,18 @@
   width: 2.4em;
 }
 
-.footer__link.footer__link--dribbble {}
+.footer__link.footer__link--dribbble::before {
+  background-image: url('/icons/dribbble.svg');
+}
 
-.footer__link.footer__link--github {}
+.footer__link.footer__link--github::before {
+  background-image: url('/icons/github.svg');
+}
 
-.footer__link.footer__link--mastodon {}
+.footer__link.footer__link--mastodon::before {
+  background-image: url('/icons/mastodon.svg');
+}
 
-.footer__link.footer__link--twitter {}
+.footer__link.footer__link--twitter::before {
+  background-image: url('/icons/twitter.svg');
+}

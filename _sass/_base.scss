@@ -47,6 +47,12 @@ h2 {
   margin-bottom: 0.6em; /* 12px */
 }
 
+h3 {
+  font-size: 1.6rem;
+  line-height: 1.3125em; /* 21px */
+  margin-bottom: 0.75em; /* 12px */
+}
+
 hr {
   background: $color-horizontal-rule;
   border: 0;
@@ -73,12 +79,61 @@ p {
   margin: 0 0 1.5em; /* 24px */
 }
 
+table {
+  border-collapse: collapse;
+  font-family: $font-stack-tables;
+  margin: 0 0 2.4em;
+  width: 100%;
+}
+
+tbody {
+}
+
+tbody td {
+  background: _color(gray, lightest);
+  text-align: right;
+}
+
+tbody th {
+  background: _color(gray, lighter);
+  text-align: right;
+}
+
+td {
+  font-size: 1.6rem;
+  line-height: 1.5; /* 24px */
+  padding: 0.375em 0.625em; /* 6px 10px */
+}
+
+tfoot {
+  background: _color(gray, medium);
+}
+
+tfoot th {
+  text-align: right;
+}
+
+th {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5; /* 24px */
+  padding: 0.375em 0.625em; /* 6px 10px */
+}
+
+thead {
+}
+
+thead th:not(:empty) {
+  background: _color(gray, lighter);
+  text-align: right;
+}
+
 ol {
-  margin: 0;
+  margin: 0 0 2.4em;
   padding: 0;
 }
 
 ul {
-  margin: 0;
+  margin: 0 0 2.4em;
   padding: 0;
 }
