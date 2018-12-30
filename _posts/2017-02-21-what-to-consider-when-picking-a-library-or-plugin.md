@@ -1,7 +1,7 @@
 ---
 title: What to consider when picking a library or plugin
 category: Software architecture
-excerpt: With massive numbers of free and paid libraries available, how does one decide between them, and does it still make sense to “roll your own”?
+excerpt: With hundreds of libraries available, how do we decide between them? When does “roll your own” make sense?
 ---
 When adding new features to our applications, we are often faced with a choice: do we build it from scratch, or can we use one of the many solutions that are freely available in the form of libraries and plugins?
 

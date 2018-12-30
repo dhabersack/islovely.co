@@ -2,8 +2,10 @@
 {% assign post = include.post %}
 
 <article class="post-teaser post-teaser--index-{{ index }}">
-  <div class="post-teaser__hero">
-  </div>
+  <a href="{{ post.url | prepend: site.baseurl }}">
+    <div class="post-teaser__hero">
+    </div>
+  </a>
 
   <div class="post-teaser__content">
     <header class="post-teaser__header">
@@ -17,13 +19,13 @@
     </header>
 
     <h2 class="post-teaser__heading">
-      <a class="post-teaser__link" href="{{ post.url | prepend: site.baseurl }}">
+      <a href="{{ post.url | prepend: site.baseurl }}">
         {{ post.title }}
       </a>
     </h2>
 
-    <div class="post-teaser__excerpt">
-      {{ post.excerpt | markdownify }}
-    </div>
+    <p class="post-teaser__excerpt">
+      {{ post.excerpt }}
+    </p>
   </div>
 </article>

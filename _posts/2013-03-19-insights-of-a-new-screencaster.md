@@ -1,7 +1,7 @@
 ---
 title: Insights of a new screencaster
 category: Education
-excerpt: Planning, recording and publishing my first screencasts taught me a few basics to look out for when getting started in the field of infoproducts.
+excerpt: Publishing screencasts taught me what to look out for when creating infoproducts.
 ---
 I recently created a series of screencasts for students having to resit an exam after six months of not having any contact with the subject. I wrote about these videos [in another post](#!/posts/screencasts-on-standard-ml-in-german).
 

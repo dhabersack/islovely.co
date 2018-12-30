@@ -1,7 +1,7 @@
 ---
 title: Drop the “should”
 category: Language hacks
-excerpt: The word “should” is often completely unnecessary. In most instances, it can be avoided entirely, which leads to clearer and more assertive language.
+excerpt: The word “should” is often completely unnecessary. Avoiding it makes your language more assertive.
 ---
 My work is often conceptual in nature: specifying requirements, writing documentation, and occasionally writing unit- and acceptance-tests. While centered around technical aspects, all of these are primarily ways to communicate with other people.
 

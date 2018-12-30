@@ -21,8 +21,7 @@ plugins:
 permalink: /posts/:title/
 
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
     values:
       layout: "default"

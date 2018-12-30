@@ -1,7 +1,7 @@
 $_stacks: (
   serif: (source-serif-pro, serif),
   sans-serif: (soleil, sans-serif),
-  monospace: (monospace)
+  monospace: (source-code-pro, monospace)
 );
 
 $font-stack-code:     map-get($_stacks, monospace);

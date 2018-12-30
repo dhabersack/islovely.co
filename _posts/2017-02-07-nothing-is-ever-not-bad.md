@@ -19,9 +19,9 @@ Meant as an appreciation of a circumstance, or sometimes even as praise, “that
 
 A much better way to let someone know you are thankful for their effort or admire their accomplishments, or when you talk about anything you enjoy, is to **use the positive voice**. Words like “nice”, “good”, “great”, “impressive”, and “fantastic” come to mind, with many more following in the same general direction.
 
-- “Your solution is not bad.” can become “Your solution is really good.”
-- “The food here is not bad.” can become “I like the food here.”
-- “This band is not bad.”  can become “This band is great.”
+- “Your solution is not bad.” → “Your solution is really good.”
+- “The food here is not bad.” → “I like the food here.”
+- “This band is not bad.” → “This band is great.”
 
 There is little need to downplay the fact that we like something. Calling something “not bad” sneakily lowers the expectations of others before they have even been exposed to whatever it is we are referring to. We might want to play it safe in case they end up not liking it, because we worry they might think less of us because we do.
 

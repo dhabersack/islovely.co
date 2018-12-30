@@ -1,7 +1,7 @@
 ---
 title: Writing BEM-style CSS with Sass
 category: CSS
-excerpt: The `&`-operator in Sass can greatly reduce the typing work required when using BEM in your stylesheets.
+excerpt: The &-operator in Sass can greatly reduce the typing work required when using BEM in your stylesheets.
 ---
 BEM, “Block Element Modifier”, is an approach to writing CSS that does away with most of the “cascading” used in CSS. For an excellent primer on the subject, I highly recommend reading [“MindBEMding – getting your head ’round BEM syntax”](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/).
 
@@ -45,9 +45,9 @@ But what happens when we realize our navigation does have a specific order, so t
 {% highlight html %}
 <nav>
   <ol>
-    <li>...</li>
-    <li>...</li>
-    <li>...</li>
+    <li>…</li>
+    <li>…</li>
+    <li>…</li>
   </ol>
 </nav>
 {% endhighlight %}

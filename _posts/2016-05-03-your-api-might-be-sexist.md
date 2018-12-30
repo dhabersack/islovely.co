@@ -12,13 +12,11 @@ I recently came across an API that exposed a reasonable but unfortunate design d
       name: 'John Doe',
       email: 'john.doe@example.com',
       male: true
-    },
-    {
+    }, {
       name: 'Jane Doe',
       email: 'jane.doe@example.com',
       male: false
-    },
-    {
+    }, {
       name: 'Joshua Doe',
       email: 'joshua.doe@example.com',
       male: true

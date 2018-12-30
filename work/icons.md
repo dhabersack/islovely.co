@@ -1,6 +1,4 @@
 ---
 layout: icons
-title: Icons
+title: Lovely Icons
 ---
-
-These are my icons

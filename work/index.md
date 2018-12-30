@@ -3,5 +3,8 @@ title: Work
 ---
 This is what I work on.
 
-* [Lovelicons](/work/icons)
-* [Warren for Mastodon](/work/warren-for-mastodon)
+## [Lovely Icons](/work/icons)
+
+Lovelicons is a growing collection of SVG-icons.
+
+## [Warren for Mastodon](/work/warren-for-mastodon)

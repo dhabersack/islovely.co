@@ -13,7 +13,7 @@
 .icons {
   display: grid;
   grid-column-gap: var(--icon-grid-column-gap);
-  grid-row-gap: 0.6em;
+  grid-row-gap: 1.2em;
   grid-template-columns: repeat(auto-fit, minmax(14em, 1fr));
 }
 
