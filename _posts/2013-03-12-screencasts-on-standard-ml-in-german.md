@@ -34,9 +34,4 @@ The individual videos are:
 
 You can find the [playlist on YouTube](http://youtube.com/playlist?list=PLvxbiku9hLuGV23Ks2WIzJbvGieCeppzl 'Screencast-series on Standard ML (German)') or watch it right here:
 
-<div class="videoContainer">
-  <div>
-    <iframe class="iframe-youtube" src="http://youtube.com/embed/videoseries?list=PLvxbiku9hLuGV23Ks2WIzJbvGieCeppzl" frameborder="0" allowfullscreen="true">
-    </iframe>
-  </div>
-</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DExIYnh1b5A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
