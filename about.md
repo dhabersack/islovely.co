@@ -2,16 +2,10 @@
 title: About
 permalink: /about/
 ---
+I do my best work on the web, where I have been working with businesses on improving their products since 2009. With a focus on UI and UX, I work hard to make it easier for your customers to interact with you.
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+My work is responsive and highly performant all the way through, putting your customers front and center. I share my knowledge through this site, guest lectures, screencasts, and at meetups.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+Oh, and I occasionally jump out of planes despite being crazy scared of heights.
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+I am **available for project-based collaboration** and for **speaking at your event**. Contact me at <{{ site.email }}> if you have a project you need help with!

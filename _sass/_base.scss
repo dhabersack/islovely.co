@@ -28,6 +28,7 @@ body {
   background: $color-body__background;
   color: $color-body__text;
   font-family: $font-stack-copy;
+  height: 100%;
   margin: 0;
   padding: 0;
 }
@@ -100,18 +101,6 @@ h3 {
   }
 }
 
-h4 {
-  background: yellow;
-}
-
-h5 {
-  background: orange;
-}
-
-h6 {
-  background: red;
-}
-
 hr {
   background: $color-horizontal-rule;
   border: 0;
@@ -125,6 +114,7 @@ html {
   box-sizing: border-box;
   font-kerning: auto;
   font-size: 62.5%; /* 10px */
+  height: 100%;
   line-height: 1.5;
 }
 

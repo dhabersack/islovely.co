@@ -1,30 +1,35 @@
 .footer {
-  background: #F2F4F5;
+  // background: #F2F4F5;
+  background: _color(orange, lightest);
+  // color: _color(blue, lighter);
   padding: 2.4em 0;
 }
 
 .footer__content {
   @include responsive-container;
-}
 
-.footer__inbound-links {
-  margin-bottom: 2.4em;
-}
-
-.footer__links {
-  justify-content: center;
+  align-items: center;
   display: flex;
-  flex-wrap: wrap;
-  list-style: none;
+  flex-direction: column;
+}
+
+.footer__copyright {
+  font-size: 1.6rem;
+  line-height: 1.3125; /* 21px */
+  margin: 0 0 0.9375em; /* 0 0 15px */
 }
 
 .footer__link {
+  color: _color(blue, darkest);
   display: block;
   font-size: 1.6rem;
   line-height: 1.5; /* 24px */
   margin: 0 0.625em 0.5625em; /* 0 10px 9px */
 }
 
+.footer__link:visited {
+  color: _color(blue, darkest);
+}
 
 .footer__link.footer__link--dribbble,
 .footer__link.footer__link--github,
@@ -65,4 +70,16 @@
 
 .footer__link.footer__link--twitter::before {
   background-image: url('/icons/twitter.svg');
+}
+
+.footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  margin-bottom: 0.3em;
+}
+
+.footer__links.footer__links--social {
+  margin-bottom: 0;
 }

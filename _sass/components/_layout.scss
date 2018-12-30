@@ -10,6 +10,15 @@
   flex: 1 0 auto;
   padding-bottom: 6em;
   padding-top: 4.8em;
+  width: 100%;
+}
+
+.layout__content::after {
+  content: '\00a0'; /* &nbsp; */
+  display: block;
+  margin-top: var(--space);
+  height: 0px;
+  visibility: hidden;
 }
 
 .layout__footer {
