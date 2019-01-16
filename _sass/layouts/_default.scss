@@ -1,10 +1,10 @@
-.layout {
+.l-default {
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
-.layout__content {
+.l-default__content {
   @include responsive-container;
 
   flex: 1 0 auto;
@@ -13,7 +13,7 @@
   width: 100%;
 }
 
-.layout__content::after {
+.l-default__content::after {
   content: '\00a0'; /* &nbsp; */
   display: block;
   margin-top: var(--space);
@@ -21,10 +21,10 @@
   visibility: hidden;
 }
 
-.layout__footer {
+.l-default__footer {
   flex: none;
 }
 
-.layout__header {
+.l-default__header {
   flex: none;
 }

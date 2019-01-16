@@ -1,12 +1,12 @@
 ---
 layout: default
 ---
-<div class="page-layout page-layout--icons">
+<div class="l-icons">
   {{ content }}
 
-  <div class="icons">
+  <div class="l-icons__icons">
     {% for icon in site.data.icons %}
-      <div class="icons__icon">
+      <div class="l-icons__icon">
         {% include icon.html icon=icon %}
       </div>
     {% endfor %}

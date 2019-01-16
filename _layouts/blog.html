@@ -1,14 +1,14 @@
 ---
 layout: default
 ---
-<div class="blog">
+<div class="l-blog">
   {{ content }}
 
-  <div class="blog__post-teasers">
+  <div class="l-blog__post-teasers">
     {% for post in site.posts %}
       {% assign index = site.posts.size | minus: forloop.index %}
 
-      <div class="blog__post-teaser">
+      <div class="l-blog__post-teaser">
         {% include post-teaser.html post=post index=index %}
       </div>
     {% endfor %}
