@@ -1,6 +1,5 @@
 ---
 ---
-
 @import
   'functions/columns',
   'functions/hsb',
@@ -23,8 +22,9 @@
   'components/navigation',
   'components/post-teaser',
 
-  'layouts/default',
   'layouts/blog',
+  'layouts/default',
+  'layouts/home',
   'layouts/icons',
 
   'debug/media-queries-info';

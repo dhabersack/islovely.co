@@ -1,7 +1,5 @@
 .footer {
-  // background: #F2F4F5;
-  background: _color(orange, lightest);
-  // color: _color(blue, lighter);
+  background: $color-footer__background;
   padding: 2.4em 0;
 }
 

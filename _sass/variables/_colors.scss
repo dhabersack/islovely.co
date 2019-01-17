@@ -33,6 +33,8 @@ $_colors: (
 $color-body__background: #f7f9fa;
 $color-body__text: _color(gray, darkest);
 
+$color-footer__background: _color(blue, lightest);
+
 $color-horizontal-rule: _color(gray, lighter);
 
 $color-link: _color(blue, medium);

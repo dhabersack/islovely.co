@@ -1,17 +1,5 @@
 ---
 layout: home
-title: Home
+title: As far as landing pages go, this one is pretty terrible.
 ---
-This is the homepage.
-
-- UI/UX Design
-
-- Design Sprints  
-  I can help you facilitate Design Sprints.
-
-- Lifecycle emails
-
-- A/B Testing
-
-- JavaScript Workshops
-  React, Vue, vanilla JavaScript
+You can find much more interesting content in my [articles on technology, business, and design](/posts).
