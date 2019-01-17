@@ -1,0 +1,63 @@
+@function _get-color-map-for-hue($hue) {
+  @return (
+    lightest: hsb($hue, 20, 98),
+    lighter:  hsb($hue, 66, 94),
+    medium:   hsb($hue, 87, 87),
+    darker:   hsb($hue, 95, 72),
+    darkest:  hsb($hue, 98, 48)
+  );
+}
+
+$_colors: (
+  red:       _get_color-map-for-hue(12),
+  orange:    _get_color-map-for-hue(36),
+  yellow:    _get_color-map-for-hue(60),
+  green:     _get_color-map-for-hue(96),
+  turquoise: _get_color-map-for-hue(177),
+  blue:      _get-color-map-for-hue(208),
+  purple:    _get-color-map-for-hue(275),
+  magenta:   _get-color-map-for-hue(306),
+  gray:      (
+    lightest: hsb(208, 0, 99),
+    lighter:  hsb(208, 0, 84),
+    medium:   hsb(208, 0, 67),
+    darker:   hsb(208, 0, 50),
+    darkest:  hsb(208, 0, 26)
+  )
+);
+
+@function _color($color, $shade) {
+  @return map-get(map-get($_colors, $color), $shade);
+}
+
+$color-body__background: #f7f9fa;
+$color-body__text: _color(gray, darkest);
+
+$color-footer__background: _color(blue, lightest);
+
+$color-horizontal-rule: _color(gray, lighter);
+
+$color-link: _color(blue, medium);
+
+$color-logo: _color(gray, darkest);
+
+$color-navigation__link: _color(blue, darker);
+
+$color-tag__background: _color(gray, lighter);
+$color-tag__text: _color(gray, darker);
+$color-tag--code__background: _color(blue, lightest);
+$color-tag--code__text: _color(blue, darkest);
+$color-tag--design__background: _color(green, lightest);
+$color-tag--design__text: _color(green, darkest);
+$color-tag--education__background: _color(orange, lightest);
+$color-tag--education__text: _color(orange, darkest);
+$color-tag--frontend__background: _color(yellow, lightest);
+$color-tag--frontend__text: _color(yellow, darkest);
+$color-tag--inspiration__background: _color(turquoise, lightest);
+$color-tag--inspiration__text: _color(turquoise, darkest);
+$color-tag--language__background: _color(red, lightest);
+$color-tag--language__text: _color(red, darkest);
+$color-tag--rant__background: _color(magenta, lightest);
+$color-tag--rant__text: _color(magenta, darkest);
+$color-tag--society__background: _color(purple, lightest);
+$color-tag--society__text: _color(purple, darkest);

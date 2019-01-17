@@ -1,0 +1,26 @@
+.navigation {}
+
+.navigation__item {}
+
+.navigation__item + .navigation__item {
+  margin-left: 1em;
+}
+
+.navigation__link {
+  color: $color-navigation__link;
+  display: inline-block;
+  font-size: 1.6rem;
+  line-height: 1.5; /* 24px */
+  text-decoration: none;
+}
+
+.navigation__link:visited {
+  color: $color-navigation__link;
+}
+
+.navigation__list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin-bottom: 0;
+}

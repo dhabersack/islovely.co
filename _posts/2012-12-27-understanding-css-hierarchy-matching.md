@@ -1,5 +1,6 @@
 ---
 title: Understanding CSS hierarchy-matching
+category: CSS
 excerpt: In order to improve your stylesheets, you first need to understand how browsers match CSS-selectors and HTML.
 ---
 To get a feel for how CSS-selectors should be written, you need to understand how browsers match them to the related markup. The following tries to give a top-level description that might not be entirely accurate but should still give you a good enough idea of how CSS and HTML get combined during rendering.

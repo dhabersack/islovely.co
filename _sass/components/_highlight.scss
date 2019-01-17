@@ -1,0 +1,35 @@
+.highlight {
+  background: _color(gray, lightest);
+  border-left: 5px solid _color(gray, darker);
+  border-radius: 0 0.4em 0.4em 0;
+  font-weight: 300;
+  margin: 0 0 2.4em;
+  overflow-x: auto;
+  padding: 0.9em 1em;
+}
+
+.highlight code {
+  font-size: 1rem;
+  line-height: 1.5; /* 15px */
+
+  @media ($query-extra-small) {
+    font-size: 1.2rem;
+    line-height: 1.5; /* 18px */
+  }
+
+  @media ($query-small) {
+  }
+
+  @media ($query-medium) {
+    font-size: 1.4rem;
+    line-height: 1.5; /* 21px */
+  }
+
+  @media ($query-large) {
+    font-size: 1.6rem;
+    line-height: 1.5; /* 24px */
+  }
+
+  @media ($query-extra-large) {
+  }
+}

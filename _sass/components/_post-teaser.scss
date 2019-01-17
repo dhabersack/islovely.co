@@ -1,0 +1,56 @@
+.post-teaser {
+  background: #fefefe;
+  border-radius: 0.6em;
+  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.04);
+  height: 100%;
+  overflow: hidden;
+}
+
+.post-teaser__category-tag {
+  margin-bottom: 0.6em;
+}
+
+.post-teaser__content {
+  padding: 1.2em 1.5em;
+}
+
+.post-teaser__excerpt {
+  font-size: 1.6rem;
+  line-height: 1.5; /* 24px */
+  margin-bottom: 0;
+}
+
+.post-teaser__header {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: $font-stack-headings;
+  justify-content: space-between;
+  margin-bottom: 0.3em;
+}
+
+.post-teaser__heading {
+  font-size: 2rem;
+  margin-bottom: 0.3em; /* 6px */
+  margin-top: 0;
+}
+
+.post-teaser__hero {
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 56.25%;
+}
+
+.post-teaser__timestamp {
+  color: #726e6c;
+  display: block;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 0.5em; /* 6px */
+}
+
+@for $index from 0 through 100 {
+  .post-teaser.post-teaser--index-#{ $index } .post-teaser__hero {
+    background-image: url('/assets/heroes/hero-#{ $index }.jpg');
+  }
+}

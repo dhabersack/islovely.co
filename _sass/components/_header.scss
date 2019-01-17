@@ -1,0 +1,31 @@
+.header {
+  background: #fefefe;
+  padding: 1.8em 0;
+}
+
+.header__content {
+  @include responsive-container;
+
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__logo {
+  background-image: url('/assets/logo.svg');
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: $color-logo;
+  display: inline-block;
+  font-size: 1rem;
+  height: 2.4em;
+  width: 6.6em;
+  text-indent: -9999em;
+}
+
+.header__logo:visited {
+  color: $color-logo;
+}
+
+.header__navigation {}

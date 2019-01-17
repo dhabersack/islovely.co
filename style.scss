@@ -1,20 +1,30 @@
 ---
 ---
-
 @import
-  'normalize',
-  'colors',
-  'flexbox',
-  'fonts',
-  'responsive',
+  'functions/columns',
+  'functions/hsb',
 
-  'atoms',
+  'variables/colors',
+  'variables/fonts',
+  'variables/media-queries',
 
-  'molecules/author-bio',
-  'molecules/back-navigation',
-  'molecules/header',
-  'molecules/highlight',
-  'molecules/footer',
-  'molecules/navigation',
-  'molecules/post'
-;
+  'includes/body-copy',
+  'includes/responsive-container',
+
+  'base',
+
+  'components/categories',
+  'components/category-tag',
+  'components/footer',
+  'components/header',
+  'components/highlight',
+  'components/icon',
+  'components/navigation',
+  'components/post-teaser',
+
+  'layouts/blog',
+  'layouts/default',
+  'layouts/home',
+  'layouts/icons',
+
+  'debug/media-queries-info';

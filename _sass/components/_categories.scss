@@ -1,0 +1,16 @@
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.categories__category {
+  margin-bottom: 0.6em;
+  margin-right: 1em;
+}
+
+.categories__count {
+  font-size: 1.2rem;
+  line-height: 1.5; /* 18px */
+}
+
+.categories__tag {}

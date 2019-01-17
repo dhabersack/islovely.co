@@ -1,5 +1,6 @@
 ---
 title: Screencasts on Standard ML in German
+category: Functional programming
 excerpt: A well-intentioned but ultimately unfair move by a lecture’s organizers inspired me to record a number of screencasts on functional programming.
 ---
 The first exam in a lecture on functional programming saw a failure rate of over 68%, which I have written about in my previous post on [why students fail entry-level programming exams](#!/posts/why-students-fail-entry-level-programming-exams). The resit had been scheduled on a date almost exactly six months later, with no additional lectures or support of any kind in between. Students that failed the initial exam were expected to work through the contents again, this time entirely on their own.
@@ -33,9 +34,4 @@ The individual videos are:
 
 You can find the [playlist on YouTube](http://youtube.com/playlist?list=PLvxbiku9hLuGV23Ks2WIzJbvGieCeppzl 'Screencast-series on Standard ML (German)') or watch it right here:
 
-<div class="videoContainer">
-  <div>
-    <iframe class="iframe-youtube" src="http://youtube.com/embed/videoseries?list=PLvxbiku9hLuGV23Ks2WIzJbvGieCeppzl" frameborder="0" allowfullscreen="true">
-    </iframe>
-  </div>
-</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DExIYnh1b5A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

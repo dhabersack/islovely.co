@@ -1,0 +1,31 @@
+{% assign index = include.index %}
+{% assign post = include.post %}
+
+<article class="post-teaser post-teaser--index-{{ index }}">
+  <a href="{{ post.url | prepend: site.baseurl }}">
+    <div class="post-teaser__hero">
+    </div>
+  </a>
+
+  <div class="post-teaser__content">
+    <header class="post-teaser__header">
+      <span class="post-teaser__category-tag">
+        {% include category-tag.html category=post.category %}
+      </span>
+
+      <time class="post-teaser__timestamp">
+        {{ post.date | date: "%b %-d, %Y" }}
+      </time>
+    </header>
+
+    <h2 class="post-teaser__heading">
+      <a href="{{ post.url | prepend: site.baseurl }}">
+        {{ post.title }}
+      </a>
+    </h2>
+
+    <p class="post-teaser__excerpt">
+      {{ post.excerpt }}
+    </p>
+  </div>
+</article>

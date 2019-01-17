@@ -1,0 +1,20 @@
+:root {
+  --icon-grid-column-gap: 2vw;
+
+  @media ($query-medium) {
+    --icon-grid-column-gap: 1.5vw;
+  }
+
+  @media ($query-large) {
+    --icon-grid-column-gap: 1vw;
+  }
+}
+
+.l-icons__icons {
+  display: grid;
+  grid-column-gap: var(--icon-grid-column-gap);
+  grid-row-gap: 1.2em;
+  grid-template-columns: repeat(auto-fit, minmax(14em, 1fr));
+}
+
+.l-icons__icon {}

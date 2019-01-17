@@ -1,5 +1,6 @@
 ---
 title: Why students fail entry-level programming exams
+category: Education
 excerpt: The common approach to teaching development is rarely tailored to newcomers, which often results in high failure rates and large numbers of dropouts.
 ---
 During our second semester, we were introduced to functional programming. At this point, many students had only just taken their first steps with object-oriented programming and were overwhelmed by this new and entirely different way of writing code. Many did not get an appropriate chance to fully understand the first concept they had just been exposed to, and this rapid succession of new paradigms hurt their understanding of both.

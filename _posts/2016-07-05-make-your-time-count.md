@@ -1,6 +1,7 @@
 ---
 title: Make your time count
-excerpt: When working in technology, we can do a great many things, some of which are absolutely not worth doing.
+category: Inspiration
+excerpt: When working in tech, we can do a great many things, some of which are absolutely not worth doing.
 ---
 Ever since I was very young, I knew that I wanted to “do something with computers”. The thought of telling machines what to do, and then being able to watch them do it, was always very intriguing to me. I spent a lot of my spare time picking up programming languages and playing around with software. That hobby later turned into a profession.
 

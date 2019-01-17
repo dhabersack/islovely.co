@@ -1,0 +1,5 @@
+{% assign category = include.category  %}
+
+<span class="category-tag category-tag--{{ category | slugify }}">
+  {{ include.category }}
+</span>

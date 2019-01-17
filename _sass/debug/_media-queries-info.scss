@@ -1,0 +1,36 @@
+html.debug {
+  body::after {
+    background: _color(gray, lighter);
+    border-top-left-radius: 0.25em; /* 3px */
+    bottom: 0;
+    color: _color(gray, darker);
+    content: 'no breakpoint';
+    display: block;
+    font-size: 1.2rem;
+    line-height: 1.5; /* 18px */
+    padding: 0.5em 0.75em; /* 6px 9px */
+    position: fixed;
+    right: 0;
+    z-index: 1001;
+
+    @media ($query-extra-small) {
+      content: 'extra-small';
+    }
+
+    @media ($query-small) {
+      content: 'small';
+    }
+
+    @media ($query-medium) {
+      content: 'medium';
+    }
+
+    @media ($query-large) {
+      content: 'large';
+    }
+
+    @media ($query-extra-large) {
+      content: 'extra-large';
+    }
+  }
+}

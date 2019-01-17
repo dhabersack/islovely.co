@@ -1,5 +1,6 @@
 ---
 title: grunt-contrib-sass and Node.js 0.10.8
+category: CSS
 excerpt: grunt-contrib-sass does not work with the current version of Node.js. Downgrading Node.js to an earlier version fixes this problem.
 ---
 Over the last few weeks, I have become a massive fan of [Grunt](http://gruntjs.com/). Amongst other things, it makes development with [Sass](http://sass-lang.com/) and [CoffeeScript](http://coffeescript.org/) much easier by running their compile-processes automatically and reloading the browser via LiveReload. It basically gives you frontend-superpowers.
@@ -52,7 +53,7 @@ $ brew versions node
 0.10.7   git checkout e44f345 Library/Formula/node.rb
 0.10.6   git checkout 8583540 Library/Formula/node.rb
 0.10.5   git checkout 3b589c5 Library/Formula/node.rb
-[...]
+[…]
 {% endhighlight %}
 
 Homebrew even provides the `git`-command you need to run to install the version. Run these commands to install 0.10.7:

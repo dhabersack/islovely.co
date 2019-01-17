@@ -1,5 +1,6 @@
 ---
 title: Writing high-performance CSS
+category: CSS
 excerpt: Aside from the established best practices for reducing load times, a few things that can be done to stylesheets to make browsers render pages faster.
 ---
 **Disclaimer:** Browsers are incredibly fast at parsing CSS, which makes gains through optimization marginal at best. There are a lot of other areas to tackle first to improve load times, like lowering the number of requests as well as file sizes of assets such as stylesheets, images and JavaScript.
