@@ -17,6 +17,7 @@ profiles:
 markdown: kramdown
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 
 permalink: /posts/:title/
 
@@ -25,6 +26,14 @@ defaults:
       path: ""
     values:
       layout: "default"
+  - scope:
+      path: "work/**/*"
+    values:
+      sitemap: false
+  - scope:
+      path: "assets/**/*.pdf"
+    values:
+      sitemap: false
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
