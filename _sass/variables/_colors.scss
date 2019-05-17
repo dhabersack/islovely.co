@@ -1,28 +1,113 @@
-@function _get-color-map-for-hue($hue) {
-  @return (
-    lightest: hsb($hue, 20, 98),
-    lighter:  hsb($hue, 66, 94),
-    medium:   hsb($hue, 87, 87),
-    darker:   hsb($hue, 95, 72),
-    darkest:  hsb($hue, 98, 48)
-  );
-}
-
 $_colors: (
-  red:       _get_color-map-for-hue(12),
-  orange:    _get_color-map-for-hue(36),
-  yellow:    _get_color-map-for-hue(60),
-  green:     _get_color-map-for-hue(96),
-  turquoise: _get_color-map-for-hue(177),
-  blue:      _get-color-map-for-hue(208),
-  purple:    _get-color-map-for-hue(275),
-  magenta:   _get-color-map-for-hue(306),
-  gray:      (
-    lightest: hsb(208, 0, 99),
-    lighter:  hsb(208, 0, 84),
-    medium:   hsb(208, 0, 67),
-    darker:   hsb(208, 0, 50),
-    darkest:  hsb(208, 0, 26)
+  yellow: (
+    100: #FFFFEE,
+    200: #FEFBB7,
+    300: #F9ED7E,
+    400: #F5DB54,
+    500: #E9C242,
+    600: #D09329,
+    700: #AE6D1D,
+    800: #8C4F16,
+    900: #693A12
+  ),
+  orange: (
+    100: #FFF9EE,
+    200: #FEE8C1,
+    300: #FBCD82,
+    400: #F5A34B,
+    500: #EA7D30,
+    600: #D8601E,
+    700: #B84C1E,
+    800: #923A1E,
+    900: #702D1C
+  ),
+  red: (
+    100: #FFF3F4,
+    200: #FED1D1,
+    300: #FEA9A9,
+    400: #FC7576,
+    500: #F45A5A,
+    600: #E13636,
+    700: #BE2A2A,
+    800: #902727,
+    900: #692525
+  ),
+  pink: (
+    100: #FFF3F6,
+    200: #FED1DE,
+    300: #FAADC7,
+    400: #F57CAA,
+    500: #EA599C,
+    600: #CF3781,
+    700: #AF2C75,
+    800: #8C2262,
+    900: #65204F
+  ),
+  purple: (
+    100: #F9F3FF,
+    200: #E6D2FD,
+    300: #D0B4F9,
+    400: #AE89F2,
+    500: #946FE7,
+    600: #7450CF,
+    700: #603EB9,
+    800: #4B358F,
+    900: #3B2D6F
+  ),
+  indigo: (
+    100: #E8F2FF,
+    200: #BBD5FE,
+    300: #99B7F9,
+    400: #7392F3,
+    500: #5B73E7,
+    600: #4F5CD3,
+    700: #4248B7,
+    800: #3B3985,
+    900: #343060
+  ),
+  blue: (
+    100: #E8F7FF,
+    200: #B6DFF7,
+    300: #85C6F2,
+    400: #58AAEA,
+    500: #398FDD,
+    600: #2B77C7,
+    700: #2661A7,
+    800: #274877,
+    900: #253B5A
+  ),
+  cyan: (
+    100: #E1FFF9,
+    200: #A9F3E7,
+    300: #76E2D4,
+    400: #46CBBD,
+    500: #31A9A2,
+    600: #2B8C8A,
+    700: #276F70,
+    800: #245356,
+    900: #204548
+  ),
+  green: (
+    100: #EEFFF2,
+    200: #BFF4CF,
+    300: #8FE2AB,
+    400: #5DCD86,
+    500: #3FB26D,
+    600: #31975E,
+    700: #2A7A50,
+    800: #235C40,
+    900: #1F4A35
+  ),
+  gray: (
+    100: #F6F9FC,
+    200: #EAF0F6,
+    300: #DEE5EE,
+    400: #C4CFDC,
+    500: #96A4B8,
+    600: #66758B,
+    700: #414B5D,
+    800: #28303F,
+    900: #191D27
   )
 );
 
@@ -30,36 +115,35 @@ $_colors: (
   @return map-get(map-get($_colors, $color), $shade);
 }
 
-$color-body__background: #f7f9fa;
-$color-body__text: _color(gray, darkest);
+$color-body__background: _color(gray, 100);
+$color-body__text: _color(gray, 900);
 
-$color-footer__background: _color(blue, lightest);
+$color-footer__background: _color(blue, 200);
 
-$color-horizontal-rule: _color(gray, lighter);
+$color-horizontal-rule: _color(gray, 300);
+$color-link: _color(blue, 500);
 
-$color-link: _color(blue, medium);
+$color-logo: _color(gray, 900);
 
-$color-logo: _color(gray, darkest);
+$color-meta: _color(gray, 700);
 
-$color-meta: _color(gray, darkest);
+$color-navigation__link: _color(blue, 600);
 
-$color-navigation__link: _color(blue, darker);
-
-$color-tag__background: _color(gray, lighter);
-$color-tag__text: _color(gray, darker);
-$color-tag--code__background: _color(blue, lightest);
-$color-tag--code__text: _color(blue, darkest);
-$color-tag--design__background: _color(green, lightest);
-$color-tag--design__text: _color(green, darkest);
-$color-tag--education__background: _color(orange, lightest);
-$color-tag--education__text: _color(orange, darkest);
-$color-tag--frontend__background: _color(yellow, lightest);
-$color-tag--frontend__text: _color(yellow, darkest);
-$color-tag--inspiration__background: _color(turquoise, lightest);
-$color-tag--inspiration__text: _color(turquoise, darkest);
-$color-tag--language__background: _color(red, lightest);
-$color-tag--language__text: _color(red, darkest);
-$color-tag--rant__background: _color(magenta, lightest);
-$color-tag--rant__text: _color(magenta, darkest);
-$color-tag--society__background: _color(purple, lightest);
-$color-tag--society__text: _color(purple, darkest);
+$color-tag__background: _color(gray, 300);
+$color-tag__text: _color(gray, 700);
+$color-tag--code__background: _color(blue, 200);
+$color-tag--code__text: _color(blue, 700);
+$color-tag--design__background: _color(green, 200);
+$color-tag--design__text: _color(green, 700);
+$color-tag--education__background: _color(orange, 200);
+$color-tag--education__text: _color(orange, 700);
+$color-tag--frontend__background: _color(yellow, 300);
+$color-tag--frontend__text: _color(yellow, 800);
+$color-tag--inspiration__background: _color(cyan, 200);
+$color-tag--inspiration__text: _color(cyan, 700);
+$color-tag--language__background: _color(red, 200);
+$color-tag--language__text: _color(red, 700);
+$color-tag--rant__background: _color(pink, 200);
+$color-tag--rant__text: _color(pink, 700);
+$color-tag--society__background: _color(purple, 200);
+$color-tag--society__text: _color(purple, 700);
