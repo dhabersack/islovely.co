@@ -115,29 +115,11 @@ $_colors: (
   @return map-get(map-get($_colors, $color), $shade);
 }
 
-$color-body__background:             _color(gray, 100);
-$color-body__text:                   _color(gray, 900);
-$color-footer__background:           _color(gray, 200);
-$color-horizontal-rule:              _color(gray, 300);
-$color-link:                         _color(blue, 500);
-$color-logo:                         _color(gray, 900);
-$color-meta:                         _color(gray, 700);
-$color-navigation__link:             _color(blue, 600);
-$color-tag__background:              _color(gray, 300);
-$color-tag__text:                    _color(gray, 700);
-$color-tag--code__background:        _color(blue, 200);
-$color-tag--code__text:              _color(blue, 700);
-$color-tag--design__background:      _color(green, 200);
-$color-tag--design__text:            _color(green, 700);
-$color-tag--education__background:   _color(orange, 200);
-$color-tag--education__text:         _color(orange, 700);
-$color-tag--frontend__background:    _color(yellow, 300);
-$color-tag--frontend__text:          _color(yellow, 800);
-$color-tag--inspiration__background: _color(cyan, 200);
-$color-tag--inspiration__text:       _color(cyan, 700);
-$color-tag--language__background:    _color(red, 200);
-$color-tag--language__text:          _color(red, 700);
-$color-tag--rant__background:        _color(pink, 200);
-$color-tag--rant__text:              _color(pink, 700);
-$color-tag--society__background:     _color(purple, 200);
-$color-tag--society__text:           _color(purple, 700);
+$color-body__background:   _color(gray, 100);
+$color-body__text:         _color(gray, 900);
+$color-footer__background: _color(gray, 200);
+$color-horizontal-rule:    _color(gray, 300);
+$color-link:               _color(blue, 500);
+$color-logo:               _color(gray, 900);
+$color-meta:               _color(gray, 700);
+$color-navigation__link:   _color(blue, 600);
