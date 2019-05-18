@@ -31,6 +31,8 @@
 
 .post-teaser__heading {
   font-size: 2rem;
+  font-size: 1.6rem;
+  line-height: 1.35; /* 27px */
   margin-bottom: 0.3em; /* 6px */
   margin-top: 0;
 }
@@ -42,7 +44,7 @@
 }
 
 .post-teaser__timestamp {
-  color: #726e6c;
+  color: $color-secondary-content;
   display: block;
   font-size: 1.2rem;
   line-height: 1.5;

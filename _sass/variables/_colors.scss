@@ -116,10 +116,12 @@ $_colors: (
 }
 
 $color-body__background:   _color(gray, 100);
-$color-body__text:         _color(gray, 900);
 $color-footer__background: _color(gray, 200);
 $color-horizontal-rule:    _color(gray, 300);
 $color-link:               _color(blue, 500);
 $color-logo:               _color(gray, 900);
-$color-meta:               _color(gray, 700);
 $color-navigation__link:   _color(blue, 600);
+
+$color-primary-content:    _color(gray, 900);
+$color-secondary-content:  _color(gray, 700);
+$color-tertiary-content:   _color(gray, 500);

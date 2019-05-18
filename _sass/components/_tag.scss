@@ -22,7 +22,7 @@ $_tags: (
 }
 
 @each $tag, $color in $_tags {
-  .tag.tag--#{$tag} {
+  .tag.tag--#{ $tag } {
     background: _color($color, 200);
     color: _color($color, 700);
   }
