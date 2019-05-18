@@ -6,12 +6,8 @@
   overflow: hidden;
 }
 
-.post-teaser__tag {
-  margin-bottom: 0.6em;
-}
-
 .post-teaser__content {
-  padding: 1.2em 1.5em;
+  padding: 1.8em 2em;
 }
 
 .post-teaser__excerpt {
@@ -41,6 +37,10 @@
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 56.25%;
+}
+
+.post-teaser__tag {
+  margin-bottom: 0.6em;
 }
 
 .post-teaser__timestamp {

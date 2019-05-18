@@ -3,19 +3,23 @@
   display: flex;
 }
 
-.post-meta__text {
+.post-meta__data {
   color: $color-secondary-content;
   font-family: $font-stack-meta;
-  font-size: 1.6rem;
-  line-height: 1.3125; /* 21px */
-  margin: 0;
+  font-size: 1.2rem;
+  line-height: 1.25; /* 15px */
+  margin: 0 0 0.25em; /* 0 0 3px */
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
-.post-meta__author {
+.post-meta__name {
   font-weight: 700;
 }
 
-.post-meta__date {
+.post-meta__timestamp {
   font-weight: 700;
 }
 

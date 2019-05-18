@@ -2,17 +2,21 @@
   <div class="post-meta__picture">
   </div>
 
-  <p class="post-meta__text">
-    by
+  <div>
+    <p class="post-meta__data">
+      by
 
-    <strong class="post-meta__author">
-      Dom Habersack
-    </strong>
+      <strong class="post-meta__name">
+        Dom Habersack
+      </strong>
+    </p>
 
-    on
+    <p class="post-meta__data">
+      on
 
-    <strong class="post-meta__date">
-      {{ page.date | date: "%B %-d, %Y" }}
-    </strong>
-  </p>
+      <strong class="post-meta__timestamp">
+        {{ page.date | date: "%B %-d, %Y" }}
+      </strong>
+    </p>
+  </div>
 </div>
