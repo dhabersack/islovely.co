@@ -1,5 +1,9 @@
-$query-extra-small: 'min-width: #{  4 * 12 * 10 }px';
-$query-small:       'min-width: #{  5 * 12 * 10 }px';
-$query-medium:      'min-width: #{  6 * 12 * 10 }px';
-$query-large:       'min-width: #{  8 * 12 * 10 }px';
-$query-extra-large: 'min-width: #{ 11 * 12 * 10 }px';
+@function _min-width($width) {
+  @return 'min-width: #{$width}px';
+}
+
+$query-extra-small: _min-width(120 * 4);
+$query-small:       _min-width(120 * 5);
+$query-medium:      _min-width(120 * 6);
+$query-large:       _min-width(120 * 8);
+$query-extra-large: _min-width(120 * 11);
