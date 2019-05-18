@@ -8,15 +8,9 @@
   </a>
 
   <div class="post-teaser__content">
-    <header class="post-teaser__header">
-      <span class="post-teaser__tag">
-        {% include tag.html tag=post.category %}
-      </span>
-
-      <time class="post-teaser__timestamp">
-        {{ post.date | date: "%b %-d, %Y" }}
-      </time>
-    </header>
+    <div class="post-teaser__tag">
+      {% include tag.html tag=post.category %}
+    </div>
 
     <h2 class="post-teaser__heading">
       <a href="{{ post.url | prepend: site.baseurl }}">
@@ -28,4 +22,8 @@
       {{ post.excerpt }}
     </p>
   </div>
+
+  <footer class="post-teaser__meta">
+    {% include post-meta.html date=post.date %}
+  </footer>
 </article>
