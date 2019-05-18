@@ -18,10 +18,10 @@ a:visited {
 }
 
 blockquote {
-  border-left: 5px solid _color(gray, darker);
+  border-left: 0.5em solid _color(gray, 700);
   font-style: italic;
   margin: 0 2em;
-  padding-left: 10px;
+  padding-left: 1em;
 }
 
 body {
@@ -165,9 +165,9 @@ p {
 }
 
 p code {
-  background: _color(gray, lightest);
+  background: _color(gray, 300);
   border-radius: 0.2em;
-  color: _color(gray, darkest);
+  color: _color(gray, 800);
   font-size: 0.9em;
   padding: 0 0.2em;
 }
@@ -191,11 +191,11 @@ tbody {
 }
 
 tbody td {
-  background: _color(gray, lightest);
+  background: _color(gray, 200);
 }
 
 tbody th {
-  background: _color(gray, lighter);
+  background: _color(gray, 300);
   text-align: left;
 }
 
@@ -206,7 +206,7 @@ td {
 }
 
 tfoot {
-  background: _color(gray, medium);
+  background: _color(gray, 400);
 }
 
 tfoot th {
@@ -224,7 +224,7 @@ thead {
 }
 
 thead th:not(:empty) {
-  background: _color(gray, lighter);
+  background: _color(gray, 400);
   text-align: left;
 }
 

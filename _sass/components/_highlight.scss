@@ -1,6 +1,6 @@
 .highlight {
-  background: _color(gray, lightest);
-  border-left: 5px solid _color(gray, darker);
+  background: _color(gray, 200);
+  border-left: 5px solid _color(gray, 600);
   border-radius: 0 0.4em 0.4em 0;
   font-weight: 300;
   margin: 0 0 2.4em;
@@ -17,8 +17,7 @@
     line-height: 1.5; /* 18px */
   }
 
-  @media ($query-small) {
-  }
+  @media ($query-small) {}
 
   @media ($query-medium) {
     font-size: 1.4rem;
@@ -30,6 +29,5 @@
     line-height: 1.5; /* 24px */
   }
 
-  @media ($query-extra-large) {
-  }
+  @media ($query-extra-large) {}
 }

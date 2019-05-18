@@ -18,15 +18,15 @@
 }
 
 .footer__link {
-  color: _color(blue, darkest);
   display: block;
   font-size: 1.6rem;
   line-height: 1.5; /* 24px */
   margin: 0 0.625em 0.5625em; /* 0 10px 9px */
-}
 
-.footer__link:visited {
-  color: _color(blue, darkest);
+  &,
+  &:visited {
+    color: _color(blue, 600);
+  }
 }
 
 .footer__link.footer__link--dribbble,
