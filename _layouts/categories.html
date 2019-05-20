@@ -1,0 +1,21 @@
+---
+layout: default
+---
+{% assign categories = site.categories | sort %}
+
+<div class="l-categories">
+  {{ content }}
+
+  <div class="l-categories__categories">
+    {% for category in categories %}
+      <div class="l-categories__category">
+        <h2>
+          {{ category[0] }} ({{ category[1] | size }})
+        </h2>
+        {% for post in category[1] %}
+          {% include post-teaser.html post=post %}
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </div>
+</div>

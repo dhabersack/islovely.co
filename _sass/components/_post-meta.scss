@@ -1,26 +1,24 @@
 .post-meta {
   align-items: center;
   display: flex;
+  font-family: $font-stack-meta;
 }
 
-.post-meta__data {
-  color: $color-secondary-content;
-  font-family: $font-stack-meta;
+.post-meta__date,
+.post-meta__name {
   font-size: 1.2rem;
   line-height: 1.25; /* 15px */
-  margin: 0 0 0.25em; /* 0 0 3px */
+}
 
-  &:last-of-type {
-    margin-bottom: 0;
-  }
+.post-meta__date {
+  color: $color-tertiary-content;
+  margin: 0;
 }
 
 .post-meta__name {
+  color: $color-secondary-content;
   font-weight: 700;
-}
-
-.post-meta__timestamp {
-  font-weight: 700;
+  margin: 0 0 0.25em; /* 0 0 3px */
 }
 
 .post-meta__picture {

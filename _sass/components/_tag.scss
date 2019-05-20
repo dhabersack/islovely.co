@@ -1,30 +1,15 @@
-$_tags: (
-  css: yellow,
-  design: green,
-  education: orange,
-  functional-programming: indigo,
-  gender-equality: purple,
-  inspiration: cyan,
-  language-hacks: red,
-  rant: pink,
-  software-architecture: blue
-);
-
 .tag {
   background: _color(gray, 200);
   border-radius: 0.25em; /* 3px */
-  color: _color(gray, 700);
   display: inline-block;
   font-family: _fonts(sans-serif);
   font-size: 1.2rem;
   line-height: 1.5; /* 18px */
   padding: 0.25em 0.5em; /* 3px 6px */
   white-space: nowrap;
-}
 
-@each $tag, $color in $_tags {
-  .tag.tag--#{ $tag } {
-    background: _color($color, 200);
-    color: _color($color, 700);
+  &,
+  &:visited {
+    color: $color-tertiary-content;
   }
 }
