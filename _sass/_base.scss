@@ -27,14 +27,16 @@ blockquote {
 body {
   background: $color-body__background;
   color: $color-primary-content;
-  font-family: $font-stack-copy;
+  font-family: _fonts(serif);
+  font-weight: 300;
   height: 100%;
   margin: 0;
   padding: 0;
 }
 
 code {
-  font-family: $font-stack-code;
+  font-family: _fonts(monospace);
+  font-weight: 300;
 }
 
 figcaption {
@@ -61,7 +63,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $font-stack-headings;
+  font-family: _fonts(sans-serif);
+  font-weight: 700;
   margin: 0;
 }
 
@@ -200,13 +203,13 @@ pre {
 
 table {
   border-collapse: collapse;
-  font-family: $font-stack-tables;
+  font-family: _fonts(sans-serif);
+  font-weight: 400;
   margin: 0 0 2.4em;
   width: 100%;
 }
 
-tbody {
-}
+tbody {}
 
 tbody td {
   background: _color(gray, 200);
@@ -233,13 +236,12 @@ tfoot th {
 
 th {
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.5; /* 24px */
   padding: 0.375em 0.625em; /* 6px 10px */
 }
 
-thead {
-}
+thead {}
 
 thead th:not(:empty) {
   background: _color(gray, 400);

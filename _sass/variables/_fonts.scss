@@ -1,14 +1,14 @@
 $_stacks: (
   serif: (
-    source-serif-pro,
+    source-serif-pro, // 300, 300 italic, 600, 600 italic
     serif
   ),
   sans-serif: (
-    soleil,
+    soleil,           // 400, 400 italic, 700, 700 italic
     sans-serif
   ),
   monospace: (
-    source-code-pro,
+    source-code-pro,  // 300, 300 italic
     monospace
   )
 );
@@ -16,9 +16,3 @@ $_stacks: (
 @function _fonts($stack) {
   @return map-get($_stacks, $stack);
 }
-
-$font-stack-code:     _fonts(monospace);
-$font-stack-copy:     _fonts(serif);
-$font-stack-headings: _fonts(sans-serif);
-$font-stack-meta:     _fonts(sans-serif);
-$font-stack-tables:   _fonts(sans-serif);

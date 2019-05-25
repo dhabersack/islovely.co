@@ -1,6 +1,10 @@
-.navigation {}
+.navigation {
+  font-family: _fonts(sans-serif);
+}
 
-.navigation__item {}
+.navigation__item {
+  font-weight: 400;
+}
 
 .navigation__item + .navigation__item {
   margin-left: 1em;

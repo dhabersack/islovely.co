@@ -1,7 +1,8 @@
 .post-meta {
   align-items: center;
   display: flex;
-  font-family: $font-stack-meta;
+  font-family: _fonts(sans-serif);
+  font-weight: 400;
 }
 
 .post-meta__date,
