@@ -1,3 +1,4 @@
 ---
-title: Equality
+category: Equality
+title: Posts in “Equality”
 ---

@@ -1,3 +1,4 @@
 ---
-title: Rant
+category: Rant
+title: Posts in “Rant”
 ---

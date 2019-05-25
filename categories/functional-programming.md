@@ -1,3 +1,4 @@
 ---
-title: Functional programming
+category: Functional programming
+title: Posts in “Functional programming”
 ---

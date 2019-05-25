@@ -1,3 +1,4 @@
 ---
-title: CSS
+category: CSS
+title: Posts in “CSS”
 ---

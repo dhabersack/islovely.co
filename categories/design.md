@@ -1,3 +1,4 @@
 ---
-title: Design
+category: Design
+title: Posts in “Design”
 ---
