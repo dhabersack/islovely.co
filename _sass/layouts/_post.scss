@@ -1,5 +1,9 @@
 .l-post {}
 
+.l-post__content {
+  margin-bottom: 4.8em;
+}
+
 .l-post__hero {
   background-repeat: no-repeat;
   background-size: cover;
@@ -9,4 +13,15 @@
 
 .l-post__meta {
   margin-bottom: 1.8em;
+}
+
+.l-post__tag {
+  margin: 0 0.5em 0.6em 0;
+}
+
+.l-post__tags {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 0.6em;
 }

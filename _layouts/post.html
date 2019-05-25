@@ -16,5 +16,15 @@ layout: default
     {% endif %}
   </figure>
 
-  {{ content }}
+  <div class="l-post__content">
+    {{ content }}
+  </div>
+
+  <div class="l-post__tags">
+    {% for category in page.categories %}
+      <div class="l-post__tag">
+        {% include tag.html tag=category %}
+      </div>
+    {% endfor %}
+  </div>
 </div>
