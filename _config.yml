@@ -23,6 +23,10 @@ permalink: /posts/:title/
 
 defaults:
   - scope:
+      path: "categories"
+    values:
+      layout: "category"
+  - scope:
       path: ""
       type: "posts"
     values:
