@@ -21,10 +21,6 @@ plugins:
 
 permalink: /posts/:title/
 
-collections:
-  categories:
-    output: true
-
 defaults:
   - scope:
       path: ""

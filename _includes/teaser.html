@@ -1,31 +1,31 @@
 {% assign post = include.post %}
 
-<article class="post-teaser">
+<article class="teaser">
   <a href="{{ post.url | prepend: site.baseurl }}">
-    <div class="post-teaser__hero" style="background-image: url('/assets/heroes/{{ post.title | slugify }}.jpg')">
+    <div class="teaser__hero" style="background-image: url('/assets/heroes/{{ post.title | slugify }}.jpg')">
     </div>
   </a>
 
-  <div class="post-teaser__content">
-    <h2 class="post-teaser__heading">
+  <div class="teaser__content">
+    <h2 class="teaser__heading">
       <a href="{{ post.url | prepend: site.baseurl }}">
         {{ post.title }}
       </a>
     </h2>
 
-    <p class="post-teaser__excerpt">
+    <p class="teaser__excerpt">
       {{ post.excerpt }}
     </p>
 
-    <div class="post-teaser__tags">
+    <div class="teaser__tags">
       {% for category in post.categories %}
-        <div class="post-teaser__tag">
+        <div class="teaser__tag">
           {% include tag.html tag=category %}
         </div>
       {% endfor %}
     </div>
 
-    <div class="post-teaser__meta">
+    <div class="teaser__meta">
       {% include post-meta.html date=post.date %}
     </div>
   </div>

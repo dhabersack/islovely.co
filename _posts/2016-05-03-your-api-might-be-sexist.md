@@ -1,6 +1,6 @@
 ---
 title: Your API might be sexist
-category: Gender equality
+category: Equality
 excerpt: Gender is not “true” or “false”.
 ---
 I recently came across an API that exposed a reasonable but unfortunate design decision, the specifics of which are irrelevant safe for the fact that the data in question concerned humans in one form or another. It is described well in the following simplification:

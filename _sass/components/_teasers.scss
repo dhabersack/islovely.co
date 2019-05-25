@@ -1,0 +1,18 @@
+.teasers {
+  display: grid;
+  grid-column-gap: 2vw;
+  grid-row-gap: 0.6em;
+  grid-template-columns: repeat(auto-fit, minmax(22em, 1fr));
+
+  @media ($query-medium) {
+    grid-column-gap: 1.5vw;
+  }
+
+  @media ($query-large) {
+    grid-column-gap: 1vw;
+  }
+}
+
+.teasers__teaser {
+  margin-bottom: 1.2em;
+}

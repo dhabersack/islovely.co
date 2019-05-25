@@ -1,5 +1,5 @@
 {% assign tag = include.tag  %}
 
-<span class="tag tag--{{ tag | slugify }}" href="{{ category.url | prepend: site.baseurl }}">
+<a class="tag tag--{{ tag | slugify }}" href="/categories/{{ tag | slugify }}">
   {{ tag }}
-</span>
+</a>

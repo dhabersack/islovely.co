@@ -4,11 +4,5 @@ layout: default
 <div class="l-blog">
   {{ content }}
 
-  <div class="l-blog__post-teasers">
-    {% for post in site.posts %}
-      <div class="l-blog__post-teaser">
-        {% include post-teaser.html post=post %}
-      </div>
-    {% endfor %}
-  </div>
+  {% include teasers.html posts=site.posts %}
 </div>
