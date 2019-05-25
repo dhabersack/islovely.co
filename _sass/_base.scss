@@ -37,6 +37,24 @@ code {
   font-family: $font-stack-code;
 }
 
+figcaption {
+  color: _color(gray, 500);
+  font-size: 1.2rem;
+  font-size: 1.6rem;
+  font-style: italic;
+  line-height: 1.25; /* 15px */
+  margin: 6px 0 0;
+  text-align: center;
+}
+
+figure {
+  margin: 0 0 2.4em;
+}
+
+figure img {
+  width: 100%;
+}
+
 h1,
 h2,
 h3,

@@ -2,6 +2,8 @@
 title: Painless installation of SML on OS X
 category: Functional programming
 excerpt: The Homebrew package manager takes the pain out of installing SML/NJ on your system. Follow these steps for a hassle- and clutter-free installation.
+heroAlt: A neon sign saying “and breathe” that is covered by greenery.
+heroCaption: Using Homebrew, we can quickly set up a development environment for Standard ML on OS X.
 ---
 Studying Computer Science of any kind, you will be asked to install a wide range of software you will use for one semester and are unlikely to ever need again afterwards.
 
