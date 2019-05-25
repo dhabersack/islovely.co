@@ -9,7 +9,7 @@ heroCaption: If we look into the numbers, an exam’s performance record is less
 
 ----
 
-In “[Why students fail entry-level programming exams](#!/posts/why-students-fail-entry-level-programming-exams)” I referenced a lecture in which the resit was scheduled six months after the original exam. Said lecture did not offer any help in the interim, which I assumed would not yield an improved outcome over the first exam.
+In “[Why students fail entry-level programming exams](/posts/why-students-fail-entry-level-programming-exams)” I referenced a lecture in which the resit was scheduled six months after the original exam. Said lecture did not offer any help in the interim, which I assumed would not yield an improved outcome over the first exam.
 
 The results are in. I was right on target.
 

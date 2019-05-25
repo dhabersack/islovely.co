@@ -5,7 +5,7 @@ excerpt: Publishing screencasts taught me what to look out for when creating inf
 heroAlt: A TV test pattern showing many colorful bars and texts.
 heroCaption: What goes into making a good screencast?
 ---
-I recently created a series of screencasts for students having to resit an exam after six months of not having any contact with the subject. I wrote about these videos [in another post](#!/posts/screencasts-on-standard-ml-in-german).
+I recently created a series of screencasts for students having to resit an exam after six months of not having any contact with the subject. I wrote about these videos [in another post](/posts/screencasts-on-standard-ml-in-german).
 
 While this was not my first experience teaching programming, my previous times had always been in person. This experiment was my first time planning, recording and publishing screencasts, during which I learned a few basic rules on what to do and what to avoid.
 
