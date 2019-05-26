@@ -1,7 +1,7 @@
 ---
 title: What to consider when picking a library or plugin
 category: Software architecture
-excerpt: With hundreds of libraries available, how do we decide between them? When does “roll your own” make sense?
+excerpt: How do we decide between hundreds of libraries? When does “roll your own” make sense?
 heroAlt: A bookshelf filled with hundreds of books.
 heroCaption: With so many libraries available, it’s difficult to pick the “right” one.
 ---

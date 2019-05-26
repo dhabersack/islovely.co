@@ -1,7 +1,7 @@
 ---
 title: On lazy journalism
 category: Rant
-excerpt: I reflect on the bogus “journalism” that has led to me undeservedly and repeatedly being quoted on the death of a former colleague.
+excerpt: Some bogus “journalism” led to me inappropriately being quoted on the death of a former colleague.
 heroAlt: A lion yawning.
 heroCaption: Without proper research, “news” becomes sensational and hurtful with little regard to the people involved.
 ---

@@ -1,7 +1,7 @@
 ---
 title: On trends in design
 category: Design
-excerpt: Trends promise to make defining a product’s or brand’s visual appearance easier, but they come with their own set of drawbacks.
+excerpt: Trends make defining a product’s visual appearance easier, but they come with some drawbacks.
 heroAlt: An orange siren on a completely orange background.
 heroCaption: If you blindly follow trends, you become indistinguishable from those around you.
 ---

@@ -1,7 +1,7 @@
 ---
 title: Debunking whitewashed exam statistics
 category: Education
-excerpt: The official statistics of a recent exam present an incorrectly positive picture. When taking a closer look, the numbers turn out to be a lot worse.
+excerpt: The official statistics of a recent exam present an incorrectly positive picture.
 heroAlt: Laundry hanging out to dry over a road in a small country town.
 heroCaption: If we look into the numbers, an exam’s performance record is less positive than it is being sold as.
 ---

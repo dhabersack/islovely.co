@@ -1,8 +1,8 @@
 ---
 title: Writing BEM-style CSS with Sass
-category: CSS
+category: [CSS, Sass]
 excerpt: The &-operator in Sass can greatly reduce the typing work required when using BEM in your stylesheets.
-heroAlt: A big ampersand-character on a marble table.
+heroAlt: A giant ampersand-character painted on a wall.
 heroCaption: Sass’ &-operator reduces the amount of typing we need to do when using BEM.
 ---
 BEM, “Block Element Modifier”, is an approach to writing CSS that does away with most of the “cascading” used in CSS. For an excellent primer on the subject, I highly recommend reading [“MindBEMding – getting your head ’round BEM syntax”](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/).
