@@ -1,6 +1,6 @@
 ---
 title: What do I know?
-categories: [Education, Blogging]
+category: [Education, Blogging]
 excerpt: You know a lot of things others don’t. Help them by sharing what you know, no matter how easy or obvious you might think it is.
 heroAlt: A tiny plant that is growing.
 heroCaption: Every tiny bit of information could help someone out.
