@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% if page.excerpt %}<meta name="description" content="{{ page.excerpt }}">{% endif %}
 
+    {% include rich-preview.html %}
+
     <title>{{ page.title }} · {{ site.name }}</title>
 
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="https://use.typekit.net/gbp8hqr.css">
-
-    {% include rich-preview.html %}
   </head>
 
   <body>
