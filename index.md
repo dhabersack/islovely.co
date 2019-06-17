@@ -1,6 +1,7 @@
 ---
 layout: home
 title: “We’re noticing that User Experience will become more important for us going forward.”
+excerpt: I’ll help you clear up your messaging and focus your product so your customers will love you.
 ---
 Are your customers leaving you for your competitors? Do you look at these competitors, wishing your offering could be as focused and visually attractive as theirs?
 

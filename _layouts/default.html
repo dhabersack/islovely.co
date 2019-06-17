@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html prefix="og: http://ogp.me/ns#">
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% if page.excerpt %}<meta name="description" content="{{ page.excerpt }}">{% endif %}
 
     <title>{{ page.title }} · {{ site.name }}</title>
 
