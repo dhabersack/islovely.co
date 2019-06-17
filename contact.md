@@ -1,5 +1,6 @@
 ---
 title: Contact
+excerpt: Get in touch if you have a project you need help with!
 permalink: /contact/
 ---
 For most requests, you can reach me via email at <{{ site.email }}>.

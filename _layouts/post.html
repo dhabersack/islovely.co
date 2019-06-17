@@ -7,11 +7,11 @@ layout: default
   </div>
 
   <figure>
-    <img alt="{{ page.heroAlt }}" src="/assets/heroes/posts/{{ page.title | slugify }}.jpg">
+    <img alt="{{ page.hero_alt }}" src="/assets/heroes/posts/{{ page.title | slugify }}.jpg">
 
-    {% if page.heroCaption %}
+    {% if page.hero_caption %}
       <figcaption>
-        {{ page.heroCaption }}
+        {{ page.hero_caption }}
       </figcaption>
     {% endif %}
   </figure>

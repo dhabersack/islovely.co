@@ -2,8 +2,8 @@
 title: Insights of a new screencaster
 category: Education
 excerpt: Publishing screencasts taught me what to look out for when creating infoproducts.
-heroAlt: A cup of coffee with the word “begin” printed on it.
-heroCaption: What goes into making a good screencast?
+hero_alt: A cup of coffee with the word “begin” printed on it.
+hero_caption: What goes into making a good screencast?
 ---
 I recently created a series of screencasts for students having to resit an exam after six months of not having any contact with the subject. I wrote about these videos [in another post](/posts/screencasts-on-standard-ml-in-german).
 

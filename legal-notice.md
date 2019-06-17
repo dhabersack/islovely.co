@@ -1,5 +1,6 @@
 ---
 title: Legal notice
+excerpt: Information on who is responsible for this property.
 ---
 **Dominik Habersack**  
 Lazarettstr. 8  
