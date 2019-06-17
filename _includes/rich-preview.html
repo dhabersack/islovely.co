@@ -8,17 +8,27 @@
   {% endif %}
 {% endfor %}
 
+{% unless image %}
+  {% for file in rich_previews %}
+    {% if file.basename == site.name %}
+      {% assign image = file %}
+    {% endif %}
+  {% endfor %}
+{% endunless %}
+
 {% if page.excerpt %}
   <meta property="og:description" content="{{ page.excerpt }}" />
 {% endif %}
 
-{% if image %}
-  <meta property="og:image" content="{{ image.path | absolute_url }}" />
+<meta property="og:image" content="{{ image.path | absolute_url }}" />
+
+{% if page.hero_alt %}
   <meta property="og:image:alt" content="{{ page.hero_alt }}" />
-  <meta property="og:image:height" content="360" />
-  <meta property="og:image:type" content="image/jpeg" />
-  <meta property="og:image:width" content="640" />
 {% endif %}
+
+<meta property="og:image:height" content="360" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="640" />
 
 <meta property="og:site_name" content="{{ site.name }}" />
 <meta property="og:title" content="{{ page.title }} · {{ site.name }}" />
