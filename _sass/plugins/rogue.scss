@@ -1,0 +1,61 @@
+.highlight {
+  background: _color(gray, 800);
+  border-radius: 0.8em;
+  color: _color(gray, 100);
+  font-family: _fonts(monospace);
+  font-weight: 300;
+  margin: 0 0 2.4em;
+  overflow-x: auto;
+  padding: 1.2em 1.5em;
+  position: relative;
+}
+
+.highlight code {
+  font-size: 1rem;
+  line-height: 1.5; /* 15px */
+
+  @media ($query-extra-small) {
+    font-size: 1.2rem;
+    line-height: 1.5; /* 18px */
+  }
+
+  @media ($query-medium) {
+    font-size: 1.4rem;
+    line-height: 1.5; /* 21px */
+  }
+}
+
+.highlight {
+  .c,
+  .c1 {
+    color: _color(blue, 400);
+  }
+
+  .k {
+    color: _color(yellow, 400);
+  }
+
+  .kd {
+    color: _color(yellow, 400);
+  }
+
+  .mi {
+    color: _color(red, 500);
+  }
+
+  .na {
+    color: _color(yellow, 400);
+  }
+
+  .nc,
+  .nf,
+  .nt,
+  .nx {
+    color: _color(cyan, 300);
+  }
+
+  .s,
+  .s1 {
+    color: _color(green, 400);
+  }
+}
