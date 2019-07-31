@@ -14,12 +14,12 @@
   font-size: 1rem;
   line-height: 1.5; /* 15px */
 
-  @media ($query-extra-small) {
+  @media ($query-small) {
     font-size: 1.2rem;
     line-height: 1.5; /* 18px */
   }
 
-  @media ($query-medium) {
+  @media ($query-large) {
     font-size: 1.4rem;
     line-height: 1.5; /* 21px */
   }
