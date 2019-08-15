@@ -1,0 +1,103 @@
+.mailing-list-signup {}
+
+.mailing-list-signup__alert {
+  background: _color(gray, 200);
+  border: 0.0625em solid _color(gray, 400);
+  border-radius: 0.4em;
+  flex: 1 0 auto;
+  list-style: none;
+  margin: 2.4em 0;
+  padding: 1.2em 1em;
+  text-align: center;
+  width: 100%;
+}
+
+.mailing-list-signup__alert li {
+  font-size: 1.5rem;
+  line-height: 1.2; /* 18px */
+}
+
+.mailing-list-signup__alert:empty {
+  display: none;
+}
+
+.mailing-list-signup__alert.mailing-list-signup__alert--error {
+  background: _color(red, 100);
+  border-color: _color(red, 200);
+  color: _color(red, 500);
+}
+
+.mailing-list-signup__disclaimer {
+  color: _color(gray, 600);
+  font-size: 1.6rem;
+  font-style: italic;
+  margin: 0;
+}
+
+.mailing-list-signup__fields {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mailing-list-signup__form {
+  margin-bottom: 1.2em;
+}
+
+.mailing-list-signup__input {
+  background: #fefefe;
+  border-color: _color(gray, 300);
+  border-radius: 4px 0 0 4px;
+  border-style: solid;
+  border-width: 0.0625em 0 0.0625em 0.0625em;
+  color: _color(gray, 700);
+  flex-grow: 1;
+  flex-shrink: 1;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.125; /* 18px */
+  padding: 0.875em 0.5625em; /* 14px 9px */
+  margin: 0;
+  width: 1px;
+
+  &:focus {
+    border-color: _color(blue, 400);
+    outline: none;
+  }
+}
+
+.mailing-list-signup__submit {
+  background-color: _color(blue, 500);
+  border: 0;
+  border-radius: 0 0.25em 0.25em 0; /* 0 4px 4px 0 */
+  color: _color(gray, 100);
+  font-size: 1.6rem;
+  line-height: 1.125; /* 18px */
+  margin: 0;
+  padding: 0.9375em 1.5625em; /* 15px 25px */
+
+  &:hover,
+  &:focus {
+    outline:none;
+  }
+}
+
+.mailing-list-signup__title {
+  font-size: 2.4rem;
+  line-height: 1.25; /* 30px */
+  margin: 0 0 0.5em; /* 0 0 12px */
+}
+
+.formkit-alert.formkit-alert-success {
+  background: _color(green, 100);
+  border: 1px solid _color(green, 200);
+  border-radius: 4px;
+  color: _color(green, 500);
+  font-size: 1.5rem;
+  flex: 1 0 auto;
+  line-height: 1.2; /* 18px */
+  list-style: none;
+  margin: 1.6em 0; /* 24px 0 */
+  padding: 0.8em 10px; /* 12px 10px */
+  text-align: center;
+  width: 100%;
+}
