@@ -1,0 +1,21 @@
+$columns: 12;
+$color: rgba(_color(red, 400), 0.25);
+$column-width: calc((100% / #{$columns}) - var(--grid-gutter));
+
+html.debug {
+  position: relative;
+}
+
+html.debug::before {
+  background-image: repeating-linear-gradient(to right, $color, $color $column-width, transparent $column-width, transparent calc(100% / #{$columns}));
+  background-size: calc(100% + var(--grid-gutter)) 100%;
+  bottom: 0;
+  content: '';
+  left: var(--content-horizontal-padding);
+  margin: 0 auto;
+  pointer-events: none;
+  position: fixed;
+  right: var(--content-horizontal-padding);
+  top: 0;
+  z-index: 1;
+}

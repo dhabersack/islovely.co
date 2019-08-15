@@ -3,4 +3,10 @@ layout: default
 ---
 {% assign posts = site.categories[page.category] %}
 
-{% include teasers.html posts=posts %}
+{{ content }}
+
+{% capture teasers %}
+  {% include teasers.html posts=posts %}
+{% endcapture %}
+
+{% include breakout.html content=teasers %}

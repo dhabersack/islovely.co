@@ -1,14 +1,8 @@
 .header {
-  background: #fefefe;
-  padding: 1.8em 0;
-}
-
-.header__content {
-  @include responsive-container;
-
   align-items: center;
   display: flex;
   justify-content: space-between;
+  padding: 1.8em 0;
 }
 
 .header__logo {
@@ -16,7 +10,7 @@
   background-position: left center;
   background-repeat: no-repeat;
   background-size: contain;
-  color: $color-logo;
+  color: _color(gray, 900);
   display: inline-block;
   font-size: 1rem;
   height: 3em;
@@ -25,7 +19,7 @@
 }
 
 .header__logo:visited {
-  color: $color-logo;
+  color: _color(gray, 900);
 }
 
 .header__navigation {}

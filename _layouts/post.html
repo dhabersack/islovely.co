@@ -1,11 +1,7 @@
 ---
 layout: default
 ---
-<div class="l-post">
-  <div class="l-post__meta">
-    {% include post-meta.html date=page.date %}
-  </div>
-
+{% capture hero %}
   <figure>
     <img alt="{{ page.hero_alt }}" src="/assets/heroes/posts/{{ page.title | slugify }}.jpg">
 
@@ -15,20 +11,26 @@ layout: default
       </figcaption>
     {% endif %}
   </figure>
+{% endcapture %}
 
-  <div class="l-post__content">
-    {{ content }}
-  </div>
+<div class="l-post__meta">
+  {% include post-meta.html date=page.date %}
+</div>
 
-  <div class="l-post__tags">
-    {% for category in page.categories %}
-      <div class="l-post__tag">
-        {% include tag.html tag=category %}
-      </div>
-    {% endfor %}
-  </div>
+{% include breakout.html content=hero %}
 
-  <div class="l-post__mailing-list-signup">
-    {% include mailing-list-signup.html %}
-  </div>
+<div class="l-post__content">
+  {{ content }}
+</div>
+
+<div class="l-post__tags">
+  {% for category in page.categories %}
+    <div class="l-post__tag">
+      {% include tag.html tag=category %}
+    </div>
+  {% endfor %}
+</div>
+
+<div class="l-post__mailing-list-signup">
+  {% include mailing-list-signup.html %}
 </div>

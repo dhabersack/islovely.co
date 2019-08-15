@@ -1,12 +1,12 @@
 ---
 ---
 @import
+  'functions/colors',
   'functions/columns',
   'functions/hsb',
+  'functions/fonts',
 
-  'variables/colors',
-  'variables/fonts',
-  'variables/media-queries',
+  'media-queries',
 
   'includes/body-copy',
   'includes/box-shadow',
@@ -25,12 +25,13 @@
   'components/teaser',
   'components/teasers',
 
-  'layouts/blog',
   'layouts/default',
-  'layouts/home',
   'layouts/icons',
   'layouts/post',
 
   'plugins/rogue',
 
+  'variables',
+
+  'debug/grid-overlay',
   'debug/media-queries-info';

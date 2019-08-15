@@ -5,6 +5,13 @@
 }
 
 .l-default__content {
+  @media ($query-medium) {
+    margin: 0 auto;
+    width: _columns(10, 12);
+  }
+}
+
+.l-default__main {
   @include responsive-container;
 
   flex: 1 0 auto;
@@ -13,7 +20,7 @@
   width: 100%;
 }
 
-.l-default__content::after {
+.l-default__main::after {
   content: '\00a0'; /* &nbsp; */
   display: block;
   margin-top: var(--space);
@@ -22,9 +29,15 @@
 }
 
 .l-default__footer {
+  @include responsive-container;
+
+  background: _color(gray, 200);
   flex: none;
 }
 
 .l-default__header {
+  @include responsive-container;
+
+  background: _color(white);
   flex: none;
 }

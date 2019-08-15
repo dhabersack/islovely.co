@@ -5,7 +5,7 @@
 }
 
 a {
-  color: $color-link;
+  color: _color(blue, 500);
   text-decoration: none;
 }
 
@@ -14,7 +14,7 @@ a:hover {
 }
 
 a:visited {
-  color: $color-link;
+  color: _color(blue, 500);
 }
 
 blockquote {
@@ -25,8 +25,8 @@ blockquote {
 }
 
 body {
-  background: $color-body__background;
-  color: $color-primary-content;
+  background: _color(gray, 100);
+  color: _color(gray, 900);
   font-family: _fonts(serif);
   font-weight: 300;
   height: 100%;
@@ -127,7 +127,7 @@ h3 {
 }
 
 hr {
-  background: $color-horizontal-rule;
+  background: _color(gray, 300);
   border: 0;
   border-radius: 50%;
   height: 0.1em;

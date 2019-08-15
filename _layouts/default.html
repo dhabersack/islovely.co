@@ -17,19 +17,25 @@
   <body>
     <div class="l-default">
       <div class="l-default__header">
-        {% include header.html %}
+        <div class="l-default__content">
+          {% include header.html %}
+        </div>
       </div>
 
-      <div class="l-default__content">
-        <h1>
-          {{ page.title }}
-        </h1>
+      <main class="l-default__main">
+        <div class="l-default__content">
+          <h1>
+            {{ page.title }}
+          </h1>
 
-        {{ content }}
-      </div>
+          {{ content }}
+        </div>
+      </main>
 
       <div class="l-default__footer">
-        {% include footer.html %}
+        <div class="l-default__content">
+          {% include footer.html %}
+        </div>
       </div>
     </div>
   </body>

@@ -1,5 +1,3 @@
-$_gutter: 2vw;
-
-@function columns($columns, $total) {
-  @return calc((100% - #{($total - 1) * $_gutter}) / #{$total} * #{$columns} + #{($columns - 1) * $_gutter});
+@function _columns($columns, $total) {
+  @return calc((100% - #{($total - 1)} * var(--grid-gutter)) / #{$total} * #{$columns} + #{($columns - 1)} * var(--grid-gutter));
 }

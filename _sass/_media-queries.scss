@@ -1,0 +1,9 @@
+@function _min-width($width) {
+  @return 'min-width: #{$width}px';
+}
+
+$query-extra-small: _min-width(120 *  4); //  480px
+$query-small:       _min-width(120 *  5); //  600px
+$query-medium:      _min-width(120 *  6); //  720px
+$query-large:       _min-width(120 *  8); //  960px
+$query-extra-large: _min-width(120 * 11); // 1320px

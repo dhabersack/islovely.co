@@ -1,0 +1,29 @@
+:root {
+  --content-horizontal-padding: 4%;
+  --grid-gutter: 2vw;
+  --icon-grid-column-gap: 2vw;
+
+  @media ($query-extra-small) {
+    --content-horizontal-padding: 6%;
+  }
+
+  @media ($query-small) {
+    --content-horizontal-padding: 8%;
+  }
+
+  @media ($query-medium) {
+    --conten-horizontal-padding: 10%;
+    --grid-gutter: 1.5vw;
+    --icon-grid-column-gap: 1.5vw;
+  }
+
+  @media ($query-large) {
+    --content-horizontal-padding: 16%;
+    --grid-gutter: 1vw;
+    --icon-grid-column-gap: 1vw;
+  }
+
+  @media ($query-extra-large) {
+    --content-horizontal-padding: calc(50vw - 42em);
+  }
+}

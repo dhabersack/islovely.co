@@ -11,6 +11,6 @@
 
   &,
   &:visited {
-    color: $color-tertiary-content;
+    color: _color(gray, 500);
   }
 }

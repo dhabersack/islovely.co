@@ -11,7 +11,7 @@
 }
 
 .navigation__link {
-  color: $color-navigation__link;
+  color: _color(blue, 600);
   display: inline-block;
   font-size: 1.6rem;
   line-height: 1.5; /* 24px */
@@ -19,7 +19,7 @@
 }
 
 .navigation__link:visited {
-  color: $color-navigation__link;
+  color: _color(blue, 600);
 }
 
 .navigation__list {

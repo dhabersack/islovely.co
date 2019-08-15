@@ -1,14 +1,8 @@
 .footer {
-  background: $color-footer__background;
-  padding: 2.4em 0;
-}
-
-.footer__content {
-  @include responsive-container;
-
   align-items: center;
   display: flex;
   flex-direction: column;
+  padding: 2.4em 0;
 }
 
 .footer__copyright {

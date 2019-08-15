@@ -3,20 +3,18 @@ layout: default
 ---
 {% assign categories = site.categories | sort %}
 
-<div class="l-categories">
-  {{ content }}
+{{ content }}
 
-  <div class="l-categories__categories">
-    {% for category in categories %}
-      {% assign posts = category[1] %}
+{% for category in categories %}
+  {% assign posts = category[1] %}
 
-      <div class="l-categories__category">
-        <h2>
-          {{ category[0] }} &times; {{ category[1] | size }}
-        </h2>
+  <h2>
+    {{ category[0] }} &times; {{ category[1] | size }}
+  </h2>
 
-        {% include teasers.html posts=posts %}
-      </div>
-    {% endfor %}
-  </div>
-</div>
+  {% capture teasers %}
+    {% include teasers.html posts=posts %}
+  {% endcapture %}
+
+  {% include breakout.html content=teasers %}
+{% endfor %}

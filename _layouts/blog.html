@@ -1,8 +1,10 @@
 ---
 layout: default
 ---
-<div class="l-blog">
-  {{ content }}
-
+{% capture teasers %}
   {% include teasers.html posts=site.posts %}
-</div>
+{% endcapture %}
+
+{{ content }}
+
+{% include breakout.html content=teasers %}
