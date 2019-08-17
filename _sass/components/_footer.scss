@@ -15,7 +15,7 @@
   display: block;
   font-size: 1.6rem;
   line-height: 1.5; /* 24px */
-  margin: 0 0.625em 0.5625em; /* 0 10px 9px */
+  margin: 0 0.5em 0.5625em; /* 0 8px 9px */
 
   &,
   &:visited {
@@ -27,7 +27,7 @@
 .footer__link.footer__link--github,
 .footer__link.footer__link--mastodon,
 .footer__link.footer__link--twitter {
-  padding-left: 1.75em; /* 28px */
+  padding-left: 1.625em; /* 26px */
   position: relative;
 }
 
