@@ -28,7 +28,7 @@
 }
 
 .mailing-list-signup__disclaimer {
-  color: _color(gray, 600);
+  color: $color-secondary-content;
   font-size: 1.6rem;
   font-style: italic;
   margin: 0;
@@ -37,6 +37,8 @@
 .mailing-list-signup__fields {
   display: flex;
   flex-wrap: wrap;
+
+  align-items: flex-start;
 }
 
 .mailing-list-signup__form {
@@ -44,25 +46,12 @@
 }
 
 .mailing-list-signup__input {
-  background: #fefefe;
-  border-color: _color(gray, 300);
-  border-radius: 4px 0 0 4px;
-  border-style: solid;
-  border-width: 0.0625em 0 0.0625em 0.0625em;
-  color: _color(gray, 700);
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border-right-width: 0;
   flex-grow: 1;
   flex-shrink: 1;
-  font-size: 1.6rem;
-  font-weight: 400;
-  line-height: 1.125; /* 18px */
-  padding: 0.875em 0.5625em; /* 14px 9px */
-  margin: 0;
   width: 1px;
-
-  &:focus {
-    border-color: _color(blue, 400);
-    outline: none;
-  }
 }
 
 .mailing-list-signup__submit {

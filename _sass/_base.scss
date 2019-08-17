@@ -36,6 +36,7 @@ body {
 
 button {
   cursor: pointer;
+  font-family: _fonts(sans-serif);
 }
 
 code {
@@ -152,6 +153,24 @@ img {
 input[type="email"],
 input[type="text"] {
   -webkit-appearance: none;
+  background: _color(white);
+  border-color: _color(gray, 300);
+  border-radius: 0.25em; /* 4px */
+  border-style: solid;
+  border-width: 0.0625em; /* 1px */
+  color: _color(gray, 700);
+  font-family: _fonts(sans-serif);
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5; /* 24px */
+  margin: 0;
+  padding: 0.6875em 0.5625em; /* 11px 9px */
+}
+
+input[type="email"]:focus,
+input[type="text"]:focus {
+  border-color: _color(blue, 400);
+  outline: none;
 }
 
 li {
