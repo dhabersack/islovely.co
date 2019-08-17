@@ -12,18 +12,18 @@
   }
 
   @media ($query-medium) {
-    --conten-horizontal-padding: 10%;
-    --grid-gutter: 1.5vw;
+    --content-horizontal-padding: 6%;
     --icon-grid-column-gap: 1.5vw;
   }
 
   @media ($query-large) {
-    --content-horizontal-padding: 16%;
-    --grid-gutter: 1vw;
+    --content-horizontal-padding: 8%;
+    --grid-gutter: 1.5vw;
     --icon-grid-column-gap: 1vw;
   }
 
   @media ($query-extra-large) {
-    --content-horizontal-padding: calc(50vw - 42em);
+    --grid-gutter: 20px;
+    --content-horizontal-padding: calc(50vw - 54em);
   }
 }

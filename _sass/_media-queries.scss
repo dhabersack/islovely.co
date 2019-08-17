@@ -2,8 +2,8 @@
   @return 'min-width: #{$width}px';
 }
 
-$query-extra-small: _min-width(120 *  4); //  480px
-$query-small:       _min-width(120 *  5); //  600px
-$query-medium:      _min-width(120 *  6); //  720px
-$query-large:       _min-width(120 *  8); //  960px
-$query-extra-large: _min-width(120 * 11); // 1320px
+$query-extra-small: _min-width(420);
+$query-small:       _min-width(540);
+$query-medium:      _min-width(780);
+$query-large:       _min-width(960);
+$query-extra-large: _min-width(1300);

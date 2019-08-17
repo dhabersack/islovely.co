@@ -9,6 +9,10 @@
     margin: 0 auto;
     width: _columns(10, 12);
   }
+
+  @media ($query-large) {
+    width: _columns(8, 12);
+  }
 }
 
 .l-default__main {
