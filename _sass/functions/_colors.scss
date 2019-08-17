@@ -117,3 +117,7 @@ $_colors: (
 @function _color($color, $shade: 0) {
   @return map-get(map-get($_colors, $color), $shade);
 }
+
+$color-primary-content:   _color(gray, 900);
+$color-secondary-content: _color(gray, 700);
+$color-tertiary-content:  _color(gray, 500);

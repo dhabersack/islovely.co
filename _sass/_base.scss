@@ -26,7 +26,7 @@ blockquote {
 
 body {
   background: _color(gray, 100);
-  color: _color(gray, 900);
+  color: $color-primary-content;
   font-family: _fonts(serif);
   font-weight: 300;
   height: 100%;

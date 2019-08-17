@@ -17,6 +17,19 @@
   margin: 0 0.5em 0.6em 0;
 }
 
+.l-post__tagged {
+  display: flex;
+}
+
+.l-post__tagged-label {
+  color: $color-secondary-content;
+  font-family: _fonts(sans-serif);
+  font-size: 1.2rem;
+  line-height: 1.5; /* 18px */
+  margin: 0 0.5em 0.5em 0; /* 0 6px 6px 0 */
+  padding: 0.25em 0; /* 3px 0 */
+}
+
 .l-post__tags {
   align-items: center;
   display: flex;

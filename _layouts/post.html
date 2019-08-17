@@ -23,12 +23,18 @@ layout: default
   {{ content }}
 </div>
 
-<div class="l-post__tags">
-  {% for category in page.categories %}
-    <div class="l-post__tag">
-      {% include tag.html tag=category %}
-    </div>
-  {% endfor %}
+<div class="l-post__tagged">
+  <p class="l-post__tagged-label">
+    Tags:
+  </p>
+
+  <div class="l-post__tags">
+    {% for category in page.categories %}
+      <div class="l-post__tag">
+        {% include tag.html tag=category %}
+      </div>
+    {% endfor %}
+  </div>
 </div>
 
 <div class="l-post__mailing-list-signup">

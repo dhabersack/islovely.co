@@ -12,12 +12,12 @@
 }
 
 .post-meta__date {
-  color: _color(gray, 500);
+  color: $color-tertiary-content;
   margin: 0;
 }
 
 .post-meta__name {
-  color: _color(gray, 700);
+  color: $color-secondary-content;
   font-weight: 700;
   margin: 0 0 0.25em; /* 0 0 3px */
 }
