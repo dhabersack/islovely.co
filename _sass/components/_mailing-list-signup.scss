@@ -31,6 +31,7 @@
   color: $color-secondary-content;
   font-size: 1.6rem;
   font-style: italic;
+  line-height: 1.125; /* 18px */
   margin: 0;
 }
 
@@ -54,19 +55,8 @@
 }
 
 .mailing-list-signup__submit {
-  background-color: _color(blue, 500);
-  border: 0;
-  border-radius: 0 0.25em 0.25em 0; /* 0 4px 4px 0 */
-  color: _color(gray, 100);
-  font-size: 1.6rem;
-  line-height: 1.125; /* 18px */
-  margin: 0;
-  padding: 0.9375em 1.5625em; /* 15px 25px */
-
-  &:hover,
-  &:focus {
-    outline:none;
-  }
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
 }
 
 .mailing-list-signup__title {

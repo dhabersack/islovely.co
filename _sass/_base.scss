@@ -35,8 +35,21 @@ body {
 }
 
 button {
+  background-color: _color(blue, 500);
+  border: 0;
+  border-radius: 0.25em; /* 4px */
+  color: _color(gray, 100);
   cursor: pointer;
   font-family: _fonts(sans-serif);
+  font-size: 1.6rem;
+  line-height: 1.125; /* 18px */
+  margin: 0;
+  padding: 0.9375em 1.25em; /* 15px 20px */
+}
+
+button:hover,
+button:focus {
+  outline:none;
 }
 
 code {
@@ -162,9 +175,9 @@ input[type="text"] {
   font-family: _fonts(sans-serif);
   font-size: 1.6rem;
   font-weight: 400;
-  line-height: 1.5; /* 24px */
+  line-height: 1.875; /* 30px */
   margin: 0;
-  padding: 0.6875em 0.5625em; /* 11px 9px */
+  padding: 0.5em 0.5625em; /* 8px 9px */
 }
 
 input[type="email"]:focus,
