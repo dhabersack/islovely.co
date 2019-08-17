@@ -45,12 +45,11 @@
   margin-bottom: 1.2em;
 }
 
-.mailing-list-signup__input {
+.mailing-list-signup__input[type="email"] {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
   border-right-width: 0;
   flex-grow: 1;
-  flex-shrink: 1;
   width: 1px;
 }
 
