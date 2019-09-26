@@ -18,10 +18,37 @@ a:visited {
 }
 
 blockquote {
-  border-left: 0.5em solid _color(gray, 700);
+  @include box-shadow-xs;
+
+  background: _color(white);
+  border-left: 0.4em solid _color(orange, 200);
+  border-radius: 0.4em;
   font-style: italic;
-  margin: 3.6em 2em;
-  padding-left: 1em;
+  margin: 2.4em auto;
+  padding: 1.2em 1.5em 1.2em 1.6em;
+
+  @media ($query-extra-small) {
+    width: _columns(10, 12);
+  }
+
+  @media ($query-small) {
+    margin-bottom: 3em;
+    margin-top: 3em;
+  }
+
+  @media ($query-medium) {
+    width: _columns(8, 10);
+  }
+
+  @media ($query-large) {
+    margin-bottom: 3.6em;
+    margin-top: 3.6em;
+    width: _columns(6, 8);
+  }
+}
+
+blockquote p:last-of-type {
+  margin-bottom: 0;
 }
 
 body {
