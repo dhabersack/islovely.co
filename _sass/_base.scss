@@ -318,24 +318,21 @@ thead th:not(:empty) {
 
 ol,
 ul {
-  margin: 0 2em 1.5em;
+  margin: 0 auto 1.5em;
   padding: 0;
 
   @media ($query-extra-small) {
     margin-bottom: 1.8em;
-    margin-left: 2.5em;
-    margin-right: 2.5em;
+    width: _columns(10, 12);
   }
 
   @media ($query-medium) {
     margin-bottom: 2.1em;
-    margin-left: 3em;
-    margin-right: 3em;
+    width: _columns(8, 10);
   }
 
   @media ($query-large) {
     margin-bottom: 2.4em;
-    margin-left: 3.5em;
-    margin-right: 3.5em;
+    width: _columns(6, 8);
   }
 }

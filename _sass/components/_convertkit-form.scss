@@ -1,0 +1,74 @@
+.convertkit-form {}
+
+.convertkit-form__alert {
+  background: _color(gray, 200);
+  border: 0.0625em solid _color(gray, 400);
+  border-radius: 0.4em;
+  flex: 1 0 auto;
+  list-style: none;
+  margin: 2.4em 0;
+  padding: 1.2em 1em;
+  text-align: center;
+  width: 100%;
+}
+
+.convertkit-form__alert li {
+  font-size: 1.5rem;
+  line-height: 1.2; /* 18px */
+}
+
+.convertkit-form__alert:empty {
+  display: none;
+}
+
+.convertkit-form__alert.convertkit-form__alert--error {
+  background: _color(red, 100);
+  border-color: _color(red, 200);
+  color: _color(red, 500);
+}
+
+.convertkit-form__disclaimer {
+  color: $color-secondary-content;
+  font-size: 1.6rem;
+  font-style: italic;
+  line-height: 1.5; /* 24px */
+  margin: 0;
+}
+
+.convertkit-form__fields {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.convertkit-form__form {
+  margin-bottom: 1.2em;
+}
+
+.convertkit-form__input[type="email"] {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border-right-width: 0;
+  flex-grow: 1;
+  width: 1px;
+}
+
+.convertkit-form__submit {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.formkit-alert.formkit-alert-success {
+  background: _color(green, 100);
+  border: 1px solid _color(green, 200);
+  border-radius: 4px;
+  color: _color(green, 500);
+  font-size: 1.5rem;
+  flex: 1 0 auto;
+  line-height: 1.2; /* 18px */
+  list-style: none;
+  margin: 1.6em 0; /* 24px 0 */
+  padding: 0.8em 10px; /* 12px 10px */
+  text-align: center;
+  width: 100%;
+}
