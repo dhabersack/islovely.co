@@ -47,7 +47,7 @@ blockquote::before {
   font-weight: 700;
   position: absolute;
   right: calc(100% + 1rem);
-  top: 0.375em; /* -18px */
+  top: -0.375em; /* -18px */
 
   @media ($query-medium) {
     font-size: 6.4rem;
