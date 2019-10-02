@@ -21,10 +21,7 @@ blockquote {
   font-style: italic;
   margin: 2.4em auto;
   position: relative;
-
-  @media ($query-extra-small) {
-    width: _columns(10, 12);
-  }
+  width: _columns(10, 12);
 
   @media ($query-small) {
     margin-bottom: 3em;
@@ -46,11 +43,16 @@ blockquote::before {
   color: _color(gray, 700);
   content: '“';
   display: block;
-  font-size: 6.4rem;
+  font-size: 4.8rem;
   font-weight: 700;
   position: absolute;
-  right: calc(100% + 10px);
-  top: -0.375em; /* -24px */
+  right: calc(100% + 1rem);
+  top: 0.375em; /* -18px */
+
+  @media ($query-medium) {
+    font-size: 6.4rem;
+    top: -0.375em; /* -24px */
+  }
 }
 
 blockquote p:last-of-type {
