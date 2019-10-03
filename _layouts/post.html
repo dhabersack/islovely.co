@@ -3,7 +3,7 @@ layout: default
 ---
 {% capture hero %}
   <figure>
-    <img alt="{{ page.hero_alt }}" src="/assets/heroes/posts/{{ page.title | slugify }}.jpg">
+    <img alt="{{ page.hero_alt }}" src="/assets/heroes/{{ page.title | slugify }}.jpg">
 
     {% if page.hero_caption %}
       <figcaption>
