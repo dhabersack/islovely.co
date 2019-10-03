@@ -1,0 +1,46 @@
+$_line-heights: (
+  1.2rem: (
+    short: 1.25, /* 15px */
+    medium: 1.5, /* 18px */
+    long: 1.5 /* 18px */
+  ),
+  1.4rem: (
+    short: 1.25,
+    medium: 1.5,
+    long: 1.75
+  ),
+  1.6rem: (
+    short: 1.3125, /* 21px */
+    medium: 1.5, /* 24px */
+    long: 1.6875 /* 27px */
+  ),
+  1.8rem: (
+    short: 1.25,
+    medium: 1.5, /* 27px */
+    long: 1.75
+  ),
+  2rem: (
+    short: 1.2, /* 24px */
+    medium: 1.35, /* 27px */
+    long: 1.65 /* 33px */
+  ),
+  2.4rem: (
+    short: 1.25, /* 30px */
+    medium: 1.375, /* 33px */
+    long: 1.625 /* 39px */
+  ),
+  3.2rem: (
+    short: 1.3125, /* 42px */
+    medium: 1.5, /* 48px */
+    long: 1.6875 /* 54px */
+  ),
+  4.8rem: (
+    short: 1.125, /* 54px */
+    medium: 1.25, /* 60px */
+    long: 1.375 /* 66px */
+  )
+);
+
+@function _line-height($font-size, $line-length) {
+  @return map-get(map-get($_line-heights, $font-size), $line-length);
+}
