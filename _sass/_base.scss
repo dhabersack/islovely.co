@@ -18,18 +18,10 @@ a:visited {
 }
 
 blockquote {
-  @include box-shadow-xs;
-
-  background: _color(white);
-  border-left: 0.4em solid _color(orange, 200);
-  border-radius: 0.4em;
   font-style: italic;
   margin: 2.4em auto;
-  padding: 1.2em 1.5em 1.2em 1.6em;
-
-  @media ($query-extra-small) {
-    width: _columns(10, 12);
-  }
+  position: relative;
+  width: _columns(10, 12);
 
   @media ($query-small) {
     margin-bottom: 3em;
@@ -44,6 +36,22 @@ blockquote {
     margin-bottom: 3.6em;
     margin-top: 3.6em;
     width: _columns(6, 8);
+  }
+}
+
+blockquote::before {
+  color: _color(gray, 700);
+  content: '“';
+  display: block;
+  font-size: 4.8rem;
+  font-weight: 700;
+  position: absolute;
+  right: calc(100% + 1rem);
+  top: -0.375em; /* -18px */
+
+  @media ($query-medium) {
+    font-size: 6.4rem;
+    top: -0.375em; /* -24px */
   }
 }
 
