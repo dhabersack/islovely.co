@@ -1,7 +1,7 @@
 ---
 title: As a User Story
 category: [Business, Agile, Scrum]
-date: 2019-10-08 08:47
+date: 2019-10-07 08:05
 excerpt: Adding a single sentence to our tickets helps us focus on what is important. Let’s explore what goes into a good user story.
 hero_alt: An empty frame in front of a wall, accompanied by a small cactus.
 hero_caption: Don’t start your tickets with nothing.
