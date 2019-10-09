@@ -1,0 +1,28 @@
+{% assign course = include.course %}
+
+<article class="course-teaser">
+  <div class="course-teaser__hero-container">
+    <a href="{{ course.url | prepend: site.baseurl }}">
+      <div class="course-teaser__hero" style="background-image: url('/assets/courses/{{ course.name | slugify }}--teaser.jpg')">
+      </div>
+    </a>
+  </div>
+
+  <div class="course-teaser__content">
+    <h2 class="course-teaser__heading">
+      <a href="{{ course.url | prepend: site.baseurl }}">
+        {{ course.name }}
+      </a>
+    </h2>
+
+    <p class="course-teaser__excerpt">
+      {{ course.excerpt }}
+    </p>
+
+    <!--div class="course-teaser__meta">
+      Duration
+      <br>
+      Price
+    </div-->
+  </div>
+</article>

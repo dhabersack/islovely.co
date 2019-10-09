@@ -1,0 +1,43 @@
+.course-teaser {
+  @include box-shadow-s;
+
+  background: #fefefe;
+  border-radius: 0.6em;
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+}
+
+.course-teaser__content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1.2em 1.5em 1.2em 0;
+}
+
+.course-teaser__excerpt {
+  flex-grow: 1;
+  font-size: 1.6rem;
+  line-height: 1.5; /* 24px */
+  margin: 0 0 1.125em; /* 0 0 18px */
+}
+
+.course-teaser__heading {
+  font-size: 1.6rem;
+  font-size: 2.4rem;
+  line-height: 1.3125; /* 21px */
+  margin: 0 0 0.375em; /* 0 0 6px */
+}
+
+.course-teaser__hero {
+  background-color: _color(gray, 500);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 56.25%;
+}
+
+.course-teaser__hero-container {
+  flex-shrink: 0;
+  margin-right: var(--grid-gutter);
+  width: _columns(4, 12);
+}

@@ -19,6 +19,8 @@ plugins:
 permalink: /posts/:title/
 
 collections:
+  courses:
+    output: true
   projects:
     output: true
 
