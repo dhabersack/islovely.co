@@ -1,10 +1,6 @@
 ---
 layout: default
 ---
-{% capture teasers %}
-  {% include course-teasers.html courses=site.courses %}
-{% endcapture %}
-
 {{ content }}
 
-{% include breakout.html content=teasers %}
+{% include course-teasers.html courses=site.courses %}

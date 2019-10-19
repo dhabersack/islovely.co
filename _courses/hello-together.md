@@ -1,7 +1,9 @@
 ---
 name: Hello Together
 title: “I can’t speak up in meetings because my English isn’t good enough.”
-excerpt: Gain professional confidence by improving your English. This course teaches you tips and tricks to use at work and at home, regardless of your skill level. You will feel comfortable to finally give that presentation, participate in that meeting, or get the job you always wanted.
+excerpt: If you are not a native speaker, these lessons will help you improve your English. They will make you feel comfortable when speaking English in any situation.
+price: FREE
+type: email
 ---
 When interacting with others in a foreign language, being able to express your intentions clearly is important. If you don’t feel comfortable communicating in English, it can keep you from finally giving that presentation, participating in that meeting, or getting that job you always wanted.
 
