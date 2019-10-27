@@ -2,8 +2,6 @@
 layout: courses
 title: Courses
 ---
-If you want to learn
+If you are a designer or developer that wants to work smarter instead of harder, there’s a course in here for you. Every course in this list is completely free.
 
-Looking for more? I am always working on new courses. Sign up to [my newsletter](/newsletter/) to find out what else I am working on.
-
-
+I am always working on new courses. Sign up to any of them or [join my newsletter](/newsletter/) to catch announcements of new ones.
