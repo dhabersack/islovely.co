@@ -1,12 +1,18 @@
 .l-post__content {
   margin-bottom: 4.8em;
+  overflow-wrap: break-word;
 }
 
 .l-post__hero {
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin-bottom: 2.4em;
-  padding-top: 56.25%;
+  width: 100%;
+
+  @media ($query-medium) {
+    width: 100%;
+  }
+
+  @media ($query-large) {
+    width: 100%;
+  }
 }
 
 .l-post__meta {
