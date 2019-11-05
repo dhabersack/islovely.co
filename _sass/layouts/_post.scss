@@ -4,13 +4,21 @@
 }
 
 .l-post__hero {
+  margin: 0 auto 2.4em;
   width: 100%;
+
+  @media ($query-small) {
+    margin-bottom: 2.4em;
+    margin-top: 0;
+  }
 
   @media ($query-medium) {
     width: 100%;
   }
 
   @media ($query-large) {
+    margin-bottom: 2.4em;
+    margin-top: 0;
     width: 100%;
   }
 }
