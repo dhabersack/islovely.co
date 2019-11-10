@@ -1,5 +1,6 @@
 {% assign sv-form = include.sv-form %}
 {% assign uid = include.uid %}
+{% assign cta = include.cta | default: "Get me early access!" %}
 
 <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
 
@@ -12,7 +13,7 @@
       <input name="fields[source]" required type="hidden" value="{{ page.url | absolute_url }}">
 
       <button data-element="submit" class="convertkit-form__submit">
-        Get me early access!
+        {{ cta }}
       </button>
     </div>
   </form>

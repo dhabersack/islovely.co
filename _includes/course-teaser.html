@@ -1,13 +1,41 @@
 {% assign course = include.course %}
 
 <article class="course-teaser">
-  <h2>
-    <a href="{{ course.url | prepend: site.baseurl }}">
-      {{ course.name }}
-    </a>
-  </h2>
+  <div class="course-teaser__content">
+    <h2 class="course-teaser__heading">
+      <a href="{{ course.url | prepend: site.baseurl }}">
+        {{ course.title }}
+      </a>
+    </h2>
 
-  <p>
-    {{ course.excerpt }}
-  </p>
+    <p class="course-teaser__excerpt">
+      {{ course.excerpt }}
+    </p>
+  </div>
+
+  <footer class="course-teaser__footer">
+    {% if course.emails %}
+      <span class="course-teaser__meta course-teaser__meta--emails">
+        <strong>{{ course.emails }}</strong> emails
+      </span>
+    {% endif %}
+
+    {% if course.videos %}
+      <span class="course-teaser__meta course-teaser__meta--videos">
+        <strong>{{ course.videos }}</strong> videos
+      </span>
+    {% endif %}
+
+    {% if course.hours %}
+      <span class="course-teaser__meta course-teaser__meta--hours">
+        <strong>{{ course.hours }}</strong> hours
+      </span>
+    {% endif %}
+
+    {% if course.weeks %}
+      <span class="course-teaser__meta course-teaser__meta--weeks">
+        <strong>{{ course.weeks }}</strong> weeks
+      </span>
+    {% endif %}
+  </footer>
 </article>

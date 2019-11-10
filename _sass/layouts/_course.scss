@@ -1,10 +1,17 @@
-.course-teasers {
+.l-course {}
+
+.l-course__signup {
+  margin-bottom: 4.8em;
+}
+
+.l-course__videos {
   display: grid;
   grid-column-gap: var(--grid-gutter);
   grid-row-gap: 2.4em;
   grid-template-columns: 1fr;
+  margin-bottom: 4.8em;
 
-  @media ($query-small) {
+  @media ($query-extra-small) {
     grid-row-gap: 1.5em;
     grid-template-columns: repeat(2, 1fr);
   }
@@ -14,7 +21,8 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
-  @media ($query-extra-large) {
-    grid-template-columns: repeat(4, 1fr);
+  @media ($query-large) {
+    grid-row-gap: 2.4em;
+    // grid-template-columns: repeat(4, 1fr);
   }
 }

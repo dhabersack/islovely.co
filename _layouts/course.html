@@ -1,6 +1,20 @@
 ---
 layout: default
 ---
+{% assign data = site.data.courses[page.slug] %}
+
+{% capture videos %}
+  <div class="l-course__videos">
+    {% for video in data.videos %}
+      {% include video.html video=video %}
+    {% endfor %}
+  </div>
+{% endcapture %}
+
 {{ content }}
 
-{% include convertkit-form.html sv-form=page.sv_form uid=page.uid %}
+<div class="l-course__signup">
+  {% include convertkit-form.html sv-form=page.sv_form uid=page.uid cta=page.cta %}
+</div>
+
+{% include breakout.html content=videos %}

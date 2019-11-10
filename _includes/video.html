@@ -1,0 +1,35 @@
+<div class="video">
+  <div class="video__video-wrapper">
+    {% if video.vimeoId %}
+      <iframe
+        class="video__video"
+        src="https://player.vimeo.com/video/{{ video.vimeoId }}?byline=false&title=false"
+        frameborder="0"
+        allow="autoplay; fullscreen"
+        allowfullscreen
+      ></iframe>
+    {% endif %}
+
+    {% if video.youtubeId %}
+      <iframe
+        class="video__video"
+        src="https://www.youtube.com/embed/{{ video.youtubeId }}"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    {% endif %}
+  </div>
+
+  <h4 class="video__title">
+    <span class="video__number">
+      #{{ video.number }}
+    </span>
+
+    {{ video.title }}
+
+    <span class="video__duration">
+      ({{ video.duration }})
+    </span>
+  </h4>
+</div>
