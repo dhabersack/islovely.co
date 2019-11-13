@@ -1,6 +1,6 @@
 ---
 title: Hello Together
-excerpt: These lessons help non-native speakers improve their English. Feel more comfortable speaking English in any situation.
+excerpt: This course clears up common mistranslations to help non-native speakers feel more comfortable speaking English.
 emails: 24
 weeks: 8
 ---
