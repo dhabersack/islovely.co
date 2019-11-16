@@ -9,7 +9,7 @@
     </h2>
 
     <p class="course-teaser__excerpt">
-      {{ course.excerpt }}
+      {{ course.excerpt | markdownify | remove:"<p>" | remove:"</p>" }}
     </p>
   </div>
 
