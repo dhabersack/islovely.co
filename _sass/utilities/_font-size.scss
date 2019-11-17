@@ -1,0 +1,17 @@
+// add 14px and 18px, remove 40px?
+
+$_font-sizes: (
+  xxs: 1.2rem,
+  xs:  1.6rem,
+  s:   2.0rem,
+  m:   2.4rem,
+  l:   3.2rem,
+  xl:  4.0rem,
+  xxl: 4.8rem
+);
+
+@each $label, $size in $_font-sizes {
+  .font-size-#{$label} {
+    font-size: $size;
+  }
+}

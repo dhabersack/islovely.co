@@ -1,0 +1,48 @@
+$_border-radius: (
+  xxs: 0.3rem,
+  xs:  0.6rem,
+  s:   0.9rem,
+  m:   1.2rem,
+  l:   1.8rem,
+  xl:  2.4rem,
+  xxl: 3.6rem
+);
+
+@function _border-radius($size) {
+  @if ($size == 0) {
+    @return $size;
+  }
+
+  @return map-get($_border-radius, $size);
+}
+
+$sizes: 0, xxs, xs, s, m, l, xl, xxl;
+
+@each $size in $sizes {
+  .border-radius-#{$size} {
+    border-radius: _border-radius($size);
+  }
+}
+
+@each $size in $sizes {
+  .border-top-right-radius-#{$size} {
+    border-top-right-radius: _border-radius($size);
+  }
+}
+
+@each $size in $sizes {
+  .border-bottom-right-radius-#{$size} {
+    border-bottom-right-radius: _border-radius($size);
+  }
+}
+
+@each $size in $sizes {
+  .border-bottom-left-radius-#{$size} {
+    border-bottom-left-radius: _border-radius($size);
+  }
+}
+@each $size in $sizes {
+  .border-top-left-radius-#{$size} {
+    border-top-left-radius: _border-radius($size);
+  }
+}

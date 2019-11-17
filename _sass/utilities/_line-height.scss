@@ -1,0 +1,45 @@
+$_line-heights: (
+  xxs: ( /* 12px */
+    short:  1.25, /* 15px */
+    medium: 1.5,  /* 18px */
+    long:   1.75  /* 21px */
+  ),
+  xs: ( /* 16px */
+    short:  1.3125, /* 21px */
+    medium: 1.5,    /* 24px */
+    long:   1.6875  /* 27px */
+  ),
+  s: ( /* 20px */
+    short:  1.2,  /* 24px */
+    medium: 1.35, /* 27px */
+    long:   1.5   /* 30px */
+  ),
+  m: ( /* 24px */
+    short:  1.25,  /* 30px */
+    medium: 1.375, /* 33px */
+    long:   1.5    /* 36px */
+  ),
+  l: ( /* 32px */
+    short:  1.125,  /* 36px */
+    medium: 1.3125, /* 42px */
+    long:   1.5     /* 48px */
+  ),
+  xl: ( /* 40px */
+    short:  1.2,  /* 48px */
+    medium: 1.35, /* 54px */
+    long:   1.6   /* 60px */
+  ),
+  xxl: ( /* 48px */
+    short:  1.25,  /* 60px */
+    medium: 1.375, /* 66px */
+    long:   1.5    /* 72px */
+  )
+);
+
+@each $size, $list in $_line-heights {
+  @each $length, $value in $list {
+    .line-height-#{$size}-#{$length} {
+      line-height: $value;
+    }
+  }
+}

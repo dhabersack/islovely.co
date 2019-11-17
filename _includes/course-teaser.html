@@ -1,19 +1,19 @@
 {% assign course = include.course %}
 
-<article class="course-teaser">
-  <div class="course-teaser__content">
-    <h2 class="course-teaser__heading">
+<article class="background-white border-radius-xs box-shadow-s flex flex-column height-full">
+  <div class="flex-grow padding-horizontal-s padding-vertical-m">
+    <h2 class="font-size-xs line-height-xs-short margin-0 margin-bottom-xs">
       <a href="{{ course.url | prepend: site.baseurl }}">
         {{ course.title }}
       </a>
     </h2>
 
-    <p class="course-teaser__excerpt">
+    <p class="font-size-xs line-height-xs-medium margin-0">
       {{ course.excerpt | markdownify | remove:"<p>" | remove:"</p>" }}
     </p>
   </div>
 
-  <footer class="course-teaser__footer">
+  <footer class="course-teaser__footer background-gray-100 flex flex-wrap padding-horizontal-s padding-vertical-m">
     {% if course.emails %}
       <span class="course-teaser__meta course-teaser__meta--emails">
         <strong>{{ course.emails }}</strong> emails

@@ -2,26 +2,26 @@
   @return hsla(0, 0%, 0%, $alpha);
 }
 
-@mixin box-shadow-xs {
+.box-shadow-xs {
   box-shadow: 0 0.1rem 0.3rem _shadow(0.12),
               0 0.1rem 0.2rem _shadow(0.24);
 }
 
-@mixin box-shadow-s {
+.box-shadow-s {
   box-shadow: 0 0.3rem 0.6rem _shadow(0.15),
               0 0.2rem 0.4rem _shadow(0.12);
 }
 
-@mixin box-shadow-m {
+.box-shadow-m {
   box-shadow: 0 1.0rem 2.0rem _shadow(0.15),
               0 0.3rem 0.6rem _shadow(0.10);
 }
 
-@mixin box-shadow-l {
+.box-shadow-l {
   box-shadow: 0 1.5rem 2.5rem _shadow(0.15),
-              0 0.5rem 1.0rem _shadow(0.50);
+              0 0.5rem 1.0rem _shadow(0.05);
 }
 
-@mixin box-shadow-xl {
+.box-shadow-xl {
   box-shadow: 0 2.0rem 4.0rem _shadow(0.20);
 }

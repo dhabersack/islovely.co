@@ -1,32 +1,29 @@
 {% assign post = include.post %}
 
-<article class="teaser">
+<article class="background-white border-radius-xs box-shadow-s flex flex-column height-full overflow-hidden">
   <a href="{{ post.url | prepend: site.baseurl }}">
-    <div class="teaser__hero" style="background-image: url('/assets/heroes/{{ post.title | slugify }}--teaser.jpg')">
-    </div>
+    <img alt="{{ post.hero_alt }}" class="width-full" src="/assets/heroes/{{ post.title | slugify }}--teaser.jpg">
   </a>
 
-  <div class="teaser__content">
-    <h2 class="teaser__heading">
+  <div class="flex flex-column height-full padding-horizontal-s padding-vertical-m">
+    <h2 class="font-size-xs line-height-xs-short margin-0 margin-bottom-xs">
       <a href="{{ post.url | prepend: site.baseurl }}">
         {{ post.title }}
       </a>
     </h2>
 
-    <p class="teaser__excerpt">
+    <p class="flex-grow font-size-xs line-height-xs-medium margin-0 margin-bottom-l">
       {{ post.excerpt }}
     </p>
 
-    <div class="teaser__tags">
+    <div class="flex flex-wrap margin-bottom-xs">
       {% for category in post.categories %}
-        <div class="teaser__tag">
+        <div class="margin-right-xxs margin-bottom-xs">
           {% include tag.html tag=category %}
         </div>
       {% endfor %}
     </div>
 
-    <div class="teaser__meta">
-      {% include post-meta.html date=post.date %}
-    </div>
+    {% include post-meta.html date=post.date %}
   </div>
 </article>
