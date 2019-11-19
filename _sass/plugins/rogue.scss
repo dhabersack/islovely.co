@@ -8,6 +8,7 @@
   overflow-x: auto;
   padding: 1.2em 1.5em;
   position: relative;
+  width: 100%;
 }
 
 .highlight code {
@@ -43,8 +44,13 @@
     color: _color(yellow, 400);
   }
 
+  .m,
   .mi {
     color: _color(red, 500);
+  }
+
+  .mh {
+    color: _color(purple, 400);
   }
 
   .na {
@@ -54,6 +60,7 @@
   .nc,
   .nf,
   .nt,
+  .nv,
   .nx {
     color: _color(cyan, 300);
   }
@@ -61,5 +68,9 @@
   .s,
   .s1 {
     color: _color(green, 400);
+  }
+
+  .si {
+    color: _color(red, 500);
   }
 }
