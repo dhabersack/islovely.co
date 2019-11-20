@@ -6,7 +6,7 @@ excerpt: We can use maps and loops in Sass to auto-generate many classes used in
 hero_alt: Three potted plants vertically aligned in a row. They look almost identical and only differ in their color.
 hero_caption: These look almost identical. It’ll make sense in a bit.
 ---
-Utility-first CSS uses many small utility classes that each have a very specific job. You can tell what they do by their descriptive names. `.color-red` colors text, `.font-size-l` gives it a large font-size, and `.margin-s` gives it a small margin. [Tailwind CSS](https://tailwindcss.com) is a utility-first framework that is growing in popularity. If you want to build your own Tailwind, you’ll need to write a lot of small rules. We can use Sass to reduce the manual work required for this by a lot.
+Utility-first CSS uses many small utility classes that each have a very specific job. You can tell what they do by their descriptive names. `.color-red` colors text red, `.font-size-l` gives it a large font-size, and `.margin-s` gives it a small margin. [Tailwind CSS](https://tailwindcss.com) is a utility-first framework that is growing in popularity. If you want to build your own Tailwind, you’ll need to write a lot of small rules. We can use Sass to reduce the manual work required for this by a lot.
 
 Most of the rules we need in utility-first CSS do very little. One rule might control only the color of the text, while another controls only its weight. Depending on how many colors and weights we want to use, we need a lot of those small rules. If our design uses five different font sizes, we need five different rules:
 
@@ -159,7 +159,7 @@ It is common to use more than one shade of the same color. Instead of using a si
 }
 {% endhighlight %}
 
-We could achieve this by using longer keys in our `$colors`-map and leaving the `@each`-loop untouched:
+We could achieve this by using longer keys in our `$colors`-map and leaving the `@each`-loop unchanged:
 
 {% highlight sass %}
 $colors: (
