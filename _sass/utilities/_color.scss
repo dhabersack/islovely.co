@@ -1,0 +1,11 @@
+.color-white {
+  color: #fefefe;
+}
+
+@each $color, $list in $_colors {
+  @each $label, $value in $list {
+    .color-#{"" + $color}-#{$label} {
+      color: $value;
+    }
+  }
+}

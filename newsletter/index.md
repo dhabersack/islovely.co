@@ -11,6 +11,6 @@ In addition to what I share on this site, I send out a weekly newsletter with ti
 - announcements of events I am going to speak at
 - access to video recordings of past speaking gigs
 
-Get this bonus content before everybody else!
+You can find [all previous newsletters](/newsletter/archive) in the archive. Get this bonus content before everybody else!
 
 {% include convertkit-form.html sv-form="1067424" uid="627637e2b6" %}
