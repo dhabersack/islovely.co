@@ -22,6 +22,9 @@ permalink: /posts/:title/
 collections:
   courses:
     output: true
+  newsletters:
+    output: true
+    permalink: /newsletter/archive/:title/
   projects:
     output: true
 

@@ -8,7 +8,7 @@
     {% include rich-preview.html %}
     {% include favicons.html %}
 
-    <title>{{ page.title }} · {{ site.name }}</title>
+    <title>{{ page.title | replace_regexp: ':[a-z_]*?:', '' | strip }} · {{ site.name }}</title>
 
     <link rel="stylesheet" href="/style.css?{{ site.time | date: '%s' }}">
     <link rel="stylesheet" href="https://use.typekit.net/gbp8hqr.css">
