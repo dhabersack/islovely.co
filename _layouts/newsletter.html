@@ -1,6 +1,12 @@
 ---
 layout: default
 ---
-<div class="l-newsletter">
+<p class="color-gray-500 font-size-xxs line-height-xxs-short margin-bottom-xl sans-serif">
+  {{ page.date | date: "%B %-d, %Y" }}
+</p>
+
+<div class="margin-bottom-xxl">
   {{ content }}
 </div>
+
+{% include mailing-list-signup.html %}

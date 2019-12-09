@@ -40,6 +40,11 @@ defaults:
       layout: "course"
   - scope:
       path: ""
+      type: "newsletters"
+    values:
+      layout: "newsletter"
+  - scope:
+      path: ""
       type: "posts"
     values:
       layout: "post"

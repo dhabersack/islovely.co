@@ -9,25 +9,27 @@
   {% assign current_url = current_url | replace_regexp: "[a-zA-Z0-9\.-]*?/$", "" %}
 {% endfor %}
 
-<nav>
-  <p class="font-size-xs sans-serif">
-    {% for url in urls %}
-      {% assign document = all_documents | where: "url", url | first %}
-      {% assign title = document.navigation_title | default: document.title | replace_regexp: ':[a-z_]*?:', '' | strip %}
+{% if urls.size > 1 %}
+  <nav class="margin-bottom-xl">
+    <p class="font-size-xs line-height-xs-medium margin-0 sans-serif">
+      {% for url in urls %}
+        {% assign document = all_documents | where: "url", url | first %}
+        {% assign title = document.navigation_title | default: document.title | replace_regexp: ':[a-z_]*?:', '' | strip %}
 
-      {% if forloop.last %}
-        <span class="color-gray-500 font-size-xs color-red-400">
-          {{ title }}
-        </span>
-      {% else %}
-        <a class="inline-block margin-right-xxs" href="{{ document.url }}">
-          {{ title }}
-        </a>
+        {% if forloop.last %}
+          <span class="color-gray-500 color-red-400">
+            {{ title }}
+          </span>
+        {% else %}
+          <a class="inline-block margin-right-xxs" href="{{ document.url }}">
+            {{ title }}
+          </a>
 
-        <span class="color-gray-600 margin-right-xxs">
-          &raquo;
-        </span>
-      {% endif %}
-    {% endfor %}
-  </p>
-</nav>
+          <span class="color-gray-600 margin-right-xxs">
+            &raquo;
+          </span>
+        {% endif %}
+      {% endfor %}
+    </p>
+  </nav>
+{% endif %}

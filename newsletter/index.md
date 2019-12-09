@@ -1,5 +1,5 @@
 ---
-layout: newsletter
+layout: newsletter-landing-page
 title: More tips, straight to your inbox
 navigation_title: Newsletter
 permalink: /newsletter/
