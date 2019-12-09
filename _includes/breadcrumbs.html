@@ -1,0 +1,33 @@
+{% assign all_documents = site.documents | concat: site.pages %}
+{% assign current_url = page.url %}
+{% assign paths = current_url | split: "/" %}
+{% assign urls = "" | split: "," %}
+
+{% for path in paths %}
+  {% assign url_as_array = current_url | split: "," %}
+  {% assign urls = url_as_array | concat: urls %}
+  {% assign current_url = current_url | replace_regexp: "[a-zA-Z0-9\.-]*?/$", "" %}
+{% endfor %}
+
+<nav>
+  <p class="font-size-xs sans-serif">
+    {% for url in urls %}
+      {% assign document = all_documents | where: "url", url | first %}
+      {% assign title = document.navigation_title | default: document.title | replace_regexp: ':[a-z_]*?:', '' | strip %}
+
+      {% if forloop.last %}
+        <span class="color-gray-500 font-size-xs color-red-400">
+          {{ title }}
+        </span>
+      {% else %}
+        <a class="inline-block margin-right-xxs" href="{{ document.url }}">
+          {{ title }}
+        </a>
+
+        <span class="color-gray-600 margin-right-xxs">
+          &raquo;
+        </span>
+      {% endif %}
+    {% endfor %}
+  </p>
+</nav>

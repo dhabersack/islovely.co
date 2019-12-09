@@ -1,6 +1,6 @@
 ---
 title: ":fountain_pen: Write like Hemingway"
-excerpt: ""
+excerpt: Writing is best when it is easily understood by readers. Everything I write goes through an extensive editing phase to improve its readability.
 ---
 Writing is best when it is easily understood by readers. Long sentences and fancy words do not make for a pleasant reading experience. Everything I write goes through an extensive editing phase to improve its readability.
 

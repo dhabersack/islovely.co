@@ -1,6 +1,6 @@
 ---
 title: ":candy: Drawing sweet icons for you"
-excerpt: ""
+excerpt: I am assembling some of my icons into an icon pack that I will make available for free soon.
 ---
 Hey lovelies!
 

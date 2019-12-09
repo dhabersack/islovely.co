@@ -1,6 +1,6 @@
 ---
 title: ":astonished: Unexpected usecases"
-excerpt: ""
+excerpt: I had my expectations of how software is used challenged last week when talking to the CTO of a med-tech startup.
 ---
 I had my expectations of how software is used challenged last week when talking to the CTO of a med-tech startup. Their software shows data collected by sensors while a patient is being operated on. Processing the thousands of datapoints collected by these devices every second is fascinating.
 

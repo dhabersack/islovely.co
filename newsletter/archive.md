@@ -1,5 +1,6 @@
 ---
 title: Newsletter archive
+navigation_title: Archive
 ---
 {% assign newsletters = site.newsletters | reverse %}
 
@@ -7,7 +8,7 @@ I send out a newsletter once a week. These are the past entries.
 
 {% for newsletter in newsletters %}
   <div class="margin-bottom-xl">
-    <span class="color-gray-600 font-size-xs sans-serif">
+    <span class="color-gray-500 font-size-xs sans-serif">
       {{ newsletter.date | date: "%B %-d, %Y" }}
     </span>
 

@@ -1,8 +1,8 @@
 ---
 title: ":hand: Do Not Track, maybe"
-excerpt: ""
+excerpt: To opt out of tracking scripts on websites, you can set the “Do Not Track”-setting available in some browsers. Unfortunately, third parties are not required to honor it.
 ---
-To opt out of tracking scripts on websites, you can set the [“Do Not Track”](https://www.eff.org/issues/do-not-track) -setting available in some browsers. Activating it adds a “please do not track me”-signal to all your HTTP-requests. Unfortunately, third parties are not required to honor that wish. They don’t _have_ to stop collecting data about you. Some might, many will not.
+To opt out of tracking scripts on websites, you can set the [“Do Not Track”](https://www.eff.org/issues/do-not-track)-setting available in some browsers. Activating it adds a “please do not track me”-signal to all your HTTP-requests. Unfortunately, third parties are not required to honor that wish. They don’t _have_ to stop collecting data about you. Some might, many will not.
 
 Before GDPR went into effect, I removed Google Analytics from my portfolio. I do not currently know if people are reading my articles at all. When it comes to tracking, I would rather fly blind than invade my visitors’ privacy.
 

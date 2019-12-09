@@ -1,6 +1,6 @@
 ---
 title: ":man_dancing: Stress-test your layouts in disco mode"
-excerpt: ""
+excerpt: Talking about mobile-, tablet- and desktop-layouts worked well when the lines between those classes were well-defined.
 ---
 In most teams I work in, people still talk about mobile-, tablet- and desktop-layouts. Those terms worked well when the lines between those classes were well-defined. Smartphones were always exactly 320 pixels wide, tablets started at 768 pixels. It’s been _years_ since that has been the case. We now have large phones, small tablets, and [frankenphones that are kind of both](https://www.samsung.com/global/galaxy/galaxy-fold/).
 

@@ -1,6 +1,7 @@
 ---
 layout: newsletter
 title: More tips, straight to your inbox
+navigation_title: Newsletter
 permalink: /newsletter/
 ---
 In addition to what I share on this site, I send out a weekly newsletter with tips to help you work smarter. By signing up, you get access to:

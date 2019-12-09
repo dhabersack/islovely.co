@@ -1,6 +1,6 @@
 ---
 title: ":hourglass_flowing_sand: What do you not have time for?"
-excerpt: ""
+excerpt: I have not met anyone that never said “I don’t have time for that”. So many of us are “too busy” to do the things we really care about.
 ---
 I have not met anyone that never said “I don’t have time for that”. So many of us are “too busy” to do the things we really care about.
 
