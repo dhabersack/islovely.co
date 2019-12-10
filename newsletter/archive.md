@@ -1,10 +1,11 @@
 ---
 title: Newsletter archive
+excerpt: Read some of my previous newsletters. Sign up to get them delivered to your inbox.
 navigation_title: Archive
 ---
 {% assign newsletters = site.newsletters | reverse %}
 
-I send out a newsletter once a week. These are the past entries.
+These are some of my previous newsletters. [Sign up](/newsletter/) if you want to get them delivered straight to your inbox.
 
 {% for newsletter in newsletters %}
   <div class="margin-bottom-xl">
