@@ -1,0 +1,15 @@
+---
+title: ":elephant: How do you eat an elephant?"
+excerpt: When setting goals, we tend to underestimate how long it takes to achieve them.
+---
+When setting goals, we tend to underestimate how long it takes to achieve them. We imagine a future in which all our wishes have come true, and we want to jump straight to that state. We want to be able to play the guitar, but we don’t want to spend any time learning how to.
+
+In sprint retrospectives, we look at not only what we are doing, but how we are doing it. We usually find a few things that could be better and think of ways to fix them. The size of the actions we pick influences how likely we are to see them through. If we set unrealistic expectations, there is a high risk slow progress will disappoint us. Goals that are too big to achieve can quickly turn into goals we stopped pursuing.
+
+The ideal goal is something we can achieve during the next cycle. If we have two weeks per iteration, we will not be able to “fix all meetings at this company”. That goal is too big to achieve in two weeks. We can still take steps that get us moving in the right direction. What is the smallest action that will eventually lead to our larger goal? If we keep taking small steps, those will accumulate over time and help us achieve our goals.
+
+How do you eat an elephant? One bite at a time.
+
+– Dom
+
+PS: I added an [archive of all previous newsletters](/newsletter/archive/) to my website. If there’s one you liked, it would mean the world to me if you shared it with others. Thank you so much!
