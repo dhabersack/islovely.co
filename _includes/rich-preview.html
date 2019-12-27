@@ -31,7 +31,7 @@
 <meta property="og:image:width" content="640" />
 
 <meta property="og:site_name" content="{{ site.name }}" />
-<meta property="og:title" content="{{ page.title }} · {{ site.name }}" />
+<meta property="og:title" content="{{ page.title | replace_regexp: ':[a-z_]*?:', '' | strip }} · {{ site.name }}" />
 
 {% if is_post %}
   <meta property="og:type" content="article" />
