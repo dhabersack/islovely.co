@@ -1,7 +1,7 @@
 ---
 title: How to split arrays into equal-sized chunks
 category: JavaScript
-date: 2020-01-07 08:01
+date: 2020-01-07 08:27
 excerpt: JavaScript does not provide a function to split arrays into several smaller arrays. Let’s build one ourselves.
 hero_alt: A lot of rubber ducks, neatly organized on shelves.
 hero_caption: Look at all these neatly grouped rubber ducks.
