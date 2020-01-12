@@ -35,7 +35,7 @@ $_padding: (
   @return map-get(map-get($_padding, vertical), $size);
 }
 
-$sizes: 0, xs, s, m, l, xl;
+$sizes: 0, xxs, xs, s, m, l, xl, xxl;
 
 @each $size in $sizes {
   .padding-#{$size} {
