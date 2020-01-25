@@ -1,16 +1,15 @@
 {% assign date = include.date %}
 
-<div class="post-meta">
-  <div class="post-meta__picture">
-  </div>
+<div class="align-items-center flex sans-serif">
+  <img alt="Dom Habersack" class="border-radius-round margin-right-xs" height="42" width="42" src="/assets/dom.jpg">
 
-  <div>
-    <p class="post-meta__name">
+  <div class="flex flex-column font-size-xxs line-height-xxs-short">
+    <span class="color-gray-700 font-weight-700 margin-bottom-xxs">
       Dom Habersack
-    </p>
+    </span>
 
-    <p class="post-meta__date">
+    <span class="color-gray-500 font-weight-400">
       {{ date | date: "%B %-d, %Y" }}
-    </p>
+    </span>
   </div>
 </div>
