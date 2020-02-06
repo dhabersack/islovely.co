@@ -1,5 +1,5 @@
 $columns: 12;
-$color: rgba(_color(red, 400), 0.25);
+$color: rgba(#FC7576, 0.25);
 $column-width: calc((100% / #{$columns}) - var(--grid-gutter));
 
 html.debug {

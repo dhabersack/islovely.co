@@ -1,16 +1,28 @@
-.color-white {
-  color: #fefefe;
+@mixin _color($color, $shade: 0) {
+  color: map-get(map-get($_colors, $color), $shade);
 }
 
 @each $color, $list in $_colors {
   @each $label, $value in $list {
-    .color-#{"" + $color}-#{$label} {
-      color: $value;
-    }
-
-    .visited\:color-#{"" + $color}-#{$label} {
-      &:visited {
+    @if $label == 0 {
+      .color-#{"" + $color} {
         color: $value;
+      }
+
+      .visited\:color-#{"" + $color} {
+        &:visited {
+          color: $value;
+        }
+      }
+    } @else {
+      .color-#{"" + $color}-#{$label} {
+        color: $value;
+      }
+
+      .visited\:color-#{"" + $color}-#{$label} {
+        &:visited {
+          color: $value;
+        }
       }
     }
   }

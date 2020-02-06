@@ -114,10 +114,7 @@ $_colors: (
   )
 );
 
-@function _color($color, $shade: 0) {
-  @return map-get(map-get($_colors, $color), $shade);
-}
-
-$color-primary-content:   _color(gray, 900);
-$color-secondary-content: _color(gray, 700);
-$color-tertiary-content:  _color(gray, 500);
+// TODO remove these once they have been replaced
+$color-primary-content:   map-get(map-get($_colors, gray), 900);
+$color-secondary-content: map-get(map-get($_colors, gray), 700);
+$color-tertiary-content:  map-get(map-get($_colors, gray), 500);

@@ -1,11 +1,29 @@
-.background-white {
-  background-color: #fefefe;
+@mixin _background($color, $shade: 0) {
+  background-color: map-get(map-get($_colors, $color), $shade);
 }
 
 @each $color, $list in $_colors {
   @each $label, $value in $list {
-    .background-#{"" + $color}-#{$label} {
-      background-color: $value;
+    @if $label == 0 {
+      .background-#{"" + $color} {
+        background-color: $value;
+      }
+
+      .visited\:background-#{"" + $color} {
+        &:visited {
+          background-color: $value;
+        }
+      }
+    } @else {
+      .background-#{"" + $color}-#{$label} {
+        background-color: $value;
+      }
+
+      .visited\:background-#{"" + $color}-#{$label} {
+        &:visited {
+          background-color: $value;
+        }
+      }
     }
   }
 }

@@ -1,8 +1,27 @@
 ---
 ---
 @import
-  'functions/colors',
+  'variables/colors',
+
+  'utilities/background-color',
+  'utilities/border-radius',
+  'utilities/box-shadow',
+  'utilities/color',
+  'utilities/display',
+  'utilities/flexbox',
+  'utilities/font-family',
+  'utilities/font-size',
+  'utilities/font-weight',
+  'utilities/height',
+  'utilities/line-height',
+  'utilities/lists',
+  'utilities/margin',
+  'utilities/overflow',
+  'utilities/padding',
+  'utilities/white-space',
+  'utilities/width',
   'functions/columns',
+
   'functions/hsb',
   'functions/fonts',
 
@@ -32,24 +51,6 @@
 
   'plugins/emoji',
   'plugins/rogue',
-
-  'utilities/background-color',
-  'utilities/border-radius',
-  'utilities/box-shadow',
-  'utilities/color',
-  'utilities/display',
-  'utilities/flexbox',
-  'utilities/font-family',
-  'utilities/font-size',
-  'utilities/font-weight',
-  'utilities/height',
-  'utilities/line-height',
-  'utilities/lists',
-  'utilities/margin',
-  'utilities/overflow',
-  'utilities/padding',
-  'utilities/white-space',
-  'utilities/width',
 
   'variables',
 
