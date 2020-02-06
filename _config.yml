@@ -11,7 +11,7 @@ profiles:
   twitter: "domhabersack"
 
 # Build settings
-keep_files: [assets]
+keep_files: [assets, fonts]
 markdown: kramdown
 plugins:
   - jekyll-feed
