@@ -5,7 +5,7 @@
 }
 
 a {
-  color: _color(blue, 500);
+  @include _color(blue, 500);
   text-decoration: none;
 }
 
@@ -14,7 +14,7 @@ a:hover {
 }
 
 a:visited {
-  color: _color(blue, 500);
+  @include _color(blue, 500);
 }
 
 blockquote {
@@ -40,7 +40,7 @@ blockquote {
 }
 
 blockquote::before {
-  color: _color(gray, 700);
+  @include _color(gray, 700);
   content: '“';
   display: block;
   font-size: 4.8rem;
@@ -60,7 +60,7 @@ blockquote p:last-of-type {
 }
 
 body {
-  background: _color(gray, 100);
+  @include _background(gray, 100);
   color: $color-primary-content;
   font-family: _fonts(serif);
   font-weight: 300;
@@ -70,10 +70,10 @@ body {
 }
 
 button {
-  background-color: _color(blue, 500);
+  @include _background(blue, 500);
   border: 0;
   border-radius: 0.25em; /* 4px */
-  color: _color(gray, 100);
+  @include _color(gray, 100);
   cursor: pointer;
   font-family: _fonts(sans-serif);
   font-size: 1.6rem;
@@ -93,7 +93,7 @@ code {
 }
 
 figcaption {
-  color: _color(gray, 500);
+  @include _color(gray, 500);
   font-size: 1.2rem;
   font-size: 1.6rem;
   font-style: italic;
@@ -192,7 +192,7 @@ h3 {
 }
 
 hr {
-  background: _color(gray, 300);
+  @include _background(gray, 300);
   border: 0;
   border-radius: 50%;
   height: 0.1em;
@@ -215,12 +215,12 @@ img {
 input[type="email"],
 input[type="text"] {
   -webkit-appearance: none;
-  background: _color(white);
-  border-color: _color(gray, 300);
+  @include _background(white);
+  @include _border-color(gray, 300);
   border-radius: 0.25em; /* 4px */
   border-style: solid;
   border-width: 0.0625em; /* 1px */
-  color: _color(gray, 700);
+  @include _color(gray, 700);
   font-family: _fonts(sans-serif);
   font-size: 1.6rem;
   font-weight: 400;
@@ -231,7 +231,7 @@ input[type="text"] {
 
 input[type="email"]:focus,
 input[type="text"]:focus {
-  border-color: _color(blue, 400);
+  @include _border-color(blue, 400);
   outline: none;
 }
 
@@ -254,9 +254,9 @@ p {
 }
 
 p code {
-  background: _color(gray, 300);
+  @include _background(gray, 300);
   border-radius: 0.2em;
-  color: _color(gray, 800);
+  @include _color(gray, 800);
   font-size: 0.9em;
   padding: 0 0.2em;
 }
@@ -280,11 +280,11 @@ table {
 tbody {}
 
 tbody td {
-  background: _color(gray, 200);
+  @include _background(gray, 200);
 }
 
 tbody th {
-  background: _color(gray, 300);
+  @include _color(gray, 300);
   text-align: left;
 }
 
@@ -295,7 +295,7 @@ td {
 }
 
 tfoot {
-  background: _color(gray, 400);
+  @include _background(gray, 400);
 }
 
 tfoot th {
@@ -312,6 +312,6 @@ th {
 thead {}
 
 thead th:not(:empty) {
-  background: _color(gray, 400);
+  @include _background(gray, 400);
   text-align: left;
 }

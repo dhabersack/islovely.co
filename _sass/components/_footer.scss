@@ -19,7 +19,7 @@
 
   &,
   &:visited {
-    color: _color(blue, 600);
+    @include _color(blue, 600);
   }
 }
 

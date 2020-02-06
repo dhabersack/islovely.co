@@ -1,11 +1,11 @@
 .video {}
 
 .video__duration {
-  color: _color(gray, 500);
+  @include _color(gray, 500);
 }
 
 .video__number {
-  color: _color(gray, 500);
+  @include _color(gray, 500);
 }
 
 .video__title {

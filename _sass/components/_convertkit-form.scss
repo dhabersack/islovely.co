@@ -1,7 +1,7 @@
 .convertkit-form {}
 
 .convertkit-form__alert {
-  background: _color(gray, 200);
+  @include _background(gray, 200);
   border: 0.0625em solid _color(gray, 400);
   border-radius: 0.4em;
   flex: 1 0 auto;
@@ -22,9 +22,9 @@
 }
 
 .convertkit-form__alert.convertkit-form__alert--error {
-  background: _color(red, 100);
-  border-color: _color(red, 200);
-  color: _color(red, 500);
+  @include _background(red, 100);
+  @include _border-color(red, 200);
+  @include _color(red, 500);
 }
 
 .convertkit-form__disclaimer {
@@ -59,10 +59,10 @@
 }
 
 .formkit-alert.formkit-alert-success {
-  background: _color(green, 100);
+  @include _background(green, 100);
   border: 1px solid _color(green, 200);
   border-radius: 4px;
-  color: _color(green, 500);
+  @include _color(green, 500);
   font-size: 1.5rem;
   flex: 1 0 auto;
   line-height: 1.2; /* 18px */
