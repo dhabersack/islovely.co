@@ -78,13 +78,13 @@
 .l-default__footer {
   @include responsive-container;
 
-  @include _background(gray, 200);
+  @include _background-color(gray, 200);
   flex: none;
 }
 
 .l-default__header {
   @include responsive-container;
 
-  @include _background(white);
+  @include _background-color(white);
   flex: none;
 }

@@ -60,7 +60,7 @@ blockquote p:last-of-type {
 }
 
 body {
-  @include _background(gray, 100);
+  @include _background-color(gray, 100);
   color: $color-primary-content;
   font-family: _fonts(serif);
   font-weight: 300;
@@ -70,7 +70,7 @@ body {
 }
 
 button {
-  @include _background(blue, 500);
+  @include _background-color(blue, 500);
   border: 0;
   border-radius: 0.25em; /* 4px */
   @include _color(gray, 100);
@@ -192,7 +192,7 @@ h3 {
 }
 
 hr {
-  @include _background(gray, 300);
+  @include _background-color(gray, 300);
   border: 0;
   border-radius: 50%;
   height: 0.1em;
@@ -215,7 +215,7 @@ img {
 input[type="email"],
 input[type="text"] {
   -webkit-appearance: none;
-  @include _background(white);
+  @include _background-color(white);
   @include _border-color(gray, 300);
   border-radius: 0.25em; /* 4px */
   border-style: solid;
@@ -254,7 +254,7 @@ p {
 }
 
 p code {
-  @include _background(gray, 300);
+  @include _background-color(gray, 300);
   border-radius: 0.2em;
   @include _color(gray, 800);
   font-size: 0.9em;
@@ -280,7 +280,7 @@ table {
 tbody {}
 
 tbody td {
-  @include _background(gray, 200);
+  @include _background-color(gray, 200);
 }
 
 tbody th {
@@ -295,7 +295,7 @@ td {
 }
 
 tfoot {
-  @include _background(gray, 400);
+  @include _background-color(gray, 400);
 }
 
 tfoot th {
@@ -312,6 +312,6 @@ th {
 thead {}
 
 thead th:not(:empty) {
-  @include _background(gray, 400);
+  @include _background-color(gray, 400);
   text-align: left;
 }

@@ -1,5 +1,5 @@
 // .course-teaser {
-//   @include _background(white);
+//   @include _background-color(white);
 //   border-radius: 0.6em;
 //   display: flex;
 //   flex-direction: column;
@@ -18,7 +18,7 @@
 // }
 
 .course-teaser__footer {
-  // @include _background(gray, 100);
+  // @include _background-color(gray, 100);
   border-radius: 0 0 0.6em 0.6em;
   // @include _color(gray, 600);
   // display: flex;

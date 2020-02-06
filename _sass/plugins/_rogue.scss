@@ -1,5 +1,5 @@
 .highlight {
-  @include _background(gray, 800);
+  @include _background-color(gray, 800);
   border-radius: 0.8em;
   @include _color(gray, 100);
   font-family: _fonts(monospace);

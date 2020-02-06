@@ -1,6 +1,6 @@
 {% assign course = include.course %}
 
-<article class="background-white border-radius-xs box-shadow-s flex flex-column height-full">
+<article class="background-color-white border-radius-xs box-shadow-s flex flex-column height-full">
   <div class="flex-grow padding-horizontal-s padding-vertical-m">
     <h2 class="font-size-xs line-height-xs-short margin-0 margin-bottom-xs">
       <a href="{{ course.url | prepend: site.baseurl }}">
@@ -13,7 +13,7 @@
     </p>
   </div>
 
-  <footer class="course-teaser__footer background-gray-100 color-gray-600 flex flex-wrap sans-serif padding-horizontal-s padding-vertical-m">
+  <footer class="course-teaser__footer background-color-gray-100 color-gray-600 flex flex-wrap sans-serif padding-horizontal-s padding-vertical-m">
     {% if course.emails %}
       <span class="course-teaser__meta course-teaser__meta--emails">
         <strong>{{ course.emails }}</strong> emails
