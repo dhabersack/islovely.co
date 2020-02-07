@@ -62,7 +62,6 @@ blockquote p:last-of-type {
 body {
   @include _background-color(gray, 100);
   color: $color-primary-content;
-  @include _serif;
   font-weight: 300;
   height: 100%;
   margin: 0;
@@ -75,7 +74,6 @@ button {
   border-radius: 0.25em; /* 4px */
   @include _color(gray, 100);
   cursor: pointer;
-  @include _sans-serif;
   font-size: 1.6rem;
   line-height: 1.125; /* 18px */
   margin: 0;
@@ -132,7 +130,6 @@ h3,
 h4,
 h5,
 h6 {
-  @include _sans-serif;
   font-weight: 700;
   margin: 0;
 }
@@ -202,10 +199,15 @@ hr {
 
 html {
   box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
   font-kerning: auto;
   font-size: 62.5%; /* 10px */
   height: 100%;
   line-height: 1.5;
+
+  @supports (font-variation-settings: normal) {
+    font-family: 'Inter var', sans-serif;
+  }
 }
 
 img {
@@ -221,7 +223,6 @@ input[type="text"] {
   border-style: solid;
   border-width: 0.0625em; /* 1px */
   @include _color(gray, 700);
-  @include _sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.875; /* 30px */
@@ -271,7 +272,6 @@ pre {
 
 table {
   border-collapse: collapse;
-  @include _sans-serif;
   font-weight: 400;
   margin: 0 0 2.4em;
   width: 100%;

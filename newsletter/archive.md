@@ -9,7 +9,7 @@ These are some of my previous newsletters. [Sign up](/newsletter/) if you want t
 
 {% for newsletter in newsletters %}
   <div class="margin-bottom-xl">
-    <span class="color-gray-700 font-size-xxs line-height-xxs-short sans-serif">
+    <span class="color-gray-700 font-size-xxs line-height-xxs-short">
       {{ newsletter.date | date: "%B %-d, %Y" }}
     </span>
 

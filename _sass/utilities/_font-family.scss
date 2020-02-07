@@ -8,7 +8,9 @@
 }
 
 @mixin _sans-serif {
-  font-family: soleil, // 400, 400 italic, 700, 700 italic
+  font-family: 'Inter var',
+               'Inter',
+               soleil, // 400, 400 italic, 700, 700 italic
                sans-serif;
 }
 

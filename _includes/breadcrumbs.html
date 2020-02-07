@@ -11,7 +11,7 @@
 
 {% if urls.size > 1 %}
   <nav class="margin-bottom-xl">
-    <p class="font-size-xs line-height-xs-medium margin-0 sans-serif">
+    <p class="font-size-xs line-height-xs-medium margin-0">
       {% for url in urls %}
         {% assign document = all_documents | where: "url", url | first %}
         {% assign title = document.navigation_title | default: document.title | replace_regexp: ':[a-z_]*?:', '' | strip %}
