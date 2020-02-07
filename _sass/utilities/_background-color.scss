@@ -9,20 +9,16 @@
         background-color: $value;
       }
 
-      .visited\:background-color-#{"" + $color} {
-        &:visited {
-          background-color: $value;
-        }
+      .visited\:background-color-#{"" + $color}:visited {
+        background-color: $value;
       }
     } @else {
       .background-color-#{"" + $color}-#{$label} {
         background-color: $value;
       }
 
-      .visited\:background-color-#{"" + $color}-#{$label} {
-        &:visited {
-          background-color: $value;
-        }
+      .visited\:background-color-#{"" + $color}-#{$label}:visited {
+        background-color: $value;
       }
     }
   }
