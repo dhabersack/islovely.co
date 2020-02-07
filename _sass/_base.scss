@@ -62,7 +62,7 @@ blockquote p:last-of-type {
 body {
   @include _background-color(gray, 100);
   color: $color-primary-content;
-  font-family: _fonts(serif);
+  @include _serif;
   font-weight: 300;
   height: 100%;
   margin: 0;
@@ -75,7 +75,7 @@ button {
   border-radius: 0.25em; /* 4px */
   @include _color(gray, 100);
   cursor: pointer;
-  font-family: _fonts(sans-serif);
+  @include _sans-serif;
   font-size: 1.6rem;
   line-height: 1.125; /* 18px */
   margin: 0;
@@ -88,7 +88,7 @@ button:focus {
 }
 
 code {
-  font-family: _fonts(monospace);
+  @include _monospace;
   font-weight: 300;
 }
 
@@ -132,7 +132,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: _fonts(sans-serif);
+  @include _sans-serif;
   font-weight: 700;
   margin: 0;
 }
@@ -221,7 +221,7 @@ input[type="text"] {
   border-style: solid;
   border-width: 0.0625em; /* 1px */
   @include _color(gray, 700);
-  font-family: _fonts(sans-serif);
+  @include _sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.875; /* 30px */
@@ -271,7 +271,7 @@ pre {
 
 table {
   border-collapse: collapse;
-  font-family: _fonts(sans-serif);
+  @include _sans-serif;
   font-weight: 400;
   margin: 0 0 2.4em;
   width: 100%;

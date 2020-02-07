@@ -1,14 +1,26 @@
-.monospace {
+@mixin _monospace {
   font-family: source-code-pro, // 300, 300 italic
                monospace;
 }
 
-.sans-serif {
+.monospace {
+  @include _monospace;
+}
+
+@mixin _sans-serif {
   font-family: soleil, // 400, 400 italic, 700, 700 italic
                sans-serif;
 }
 
-.serif {
+.sans-serif {
+  @include _sans-serif;
+}
+
+@mixin _serif {
   font-family: source-serif-pro, // 300, 300 italic, 600, 600 italic
                serif;
+}
+
+.serif {
+  @include _serif;
 }

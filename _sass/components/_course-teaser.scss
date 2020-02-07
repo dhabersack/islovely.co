@@ -23,7 +23,7 @@
   // @include _color(gray, 600);
   // display: flex;
   // flex-wrap: wrap;
-  // font-family: _fonts(sans-serif);
+  // @include _sans-serif;
   font-weight: 400;
   // padding: 1.2em 1.5em;
 }

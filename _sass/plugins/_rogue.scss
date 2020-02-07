@@ -2,7 +2,7 @@
   @include _background-color(gray, 800);
   border-radius: 0.8em;
   @include _color(gray, 100);
-  font-family: _fonts(monospace);
+  @include _monospace;
   font-weight: 300;
   margin: 0 0 2.4em;
   overflow-x: auto;
