@@ -1,8 +1,7 @@
-<div class="video">
-  <div class="video__video-wrapper">
+<div>
+  <div class="intrinsic-ratio-16-by-10 margin-bottom-xxs">
     {% if video.vimeoId %}
       <iframe
-        class="video__video"
         src="https://player.vimeo.com/video/{{ video.vimeoId }}?byline=false&title=false"
         frameborder="0"
         allow="autoplay; fullscreen"
@@ -12,7 +11,6 @@
 
     {% if video.youtubeId %}
       <iframe
-        class="video__video"
         src="https://www.youtube.com/embed/{{ video.youtubeId }}"
         frameborder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -21,14 +19,14 @@
     {% endif %}
   </div>
 
-  <h4 class="video__title">
-    <span class="video__number">
+  <h4 class="font-size-xs font-weight-400">
+    <span class="color-gray-500">
       #{{ video.number }}
     </span>
 
     {{ video.title }}
 
-    <span class="video__duration">
+    <span class="color-gray-500">
       ({{ video.duration }})
     </span>
   </h4>
