@@ -1,6 +1,7 @@
 @mixin _monospace {
   font-family: source-code-pro, // 300, 300 italic
                monospace;
+  -webkit-font-smoothing: auto;
 }
 
 .monospace {
@@ -8,10 +9,12 @@
 }
 
 @mixin _sans-serif {
-  font-family: 'Inter var',
-               'Inter',
-               soleil, // 400, 400 italic, 700, 700 italic
-               sans-serif;
+  font-family: Inter, sans-serif;
+  -webkit-font-smoothing: antialiased;
+
+  @supports (font-variation-settings: normal) {
+    font-family: 'Inter var', Inter, sans-serif;
+  }
 }
 
 .sans-serif {

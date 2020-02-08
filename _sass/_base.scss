@@ -198,16 +198,12 @@ hr {
 }
 
 html {
+  @include _sans-serif;
   box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
   font-kerning: auto;
   font-size: 62.5%; /* 10px */
   height: 100%;
   line-height: 1.5;
-
-  @supports (font-variation-settings: normal) {
-    font-family: 'Inter var', sans-serif;
-  }
 }
 
 img {
