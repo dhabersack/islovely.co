@@ -1,31 +1,11 @@
-:root {
-  --body-copy-font-size: 1.6rem;
-  --body-copy-line-height: 1.5; /* 24px */
-
-  @media ($query-extra-small) {
-    --body-copy-font-size: 1.8rem;
-    --body-copy-line-height: 1.5; /* 27px */
-  }
-
-  @media ($query-small) {
-  }
+@mixin body-copy {
+  @include _font-size(xs, medium);
 
   @media ($query-medium) {
-    --body-copy-font-size: 2rem;
-    --body-copy-line-height: 1.5; /* 30px */
-  }
-
-  @media ($query-large) {
-    --body-copy-font-size: 2.2rem;
-    --body-copy-line-height: 1.5; /* 33px */
+    @include _font-size(s, long);
   }
 
   @media ($query-extra-large) {
+    @include _font-size(m, large);
   }
-}
-
-@mixin body-copy {
-  font-size: var(--body-copy-font-size);
-  font-weight: 300;
-  line-height: var(--body-copy-line-height);
 }

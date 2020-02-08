@@ -10,14 +10,14 @@
 {% endfor %}
 
 {% if urls.size > 1 %}
-  <nav class="margin-bottom-xl">
+  <nav class="font-weight-500 margin-bottom-xl">
     <p class="font-size-xs-medium margin-0">
       {% for url in urls %}
         {% assign document = all_documents | where: "url", url | first %}
         {% assign title = document.navigation_title | default: document.title | replace_regexp: ':[a-z_]*?:', '' | strip %}
 
         {% if forloop.last %}
-          <span class="color-gray-500 color-red-400">
+          <span class="color-gray-500">
             {{ title }}
           </span>
         {% else %}

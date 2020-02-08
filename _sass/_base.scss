@@ -61,8 +61,7 @@ blockquote p:last-of-type {
 
 body {
   @include _background-color(gray, 100);
-  color: $color-primary-content;
-  font-weight: 300;
+  @include _color(gray, 900);
   height: 100%;
   margin: 0;
   padding: 0;
@@ -74,9 +73,9 @@ button {
   border-radius: 0.25em; /* 4px */
   @include _color(gray, 100);
   cursor: pointer;
-  @include _font-size(xs, short);
+  @include _font-size(xs, medium);
   margin: 0;
-  padding: 0.9375em 1.25em; /* 15px 20px */
+  padding: 12px 1.25em; /* 12px 20px */
 }
 
 button:hover,
@@ -211,7 +210,7 @@ input[type="text"] {
   @include _font-size(xs, medium);
   font-weight: 400;
   margin: 0;
-  padding: 11px 0.5625em; /* 8px 9px */
+  padding: 11px 0.5625em; /* 11px 9px */
 }
 
 input[type="email"]:focus,

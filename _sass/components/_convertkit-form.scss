@@ -25,7 +25,7 @@
 }
 
 .convertkit-form__disclaimer {
-  color: $color-secondary-content;
+  @include _color(gray, 700);
   @include _font-size(xs, medium);
   font-style: italic;
   margin: 0;
