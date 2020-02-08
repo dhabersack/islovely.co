@@ -5,7 +5,7 @@
 }
 
 .icon__label {
-  @include _font-size(xs, medium);
+  @include _font-size(16, medium);
   margin-bottom: 0;
   white-space: nowrap;
 }

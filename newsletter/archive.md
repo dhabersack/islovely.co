@@ -9,11 +9,11 @@ These are some of my previous newsletters. [Sign up](/newsletter/) if you want t
 
 {% for newsletter in newsletters %}
   <div class="margin-bottom-xl">
-    <span class="color-gray-700 font-size-xxs-short">
+    <span class="color-gray-700 font-size-12-short">
       {{ newsletter.date | date: "%B %-d, %Y" }}
     </span>
 
-    <h2 class="font-size-s-medium margin-0">
+    <h2 class="font-size-20-medium margin-0">
       <a href="{{ newsletter.url | prepend: site.baseurl }}">
         {{ newsletter.title }}
       </a>

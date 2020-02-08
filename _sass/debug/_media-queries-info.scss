@@ -6,7 +6,7 @@ html.debug {
     @include _color(gray, 600);
     content: 'no breakpoint';
     display: block;
-    @include _font-size(xxs, medium);
+    @include _font-size(12, medium);
     padding: 0.5em 0.75em; /* 6px 9px */
     position: fixed;
     right: 0;

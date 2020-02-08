@@ -11,7 +11,7 @@
 }
 
 .convertkit-form__alert li {
-  @include _font-size(xs, short);
+  @include _font-size(16, short);
 }
 
 .convertkit-form__alert:empty {
@@ -26,7 +26,7 @@
 
 .convertkit-form__disclaimer {
   @include _color(gray, 700);
-  @include _font-size(xs, medium);
+  @include _font-size(16, medium);
   font-style: italic;
   margin: 0;
 }
@@ -59,7 +59,7 @@
   border: 1px solid _color(green, 200);
   border-radius: 4px;
   @include _color(green, 500);
-  @include _font-size(xs, short);
+  @include _font-size(16, short);
   flex: 1 0 auto;
   list-style: none;
   margin: 1.6em 0; /* 24px 0 */

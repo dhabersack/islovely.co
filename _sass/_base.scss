@@ -73,7 +73,7 @@ button {
   border-radius: 0.25em; /* 4px */
   @include _color(gray, 100);
   cursor: pointer;
-  @include _font-size(xs, medium);
+  @include _font-size(16, medium);
   margin: 0;
   padding: 12px 1.25em; /* 12px 20px */
 }
@@ -91,7 +91,7 @@ code {
 figcaption {
   @include _color(gray, 500);
   font-size: 1.2rem;
-  @include _font-size(xs, short);
+  @include _font-size(16, short);
   font-style: italic;
   margin: 6px 0 0;
   text-align: center;
@@ -132,46 +132,46 @@ h6 {
 }
 
 h1 {
-  @include _font-size(m, medium);
+  @include _font-size(24, medium);
   margin: 0.9em 0 0.4em; /* 27px 0 12px */
 
   @media ($query-extra-small) {
-    @include _font-size(l, medium);
+    @include _font-size(32, medium);
     margin: 0.75em 0 0.5em; /* 27px 0 18px */
   }
 
   @media ($query-large) {
-    @include _font-size(xl, medium);
+    @include _font-size(40, medium);
     margin: 0.75em 0 0.525em; /* 30px 0 21px */
   }
 }
 
 h2 {
-  @include _font-size(s, medium);
+  @include _font-size(20, medium);
   margin: 1em 0 0.375em; /* 24px 0 9px */
 
   @media ($query-extra-small) {
-    @include _font-size(m, medium);
+    @include _font-size(24, medium);
     margin: 0.9em 0 0.4em; /* 27px 0 12px */
   }
 
   @media ($query-large) {
-    @include _font-size(l, medium);
+    @include _font-size(32, medium);
     margin: 0.75em 0 0.5em; /* 27px 0 18px */
   }
 }
 
 h3 {
-  @include _font-size(xs, medium);
+  @include _font-size(16, medium);
   margin: 1.05em 0 0.3em; /* 21px 0 6px */
 
   @media ($query-extra-small) {
-    @include _font-size(s, medium);
+    @include _font-size(20, medium);
     margin: 1em 0 0.375em; /* 24px 0 9px */
   }
 
   @media ($query-large) {
-    @include _font-size(m, medium);
+    @include _font-size(24, medium);
     margin: 0.9em 0 0.4em; /* 27px 0 12px */
   }
 }
@@ -207,7 +207,7 @@ input[type="text"] {
   border-style: solid;
   border-width: 0.0625em; /* 1px */
   @include _color(gray, 700);
-  @include _font-size(xs, medium);
+  @include _font-size(16, medium);
   font-weight: 400;
   margin: 0;
   padding: 11px 0.5625em; /* 11px 9px */
@@ -272,7 +272,7 @@ tbody th {
 }
 
 td {
-  @include _font-size(xs, medium);
+  @include _font-size(16, medium);
   padding: 0.375em 0.625em; /* 6px 10px */
 }
 
@@ -285,7 +285,7 @@ tfoot th {
 }
 
 th {
-  @include _font-size(xs, medium);
+  @include _font-size(16, medium);
   font-weight: 700;
   padding: 0.375em 0.625em; /* 6px 10px */
 }

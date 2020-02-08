@@ -1,7 +1,7 @@
 // add 14px and 18px, remove 40px?
 
 $_font-sizes: (
-  xxs: (
+  12: (
     font-size: 1.2rem,
     letter-spacing: 0,
     line-height: (
@@ -10,7 +10,7 @@ $_font-sizes: (
       long: 1.75 /* 21px */
     )
   ),
-  xs: (
+  16: (
     font-size: 1.6rem,
     letter-spacing: -0.011em,
     line-height: (
@@ -19,7 +19,7 @@ $_font-sizes: (
       long: 1.6875 /* 27px */
     )
   ),
-  s: (
+  20: (
     font-size: 2rem,
     letter-spacing: -0.017em,
     line-height: (
@@ -28,7 +28,7 @@ $_font-sizes: (
       long: 1.5 /* 30px */
     )
   ),
-  m: (
+  24: (
     font-size: 2.4rem,
     letter-spacing: -0.019em,
     line-height: (
@@ -37,7 +37,7 @@ $_font-sizes: (
       long: 1.5 /* 36px */
     )
   ),
-  l: (
+  32: (
     font-size: 3.2rem,
     letter-spacing: -0.021em,
     line-height: (
@@ -46,7 +46,7 @@ $_font-sizes: (
       long: 1.5 /* 48px */
     )
   ),
-  xl: (
+  40: (
     font-size: 4rem,
     letter-spacing: -0.022em,
     line-height: (
@@ -55,7 +55,7 @@ $_font-sizes: (
       long: 1.6 /* 60px */
     )
   ),
-  xxl: (
+  48: (
     font-size: 4.8rem,
     letter-spacing: -0.022em,
     line-height: (

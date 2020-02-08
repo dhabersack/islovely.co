@@ -12,7 +12,7 @@
 // }
 
 // .course-teaser__excerpt {
-//   @include _font-size(xs, medium);
+//   @include _font-size(16, medium);
 //   margin: 0;
 // }
 
@@ -27,13 +27,13 @@
 }
 
 // .course-teaser__heading {
-//   @include _font-size(xs, short);
+//   @include _font-size(16, short);
 //   margin: 0 0 0.375em; /* 0 0 6px */
 // }
 
 .course-teaser__meta {
   display: inline-block;
-  @include _font-size(xxs, medium);
+  @include _font-size(12, medium);
   padding: 3px 0 3px 28px;
   position: relative;
 }
