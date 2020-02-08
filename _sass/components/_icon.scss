@@ -5,8 +5,7 @@
 }
 
 .icon__label {
-  font-size: 1.6rem;
-  line-height: 1.5; /* 18px */
+  @include _font-size(xs, medium);
   margin-bottom: 0;
   white-space: nowrap;
 }

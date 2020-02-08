@@ -1,17 +1,94 @@
 // add 14px and 18px, remove 40px?
 
 $_font-sizes: (
-  "xxs": 1.2rem,
-  "xs":  1.6rem,
-  "s":   2.0rem,
-  "m":   2.4rem,
-  "l":   3.2rem,
-  "xl":  4.0rem,
-  "xxl": 4.8rem
+  xxs: (
+    font-size: 1.2rem,
+    letter-spacing: 0,
+    line-height: (
+      short: 1.25, /* 15px */
+      medium: 1.5, /* 18px */
+      long: 1.75 /* 21px */
+    )
+  ),
+  xs: (
+    font-size: 1.6rem,
+    letter-spacing: -0.011em,
+    line-height: (
+      short: 1.3125, /* 21px */
+      medium: 1.5, /* 24px */
+      long: 1.6875 /* 27px */
+    )
+  ),
+  s: (
+    font-size: 2rem,
+    letter-spacing: -0.017em,
+    line-height: (
+      short: 1.2, /* 24px */
+      medium: 1.35, /* 27px */
+      long: 1.5 /* 30px */
+    )
+  ),
+  m: (
+    font-size: 2.4rem,
+    letter-spacing: -0.019em,
+    line-height: (
+      short: 1.25, /* 30px */
+      medium: 1.375, /* 33px */
+      long: 1.5 /* 36px */
+    )
+  ),
+  l: (
+    font-size: 3.2rem,
+    letter-spacing: -0.021em,
+    line-height: (
+      short: 1.125, /* 36px */
+      medium: 1.3125, /* 42px */
+      long: 1.5 /* 48px */
+    )
+  ),
+  xl: (
+    font-size: 4rem,
+    letter-spacing: -0.022em,
+    line-height: (
+      short: 1.2, /* 48px */
+      medium: 1.35, /* 54px */
+      long: 1.6 /* 60px */
+    )
+  ),
+  xxl: (
+    font-size: 4.8rem,
+    letter-spacing: -0.022em,
+    line-height: (
+      short: 1.25, /* 60px */
+      medium: 1.375, /* 66px */
+      long: 1.5 /* 72px */
+    )
+  )
 );
 
-@each $size, $value in $_font-sizes {
-  .font-size-#{$size} {
-    font-size: $value;
+$_line-lengths: ('default', 'short', 'medium', 'long');
+
+@mixin _font-size($size, $line-length: 'default') {
+  $config: map-get($_font-sizes, $size);
+
+  font-size: map-get($config, 'font-size');
+  letter-spacing: map-get($config, 'letter-spacing');
+
+  @if ($line-length != 'default') {
+    line-height: map-get(map-get($config, 'line-height'), $line-length);
+  }
+}
+
+@each $size, $config in $_font-sizes {
+  @each $line-length in $_line-lengths {
+    @if ($line-length == 'default') {
+      .font-size-#{$size} {
+        @include _font-size($size, $line-length);
+      }
+    } @else {
+      .font-size-#{$size}-#{$line-length} {
+        @include _font-size($size, $line-length);
+      }
+    }
   }
 }

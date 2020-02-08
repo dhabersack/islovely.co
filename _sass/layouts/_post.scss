@@ -37,8 +37,7 @@
 
 .l-post__tagged-label {
   color: $color-secondary-content;
-  font-size: 1.2rem;
-  line-height: 1.5; /* 18px */
+  @include _font-size(xxs, medium);
   margin: 0 0.5em 0.5em 0; /* 0 6px 6px 0 */
   padding: 0.25em 0; /* 3px 0 */
 }

@@ -9,8 +9,7 @@
 }
 
 .categories__count {
-  font-size: 1.2rem;
-  line-height: 1.5; /* 18px */
+  @include _font-size(xxs, medium);
 }
 
 .categories__tag {}
