@@ -136,12 +136,12 @@ h1 {
   margin: 0.9em 0 0.4em; /* 27px 0 12px */
 
   @media ($query-extra-small) {
-    @include _font-size(32, medium);
+    @include _font-size(30, medium);
     margin: 0.75em 0 0.5em; /* 27px 0 18px */
   }
 
   @media ($query-large) {
-    @include _font-size(40, medium);
+    @include _font-size(36, medium);
     margin: 0.75em 0 0.525em; /* 30px 0 21px */
   }
 }
@@ -156,7 +156,7 @@ h2 {
   }
 
   @media ($query-large) {
-    @include _font-size(32, medium);
+    @include _font-size(30, medium);
     margin: 0.75em 0 0.5em; /* 27px 0 18px */
   }
 }
