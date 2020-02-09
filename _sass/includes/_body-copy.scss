@@ -2,10 +2,10 @@
   @include _font-size(16, medium);
 
   @media ($query-medium) {
-    @include _font-size(20, long);
+    @include _font-size(18, long);
   }
 
   @media ($query-extra-large) {
-    @include _font-size(24, large);
+    @include _font-size(20, large);
   }
 }

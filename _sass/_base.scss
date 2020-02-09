@@ -61,7 +61,7 @@ blockquote p:last-of-type {
 
 body {
   @include _background-color(gray, 100);
-  @include _color(gray, 900);
+  @include _color(gray, 700);
   height: 100%;
   margin: 0;
   padding: 0;
@@ -91,7 +91,7 @@ code {
 figcaption {
   @include _color(gray, 500);
   font-size: 1.2rem;
-  @include _font-size(16, short);
+  @include _font-size(12, short);
   font-style: italic;
   margin: 6px 0 0;
   text-align: center;

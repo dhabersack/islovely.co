@@ -39,7 +39,7 @@
   @include _color(gray, 700);
   @include _font-size(12, medium);
   margin: 0 0.5em 0.5em 0; /* 0 6px 6px 0 */
-  padding: 0.25em 0; /* 3px 0 */
+  padding: 0.5em 0; /* 3px 0 */
 }
 
 .l-post__tags {

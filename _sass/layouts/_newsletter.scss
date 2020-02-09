@@ -27,7 +27,8 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 1.2em;
-  border: 2px solid _color(blue, 500);
+  border: 2px solid;
+  @include _border-color(blue, 500);
   border-radius: 50%;
   content: '';
   display: block;
