@@ -1,5 +1,3 @@
-// add 14px and 18px, remove 40px?
-
 $_font-sizes: (
   12: (
     font-size: 1.2rem,
@@ -50,8 +48,8 @@ $_font-sizes: (
     font-size: 2.4rem,
     letter-spacing: -0.019em,
     line-height: (
-      short: 1.5, /* 36px */
-      medium: 1.625, /* 39px */
+      short: 1.25, /* 30px */
+      medium: 1.5, /* 36px */
       long: 1.75 /* 42px */
     )
   ),
