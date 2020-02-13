@@ -7,18 +7,18 @@
   position: relative;
 
   @media ($query-extra-small) {
-    margin-bottom: 1em; /* 18px */
-    padding-left: 2em; /* 36px */
+    margin-bottom: 1.2rem;
+    padding-left: 3.5rem;
   }
 
   @media ($query-medium) {
-    margin-bottom: 0.9em; /* 18px */
-    padding-left: 1.5em; /* 30px */
+    margin-bottom: 1.2rem;
+    padding-left: 3rem;
   }
 
   @media ($query-large) {
-    margin-bottom: 21px;
-    padding-left: 1.5em; /* 33px */
+    margin-bottom: 1.8rem;
+    padding-left: 3.5rem;
   }
 }
 
