@@ -1,0 +1,21 @@
+---
+title: ":bookmark: Bookmarking the greats"
+excerpt: By looking at what others have done before us, we can find combinations of their ideas that work for us.
+---
+As a developer, making things visually attractive does not come easy to me. I look at all these beautifully designed apps and product pages in awe and admiration. While I could recreate many of their designs in code, I could not yet come up with them on my own. You can learn anything, and I am trying to make the process of learning how to design easier for myself.
+
+Paraphrasing Mark Twain here: there are no new ideas, only remixes of old ideas. By looking at what others have done before us, we can find combinations of their ideas that work for us. That does not mean copying exactly what others have done. If we look at other designs for inspiration, we can learn what makes them work. By studying the greats, we can learn to see which attributes make them great.
+
+To do that, I find it useful to always have a collection of sites I can study available. I have started bookmarking sites I find beautiful so I can browse through them later. Whenever I am in need of inspiration, I can open my collection and see how they do things. Here are some of the sites I currently have bookmarked under "Design Inspiration":
+
+- Basecamp
+- DigitalOcean
+- Duolingo
+- Intercom
+- Netlify
+- Notion
+- Stripe
+
+What is missing on this list? What are some apps and websites you look to for design inspiration?
+
+– Dom
