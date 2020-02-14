@@ -8,13 +8,13 @@ Paraphrasing Mark Twain here: there are no new ideas, only remixes of old ideas.
 
 To do that, I find it useful to always have a collection of sites I can study available. I have started bookmarking sites I find beautiful so I can browse through them later. Whenever I am in need of inspiration, I can open my collection and see how they do things. Here are some of the sites I currently have bookmarked under "Design Inspiration":
 
-- Basecamp
-- DigitalOcean
-- Duolingo
-- Intercom
-- Netlify
-- Notion
-- Stripe
+- [Basecamp](https://basecamp.com)
+- [DigitalOcean](https://www.digitalocean.com)
+- [Duolingo](https://www.duolingo.com)
+- [Intercom](https://www.intercom.com)
+- [Netlify](https://www.netlify.com)
+- [Notion](https://www.notion.so)
+- [Stripe](https://stripe.com)
 
 What is missing on this list? What are some apps and websites you look to for design inspiration?
 
