@@ -1,6 +1,7 @@
 {% assign is_post = page.collection == "posts" %}
 {% assign rich_previews = site.static_files | where: "type", "rich-preview" %}
 {% assign slug = page.title | slugify %}
+{% assign image = false %}
 
 {% for file in rich_previews %}
   {% if file.basename == slug %}
