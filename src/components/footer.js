@@ -12,7 +12,7 @@ export default () => (
       </a>
     </p>
 
-    <div className="flex flex-wrap justify-center list-style-none margin-0 padding-0">
+    <div className="flex flex-wrap justify-center list-style-none margin-0 margin-bottom-s padding-0">
       <a className="flex font-size-16 margin-horizontal-xs padding-vertical-xxs" href="https://github.com/domhabersack">
         <img className="margin-right-xxs" src="/icons/github.svg" alt="domhabersack on GitHub" />
 
@@ -45,5 +45,9 @@ export default () => (
         </span>
       </a>
     </div>
+
+    <p className="font-size-14 gray-600">
+      Illustrations by <a href="https://icons8.com">Icons8</a>.
+    </p>
   </footer>
 )
