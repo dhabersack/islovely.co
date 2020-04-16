@@ -1,0 +1,153 @@
+$_padding: (
+  horizontal: (
+    0:                 0,
+    auto:              auto,
+    xxs:               0.5rem,
+    xxs-minus-border:  0.4rem,
+    xs:                1rem,
+    xs-minus-border:   0.9rem,
+    s:                 1.5rem,
+    s-minus-border:    1.4rem,
+    m:                 2rem,
+    m-minus-border:    1.9rem,
+    l:                 2.5rem,
+    l-minus-border:    2.4rem,
+    xl:                3rem,
+    xl-minus-border:   2.9rem,
+    xxl:               3.5rem,
+    xxl-minus-border:  3.4rem,
+    span: var(--content-horizontal-padding)
+  ),
+  vertical: (
+    0:                 0,
+    auto:              auto,
+    xxs:               0.3rem,
+    xxs-minus-border:  0.2rem,
+    xs:                0.6rem,
+    xs-minus-border:   0.5rem,
+    s:                 1.2rem,
+    s-minus-border:    1.1rem,
+    m:                 2.4rem,
+    m-minus-border:    2.3rem,
+    l:                 4.8rem,
+    l-minus-border:    4.7rem,
+    xl:                6.0rem,
+    xl-minus-border:   5.9rem,
+    xxl:               9.6rem,
+    xxl-minus-border:  9.5rem
+  )
+);
+
+$sizes: (
+  0,
+  auto,
+  xxs,
+  xxs-minus-border,
+  xs,
+  xs-minus-border,
+  s,
+  s-minus-border,
+  m,
+  m-minus-border,
+  l,
+  l-minus-border,
+  xl,
+  xl-minus-border,
+  xxl,
+  xxl-minus-border,
+  span
+);
+
+@function get-horizontal-padding($size) {
+  @return map-get(map-get($_padding, horizontal), $size);
+}
+
+@function get-vertical-padding($size) {
+  @return map-get(map-get($_padding, vertical), $size);
+}
+
+@mixin _padding($size) {
+  padding: get-vertical-padding($size) get-horizontal-padding($size);
+}
+
+@mixin _padding-top($size) {
+  padding-top: get-vertical-padding($size);
+}
+
+@mixin _padding-right($size) {
+  padding-right: get-horizontal-padding($size);
+}
+
+@mixin _padding-bottom($size) {
+  padding-bottom: get-vertical-padding($size);
+}
+
+@mixin _padding-left($size) {
+  padding-left: get-horizontal-padding($size);
+}
+
+@mixin _padding-vertical($size) {
+  @include _padding-top($size);
+  @include _padding-bottom($size);
+}
+
+@mixin _padding-horizontal($size) {
+  @include _padding-left($size);
+  @include _padding-right($size);
+}
+
+@each $size in $sizes {
+  .padding-#{$size} {
+    @include _at-breakpoints {
+      @include _padding($size);
+    }
+  }
+}
+
+@each $size in $sizes {
+  .padding-top-#{$size} {
+    @include _at-breakpoints {
+      @include _padding-top($size);
+    }
+  }
+}
+
+@each $size in $sizes {
+  .padding-right-#{$size} {
+    @include _at-breakpoints {
+      @include _padding-right($size);
+    }
+  }
+}
+
+@each $size in $sizes {
+  .padding-bottom-#{$size} {
+    @include _at-breakpoints {
+      @include _padding-bottom($size);
+    }
+  }
+}
+
+@each $size in $sizes {
+  .padding-left-#{$size} {
+    @include _at-breakpoints {
+      @include _padding-left($size);
+    }
+  }
+}
+
+@each $size in $sizes {
+  .padding-vertical-#{$size} {
+    @include _at-breakpoints {
+      @include _padding-vertical($size);
+    }
+  }
+}
+
+@each $size in $sizes {
+  .padding-horizontal-#{$size} {
+    @include _at-breakpoints {
+      @include _padding-horizontal($size);
+    }
+  }
+}

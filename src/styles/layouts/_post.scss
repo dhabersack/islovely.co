@@ -1,0 +1,19 @@
+.l-post__hero {
+  margin: 0 auto 2.4em;
+  width: 100%;
+
+  @include _s {
+    margin-bottom: 2.4em;
+    margin-top: 0;
+  }
+
+  @include _m {
+    width: 100%;
+  }
+
+  @include _l {
+    margin-bottom: 2.4em;
+    margin-top: 0;
+    width: 100%;
+  }
+}

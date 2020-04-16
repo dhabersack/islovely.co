@@ -1,0 +1,51 @@
+// .l-default__main {
+//   li {
+//     @include body-copy;
+//     margin: 0 0 0.1875em; /* 0 0 3px */
+//
+//     @include _xs {
+//       margin-bottom: #{(6 / 18)}em;
+//     }
+//
+//     @include _m {
+//       margin-bottom: 0.3em; /* 6px */
+//     }
+//
+//     @include _l {
+//       margin-bottom: #{(6 / 22)}em;
+//     }
+//   }
+//
+//   li:last-of-type {
+//     margin-bottom: 0;
+//   }
+//
+//   ol,
+//   ul {
+//     margin: 0 auto 1.5em;
+//     padding: 0;
+//
+//     @include _xs {
+//       margin-bottom: 1.8em;
+//       width: _columns(10);
+//     }
+//
+//     @include _m {
+//       margin-bottom: 2.1em;
+//       width: _columns(8, 10);
+//     }
+//
+//     @include _l {
+//       margin-bottom: 2.4em;
+//       width: _columns(9);
+//     }
+//   }
+// }
+//
+// .l-default__main::after {
+//   content: '\00a0'; /* &nbsp; */
+//   display: block;
+//   margin-top: var(--space);
+//   height: 0px;
+//   visibility: hidden;
+// }

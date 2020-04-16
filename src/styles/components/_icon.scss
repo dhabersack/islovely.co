@@ -1,0 +1,27 @@
+.icon {
+  align-items: center;
+  display: flex;
+  height: 100%;
+}
+
+.icon__label {
+  @include _font-size(16, medium);
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+
+.icon__svg {
+  fill: currentColor;
+  flex-shrink: 0;
+  margin-right: 0.5em;
+
+  @include _s {
+    height: 3em;
+    width: 3em;
+  }
+
+  @include _l {
+    height: 3.6em;
+    width: 3.6em;
+  }
+}

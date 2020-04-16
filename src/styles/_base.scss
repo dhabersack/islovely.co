@@ -1,0 +1,279 @@
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+a {
+  @include _color(blue, 500);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  @include _color(blue, 500);
+}
+
+blockquote {
+  @include _columns(10);
+  font-style: italic;
+  margin: 2.4em auto;
+  position: relative;
+
+  @include _s {
+    margin-bottom: 3em;
+    margin-top: 3em;
+  }
+
+  @include _m {
+    @include _columns(8, 10);
+  }
+
+  @include _l {
+    @include _columns(9);
+    margin-bottom: 3.6em;
+    margin-top: 3.6em;
+  }
+}
+
+blockquote::before {
+  @include _color(gray, 700);
+  content: '“';
+  display: block;
+  font-size: 4.8rem;
+  font-weight: 700;
+  position: absolute;
+  right: calc(100% + 1rem);
+  top: -0.375em; /* -18px */
+
+  @include _m {
+    font-size: 6.4rem;
+    top: -0.375em; /* -24px */
+  }
+}
+
+blockquote p:last-of-type {
+  margin-bottom: 0;
+}
+
+body {
+  @include _background-color(white);
+  @include _color(gray, 700);
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  @include _background-color(blue, 500);
+  border: 0;
+  @include _border-radius(xxs);
+  @include _color(gray, 100);
+  cursor: pointer;
+  @include _font-size(16, medium);
+  margin: 0;
+  padding: 12px 1.25em; /* 12px 20px */
+}
+
+button:hover,
+button:focus {
+  outline:none;
+}
+
+code {
+  @include _monospace;
+  font-weight: 300;
+}
+
+figcaption {
+  @include _color(gray, 500);
+  font-size: 1.2rem;
+  @include _font-size(12, short);
+  font-style: italic;
+  margin: 6px 0 0;
+  text-align: center;
+}
+
+figure {
+  margin: 2.4em auto;
+  width: _columns(10);
+
+  @include _s {
+    margin-bottom: 3em;
+    margin-top: 3em;
+  }
+
+  @include _m {
+    width: _columns(8, 10);
+  }
+
+  @include _l {
+    margin-bottom: 3.6em;
+    margin-top: 3.6em;
+    width: _columns(9);
+  }
+}
+
+figure img {
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  margin: 0;
+}
+
+h1 {
+  @include _font-size(24, short);
+  margin: 0.9em 0 0.4em; /* 27px 0 12px */
+
+  @include _xs {
+    @include _font-size(30, short);
+    margin: 0.75em 0 0.5em; /* 27px 0 18px */
+  }
+
+  @include _l {
+    @include _font-size(36, short);
+    margin: 0.75em 0 0.525em; /* 30px 0 21px */
+  }
+}
+
+h2 {
+  @include _font-size(20, short);
+  margin: 1em 0 0.375em; /* 24px 0 9px */
+
+  @include _xs {
+    @include _font-size(24, short);
+    margin: 0.9em 0 0.4em; /* 27px 0 12px */
+  }
+
+  @include _l {
+    @include _font-size(30, short);
+    margin: 0.75em 0 0.5em; /* 27px 0 18px */
+  }
+}
+
+h3 {
+  @include _font-size(16, medium);
+  margin: 1.05em 0 0.3em; /* 21px 0 6px */
+
+  @include _xs {
+    @include _font-size(20, short);
+    margin: 1em 0 0.375em; /* 24px 0 9px */
+  }
+
+  @include _l {
+    @include _font-size(24, short);
+    margin: 0.9em 0 0.4em; /* 27px 0 12px */
+  }
+}
+
+hr {
+  @include _background-color(gray, 300);
+  border: 0;
+  border-radius: 50%;
+  height: 0.1em;
+  margin: 1.7em auto 2.9em;
+  width: 90%;
+}
+
+html {
+  @include _sans-serif;
+  box-sizing: border-box;
+  font-kerning: auto;
+  font-size: 62.5%; /* 10px */
+  height: 100%;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%; /* prevent font-scaling on rotation in mobile Safari */
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+p {
+  @include body-copy;
+
+  margin: 0 0 0.9375em; /* 0 0 15px */
+
+  @include _xs {
+    margin-bottom: 1em; /* 18px */
+  }
+
+  @include _m {
+    margin-bottom: 1.05em; /* 21px */
+  }
+
+  @include _l {
+    margin-bottom: #{(24 / 22)}em;
+  }
+}
+
+p code {
+  @include _background-color(gray, 300);
+  border-radius: 0.2em;
+  @include _color(gray, 800);
+  font-size: 0.9em;
+  padding: 0 0.2em;
+}
+
+p strong {
+  font-weight: 600;
+}
+
+pre {
+  margin: 0;
+}
+
+table {
+  border-collapse: collapse;
+  font-weight: 400;
+  margin: 0 0 2.4em;
+  width: 100%;
+}
+
+tbody {}
+
+tbody td {
+  @include _background-color(gray, 200);
+}
+
+tbody th {
+  @include _background-color(gray, 300);
+  text-align: left;
+}
+
+td {
+  @include _font-size(16, medium);
+  padding: 0.375em 0.625em; /* 6px 10px */
+}
+
+tfoot {
+  @include _background-color(gray, 400);
+}
+
+tfoot th {
+  text-align: left;
+}
+
+th {
+  @include _font-size(16, medium);
+  font-weight: 700;
+  padding: 0.375em 0.625em; /* 6px 10px */
+}
+
+thead {}
+
+thead th:not(:empty) {
+  @include _background-color(gray, 400);
+  text-align: left;
+}

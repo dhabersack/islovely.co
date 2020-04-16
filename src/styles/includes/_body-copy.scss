@@ -1,0 +1,7 @@
+@mixin body-copy {
+  @include _font-size(16, medium);
+
+  @include _m {
+    @include _font-size(18, medium);
+  }
+}

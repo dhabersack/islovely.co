@@ -1,0 +1,29 @@
+@mixin _border-color($color, $shade: 0) {
+  border-color: map-get(map-get($_colors, $color), $shade);
+}
+
+@each $color, $list in $_colors {
+  @each $label, $value in $list {
+    @if $label == 0 {
+      .border-color-#{"" + $color} {
+        border-color: $value;
+      }
+
+      .focus\:border-color-#{"" + $color} {
+        &:focus {
+          border-color: $value;
+        }
+      }
+    } @else {
+      .border-color-#{"" + $color}-#{$label} {
+        border-color: $value;
+      }
+
+      .focus\:border-color-#{"" + $color}-#{$label} {
+        &:focus {
+          border-color: $value;
+        }
+      }
+    }
+  }
+}

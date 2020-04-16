@@ -1,0 +1,9 @@
+@mixin _list-style($style) {
+  list-style: $style;
+}
+
+@each $style in (none) {
+  .list-style-#{$style} {
+    @include _list-style($style);
+  }
+}

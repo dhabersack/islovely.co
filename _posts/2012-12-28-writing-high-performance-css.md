@@ -1,9 +1,9 @@
 ---
 title: Writing high-performance CSS
-category: CSS
+categories: ["CSS"]
 excerpt: Aside from the established best practices for reducing load times, a few things that can be done to stylesheets to make browsers render pages faster.
-hero_alt: Goal markers on a running track.
-hero_caption: We can reduce the time it takes browsers to interpret stylesheets by following a few best practices.
+heroAlt: Goal markers on a running track.
+heroCaption: We can reduce the time it takes browsers to interpret stylesheets by following a few best practices.
 ---
 **Disclaimer:** Browsers are incredibly fast at parsing CSS, which makes gains through optimization marginal at best. There are a lot of other areas to tackle first to improve load times, like lowering the number of requests as well as file sizes of assets such as stylesheets, images and JavaScript.
 
@@ -59,19 +59,19 @@ If a selector consisting of multiple tags contains a class somewhere, a new clas
 
 In accordance with the above rules, these selectors:
 
-{% highlight css %}
+```css
 header nav ul li a#login {}
 table > thead > tr > th {}
 ul.navigation > li a {}
-{% endhighlight %}
+```
 
 can safely be rewritten as:
 
-{% highlight css %}
+```css
 #login {}
 thead th {}
 .navigation a {}
-{% endhighlight %}
+```
 
 ## Efficient rules
 
@@ -89,7 +89,7 @@ Writing bad stylesheets for preprocessing will result in bad stylesheets just th
 
 Consider the following CSS as written in [Sass](http://sass-lang.com/ 'Sass - Syntactically Swesome Stylesheets'):
 
-{% highlight scss %}
+```scss
 dl {
   overflow: hidden;
 
@@ -103,11 +103,11 @@ dl {
     width: 50%;
   }
 }
-{% endhighlight %}
+```
 
 While this makes it obvious that definition terms and definition descriptions are always nested in definition lists, this is the only way they _can_ appear, so the nesting should be removed and the rules rewritten as:
 
-{% highlight scss %}
+```scss
 dd {
   clear: left;
 }
@@ -121,7 +121,7 @@ dt {
 dl {
   overflow: hidden;
 }
-{% endhighlight %}
+```
 
 Preprocessors do not result in a decrease in performance when respecting the aforementioned rules, assuming they are deployed as static assets and not processed client-side.
 

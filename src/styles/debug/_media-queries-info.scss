@@ -1,0 +1,35 @@
+html.debug {
+  body::after {
+    @include _background-color(gray, 300);
+    border-top-left-radius: 0.25em; /* 3px */
+    bottom: 0;
+    @include _color(gray, 600);
+    content: 'no breakpoint';
+    display: block;
+    @include _font-size(12, medium);
+    padding: 0.5em 0.75em; /* 6px 9px */
+    position: fixed;
+    right: 0;
+    z-index: 1001;
+
+    @include _xs {
+      content: 'extra-small';
+    }
+
+    @include _s {
+      content: 'small';
+    }
+
+    @include _m {
+      content: 'medium';
+    }
+
+    @include _l {
+      content: 'large';
+    }
+
+    @include _xl {
+      content: 'extra-large';
+    }
+  }
+}

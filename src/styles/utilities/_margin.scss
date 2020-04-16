@@ -1,0 +1,121 @@
+$_margin: (
+  horizontal: (
+    0:    0,
+    auto: auto,
+    xxs:  0.5rem,
+    xs:   1rem,
+    s:    1.5rem,
+    m:    2rem,
+    l:    2.5rem,
+    xl:   3rem,
+    xxl:  3.5rem,
+    span: calc(-1 * var(--content-horizontal-padding))
+  ),
+  vertical: (
+    0:    0,
+    auto: auto,
+    xxs:  0.3rem,
+    xs:   0.6rem,
+    s:    1.2rem,
+    m:    2.4rem,
+    l:    4.8rem,
+    xl:   6.0rem,
+    xxl:  9.6rem
+  )
+);
+
+$sizes: (0, auto, xxs, xs, s, m, l, xl, xxl, span);
+
+@function get-horizontal-margin($size) {
+  @return map-get(map-get($_margin, horizontal), $size);
+}
+
+@function get-vertical-margin($size) {
+  @return map-get(map-get($_margin, vertical), $size);
+}
+
+@mixin _margin($size) {
+  margin: get-vertical-margin($size) get-horizontal-margin($size);
+}
+
+@mixin _margin-top($size) {
+  margin-top: get-vertical-margin($size);
+}
+
+@mixin _margin-right($size) {
+  margin-right: get-horizontal-margin($size);
+}
+
+@mixin _margin-bottom($size) {
+  margin-bottom: get-vertical-margin($size);
+}
+
+@mixin _margin-left($size) {
+  margin-left: get-horizontal-margin($size);
+}
+
+@mixin _margin-vertical($size) {
+  @include _margin-top($size);
+  @include _margin-bottom($size);
+}
+
+@mixin _margin-horizontal($size) {
+  @include _margin-left($size);
+  @include _margin-right($size);
+}
+
+@each $size in $sizes {
+  .margin-#{$size} {
+    @include _at-breakpoints {
+      @include _margin($size);
+    }
+  }
+}
+
+@each $size in $sizes {
+  .margin-top-#{$size} {
+    @include _at-breakpoints {
+      @include _margin-top($size);
+    }
+  }
+}
+
+@each $size in $sizes {
+  .margin-right-#{$size} {
+    @include _at-breakpoints {
+      @include _margin-right($size);
+    }
+  }
+}
+
+@each $size in $sizes {
+  .margin-bottom-#{$size} {
+    @include _at-breakpoints {
+      @include _margin-bottom($size);
+    }
+  }
+}
+
+@each $size in $sizes {
+  .margin-left-#{$size} {
+    @include _at-breakpoints {
+      @include _margin-left($size);
+    }
+  }
+}
+
+@each $size in $sizes {
+  .margin-vertical-#{$size} {
+    @include _at-breakpoints {
+      @include _margin-vertical($size);
+    }
+  }
+}
+
+@each $size in $sizes {
+  .margin-horizontal-#{$size} {
+    @include _at-breakpoints {
+      @include _margin-horizontal($size);
+    }
+  }
+}

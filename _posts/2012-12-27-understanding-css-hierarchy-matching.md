@@ -1,9 +1,9 @@
 ---
 title: Understanding CSS hierarchy-matching
-category: CSS
+categories: ["CSS"]
 excerpt: Understanding how browsers match CSS-selectors and HTML helps us write better stylesheets.
-hero_alt: An exit-sign with an arrow pointing to the left.
-hero_caption: We can write better CSS-selectors once we know how browsers interpret them.
+heroAlt: An exit-sign with an arrow pointing to the left.
+heroCaption: We can write better CSS-selectors once we know how browsers interpret them.
 ---
 To get a feel for how CSS-selectors should be written, you need to understand how browsers match them to the related markup. The following tries to give a top-level description that might not be entirely accurate but should still give you a good enough idea of how CSS and HTML get combined during rendering.
 
@@ -13,7 +13,7 @@ To get a feel for how CSS-selectors should be written, you need to understand ho
 
 Consider a site with the following markup:
 
-{% highlight html %}
+```html
 <html>
   <head>
     <!-- omitted -->
@@ -59,7 +59,7 @@ Consider a site with the following markup:
     </section>
   </body>
 </html>
-{% endhighlight %}
+```
 
 When discarding the content and chaining all tags together according to their nesting, the path to each tag can be extracted:
 

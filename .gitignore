@@ -1,7 +1,4 @@
-_site
-.cache
-.sass-cache
-.jekyll-cache
-.jekyll-metadata
-node_modules
-public
+.env
+.cache/
+node_modules/
+public/

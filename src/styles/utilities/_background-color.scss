@@ -1,0 +1,57 @@
+@mixin _background-color($color, $shade: 0) {
+  background-color: map-get(map-get($_colors, $color), $shade);
+}
+
+@each $color, $list in $_colors {
+  @each $label, $value in $list {
+    @if $label == 0 {
+      .background-color-#{"" + $color} {
+        @include _at-breakpoints {
+          background-color: $value;
+        }
+      }
+
+      .disabled\:background-color-#{"" + $color}:disabled {
+        @include _at-breakpoints {
+          background-color: $value;
+        }
+      }
+
+      .hover\:background-color-#{"" + $color}:hover {
+        @include _at-breakpoints {
+          background-color: $value;
+        }
+      }
+
+      .visited\:background-color-#{"" + $color}:visited {
+        @include _at-breakpoints {
+          background-color: $value;
+        }
+      }
+    } @else {
+      .background-color-#{"" + $color}-#{$label} {
+        @include _at-breakpoints {
+          background-color: $value;
+        }
+      }
+
+      .disabled\:background-color-#{"" + $color}-#{$label}:disabled {
+        @include _at-breakpoints {
+          background-color: $value;
+        }
+      }
+
+      .hover\:background-color-#{"" + $color}-#{$label}:hover {
+        @include _at-breakpoints {
+          background-color: $value;
+        }
+      }
+
+      .visited\:background-color-#{"" + $color}-#{$label}:visited {
+        @include _at-breakpoints {
+          background-color: $value;
+        }
+      }
+    }
+  }
+}

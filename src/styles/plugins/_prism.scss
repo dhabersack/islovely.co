@@ -1,0 +1,106 @@
+pre[class*="language-"] {
+  @include _background-color(gray, 800);
+  @include _border-radius(xs);
+  @include _color(gray, 100);
+  @include _font-weight(300);
+  @include _margin(0);
+  @include _margin-bottom(m);
+  @include _monospace;
+  @include _padding-horizontal(xs);
+  @include _padding-vertical(s);
+  @include _width(full);
+  overflow-x: auto;
+  position: relative;
+}
+
+pre[class*="language-"] code[class*="language-"] {
+  @include _font-size(12, medium);
+
+  @include _m {
+    @include _font-size(14, medium);
+  }
+}
+
+.token.atrule {
+  @include _color(red, 400);
+}
+
+.token.attr-name {
+  @include _color(yellow, 400);
+}
+
+.token.attr-value {
+  @include _color(gray, 100);
+}
+
+.token.boolean {
+  @include _color(purple, 400);
+}
+
+.token.builtin {}
+
+.token.comment {
+  @include _color(blue, 400);
+}
+
+.token.constant {
+  @include _color(cyan, 300);
+}
+
+.token.function {
+  @include _color(cyan, 300);
+}
+
+.token.important {
+  @include _color(purple, 400);
+}
+
+.token.keyword {
+  @include _color(yellow, 400);
+}
+
+.token.number {
+  @include _color(red, 400);
+}
+
+.token.operator {}
+
+.token.property {
+  @include _color(yellow, 400);
+}
+
+.token.selector {
+  @include _color(cyan, 300);
+}
+
+.token.string {
+  @include _color(yellow, 400);
+}
+
+.token.tag {
+  @include _color(cyan, 300);
+}
+
+.token.variable {
+  @include _color(cyan, 300);
+}
+
+
+
+.language-css .token.string,
+.namespace,
+.style .token.string,
+.token.bold,
+.token.cdata,
+.token.char,
+.token.deleted,
+.token.doctype,
+.token.entity,
+.token.inserted,
+.token.italic,
+.token.prolog,
+.token.regex,
+.token.symbol,
+.token.url {
+  background: red;
+}

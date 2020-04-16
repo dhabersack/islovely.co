@@ -1,9 +1,9 @@
 ---
 title: How to name color-variables in Sass
-category: [CSS, Sass]
+categories: ["CSS", "Sass"]
 excerpt: Using semantic names, color-variables defined with CSS-preprocessors become easier to manage.
-hero_alt: A cut orange with it’s outside painted blue.
-hero_caption: Name colors after what they are used for, not what they look like.
+heroAlt: A cut orange with it’s outside painted blue.
+heroCaption: Name colors after what they are used for, not what they look like.
 ---
 One of the first benefits we gained from having variables in our CSS through preprocessors was finally consolidating all our color-values in a central location. No longer do we need to go through all stylesheets in search of a hex-value of the color blue that marketing wants to have changed to a slightly different shade of blue, but now we only need to adjust the value of a single variable. This removes an element of error, as missing a line somewhere suddenly becomes a lot less likely.
 
@@ -39,7 +39,7 @@ While the colors hidden behind these variables are not obvious from this list, t
 
 We introduce new color-variables for every new purpose of a color we encounter. We can still use color-based variable names to make this easier (in which case I add the prefix `_` to the name to signal that these variables should not be used anywhere else) and create purpose-based variables that “proxy” these values:
 
-{% highlight scss %}
+```scss
 // never use these directly!
 $_blue:   #0074d9;
 $_red:    #ff4136;
@@ -50,7 +50,7 @@ $color-brand:   $_blue;
 $color-link:    $_blue;
 $color-error:   $_red;
 $color-warning: $_yellow;
-{% endhighlight %}
+```
 
 Note that several variables can reference the same color. A single color often has several different meanings in the same design, which makes it even more important to think of them by their semantic value instead.
 
