@@ -7,7 +7,7 @@ My name is Dominik “Dom” Habersack. I love sharing what I know in any way po
   <img src="/assets/cooper-and-dom.jpg" alt="Cooper and I">
 
   <figcaption>
-    Cooper is an Elo, a not-yet-officially-recognized breed. You can follow him on Instagram at <a href="https://instagram.com/coopertheelo">@coopertheelo</a>.
+    Cooper is an Elo-pup, a not-yet-officially-recognized breed. You can follow him on Instagram at <a href="https://instagram.com/coopertheelo">@coopertheelo</a>.
   </figcaption>
 </figure>
 
