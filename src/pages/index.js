@@ -33,11 +33,11 @@ export default () => (
     <div className="align-items-center flex flex-column-reverse justify-between margin-bottom-xxl s:flex-row">
       <div className="s:columns-8 m:columns-7">
         <h1 className="font-size-30-short margin-0 margin-bottom-s xl:font-size-36-medium">
-          Learn web development through courses tailor-made for beginners.
+          Invest in your future by learning web development skills that sell.
         </h1>
 
         <p className="margin-bottom-s">
-          Level up your skills from basic to advanced with videos on HTML, CSS, JavaScript, and more.
+          Level up from basic to advanced with videos on JavaScript, testing, design, and more.
         </p>
 
         {cta}
@@ -49,29 +49,25 @@ export default () => (
     </div>
 
     <div className="margin-bottom-xxl">
-      <LandingPageBlock heading="These courses take you from novice to advanced to senior developer." imageUrl="/assets/flame/flame-page-under-construction.png">
+      <LandingPageBlock heading="Progress from novice to advanced to senior developer." imageUrl="/assets/flame/flame-page-under-construction.png">
         <p>
-          When you are just starting out, it is difficult to know where to invest your energy. What are you supposed to learn first? There are so many interesting technologies we could to use, with new ones coming out all the time. I will help you take your first steps by teaching you everything you need to get started.
+          Start here when you want to get into web development. I will take you from your first steps to being productive with modern technologies. You will gain the skills you need to get started and learn how to continue from there.
         </p>
 
         <p>
-          If you already know enough of the basics to use a technology, I will show you how to unlock their full potential. Together, we’ll dive into their advanced features so you can work with them more efficiently. We will learn how to get the most out of everything you work with so you can get more work done both better and faster.
+          If you already know the basics of a technology, I will show you how to unlock its full potential. Together, we’ll dive into their advanced features so you can get more work done both better and faster.
         </p>
       </LandingPageBlock>
     </div>
 
     <div className="margin-bottom-xxl">
-      <LandingPageBlock heading="More enjoyable and much clearer than reading documentation." imageUrl="/assets/flame/flame-books.png">
+      <LandingPageBlock heading="Stop getting frustrated by complicated documentation." imageUrl="/assets/flame/flame-books.png">
         <p>
-          Documentation can be hard to follow. It throws a lot of new and unfamiliar terms at you and expects you to “get it”. Its often abstract explanations makes it seem more complicated than it is.
+          Documentation often throws many unfamiliar terms at you and expects you to “get it”. Abstract explanations and examples make everything seem more complicated than it is. Programming does not have to be hard, and I am going to make it all make sense to you.
         </p>
 
         <p>
-          Programming does not have to be hard, and I am going to make it understandable. I will walk you through what you need to know in a way that makes sense to you.
-        </p>
-
-        <p>
-          Here is a free sample taken from one of my courses:
+          Here is a sample from one of my courses that shows how I will walk you through what you need to know:
         </p>
 
         <div className="margin-bottom-m">
@@ -80,37 +76,53 @@ export default () => (
       </LandingPageBlock>
     </div>
 
-    <LandingPageBlock heading="Learn how to build your idea yourself." imageUrl="/assets/flame/flame-design-science.png">
-      <p>
-        You learn best from building something you can create and change however you like. These courses give you the tools you need to bring your own ideas to life. Follow along with examples taken from real projects and adjust them to what <strong>you</strong> want to build.
-      </p>
-    </LandingPageBlock>
+    <div className="margin-bottom-xxl">
+      <LandingPageBlock heading="Learn how to build your ideas yourself." imageUrl="/assets/flame/flame-design-science.png">
+        <p>
+          Reading books and tutorials can only get you so far. You learn best from seeing someone build something, and then rebuilding it yourself. As we build projects taken from the real world together, you learn why and how they work.
+        </p>
 
-    <LandingPageBlock heading="Go from “changing random stuff until it works” to knowing what you are doing." imageUrl="/assets/flame/flame-no-connection.png">
-      <p>
-        Knowing “just enough to be dangerous” is, well, dangerous. If you try to fix bugs by throwing more code at a problem, you are only putting temporary bandaids on them. Those bugs are coming back to haunt you, and they will be much harder to fix when they do.
-      </p>
+        <p>
+          Following along with these courses gives you the tools you need to bring your own ideas to life. You will be able to make any change you want and adjust them to what <strong>you</strong> want to build.
+        </p>
+      </LandingPageBlock>
+    </div>
 
-      <p>
-        We will explore how to find the causes of different problems and learn to solve them methodically. This gives you the skills necessary to tackle any unforeseen challenges with ease. Those bugs won’t know what hit them!
-      </p>
-    </LandingPageBlock>
+    <div className="margin-bottom-xxl">
+      <LandingPageBlock heading="Go from “changing random stuff until it works” to knowing what you are doing." imageUrl="/assets/flame/flame-no-connection.png">
+        <p>
+          Knowing “just enough to be dangerous” is, well, dangerous. You will encounter bugs that you don’t really understand. If you fix them by throwing more code at them, those bugs will come back later. Next time, they will be a lot harder to solve.
+        </p>
 
-    <LandingPageBlock heading="Get your CV ready for the job you always wanted." imageUrl="/assets/flame/flame-upgrade.png">
-      <p>
-        You don’t have to miss out on job opportunities because you lack experience with a technology. Whether you want to get your first development job or find a new one, I want to help you close any gaps in your CV. My courses focus on skills companies look for in their candidates. We start with the basics and get you fluent in the technologies you need to get that dream job!
-      </p>
-    </LandingPageBlock>
+        <p>
+          We will learn how to find the causes of different problems and learn to solve them methodically. This gives you the skills necessary to tackle any unforeseen challenges with ease. Those bugs won’t know what hit them!
+        </p>
+      </LandingPageBlock>
+    </div>
 
-    <LandingPageBlock heading="You learn something or you get your money back." imageUrl="/assets/flame/flame-8.png">
-      <p>
-        My only goal is for you to learn something. In case my teaching style does not work for you, I offer a 30 day money back guarantee. You get a full refund if you are unhappy with one of my courses during your first month with it, no questions asked.
-      </p>
+    <div className="margin-bottom-xxl">
+      <LandingPageBlock heading="Get your CV ready for the job you always wanted." imageUrl="/assets/flame/flame-upgrade.png">
+        <p>
+          Job descriptions read like impossible checklists. They can be frustrating, whether you want to get your first development job or find a new one. You don’t have to miss out on job opportunities because you lack experience with a technology.
+        </p>
 
-      <p>
-        In case of a refund, you get to keep all materials you purchased. That way, you can try again in case you want to give it another chance later. The only thing you lose is access to any future updates I might make to the course.
-      </p>
-    </LandingPageBlock>
+        <p>
+          My courses help you fix gaps in your CV with skills companies look for in their candidates. We start with the basics and get you fluent in the technologies you need to get that dream job!
+        </p>
+      </LandingPageBlock>
+    </div>
+
+    <div className="margin-bottom-xxl">
+      <LandingPageBlock heading="You learn something or you get your money back." imageUrl="/assets/flame/flame-8.png">
+        <p>
+          My only goal is for you to learn something. In case my teaching style does not work for you, I offer a 30 day money back guarantee. You get a full refund if you are unhappy with one of my courses during your first month with it, no questions asked.
+        </p>
+
+        <p>
+          In case of a refund, you get to keep all materials you purchased. That way, you can try again in case you want to give it another chance later. The only thing you lose is access to any future updates I might make to the course.
+        </p>
+      </LandingPageBlock>
+    </div>
 
     <div className="background-color-gray-200 border-radius-xs margin-bottom-m padding-horizontal-s padding-vertical-m xs:padding-vertical-m m:align-items-start m:flex m:justify-between">
       <img alt="Dom Habersack" className="block border-radius-round box-shadow-s margin-bottom-m margin-horizontal-auto width-120 m:margin-left-0 m:margin-right-s" src="/assets/dom.jpg" />

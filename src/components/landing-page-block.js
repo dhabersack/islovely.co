@@ -5,7 +5,7 @@ export default ({
   heading,
   imageUrl
 }) => (
-  <div className="align-items-center flex flex-column margin-bottom-xxl s:align-items-start s:flex-row s:justify-between">
+  <div className="align-items-center flex flex-column s:align-items-start s:flex-row s:justify-between">
     <div className="columns-8 margin-bottom-xs xs:columns-6 s:columns-3 l:columns-4">
       <img alt="" src={imageUrl} />
     </div>
