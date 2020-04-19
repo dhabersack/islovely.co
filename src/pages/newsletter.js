@@ -1,4 +1,5 @@
 import React from 'react'
+import { graphql } from 'gatsby';
 
 import ConvertkitForm from '../components/convertkit-form'
 import Layout from '../components/layout'
