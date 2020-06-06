@@ -2,6 +2,7 @@
 title: "Writing code for others to read"
 excerpt: "The latest version of islovely.co is an improvement over the previous one, not a completely different thing."
 emoji: ":dancers:"
+isFeatured: true
 ---
 Like people-languages, programming languages have a vocabulary and grammar. In both types of languages, we can phrase what we want to say in several ways and still get the same point across. Books written with unfamiliar words are difficult to follow, if thou catch mine drift. This is what reading other people’s code feels like.
 
@@ -15,7 +16,7 @@ A good rule of thumb for naming variables and functions is:
 
 > If someone could ask “what does this mean”, it’s not a good name.
 
-The name `calculatedEstimatedTimeOfArrival()` seems very long, but it leaves no room for misinterpretation. Readers will definitely have an easier time figuring out what it does.
+The name `calculateEstimatedTimeOfArrival()` seems very long, but it leaves no room for misinterpretation. Readers will definitely have an easier time figuring out what it does.
 
 You are not writing code for yourself or the computer. You are writing code for others to read, and they might not know all those abbreviations yet. Do them a favor and use better names.
 

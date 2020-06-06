@@ -2,6 +2,7 @@
 title: "“Before we start building this…”"
 excerpt: "It’s okay to say no to things, because it allows us to focus on what is important."
 emoji: ":point_up:"
+isFeatured: true
 ---
 We saved ourselves about six months of work with a single conversation the other day. As we wrapped up one release, we started preparing for the next major project. For months, we had talked about this massive feature we were certain we _had_ to build. It would mean a big technical challenge for us. Going in, we did not even know if we could pull it off, let alone how to approach it. Sound familiar?
 
