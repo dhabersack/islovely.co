@@ -20,20 +20,20 @@ const cta = (
 export default () => (
   <Layout>
     <MetaTags
-      description="Level up your skills from basic to advanced with videos on HTML, CSS, JavaScript, and more."
-      title="Learn web development through courses tailor-made for beginners."
+      description="Level up from basic to advanced with videos on JavaScript, testing, design, and more."
+      title="Get a better job. Learn web development skills that sell."
     />
 
     <RichPreview
-      description="Level up your skills from basic to advanced with videos on HTML, CSS, JavaScript, and more."
+      description="Level up from basic to advanced with videos on JavaScript, testing, design, and more."
       permalink=""
-      title="Learn web development through courses tailor-made for beginners."
+      title="Get a better job. Learn web development skills that sell."
     />
 
     <div className="align-items-center flex flex-column-reverse justify-between margin-bottom-xxl s:flex-row">
       <div className="s:columns-8 m:columns-7">
         <h1 className="font-size-30-short margin-0 margin-bottom-s xl:font-size-36-medium">
-          Invest in your future by learning web development skills that sell.
+          Get a better job. Learn web development skills that sell.
         </h1>
 
         <p className="margin-bottom-s">
