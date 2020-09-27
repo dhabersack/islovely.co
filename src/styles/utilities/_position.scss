@@ -1,0 +1,52 @@
+@mixin _absolute() {
+  position: absolute;
+}
+
+@mixin _fixed() {
+  position: fixed;
+}
+
+@mixin _relative() {
+  position: relative;
+}
+
+@mixin _bottom($size) {
+  bottom: $size;
+}
+
+@mixin _left($size) {
+  left: $size;
+}
+
+@mixin _right($size) {
+  right: $size;
+}
+
+@mixin _top($size) {
+  top: $size;
+}
+
+
+.absolute {
+  @include _absolute();
+}
+
+.fixed {
+  @include _fixed();
+}
+
+.relative {
+  @include _relative();
+}
+
+.bottom-0 {
+  @include _bottom(0);
+}
+
+.left-0 {
+  @include _left(0);
+}
+
+.right-0 {
+  @include _right(0);
+}
