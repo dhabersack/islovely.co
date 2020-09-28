@@ -12,6 +12,12 @@ export default () => (
       </a>
     </p>
 
+    <div className="margin-bottom-s">
+      <a href="https://www.iubenda.com/privacy-policy/31487586" className="iubenda-white iubenda-embed iub-legal-only">
+        Privacy Policy
+      </a>
+    </div>
+
     <div className="flex flex-wrap justify-center list-style-none margin-0 margin-bottom-s padding-0">
       <a className="flex font-size-16 margin-horizontal-xs padding-vertical-xxs" href="https://github.com/domhabersack">
         <img className="margin-right-xxs" src="/icons/github.svg" alt="domhabersack on GitHub" />
