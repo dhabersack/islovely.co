@@ -76,8 +76,8 @@ button {
 }
 
 code {
+  @include _font-weight(300);
   @include _monospace;
-  font-weight: 300;
 }
 
 figcaption {
