@@ -1,5 +1,6 @@
 import React from 'react'
 
+import { Button } from './button'
 import Input from './input'
 
 export default ({
@@ -46,12 +47,13 @@ export default ({
             value={sourceUrl}
           />
 
-          <button
+          <Button
             data-element="submit"
-            className="convertkit-form__submit"
+            category="primary"
+            className="border-left-radius-0"
           >
             {cta || 'Get me early access!'}
-          </button>
+          </Button>
         </div>
       </form>
 

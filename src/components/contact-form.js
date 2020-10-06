@@ -1,6 +1,7 @@
 import React from 'react'
 import { useForm, ValidationError } from '@statickit/react'
 
+import { Button } from './button'
 import Flash from './flash'
 import Input from './input'
 import Label from './label'
@@ -76,9 +77,9 @@ export default () => {
           />
         </div>
 
-        <button className="disabled:background-color-gray-300 disabled:color-gray-600" disabled={submitting} type="submit">
+        <Button disabled={submitting} type="submit">
           Send your message
-        </button>
+        </Button>
       </form>
     </>
   )

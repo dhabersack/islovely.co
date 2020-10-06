@@ -2,7 +2,7 @@
   border-style: $style;
 }
 
-@each $style in (solid) {
+@each $style in (solid, dashed) {
   .border-style-#{$style} {
     @include _border-style($style);
   }

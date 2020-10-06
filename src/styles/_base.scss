@@ -68,19 +68,7 @@ body {
 }
 
 button {
-  @include _background-color(blue, 500);
-  border: 0;
-  @include _border-radius(xxs);
-  @include _color(gray, 100);
-  cursor: pointer;
-  @include _font-size(16, medium);
-  margin: 0;
-  padding: 12px 1.25em; /* 12px 20px */
-}
-
-button:hover,
-button:focus {
-  outline:none;
+  background: red;
 }
 
 code {
