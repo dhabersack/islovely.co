@@ -9,6 +9,10 @@ a {
   text-decoration: none;
 }
 
+a:focus {
+  @include _outline;
+}
+
 a:hover {
   text-decoration: underline;
 }

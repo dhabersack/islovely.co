@@ -8,7 +8,7 @@ export default () => (
       &copy; Dom Habersack, 2020
     </p>
 
-    <p className="flex flex-wrap font-size-16-medium justify-center list-style-none margin-0 padding-0">
+    <p className="flex flex-wrap font-size-16-medium justify-center list-style-none margin-0 margin-bottom-xs padding-0">
       <a className="block margin-horizontal-xs" href="/legal-notice">
         Legal notice
       </a>

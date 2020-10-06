@@ -14,6 +14,7 @@ export const Button = ({
       font-size-16-medium
       padding-horizontal-m
       padding-vertical-s
+
       hover:background-color-blue-600
     `,
     regular: `
@@ -21,6 +22,7 @@ export const Button = ({
       color-gray-700
       font-size-14-medium
       padding-xs
+
       hover:background-color-gray-400
     `
   }[category]
@@ -33,6 +35,7 @@ export const Button = ({
         cursor-pointer
         margin-0
         outline-none
+
         focus:outline
 
         disabled:background-color-gray-500
@@ -40,7 +43,7 @@ export const Button = ({
         disabled:cursor-not-allowed
 
         ${stylesForCategory}
-        ${className || ''}
+        ${className ?? ''}
       `}
       {...props}
     >
