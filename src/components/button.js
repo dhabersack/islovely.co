@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export const Button = ({
+const Button = ({
   category,
   children,
   className,
@@ -59,3 +59,5 @@ Button.propTypes = {
 Button.defaultProps = {
   category: 'regular',
 }
+
+export default Button

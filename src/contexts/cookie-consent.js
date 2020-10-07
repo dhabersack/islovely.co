@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const CookieConsentContext = React.createContext({
+export default React.createContext({
   isCookieConsentGiven: false,
   setIsCookieConsentGiven: () => {}
 })

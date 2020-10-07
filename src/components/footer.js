@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { UpdateCookieSettingsTrigger } from './update-cookie-settings-trigger'
+import UpdateCookieSettingsTrigger from './update-cookie-settings-trigger'
 
 export default () => (
   <footer className="align-items-center color-gray-600 flex flex-column padding-vertical-m">

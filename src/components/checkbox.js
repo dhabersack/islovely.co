@@ -1,6 +1,6 @@
 import React from  'react'
 
-export const Checkbox = ({
+export default ({
   ...props
 }) => {
   return (
