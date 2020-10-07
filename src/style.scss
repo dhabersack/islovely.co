@@ -1,10 +1,14 @@
 @import
+  'styles/fonts/inter',
+  'styles/fonts/source-code-pro',
+
   'styles/variables/colors',
 
   'styles/utility-generators/at-breakpoints',
 
   'styles/utilities/appearance',
   'styles/utilities/background-color',
+  'styles/utilities/background-image',
   'styles/utilities/border-color',
   'styles/utilities/border-radius',
   'styles/utilities/border-style',
@@ -12,6 +16,7 @@
   'styles/utilities/box-shadow',
   'styles/utilities/color',
   'styles/utilities/columns',
+  'styles/utilities/cursor',
   'styles/utilities/display',
   'styles/utilities/flexbox',
   'styles/utilities/font-family',

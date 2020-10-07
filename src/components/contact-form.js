@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useForm, ValidationError } from '@statickit/react'
 
+import { Button } from './button'
+import { Checkbox } from './checkbox'
+import { RequiresCookieConsent } from './requires-cookie-consent'
 import Flash from './flash'
 import Input from './input'
 import Label from './label'
@@ -13,10 +16,18 @@ export default () => {
     succeeded
   }, handleSubmit] = useForm('contact')
 
+  const [isDataProcessingConsentGiven, setIsDataProcessingConsentGiven] = useState(false)
+
+  const toggleIsDataProcessingConsentGiven = () => {
+    setIsDataProcessingConsentGiven(!isDataProcessingConsentGiven)
+  }
+
   const hasErrors = errors.length > 0
 
+  const canSubmit = isDataProcessingConsentGiven && !submitting
+
   return (
-    <>
+    <RequiresCookieConsent target="contact form">
       {hasErrors && !submitting && (
         <div className="margin-bottom-s">
           <Flash type="error">
@@ -76,10 +87,25 @@ export default () => {
           />
         </div>
 
-        <button className="disabled:background-color-gray-300 disabled:color-gray-600" disabled={submitting} type="submit">
+        <div className="margin-bottom-s flex">
+          <div className="margin-right-xs">
+            <Checkbox
+              id="data-processing-consent"
+              name="data-processing-consent"
+              onChange={toggleIsDataProcessingConsentGiven}
+              value={isDataProcessingConsentGiven}
+            />
+          </div>
+
+          <Label className="cursor-pointer flex-shrink" htmlFor="data-processing-consent">
+            I understand that the information provided by me is subject to the <a href="https://www.iubenda.com/privacy-policy/31487586" className="iubenda-nostyle no-brand iubenda-embed">Privacy Policy</a>.
+          </Label>
+        </div>
+
+        <Button disabled={!canSubmit} type="submit">
           Send your message
-        </button>
+        </Button>
       </form>
-    </>
+    </RequiresCookieConsent>
   )
 }

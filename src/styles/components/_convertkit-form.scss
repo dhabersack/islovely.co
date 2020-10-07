@@ -46,11 +46,6 @@
   width: 1px;
 }
 
-.convertkit-form__submit {
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
-}
-
 .formkit-alert.formkit-alert-success {
   @include _background-color(green, 100);
   border: 1px solid _color(green, 200);

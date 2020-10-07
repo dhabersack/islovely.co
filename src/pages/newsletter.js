@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby';
 
-import ConvertkitForm from '../components/convertkit-form'
+import { ConvertkitForm } from '../components/convertkit-form'
 import Layout from '../components/layout'
 import MetaTags from '../components/meta-tags'
 import NewsletterTeaser from '../components/newsletter-teaser'

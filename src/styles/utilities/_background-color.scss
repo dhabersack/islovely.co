@@ -11,6 +11,12 @@
         }
       }
 
+      .checked\:background-color-#{"" + $color}:checked {
+        @include _at-breakpoints {
+          background-color: $value;
+        }
+      }
+
       .disabled\:background-color-#{"" + $color}:disabled {
         @include _at-breakpoints {
           background-color: $value;
@@ -30,6 +36,12 @@
       }
     } @else {
       .background-color-#{"" + $color}-#{$label} {
+        @include _at-breakpoints {
+          background-color: $value;
+        }
+      }
+
+      .checked\:background-color-#{"" + $color}-#{$label}:checked {
         @include _at-breakpoints {
           background-color: $value;
         }

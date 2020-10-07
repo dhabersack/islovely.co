@@ -1,3 +1,21 @@
 .outline-none {
   outline: none;
 }
+
+@mixin _outline {
+  outline: 0.2rem solid;
+  outline-color: map-get(map-get($_colors, blue), 500);
+  outline-offset: 0.2rem;
+}
+
+.outline {
+  @include _outline;
+}
+
+.focus\:outline:focus {
+  @include _outline;
+}
+
+.hover\:outline:hover {
+  @include _outline;
+}

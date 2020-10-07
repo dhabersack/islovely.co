@@ -13,6 +13,10 @@
         color: $value;
       }
 
+      .hover\:color-#{"" + $color}:hover {
+        color: $value;
+      }
+
       .visited\:color-#{"" + $color}:visited {
         color: $value;
       }
@@ -22,6 +26,10 @@
       }
 
       .disabled\:color-#{"" + $color}-#{$label}:disabled {
+        color: $value;
+      }
+
+      .hover\:color-#{"" + $color}-#{$label}:hover {
         color: $value;
       }
 

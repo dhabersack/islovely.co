@@ -1,0 +1,13 @@
+@mixin _cursor($cursor) {
+  cursor: $cursor;
+}
+
+@each $cursor in (pointer, not-allowed) {
+  .cursor-#{$cursor} {
+    @include _cursor($cursor);
+  }
+
+  .disabled\:cursor-#{$cursor}:disabled {
+    @include _cursor($cursor);
+  }
+}

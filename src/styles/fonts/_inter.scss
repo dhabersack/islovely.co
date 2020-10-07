@@ -1,0 +1,57 @@
+@each $weight, $name in (
+  100: 'thin',
+  200: 'extra-light',
+  300: 'light',
+  400: 'regular',
+  500: 'medium',
+  600: 'semi-bold',
+  700: 'bold',
+  800: 'extra-bold',
+  900: 'black'
+) {
+  @font-face {
+    font-display: swap;
+    font-family: 'Inter';
+    font-style:  normal;
+    font-weight: $weight;
+    src: url('/fonts/inter/#{$name}.woff2?v=3.15') format('woff2'),
+         url('/fonts/inter/#{$name}.woff?v=3.15') format('woff');
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: $weight;
+    src: url('/fonts/inter/#{$name}-italic.woff2?v=3.15') format('woff2'),
+         url('/fonts/inter/#{$name}-italic.woff?v=3.15') format('woff');
+  }
+}
+
+/* -------------------------------------------------------
+Variable font.
+Usage:
+
+  html { font-family: 'Inter', sans-serif; }
+  @supports (font-variation-settings: normal) {
+    html { font-family: 'Inter var', sans-serif; }
+  }
+*/
+
+@font-face {
+  font-display: swap;
+  font-family: 'Inter var';
+  font-named-instance: 'Regular';
+  font-style: normal;
+  font-weight: 100 900;
+  src: url('/fonts/inter/roman-variable.woff2?v=3.15') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Inter var';
+  font-named-instance: 'Italic';
+  font-style: italic;
+  font-weight: 100 900;
+  src: url('/fonts/inter/roman-variable-italic.woff2?v=3.15') format('woff2');
+}
