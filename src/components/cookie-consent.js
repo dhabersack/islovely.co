@@ -50,7 +50,7 @@ export const CookieConsent = () => {
     }
 
     setIsCookieSolutionConfigured(true)
-  }, [])
+  }, [setIsCookieConsentGiven])
 
   return isCookieSolutionConfigured ? (
     <Helmet>

@@ -18,6 +18,11 @@
           "prettyName": "Message",
           "required": true,
           "type": "text"
+        },
+        "privacy-policy-consent": {
+          "prettyName": "Privacy policy consent",
+          "required": true,
+          "type": "checkbox"
         }
       }
     }

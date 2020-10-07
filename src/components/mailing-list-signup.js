@@ -1,6 +1,6 @@
 import React from 'react'
 
-import ConvertkitForm from './convertkit-form'
+import { ConvertkitForm } from './convertkit-form'
 
 export default ({ sourceUrl }) => (
   <div className="background-color-gray-200 border-radius-xs padding-horizontal-s padding-vertical-s">
