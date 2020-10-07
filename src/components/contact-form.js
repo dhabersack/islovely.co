@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import { useForm, ValidationError } from '@statickit/react'
 
-import { Button } from './button'
-import { Checkbox } from './checkbox'
-import { RequiresCookieConsent } from './requires-cookie-consent'
+import Button from './button'
+import Checkbox from './checkbox'
 import Flash from './flash'
 import Input from './input'
 import Label from './label'
+import RequiresCookieConsent from './requires-cookie-consent'
 import Textarea from './textarea'
 
 export default () => {

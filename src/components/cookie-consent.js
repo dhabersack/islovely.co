@@ -1,9 +1,9 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { Helmet } from 'react-helmet'
 
-import { CookieConsentContext } from '../contexts/cookie-consent'
+import CookieConsentContext from '../contexts/cookie-consent'
 
-export const CookieConsent = () => {
+export default () => {
   const { setIsCookieConsentGiven } = useContext(CookieConsentContext)
 
   const [isCookieSolutionConfigured, setIsCookieSolutionConfigured] = useState(false)
@@ -26,12 +26,12 @@ export const CookieConsent = () => {
         backgroundColor: '#191d27',
         backgroundOverlay: true,
         content: `
-          <div id=\"iubenda-cs-title\">
+          <div id="iubenda-cs-title">
             Cookie notice
           </div>
 
-          <div id=\"iubenda-cs-paragraph\">
-            We and selected partners use cookies or similar technologies as specified in the <a href=\"/privacy-policy/31487586/cookie-policy?an=no&s_ck=false&newmarkup=yes\" class=\"iubenda-cs-cookie-policy-lnk\">cookie policy</a>.
+          <div id="iubenda-cs-paragraph">
+            We and selected partners use cookies or similar technologies as specified in the <a href="/privacy-policy/31487586/cookie-policy?an=no&s_ck=false&newmarkup=yes" class="iubenda-cs-cookie-policy-lnk">cookie policy</a>.
           </div>
         `,
         customizeButtonCaption: 'Learn more',

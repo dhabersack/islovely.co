@@ -1,11 +1,11 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 
-import { Button } from './button'
+import Button from './button'
 import Input from './input'
-import { RequiresCookieConsent } from './requires-cookie-consent'
+import RequiresCookieConsent from './requires-cookie-consent'
 
-export const ConvertkitForm = ({
+export default ({
   cta,
   location,
   svForm,

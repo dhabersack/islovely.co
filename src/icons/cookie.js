@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const CookieIcon = () => (
+export default () => (
   <svg
     width="100%"
     height="100%"
