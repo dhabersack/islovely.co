@@ -12,38 +12,48 @@ export const CookieConsent = () => {
     window._iub = window._iub || []
 
     window._iub.csConfiguration = {
+      askConsentAtCookiePolicyUpdate: true,
       consentOnContinuedBrowsing: false,
+      cookiePolicyId: 31487586,
+      floatingPreferencesButtonDisplay: false,
       lang: 'en',
       siteId: 2017725,
-      floatingPreferencesButtonDisplay: false,
-      cookiePolicyId: 31487586,
       banner: {
-        slideDown: false,
-        acceptButtonDisplay: true,
-        customizeButtonDisplay: true,
-        acceptButtonColor: '#398fdd',
+        acceptButtonCaption: 'Allow all cookies',
         acceptButtonCaptionColor: '#fefefe',
-        customizeButtonColor: '#c4cfdc',
-        customizeButtonCaptionColor: '#414b5d',
-        rejectButtonDisplay: true,
-        rejectButtonColor: '#398fdd',
-        rejectButtonCaptionColor: '#fefefe',
-        position: 'bottom',
+        acceptButtonColor: '#398fdd',
+        acceptButtonDisplay: true,
+        backgroundColor: '#191d27',
         backgroundOverlay: true,
+        content: `
+          <div id=\"iubenda-cs-title\">
+            Cookie notice
+          </div>
+
+          <div id=\"iubenda-cs-paragraph\">
+            We and selected partners use cookies or similar technologies as specified in the <a href=\"/privacy-policy/31487586/cookie-policy?an=no&s_ck=false&newmarkup=yes\" class=\"iubenda-cs-cookie-policy-lnk\">cookie policy</a>.
+          </div>
+        `,
+        customizeButtonCaption: 'Learn more',
+        customizeButtonCaptionColor: '#414b5d',
+        customizeButtonColor: '#c4cfdc',
+        customizeButtonDisplay: true,
+        position: 'bottom',
+        rejectButtonCaption: 'Allow essential cookies',
+        rejectButtonCaptionColor: '#fefefe',
+        rejectButtonColor: '#398fdd',
+        rejectButtonDisplay: true,
+        slideDown: false,
         textColor: '#fefefe',
-        backgroundColor: '#191d27'
       },
       callback: {
         onReady: consentGiven => {
-          console.log('ready', { consentGiven })
           setIsCookieConsentGiven(Boolean(consentGiven))
         },
         onConsentGiven: () => {
-          console.log('consent given')
           setIsCookieConsentGiven(true)
         },
         onConsentRejected: () => {
-          console.log('consent rejected')
           setIsCookieConsentGiven(false)
         },
       },
