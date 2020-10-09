@@ -232,134 +232,65 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   })
 }
 
+const buildCreateNodeFields = (node, createNodeField) => fields => {
+  Object.entries(fields).forEach(([name, value]) => {
+    createNodeField({
+      node,
+      name,
+      value,
+    })
+  })
+}
+
 exports.onCreateNode = ({ actions, getNode, node }) => {
   const parent = getNode(node.parent)
+  const createNodeFields = buildCreateNodeFields(node, actions.createNodeField)
 
   if (parent) {
+    const [,, date, slug] = parent.name.match(/^((\d{4}-\d{2}-\d{2})-)?(.*)/)
+
+    createNodeFields({
+      date,
+      slug,
+    })
+
     switch (parent.sourceInstanceName) {
       case 'courses': {
-        const slug = parent.name
-
-        actions.createNodeField({
-          node,
-          name: `permalink`,
-          value: `/courses/${slug}`
-        })
-
-        actions.createNodeField({
-          node,
-          name: `slug`,
-          value: slug
-        })
-
-        actions.createNodeField({
-          node,
-          name: `type`,
-          value: `course`
+        createNodeFields({
+          permalink: `/courses/${slug}`,
+          type: `course`,
         })
 
         break
       }
       case 'newsletters': {
-        const [, date, slug] = parent.name.match(/^(\d{4}-\d{2}-\d{2})-(.*)/)
-
-        actions.createNodeField({
-          node,
-          name: `date`,
-          value: date
-        })
-
-        actions.createNodeField({
-          node,
-          name: `permalink`,
-          value: `/newsletter/archive/${slug}`
-        })
-
-        actions.createNodeField({
-          node,
-          name: `slug`,
-          value: slug
-        })
-
-        actions.createNodeField({
-          node,
-          name: `type`,
-          value: `newsletter`
+        createNodeFields({
+          permalink: `/newsletter/archive/${slug}`,
+          type: `newsletter`,
         })
 
         break
       }
       case 'pages': {
-        const slug = parent.name
-
-        actions.createNodeField({
-          node,
-          name: `permalink`,
-          value: `/${slug}`
-        })
-
-        actions.createNodeField({
-          node,
-          name: `slug`,
-          value: slug
-        })
-
-        actions.createNodeField({
-          node,
-          name: `type`,
-          value: `page`
+        createNodeFields({
+          permalink: `/${slug}`,
+          type: `page`,
         })
 
         break
       }
       case 'projects': {
-        const slug = parent.name
-
-        actions.createNodeField({
-          node,
-          name: `permalink`,
-          value: `/projects/${slug}`
-        })
-
-        actions.createNodeField({
-          node,
-          name: `slug`,
-          value: slug
-        })
-
-        actions.createNodeField({
-          node,
-          name: `type`,
-          value: `project`
+        createNodeFields({
+          permalink: `/projects/${slug}`,
+          type: `project`,
         })
 
         break
       }
       case 'posts': {
-        const [, date, slug] = parent.name.match(/^(\d{4}-\d{2}-\d{2})-(.*)/)
-
-        actions.createNodeField({
-          node,
-          name: `date`,
-          value: date
-        })
-
-        actions.createNodeField({
-          node,
-          name: `permalink`,
-          value: `/posts/${slug}`
-        })
-
-        actions.createNodeField({
-          node,
-          name: `slug`,
-          value: slug
-        })
-
-        actions.createNodeField({
-          node,
-          name: `type`,
-          value: `post`
+        createNodeFields({
+          permalink: `/posts/${slug}`,
+          type: `post`,
         })
 
         break
