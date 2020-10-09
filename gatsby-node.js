@@ -244,57 +244,36 @@ const buildCreateNodeFields = (node, createNodeField) => fields => {
 
 exports.onCreateNode = ({ actions, getNode, node }) => {
   const parent = getNode(node.parent)
-  const createNodeFields = buildCreateNodeFields(node, actions.createNodeField)
 
   if (parent) {
+    const createNodeFields = buildCreateNodeFields(node, actions.createNodeField)
     const [,, date, slug] = parent.name.match(/^((\d{4}-\d{2}-\d{2})-)?(.*)/)
 
     createNodeFields({
       date,
       slug,
-    })
-
-    switch (parent.sourceInstanceName) {
-      case 'courses': {
-        createNodeFields({
+      ...({
+        courses: {
           permalink: `/courses/${slug}`,
           type: `course`,
-        })
-
-        break
-      }
-      case 'newsletters': {
-        createNodeFields({
+        },
+        newsletters: {
           permalink: `/newsletter/archive/${slug}`,
           type: `newsletter`,
-        })
-
-        break
-      }
-      case 'pages': {
-        createNodeFields({
+        },
+        pages: {
           permalink: `/${slug}`,
           type: `page`,
-        })
-
-        break
-      }
-      case 'projects': {
-        createNodeFields({
-          permalink: `/projects/${slug}`,
-          type: `project`,
-        })
-
-        break
-      }
-      case 'posts': {
-        createNodeFields({
+        },
+        posts: {
           permalink: `/posts/${slug}`,
           type: `post`,
-        })
-
-        break
-      }
-    }
+        },
+        projects: {
+          permalink: `/projects/${slug}`,
+          type: `project`,
+        },
+      }[parent.sourceInstanceName]),
+    })
   }
 }
