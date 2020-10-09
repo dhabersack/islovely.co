@@ -1,33 +1,30 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
 const path = require(`path`)
 
 const slugify = text => text.toLowerCase().replace(/ /g, '-')
 
-exports.createPages = async ({ actions, graphql, reporter }) => {
-  const courses = await graphql(`
-    {
-      allFile(filter: {
-        sourceInstanceName: {
-          eq: "courses"
-        }
-      }) {
-        edges {
-          node {
-            childMarkdownRemark {
-              fields {
-                permalink
-                slug
-              }
+const getQueryForSourceInstanceName = sourceInstanceName => `
+  {
+    allFile(filter: {
+      sourceInstanceName: {
+        eq: "${sourceInstanceName}"
+      }
+    }) {
+      edges {
+        node {
+          childMarkdownRemark {
+            fields {
+              permalink
+              slug
             }
           }
         }
       }
     }
-  `)
+  }
+`
+
+exports.createPages = async ({ actions, graphql, reporter }) => {
+  const courses = await graphql(getQueryForSourceInstanceName('courses'))
 
   if (courses.errors) {
     reporter.panicOnBuild(`Error while running GraphQL query.`)
@@ -49,26 +46,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   })
 
 
-  const newsletters = await graphql(`
-    {
-      allFile(filter: {
-        sourceInstanceName: {
-          eq: "newsletters"
-        }
-      }) {
-        edges {
-          node {
-            childMarkdownRemark {
-              fields {
-                permalink
-                slug
-              }
-            }
-          }
-        }
-      }
-    }
-  `)
+  const newsletters = await graphql(getQueryForSourceInstanceName('newsletters'))
 
   if (newsletters.errors) {
     reporter.panicOnBuild(`Error while running GraphQL query.`)
@@ -89,27 +67,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     console.log(`created page at ${permalink}`)
   })
 
-
-  const pages = await graphql(`
-    {
-      allFile(filter: {
-        sourceInstanceName: {
-          eq: "pages"
-        }
-      }) {
-        edges {
-          node {
-            childMarkdownRemark {
-              fields {
-                permalink
-                slug
-              }
-            }
-          }
-        }
-      }
-    }
-  `)
+  const pages = await graphql(getQueryForSourceInstanceName('pages'))
 
   if (pages.errors) {
     reporter.panicOnBuild(`Error while running GraphQL query.`)
@@ -131,26 +89,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   })
 
 
-  const projects = await graphql(`
-    {
-      allFile(filter: {
-        sourceInstanceName: {
-          eq: "projects"
-        }
-      }) {
-        edges {
-          node {
-            childMarkdownRemark {
-              fields {
-                permalink
-                slug
-              }
-            }
-          }
-        }
-      }
-    }
-  `)
+  const projects = await graphql(getQueryForSourceInstanceName('projects'))
 
   if (projects.errors) {
     reporter.panicOnBuild(`Error while running GraphQL query.`)
@@ -172,29 +111,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   })
 
 
-  const posts = await graphql(`
-    {
-      allFile(filter: {
-        sourceInstanceName: {
-          eq: "posts"
-        }
-      }) {
-        edges {
-          node {
-            childMarkdownRemark {
-              fields {
-                permalink
-                slug
-              }
-              frontmatter {
-                categories
-              }
-            }
-          }
-        }
-      }
-    }
-  `)
+  const posts = await graphql(getQueryForSourceInstanceName('posts'))
 
   if (posts.errors) {
     reporter.panicOnBuild(`Error while running GraphQL query.`)
@@ -216,7 +133,27 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   })
 
 
-  const allCategories = posts.data.allFile.edges.map(({ node }) => node.childMarkdownRemark.frontmatter.categories).reduce((allCategories, categories) => [...new Set([...allCategories, ...categories])], [])
+  const postsForCategories = await graphql(`
+    {
+      allFile(filter: {
+        sourceInstanceName: {
+          eq: "posts"
+        }
+      }) {
+        edges {
+          node {
+            childMarkdownRemark {
+              frontmatter {
+                categories
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  const allCategories = postsForCategories.data.allFile.edges.map(({ node }) => node.childMarkdownRemark.frontmatter.categories).reduce((allCategories, categories) => [...new Set([...allCategories, ...categories])], [])
   allCategories.forEach(category => {
     const permalink = `/categories/${slugify(category)}`
 
