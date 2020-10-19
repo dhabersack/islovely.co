@@ -23,6 +23,13 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         ignore: [`**/\.*`],
+        name: `firetips`,
+        path: `${__dirname}/_firetips`,
+      }
+    }, {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        ignore: [`**/\.*`],
         name: `newsletters`,
         path: `${__dirname}/_newsletters`,
       }

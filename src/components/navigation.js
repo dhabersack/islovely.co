@@ -16,6 +16,12 @@ export default () => (
       </li>
 
       <li className="margin-right-xs xs:margin-right-s">
+        <a className="inline-block padding-vertical-xs" href="/firetips">
+          Fire tips
+        </a>
+      </li>
+
+      <li className="margin-right-xs xs:margin-right-s">
         <a className="inline-block padding-vertical-xs" href="/newsletter">
           Newsletter
         </a>

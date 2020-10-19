@@ -59,6 +59,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const createPages = buildCreatePages(actions.createPage, graphql)
 
   await createPages('courses')
+  await createPages('firetips')
   await createPages('newsletters')
   await createPages('pages')
   await createPages('posts')
@@ -119,6 +120,10 @@ exports.onCreateNode = ({ actions, getNode, node }) => {
         courses: {
           permalink: `/courses/${slug}`,
           type: `course`,
+        },
+        firetips: {
+          permalink: `/firetips/${slug}`,
+          type: `firetip`,
         },
         newsletters: {
           permalink: `/newsletter/archive/${slug}`,
