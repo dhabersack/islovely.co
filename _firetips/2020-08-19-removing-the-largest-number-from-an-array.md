@@ -1,6 +1,6 @@
 ---
 title: "Removing the largest number from an array"
-tags: ["JavaScript", "ES6", "arrays", "functions", "arrow functions", "spread operator"]
+tags: ["JavaScript"]
 ---
 We can remove all instances of the largest number in an array by combining `Math.max()` and `Array.prototype.filter()`.
 

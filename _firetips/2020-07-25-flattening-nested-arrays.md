@@ -1,6 +1,6 @@
 ---
 title: "Flattening nested arrays"
-tags: ["JavaScript", "ES6", "arrays", "flat"]
+tags: ["JavaScript"]
 ---
 `Array.prototype.flat()` can un-nest nested arrays. It can remove only some levels, or all of them if we tell it to go infinitely many levels deep.
 

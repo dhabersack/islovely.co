@@ -1,8 +1,8 @@
 ---
 title: "Calculating sums"
-tags: ["JavaScript", "arrays", "reduce"]
+tags: ["JavaScript"]
 ---
-When “reducing” an array, JavaScript walks through all of its values and combines them into a single value. We can use this to calculate the sum of all values in an array in a single line.
+When “reducing” an array, JavaScript walks through all of its values and combines (reduces) them to a single value. We can use this to calculate the sum of all values in an array in a single line.
 
 ```js
 const numbers = [4, 8, 15, 16, 23, 42]

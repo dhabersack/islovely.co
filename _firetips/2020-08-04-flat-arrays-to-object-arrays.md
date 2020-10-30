@@ -1,8 +1,8 @@
 ---
 title: "Flat arrays to object arrays"
-tags: ["JavaScript", "arrays", "objects", "map"]
+tags: ["JavaScript"]
 ---
-If an array contains flat values, we can quickly turn those into objects by mapping over them. The name we give them in .map() becomes the name of the property when we do it like this.
+If an array contains flat values, we can quickly turn those into objects by mapping over them. The name we give them in the call to `Array.prototype.map()` becomes the name of the objects’ property when we do it like this.
 
 ```js
 // turn these strings into objects, where they become `name`-properties

@@ -1,6 +1,6 @@
 ---
 title: "Exclusive OR in JavaScript"
-tags: ["JavaScript", "ES6", "arrays", "filter", "Booleans", "xor"]
+tags: ["JavaScript"]
 ---
 Finding values that exist in only one of two arrays is called “XOR”, or “exclusive OR”. It gets us all values that appear in either the first OR the second array, but not both.
 

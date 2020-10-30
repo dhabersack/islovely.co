@@ -1,8 +1,8 @@
 ---
 title: "Switch statement to lookup object"
-tags: ["JavaScript", "conditionals", "switch-case", "objects", "lookup objects", "clean code", "readability", "DRY"]
+tags: ["JavaScript", "readability"]
 ---
-Some switch-statements can be replaced with lookup-tables in JavaScript. If a switch immediately returns values, this pattern achieves the same in fewer lines of code.
+Some switch-statements can be replaced with lookup-tables in JavaScript. If every `case` immediately returns a value, this pattern achieves the same in fewer lines of code.
 
 ```js
 // 👎 switching through the values to return a number requires a lot of code

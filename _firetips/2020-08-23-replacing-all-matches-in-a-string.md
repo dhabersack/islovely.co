@@ -1,6 +1,6 @@
 ---
 title: "Replacing all matches in a string"
-tags: ["JavaScript", "strings", "regular expressions", "RegExp"]
+tags: ["JavaScript", "regular expressions"]
 ---
 When replacing a substring in a string, only the first match is replaced. If we want to replace all matches, we need to use a regular expression and tell it to match globally within the string.
 

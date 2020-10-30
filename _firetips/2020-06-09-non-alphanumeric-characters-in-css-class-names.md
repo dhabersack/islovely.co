@@ -1,6 +1,6 @@
 ---
 title: "Non-alphanumeric characters in CSS class names"
-tags: ["CSS", "utility-first CSS", "HTML"]
+tags: ["utility-first CSS"]
 ---
 You can use non-standard characters like “:” in CSS class names if you escape them with a backslash.
 

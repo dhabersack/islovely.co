@@ -1,6 +1,6 @@
 ---
 title: "Hiding repetition with helper functions"
-tags: ["JavaScript", "ES6", "arrow functions", "clean code", "readability"]
+tags: ["JavaScript", "readability"]
 ---
 Have to use a function over and over, but one or more of its parameters are always the same? Improve readability by creating a function that hides that repetition.
 

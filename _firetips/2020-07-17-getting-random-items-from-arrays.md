@@ -1,6 +1,6 @@
 ---
 title: "Getting random items from arrays"
-tags: ["JavaScript", "arrays", "random"]
+tags: ["JavaScript"]
 ---
 Getting a random number is fun, but it’s not “getting a random item from an array” fun. I don’t know why you’d want to do this, but you can.
 

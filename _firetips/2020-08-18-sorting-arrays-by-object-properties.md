@@ -1,6 +1,6 @@
 ---
 title: "Sorting arrays by object properties"
-tags: ["JavaScript", "ES6", "arrays", "objects"]
+tags: ["JavaScript"]
 ---
 By passing a function when sorting an array, we can sort objects by different properties.
 

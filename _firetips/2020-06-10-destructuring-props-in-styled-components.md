@@ -1,6 +1,6 @@
 ---
 title: "Destructuring props in styled-components"
-tags: ["JavaScript", "styled-components", "ES6", "destructuring"]
+tags: ["JavaScript", "styled-components"]
 ---
 Find yourself writing `props.` over and over in your styled-components? Destructure them to reduce the noise.
 

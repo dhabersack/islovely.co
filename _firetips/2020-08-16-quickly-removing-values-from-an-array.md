@@ -1,6 +1,6 @@
 ---
 title: "Quickly removing values from an array"
-tags: ["JavaScript", "arrays"]
+tags: ["JavaScript"]
 ---
 Setting the length of an array in JavaScript removes all values beyond that length. Setting the length to zero removes all values from it.
 

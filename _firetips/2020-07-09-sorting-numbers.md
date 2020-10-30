@@ -1,6 +1,6 @@
 ---
 title: "Sorting numbers"
-tags: ["JavaScript", "arrays", "sort", "quirks"]
+tags: ["JavaScript"]
 ---
 JavaScript treats all values in arrays as strings when sorting and orders them alphabetically. When sorting the numbers 1 through 10, 10 appears between 1 and 2. We can fix that with a custom compare function.
 

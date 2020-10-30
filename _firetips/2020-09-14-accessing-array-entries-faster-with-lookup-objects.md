@@ -1,8 +1,8 @@
 ---
 title: "Accessing array entries faster with lookup objects"
-tags: ['JavaScript', 'arrays', 'objects', 'lookup objects', 'performance']
+tags: ["JavaScript", "performance"]
 ---
-If you identify objects in an array by a unique attribute, turn the array into a lookup object. The unique attribute becomes a key, giving you access to the object without having to search for it in the array first.
+If you identify objects in an array by a unique property, turn the array into a lookup object. The unique property becomes a key, giving you access to the objects without having to search for them in the array first.
 
 ```js
 // this array holds objects that all have name- and type-properties

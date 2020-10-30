@@ -1,6 +1,6 @@
 ---
 title: "Removing duplication with higher-order functions"
-tags: ["JavaScript", "functions", "higher-order functions", "parameters", "clean code", "readability", "DRY"]
+tags: ["JavaScript", "readability"]
 ---
 By splitting a list of parameters into groups, we end up writing less, more readable code. We can also use this to quickly create many similar functions.
 

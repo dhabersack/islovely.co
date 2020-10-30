@@ -1,8 +1,8 @@
 ---
 title: "Ternary operator in assignment and return"
-tags: ["JavaScript", "ternary operators"]
+tags: ["JavaScript"]
 ---
-The ternary operator can be used when assigning variables or even as part of return statements. They can help us make some arrow functions even shorter.
+The ternary operator can be used when assigning variables or even as part of return statements. It can help us make some arrow functions even shorter.
 
 ```js
 const isEven = n => n % 2 === 0

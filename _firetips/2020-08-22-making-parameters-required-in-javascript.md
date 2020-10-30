@@ -1,8 +1,8 @@
 ---
 title: "Making parameters required in JavaScript"
-tags: ["JavaScript", "ES6", "functions", "arrow functions", "parameters", "default parameters", "errors"]
+tags: ["JavaScript"]
 ---
-Functions in JavaScript don’t have “required” parameters. We can emulate them by setting a function that throws an error as a parameter’s default value. That function call only happens if we omit the parameter, making it required.
+Functions in JavaScript don’t have “required” parameters. We can emulate them by setting a function that throws an error as a parameter’s default value. This assigned function call only happens if we omit the parameter, making it required.
 
 ```js
 // calling this function always throws an error

@@ -1,8 +1,8 @@
 ---
 title: "Filtering falsy values from arrays"
-tags: ["JavaScript", "arrays", "truthiness", "filter"]
+tags: ["JavaScript"]
 ---
-The constructor for Boolean values is all you need to filter all falsy values from an array. Keep in mind that this takes out `false`, `0`, `null`, `undefined`, empty strings, and NaN. If you don’t want that, filter by something more specific.
+The constructor for Boolean values is all you need to filter all falsy values from an array. Keep in mind that this takes out `false`, `0`, `null`, `undefined`, empty strings, and `NaN`. If you don’t want that, filter by something more specific.
 
 ```js
 const values = [

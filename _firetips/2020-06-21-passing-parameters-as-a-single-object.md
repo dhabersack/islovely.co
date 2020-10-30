@@ -1,6 +1,6 @@
 ---
 title: "Passing parameters as a single object"
-tags: ["JavaScript", "functions", "parameters", "clean code", "readability"]
+tags: ["JavaScript", "readability"]
 ---
 We can make a function more readable by passing it a single object instead of independent parameters. Every time we call this function, we can see what each parameter means by its key on that object.
 

@@ -1,8 +1,8 @@
 ---
 title: "Conditionally modifying array entries"
-tags: ["JavaScript", "ES6", "arrays", "map", "ternary operator"]
+tags: ["JavaScript"]
 ---
-If we want to change only the values in an array that match a condition, we can combine `.map()` with a ternary operator. By putting these in a function, we can quickly apply this pattern to many different scenarios.
+If we want to change only the values in an array that match a condition, we can combine `Array.prototype.map()` with a ternary operator. By putting these in a function, we can quickly apply this pattern to many different scenarios.
 
 ```js
 // takes an array, a function that checks each item, and another function

@@ -1,6 +1,6 @@
 ---
 title: "Nullish-coalescing operator in JavaScript"
-tags: ["JavaScript", "Booleans", "default values", "nullish coalescing", "truthiness"]
+tags: ["JavaScript"]
 ---
 In JavaScript, we can use `||` to set default values for variables. Besides `null` and `undefined`, this also overrides other falsy values like `0`, `false`, and empty strings. The nullish coalescing operator `??` only overrides `null` and `undefined`.
 

@@ -1,6 +1,6 @@
 ---
 title: "Splitting arrays by a condition"
-tags: ["JavaScript", "arrays"]
+tags: ["JavaScript"]
 ---
 We can split arrays in two based on a condition. Everything that matches the condition goes into the first result, everything that doesn’t goes into the second result.
 

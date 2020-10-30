@@ -1,6 +1,6 @@
 ---
 title: "Picking object properties"
-tags: ["JavaScript", "objects", "reduce"]
+tags: ["JavaScript"]
 ---
 With `Array.prototype.reduce()`, we can extract only the properties of an object we want to pass along.
 

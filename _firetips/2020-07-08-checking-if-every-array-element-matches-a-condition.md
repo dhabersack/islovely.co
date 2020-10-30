@@ -1,6 +1,6 @@
 ---
 title: "Checking if every array element matches a condition"
-tags: ["JavaScript", "arrays", "Booleans", "every"]
+tags: ["JavaScript"]
 ---
 To check if every element matches a condition, arrays in JavaScript have the appropriately named `Array.prototype.every()`.
 

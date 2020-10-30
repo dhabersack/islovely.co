@@ -1,6 +1,6 @@
 ---
 title: "Redundant comparisons to true or false"
-tags: ["langauge-independent", "Booleans", "DRY", "readability", "clean code"]
+tags: ["readability"]
 ---
 If an expression already returns a Boolean value, comparing that result to `true` or `false` is redundant. Leave it out to make your code shorter and more readable.
 

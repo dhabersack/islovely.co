@@ -1,6 +1,6 @@
 ---
 title: "Inverting Boolean functions"
-tags: ["JavaScript", "functions", "Booleans", "arrays"]
+tags: ["JavaScript"]
 ---
 We can invert Boolean values with an exclamation mark. That doesn’t work for function names we use as shorthand in array methods like `Array.prototype.filter()` and `Array.prototype.map()`. Wrap those in a helper function to have them return the opposite of what they would return normally.
 

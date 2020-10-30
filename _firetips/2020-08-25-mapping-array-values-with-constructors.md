@@ -1,8 +1,8 @@
 ---
 title: "Mapping array values with constructors"
-tags: ["JavaScript", "arrays"]
+tags: ["JavaScript"]
 ---
-Some constructors can be called as regular functions in JavaScript. We can use them when mapping over arrays to quickly transform the values in them.
+Some type constructors can be called as regular functions in JavaScript. We can use them when mapping over arrays to quickly transform the values in them to that type.
 
 ```js
 // values passed to a constructor are transformed to that type

@@ -1,8 +1,8 @@
 ---
 title: "Removing specific values from an array"
-tags: ["JavaScript", "ES6", "arrays", "filter"]
+tags: ["JavaScript"]
 ---
-Going through Set is cool to filter out duplicates. If you need to filter out specific values instead, you can use this helper.
+Going through `Set` is cool to filter out duplicates. If you need to filter out specific values instead, you can use this helper.
 
 ```js
 // takes an array of values and a second array of values to take out of it

@@ -1,6 +1,6 @@
 ---
 title: "Counting all array entries that match a condition"
-tags: ["JavaScript", "ES6", "arrays", "reduce"]
+tags: ["JavaScript"]
 ---
 Want to know how many elements in an array match a condition? We can use this to count all elements in an array that return `true` for a function that checks this condition.
 

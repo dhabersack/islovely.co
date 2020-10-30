@@ -1,6 +1,6 @@
 ---
 title: "Counting letters in a string"
-tags: ["JavaScript", "strings", "map", "reduce"]
+tags: ["JavaScript"]
 ---
 Want to know how often each letter appears in a string? Turn it into a dictionary. Each letter is a key, each value is the number of times that letter appears in the string.
 

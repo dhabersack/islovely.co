@@ -1,6 +1,6 @@
 ---
 title: "Russian roulette"
-tags: ["JavaScript", "random", "infinite loops", "bugs"]
+tags: ["JavaScript"]
 ---
 Add thrill and excitement to your JavaScript with some Russian roulette. This helper calls a function you give it with a chance of 5 in 6. In the other case, it causes an infinite loop and crashes everything. 💥
 

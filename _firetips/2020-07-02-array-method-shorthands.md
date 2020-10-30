@@ -1,6 +1,6 @@
 ---
 title: "Array methods shorthand"
-tags: ["JavaScript", "arrays", "DRY"]
+tags: ["JavaScript", "readability"]
 ---
 JavaScript’s array methods pass their values through to the functions given to them. If you would only forward those to another function, you can skip the arrow function and name that function directly.
 

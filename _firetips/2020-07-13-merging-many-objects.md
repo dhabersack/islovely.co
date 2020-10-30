@@ -1,6 +1,6 @@
 ---
 title: "Merging many objects"
-tags: ["JavaScript", "objects"]
+tags: ["JavaScript"]
 ---
 `Object.assign()` combined with the rest and spread operators can shallow-merge an arbitrary number of objects.
 

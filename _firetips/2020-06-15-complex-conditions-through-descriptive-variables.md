@@ -1,6 +1,6 @@
 ---
 title: "Complex conditions through descriptive variables"
-tags: ["clean code", "readability"]
+tags: ["readability"]
 ---
 A few well-named variables go a long way towards making code more self-explanatory. Readability is worth a few extra lines; your future self will thank you!
 

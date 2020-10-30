@@ -1,8 +1,8 @@
 ---
 title: "Mapping over objects"
-tags: ["JavaScript", "ES6", "arrays", "objects", "map"]
+tags: ["JavaScript"]
 ---
-We can map over an array, but we cannot natively map over an object. This helper function allows us to apply the same function to all properties in an object.
+We can map over an array, but we cannot natively map over an object. This helper function allows us to apply the same function to all properties of an object.
 
 ```js
 // we’ll use this to try and double a bunch of values in this example

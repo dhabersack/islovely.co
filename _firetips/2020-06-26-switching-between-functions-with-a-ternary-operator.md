@@ -1,6 +1,6 @@
 ---
 title: "Switching between functions with a ternary operator"
-tags: ["JavaScript", "conditionals", "ternary operator", "functions"]
+tags: ["JavaScript"]
 ---
 If we use a condition to choose which of two functions to call with the same parameters, we can use a ternary operator to remove some repetition.
 

@@ -1,8 +1,8 @@
 ---
-title: "Extracting float-values from strings"
-tags: ["JavaScript", "strings", "numbers", "regular expressions", "RegExp"]
+title: "Extracting floats from strings"
+tags: ["JavaScript", "regular expressions"]
 ---
-To get all float values from a sentence, we can first find them with a regular expression and then map the matches with `parseFloat`.
+To get all float values from a sentence, we can first find them with a regular expression and then map over the matches with `parseFloat`.
 
 ```js
 // matches all integer or decimal substrings, like “69” or “4.20”

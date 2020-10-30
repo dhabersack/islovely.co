@@ -1,6 +1,6 @@
 ---
 title: "Counting months from zero"
-tags: ["language-independent", "arrays"]
+tags: ["JavaScript"]
 ---
 Many programming languages start counting months one number before we would, which sounds odd at first. It’s like saying January is “month zero” and December is “month eleven”.
 

@@ -1,6 +1,6 @@
 ---
 title: "Logging as objects"
-tags: ["JavaScript", "console.log"]
+tags: ["JavaScript"]
 ---
 By wrapping the variables in a `console.log` in curly brackets, it logs an object that uses the names of the variables as keys. That makes it easier to see what each value represents.
 

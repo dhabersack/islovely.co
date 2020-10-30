@@ -1,6 +1,6 @@
 ---
 title: "Omitting optional else-branches"
-tags: ["language-independent", "conditionals", "if-else", "clean code", "readability"]
+tags: ["readability"]
 ---
 Sometimes, the `else` in an if-else is optional. When the `if`-condition makes the function end, we don’t have to nest the alternative case in `else` at all.
 

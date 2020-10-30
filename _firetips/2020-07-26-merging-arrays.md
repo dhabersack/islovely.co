@@ -1,6 +1,6 @@
 ---
 title: "Merging arrays"
-tags: ["JavaScript", "arrays", "concat"]
+tags: ["JavaScript"]
 ---
 To merge arrays in JavaScript, we can either concatenate them or use the spread operator. If we nest them in an array, they stay separate inside of that wrapping array instead.
 

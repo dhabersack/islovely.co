@@ -1,8 +1,10 @@
 ---
 title: "Relative timestamps in JavaScript"
-tags: ['JavaScript', 'ES6', 'dates', 'internationalization', 'i18n']
+tags: ["JavaScript"]
 ---
-JavaScript has a built-in formatter for relative timestamps. It returns strings like “yesterday” or “2 months from now” in the language you specify. This does not work in IE and Safari.
+JavaScript has a built-in formatter for relative timestamps. It returns strings like “yesterday” or “2 months from now” in the language you specify.
+
+(This does not currently work in IE and Safari.)
 
 ```js
 // a positive value describes a time in the future

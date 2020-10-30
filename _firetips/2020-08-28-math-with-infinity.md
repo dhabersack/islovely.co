@@ -1,8 +1,8 @@
 ---
 title: "Math with Infinity"
-tags: ['JavaScript']
+tags: ["JavaScript"]
 ---
-Calculations with Infinity are pretty rare, and most of them still return Infinity. While Infinity is a number, trying to subtract it from another Infinity isn’t a number anymore.
+Calculations with `Infinity` are pretty rare, and most of them still return `Infinity`. While `Infinity` is a number, trying to subtract it from another `Infinity` isn’t a number anymore.
 
 ```js
 // both `Infinity` and numbers are numbers

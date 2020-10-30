@@ -1,8 +1,8 @@
 ---
 title: "Padding strings in JavaScript"
-tags: ["JavaScript", "ES6", "strings"]
+tags: ["JavaScript"]
 ---
-When we want a short string to be a certain number of characters long, we can “pad” it with other characters on either side. Spaces are common for this, but we can pad with any character.
+When we want a short string to be a certain number of characters long, we can “pad” it with other characters on the left or right side. Spaces are common for this, but we can pad with any character.
 
 ```js
 // we can pad a string from the front with .padStart()

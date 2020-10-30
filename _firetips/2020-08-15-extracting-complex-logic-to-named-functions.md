@@ -1,6 +1,6 @@
 ---
 title: "Extracting complex logic to named functions"
-tags: ["language-independent", "readability", "clean code"]
+tags: ["readability"]
 ---
 If a piece of code looks cryptic and is difficult to understand, put it in a function. By giving that function a descriptive name, your code becomes much more readable. A good name can make a long comment unnecessary.
 

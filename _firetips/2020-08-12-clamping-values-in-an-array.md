@@ -1,6 +1,6 @@
 ---
 title: "Clamping values in an array"
-tags: ["JavaScript", "arrays"]
+tags: ["JavaScript"]
 ---
 To make sure all numbers in an array are within a given range, we can “clamp” them. Values below the minimum become `min`, values above the maximum become `max`.
 

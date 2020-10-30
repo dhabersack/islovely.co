@@ -1,6 +1,6 @@
 ---
 title: "Creating utility classes with Sass"
-tags: ["CSS", "Sass", "SCSS", "utility-first CSS"]
+tags: ["Sass", "utility-first CSS"]
 ---
 Sass’ `@each`-loop can create many similar looking CSS-classes quickly. We can use that to create our own utility-first classes like they use in [Tailwind CSS](https://tailwindcss.com).
 

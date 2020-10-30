@@ -1,6 +1,6 @@
 ---
 title: "Accessing object properties with bracket notation"
-tags: ["JavaScript", "objects", "dot notation", "bracket notation"]
+tags: ["JavaScript"]
 ---
 In JavaScript, we can use bracket notation to access an object’s property whose name is stored in a variable.
 

@@ -1,6 +1,6 @@
 ---
 title: "Converting numerical arrays into relative fractions"
-tags: ["JavaScript", "arrays", "numbers"]
+tags: ["JavaScript"]
 ---
 We needed to convert an array of (positive) numbers into fractions of each other, with the largest number being 100 percent. This function turns all values into percentages between 0 and that largest value.
 

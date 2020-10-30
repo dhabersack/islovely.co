@@ -1,6 +1,6 @@
 ---
 title: "Composing functions to run in sequence"
-tags: ["JavaScript", "ES6", "functions", "reduce", "readability", "clean code"]
+tags: ["JavaScript", "readability"]
 ---
 If you need to nest functions, or store their output only to pass it to another function, you can instead compose a function that runs an input through many functions in sequence.
 

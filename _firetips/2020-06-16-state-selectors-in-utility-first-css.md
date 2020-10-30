@@ -1,6 +1,6 @@
 ---
 title: "State-selectors in utility-first CSS"
-tags: ["CSS", "utility-first CSS", "HTML"]
+tags: ["utility-first CSS"]
 ---
 Want to create state-prefixed CSS classes that only apply on hover, focus, or other states? Repeat that same pseudo-selector at the end of your selector.
 

@@ -1,6 +1,6 @@
 ---
 title: "Implicit object return in arrow functions"
-tags: ["JavaScript", "ES6", "arrow functions", "implicit return"]
+tags: ["JavaScript"]
 ---
 If your arrow function immediately returns an object and does nothing else, you can wrap that object in parentheses instead of writing `return`.
 

@@ -1,6 +1,6 @@
 ---
 title: "Splitting arrays into chunks"
-tags: ["JavaScript", "arrays"]
+tags: ["JavaScript"]
 ---
 With a combination of `Array.prototype.map()` and `Array.prototpe.slice()`, we can split an array into many smaller arrays. This is useful for pagination or injecting something into an array every set number of items. There’s an explanation of how this works on my blog: [How to split arrays into equal-sized chunks](https://islovely.co/posts/how-to-split-arrays-into-equal-sized-chunks)
 

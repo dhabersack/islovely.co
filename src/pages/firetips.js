@@ -10,6 +10,14 @@ import Taper from '../components/taper'
 
 export default ({ data }) => {
   const firetips = data.allMarkdownRemark.edges.map(({ node }) => node)
+
+  const tagCounts = firetips.map(firetip => firetip.frontmatter.tags).flat(1).reduce((dictionary, tag) => ({
+    ...dictionary,
+    [tag]: (dictionary[tag] || 0) + 1
+  }), {})
+
+  const tagsSortedByCount = Object.keys(tagCounts).sort((a, b) => tagCounts[b] - tagCounts[a])
+
   return (
     <Layout
       breadcrumbs={[
@@ -29,6 +37,25 @@ export default ({ data }) => {
 
       <Taper>
         <h1>Fire tips</h1>
+
+        <div className="flex flex-wrap margin-bottom-m">
+          {tagsSortedByCount.map(tag => (
+            <div
+              className="flex align-items-center margin-bottom-xs margin-right-xs"
+              key={`tag-${tag}`}
+            >
+              <span
+                className="background-color-gray-200 border-radius-xxs color-gray-700 font-size-12-medium inline-block padding-xs visited:color-gray-700"
+              >
+                {tag}
+              </span>&nbsp;<span
+                className="color-gray-600 font-size-12-medium"
+              >
+                &times; {tagCounts[tag]}
+              </span>
+            </div>
+          ))}
+        </div>
 
         {firetips.map(firetip => (
           <div

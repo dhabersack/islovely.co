@@ -1,6 +1,6 @@
 ---
 title: "Splitting strings"
-tags: ["JavaScript", "strings", "arrays"]
+tags: ["JavaScript"]
 ---
 When we split a string, the element we split at does not appear in the result. If we split at every empty string, we get the individual characters (including spaces).
 

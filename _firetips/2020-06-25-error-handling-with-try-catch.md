@@ -1,6 +1,6 @@
 ---
 title: "Error handling with try-catch"
-tags: ["language-independent", "try-catch", "error handling"]
+tags: ["JavaScript"]
 ---
 With `try` and `catch`, we can react to errors in functions that could fail without our code crashing. If there is no error and the function succeeds, the `catch`-block is skipped.
 

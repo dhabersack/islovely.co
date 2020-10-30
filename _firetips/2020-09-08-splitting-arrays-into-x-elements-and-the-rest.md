@@ -1,8 +1,8 @@
 ---
-title: "Splitting arrays into x elements and “the rest”"
-tags: ['JavaScript', 'ES6', 'arrays', 'arrow functions', 'destructuring', 'template literals', 'template strings']
+title: "Splitting arrays into X elements and “the rest”"
+tags: ["JavaScript"]
 ---
-This little helper can split an array into the first X elements and “the rest”. You could use it to show the first five photos from a list and a link that says “27 more photos”.
+This little helper can split arrays into the first X elements and “the rest”. You could use it to show the first five photos from a list and a link that says “27 more photos”.
 
 ```js
 // takes an array and the number of elements to extract from the start

@@ -1,8 +1,8 @@
 ---
 title: "Optional-chaining operator in JavaScript"
-tags: ["JavaScript", "ES6", "objects", "optional chaining", "readability"]
+tags: ["JavaScript", "readability"]
 ---
-We can get nested values from objects by chaining their keys. We run into an error when we try to get a value from something that does not exist. With optional chaining, these calls return undefined instead of throwing errors.
+We can get nested values from objects by chaining their keys. We run into an error when we try to get a value from something that does not exist. With optional chaining, these calls return `undefined` instead of throwing errors.
 
 ```js
 // this person’s address is nested in the outer object as another object

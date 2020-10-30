@@ -1,6 +1,6 @@
 ---
 title: "Grouping array entries by a property"
-tags: ["JavaScript", "ES6", "arrays", "objects", "reduce"]
+tags: ["JavaScript"]
 ---
 If objects in an array are categorized by a property, we can group them by that property like this. We can then quickly get all objects with a certain value instead of having to filter all the time.
 

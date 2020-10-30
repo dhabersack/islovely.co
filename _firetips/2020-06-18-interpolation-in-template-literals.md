@@ -1,6 +1,6 @@
 ---
 title: "Interpolation in template literals"
-tags: ["JavaScript", "ES6", "strings", "template literals", "template strings"]
+tags: ["JavaScript"]
 ---
 Backticks turn strings into “template literals” in JavaScript. They allow you to interpolate variables, the results of calculations, and even the return values of function calls.
 

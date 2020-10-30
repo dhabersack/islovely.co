@@ -1,6 +1,6 @@
 ---
 title: "Destructuring values returned by function"
-tags: ["JavaScript", "destructuring"]
+tags: ["JavaScript"]
 ---
 If a function returns an object, we can destructure the result afterwards. We can take out only the values we need that way.
 

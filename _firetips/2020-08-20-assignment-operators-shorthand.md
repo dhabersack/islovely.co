@@ -1,6 +1,6 @@
 ---
 title: "Assignment operators shorthand"
-tags: ["JavaScript", "assignment"]
+tags: ["JavaScript", "readability"]
 ---
 JavaScript has many different assignment operators that are shorthand for longer versions. `+=` is one of the more common ones. Most other calculations also have an assignment operator.
 

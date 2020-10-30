@@ -1,6 +1,6 @@
 ---
 title: "Filtering arrays to unique values"
-tags: ["JavaScript", "arrays", "Set", "filter"]
+tags: ["JavaScript"]
 ---
 Arrays in JavaScript can contain the same value several times. Going through `Set`, we can filter them down to unique values.
 

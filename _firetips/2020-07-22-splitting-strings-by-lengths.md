@@ -1,6 +1,6 @@
 ---
 title: "Splitting strings by lengths"
-tags: ["JavaScript", "strings", "regular expressions", "RegExp"]
+tags: ["JavaScript", "regular expressions"]
 ---
 JavaScript can split strings at given characters. By matching against a regular expression, we can split strings into substrings of a given length instead.
 
