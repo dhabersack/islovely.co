@@ -69,6 +69,10 @@ pre[class*="language-"] code[class*="language-"] {
   @include _color(yellow, 400);
 }
 
+.token.regex {
+  @include _color(purple, 300);
+}
+
 .token.selector {
   @include _color(cyan, 300);
 }
@@ -99,7 +103,6 @@ pre[class*="language-"] code[class*="language-"] {
 .token.inserted,
 .token.italic,
 .token.prolog,
-.token.regex,
 .token.symbol,
 .token.url {
   background: red;
