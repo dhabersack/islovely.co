@@ -59,6 +59,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const createPages = buildCreatePages(actions.createPage, graphql)
 
   await createPages('courses')
+  await createPages('firetips')
   await createPages('newsletters')
   await createPages('pages')
   await createPages('posts')
@@ -103,6 +104,47 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
     console.log(`created page at ${permalink}`)
   })
+
+
+  const firetips = await graphql(`
+    {
+      allFile(
+        filter: {
+          sourceInstanceName: {
+            eq: "firetips"
+          }
+        }
+      ) {
+        edges {
+          node {
+            childMarkdownRemark {
+              frontmatter {
+                tags
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  const getTagsForEdge = ({ node }) => node.childMarkdownRemark.frontmatter.tags
+  const allTags = firetips.data.allFile.edges.map(getTagsForEdge).flat()
+  const uniqueTags = [...new Set(allTags)]
+
+  uniqueTags.forEach(tag => {
+    const permalink = `/firetips/tags/${slugify(tag)}`
+
+    actions.createPage({
+      component: path.resolve(`src/templates/firetips/tag.js`),
+      context: {
+        tag
+      },
+      path: permalink
+    })
+
+    console.log(`created page at ${permalink}`)
+  })
 }
 
 exports.onCreateNode = ({ actions, getNode, node }) => {
@@ -119,6 +161,10 @@ exports.onCreateNode = ({ actions, getNode, node }) => {
         courses: {
           permalink: `/courses/${slug}`,
           type: `course`,
+        },
+        firetips: {
+          permalink: `/firetips/${slug}`,
+          type: `firetip`,
         },
         newsletters: {
           permalink: `/newsletter/archive/${slug}`,

@@ -1,7 +1,7 @@
 ---
 title: How to go from Junior to Senior Developer
 categories: ["Career"]
-tags: Seniority
+tags: ["Seniority"]
 excerpt: In software development, seniority has nothing to do with age. When can someone be considered “senior”?
 heroAlt: A mountain under a bright sky that is free of clouds.
 heroCaption: The most “on the nose”-picture I could find for this.

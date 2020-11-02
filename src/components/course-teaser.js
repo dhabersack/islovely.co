@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Card from './card'
+
 export default ({ course }) => {
   const {
     fields,
@@ -22,74 +24,76 @@ export default ({ course }) => {
 
 
   return (
-    <article className="background-color-white border-radius-xs box-shadow-s flex flex-column height-full">
-      <a className="background-color-gray-100 block intrinsic-ratio-16-by-9" href={permalink}>
-        <div className="align-items-center flex justify-center">
-          <img alt={title} className="height-full" src={`/assets/courses/${slug}.png`} />
+    <Card>
+      <article className="flex flex-column height-full">
+        <a className="background-color-gray-100 block intrinsic-ratio-16-by-9" href={permalink}>
+          <div className="align-items-center flex justify-center">
+            <img alt={title} className="height-full" src={`/assets/courses/${slug}.png`} />
+          </div>
+        </a>
+
+        <div className="flex-grow padding-horizontal-s padding-vertical-s">
+          <h2 className="font-size-16-short margin-0 margin-bottom-xs">
+            <a href={permalink}>
+              {title}
+            </a>
+          </h2>
+
+          <p className="font-size-16-medium margin-0">
+            {excerpt}
+          </p>
         </div>
-      </a>
 
-      <div className="flex-grow padding-horizontal-s padding-vertical-s">
-        <h2 className="font-size-16-short margin-0 margin-bottom-xs">
-          <a href={permalink}>
-            {title}
-          </a>
-        </h2>
+        <footer className="background-color-gray-100 border-bottom-radius-xs color-gray-600 flex flex-wrap font-size-12-medium padding-horizontal-s padding-vertical-s">
+          {emails && (
+            <div className="align-items-center inline-flex margin-right-s">
+              <img alt="" className="margin-right-xxs" src="/assets/icons/email-with-letter.svg" />
 
-        <p className="font-size-16-medium margin-0">
-          {excerpt}
-        </p>
-      </div>
+              <span>
+                <strong>{emails}</strong>
+                {' '}
+                emails
+              </span>
+            </div>
+          )}
 
-      <footer className="background-color-gray-100 border-bottom-radius-xs color-gray-600 flex flex-wrap font-size-12-medium padding-horizontal-s padding-vertical-s">
-        {emails && (
-          <div className="align-items-center inline-flex margin-right-s">
-            <img alt="" className="margin-right-xxs" src="/assets/icons/email-with-letter.svg" />
+          {videos && (
+            <div className="align-items-center inline-flex margin-right-s">
+              <img alt="" className="margin-right-xxs" src="/assets/icons/video.svg" />
 
-            <span>
-              <strong>{emails}</strong>
-              {' '}
-              emails
-            </span>
-          </div>
-        )}
+              <span>
+                <strong>{videos}</strong>
+                {' '}
+                videos
+              </span>
+            </div>
+          )}
 
-        {videos && (
-          <div className="align-items-center inline-flex margin-right-s">
-            <img alt="" className="margin-right-xxs" src="/assets/icons/video.svg" />
+          {hours && (
+            <div className="align-items-center inline-flex margin-right-s">
+              <img alt="" className="margin-right-xxs" src="/assets/icons/clock.svg" />
 
-            <span>
-              <strong>{videos}</strong>
-              {' '}
-              videos
-            </span>
-          </div>
-        )}
+              <span>
+                <strong>{hours}</strong>
+                {' '}
+                hours
+              </span>
+            </div>
+          )}
 
-        {hours && (
-          <div className="align-items-center inline-flex margin-right-s">
-            <img alt="" className="margin-right-xxs" src="/assets/icons/clock.svg" />
+          {weeks && (
+            <div className="align-items-center inline-flex margin-right-s">
+              <img alt="" className="margin-right-xxs" src="/assets/icons/calendar.svg" />
 
-            <span>
-              <strong>{hours}</strong>
-              {' '}
-              hours
-            </span>
-          </div>
-        )}
-
-        {weeks && (
-          <div className="align-items-center inline-flex margin-right-s">
-            <img alt="" className="margin-right-xxs" src="/assets/icons/calendar.svg" />
-
-            <span>
-              <strong>{weeks}</strong>
-              {' '}
-              weeks
-            </span>
-          </div>
-        )}
-      </footer>
-    </article>
+              <span>
+                <strong>{weeks}</strong>
+                {' '}
+                weeks
+              </span>
+            </div>
+          )}
+        </footer>
+      </article>
+    </Card>
   )
 }
