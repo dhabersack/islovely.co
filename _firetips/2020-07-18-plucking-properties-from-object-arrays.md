@@ -16,7 +16,7 @@ countries.map(country => country.name)     // ⇒ ['France', 'Spain', 'Italy']
 countries.map(country => country.capital)  // ⇒ ['Paris', 'Madrid', 'Rome']
 
 // this function allows us to write that arrow function shorter
-const pluck = property => item => item[property]
+const pluck = property => element => element[property]
 
 countries.map(pluck('name'))     // ⇒ ['France', 'Spain', 'Italy']
 countries.map(pluck('capital'))  // ⇒ ['Paris', 'Madrid', 'Rome']

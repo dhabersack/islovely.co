@@ -1,14 +1,14 @@
 ---
-title: "Conditionally modifying array entries"
+title: "Conditionally modifying array elements"
 tags: ["JavaScript"]
 ---
 If we want to change only the values in an array that match a condition, we can combine `Array.prototype.map()` with a ternary operator. By putting these in a function, we can quickly apply this pattern to many different scenarios.
 
 ```js
-// takes an array, a function that checks each item, and another function
-// that it applies to every item that the check returns `true` for
+// takes an array, a function that checks each element, and another function
+// that it applies to every element that the check returns `true` for
 const mapMatches = (array, checkFunction, changeFunction) =>
-  array.map(item => checkFunction(item) ? changeFunction(item) : item)
+  array.map(element => checkFunction(element) ? changeFunction(element) : element)
 
 // change every name that contains an “e” into uppercase
 mapMatches(

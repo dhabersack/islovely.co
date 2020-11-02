@@ -8,7 +8,7 @@ Setting the length of an array in JavaScript removes all values beyond that leng
 // this array holds six values
 const numbers = [4, 8, 15, 16, 23, 42]
 
-// by setting the length to 4, any value past the fourth item is removed
+// by setting the length to 4, any value past the fourth element is removed
 numbers.length = 4
 console.log(numbers)  // ⇒ [4, 8, 15, 16]
 

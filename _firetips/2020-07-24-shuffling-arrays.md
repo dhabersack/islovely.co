@@ -8,10 +8,10 @@ The Fisher-Yates shuffle is a fast, unbiased way to shuffle arrays. It works by 
 const shuffle = array => {
   // create a clone of the array that we can rearrange in place
   const copy = array.slice()
-  
-  // start at the last item, moving towards the front with every repetition
+
+  // start at the last element, moving towards the front with every repetition
   for (let i = copy.length - 1; i > 0; i--) {
-    // get the index of an item left of (and including) the current one
+    // get the index of an element left of (and including) the current one
     const j = Math.floor(Math.random() * (i + 1))
 
     // swap the values at the positions i and j

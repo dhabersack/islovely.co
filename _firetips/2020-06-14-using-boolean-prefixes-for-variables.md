@@ -1,5 +1,5 @@
 ---
-title: "Readability through Boolean variable prefixes"
+title: "Using Boolean prefixes for variables"
 tags: ["readability"]
 ---
 Prefixes like “is”, “has”, or “does” help emphasize that a variable holds a Boolean value.

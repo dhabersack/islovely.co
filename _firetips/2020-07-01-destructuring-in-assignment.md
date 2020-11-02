@@ -1,5 +1,5 @@
 ---
-title: "Destructuring in variable assignment"
+title: "Destructuring in assignment"
 tags: ["JavaScript", "readability"]
 ---
 If the name of your variable is the exact same as the property you would extract from an object, you can use destructuring instead. That way, you don’t have to type the same word twice.

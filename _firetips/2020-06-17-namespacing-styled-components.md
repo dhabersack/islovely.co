@@ -1,5 +1,5 @@
 ---
-title: "Namespaced styled-components"
+title: "Namespacing styled-components"
 tags: ["JavaScript", "styled-components", "readability"]
 ---
 If you keep your styled-components in a separate file, you can import them under a namespace like “ui”. If a component’s name then begins with `ui.`, you can then tell it is one of your styled-components.

@@ -12,7 +12,7 @@ const double = number => number * 2
 const numbers = [1, 2, 3]
 const coordinates = { x: 1, y: 2, z: 3 }
 
-// 👍 we can `map` over an array to double all items
+// 👍 we can `map` over an array to double all elements
 numbers.map(double)
 // ⇒ [2, 4, 6]
 

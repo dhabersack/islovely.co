@@ -5,7 +5,9 @@ import Emoji from '../components/emoji'
 import Layout from '../components/layout'
 import MetaTags from '../components/meta-tags'
 import RichPreview from '../components/rich-preview'
+import Tag from '../components/tag'
 import Taper from '../components/taper'
+import slugify from '../utils/slugify'
 
 export default ({ data }) => {
   const {
@@ -17,6 +19,7 @@ export default ({ data }) => {
   const { permalink } = fields
 
   const {
+    tags,
     excerpt,
     title
   } = frontmatter
@@ -50,6 +53,19 @@ export default ({ data }) => {
         </h1>
 
         <div dangerouslySetInnerHTML={{ __html: html }} />
+
+        <div className="flex flex-wrap">
+          {tags.map(tag => (
+            <div
+              className="margin-bottom-xxs margin-right-xxs"
+              key={`tag-${tag}`}
+            >
+              <Tag href={`/firetips/tags/${slugify(tag)}`}>
+                {tag}
+              </Tag>
+            </div>
+          ))}
+        </div>
       </Taper>
     </Layout>
   )
@@ -67,11 +83,12 @@ export const pageQuery = graphql`
       fields {
         permalink
       }
-      html
       frontmatter {
         excerpt
+        tags
         title
       }
+      html
     }
   }
 `

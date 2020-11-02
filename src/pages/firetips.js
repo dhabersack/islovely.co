@@ -1,12 +1,13 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import Card from '../components/card'
-import Emoji from '../components/emoji'
+import Firetip from '../components/firetip'
 import Layout from '../components/layout'
 import MetaTags from '../components/meta-tags'
 import RichPreview from '../components/rich-preview'
+import Tag from '../components/tag'
 import Taper from '../components/taper'
+import slugify from '../utils/slugify'
 
 export default ({ data }) => {
   const firetips = data.allMarkdownRemark.edges.map(({ node }) => node)
@@ -32,7 +33,7 @@ export default ({ data }) => {
 
       <RichPreview
         permalink="/fire-tips"
-        title="Firetips"
+        title="Fire tips"
       />
 
       <Taper>
@@ -44,11 +45,11 @@ export default ({ data }) => {
               className="flex align-items-center margin-bottom-xs margin-right-xs"
               key={`tag-${tag}`}
             >
-              <span
-                className="background-color-gray-200 border-radius-xxs color-gray-700 font-size-12-medium inline-block padding-xs visited:color-gray-700"
+              <Tag
+                href={`/firetips/tags/${slugify(tag)}`}
               >
                 {tag}
-              </span>&nbsp;<span
+              </Tag>&nbsp;<span
                 className="color-gray-600 font-size-12-medium"
               >
                 &times; {tagCounts[tag]}
@@ -62,45 +63,9 @@ export default ({ data }) => {
             className="margin-bottom-xl"
             key={`firetip-${firetip.fields.slug}`}
           >
-            <Card>
-              <div className="padding-horizontal-s padding-vertical-s">
-                <h2 className="font-size-16-short font-weight-600 margin-0 margin-bottom-s">
-                  <a
-                    className="color-gray-900 visited:color-gray-900"
-                    href={`/firetips/${firetip.fields.slug}`}
-                  >
-                    <Emoji name=":fire:" />
-
-                    {firetip.frontmatter.title}
-                  </a>
-                </h2>
-
-                <div dangerouslySetInnerHTML={{ __html: firetip.html }} />
-
-                <div>
-                  {firetip.frontmatter.tags.map(tag => (
-                    <span
-                      className="background-color-gray-200 border-radius-xxs color-gray-700 font-size-12-medium inline-block margin-bottom-xxs margin-right-xxs nowrap padding-xs visited:color-gray-700"
-                      key={`tag-${tag}`}
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              <footer className="background-color-gray-100 padding-horizontal-s padding-vertical-s">
-                <p className="color-gray-600 font-size-12-medium margin-0">
-                  <span className="margin-right-xxs">
-                    Permalink:
-                  </span>
-
-                  <a href={`/firetips/${firetip.fields.slug}`}>
-                    islovely.co/firetips/{firetip.fields.slug}
-                  </a>
-                </p>
-              </footer>
-            </Card>
+            <Firetip
+              firetip={firetip}
+            />
           </div>
         ))}
       </Taper>
@@ -126,7 +91,6 @@ export const pageQuery = graphql`
       edges {
         node {
           fields {
-            date
             slug
           }
           frontmatter {

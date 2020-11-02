@@ -16,7 +16,7 @@ months.length // ⇒ 12
 // Counting in an array start at 0, so the months are numbered from 0 to 11.
 // A year still has 12 months, but we need to shift their index down by 1.
 
-// While January is the 1st month for us, it’s the 0th entry in the array.
+// While January is the 1st month for us, it’s the 0th element in the array.
 months[0] // ⇒ 'January'
 
 // The index of December is also one less than what we would say.

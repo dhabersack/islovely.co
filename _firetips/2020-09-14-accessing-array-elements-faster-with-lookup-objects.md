@@ -1,5 +1,5 @@
 ---
-title: "Accessing array entries faster with lookup objects"
+title: "Accessing array elements faster with lookup objects"
 tags: ["JavaScript", "performance"]
 ---
 If you identify objects in an array by a unique property, turn the array into a lookup object. The unique property becomes a key, giving you access to the objects without having to search for them in the array first.
@@ -13,7 +13,7 @@ const array = [
   { name: 'Pikachu',    type: 'Electric'     }
 ]
 
-// to get the type for a name, we need to .find() the entry first
+// to get the type for a name, we need to .find() the element first
 array.find(pokemon => pokemon.name === 'Charmander').type
 // ⇒ 'Fire'
 

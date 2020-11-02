@@ -1,5 +1,5 @@
 ---
-title: "Double-equals comparison with null"
+title: "Comparing to null with double-equals"
 tags: ["JavaScript"]
 ---
 Compare a variable to `null` using two equal signs to check if it is `null` or `undefined` at the same time.

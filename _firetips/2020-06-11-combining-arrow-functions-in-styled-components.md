@@ -1,5 +1,5 @@
 ---
-title: "Single arrow function in styled-components"
+title: "Combining arrow functions in styled-components"
 tags: ["JavaScript", "styled-components"]
 ---
 Instead of using many arrow functions to extract the theme in your styled-components, you can group them and do them all in one block.

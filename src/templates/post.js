@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
+import slugify from '../utils/slugify'
 import Flash from '../components/flash'
 import Layout from '../components/layout'
 import MailingListSignup from '../components/mailing-list-signup'
@@ -99,7 +100,11 @@ export default ({
           <div className="align-items-center flex flex-wrap">
             {categories.map(category => (
               <div className="margin-bottom-xxs margin-right-xxs" key={`category-${category}`}>
-                <Tag tag={category} />
+                <Tag
+                  href={`/categories/${slugify(category)}`}
+                >
+                  {category}
+                </Tag>
               </div>
             ))}
           </div>

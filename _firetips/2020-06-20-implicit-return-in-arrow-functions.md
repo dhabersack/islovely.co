@@ -1,5 +1,5 @@
 ---
-title: "Implicit return in JavaScript"
+title: "Implicit return in arrow functions"
 tags: ["JavaScript"]
 ---
 If a JavaScript arrow function immediately returns a value, writing `return` is optional (if we also remove the curly brackets). The `return` is then implied, making it an “implicit return”.

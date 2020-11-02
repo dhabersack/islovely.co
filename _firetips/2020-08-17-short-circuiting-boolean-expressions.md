@@ -1,5 +1,5 @@
 ---
-title: "Short-circuiting Boolean operators"
+title: "Short-circuiting Boolean expressions"
 tags: ["JavaScript"]
 ---
 In JavaScript, `&&` and `||` “short circuit”. If the result is obvious from the left value, it doesn’t evaluate the right side because that value wouldn’t make a difference.

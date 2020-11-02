@@ -8,13 +8,13 @@ We can split arrays in two based on a condition. Everything that matches the con
 // an array we want to split into two arrays based on a condition
 const names = ['Michael', 'Jim', 'Dwight', 'Pam', 'Ryan']
 
-// accepts array and function returning `true` or `false` for each item
+// accepts array and function returning `true` or `false` for each element
 const partition = (array, callback) => {
   const matches = []
   const nonMatches = []
 
-  // push each item into array depending on return value of `callback`
-  array.forEach(item => (callback(item) ? matches : nonMatches).push(item))
+  // push each element into array depending on return value of `callback`
+  array.forEach(element => (callback(element) ? matches : nonMatches).push(element))
 
   return [matches, nonMatches]
 }

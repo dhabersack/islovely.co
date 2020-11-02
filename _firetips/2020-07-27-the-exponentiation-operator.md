@@ -1,5 +1,5 @@
 ---
-title: "Exponentiation operator in JavaScript"
+title: "The exponentiation operator"
 tags: ["JavaScript"]
 ---
 `Math.pow()` raises a base to an exponent. The recently introduced “exponentiation operator” `**` does the same but shorter.

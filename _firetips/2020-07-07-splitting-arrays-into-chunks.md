@@ -2,7 +2,7 @@
 title: "Splitting arrays into chunks"
 tags: ["JavaScript"]
 ---
-With a combination of `Array.prototype.map()` and `Array.prototpe.slice()`, we can split an array into many smaller arrays. This is useful for pagination or injecting something into an array every set number of items. There’s an explanation of how this works on my blog: [How to split arrays into equal-sized chunks](https://islovely.co/posts/how-to-split-arrays-into-equal-sized-chunks)
+With a combination of `Array.prototype.map()` and `Array.prototpe.slice()`, we can split an array into many smaller arrays. This is useful for pagination or injecting something into an array every set number of elements. There’s an explanation of how this works on my blog: [How to split arrays into equal-sized chunks](https://islovely.co/posts/how-to-split-arrays-into-equal-sized-chunks)
 
 ```js
 // `array` is the array we want to split, `chunkSize` is how big we want
@@ -18,7 +18,7 @@ const chunkArray = (array, chunkSize) => {
       // put a slice of the original `array` in the empty slot
       return array.slice(index * chunkSize, (index + 1) * chunkSize)
     })
-  
+
   return chunks
 }
 

@@ -1,17 +1,17 @@
 ---
-title: "Grouping array entries by a property"
+title: "Grouping array elements by a property"
 tags: ["JavaScript"]
 ---
 If objects in an array are categorized by a property, we can group them by that property like this. We can then quickly get all objects with a certain value instead of having to filter all the time.
 
 ```js
 // takes an array of objects and the name of a property of these objects
-const groupBy = (array, property) => array.reduce((grouped, item) => ({
+const groupBy = (array, property) => array.reduce((grouped, element) => ({
   ...grouped,
-  [item[property]]: [...(grouped[item[property]] || []), item]
+  [element[property]]: [...(grouped[element[property]] || []), element]
 }), {})
 
-// some items in this array share the same value for their `type`
+// some elements in this array share the same value for their `type`
 const team = [
   { name: 'Squirtle', type: '💧' },
   { name: 'Pikachu',  type: '⚡️' },
@@ -38,7 +38,7 @@ const groupedByType = groupBy(team, 'type')
 Object.keys(groupedByType)
 // ⇒ ['💧', '⚡️', '🔥']
 
-// we can then extract only the items that share the same type
+// we can then extract only the elements that share the same type
 groupedByType['🔥']
 // ⇒ [{ name: 'Arcanine', type: '🔥' }, { name: 'Vulpix', type: '🔥' }]
 ```

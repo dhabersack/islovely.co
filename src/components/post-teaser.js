@@ -1,5 +1,6 @@
 import React from 'react'
 
+import slugify from '../utils/slugify'
 import Card from './card'
 import PostMeta from './post-meta'
 import Tag from './tag'
@@ -44,7 +45,11 @@ export default ({ post }) => {
           <div className="flex flex-wrap margin-bottom-xs">
             {categories.map(category => (
               <div className="margin-bottom-xxs margin-right-xxs" key={category}>
-                <Tag tag={category} />
+                <Tag
+                  href={`/categories/${slugify(category)}`}
+                >
+                  {category}
+                </Tag>
               </div>
             ))}
           </div>

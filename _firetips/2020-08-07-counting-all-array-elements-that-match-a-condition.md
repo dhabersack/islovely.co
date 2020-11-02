@@ -1,5 +1,5 @@
 ---
-title: "Counting all array entries that match a condition"
+title: "Counting all array elements that match a condition"
 tags: ["JavaScript"]
 ---
 Want to know how many elements in an array match a condition? We can use this to count all elements in an array that return `true` for a function that checks this condition.
@@ -7,8 +7,8 @@ Want to know how many elements in an array match a condition? We can use this to
 ```js
 // takes an array and a function to check each element in the array against
 const countBy = (array, checkFunction) => {
-  return array.reduce((count, item) => {
-    return checkFunction(item) ? count + 1 : count
+  return array.reduce((count, element) => {
+    return checkFunction(element) ? count + 1 : count
   }, 0)
 }
 

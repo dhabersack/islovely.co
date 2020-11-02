@@ -20,7 +20,7 @@ const food = [
 ]
 
 // we can first get all objects that have their `type` set to 'fruit'
-const fruit = food.filter(item => item.type === 'fruit')
+const fruit = food.filter(element => element.type === 'fruit')
 // ⇒ [
 //     {
 //       name: 'Apple',
@@ -32,13 +32,13 @@ const fruit = food.filter(item => item.type === 'fruit')
 //   ]
 
 // we can then use `.map()` to extract their names
-const fruitNames = fruit.map(item => item.name)
+const fruitNames = fruit.map(element => element.name)
 // ⇒ ['Apple', 'Banana']
 
 
 // we can do both steps at once by chaining `.filter()` and `.map()`
 const fruitNames = food
-  .filter(item => item.type === 'fruit')  // get all fruit
-  .map(item => item.name)                 // extract their names
+  .filter(element => element.type === 'fruit')  // get all fruit
+  .map(element => element.name)                 // extract their names
 // ⇒ ['Apple', 'Banana']
 ```
