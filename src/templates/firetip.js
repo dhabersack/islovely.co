@@ -2,13 +2,17 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
+import MailingListSignup from '../components/mailing-list-signup'
 import MetaTags from '../components/meta-tags'
 import RichPreview from '../components/rich-preview'
 import Tag from '../components/tag'
 import Taper from '../components/taper'
 import slugify from '../utils/slugify'
 
-export default ({ data }) => {
+export default ({
+  data,
+  location,
+}) => {
   const {
     fields,
     frontmatter,
@@ -52,7 +56,7 @@ export default ({ data }) => {
 
         <div dangerouslySetInnerHTML={{ __html: html }} />
 
-        <div className="flex flex-wrap">
+        <div className="flex flex-wrap margin-bottom-xl">
           {tags.map(tag => (
             <div
               className="margin-bottom-xxs margin-right-xxs"
@@ -64,6 +68,10 @@ export default ({ data }) => {
             </div>
           ))}
         </div>
+
+        <MailingListSignup
+          sourceUrl={location.href}
+        />
       </Taper>
     </Layout>
   )
