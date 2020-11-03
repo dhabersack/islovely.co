@@ -192,32 +192,12 @@ img {
   vertical-align: middle;
 }
 
-p {
-  margin: 0 0 0.9375em; /* 0 0 15px */
-
-  @include _xs {
-    margin-bottom: 1em; /* 18px */
-  }
-
-  @include _m {
-    margin-bottom: 1.05em; /* 21px */
-  }
-
-  @include _l {
-    margin-bottom: #{(24 / 22)}em;
-  }
-}
-
 p code {
   @include _background-color(gray, 300);
   border-radius: 0.2em;
   @include _color(gray, 800);
   font-size: 0.9em;
   padding: 0 0.2em;
-}
-
-p strong {
-  font-weight: 600;
 }
 
 pre {
