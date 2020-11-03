@@ -1,7 +1,6 @@
 ---
 title: "What CAN you do?"
 excerpt: "My wife and I were supposed to relax on Mallorca right now. Our trip was cancelled less than 24 hours before our flight was supposed to take off."
-emoji: ":thinking:"
 ---
 My wife and I were supposed to relax on Mallorca right now. We recently booked a ten day-trip to recharge after the excitement of our wedding. We have not had this kind of “sleeping in, not worrying about anything” vacation in years.
 

@@ -1,7 +1,6 @@
 ---
 title: "Can you recommend other podcasts like these?"
 excerpt: ""
-emoji: ":headphones:"
 ---
 Whenever I am doing chores or taking my dog for a walk, I am listening to podcasts. For the past decade, they have been a constant source of education and entertainment for me.
 

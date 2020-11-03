@@ -15,5 +15,5 @@ const xor = (first, second) => [
 xor([1, 2, 3, 4, 5], [2, 3, 4, 5, 6])   // ⇒ [1, 6]
 
 // an element can appear multiple times, but only in one array
-xor(['🤖', '🤖', '👻', '👻'], ['🤖'])  // ⇒ ['👻', '👻']
+xor(['beep', 'beep', 'boo', 'boo'], ['beep'])  // ⇒ ['boo', 'boo']
 ```

@@ -5,7 +5,7 @@ excerpt: You know a lot of things others don’t. Help them by sharing what you 
 heroAlt: A tiny plant that is growing.
 heroCaption: Every tiny bit of information could help someone out.
 ---
-I recently started [an email newsletter helping people improve their English](http://hellotogether.academy). I manage the content and list on [ConvertKit](https://mbsy.co/convertkit/29937053) (👈 affiliate link), which is a fantastic tool. Their motto is highly motivating: **“teach everything you know”**.
+I recently started [an email newsletter helping people improve their English](http://hellotogether.academy). I manage the content and list on [ConvertKit](https://mbsy.co/convertkit/29937053) (← affiliate link), which is a fantastic tool. Their motto is highly motivating: **“teach everything you know”**.
 
 Few things in life give me as much energy as helping others become better at their craft. Yet in an industry plagued with [Impostor Syndrome](https://en.wikipedia.org/wiki/Impostor_syndrome), it is easy to think that what we know is not worth sharing. If we consider something easy, everybody else must also find it easy.
 

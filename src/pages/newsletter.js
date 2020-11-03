@@ -111,7 +111,6 @@ export const pageQuery = graphql`
             permalink
           }
           frontmatter {
-            emoji
             title
           }
         }

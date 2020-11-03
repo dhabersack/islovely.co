@@ -1,7 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import Emoji from '../components/emoji'
 import Layout from '../components/layout'
 import MailingListSignup from '../components/mailing-list-signup'
 import MetaTags from '../components/meta-tags'
@@ -25,7 +24,6 @@ export default ({
   } = fields
 
   const {
-    emoji,
     excerpt,
     title
   } = frontmatter
@@ -57,8 +55,6 @@ export default ({
 
       <Taper>
         <h1>
-          <Emoji name={emoji} />
-
           {title}
         </h1>
 
@@ -89,7 +85,6 @@ export const pageQuery = graphql`
       }
       html
       frontmatter {
-        emoji
         excerpt
         title
       }

@@ -12,17 +12,17 @@ const someReallyComplicatedFunction = () => {
 
 // The result of `true && SOMETHING` depends on the value of SOMETHING.
 // JavaScript has to call the function here.
-true && someReallyComplicatedFunction()   // 👍 function is run
+true && someReallyComplicatedFunction()   // function is run
 
 // The result of `false && SOMETHING` can never be `true`. JavaScript skips
 // the right side, because that value doesn’t matter.
-false && someReallyComplicatedFunction()  // ✋ function is skipped
+false && someReallyComplicatedFunction()  // function is skipped
 
 // `||` stops as soon as one value is `true`. If the first value is already
 // true, it skips the right side.
-true || someReallyComplicatedFunction()   // ✋ function is skipped
+true || someReallyComplicatedFunction()   // function is skipped
 
 // If the value left of `||` is `false`, we need to check the right value.
 // JavaScript has to call the function here.
-false || someReallyComplicatedFunction()  // 👍 function is run
+false || someReallyComplicatedFunction()  // function is run
 ```

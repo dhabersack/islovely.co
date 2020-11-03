@@ -2,7 +2,7 @@
 title: "Freezing objects for immutability"
 tags: ["JavaScript"]
 ---
-In JavaScript, `const` doesn’t mean a value is constant and can never be changed. To make an object immutable, we have to freeze it. 🥶
+In JavaScript, `const` doesn’t mean a value is constant and can never be changed. To make an object immutable, we have to freeze it.
 
 ```js
 // the word `const` makes it sound like this object can never be modified

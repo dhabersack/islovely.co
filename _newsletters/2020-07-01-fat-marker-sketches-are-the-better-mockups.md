@@ -1,7 +1,6 @@
 ---
 title: "Fat marker sketches are the better mockups"
 excerpt: "Before we spend too much time on the details, we need to figure out the overall structure of a design."
-emoji: ":crayon:"
 ---
 We are about to begin work on a completely new version of our product. Before we can start building, we need to figure out what it is that we want to do. Previously, we would have picked a random idea and started designing every last detail of it. We often skipped the exploration of other ideas, and instead went all in on the first one that sounded okay.
 

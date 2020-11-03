@@ -1,7 +1,6 @@
 ---
 title: "Progressive enhancement with @supports"
 excerpt: "With @supports, we can start using features that will come to CSS soon in supporting browsers today."
-emoji: ":level_slider:"
 ---
 Designing beautiful websites is getting easier. [Flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout) and [grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) enable layouts that were impossible before. [Transforms](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transforms) and [filters](https://developer.mozilla.org/en-US/docs/Web/CSS/filter) add visual effects that would be difficult to build otherwise. Unfortunately, not all browsers support all those cool new features yet.
 

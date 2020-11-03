@@ -1,7 +1,6 @@
 ---
 title: "The iPad got the best pointer"
 excerpt: "The thinking that went into the UX of the iPad’s new pointer is a fascinating evening watch."
-emoji: ":computer_mouse:"
 ---
 Apple’s WWDC, the Worldwide Developers Conference, happened a few weeks ago. Since my entire workflow is very Apple-centric, the event was like a summer-Christmas to me.
 

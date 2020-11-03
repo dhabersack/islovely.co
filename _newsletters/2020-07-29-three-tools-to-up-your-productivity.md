@@ -1,7 +1,6 @@
 ---
 title: "Three tools to up your productivity"
 excerpt: "Consolidate many tools into few tools and automate what you can."
-emoji: ":wrench:"
 ---
 This week, I want to highlight three tools that help me get my life organized and my work done. This is not an ad, and none of the links in this mail are affiliate links. I genuinely get a lot of value from these tools and think you’ll enjoy them as well.
 

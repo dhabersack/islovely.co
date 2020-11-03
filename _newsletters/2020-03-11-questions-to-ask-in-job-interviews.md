@@ -1,7 +1,6 @@
 ---
 title: "Questions to ask in job interviews"
 excerpt: "Use job interviews to figure out if the company you are applying to is a place you want to work."
-emoji: ":speech_balloon:"
 isFeatured: true
 ---
 We consultants go through a process similar to job interviews with our clients. While they are not hiring us as full-time employees, they still want to make sure we fit into their teams well. I also sometimes interview candidates that want to work for us. Over the last five years, I have been on both sides of that conversation a few dozen times.

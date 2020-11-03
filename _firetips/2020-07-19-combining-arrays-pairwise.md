@@ -2,7 +2,7 @@
 title: "Combining arrays pairwise"
 tags: ["JavaScript"]
 ---
-Need to combine values from two arrays pairwise? This function takes the two first values, the two second values, and so on and puts them in nested arrays. The operation is called “zip” because it works like a zipper. 👖
+Need to combine values from two arrays pairwise? This function takes the two first values, the two second values, and so on and puts them in nested arrays. The operation is called “zip” because it works like a zipper.
 
 ```js
 // takes two arrays and combines their elements pairwise

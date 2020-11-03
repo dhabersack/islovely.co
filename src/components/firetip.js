@@ -1,7 +1,6 @@
 import React from 'react'
 
 import Card from '../components/card'
-import Emoji from '../components/emoji'
 import Tag from '../components/tag'
 import slugify from '../utils/slugify'
 
@@ -29,8 +28,6 @@ export default ({ firetip }) => {
             className="color-gray-900 visited:color-gray-900"
             href={`/firetips/${slug}`}
           >
-            <Emoji name=":fire:" />
-
             {title}
           </a>
         </h2>

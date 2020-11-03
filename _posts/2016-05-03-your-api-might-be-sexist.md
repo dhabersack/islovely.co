@@ -9,31 +9,31 @@ I recently came across an API that exposed a reasonable but unfortunate design d
 
 ```json
 {
-  employees: [
+  "employees": [
     {
-      name: 'John Doe',
-      email: 'john.doe@example.com',
-      male: true
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "male": true
     }, {
-      name: 'Jane Doe',
-      email: 'jane.doe@example.com',
-      male: false
+      "name": "Jane Doe",
+      "email": "jane.doe@example.com",
+      "male": false
     }, {
-      name: 'Joshua Doe',
-      email: 'joshua.doe@example.com',
-      male: true
+      "name": "Joshua Doe",
+      "email": "joshua.doe@example.com",
+      "male": true
     }
   ]
 }
 ```
 
-The blunder here is that the above uses `male: true` and `male: false` to distinguish between genders. While it looks innocent enough, upon further consideration it can be considered politically incorrect and borderline sexist. This detail might seem like a non-issue, but it exposes a problematic subtlety that we must be aware of.
+The blunder here is that the above uses `"male": true` and `"male": false` to distinguish between genders. While it looks innocent enough, upon further consideration it can be considered politically incorrect and borderline sexist. This detail might seem like a non-issue, but it exposes a problematic subtlety that we must be aware of.
 
 I am certain whoever created this API did not have bad intentions. This might be an oversight that few would have caught. If nothing else, I want to point out how small decisions such as this can have a number of unintended side effects.
 
 ## Being male is not the default
 
-Even if this *was* acceptable, why use `male: true` and not `female: true`? This makes men the implied default, with women being “not men”. Imagine code using this information like this:
+Even if this *was* acceptable, why use `"male": true` and not `"female": true`? This makes men the implied default, with women being “not men”. Imagine code using this information like this:
 
 ```js
 if (male) {
@@ -45,7 +45,7 @@ if (male) {
 
 The omitted condition of the `else`-branch does not read as “if female”, but rather “if not male”, which is a subtle but undeniable difference.
 
-Using `female: true` instead of `male: true` would not improve this. When pursuing gender equality, one gender cannot be treated as being “more true” than the other, regardless of which one is being favored.
+Using `"female": true` instead of `"male": true` would not improve this. When pursuing gender equality, one gender cannot be treated as being “more true” than the other, regardless of which one is being favored.
 
 ## Gender is not “either-or”
 

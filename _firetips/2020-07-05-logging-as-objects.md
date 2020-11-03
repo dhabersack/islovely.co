@@ -12,10 +12,10 @@ const cars = 1
 console.log(apples, children, cars)
 // ⇒ "6, 3, 1"
 //
-// 🤔 What does the `3` mean again?
+// Wait, what does the `3` mean again?
 
 console.log({ apples, children, cars })
 // ⇒ "{ apples: 6, children: 3, cars: 1 }"
 //
-// ☝️ The names act as labels here.
+// The variables’ names act as labels here.
 ```

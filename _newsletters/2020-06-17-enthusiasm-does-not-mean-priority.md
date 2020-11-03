@@ -1,7 +1,6 @@
 ---
 title: "Enthusiasm does not mean priority"
 excerpt: "One of the harder parts of product development is knowing what to focus on."
-emoji: ":chipmunk:"
 isFeatured: true
 ---
 One of the harder parts of product development is knowing what to focus on. With so many things we could do, Shiny Object Syndrome presents countless distractions. If we jumped at every new and exciting idea that comes up, we would never get anything meaningful done.
