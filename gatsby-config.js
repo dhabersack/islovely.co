@@ -37,7 +37,8 @@ module.exports = {
             resolve: `gatsby-remark-prismjs`,
             options: {
             }
-          }
+          },
+          `gatsby-remark-islovely-custom-utility-first-css`
         ]
       }
     }, {

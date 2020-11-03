@@ -44,21 +44,42 @@ export default ({ data, location }) => {
         </p>
 
         <ul
-          className="list-style-none margin-bottom-m padding-0 xs:columns-10 xs:margin-horizontal-auto m:columns-8-of-10 l:columns-6-of-8"
+          className={`
+            list-style-none
+            margin-bottom-m
+            padding-0
+            s:columns-10-of-12
+            s:margin-horizontal-auto
+            m:columns-8-of-10
+            l:columns-6-of-8
+          `}
         >
           {listItems.map(listItem => (
             <li
-              className="flex margin-bottom-s"
+              className={`
+                flex
+                margin-bottom-s
+              `}
               key={`newsletter-benefit-${listItem}`}
             >
               <img
                 alt=""
-                className="flex-no-shrink height-24 margin-right-xs width-24 m:height-24 m:width-27"
+                className={`
+                  flex-no-shrink
+                  height-24
+                  margin-right-xs
+                  width-24
+                  m:height-24
+                  m:width-27
+                `}
                 src="/assets/icons/checkmark.svg"
               />
 
               <span
-                className="font-size-16-medium m:font-size-18-medium"
+                className={`
+                  font-size-16-medium
+                  m:font-size-18-medium
+                `}
               >
                 {listItem}
               </span>
@@ -98,7 +119,17 @@ export default ({ data, location }) => {
         </div>
 
         <a
-          className="background-color-yellow-400 border-radius-xxs color-gray-900 inline-block font-size-14-short font-weight-500 padding-horizontal-m padding-vertical-s visited:color-gray-900"
+          className={`
+            background-color-yellow-400
+            border-radius-xxs
+            color-gray-900
+            inline-block
+            font-size-14-short
+            font-weight-500
+            padding-horizontal-m
+            padding-vertical-s
+            visited:color-gray-900
+          `}
           href="/newsletter/archive"
         >
           Read all newsletters →

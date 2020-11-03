@@ -1,6 +1,5 @@
 .template--post__content {
   li {
-    @include body-copy;
     padding-left: 1.3rem;
     position: relative;
 
@@ -33,7 +32,7 @@
   }
 
   ul {
-    @include _columns(10);
+    @include _columns(10, 12);
     @include _list-style(none);
     @include _margin-bottom(s);
     @include _margin-horizontal(auto);

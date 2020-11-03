@@ -193,8 +193,6 @@ img {
 }
 
 p {
-  @include body-copy;
-
   margin: 0 0 0.9375em; /* 0 0 15px */
 
   @include _xs {
