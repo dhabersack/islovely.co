@@ -1,7 +1,6 @@
 ---
 title: "I am changing my newsletter"
 excerpt: "I’ll try a few different formats to see which one works best for you readers."
-emoji: ":test_tube:"
 ---
 Hey friends! This week, the newsletter is a little more personal than usual.
 

@@ -1,7 +1,6 @@
 ---
 title: "These tips are fire."
 excerpt: "I started posting “fire tips” on Twitter."
-emoji: ":fire:"
 ---
 A few weeks ago, I started posting my own “fire tips” on Twitter. Following the trend started by Wes Bos, I am sharing bite-sized tips on how to write better code.
 
@@ -9,17 +8,17 @@ The inspiration for them comes from my daily work. You won’t find quizzes on b
 
 ---
 
-🔥 A few well-named variables go a long way towards making code more self-explanatory. Readability is worth a few extra lines; your future self will thank you!
+A few well-named variables go a long way towards making code more self-explanatory. Readability is worth a few extra lines; your future self will thank you!
 
 ```js
-// 👎 it’s hard to see what this combination of conditions does
+// it’s hard to see what this combination of conditions does
 if (!(currentDay === 'Saturday' || currentDay === 'Sunday') &&
     currentHour >= 9 && currentHour <= 18) {
   return 'The store is open!'
 }
 
 
-// 👍 by assigning the conditions to variables, we can use their names to
+// by assigning the conditions to variables, we can use their names to
 // explain the logic behind our code in plain language
 const isSaturday = currentDay === 'Saturday'
 const isSunday = currentDay === 'Sunday'
@@ -35,7 +34,7 @@ if (!isWeekend && isDuringBusinessHours) {
 
 ---
 
-🔥 Have to use a function over and over, but one or more of its parameters are always the same? Improve readability by creating a function that hides that repetition.
+Have to use a function over and over, but one or more of its parameters are always the same? Improve readability by creating a function that hides that repetition.
 
 ```js
 // Repeating `en_US` every time is tedious and prone to typos.
@@ -55,7 +54,7 @@ const action = translateEN('app.action')
 
 ---
 
-🔥 You can use non-standard characters like “:” in CSS class names if you escape them with a backslash.
+You can use non-standard characters like “:” in CSS class names if you escape them with a backslash.
 
 ```html
 <style>

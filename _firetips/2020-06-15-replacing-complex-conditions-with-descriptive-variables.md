@@ -5,15 +5,15 @@ tags: ["readability"]
 A few well-named variables go a long way towards making code more self-explanatory. Readability is worth a few extra lines; your future self will thank you!
 
 ```js
-// 👎 it’s hard to see what this combination of conditions does
+// before: it’s hard to see what this combination of conditions does
 if (!(currentDay === 'Saturday' || currentDay === 'Sunday') &&
     currentHour >= 9 && currentHour <= 18) {
   return 'The store is open!'
 }
 
 
-// 👍 by assigning the conditions to variables, we can use their names to
-// explain the logic behind our code in plain language
+// after: by assigning the conditions to variables, we can use their names
+// to explain the logic behind our code in plain language
 const isSaturday = currentDay === 'Saturday'
 const isSunday = currentDay === 'Sunday'
 

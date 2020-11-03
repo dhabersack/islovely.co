@@ -1,7 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import Emoji from '../components/emoji'
 import Layout from '../components/layout'
 import MetaTags from '../components/meta-tags'
 import RichPreview from '../components/rich-preview'
@@ -48,7 +47,6 @@ export default ({ data }) => {
 
       <Taper>
         <h1>
-          <Emoji name=":fire:" />
           {title}
         </h1>
 

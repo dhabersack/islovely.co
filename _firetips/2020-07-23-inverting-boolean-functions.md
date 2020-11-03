@@ -14,7 +14,7 @@ numbers.filter(isEven)                    // ⇒ [0, 2, 4]
 
 // `!` can flip the Boolean value, but it only works with the long form
 numbers.filter(number => !isEven(number))  // ⇒ [1, 3, 5]
-numbers.filter(!isEven)                    // 🛑 TypeError (not a function)
+numbers.filter(!isEven)                    // TypeError (not a function)
 
 // this (curried) helper makes functions return a flipped result
 const not = callback => value => !callback(value)

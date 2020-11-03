@@ -10,16 +10,16 @@ JavaScript provides a way to split strings into arrays with [`split()`](https://
 Let’s say we have a lot of ducks. In the beginning, we have all our ducks in a ~~row~~ single array:
 
 ```js
-[🦆, 🦆, 🦆, 🦆, 🦆, 🦆, 🦆, 🦆, 🦆, 🦆, 🦆, 🦆]
+['duck1', 'duck2', 'duck3', 'duck4', 'duck5', 'duck6', 'duck7', 'duck8', 'duck9', 'duck10', 'duck11', 'duck12']
 ```
 
 We want to neatly organize our ducks. Because they don’t all fit on a single shelf, we want to put them on several smaller shelves. We know that each shelf holds four ducks, so we want to group them like this:
 
 ```js
 [
-  [🦆, 🦆, 🦆, 🦆],
-  [🦆, 🦆, 🦆, 🦆],
-  [🦆, 🦆, 🦆, 🦆]
+  ['duck 1', 'duck 2',  'duck 3',  'duck 4'],
+  ['duck 5', 'duck 6',  'duck 7',  'duck 8'],
+  ['duck 9', 'duck 10', 'duck 11', 'duck 12']
 ]
 ```
 
@@ -39,22 +39,22 @@ const chunkArray = (array, chunkSize) => {
 This function takes an array and chunk size and returns it grouped into chunks of that size. If we cannot split the values evenly, the last chunk will contain fewer elements:
 
 ```js
-chunkArray([🐭, 🐭, 🐭, 🐭], 2)
+chunkArray(['a', 'b', 'c', 'd'], 2)
 // => [
-//      [🐭, 🐭],
-//      [🐭, 🐭]
+//      ['a', 'b'],
+//      ['c', 'd']
 //    ]
 
-chunkArray([🐱, 🐱, 🐱, 🐱, 🐱, 🐱], 3)
+chunkArray([1, 2, 3, 4, 5, 6], 3)
 // => [
-//      [🐱, 🐱, 🐱],
-//      [🐱, 🐱, 🐱]
+//      [1, 2, 3],
+//      [4, 5, 6]
 //    ]
 
-chunkArray([🐶, 🐶, 🐶, 🐶, 🐶, 🐶, 🐶], 4)
+chunkArray([true, true, false, true, false, false, true], 4)
 // => [
-//      [🐶, 🐶, 🐶, 🐶],
-//      [🐶, 🐶, 🐶]
+//      [true, true, false, true],
+//      [false, false, true]
 //    ]
 ```
 
@@ -112,14 +112,14 @@ return array.slice(index * chunkSize, (index + 1) * chunkSize))
 [`slice()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) returns a shallow copy of the array we call it on. Both parameters are index values that refer to positions in the array. When extracting a partial copy, `slice()` starts at the first value and stops before the second value. If the second value is greater than the length of the array, it stops at the end of the array:
 
 ```js
-[🐭, 🐹, 🐰, 🦊, 🐨].slice(0, 2)
-// => [🐭, 🐹]
+['mouse', 'hamster', 'rabbit', 'fox', 'koala'].slice(0, 2)
+// => ['mouse', 'hamster']
 
-[🐭, 🐹, 🐰, 🦊, 🐨].slice(2, 4)
-// => [🐰, 🦊]
+['mouse', 'hamster', 'rabbit', 'fox', 'koala'].slice(2, 4)
+// => ['rabbit', 'fox']
 
-[🐭, 🐹, 🐰, 🦊, 🐨].slice(4, 6)
-// => [🐨]
+['mouse', 'hamster', 'rabbit', 'fox', 'koala'].slice(4, 6)
+// => ['koala']
 ```
 
 We use each chunk’s `index` to calculate the parameters for `slice()`. By multiplying it by the size of each chunk, we copy groups of that many values from the array. If our `chunkSize` is `4`, these are the slices we would extract:
@@ -138,17 +138,17 @@ array.slice(8, 12)
 `map()` returns a new array. Instead of several `undefined` values, our function returns slices of the original array. Each of these slices is one chunk that contains four items. The outcome looks exactly like what we wanted:
 
 ```js
-chunkArray([🦆, 🦆, 🦆, 🦆, 🦆, 🦆, 🦆, 🦆, 🦆, 🦆, 🦆, 🦆], 4)
+chunkArray(['duck1', 'duck2', 'duck3', 'duck4', 'duck5', 'duck6', 'duck7', 'duck8', 'duck9', 'duck10', 'duck11', 'duck12'], 4)
 // => [
-//      [🦆, 🦆, 🦆, 🦆],
-//      [🦆, 🦆, 🦆, 🦆],
-//      [🦆, 🦆, 🦆, 🦆]
+//      ['duck 1', 'duck 2',  'duck 3',  'duck 4'],
+//      ['duck 5', 'duck 6',  'duck 7',  'duck 8'],
+//      ['duck 9', 'duck 10', 'duck 11', 'duck 12']
 //    ]
 ```
 
 ## What would I use this for?
 
-Why would we want to chunk arrays into smaller groups in the first place? There are more realistic use cases than organizing ducks on shelves. Instead of emoji, our array could contain more complex items.
+Why would we want to chunk arrays into smaller groups in the first place? There are more realistic use cases than organizing ducks on shelves. Instead of strings or other primitive types, our array could contain more complex elements.
 
 The array could hold posts we want to show on a news feed. To inject an ad slot after every tenth post, we _could_ use a counter that keeps track of the posts while we show them. Every time that counter is divisible by ten, we could inject an ad before continuing with the next post. Keeping track of that counter is messy and likely to lead to errors.
 

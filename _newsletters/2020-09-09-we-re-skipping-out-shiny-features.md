@@ -1,7 +1,6 @@
 ---
 title: "We’re skipping our shiny features"
 excerpt: ""
-emoji: ":sparkles:"
 ---
 This has been a pretty good week at work so far. A lot of projects are kicking off, the mood is good, and the possibilities endless. As we are about to build things, we are figuring out where to start. Of all the steps we could take, which is the first one?
 

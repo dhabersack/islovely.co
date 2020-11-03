@@ -13,32 +13,37 @@ const groupBy = (array, property) => array.reduce((grouped, element) => ({
 
 // some elements in this array share the same value for their `type`
 const team = [
-  { name: 'Squirtle', type: '💧' },
-  { name: 'Pikachu',  type: '⚡️' },
-  { name: 'Arcanine', type: '🔥' },
-  { name: 'Psyduck',  type: '💧' },
-  { name: 'Vulpix',   type: '🔥' }
+  { name: 'Squirtle', type: 'Water'    },
+  { name: 'Pikachu',  type: 'Electric' },
+  { name: 'Arcanine', type: 'Fire'     },
+  { name: 'Psyduck',  type: 'Water'    },
+  { name: 'Vulpix',   type: 'Fire'     }
 ]
 
 // `groupBy` groups an array into a dictionary based on the given property
 const groupedByType = groupBy(team, 'type')
 // ⇒ {
-//     '💧': [
-//       { name: 'Squirtle', type: '💧' }, { name: 'Psyduck', type: '💧' }
+//     'Water': [
+//       { name: 'Squirtle', type: 'Water' },
+//       { name: 'Psyduck',  type: 'Water' }
 //     ],
-//     '⚡️': [
-//       { name: 'Pikachu',  type: '⚡️' }
+//     'Electric': [
+//       { name: 'Pikachu',  type: 'Electric' }
 //     ],
-//     '🔥': [
-//       { name: 'Arcanine', type: '🔥' }, { name: 'Vulpix',  type: '🔥' }
+//     'Fire': [
+//       { name: 'Arcanine', type: 'Fire' },
+//       { name: 'Vulpix',   type: 'Fire' }
 //     ]
 //   }
 
 // we can get a list of all values from the dictionary’s keys
 Object.keys(groupedByType)
-// ⇒ ['💧', '⚡️', '🔥']
+// ⇒ ['Water', 'Electric', 'Fire']
 
 // we can then extract only the elements that share the same type
-groupedByType['🔥']
-// ⇒ [{ name: 'Arcanine', type: '🔥' }, { name: 'Vulpix', type: '🔥' }]
+groupedByType['Fire']
+// ⇒ [
+//     { name: 'Arcanine', type: 'Fire' },
+//     { name: 'Vulpix',   type: 'Fire' }
+//   ]
 ```

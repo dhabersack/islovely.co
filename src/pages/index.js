@@ -1,6 +1,5 @@
 import React from 'react'
 
-import Emoji from '../components/emoji'
 import Layout from '../components/layout'
 import LandingPageBlock from '../components/landing-page-block'
 import MetaTags from '../components/meta-tags'
@@ -129,8 +128,6 @@ export default () => (
 
       <div>
         <h2 className="font-size-18-medium margin-top-0 l:font-size-20-medium">
-          <Emoji name=":wave:" />
-
           Hey, I am Dom. I love helping others get better at what they do.
         </h2>
 

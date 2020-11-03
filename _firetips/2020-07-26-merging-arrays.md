@@ -9,12 +9,12 @@ const a = ['up', 'down']
 const b = ['left', 'right']
 const c = ['B', 'A']
 
-// 👎 this nests the arrays in another array instead of merging them
+// this nests the arrays in another array instead of merging them
 [a, b, c]           // ⇒ [['up', 'down'], ['left', 'right'], ['B', 'A']]
 
-// 👍 we can concatenate many arrays at once with `.concat()`
+// we can concatenate many arrays at once with `.concat()`
 a.concat(b, c)      // ⇒ ['up', 'down', 'left', 'right', 'B', 'A']
 
-// 👍 the spread operator also joins the arrays into one large array
+// the spread operator also joins the arrays into one large array
 [...a, ...b, ...c]  // ⇒ ['up', 'down', 'left', 'right', 'B', 'A']
 ```

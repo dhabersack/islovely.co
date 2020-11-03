@@ -1,7 +1,6 @@
 ---
 title: "End of an era"
 excerpt: ""
-emoji: ":hourglass:"
 ---
 Working with times and dates in JavaScript is no fun. The language has a few quirks, like numbering months starting at 0 instead of 1. According to JavaScript, January is month 0 and December is month 11. Timezones based on location and formatting based on language are similarly annoying.
 

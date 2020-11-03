@@ -1,7 +1,6 @@
 ---
 title: "Drawing sweet icons for you"
 excerpt: "I am assembling some of my icons into an icon pack that I will make available for free soon."
-emoji: ":candy:"
 ---
 Hey lovelies!
 

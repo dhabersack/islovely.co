@@ -73,7 +73,6 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            emoji
             title
           }
         }

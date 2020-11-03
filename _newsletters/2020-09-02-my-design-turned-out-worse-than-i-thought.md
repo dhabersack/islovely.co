@@ -1,7 +1,6 @@
 ---
 title: "My design turned out worse than I thought"
 excerpt: ""
-emoji: ":tired_face:"
 ---
 Now that we know what we want the next version of our product to look like, we can finally start implementing it. Trying to make our lives easier, I am compiling a styleguide we can follow to build the components. The guides look something like this:
 

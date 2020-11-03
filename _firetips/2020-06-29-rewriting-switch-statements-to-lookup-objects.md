@@ -5,7 +5,7 @@ tags: ["JavaScript", "readability"]
 Some switch-statements can be replaced with lookup-tables in JavaScript. If every `case` immediately returns a value, this pattern achieves the same in fewer lines of code.
 
 ```js
-// 👎 switching through the values to return a number requires a lot of code
+// before: switching through the values to return a number requires a lot of code
 const getFeetForAnimal = animal => {
   switch (animal) {
     case 'bird':
@@ -19,7 +19,7 @@ const getFeetForAnimal = animal => {
   }
 }
 
-// 👍 a mapping-object and implicit `return` do the same in fewer lines
+// after: a lookup object and implicit `return` do the same in fewer lines
 const getFeetForAnimal = animal => ({
   bird: 2,
   dog: 4,

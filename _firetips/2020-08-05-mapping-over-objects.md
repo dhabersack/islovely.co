@@ -12,12 +12,12 @@ const double = number => number * 2
 const numbers = [1, 2, 3]
 const coordinates = { x: 1, y: 2, z: 3 }
 
-// 👍 we can `map` over an array to double all elements
+// we can `map` over an array to double all elements
 numbers.map(double)
 // ⇒ [2, 4, 6]
 
-// 👎 we cannot `map` an object, because objects don’t have a map-function
-coordinates.map(double)  // 🛑 TypeError
+// we cannot `map` an object, because objects don’t have a map-function
+coordinates.map(double)  // causes a TypeError
 
 
 // this takes an object and a function to apply to _every_ property in it
@@ -29,7 +29,7 @@ const mapObject = (object, theFunction) => {
   }), {})
 }
 
-// 👍 `mapObject` can map all properties for us
+// `mapObject` can map all properties for us
 mapObject(coordinates, double)
 // ⇒ { x: 2, y: 4, z: 6 }
 ```
