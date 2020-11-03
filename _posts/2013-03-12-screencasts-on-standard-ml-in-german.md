@@ -13,27 +13,4 @@ This injustice inspired me to record several screencasts on Standard ML in Germa
 
 The series consists of 18 episodes ranging in duration from eight minutes to just over an hour, totaling nine hours. Each episode focuses on a topic such as data types, recursion and currying, giving examples on how to use these concepts in practice.
 
-The individual videos are:
-
-1. [Datentypen](http://youtu.be/DExIYnh1b5A) (32:54)
-2. [Berechnungen mit einfachen Datentypen](http://youtu.be/kHczyI6-IQ8) (47:58)
-3. [Berechnungen mit Tupeln, Verbunden und Listen](http://youtu.be/98xy4wS16HY) (25:58)
-4. [Kontrollfluss und Funktionen](http://youtu.be/09icasbUSOs) (34:45)
-5. [Rekursion](http://youtu.be/ALxoIaZRdzQ) (41:04)
-6. [Auswertungsreihenfolge](http://youtu.be/xxCehEeT63A) (46:53)
-7. [Lokale Variablen und Endrekursion](http://youtu.be/jGU-ZgLlSuE) (39:30)
-8. [Pattern Matching und Verarbeitung von Listen](http://youtu.be/Gz7OXe5ueSA) (53:27)
-9. [Benutzerdefinierte Datentypen](http://youtu.be/I-NZqrvQztM) (1:03:47)
-10. [Sichtbarkeit](http://youtu.be/Zm5ZN4OPnLs) (24:06)
-11. [Currying und Funktionen höherer Ordnung](http://youtu.be/kMmad05B4DA) (35:37)
-12. [Exceptions](http://youtu.be/p1iy4E15jF8) (24:13)
-13. [Optionstypen](http://youtu.be/n2FqVhyncLU) (13:09)
-14. [Verknüpfung von Funktionen](http://youtu.be/ySeArCl8T78) (12:40)
-15. [Abstrakte Datentypen](http://youtu.be/QXhuHZVQr6o) (12:26)
-16. [Strukturen und Signaturen](http://youtu.be/_twcTqSEdgA) (22:06)
-17. [Referenzen](http://youtu.be/gtnhMpEGo_g) (10:37)
-18. [Schleifen](http://youtu.be/9qLwmWO5UGA) (7:55)
-
-You can find the [playlist on YouTube](http://youtube.com/playlist?list=PLvxbiku9hLuGV23Ks2WIzJbvGieCeppzl 'Screencast-series on Standard ML (German)') or watch it right here:
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/DExIYnh1b5A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+You can find the videos on [their course page](/courses/standard-ml-for-beginners).
