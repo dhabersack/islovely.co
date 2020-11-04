@@ -1,6 +1,7 @@
 import React from 'react'
 
 import ConvertkitForm from './convertkit-form'
+import { A, H1, P } from '../styled-tags'
 
 export default ({
   sourceUrl
@@ -13,24 +14,22 @@ export default ({
       padding-vertical-s
     `}
   >
-    <h1
+    <H1
       className={`
         font-size-24-short
         margin-0
         margin-bottom-xs
+        margin-top-0
       `}
     >
       There is more to learn
-    </h1>
+    </H1>
 
-    <p
-      className={`
-        font-size-16-medium
-        m:font-size-18-medium
-      `}
+    <P
+      className="font-size-16-medium"
     >
-      Get free previews of my upcoming course materials and other bonus content to help you work smarter. I share tips straight to your inbox once a week. You can read previous mails in the <a href="/newsletter/archive">newsletter archive</a>.
-    </p>
+      Get free previews of my upcoming course materials and other bonus content to help you work smarter. I share tips straight to your inbox once a week. You can read previous mails in the <A href="/newsletter/archive">newsletter archive</A>.
+    </P>
 
     <ConvertkitForm
       sourceUrl={sourceUrl}

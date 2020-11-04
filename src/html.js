@@ -21,7 +21,16 @@ export default ({
       {headComponents}
     </head>
 
-    <body {...bodyAttributes}>
+    <body
+      className={`
+        background-color-white
+        color-gray-700
+        height-full
+        margin-0
+        padding-0
+      `}
+      {...bodyAttributes}
+    >
       {preBodyComponents}
 
       <div key={`body`} id="___gatsby" dangerouslySetInnerHTML={{ __html: body }} />

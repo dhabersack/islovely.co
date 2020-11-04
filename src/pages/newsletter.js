@@ -7,6 +7,7 @@ import MetaTags from '../components/meta-tags'
 import NewsletterTeaser from '../components/newsletter-teaser'
 import RichPreview from '../components/rich-preview'
 import Taper from '../components/taper'
+import { A, H1, H2, P } from '../styled-tags'
 
 export default ({ data, location }) => {
   const newsletters = data.allMarkdownRemark.edges.map(({ node }) => node)
@@ -37,11 +38,13 @@ export default ({ data, location }) => {
       />
 
       <Taper>
-        <h1>More tips, straight to your inbox</h1>
+        <H1>
+          More tips, straight to your inbox
+        </H1>
 
-        <p>
+        <P>
           In addition to what I share on this site, I send out a weekly newsletter with tips to help you work smarter. By signing up, you get access to:
-        </p>
+        </P>
 
         <ul
           className={`
@@ -87,11 +90,13 @@ export default ({ data, location }) => {
           ))}
         </ul>
 
-        <p>
-          You can find <a href="/newsletter/archive">all previous newsletters</a> in the archive. Get this bonus content before everybody else!
-        </p>
+        <P>
+          You can find <A href="/newsletter/archive">all previous newsletters</A> in the archive. Get this bonus content before everybody else!
+        </P>
 
-        <div className="margin-bottom-l">
+        <div
+          className="margin-bottom-l"
+        >
           <ConvertkitForm
             sourceUrl={location.href}
             svForm="1067424"
@@ -99,9 +104,9 @@ export default ({ data, location }) => {
           />
         </div>
 
-        <h2>
+        <H2>
           Featured newsletters
-        </h2>
+        </H2>
 
         <div
           className="margin-bottom-l"

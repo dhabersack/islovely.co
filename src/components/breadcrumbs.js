@@ -1,7 +1,15 @@
 import React from 'react'
 
+import { A } from '../styled-tags'
+
 export default ({ breadcrumbs }) => breadcrumbs ? (
-  <nav className="font-size-14-medium font-weight-500 margin-bottom-m">
+  <nav
+    className={`
+      font-size-14-medium
+      font-weight-500
+      margin-bottom-m
+    `}
+  >
     {[
       {
         label: 'Home',
@@ -12,17 +20,30 @@ export default ({ breadcrumbs }) => breadcrumbs ? (
       label,
       url
     }) => url ? (
-      <React.Fragment key={`breadcrumb-${label}`}>
-        <a className="inline-block" href={url}>
+      <React.Fragment
+        key={`breadcrumb-${label}`}
+      >
+        <A
+          className="inline-block"
+          href={url}
+        >
           {label}
-        </a>
+        </A>
 
-        <span className="color-gray-600 margin-horizontal-xxs">
+        <span
+          className={`
+            color-gray-600
+            margin-horizontal-xxs
+          `}
+        >
           &raquo;
         </span>
       </React.Fragment>
     ) : (
-      <span className="color-gray-500" key={`breadcrumb-${label}`}>
+      <span
+        className="color-gray-500"
+        key={`breadcrumb-${label}`}
+      >
         {label}
       </span>
     ))}

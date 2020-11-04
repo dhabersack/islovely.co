@@ -7,6 +7,7 @@ import MetaTags from '../components/meta-tags'
 import RichPreview from '../components/rich-preview'
 import Tag from '../components/tag'
 import Taper from '../components/taper'
+import { H1 } from  '../styled-tags'
 import slugify from '../utils/slugify'
 
 export default ({
@@ -50,19 +51,32 @@ export default ({
       />
 
       <Taper>
-        <h1>
+        <H1>
           {title}
-        </h1>
+        </H1>
 
-        <div dangerouslySetInnerHTML={{ __html: html }} />
+        <div
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
 
-        <div className="flex flex-wrap margin-bottom-xl">
+        <div
+          className={`
+            flex
+            flex-wrap
+            margin-bottom-xl
+          `}
+        >
           {tags.map(tag => (
             <div
-              className="margin-bottom-xxs margin-right-xxs"
+              className={`
+                margin-bottom-xxs
+                margin-right-xxs
+              `}
               key={`tag-${tag}`}
             >
-              <Tag href={`/firetips/tags/${slugify(tag)}`}>
+              <Tag
+                href={`/firetips/tags/${slugify(tag)}`}
+              >
                 {tag}
               </Tag>
             </div>

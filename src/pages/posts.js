@@ -6,6 +6,7 @@ import MetaTags from '../components/meta-tags'
 import PostTeasers from '../components/post-teasers'
 import RichPreview from '../components/rich-preview'
 import Taper from '../components/taper'
+import { A, H1, P } from '../styled-tags'
 
 export default ({ data }) => {
   const posts = data.allMarkdownRemark.edges.map(({ node }) => node)
@@ -28,14 +29,18 @@ export default ({ data }) => {
       />
 
       <Taper>
-        <h1>Blog</h1>
+        <H1>
+          Blog
+        </H1>
 
-        <p>
-          I write about design, development, and productivity. My <a href="/newsletter">newsletter</a> contains shorter pieces, which you can find in the <a href="/newsletter/archive">archive</a>.
-        </p>
+        <P>
+          I write about design, development, and productivity. My <A href="/newsletter">newsletter</A> contains shorter pieces, which you can find in the <A href="/newsletter/archive">archive</A>.
+        </P>
       </Taper>
 
-      <PostTeasers posts={posts} />
+      <PostTeasers
+        posts={posts}
+      />
     </Layout>
   )
 }

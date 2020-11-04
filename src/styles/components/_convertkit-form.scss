@@ -24,13 +24,6 @@
   @include _color(red, 500);
 }
 
-.convertkit-form__disclaimer {
-  @include _color(gray, 600);
-  @include _font-size(14, medium);
-  font-style: italic;
-  margin: 0;
-}
-
 .convertkit-form__fields {
   align-items: flex-start;
   display: flex;

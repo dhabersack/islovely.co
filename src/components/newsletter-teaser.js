@@ -1,5 +1,6 @@
 import React from 'react'
 
+import { A, H2 } from '../styled-tags'
 import formatDate from '../utils/format-date'
 
 export default ({ newsletter }) => {
@@ -19,15 +20,27 @@ export default ({ newsletter }) => {
 
   return (
     <>
-      <span className="color-gray-600 font-size-12-short">
+      <span
+        className={`
+          color-gray-600
+          font-size-12-short
+        `}
+      >
         {formatDate(date)}
       </span>
 
-      <h2 className="font-size-20-medium margin-0">
-        <a href={permalink}>
+      <H2
+        className={`
+          font-size-20-medium
+          margin-0
+        `}
+      >
+        <A
+          href={permalink}
+        >
           {title}
-        </a>
-      </h2>
+        </A>
+      </H2>
     </>
   )
 }

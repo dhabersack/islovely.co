@@ -10,6 +10,7 @@ import PostMeta from '../components/post-meta'
 import RichPreview from '../components/rich-preview'
 import Tag from '../components/tag'
 import Taper from '../components/taper'
+import { H1 } from '../styled-tags'
 
 export default ({
   data,
@@ -64,15 +65,31 @@ export default ({
       />
 
       <Taper>
-        <h1>{title}</h1>
+        <H1>
+          {title}
+        </H1>
 
-        <div className="margin-bottom-m">
-          <PostMeta date={date} />
+        <div
+          className="margin-bottom-m"
+        >
+          <PostMeta
+            date={date}
+          />
         </div>
       </Taper>
 
-      <figure className="l-post__hero">
-        <img alt={heroAlt} src={`/assets/heroes/${slug}.jpg`} />
+      <figure
+        className={`
+          margin-0
+          margin-bottom-m
+          margin-horizontal-auto
+          width-full
+        `}
+      >
+        <img
+          alt={heroAlt}
+          src={`/assets/heroes/${slug}.jpg`}
+        />
 
         {heroCaption && (
           <figcaption>

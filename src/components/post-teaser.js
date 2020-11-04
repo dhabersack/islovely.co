@@ -4,6 +4,7 @@ import slugify from '../utils/slugify'
 import Card from './card'
 import PostMeta from './post-meta'
 import Tag from './tag'
+import { A, P } from '../styled-tags'
 
 export default ({ post }) => {
   const {
@@ -33,14 +34,22 @@ export default ({ post }) => {
 
         <div className="flex flex-column height-full padding-horizontal-s padding-vertical-s">
           <h2 className="font-size-16-short font-weight-700 margin-0 margin-bottom-xs">
-            <a href={permalink}>
+            <A href={permalink}>
               {title}
-            </a>
+            </A>
           </h2>
 
-          <p className="color-gray-700 flex-grow font-size-14-medium margin-0 margin-bottom-m">
+          <P
+            className={`
+              color-gray-700
+              flex-grow
+              font-size-14-medium
+              margin-bottom-m
+              m:font-size-14-medium
+            `}
+          >
             {excerpt}
-          </p>
+          </P>
 
           <div className="flex flex-wrap margin-bottom-xs">
             {categories.map(category => (

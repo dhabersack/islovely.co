@@ -4,23 +4,6 @@
   box-sizing: inherit;
 }
 
-a {
-  @include _color(blue, 500);
-  text-decoration: none;
-}
-
-a:focus {
-  @include _outline;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-a:visited {
-  @include _color(blue, 500);
-}
-
 blockquote {
   @include _columns(10);
   font-style: italic;
@@ -63,14 +46,6 @@ blockquote p:last-of-type {
   margin-bottom: 0;
 }
 
-body {
-  @include _background-color(white);
-  @include _color(gray, 700);
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
 button {
   background: red;
 }
@@ -89,29 +64,29 @@ figcaption {
   text-align: center;
 }
 
-figure {
-  margin: 2.4em auto;
-  width: _columns(10);
-
-  @include _s {
-    margin-bottom: 3em;
-    margin-top: 3em;
-  }
-
-  @include _m {
-    width: _columns(8, 10);
-  }
-
-  @include _l {
-    margin-bottom: 3.6em;
-    margin-top: 3.6em;
-    width: _columns(9);
-  }
-}
-
-figure img {
-  width: 100%;
-}
+// figure {
+//   margin: 2.4em auto;
+//   width: _columns(10);
+//
+//   @include _s {
+//     margin-bottom: 3em;
+//     margin-top: 3em;
+//   }
+//
+//   @include _m {
+//     width: _columns(8, 10);
+//   }
+//
+//   @include _l {
+//     margin-bottom: 3.6em;
+//     margin-top: 3.6em;
+//     width: _columns(9);
+//   }
+// }
+//
+// figure img {
+//   width: 100%;
+// }
 
 h1,
 h2,
@@ -119,54 +94,28 @@ h3,
 h4,
 h5,
 h6 {
+  @include _background-color(red, 200);
+  font-size: 1rem;
+  line-height: 1;
+
   font-weight: 700;
   margin: 0;
 }
 
-h1 {
-  @include _font-size(24, short);
-  margin: 0.9em 0 0.4em; /* 27px 0 12px */
-
-  @include _xs {
-    @include _font-size(30, short);
-    margin: 0.75em 0 0.5em; /* 27px 0 18px */
-  }
-
-  @include _l {
-    @include _font-size(36, short);
-    margin: 0.75em 0 0.525em; /* 30px 0 21px */
-  }
-}
-
-h2 {
-  @include _font-size(20, short);
-  margin: 1em 0 0.375em; /* 24px 0 9px */
-
-  @include _xs {
-    @include _font-size(24, short);
-    margin: 0.9em 0 0.4em; /* 27px 0 12px */
-  }
-
-  @include _l {
-    @include _font-size(30, short);
-    margin: 0.75em 0 0.5em; /* 27px 0 18px */
-  }
-}
-
-h3 {
-  @include _font-size(16, medium);
-  margin: 1.05em 0 0.3em; /* 21px 0 6px */
-
-  @include _xs {
-    @include _font-size(20, short);
-    margin: 1em 0 0.375em; /* 24px 0 9px */
-  }
-
-  @include _l {
-    @include _font-size(24, short);
-    margin: 0.9em 0 0.4em; /* 27px 0 12px */
-  }
-}
+// h3 {
+//   @include _font-size(16, medium);
+//   margin: 1.05em 0 0.3em; /* 21px 0 6px */
+//
+//   @include _xs {
+//     @include _font-size(20, short);
+//     margin: 1em 0 0.375em; /* 24px 0 9px */
+//   }
+//
+//   @include _l {
+//     @include _font-size(24, short);
+//     margin: 0.9em 0 0.4em; /* 27px 0 12px */
+//   }
+// }
 
 hr {
   @include _background-color(gray, 300);
@@ -246,4 +195,16 @@ thead {}
 thead th:not(:empty) {
   @include _background-color(gray, 400);
   text-align: left;
+}
+
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+strong {
+  @include _background-color(red, 200);
 }

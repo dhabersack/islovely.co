@@ -6,6 +6,7 @@ import MetaTags from '../components/meta-tags'
 import PostTeasers from '../components/post-teasers'
 import RichPreview from '../components/rich-preview'
 import Taper from '../components/taper'
+import { H1 } from '../styled-tags'
 import slugify from '../utils/slugify'
 
 export default ({
@@ -36,10 +37,14 @@ export default ({
       />
 
       <Taper>
-        <h1>Posts in “{category}”</h1>
+        <H1>
+          Posts in “{category}”
+        </H1>
       </Taper>
 
-      <PostTeasers posts={posts} />
+      <PostTeasers
+        posts={posts}
+      />
     </Layout>
   )
 }

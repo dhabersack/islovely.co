@@ -6,6 +6,7 @@ import MetaTags from '../../components/meta-tags'
 import NewsletterTeaser from '../../components/newsletter-teaser'
 import RichPreview from '../../components/rich-preview'
 import Taper from '../../components/taper'
+import { A, H1, P } from '../../styled-tags'
 
 export default ({ data }) => {
   const newsletters = data.allMarkdownRemark.edges.map(({ node }) => node)
@@ -33,15 +34,22 @@ export default ({ data }) => {
       />
 
       <Taper>
-        <h1>Newsletter archive</h1>
+        <H1>
+          Newsletter archive
+        </H1>
 
-        <p>
-          These are some of my previous newsletters. <a href="/newsletter">Sign up</a> if you want to get them delivered straight to your inbox.
-        </p>
+        <P>
+          These are some of my previous newsletters. <A href="/newsletter">Sign up</A> if you want to get them delivered straight to your inbox.
+        </P>
 
         {newsletters.map(newsletter => (
-          <div className="margin-bottom-m" key={`newsletter-${newsletter.id}`}>
-            <NewsletterTeaser newsletter={newsletter} />
+          <div
+            className="margin-bottom-m"
+            key={`newsletter-${newsletter.id}`}
+          >
+            <NewsletterTeaser
+              newsletter={newsletter}
+            />
           </div>
         ))}
       </Taper>

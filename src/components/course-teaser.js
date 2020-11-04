@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Card from './card'
+import { A, P, Strong } from '../styled-tags'
 
 export default ({ course }) => {
   const {
@@ -34,14 +35,19 @@ export default ({ course }) => {
 
         <div className="flex-grow padding-horizontal-s padding-vertical-s">
           <h2 className="font-size-16-short margin-0 margin-bottom-xs">
-            <a href={permalink}>
+            <A href={permalink}>
               {title}
-            </a>
+            </A>
           </h2>
 
-          <p className="font-size-16-medium margin-0">
+          <P
+            className={`
+              font-size-16-medium
+              margin-0
+            `}
+          >
             {excerpt}
-          </p>
+          </P>
         </div>
 
         <footer className="background-color-gray-100 border-bottom-radius-xs color-gray-600 flex flex-wrap font-size-12-medium padding-horizontal-s padding-vertical-s">
@@ -50,7 +56,7 @@ export default ({ course }) => {
               <img alt="" className="margin-right-xxs" src="/assets/icons/email-with-letter.svg" />
 
               <span>
-                <strong>{emails}</strong>
+                <Strong>{emails}</Strong>
                 {' '}
                 emails
               </span>
@@ -62,7 +68,7 @@ export default ({ course }) => {
               <img alt="" className="margin-right-xxs" src="/assets/icons/video.svg" />
 
               <span>
-                <strong>{videos}</strong>
+                <Strong>{videos}</Strong>
                 {' '}
                 videos
               </span>
@@ -74,7 +80,7 @@ export default ({ course }) => {
               <img alt="" className="margin-right-xxs" src="/assets/icons/clock.svg" />
 
               <span>
-                <strong>{hours}</strong>
+                <Strong>{hours}</Strong>
                 {' '}
                 hours
               </span>
@@ -86,7 +92,7 @@ export default ({ course }) => {
               <img alt="" className="margin-right-xxs" src="/assets/icons/calendar.svg" />
 
               <span>
-                <strong>{weeks}</strong>
+                <Strong>{weeks}</Strong>
                 {' '}
                 weeks
               </span>

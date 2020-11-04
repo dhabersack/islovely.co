@@ -1,42 +1,44 @@
 import React from 'react'
 
+import { A } from '../styled-tags'
+
 export default () => (
   <nav>
     <ul className="flex flex-wrap font-size-16-short font-weight-500 list-style-none margin-0 padding-0">
       <li className="margin-right-xs xs:margin-right-s">
-        <a className="inline-block padding-vertical-xs" href="/courses">
+        <A className="inline-block padding-vertical-xs" href="/courses">
           Courses
-        </a>
+        </A>
       </li>
 
       <li className="margin-right-xs xs:margin-right-s">
-        <a className="inline-block padding-vertical-xs" href="/posts">
+        <A className="inline-block padding-vertical-xs" href="/posts">
           Blog
-        </a>
+        </A>
       </li>
 
       <li className="margin-right-xs xs:margin-right-s">
-        <a className="inline-block padding-vertical-xs" href="/firetips">
+        <A className="inline-block padding-vertical-xs" href="/firetips">
           Fire tips
-        </a>
+        </A>
       </li>
 
       <li className="margin-right-xs xs:margin-right-s">
-        <a className="inline-block padding-vertical-xs" href="/newsletter">
+        <A className="inline-block padding-vertical-xs" href="/newsletter">
           Newsletter
-        </a>
+        </A>
       </li>
 
       <li className="margin-right-xs xs:margin-right-s">
-        <a className="inline-block padding-vertical-xs" href="/about">
+        <A className="inline-block padding-vertical-xs" href="/about">
           About
-        </a>
+        </A>
       </li>
 
       <li>
-        <a className="inline-block padding-vertical-xs" href="/contact">
+        <A className="inline-block padding-vertical-xs" href="/contact">
           Contact
-        </a>
+        </A>
       </li>
     </ul>
   </nav>

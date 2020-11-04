@@ -8,6 +8,7 @@ import Input from './input'
 import Label from './label'
 import RequiresCookieConsent from './requires-cookie-consent'
 import Textarea from './textarea'
+import { A } from '../styled-tags'
 
 export default () => {
   const [{
@@ -98,7 +99,7 @@ export default () => {
           </div>
 
           <Label className="cursor-pointer flex-shrink" htmlFor="data-processing-consent">
-            I understand that the information provided by me is subject to the <a href="https://www.iubenda.com/privacy-policy/31487586" className="iubenda-nostyle no-brand iubenda-embed">Privacy Policy</a>.
+            I understand that the information provided by me is subject to the <A href="https://www.iubenda.com/privacy-policy/31487586" className="iubenda-nostyle no-brand iubenda-embed">Privacy Policy</A>.
           </Label>
         </div>
 

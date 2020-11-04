@@ -7,6 +7,7 @@ import MetaTags from '../components/meta-tags'
 import RichPreview from '../components/rich-preview'
 import Tag from '../components/tag'
 import Taper from '../components/taper'
+import { H1 } from '../styled-tags'
 import slugify from '../utils/slugify'
 
 export default ({ data }) => {
@@ -37,7 +38,9 @@ export default ({ data }) => {
       />
 
       <Taper>
-        <h1>Fire tips</h1>
+        <H1>
+          Fire tips
+        </H1>
 
         <div className="flex flex-wrap margin-bottom-m">
           {tagsSortedByCount.map(tag => (

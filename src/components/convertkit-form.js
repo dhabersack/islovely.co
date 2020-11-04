@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet'
 import Button from './button'
 import Input from './input'
 import RequiresCookieConsent from './requires-cookie-consent'
+import { P } from '../styled-tags'
 
 export default ({
   cta,
@@ -64,9 +65,16 @@ export default ({
           </div>
         </form>
 
-        <p className="convertkit-form__disclaimer">
+        <P
+          className={`
+            color-gray-600
+            font-size-14-medium
+            italic
+            margin-0
+          `}
+        >
           I respect your email privacy. Unsubscribe anytime.
-        </p>
+        </P>
       </div>
     </RequiresCookieConsent>
   )

@@ -5,7 +5,7 @@ import LandingPageBlock from '../components/landing-page-block'
 import MetaTags from '../components/meta-tags'
 import RichPreview from '../components/rich-preview'
 import Video from '../components/video'
-import { P } from '../components/tags'
+import { P, Strong } from '../styled-tags'
 
 const cta = (
   <a className="align-items-center background-color-yellow-400 border-radius-xl box-shadow-xs color-gray-900 inline-flex padding-horizontal-l padding-vertical-s visited:color-gray-900" href="/courses">
@@ -83,7 +83,7 @@ export default () => (
         </P>
 
         <P>
-          Following along with these courses gives you the tools you need to bring your own ideas to life. You will be able to make any change you want and adjust them to what <strong>you</strong> want to build.
+          Following along with these courses gives you the tools you need to bring your own ideas to life. You will be able to make any change you want and adjust them to what <Strong>you</Strong> want to build.
         </P>
       </LandingPageBlock>
     </div>

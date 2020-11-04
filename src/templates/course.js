@@ -7,6 +7,7 @@ import MetaTags from '../components/meta-tags'
 import RichPreview from '../components/rich-preview'
 import Taper from '../components/taper'
 import Video from '../components/video'
+import { H1, Strong } from '../styled-tags'
 
 export default ({
   data,
@@ -59,17 +60,34 @@ export default ({
       />
 
       <Taper>
-        <h1>
+        <H1>
           {title}
-        </h1>
+        </H1>
 
-        <aside className="flex flex-wrap font-size-12-medium margin-bottom-s">
+        <aside
+          className={`
+            flex
+            flex-wrap
+            font-size-12-medium
+            margin-bottom-s
+          `}
+        >
           {emails && (
-            <div className="align-items-center inline-flex margin-right-s">
-              <img alt="" className="margin-right-xxs" src="/assets/icons/email-with-letter.svg" />
+            <div
+              className={`u
+                align-items-center
+                inline-flex
+                margin-right-s
+              `}
+            >
+              <img
+                alt=""
+                className="margin-right-xxs"
+                src="/assets/icons/email-with-letter.svg"
+              />
 
               <span>
-                <strong>{emails}</strong>
+                <Strong>{emails}</Strong>
                 {' '}
                 emails
               </span>
@@ -81,7 +99,7 @@ export default ({
               <img alt="" className="margin-right-xxs" src="/assets/icons/video.svg" />
 
               <span>
-                <strong>{videos}</strong>
+                <Strong>{videos}</Strong>
                 {' '}
                 videos
               </span>
@@ -93,7 +111,7 @@ export default ({
               <img alt="" className="margin-right-xxs" src="/assets/icons/clock.svg" />
 
               <span>
-                <strong>{hours}</strong>
+                <Strong>{hours}</Strong>
                 {' '}
                 hours
               </span>
@@ -102,10 +120,14 @@ export default ({
 
           {weeks && (
             <div className="align-items-center inline-flex margin-right-s">
-              <img alt="" className="margin-right-xxs" src="/assets/icons/calendar.svg" />
+              <img
+                alt=""
+                className="margin-right-xxs"
+                src="/assets/icons/calendar.svg"
+              />
 
               <span>
-                <strong>{weeks}</strong>
+                <Strong>{weeks}</Strong>
                 {' '}
                 weeks
               </span>
@@ -113,30 +135,70 @@ export default ({
           )}
         </aside>
 
-        <img alt={title} className="height-192" src={`/assets/courses/${slug}.png`} />
+        <img
+          alt={title}
+          className="height-192"
+          src={`/assets/courses/${slug}.png`}
+        />
 
-        <div dangerouslySetInnerHTML={{ __html: html }} />
+        <div
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
 
-        <div className="margin-bottom-xl">
-          <ConvertkitForm svForm={svForm} uid={uid} cta={cta} sourceUrl={location.href} />
+        <div
+          className="margin-bottom-xl"
+        >
+          <ConvertkitForm
+            cta={cta}
+            sourceUrl={location.href}
+            svForm={svForm}
+            uid={uid}
+          />
         </div>
       </Taper>
 
       {playlist && (
-        <div className="grid grid-columns-1 grid-column-gap grid-row-gap-l xs:grid-columns-2 xs:grid-row-gap-xs m:grid-columns-3 m:grid-row-gap-m l:grid-row-gap-l">
+        <div
+          className={`
+            grid
+            grid-columns-1
+            grid-column-gap
+            grid-row-gap-l
+            xs:grid-columns-2
+            xs:grid-row-gap-xs
+            m:grid-columns-3
+            m:grid-row-gap-m
+            l:grid-row-gap-l
+          `}
+        >
           {playlist.map(({
             duration,
             title,
             vimeoId,
             youtubeId
           }, index) => (
-            <div key={`video-${title}`}>
-              <div className="margin-bottom-xxs">
-                <Video title={title} vimeoId={vimeoId} youtubeId={youtubeId} />
+            <div
+              key={`video-${title}`}
+            >
+              <div
+                className="margin-bottom-xxs"
+              >
+                <Video
+                  title={title}
+                  vimeoId={vimeoId}
+                  youtubeId={youtubeId}
+                />
               </div>
 
-              <h4 className="font-size-16 font-weight-400">
-                <span className="color-gray-500">
+              <h4
+                className={`
+                  font-size-16
+                  font-weight-400
+                `}
+              >
+                <span
+                  className="color-gray-500"
+                >
                   #{index + 1}
                 </span>
 
