@@ -21,7 +21,10 @@ export default ({
   return (
     <Helmet>
       {description && (
-        <meta name="description" content={description} />
+        <meta
+          name="description"
+          content={description}
+        />
       )}
 
       {title ? (

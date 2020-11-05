@@ -2,9 +2,8 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 
 import Button from './button'
-import Input from './input'
 import RequiresCookieConsent from './requires-cookie-consent'
-import { P } from '../styled-tags'
+import { Input, P } from '../styled-tags'
 
 export default ({
   cta,
@@ -18,7 +17,9 @@ export default ({
       target="form"
     >
       <Helmet>
-        <script src="https://f.convertkit.com/ckjs/ck.5.js" />
+        <script
+          src="https://f.convertkit.com/ckjs/ck.5.js"
+        />
       </Helmet>
 
       <div>
@@ -34,14 +35,24 @@ export default ({
           min-width="400 500 600 700 800"
         >
           <ul
-            className="convertkit-form__alert convertkit-form__alert--error"
+            className={`
+              convertkit-form__alert
+              convertkit-form__alert--error
+            `}
             data-element="errors"
             data-group="alert"
           />
 
-          <div className="convertkit-form__fields">
+          <div
+            className="convertkit-form__fields"
+          >
             <Input
-              className="border-right-radius-0 border-right-width-0 flex-basis flex-grow"
+              className={`
+                border-right-radius-0
+                border-right-width-0
+                flex-basis
+                flex-grow
+              `}
               name="email_address"
               placeholder="Enter your email"
               required
@@ -56,9 +67,9 @@ export default ({
             />
 
             <Button
-              data-element="submit"
               category="primary"
               className="border-left-radius-0"
+              data-element="submit"
             >
               {cta || 'Get me early access!'}
             </Button>

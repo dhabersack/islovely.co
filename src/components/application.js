@@ -8,11 +8,15 @@ export default ({ children }) => {
   const [isCookieConsentGiven, setIsCookieConsentGiven] = useState(false)
 
   return (
-    <StaticKitProvider site="fa0afc13c26b">
-      <CookieConsentContext.Provider value={{
-        isCookieConsentGiven,
-        setIsCookieConsentGiven
-      }}>
+    <StaticKitProvider
+      site="fa0afc13c26b"
+    >
+      <CookieConsentContext.Provider
+        value={{
+          isCookieConsentGiven,
+          setIsCookieConsentGiven
+        }}
+      >
         {children}
 
         <CookieConsent />

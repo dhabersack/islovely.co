@@ -11,8 +11,10 @@ import slugify from '../utils/slugify'
 
 export default ({
   data,
-  pageContext
+  pageContext,
 }) => {
+  console.log({ data })
+
   const posts = data.allMarkdownRemark.edges.map(({ node }) => node)
   const { category } = pageContext
 

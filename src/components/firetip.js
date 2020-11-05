@@ -2,6 +2,7 @@ import React from 'react'
 
 import Card from '../components/card'
 import Tag from '../components/tag'
+import { A, H2, P } from '../styled-tags'
 import slugify from '../utils/slugify'
 
 export default ({ firetip }) => {
@@ -22,25 +23,52 @@ export default ({ firetip }) => {
 
   return (
     <Card>
-      <div className="padding-horizontal-s padding-vertical-s">
-        <h2 className="font-size-16-short font-weight-600 margin-0 margin-bottom-s">
-          <a
-            className="color-gray-900 visited:color-gray-900"
+      <div
+        className={`
+          padding-horizontal-s
+          padding-vertical-s
+        `}
+      >
+        <H2
+          className={`
+            font-size-16-short
+            font-weight-600
+            margin-0
+            margin-bottom-s
+          `}
+        >
+          <A
+            className={`
+              color-gray-900
+              visited:color-gray-900
+            `}
             href={`/firetips/${slug}`}
           >
             {title}
-          </a>
-        </h2>
+          </A>
+        </H2>
 
-        <div dangerouslySetInnerHTML={{ __html: html }} />
+        <div
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
 
-        <div className="flex flex-wrap">
+        <div
+          className={`
+            flex
+            flex-wrap
+          `}
+        >
           {tags.map(tag => (
             <div
-              className="margin-bottom-xxs margin-right-xxs"
+              className={`
+                margin-bottom-xxs
+                margin-right-xxs
+              `}
               key={`tag-${tag}`}
             >
-              <Tag href={`/firetips/tags/${slugify(tag)}`}>
+              <Tag
+                href={`/firetips/tags/${slugify(tag)}`}
+              >
                 {tag}
               </Tag>
             </div>
@@ -48,16 +76,32 @@ export default ({ firetip }) => {
         </div>
       </div>
 
-      <footer className="background-color-gray-100 padding-horizontal-s padding-vertical-s">
-        <p className="color-gray-600 font-size-12-medium margin-0">
-          <span className="margin-right-xxs">
+      <footer
+        className={`
+          background-color-gray-100
+          padding-horizontal-s
+          padding-vertical-s
+        `}
+      >
+        <P
+          className={`
+            color-gray-600
+            font-size-12-medium
+            margin-0
+          `}
+        >
+          <span
+            className="margin-right-xxs"
+          >
             Permalink:
           </span>
 
-          <a href={`/firetips/${slug}`}>
+          <A
+            href={`/firetips/${slug}`}
+          >
             islovely.co/firetips/{slug}
-          </a>
-        </p>
+          </A>
+        </P>
       </footer>
     </Card>
   )

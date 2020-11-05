@@ -6,6 +6,7 @@ import MailingListSignup from '../components/mailing-list-signup'
 import MetaTags from '../components/meta-tags'
 import RichPreview from '../components/rich-preview'
 import Taper from '../components/taper'
+import { H1, P } from '../styled-tags'
 import formatDate from '../utils/format-date'
 
 export default ({
@@ -54,17 +55,28 @@ export default ({
       />
 
       <Taper>
-        <h1>
+        <H1>
           {title}
-        </h1>
+        </H1>
 
-        <p className="color-gray-500 font-size-12-short margin-bottom-s">
+        <P
+          className={`
+            color-gray-500
+            font-size-12-short
+            margin-bottom-s
+          `}
+        >
           {formatDate(date)}
-        </p>
+        </P>
 
-        <div className="margin-bottom-xl" dangerouslySetInnerHTML={{ __html: html }} />
+        <div
+          className="margin-bottom-xl"
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
 
-        <MailingListSignup sourceUrl={location.href} />
+        <MailingListSignup
+          sourceUrl={location.href}
+        />
       </Taper>
     </Layout>
   )

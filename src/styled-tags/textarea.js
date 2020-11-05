@@ -4,14 +4,14 @@ import mergeClassnames from '../utils/merge-classnames'
 import typeToClassname from '../utils/type-to-classname'
 
 export default ({
-  children,
   className,
+  children,
   ...props
 }) => (
-  <h2
-    className={mergeClassnames(typeToClassname('h2'), className)}
+  <textarea
+    className={mergeClassnames(typeToClassname('textarea'), className)}
     {...props}
   >
     {children}
-  </h2>
+  </textarea>
 )

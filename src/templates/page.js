@@ -5,6 +5,7 @@ import Layout from '../components/layout'
 import MetaTags from '../components/meta-tags'
 import RichPreview from '../components/rich-preview'
 import Taper from '../components/taper'
+import { H1 } from '../styled-tags'
 
 export default ({ data }) => {
   const {
@@ -40,9 +41,13 @@ export default ({ data }) => {
       />
 
       <Taper>
-        <h1>{title}</h1>
+        <H1>
+          {title}
+        </H1>
 
-        <div dangerouslySetInnerHTML={{ __html: html }} />
+        <div
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
       </Taper>
     </Layout>
   )

@@ -5,6 +5,7 @@ import Layout from '../components/layout'
 import MetaTags from '../components/meta-tags'
 import RichPreview from '../components/rich-preview'
 import Taper from '../components/taper'
+import { A, H1, H2, P } from '../styled-tags'
 
 export default ({ data }) => {
   const projects = data.allMarkdownRemark.edges.map(({ node }) => node)
@@ -27,7 +28,9 @@ export default ({ data }) => {
       />
 
       <Taper>
-        <h1>Projects</h1>
+        <H1>
+          Projects
+        </H1>
 
         {projects.map(({
           fields,
@@ -42,16 +45,18 @@ export default ({ data }) => {
           } = frontmatter
 
           return (
-            <React.Fragment key={`project-${id}`} >
-              <h2>
-                <a href={permalink}>
+            <React.Fragment
+              key={`project-${id}`}
+            >
+              <H2>
+                <A href={permalink}>
                   {title}
-                </a>
-              </h2>
+                </A>
+              </H2>
 
-              <p>
+              <P>
                 {excerpt}
-              </p>
+              </P>
             </React.Fragment>
           )
         })}

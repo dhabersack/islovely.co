@@ -6,6 +6,7 @@ import MetaTags from '../components/meta-tags'
 import PostTeasers from '../components/post-teasers'
 import RichPreview from '../components/rich-preview'
 import Taper from '../components/taper'
+import { H1, H2 } from '../styled-tags'
 
 export default ({ data }) => {
   const posts = data.allMarkdownRemark.edges.map(({ node }) => node)
@@ -37,18 +38,24 @@ export default ({ data }) => {
       />
 
       <Taper>
-        <h1>Categories</h1>
+        <H1>
+          Categories
+        </H1>
       </Taper>
 
       {categories.map(category => (
-        <React.Fragment key={`category-${category}`}>
+        <React.Fragment
+          key={`category-${category}`}
+        >
           <Taper>
-            <h2>
+            <H2>
               {category} &times; {postsByCategory[category].length}
-            </h2>
+            </H2>
           </Taper>
 
-          <PostTeasers posts={postsByCategory[category]} />
+          <PostTeasers
+            posts={postsByCategory[category]}
+          />
         </React.Fragment>
       ))}
     </Layout>

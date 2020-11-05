@@ -4,11 +4,8 @@ import { useForm, ValidationError } from '@statickit/react'
 import Button from './button'
 import Checkbox from './checkbox'
 import Flash from './flash'
-import Input from './input'
-import Label from './label'
 import RequiresCookieConsent from './requires-cookie-consent'
-import Textarea from './textarea'
-import { A } from '../styled-tags'
+import { A, Input, Label, Textarea } from '../styled-tags'
 
 export default () => {
   const [{
@@ -28,48 +25,82 @@ export default () => {
   const canSubmit = isDataProcessingConsentGiven && !submitting
 
   return (
-    <RequiresCookieConsent target="contact form">
+    <RequiresCookieConsent
+      target="contact form"
+    >
       {hasErrors && !submitting && (
-        <div className="margin-bottom-s">
-          <Flash type="error">
+        <div
+          className="margin-bottom-s"
+        >
+          <Flash
+            type="error"
+          >
             Sorry, your message could not be sent. Try again after addressing the errors below.
           </Flash>
         </div>
       )}
 
       {succeeded && (
-        <div className="margin-bottom-s">
-          <Flash type="success">
+        <div
+          className="margin-bottom-s"
+        >
+          <Flash
+            type="success"
+          >
             Thank you for your message. I will get back to you soon.
           </Flash>
         </div>
       )}
 
-      <form onSubmit={handleSubmit}>
-        <div className="margin-bottom-s">
-          <Label htmlFor="email">
+      <form
+        onSubmit={handleSubmit}
+      >
+        <div
+          className="margin-bottom-s"
+        >
+          <Label
+            htmlFor="email"
+          >
             Email address
           </Label>
 
-          <div className="s:columns-8 m:columns-6-of-10 l:columns-5-of-8 xl:columns-4-of-8">
+          <div
+            className={`
+              s:columns-8-of-12
+              m:columns-6-of-10
+              l:columns-5-of-8
+              xl:columns-4-of-8
+            `}
+          >
             <Input
               id="email"
-              type="email"
               name="email"
               placeholder="your.best@email.com"
+              type="email"
             />
           </div>
 
           <ValidationError
-            className="block color-red-500 font-size-12-short font-weight-500 italic margin-vertical-xs"
+            className={`
+              block
+              color-red-500
+              font-size-12-short
+              font-weight-500
+              italic
+              margin-vertical-xs
+            `}
             errors={errors}
             field="email"
             prefix="Email address"
           />
         </div>
 
-        <div className="margin-bottom-s">
-          <Label htmlFor="message">
+        <div
+          className="margin-bottom-s"
+        >
+          <Label
+            htmlFor="message"
+          >
             Message
           </Label>
 
@@ -81,15 +112,29 @@ export default () => {
           />
 
           <ValidationError
-            className="block color-red-500 font-size-12-short font-weight-500 italic margin-vertical-xs"
+            className={`
+              block
+              color-red-500
+              font-size-12-short
+              font-weight-500
+              italic
+              margin-vertical-xs
+            `}
             errors={errors}
             field="message"
             prefix="Message"
           />
         </div>
 
-        <div className="margin-bottom-s flex">
-          <div className="margin-right-xs">
+        <div
+          className={`
+            margin-bottom-s
+            flex
+          `}
+        >
+          <div
+            className="margin-right-xs"
+          >
             <Checkbox
               id="data-processing-consent"
               name="data-processing-consent"
@@ -98,12 +143,21 @@ export default () => {
             />
           </div>
 
-          <Label className="cursor-pointer flex-shrink" htmlFor="data-processing-consent">
+          <Label
+            className={`
+              cursor-pointer
+              flex-shrink
+            `}
+            htmlFor="data-processing-consent"
+          >
             I understand that the information provided by me is subject to the <A href="https://www.iubenda.com/privacy-policy/31487586" className="iubenda-nostyle no-brand iubenda-embed">Privacy Policy</A>.
           </Label>
         </div>
 
-        <Button disabled={!canSubmit} type="submit">
+        <Button
+          disabled={!canSubmit}
+          type="submit"
+        >
           Send your message
         </Button>
       </form>

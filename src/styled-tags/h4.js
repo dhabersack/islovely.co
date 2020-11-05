@@ -8,10 +8,10 @@ export default ({
   className,
   ...props
 }) => (
-  <h2
-    className={mergeClassnames(typeToClassname('h2'), className)}
+  <h4
+    className={mergeClassnames(typeToClassname('h4'), className)}
     {...props}
   >
     {children}
-  </h2>
+  </h4>
 )

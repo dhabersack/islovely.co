@@ -22,8 +22,8 @@ export default () => (
       href="/"
     >
       <img
-        src="/assets/logo.svg"
         alt="islovely"
+        src="/assets/logo.svg"
       />
     </A>
 

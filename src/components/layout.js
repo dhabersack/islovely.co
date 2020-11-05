@@ -14,22 +14,52 @@ export default ({
   children
 }) => (
   <Application>
-    <Helmet htmlAttributes={IS_IN_DEBUG_MODE ? { 'class': 'debug' } : {}} />
+    <Helmet
+      htmlAttributes={IS_IN_DEBUG_MODE ? { 'class': 'debug' } : {}}
+    />
 
-    <div className="flex flex-column height-full">
-      <div className="flex-noshrink margin-horizontal-m">
+    <div
+      className={`
+        flex
+        flex-column
+        height-full
+      `}
+    >
+      <div
+        className={`
+          flex-noshrink
+          margin-horizontal-m
+        `}
+      >
         <Header />
       </div>
 
-      <main className="l-default__main flex-grow flex-no-shrink padding-bottom-xl padding-horizontal-span padding-top-l">
+      <main
+        className={`
+          l-default__main
+          flex-grow
+          flex-no-shrink
+          padding-bottom-xl
+          padding-horizontal-span
+          padding-top-l
+        `}
+      >
         <Taper>
-          <Breadcrumbs breadcrumbs={breadcrumbs} />
+          <Breadcrumbs
+            breadcrumbs={breadcrumbs}
+          />
         </Taper>
 
         {children}
       </main>
 
-      <div className="background-color-gray-100 flex-none padding-horizontal-span">
+      <div
+        className={`
+          background-color-gray-100
+          flex-none
+          padding-horizontal-span
+        `}
+      >
         <Footer />
       </div>
     </div>

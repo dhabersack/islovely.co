@@ -7,7 +7,7 @@ import MetaTags from '../components/meta-tags'
 import RichPreview from '../components/rich-preview'
 import Taper from '../components/taper'
 import Video from '../components/video'
-import { H1, Strong } from '../styled-tags'
+import { H1, H4, Strong } from '../styled-tags'
 
 export default ({
   data,
@@ -87,39 +87,59 @@ export default ({
               />
 
               <span>
-                <Strong>{emails}</Strong>
-                {' '}
-                emails
+                <Strong>{emails}</Strong> emails
               </span>
             </div>
           )}
 
           {videos && (
-            <div className="align-items-center inline-flex margin-right-s">
-              <img alt="" className="margin-right-xxs" src="/assets/icons/video.svg" />
+            <div
+              className={`
+                align-items-center
+                inline-flex
+                margin-right-s
+              `}
+            >
+              <img
+                alt=""
+                className="margin-right-xxs"
+                src="/assets/icons/video.svg"
+              />
 
               <span>
-                <Strong>{videos}</Strong>
-                {' '}
-                videos
+                <Strong>{videos}</Strong> videos
               </span>
             </div>
           )}
 
           {hours && (
-            <div className="align-items-center inline-flex margin-right-s">
-              <img alt="" className="margin-right-xxs" src="/assets/icons/clock.svg" />
+            <div
+              className={`
+                align-items-center
+                inline-flex
+                margin-right-s
+              `}
+            >
+              <img
+                alt=""
+                className="margin-right-xxs"
+                src="/assets/icons/clock.svg"
+              />
 
               <span>
-                <Strong>{hours}</Strong>
-                {' '}
-                hours
+                <Strong>{hours}</Strong> hours
               </span>
             </div>
           )}
 
           {weeks && (
-            <div className="align-items-center inline-flex margin-right-s">
+            <div
+              className={`
+                align-items-center
+                inline-flex
+                margin-right-s
+              `}
+            >
               <img
                 alt=""
                 className="margin-right-xxs"
@@ -127,9 +147,7 @@ export default ({
               />
 
               <span>
-                <Strong>{weeks}</Strong>
-                {' '}
-                weeks
+                <Strong>{weeks}</Strong> weeks
               </span>
             </div>
           )}
@@ -190,9 +208,9 @@ export default ({
                 />
               </div>
 
-              <h4
+              <H4
                 className={`
-                  font-size-16
+                  font-size-16-short
                   font-weight-400
                 `}
               >
@@ -211,7 +229,7 @@ export default ({
                 <span className="color-gray-500">
                   ({duration})
                 </span>
-              </h4>
+              </H4>
             </div>
           ))}
         </div>

@@ -12,7 +12,7 @@ export default ({
   tags,
   title,
   type,
-  updatedAt
+  updatedAt,
 }) => {
   const data = useStaticQuery(graphql`
     query {
@@ -34,22 +34,100 @@ export default ({
 
   return (
     <Helmet>
-      {description && <meta property="og:description" content={description} />}
-      <meta property="og:image" content={`${siteUrl}${imageUrl}`} />
-      {heroAlt && <meta property="og:image:alt" content={heroAlt} />}
-      <meta property="og:image:height" content="360" />
-      <meta property="og:image:type" content="image/jpeg" />
-      <meta property="og:image:width" content="640" />
-      <meta property="og:site_name" content={siteTitle} />
-      <meta property="og:title" content={title ? `${title} · ${siteTitle}` : siteTitle} />
-      {type && <meta property="og:type" content={type} />}
-      {isArticle && expiredAt && <meta property="article:expiration_time" content={expiredAt} />}
-      {isArticle && updatedAt && <meta property="article:modified_time" content={updatedAt} />}
-      {isArticle && publishedAt && <meta property="article:published_time" content={publishedAt} />}
-      {isArticle && tags.map(tag => <meta property="article:tag" content={tag} key={`tag-${tag}`} />)}
-      <meta property="og:url" content={`${siteUrl}${permalink}`} />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:creator" content="@domhabersack" />
+      {description && (
+        <meta
+          content={description}
+          property="og:description"
+        />
+      )}
+
+      <meta
+        content={`${siteUrl}${imageUrl}`}
+        property="og:image"
+      />
+
+      {heroAlt && (
+        <meta
+          content={heroAlt}
+          property="og:image:alt"
+        />
+      )}
+
+      <meta
+        content="360"
+        property="og:image:height"
+      />
+
+      <meta
+        content="image/jpeg"
+        property="og:image:type"
+      />
+
+      <meta
+        content="640"
+        property="og:image:width"
+      />
+
+      <meta
+        content={siteTitle}
+        property="og:site_name"
+      />
+
+      <meta
+        content={title ? `${title} · ${siteTitle}` : siteTitle}
+        property="og:title"
+      />
+
+      {type && (
+        <meta
+          content={type}
+          property="og:type"
+        />
+      )}
+
+      {(isArticle && expiredAt) && (
+        <meta
+          content={expiredAt}
+          property="article:expiration_time"
+        />
+      )}
+
+      {(isArticle && updatedAt) && (
+        <meta
+          content={updatedAt}
+          property="article:modified_time"
+        />
+      )}
+
+      {(isArticle && publishedAt) && (
+        <meta
+          content={publishedAt}
+          property="article:published_time"
+        />
+      )}
+
+      {isArticle && tags.map(tag => (
+        <meta
+          content={tag}
+          key={`tag-${tag}`}
+          property="article:tag"
+        />
+      ))}
+
+      <meta
+        content={`${siteUrl}${permalink}`}
+        property="og:url"
+      />
+
+      <meta
+        content="summary_large_image"
+        name="twitter:card"
+      />
+
+      <meta
+        content="@domhabersack"
+        name="twitter:creator"
+      />
     </Helmet>
   )
 }

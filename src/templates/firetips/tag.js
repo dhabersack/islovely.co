@@ -6,6 +6,7 @@ import Layout from '../../components/layout'
 import MetaTags from '../../components/meta-tags'
 import RichPreview from '../../components/rich-preview'
 import Taper from '../../components/taper'
+import { H1 } from '../../styled-tags'
 import slugify from '../../utils/slugify'
 
 export default ({
@@ -22,7 +23,7 @@ export default ({
           label: 'Fire tips',
           url: '/firetips'
         }, {
-          label: 'by tag',
+          label: 'By tag',
           url: '/firetips/tags'
         }, {
           label: tag
@@ -39,7 +40,9 @@ export default ({
       />
 
       <Taper>
-        <h1>Fire tips tagged “{tag}”</h1>
+        <H1>
+          Fire tips tagged “{tag}”
+        </H1>
 
         {firetips.map(firetip => (
           <div

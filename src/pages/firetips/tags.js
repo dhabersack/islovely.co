@@ -6,6 +6,7 @@ import Layout from '../../components/layout'
 import MetaTags from '../../components/meta-tags'
 import RichPreview from '../../components/rich-preview'
 import Taper from '../../components/taper'
+import { A, H1, H2 } from '../../styled-tags'
 import slugify from '../../utils/slugify'
 
 export default ({ data }) => {
@@ -27,7 +28,7 @@ export default ({ data }) => {
           label: 'Fire tips',
           url: '/firetips'
         }, {
-          label: 'by tag'
+          label: 'By tag'
         }
       ]}
     >
@@ -41,19 +42,21 @@ export default ({ data }) => {
       />
 
       <Taper>
-        <h1>Fire tips by tag</h1>
+        <H1>
+          Fire tips by tag
+        </H1>
 
         {tags.map(tag => (
           <React.Fragment
             key={`tag-${tag}`}
           >
-            <h2>
-              <a
+            <H2>
+              <A
                 href={`/firetips/tags/${slugify(tag)}`}
               >
                 Fire tips tagged “{tag}”
-              </a>
-            </h2>
+              </A>
+            </H2>
 
             {firetipsByTag[tag].map(firetip => (
               <div

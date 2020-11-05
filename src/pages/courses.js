@@ -8,7 +8,9 @@ import RichPreview from '../components/rich-preview'
 import Taper from '../components/taper'
 import { A, H1, P, Strong } from '../styled-tags'
 
-export default ({ data }) => {
+export default ({
+  data,
+}) => {
   const courses = data.allMarkdownRemark.edges.map(({ node }) => node)
 
   return (
@@ -42,8 +44,12 @@ export default ({ data }) => {
         </P>
       </Taper>
 
-      <div className="margin-bottom-xl">
-        <CourseTeasers courses={courses} />
+      <div
+        className="margin-bottom-xl"
+      >
+        <CourseTeasers
+          courses={courses}
+        />
       </div>
     </Layout>
   )

@@ -4,14 +4,11 @@ import mergeClassnames from '../utils/merge-classnames'
 import typeToClassname from '../utils/type-to-classname'
 
 export default ({
-  children,
   className,
   ...props
 }) => (
-  <h2
-    className={mergeClassnames(typeToClassname('h2'), className)}
+  <input
+    className={mergeClassnames(typeToClassname('input'), className)}
     {...props}
-  >
-    {children}
-  </h2>
+  />
 )

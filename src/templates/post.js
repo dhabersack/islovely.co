@@ -10,7 +10,7 @@ import PostMeta from '../components/post-meta'
 import RichPreview from '../components/rich-preview'
 import Tag from '../components/tag'
 import Taper from '../components/taper'
-import { H1 } from '../styled-tags'
+import { Figcaption, Figure, H1 } from '../styled-tags'
 
 export default ({
   data,
@@ -78,7 +78,7 @@ export default ({
         </div>
       </Taper>
 
-      <figure
+      <Figure
         className={`
           margin-0
           margin-bottom-m
@@ -92,31 +92,68 @@ export default ({
         />
 
         {heroCaption && (
-          <figcaption>
+          <Figcaption>
             {heroCaption}
-          </figcaption>
+          </Figcaption>
         )}
-      </figure>
+      </Figure>
 
       <Taper>
         {flash && (
-          <div className="margin-bottom-m">
-            <Flash type="info">
+          <div
+            className="margin-bottom-m"
+          >
+            <Flash
+              type="info"
+            >
               {flash}
             </Flash>
           </div>
         )}
 
-        <div className="break-words margin-bottom-xl template--post__content" dangerouslySetInnerHTML={{ __html: html }} />
+        <div
+          className={`
+            break-words
+            margin-bottom-xl
+            template--post__content
+          `}
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
 
-        <div className="flex margin-bottom-xl">
-          <p className="color-gray-700 font-size-12-medium margin-0 margin-bottom-xs margin-right-xxs padding-vertical-xs">
+        <div
+          className={`
+            flex
+            margin-bottom-xl
+          `}
+        >
+          <span
+            className={`
+              block
+              color-gray-700
+              font-size-12-medium
+              margin-bottom-xs
+              margin-right-xxs
+              padding-vertical-xs
+            `}
+          >
             Tags:
-          </p>
+          </span>
 
-          <div className="align-items-center flex flex-wrap">
+          <div
+            className={`
+              align-items-center
+              flex
+              flex-wrap
+            `}
+          >
             {categories.map(category => (
-              <div className="margin-bottom-xxs margin-right-xxs" key={`category-${category}`}>
+              <div
+                className={`
+                  margin-bottom-xxs
+                  margin-right-xxs
+                `}
+                key={`category-${category}`}
+              >
                 <Tag
                   href={`/categories/${slugify(category)}`}
                 >
@@ -127,9 +164,9 @@ export default ({
           </div>
         </div>
 
-        <div className="l-post__mailing-list-signup">
-          <MailingListSignup sourceUrl={location.href} />
-        </div>
+        <MailingListSignup
+          sourceUrl={location.href}
+        />
       </Taper>
     </Layout>
   )

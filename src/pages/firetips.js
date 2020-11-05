@@ -10,7 +10,9 @@ import Taper from '../components/taper'
 import { H1 } from '../styled-tags'
 import slugify from '../utils/slugify'
 
-export default ({ data }) => {
+export default ({
+  data,
+}) => {
   const firetips = data.allMarkdownRemark.edges.map(({ node }) => node)
 
   const tagCounts = firetips.map(firetip => firetip.frontmatter.tags).flat(1).reduce((dictionary, tag) => ({
@@ -42,10 +44,21 @@ export default ({ data }) => {
           Fire tips
         </H1>
 
-        <div className="flex flex-wrap margin-bottom-m">
+        <div
+          className={`
+            flex
+            flex-wrap
+            margin-bottom-m
+          `}
+        >
           {tagsSortedByCount.map(tag => (
             <div
-              className="flex align-items-center margin-bottom-xs margin-right-xs"
+              className={`
+                flex
+                align-items-center
+                margin-bottom-xs
+                margin-right-xs
+              `}
               key={`tag-${tag}`}
             >
               <Tag
@@ -53,7 +66,10 @@ export default ({ data }) => {
               >
                 {tag}
               </Tag>&nbsp;<span
-                className="color-gray-600 font-size-12-medium"
+                className={`
+                  color-gray-600
+                  font-size-12-medium
+                `}
               >
                 &times; {tagCounts[tag]}
               </span>
