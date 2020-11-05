@@ -5,7 +5,7 @@ excerpt: ""
 Now that we know what we want the next version of our product to look like, we can finally start implementing it. Trying to make our lives easier, I am compiling a styleguide we can follow to build the components. The guides look something like this:
 
 <figure>
-  <img src="/assets/newsletters/my-design-turned-out-worse-than-i-thought/button-documentation.png" alt="An excerpt from our style documentation, detailing the dimensions, colors, and other attributes of a button.">
+  <img src="/assets/newsletters/my-design-turned-out-worse-than-i-thought/button-documentation.png" alt="An excerpt from our style documentation, detailing  the dimensions, colors, and other attributes of a button." />
 </figure>
 
 (If you can’t see this image, you can find it [on dribbble](https://dribbble.com/shots/14105531-Button-styles-documentation) as well.)

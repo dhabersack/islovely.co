@@ -13,7 +13,7 @@ export default ({
   data,
   pageContext,
 }) => {
-  const firetips = data.allMarkdownRemark.edges.map(({ node }) => node)
+  const firetips = data.allMdx.edges.map(({ node }) => node)
   const { tag } = pageContext
 
   return (
@@ -61,7 +61,7 @@ export default ({
 
 export const pageQuery = graphql`
   query($tag: [String]) {
-    allMarkdownRemark(
+    allMdx(
       filter: {
         fields: {
           type: {
@@ -81,6 +81,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
+          body
           fields {
             slug
           }
@@ -88,7 +89,6 @@ export const pageQuery = graphql`
             tags
             title
           }
-          html
         }
       }
     }

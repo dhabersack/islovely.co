@@ -20,6 +20,6 @@ Thanks so much for your help!
 PS: Finally adding a “courses”-entry to the navigation on [islovely.co](/) probably sounds silly to most. This mockup gets me excited like you wouldn’t believe:
 
 <figure>
-  <img src="/assets/newsletters/what-do-you-not-have-time-for/courses-mockup.png" alt="A screenshot of this website, showing a new courses-section">
+  <img src="/assets/newsletters/what-do-you-not-have-time-for/courses-mockup.png" alt="A screenshot of this website, showing a new courses-section" />
 </figure>
 

@@ -9,7 +9,7 @@ The “mockups” we came up with looked almost like a finished product. Every c
 If we show people too much design, telling them “ignore what this looks like” does not work. Because feedback at this level is not helpful at this stage, we are now doing fat marker sketches instead. These are, unsurprisingly, sketches drawn with a fat marker. They look like this one:
 
 <figure>
-  <img src="/assets/newsletters/fat-marker-sketches-are-the-better-mockups/example.jpeg" alt="A sketch of an application in fullscreen as well as horizontal and vertical split view modes.">
+  <img src="/assets/newsletters/fat-marker-sketches-are-the-better-mockups/example.jpeg" alt="A sketch of an application in fullscreen as well as horizontal and vertical split view modes." />
 </figure>
 
 By their nature, fat marker sketches cannot contain a lot of detail. They focus on explaining a concept, with no visual design at all. A fat marker sketch shows just enough for us to explore if an idea would work.

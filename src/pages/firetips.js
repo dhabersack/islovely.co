@@ -13,7 +13,7 @@ import slugify from '../utils/slugify'
 export default ({
   data,
 }) => {
-  const firetips = data.allMarkdownRemark.edges.map(({ node }) => node)
+  const firetips = data.allMdx.edges.map(({ node }) => node)
 
   const tagCounts = firetips.map(firetip => firetip.frontmatter.tags).flat(1).reduce((dictionary, tag) => ({
     ...dictionary,
@@ -94,7 +94,7 @@ export default ({
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark(
+    allMdx(
       filter: {
         fields: {
           type: {
@@ -109,6 +109,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
+          body
           fields {
             slug
           }
@@ -116,7 +117,6 @@ export const pageQuery = graphql`
             tags
             title
           }
-          html
         }
       }
     }

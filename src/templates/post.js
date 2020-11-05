@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import { MDXRenderer} from 'gatsby-plugin-mdx'
 
 import slugify from '../utils/slugify'
 import Flash from '../components/flash'
@@ -14,18 +15,18 @@ import { Figcaption, Figure, H1 } from '../styled-tags'
 
 export default ({
   data,
-  location
+  location,
 }) => {
   const {
+    body,
     fields,
     frontmatter,
-    html
-  } = data.markdownRemark
+  } = data.mdx
 
   const {
     date,
     slug,
-    permalink
+    permalink,
   } = fields
 
   const {
@@ -34,7 +35,7 @@ export default ({
     flash,
     heroAlt,
     heroCaption,
-    title
+    title,
   } = frontmatter
 
   return (
@@ -117,8 +118,11 @@ export default ({
             margin-bottom-xl
             template--post__content
           `}
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
+        >
+          <MDXRenderer>
+            {body}
+          </MDXRenderer>
+        </div>
 
         <div
           className={`
@@ -174,19 +178,19 @@ export default ({
 
 export const pageQuery = graphql`
   query($slug: String!) {
-    markdownRemark(
+    mdx(
       fields: {
         slug: {
           eq: $slug
         }
       }
     ) {
+      body
       fields {
         date
         permalink
         slug
       }
-      html
       frontmatter {
         categories
         excerpt

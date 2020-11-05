@@ -4,7 +4,7 @@ title: About
 My name is Dominik “Dom” Habersack. I love sharing what I know in any way possible. This is me with my dog Cooper:
 
 <figure>
-  <img src="/assets/cooper-and-dom.jpg" alt="Cooper and I">
+  <img src="/assets/cooper-and-dom.jpg" alt="Cooper and I" />
 
   <figcaption>
     Cooper is an Elo-pup, a not-yet-officially-recognized breed. You can follow him on Instagram at <a href="https://instagram.com/coopertheelo">@coopertheelo</a>.

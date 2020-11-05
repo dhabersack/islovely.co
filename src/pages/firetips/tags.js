@@ -10,7 +10,7 @@ import { A, H1, H2 } from '../../styled-tags'
 import slugify from '../../utils/slugify'
 
 export default ({ data }) => {
-  const firetips = data.allMarkdownRemark.edges.map(({ node }) => node)
+  const firetips = data.allMdx.edges.map(({ node }) => node)
 
   const tags = [
     ...new Set(firetips.map(({ frontmatter }) => frontmatter.tags).flat())
@@ -77,7 +77,7 @@ export default ({ data }) => {
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark(
+    allMdx(
       filter: {
         fields: {
           type: {
@@ -92,6 +92,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
+          body
           fields {
             date
             slug
@@ -100,7 +101,6 @@ export const pageQuery = graphql`
             tags
             title
           }
-          html
         }
       }
     }

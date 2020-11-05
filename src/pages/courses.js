@@ -11,7 +11,7 @@ import { A, H1, P, Strong } from '../styled-tags'
 export default ({
   data,
 }) => {
-  const courses = data.allMarkdownRemark.edges.map(({ node }) => node)
+  const courses = data.allMdx.edges.map(({ node }) => node)
 
   return (
     <Layout
@@ -57,7 +57,7 @@ export default ({
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark(
+    allMdx(
       filter: {
         fields: {
           type: {

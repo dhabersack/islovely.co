@@ -1,15 +1,18 @@
 import React from 'react'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 import Card from '../components/card'
 import Tag from '../components/tag'
 import { A, H2, P } from '../styled-tags'
 import slugify from '../utils/slugify'
 
-export default ({ firetip }) => {
+export default ({ 
+  firetip
+}) => {
   const {
+    body,
     fields,
     frontmatter,
-    html,
   } = firetip
 
   const {
@@ -48,9 +51,9 @@ export default ({ firetip }) => {
           </A>
         </H2>
 
-        <div
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
+        <MDXRenderer>
+          {body}
+        </MDXRenderer>
 
         <div
           className={`

@@ -47,12 +47,28 @@ pre[class*="language-"] code[class*="language-"] {
   @include _color(cyan, 300);
 }
 
+.token.deleted {
+  @include _color(red, 400);
+
+  .prefix {
+    display: none;
+  }
+}
+
 .token.function {
   @include _color(cyan, 300);
 }
 
 .token.important {
   @include _color(purple, 400);
+}
+
+.token.inserted {
+  @include _color(green, 400);
+
+  .prefix {
+    display: none;
+  }
 }
 
 .token.keyword {
@@ -97,10 +113,8 @@ pre[class*="language-"] code[class*="language-"] {
 .token.bold,
 .token.cdata,
 .token.char,
-.token.deleted,
 .token.doctype,
 .token.entity,
-.token.inserted,
 .token.italic,
 .token.prolog,
 .token.symbol,

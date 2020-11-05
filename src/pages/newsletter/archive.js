@@ -9,7 +9,7 @@ import Taper from '../../components/taper'
 import { A, H1, P } from '../../styled-tags'
 
 export default ({ data }) => {
-  const newsletters = data.allMarkdownRemark.edges.map(({ node }) => node)
+  const newsletters = data.allMdx.edges.map(({ node }) => node)
 
   return (
     <Layout
@@ -59,7 +59,7 @@ export default ({ data }) => {
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark(
+    allMdx(
       filter: {
         fields: {
           type: {

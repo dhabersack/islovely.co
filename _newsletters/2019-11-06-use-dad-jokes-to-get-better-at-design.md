@@ -11,7 +11,7 @@ I also released [a Sketch-plugin that replaces texts with dad jokes](https://git
 Without sketch-dadjokes:
 
 <figure>
-  <img src="/assets/newsletters/use-dad-jokes-to-get-better-at-design/before-sketch-dadjokes.png" alt="A list of four items that use lorem ipsum">
+  <img src="/assets/newsletters/use-dad-jokes-to-get-better-at-design/before-sketch-dadjokes.png" alt="A list of four items that use lorem ipsum" />
 
   <figcaption>
     uninspired and hard to grasp (no dad jokes)
@@ -21,7 +21,7 @@ Without sketch-dadjokes:
 With sketch-dadjokes:
 
 <figure>
-  <img src="/assets/newsletters/use-dad-jokes-to-get-better-at-design/after-sketch-dadjokes.png" alt="Another list of four items, all of which terrible dad jokes">
+  <img src="/assets/newsletters/use-dad-jokes-to-get-better-at-design/after-sketch-dadjokes.png" alt="Another list of four items, all of which terrible dad jokes" />
 
   <figcaption>
     fun and closer to the real deal (dad-jokes)

@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 import Layout from '../components/layout'
 import MetaTags from '../components/meta-tags'
@@ -11,12 +12,14 @@ export default ({
   data,
 }) => {
   const {
+    body,
     fields,
     frontmatter,
-    html,
-  } = data.markdownRemark
+  } = data.mdx
 
-  const { permalink } = fields
+  const {
+    permalink,
+  } = fields
 
   const {
     excerpt,
@@ -50,9 +53,9 @@ export default ({
           {title}
         </H1>
 
-        <div
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
+        <MDXRenderer>
+          {body}
+        </MDXRenderer>
       </Taper>
     </Layout>
   )
@@ -60,17 +63,17 @@ export default ({
 
 export const pageQuery = graphql`
   query($slug: String!) {
-    markdownRemark(
+    mdx(
       fields: {
         slug: {
           eq: $slug
         }
       }
     ) {
+      body
       fields {
         permalink
       }
-      html
       frontmatter {
         excerpt
         title

@@ -30,15 +30,14 @@ module.exports = {
         path: `${__dirname}/_${name}`,
       }
     })), {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
-        plugins: [
+        extensions: [`.mdx`, `.md`],
+        gatsbyRemarkPlugins: [
+          `gatsby-remark-prismjs`,
           {
-            resolve: `gatsby-remark-prismjs`,
-            options: {
-            }
+            resolve: require.resolve(`./plugins/gatsby-remark-islovely-custom-utility-first-css`),
           },
-          `gatsby-remark-islovely-custom-utility-first-css`
         ]
       }
     }, {

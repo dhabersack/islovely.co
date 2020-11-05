@@ -9,7 +9,7 @@ import Taper from '../components/taper'
 import { H1, H2 } from '../styled-tags'
 
 export default ({ data }) => {
-  const posts = data.allMarkdownRemark.edges.map(({ node }) => node)
+  const posts = data.allMdx.edges.map(({ node }) => node)
 
   const categories = [
     ...new Set(posts.map(({ frontmatter }) => frontmatter.categories).flat())
@@ -64,7 +64,7 @@ export default ({ data }) => {
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark(
+    allMdx(
       filter: {
         fields: {
           type: {

@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 import Layout from '../components/layout'
 import MailingListSignup from '../components/mailing-list-signup'
@@ -14,19 +15,19 @@ export default ({
   location
 }) => {
   const {
+    body,
     fields,
     frontmatter,
-    html
-  } = data.markdownRemark
+  } = data.mdx
 
   const {
     date,
-    permalink
+    permalink,
   } = fields
 
   const {
     excerpt,
-    title
+    title,
   } = frontmatter
 
   return (
@@ -71,8 +72,12 @@ export default ({
 
         <div
           className="margin-bottom-xl"
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
+        >
+          <MDXRenderer
+          >
+            {body}
+          </MDXRenderer>
+        </div>
 
         <MailingListSignup
           sourceUrl={location.href}
@@ -84,18 +89,18 @@ export default ({
 
 export const pageQuery = graphql`
   query($slug: String!) {
-    markdownRemark(
+    mdx(
       fields: {
         slug: {
           eq: $slug
         }
       }
     ) {
+      body
       fields {
         date
         permalink
       }
-      html
       frontmatter {
         excerpt
         title

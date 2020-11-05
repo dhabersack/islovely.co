@@ -15,7 +15,7 @@ export default ({
 }) => {
   console.log({ data })
 
-  const posts = data.allMarkdownRemark.edges.map(({ node }) => node)
+  const posts = data.allMdx.edges.map(({ node }) => node)
   const { category } = pageContext
 
   return (
@@ -53,7 +53,7 @@ export default ({
 
 export const pageQuery = graphql`
   query($category: [String]) {
-    allMarkdownRemark(
+    allMdx(
       filter: {
         frontmatter: {
           categories: {

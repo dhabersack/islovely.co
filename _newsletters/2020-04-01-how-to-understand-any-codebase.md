@@ -17,9 +17,9 @@ it('slugifies', () => {
 
 It is possible but unlikely that this function would return a number. I **want** my test to fail at this stage, because that tells me what the function _really_ returns:
 
-```
-> expected: 5
-> actual: 'hello-code'
+```diff
++> expected: 5
+-> actual:   'hello-code'
 ```
 
 Nice! So this call returns `'hello-code'` instead. I can now try another input:

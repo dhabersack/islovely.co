@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 import ConvertkitForm from '../components/convertkit-form'
 import Layout from '../components/layout'
@@ -14,14 +15,14 @@ export default ({
   location
 }) => {
   const {
+    body,
     fields,
     frontmatter,
-    html
-  } = data.markdownRemark
+  } = data.mdx
 
   const {
     permalink,
-    slug
+    slug,
   } = fields
 
   const {
@@ -34,7 +35,7 @@ export default ({
     playlist,
     uid,
     videos,
-    weeks
+    weeks,
   } = frontmatter
 
   return (
@@ -159,9 +160,9 @@ export default ({
           src={`/assets/courses/${slug}.png`}
         />
 
-        <div
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
+        <MDXRenderer>
+          {body}
+        </MDXRenderer>
 
         <div
           className="margin-bottom-xl"
@@ -240,18 +241,18 @@ export default ({
 
 export const pageQuery = graphql`
   query($slug: String!) {
-    markdownRemark(
+    mdx(
       fields: {
         slug: {
           eq: $slug
         }
       }
     ) {
+      body
       fields {
         permalink
         slug
       }
-      html
       frontmatter {
         cta
         emails

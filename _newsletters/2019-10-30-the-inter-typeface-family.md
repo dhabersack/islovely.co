@@ -9,7 +9,7 @@ Thanks to [`@font-face`](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-
 My favorite variable font right now is [the Inter typeface family](https://rsms.me/inter/):
 
 <figure>
-  <img src="/assets/newsletters/the-inter-typeface-family/sample.png" alt="A sample of the Inter typeface containing uppercase- and lowercase letters, numbers, and some special characters">
+  <img src="/assets/newsletters/the-inter-typeface-family/sample.png" alt="A sample of the Inter typeface containing uppercase- and lowercase letters, numbers, and some special characters" />
 </figure>
 
 Inter is completely free, and it comes with instructions on how you can start using it today. Browser and software support for variable fonts is growing, and they are well worth a look. Check out [v-fonts.com](https://v-fonts.com) for even more options.
