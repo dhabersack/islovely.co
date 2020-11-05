@@ -1,6 +1,4 @@
 export { default as A } from './a'
-export { default as Figcaption } from './figcaption'
-export { default as Figure } from './figure'
 export { default as H1 } from './h1'
 export { default as H2 } from './h2'
 export { default as H4 } from './h4'

@@ -5,7 +5,7 @@ excerpt: By using imperfect images and texts in our mockups, we can design more 
 heroAlt: An overripe banana that is presented with an origami butterfly and flower petals.
 heroCaption: Make sure your design looks good even with unexpected and unusual content.
 ---
-import { Figcaption, Figure } from '../src/styled-tags'
+import Figure from '../src/components/figure'
 
 There is no shortage of beautiful, pixel-perfect design mockups on the web. [dribbble](https://dribbble.com) is full of designs so good it’s intimidating. If a mockup seems _too_ perfect to you, you might be right. Designs built only with “ideal content” in mind could break when faced with real texts and images. By designing with ugly data from the start, we can design more robust layouts.
 
@@ -21,55 +21,35 @@ You do not need to use paragraphs of made-up text or photos of people you consid
 
 Let’s assume we wanted to create a theme we could use for conferences. To keep it “flexible”, we use placeholder texts and images instead of the real thing:
 
-<Figure>
-  <img
-    src="/assets/posts/design-with-ugly-data/mockup-empty.png"
-    alt="Mockup of a page that could be used for conferences"
-  />
-
-  <Figcaption>
-    Placeholders paint an unrealistic picture of what this could look like later.
-  </Figcaption>
-</Figure>
+<Figure
+  alt="Mockup of a page that could be used for conferences"
+  caption="Placeholders paint an unrealistic picture of what this could look like later."
+  src="/assets/posts/design-with-ugly-data/mockup-empty.png"
+/>
 
 This empty layout looks modern and clean. Everything is in its place, and it has a bit of an Apple-y vibe to it. It breaks as soon as we add real, “ugly” data to it:
 
-<Figure>
-  <img
-    src="/assets/posts/design-with-ugly-data/mockup-with-content.png"
-    alt="The previous mockup with realistic data"
-  />
-
-  <Figcaption>
-    Our mockup breaks when we add realistic content to it.
-  </Figcaption>
-</Figure>
+<Figure
+  alt="The previous mockup with realistic data"
+  caption="Our mockup breaks when we add realistic content to it."
+  src="/assets/posts/design-with-ugly-data/mockup-with-content.png"
+/>
 
 While the first one looks fine, everything else is terrible. Text is overlapping, to the point where many details become unreadable and inaccessible. This design does not work with real data. Now that we know what the content will look like, we can move it around a little to avoid those problems:
 
-<Figure>
-  <img
-    src="/assets/posts/design-with-ugly-data/mockup-with-all-content-visible.png"
-    alt="An iteration of the broken design"
-  />
-
-  <Figcaption>
-    We can now move elements around so our design no longer breaks.
-  </Figcaption>
-</Figure>
+<Figure
+  alt="An iteration of the broken design"
+  caption="We can now move elements around so our design no longer breaks."
+  src="/assets/posts/design-with-ugly-data/mockup-with-all-content-visible.png"
+/>
 
 Only now that we use real data do we notice more flaws in our design. See how we show the same date on every card? Assuming this is about a multi-day conference, we can turn the date into a subheading. We still need the time of each talk, which we can now combine with the room attendees need to go to:
 
-<Figure>
-  <img
-    src="/assets/posts/design-with-ugly-data/mockup-with-cleaned-up-content.png"
-    alt="An improvement on the previous iteration"
-  />
-
-  <Figcaption>
-    We can only fix our design when we know what “real data” looks like.
-  </Figcaption>
-</Figure>
+<Figure
+  alt="An improvement on the previous iteration"
+  caption="We can only fix our design when we know what “real data” looks like."
+  src="/assets/posts/design-with-ugly-data/mockup-with-cleaned-up-content.png"
+/>
 
 There is still more we could do. The point is that we can only tell what changes we need to make if we know what we want to achieve. Ugly data helps us see where our design could break and fix it.
 

@@ -1,21 +1,4 @@
 const TYPE_TO_CLASSNAME = {
-  figcaption: `
-    color-gray-500
-    font-size-12-short
-    italic
-    margin-0
-    margin-top-xs
-    text-align-center
-  `,
-  figure: `
-    columns-8-of-12
-    margin-horizontal-auto
-    margin-vertical-m
-    m:columns-8-of-10
-    l:columns-9-of-12
-    l:margin-bottom-l
-    l:margin-top-l
-  `,
   h1: `
     font-size-24-short
     font-weight-700

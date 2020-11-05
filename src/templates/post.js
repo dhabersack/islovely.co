@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { MDXRenderer} from 'gatsby-plugin-mdx'
 
-import slugify from '../utils/slugify'
+import Figure from '../components/figure'
 import Flash from '../components/flash'
 import Layout from '../components/layout'
 import MailingListSignup from '../components/mailing-list-signup'
@@ -11,7 +11,8 @@ import PostMeta from '../components/post-meta'
 import RichPreview from '../components/rich-preview'
 import Tag from '../components/tag'
 import Taper from '../components/taper'
-import { Figcaption, Figure, H1 } from '../styled-tags'
+import { H1 } from '../styled-tags'
+import slugify from '../utils/slugify'
 
 export default ({
   data,
@@ -80,24 +81,16 @@ export default ({
       </Taper>
 
       <Figure
+        alt={heroAlt}
+        caption={heroCaption}
         className={`
           margin-0
           margin-bottom-m
           margin-horizontal-auto
           width-full
         `}
-      >
-        <img
-          alt={heroAlt}
-          src={`/assets/heroes/${slug}.jpg`}
-        />
-
-        {heroCaption && (
-          <Figcaption>
-            {heroCaption}
-          </Figcaption>
-        )}
-      </Figure>
+        src={`/assets/heroes/${slug}.jpg`}
+      />
 
       <Taper>
         {flash && (
