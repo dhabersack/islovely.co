@@ -10,11 +10,9 @@ export default ({
 }) => (
   <figure
     className={mergeClassnames(`
-      columns-8-of-12
       margin-horizontal-auto
       margin-vertical-m
-      m:columns-8-of-10
-      l:columns-9-of-12
+      width-full
       l:margin-bottom-l
       l:margin-top-l
     `, className)}

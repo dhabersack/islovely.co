@@ -1,6 +1,7 @@
 ---
 title: "Books for getting better at design"
 excerpt: "Design is not only about visuals. Start here to take your first steps into becoming a better designer."
+edition: 48
 ---
 If you want to get into programming, there are tons of books and courses available to you. Getting into design, it seems, is a lot more difficult. It appears as tough you either have to be born knowing how to design, or go to university for it. Neither of that is true. If you want to improve your design and UX skills, these books help you get started.
 

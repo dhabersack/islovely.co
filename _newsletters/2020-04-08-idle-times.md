@@ -1,6 +1,7 @@
 ---
 title: "Idle times"
 excerpt: "Even when working from home, it is okay and important to take breaks every now and then."
+edition: 31
 ---
 Sticking to a healthy schedule is hard when the difference between “home” and “office” is blurry. Several people I asked admitted to working overtime at the moment. I caught myself working longer hours recently, and am working against it now. There’s enough going on in the world that we don’t need to add overworking ourselves to the list.
 

@@ -86,8 +86,6 @@ export default ({
         className={`
           margin-0
           margin-bottom-m
-          margin-horizontal-auto
-          width-full
         `}
         src={`/assets/heroes/${slug}.jpg`}
       />

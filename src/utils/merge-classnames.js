@@ -1,5 +1,6 @@
 const PREFIXES = [
   'color-',
+  'columns-',
   'font-size-',
   'font-weight-',
   'margin-bottom-',

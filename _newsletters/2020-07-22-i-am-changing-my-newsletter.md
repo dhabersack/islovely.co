@@ -1,6 +1,7 @@
 ---
 title: "I am changing my newsletter"
 excerpt: "I’ll try a few different formats to see which one works best for you readers."
+edition: 46
 ---
 Hey friends! This week, the newsletter is a little more personal than usual.
 

@@ -1,6 +1,7 @@
 ---
 title: "Evolution, not revolution"
 excerpt: "The latest version of islovely.co is an improvement over the previous one, not a completely different thing."
+edition: 33
 ---
 Last week, I released a new version of [islovely.co](https://islovely.co). It finally focuses on the educational content I have been meaning to work on for forever. This took me a few months of working nights and weekends, because it required a complete rewrite. Because [Jekyll](https://jekyllrb.com) could no longer support what I wanted to do, I decided to migrate **everything** to [Gatsby](https://www.gatsbyjs.org). I had put this off for a long time, but it had become inevitable. The old system just didn’t cut it anymore.
 

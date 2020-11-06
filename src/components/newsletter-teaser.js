@@ -2,6 +2,7 @@ import React from 'react'
 
 import A from './a'
 import H2 from './h2'
+import Strong from './strong'
 import formatDate from '../utils/format-date'
 
 export default ({
@@ -18,19 +19,24 @@ export default ({
   } = fields
 
   const {
-    title
+    edition,
+    title,
   } = frontmatter
 
   return (
     <>
-      <span
+      <footer
         className={`
           color-gray-600
           font-size-12-short
         `}
       >
+        <Strong
+          className="margin-right-xxs"
+        >#{edition}</Strong>
+
         {formatDate(date)}
-      </span>
+      </footer>
 
       <H2
         className={`

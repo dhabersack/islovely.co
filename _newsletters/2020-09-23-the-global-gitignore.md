@@ -1,6 +1,7 @@
 ---
 title: "The global .gitignore"
 excerpt: ""
+edition: 55
 isFeatured: true
 ---
 In most teams, we’re free to choose whatever editors and tools we want to get our work done. Everybody uses the OS and editor of their choice, and we push everything to a shared repository. Some use VS Code on macOS, others use Sublime Text on Windows, yet others kick it oldschool with vim on Linux.

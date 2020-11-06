@@ -172,14 +172,15 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          id
           fields {
             date
             permalink
           }
           frontmatter {
+            edition
             title
           }
+          id
         }
       }
     }

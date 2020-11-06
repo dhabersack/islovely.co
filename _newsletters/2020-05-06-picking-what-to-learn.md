@@ -1,6 +1,7 @@
 ---
 title: "Picking what to learn"
 excerpt: "By starting with an end in mind, we can find out what the best next thing to learn is."
+edition: 35
 ---
 Before getting into coding, everybody always asks what programming language to start with. There is no single answer that is right for everybody. It’s always “it depends”, and it depends on what we want to do with our new knowledge.
 

@@ -11,7 +11,7 @@ const IS_IN_DEBUG_MODE = false
 
 export default ({
   breadcrumbs,
-  children
+  children,
 }) => (
   <Application>
     <Helmet
