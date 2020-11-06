@@ -2,13 +2,13 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
+import H1 from '../components/h1'
 import Layout from '../components/layout'
 import MailingListSignup from '../components/mailing-list-signup'
 import MetaTags from '../components/meta-tags'
 import RichPreview from '../components/rich-preview'
 import Tag from '../components/tag'
 import Taper from '../components/taper'
-import { H1 } from  '../styled-tags'
 import slugify from '../utils/slugify'
 
 export default ({
@@ -21,7 +21,9 @@ export default ({
     frontmatter,
   } = data.mdx
 
-  const { permalink } = fields
+  const {
+    permalink,
+  } = fields
 
   const {
     tags,

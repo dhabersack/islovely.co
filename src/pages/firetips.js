@@ -2,12 +2,12 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import Firetip from '../components/firetip'
+import H1 from '../components/h1'
 import Layout from '../components/layout'
 import MetaTags from '../components/meta-tags'
 import RichPreview from '../components/rich-preview'
 import Tag from '../components/tag'
 import Taper from '../components/taper'
-import { H1 } from '../styled-tags'
 import slugify from '../utils/slugify'
 
 export default ({

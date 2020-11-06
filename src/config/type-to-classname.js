@@ -1,4 +1,4 @@
-const TYPE_TO_CLASSNAME = {
+module.exports = {
   h1: `
     font-size-24-short
     font-weight-700
@@ -22,8 +22,7 @@ const TYPE_TO_CLASSNAME = {
   `,
   h4: `
     font-size-16-short
-    font-weight-700
-    margin-0
+    font-weight-700 margin-0
   `,
   input: `
     appearance-none
@@ -86,7 +85,5 @@ const TYPE_TO_CLASSNAME = {
     padding-vertical-s-minus-border
     width-full
     focus:border-color-blue-400
-  `,
+  `
 }
-
-export default type => `background-color-green-200 ${TYPE_TO_CLASSNAME[type]}`

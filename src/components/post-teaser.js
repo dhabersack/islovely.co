@@ -1,30 +1,32 @@
 import React from 'react'
 
-import slugify from '../utils/slugify'
+import A from './a'
 import Card from './card'
+import H2 from './h2'
+import P from './p'
 import PostMeta from './post-meta'
 import Tag from './tag'
-import { A, H2, P } from '../styled-tags'
+import slugify from '../utils/slugify'
 
 export default ({
-  post
+  post,
 }) => {
   const {
     fields,
-    frontmatter
+    frontmatter,
   } = post
 
   const {
     date,
     permalink,
-    slug
+    slug,
   } = fields
 
   const {
     categories,
     excerpt,
     heroAlt,
-    title
+    title,
   } = frontmatter
 
   return (

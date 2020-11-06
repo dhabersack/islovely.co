@@ -1,15 +1,21 @@
 import React from 'react'
 import { graphql } from 'gatsby';
 
+import A from '../components/a'
 import ConvertkitForm from '../components/convertkit-form'
+import H1 from '../components/h1'
+import H2 from '../components/h2'
 import Layout from '../components/layout'
 import MetaTags from '../components/meta-tags'
 import NewsletterTeaser from '../components/newsletter-teaser'
+import P from '../components/p'
 import RichPreview from '../components/rich-preview'
 import Taper from '../components/taper'
-import { A, H1, H2, P } from '../styled-tags'
 
-export default ({ data, location }) => {
+export default ({
+  data,
+  location,
+}) => {
   const newsletters = data.allMdx.edges.map(({ node }) => node)
 
   const listItems = [

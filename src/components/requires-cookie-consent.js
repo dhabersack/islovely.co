@@ -1,8 +1,9 @@
 import React, { useContext } from 'react'
 
 import CookieConsentContext from '../contexts/cookie-consent'
+import P from './p'
 import UpdateCookieSettingsTrigger from './update-cookie-settings-trigger'
-import { P } from '../styled-tags'
+import mergeClassnames from '../utils/merge-classnames'
 
 export default ({
   className,
@@ -13,14 +14,13 @@ export default ({
 
   return isCookieConsentGiven ? children : (
     <div
-      className={`
+      className={mergeClassnames(`
         background-color-gray-100
         border-color-gray-500
         border-radius-xs
         border-style-dashed
         border-width-m
-        ${className ?? ''}
-      `}
+      `, className)}
     >
       <div
         className={`

@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-remark-islovely-custom-utility-first-css",
+  "name": "remark-utility-classnames",
   "version": "0.0.1",
   "description": "Add islovely’s utility-first CSS to Markdown elements",
   "main": "index.js",

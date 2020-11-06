@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { P } from '../styled-tags'
+import P from './p'
 
 export default ({
   children,

@@ -2,17 +2,18 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
+import H1 from '../components/h1'
 import Layout from '../components/layout'
 import MailingListSignup from '../components/mailing-list-signup'
 import MetaTags from '../components/meta-tags'
 import RichPreview from '../components/rich-preview'
+import P from '../components/p'
 import Taper from '../components/taper'
-import { H1, P } from '../styled-tags'
 import formatDate from '../utils/format-date'
 
 export default ({
   data,
-  location
+  location,
 }) => {
   const {
     body,
@@ -73,8 +74,7 @@ export default ({
         <div
           className="margin-bottom-xl"
         >
-          <MDXRenderer
-          >
+          <MDXRenderer>
             {body}
           </MDXRenderer>
         </div>

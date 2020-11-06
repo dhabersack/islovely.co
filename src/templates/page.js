@@ -2,13 +2,15 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
+import H1 from '../components/h1'
 import Layout from '../components/layout'
 import MetaTags from '../components/meta-tags'
 import RichPreview from '../components/rich-preview'
 import Taper from '../components/taper'
-import { H1 } from '../styled-tags'
 
-export default ({ data }) => {
+export default ({
+  data,
+}) => {
   const {
     body,
     fields,

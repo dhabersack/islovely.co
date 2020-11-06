@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { A } from '../styled-tags'
+import A from './a'
 
 export default ({ breadcrumbs }) => breadcrumbs ? (
   <nav

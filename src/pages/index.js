@@ -1,11 +1,15 @@
 import React from 'react'
 
+import A from '../components/a'
+import H1 from '../components/h1'
+import H2 from '../components/h2'
 import Layout from '../components/layout'
 import LandingPageBlock from '../components/landing-page-block'
 import MetaTags from '../components/meta-tags'
+import P from '../components/p'
 import RichPreview from '../components/rich-preview'
+import Strong from '../components/strong'
 import Video from '../components/video'
-import { A, H1, H2, P, Strong } from '../styled-tags'
 
 const cta = (
   <A

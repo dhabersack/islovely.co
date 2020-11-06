@@ -1,7 +1,8 @@
 import React from 'react'
 
+import A from './a'
+import P from './p'
 import UpdateCookieSettingsTrigger from './update-cookie-settings-trigger'
-import { A, P } from '../styled-tags'
 
 export default () => (
   <footer

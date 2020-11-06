@@ -1,10 +1,12 @@
 import React from 'react'
 
+import A from './a'
 import ConvertkitForm from './convertkit-form'
-import { A, H1, P } from '../styled-tags'
+import H1 from './h1'
+import P from './p'
 
 export default ({
-  sourceUrl
+  sourceUrl,
 }) => (
   <div
     className={`

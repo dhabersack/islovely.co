@@ -1,17 +1,17 @@
 import React from 'react'
 
+import getClassnamesForType from '../utils/get-classnames-for-type'
 import mergeClassnames from '../utils/merge-classnames'
-import typeToClassname from '../utils/type-to-classname'
 
 export default ({
-  className,
   children,
+  className,
   ...props
 }) => (
-  <textarea
-    className={mergeClassnames(typeToClassname('textarea'), className)}
+  <h4
+    className={mergeClassnames(getClassnamesForType('h4'), className)}
     {...props}
   >
     {children}
-  </textarea>
+  </h4>
 )

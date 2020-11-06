@@ -1,9 +1,12 @@
 import React from 'react'
 
-import { A, H2 } from '../styled-tags'
+import A from './a'
+import H2 from './h2'
 import formatDate from '../utils/format-date'
 
-export default ({ newsletter }) => {
+export default ({
+  newsletter,
+}) => {
   const {
     fields,
     frontmatter

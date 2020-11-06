@@ -1,17 +1,17 @@
 import React from 'react'
 
+import getClassnamesForType from '../utils/get-classnames-for-type'
 import mergeClassnames from '../utils/merge-classnames'
-import typeToClassname from '../utils/type-to-classname'
 
 export default ({
   children,
   className,
   ...props
 }) => (
-  <a
-    className={mergeClassnames(typeToClassname('link'), className)}
+  <h2
+    className={mergeClassnames(getClassnamesForType('h2'), className)}
     {...props}
   >
     {children}
-  </a>
+  </h2>
 )

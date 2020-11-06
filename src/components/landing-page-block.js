@@ -1,11 +1,11 @@
 import React from 'react'
 
-import { H2 } from '../styled-tags'
+import H2 from './h2'
 
 export default ({
   children,
   heading,
-  imageUrl
+  imageUrl,
 }) => (
   <div
     className={`

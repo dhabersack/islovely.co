@@ -3,16 +3,18 @@ import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 import ConvertkitForm from '../components/convertkit-form'
+import H1 from '../components/h1'
+import H4 from '../components/h4'
 import Layout from '../components/layout'
 import MetaTags from '../components/meta-tags'
 import RichPreview from '../components/rich-preview'
+import Strong from '../components/strong'
 import Taper from '../components/taper'
 import Video from '../components/video'
-import { H1, H4, Strong } from '../styled-tags'
 
 export default ({
   data,
-  location
+  location,
 }) => {
   const {
     body,
@@ -194,7 +196,7 @@ export default ({
             duration,
             title,
             vimeoId,
-            youtubeId
+            youtubeId,
           }, index) => (
             <div
               key={`video-${title}`}
@@ -227,7 +229,9 @@ export default ({
 
                 {' '}
 
-                <span className="color-gray-500">
+                <span
+                  className="color-gray-500"
+                >
                   ({duration})
                 </span>
               </H4>

@@ -1,14 +1,18 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
+import A from '../components/a'
+import H1 from '../components/h1'
 import Layout from '../components/layout'
 import MetaTags from '../components/meta-tags'
+import P from '../components/p'
 import PostTeasers from '../components/post-teasers'
 import RichPreview from '../components/rich-preview'
 import Taper from '../components/taper'
-import { A, H1, P } from '../styled-tags'
 
-export default ({ data }) => {
+export default ({
+  data,
+}) => {
   const posts = data.allMdx.edges.map(({ node }) => node)
 
   return (

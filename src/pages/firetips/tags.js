@@ -1,15 +1,19 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
+import A from '../../components/a'
 import Firetip from '../../components/firetip'
+import H1 from '../../components/h1'
+import H2 from '../../components/h2'
 import Layout from '../../components/layout'
 import MetaTags from '../../components/meta-tags'
 import RichPreview from '../../components/rich-preview'
 import Taper from '../../components/taper'
-import { A, H1, H2 } from '../../styled-tags'
 import slugify from '../../utils/slugify'
 
-export default ({ data }) => {
+export default ({
+  data,
+}) => {
   const firetips = data.allMdx.edges.map(({ node }) => node)
 
   const tags = [

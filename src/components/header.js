@@ -1,7 +1,7 @@
 import React from 'react'
 
+import A from './a'
 import Navigation from './navigation'
-import { A } from '../styled-tags'
 
 export default () => (
   <header

@@ -4,6 +4,7 @@ import { MDXRenderer} from 'gatsby-plugin-mdx'
 
 import Figure from '../components/figure'
 import Flash from '../components/flash'
+import H1 from '../components/h1'
 import Layout from '../components/layout'
 import MailingListSignup from '../components/mailing-list-signup'
 import MetaTags from '../components/meta-tags'
@@ -11,7 +12,6 @@ import PostMeta from '../components/post-meta'
 import RichPreview from '../components/rich-preview'
 import Tag from '../components/tag'
 import Taper from '../components/taper'
-import { H1 } from '../styled-tags'
 import slugify from '../utils/slugify'
 
 export default ({

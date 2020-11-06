@@ -1,7 +1,7 @@
 import React from 'react'
 
+import getClassnamesForType from '../utils/get-classnames-for-type'
 import mergeClassnames from '../utils/merge-classnames'
-import typeToClassname from '../utils/type-to-classname'
 
 export default ({
   children,
@@ -9,7 +9,7 @@ export default ({
   ...props
 }) => (
   <label
-    className={mergeClassnames(typeToClassname('label'), className)}
+    className={mergeClassnames(getClassnamesForType('label'), className)}
     {...props}
   >
     {children}

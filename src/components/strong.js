@@ -1,13 +1,13 @@
 import React from 'react'
 
-import typeToClassname from '../utils/type-to-classname'
+import getClassnamesForType from '../utils/get-classnames-for-type'
 
 export default ({
   children,
   ...props
 }) => (
   <strong
-    className={typeToClassname('strong')}
+    className={getClassnamesForType('strong')}
     {...props}
   >
     {children}

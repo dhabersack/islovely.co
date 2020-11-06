@@ -1,9 +1,11 @@
 import React from 'react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
+import A from '../components/a'
 import Card from '../components/card'
+import H2 from '../components/h2'
+import P from '../components/p'
 import Tag from '../components/tag'
-import { A, H2, P } from '../styled-tags'
 import slugify from '../utils/slugify'
 
 export default ({ 

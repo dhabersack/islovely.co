@@ -1,13 +1,18 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
+import A from '../components/a'
+import H1 from '../components/h1'
+import H2 from '../components/h2'
 import Layout from '../components/layout'
 import MetaTags from '../components/meta-tags'
+import P from '../components/p'
 import RichPreview from '../components/rich-preview'
 import Taper from '../components/taper'
-import { A, H1, H2, P } from '../styled-tags'
 
-export default ({ data }) => {
+export default ({
+  data,
+}) => {
   const projects = data.allMdx.edges.map(({ node }) => node)
 
   return (
@@ -35,13 +40,15 @@ export default ({ data }) => {
         {projects.map(({
           fields,
           frontmatter,
-          id
+          id,
         }) => {
-          const { permalink } = fields
+          const {
+            permalink,
+          } = fields
 
           const {
             excerpt,
-            title
+            title,
           } = frontmatter
 
           return (
@@ -49,7 +56,9 @@ export default ({ data }) => {
               key={`project-${id}`}
             >
               <H2>
-                <A href={permalink}>
+                <A
+                  href={permalink}
+                >
                   {title}
                 </A>
               </H2>

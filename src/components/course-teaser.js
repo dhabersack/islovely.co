@@ -1,7 +1,10 @@
 import React from 'react'
 
+import A from './a'
 import Card from './card'
-import { A, H2, P, Strong } from '../styled-tags'
+import H2 from './h2'
+import P from './p'
+import Strong from './strong'
 
 export default ({ course }) => {
   const {

@@ -1,14 +1,14 @@
 import React from 'react'
 
+import getClassnamesForType from '../utils/get-classnames-for-type'
 import mergeClassnames from '../utils/merge-classnames'
-import typeToClassname from '../utils/type-to-classname'
 
 export default ({
   className,
   ...props
 }) => (
   <input
-    className={mergeClassnames(typeToClassname('input'), className)}
+    className={mergeClassnames(getClassnamesForType('input'), className)}
     {...props}
   />
 )

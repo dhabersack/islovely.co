@@ -1,13 +1,13 @@
 import React from 'react'
 
-import typeToClassname from '../utils/type-to-classname'
+import getClassnamesForType from '../utils/get-classnames-for-type'
 
 export default ({
   children,
   ...props
 }) => (
   <li
-    className={typeToClassname('listItem')}
+    className={getClassnamesForType('listItem')}
     {...props}
   >
     {children}

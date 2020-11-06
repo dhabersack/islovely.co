@@ -1,12 +1,15 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
+import A from '../components/a'
 import CourseTeasers from '../components/course-teasers'
+import H1 from '../components/h1'
 import Layout from '../components/layout'
 import MetaTags from '../components/meta-tags'
+import P from '../components/p'
 import RichPreview from '../components/rich-preview'
+import Strong from '../components/strong'
 import Taper from '../components/taper'
-import { A, H1, P, Strong } from '../styled-tags'
 
 export default ({
   data,

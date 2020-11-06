@@ -36,7 +36,7 @@ module.exports = {
         gatsbyRemarkPlugins: [
           `gatsby-remark-prismjs`,
           {
-            resolve: require.resolve(`./plugins/gatsby-remark-islovely-custom-utility-first-css`),
+            resolve: require.resolve(`./src/gatsby-plugins/remark-utility-classnames`),
           },
         ]
       }

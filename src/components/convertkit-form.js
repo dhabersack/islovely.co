@@ -2,8 +2,9 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 
 import Button from './button'
+import Input from './input'
+import P from './p'
 import RequiresCookieConsent from './requires-cookie-consent'
-import { Input, P } from '../styled-tags'
 
 export default ({
   cta,
