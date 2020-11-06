@@ -9,7 +9,7 @@ export default ({
   ...props
 }) => (
   <h2
-    className={mergeClassnames(getClassnamesForType('h2'), className)}
+    className={mergeClassnames(getClassnamesForType('heading[depth=2]'), className)}
     {...props}
   >
     {children}

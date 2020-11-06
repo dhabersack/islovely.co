@@ -1,5 +1,5 @@
 module.exports = {
-  h1: `
+  'heading[depth=1]': `
     font-size-24-short
     font-weight-700
     margin-0
@@ -10,7 +10,7 @@ module.exports = {
     l:margin-bottom-m
     l:margin-top-l
   `,
-  h2: `
+  'heading[depth=2]': `
     font-size-20-short
     font-weight-700
     margin-0
@@ -20,7 +20,7 @@ module.exports = {
     l:font-size-30-short
     l:margin-bottom-m
   `,
-  h4: `
+  'heading[depth=4]': `
     font-size-16-short
     font-weight-700 margin-0
   `,
