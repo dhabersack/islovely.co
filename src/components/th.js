@@ -9,7 +9,7 @@ export default ({
 }) => (
   <th
     className={mergeClassnames(`
-      background-color-gray-300
+      ${children != null ? 'background-color-gray-300' : ''}
       font-size-16-medium
       font-weight-700
       padding-horizontal-xs

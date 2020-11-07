@@ -9,6 +9,7 @@ export default ({
 }) => (
   <pre
     className={mergeClassnames(`
+      break-normal
       margin-0
     `, className)}
     {...props}

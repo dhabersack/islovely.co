@@ -7,16 +7,12 @@ export default ({
   className,
   ...props
 }) => (
-  <table
+  <tbody
     className={mergeClassnames(`
-      border-collapse
-      font-weight-400
-      margin-0
-      margin-bottom-m
-      width-full
+      background-color-gray-200
     `, className)}
     {...props}
   >
     {children}
-  </table>
+  </tbody>
 )

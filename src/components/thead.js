@@ -7,16 +7,11 @@ export default ({
   className,
   ...props
 }) => (
-  <table
+  <thead
     className={mergeClassnames(`
-      border-collapse
-      font-weight-400
-      margin-0
-      margin-bottom-m
-      width-full
     `, className)}
     {...props}
   >
     {children}
-  </table>
+  </thead>
 )

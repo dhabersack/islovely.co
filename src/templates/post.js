@@ -93,7 +93,6 @@ export default ({
           className={`
             break-words
             margin-bottom-xl
-            template--post__content
           `}
         >
           <MDXRenderer>
@@ -104,45 +103,25 @@ export default ({
         <div
           className={`
             flex
+            flex-wrap
             margin-bottom-xl
           `}
         >
-          <span
-            className={`
-              block
-              color-gray-700
-              font-size-12-medium
-              margin-bottom-xs
-              margin-right-xxs
-              padding-vertical-xs
-            `}
-          >
-            Tags:
-          </span>
-
-          <div
-            className={`
-              align-items-center
-              flex
-              flex-wrap
-            `}
-          >
-            {categories.map(category => (
-              <div
-                className={`
-                  margin-bottom-xxs
-                  margin-right-xxs
-                `}
-                key={`category-${category}`}
+          {categories.map(category => (
+            <div
+              className={`
+                margin-bottom-xxs
+                margin-right-xxs
+              `}
+              key={`category-${category}`}
+            >
+              <Tag
+                href={`/categories/${slugify(category)}`}
               >
-                <Tag
-                  href={`/categories/${slugify(category)}`}
-                >
-                  {category}
-                </Tag>
-              </div>
-            ))}
-          </div>
+                {category}
+              </Tag>
+            </div>
+          ))}
         </div>
 
         <MailingListSignup
