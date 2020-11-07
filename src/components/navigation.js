@@ -1,22 +1,26 @@
 import React from 'react'
 
 import A from './a'
+import Li from './li'
+import Ul from './ul'
 
 export default () => (
   <nav>
-    <ul
+    <Ul
       className={`
         flex
         flex-wrap
-        font-size-16-short
-        font-weight-500
         list-style-none
         margin-0
         padding-0
+        width-full
       `}
     >
-      <li
+      <Li
         className={`
+          font-size-16-short
+          font-weight-500
+          margin-bottom-0
           margin-right-xs
           xs:margin-right-s
         `}
@@ -30,10 +34,13 @@ export default () => (
         >
           Courses
         </A>
-      </li>
+      </Li>
 
-      <li
+      <Li
         className={`
+          font-size-16-short
+          font-weight-500
+          margin-bottom-0
           margin-right-xs
           xs:margin-right-s
         `}
@@ -47,10 +54,13 @@ export default () => (
         >
           Blog
         </A>
-      </li>
+      </Li>
 
-      <li
+      <Li
         className={`
+          font-size-16-short
+          font-weight-500
+          margin-bottom-0
           margin-right-xs
           xs:margin-right-s
         `}
@@ -64,10 +74,13 @@ export default () => (
         >
           Fire tips
         </A>
-      </li>
+      </Li>
 
-      <li
+      <Li
         className={`
+          font-size-16-short
+          font-weight-500
+          margin-bottom-0
           margin-right-xs
           xs:margin-right-s
         `}
@@ -81,10 +94,13 @@ export default () => (
         >
           Newsletter
         </A>
-      </li>
+      </Li>
 
-      <li
+      <Li
         className={`
+          font-size-16-short
+          font-weight-500
+          margin-bottom-0
           margin-right-xs
           xs:margin-right-s
         `}
@@ -98,19 +114,26 @@ export default () => (
         >
           About
         </A>
-      </li>
+      </Li>
 
-      <li>
+      <Li
+        className={`
+          font-size-16-short
+          font-weight-500
+          margin-bottom-0
+        `}
+      >
         <A
           className={`
             inline-block
+            margin-bottom-0
             padding-vertical-xs
           `}
           href="/contact"
         >
           Contact
         </A>
-      </li>
-    </ul>
+      </Li>
+    </Ul>
   </nav>
 )

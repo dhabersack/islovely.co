@@ -1,9 +1,10 @@
 import React from 'react'
 
+import Img from './img'
 import formatDate from '../utils/format-date'
 
 export default ({
-  date
+  date,
 }) => (
   <div
     className={`
@@ -11,11 +12,13 @@ export default ({
       flex
     `}
   >
-    <img
+    <Img
       alt="Dom Habersack"
       className={`
         border-radius-round
         margin-right-xs
+        height-42
+        width-42
       `}
       height="42"
       src="/assets/dom.jpg"

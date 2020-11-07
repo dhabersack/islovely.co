@@ -3,6 +3,7 @@ import React from 'react'
 import A from './a'
 import Card from './card'
 import H2 from './h2'
+import Img from './img'
 import P from './p'
 import Strong from './strong'
 
@@ -50,7 +51,7 @@ export default ({ course }) => {
               justify-center
             `}
           >
-            <img
+            <Img
               alt={title}
               className="height-full"
               src={`/assets/courses/${slug}.png`}
@@ -109,7 +110,7 @@ export default ({ course }) => {
                 margin-right-s
               `}
             >
-              <img
+              <Img
                 alt=""
                 className="margin-right-xxs"
                 src="/assets/icons/email-with-letter.svg"
@@ -131,7 +132,7 @@ export default ({ course }) => {
                 margin-right-s
               `}
             >
-              <img
+              <Img
                 alt=""
                 className="margin-right-xxs"
                 src="/assets/icons/video.svg"
@@ -153,7 +154,7 @@ export default ({ course }) => {
                 margin-right-s
               `}
             >
-              <img
+              <Img
                 alt=""
                 className="margin-right-xxs"
                 src="/assets/icons/clock.svg"
@@ -175,7 +176,7 @@ export default ({ course }) => {
                 margin-right-s
               `}
             >
-              <img
+              <Img
                 alt=""
                 className="margin-right-xxs"
                 src="/assets/icons/calendar.svg"

@@ -1,6 +1,5 @@
 import React from 'react'
 
-import getClassnamesForType from '../utils/get-classnames-for-type'
 import mergeClassnames from '../utils/merge-classnames'
 
 export default ({
@@ -9,7 +8,17 @@ export default ({
   ...props
 }) => (
   <h1
-    className={mergeClassnames(getClassnamesForType('heading[depth=1]'), className)}
+    className={mergeClassnames(`
+      font-size-24-medium
+      font-weight-700
+      margin-0
+      margin-bottom-s
+      margin-top-m
+      xs:font-size-30-medium
+      l:font-size-36-medium
+      l:margin-bottom-m
+      l:margin-top-l
+    `, className)}
     {...props}
   >
     {children}

@@ -1,6 +1,5 @@
 import React from 'react'
 
-import getClassnamesForType from '../utils/get-classnames-for-type'
 import mergeClassnames from '../utils/merge-classnames'
 
 export default ({
@@ -9,7 +8,9 @@ export default ({
   ...props
 }) => (
   <strong
-    className={mergeClassnames(getClassnamesForType('strong'), className)}
+    className={mergeClassnames(`
+      font-weight-600
+    `, className)}
     {...props}
   >
     {children}

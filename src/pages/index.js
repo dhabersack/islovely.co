@@ -3,6 +3,7 @@ import React from 'react'
 import A from '../components/a'
 import H1 from '../components/h1'
 import H2 from '../components/h2'
+import Img from '../components/img'
 import Layout from '../components/layout'
 import LandingPageBlock from '../components/landing-page-block'
 import MetaTags from '../components/meta-tags'
@@ -26,7 +27,7 @@ const cta = (
     `}
     href="/courses"
   >
-    <img
+    <Img
       alt=""
       className="margin-right-xxs"
       src="/assets/icons/desktop.svg"
@@ -99,7 +100,7 @@ export default () => (
           m:columns-5
         `}
       >
-        <img
+        <Img
           alt=""
           src="/assets/flame/flame-welcome.png"
         />
@@ -229,7 +230,7 @@ export default () => (
         m:justify-between
       `}
     >
-      <img
+      <Img
         alt="Dom Habersack"
         className="block border-radius-round box-shadow-s margin-bottom-m margin-horizontal-auto width-120 m:margin-left-0 m:margin-right-s"
         src="/assets/dom.jpg"

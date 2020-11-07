@@ -1,6 +1,7 @@
 import React from 'react'
 
 import A from './a'
+import Img from './img'
 import P from './p'
 import UpdateCookieSettingsTrigger from './update-cookie-settings-trigger'
 
@@ -100,7 +101,7 @@ export default () => (
         `}
         href="https://github.com/domhabersack"
       >
-        <img
+        <Img
           alt="domhabersack on GitHub"
           className="margin-right-xxs"
           src="/icons/github.svg"
@@ -120,7 +121,7 @@ export default () => (
         `}
         href="https://twitter.com/domhabersack"
       >
-        <img
+        <Img
           alt="domhabersack on Twitter"
           className="margin-right-xxs"
           src="/icons/twitter.svg"
@@ -140,7 +141,7 @@ export default () => (
         `}
         href="https://dribbble.com/domhabersack"
       >
-        <img
+        <Img
           alt="domhabersack on dribbble"
           className="margin-right-xxs"
           src="/icons/dribbble.svg"
@@ -160,7 +161,7 @@ export default () => (
         `}
         href="https://mastodon.social/@domhabersack"
       >
-        <img
+        <Img
           alt="@domhabersack on Mastodon"
           className="margin-right-xxs"
           src="/icons/mastodon.svg"

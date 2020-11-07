@@ -3,7 +3,6 @@ import { graphql } from 'gatsby'
 import { MDXRenderer} from 'gatsby-plugin-mdx'
 
 import Figure from '../components/figure'
-import Flash from '../components/flash'
 import H1 from '../components/h1'
 import Layout from '../components/layout'
 import MailingListSignup from '../components/mailing-list-signup'
@@ -33,7 +32,6 @@ export default ({
   const {
     categories,
     excerpt,
-    flash,
     heroAlt,
     heroCaption,
     title,
@@ -91,18 +89,6 @@ export default ({
       />
 
       <Taper>
-        {flash && (
-          <div
-            className="margin-bottom-m"
-          >
-            <Flash
-              type="info"
-            >
-              {flash}
-            </Flash>
-          </div>
-        )}
-
         <div
           className={`
             break-words
@@ -185,7 +171,6 @@ export const pageQuery = graphql`
       frontmatter {
         categories
         excerpt
-        flash
         heroAlt
         heroCaption
         title

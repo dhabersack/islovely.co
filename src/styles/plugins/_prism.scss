@@ -14,7 +14,10 @@ pre[class*="language-"] {
 }
 
 pre[class*="language-"] code[class*="language-"] {
+  background-color: transparent;
+  color: inherit;
   @include _font-size(12, medium);
+  @include _padding(0);
 
   @include _m {
     @include _font-size(14, medium);
@@ -121,3 +124,16 @@ pre[class*="language-"] code[class*="language-"] {
 .token.url {
   background: red;
 }
+
+
+//   @include _font-weight(300);
+//   @include _monospace;
+// }
+
+// p code {
+//   @include _background-color(gray, 300);
+//   border-radius: 0.2em;
+//   @include _color(gray, 800);
+//   font-size: 0.9em;
+//   padding: 0 0.2em;
+// }

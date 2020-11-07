@@ -1,5 +1,6 @@
 import React from 'react'
 
+import Img from './img'
 import mergeClassnames from '../utils/merge-classnames'
 
 export default ({
@@ -17,7 +18,7 @@ export default ({
       l:margin-top-l
     `, className)}
   >
-    <img
+    <Img
       alt={alt}
       className="width-full"
       src={src}

@@ -57,7 +57,9 @@ export default ({
       />
 
       <Taper>
-        <H1>
+        <H1
+          className='margin-bottom-xxs'
+        >
           {title}
         </H1>
 

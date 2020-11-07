@@ -32,27 +32,19 @@ export default () => {
       target="contact form"
     >
       {hasErrors && !submitting && (
-        <div
-          className="margin-bottom-s"
+        <Flash
+          type="error"
         >
-          <Flash
-            type="error"
-          >
-            Sorry, your message could not be sent. Try again after addressing the errors below.
-          </Flash>
-        </div>
+          Sorry, your message could not be sent. Try again after addressing the errors below.
+        </Flash>
       )}
 
       {succeeded && (
-        <div
-          className="margin-bottom-s"
+        <Flash
+          type="success"
         >
-          <Flash
-            type="success"
-          >
-            Thank you for your message. I will get back to you soon.
-          </Flash>
-        </div>
+          Thank you for your message. I will get back to you soon.
+        </Flash>
       )}
 
       <form

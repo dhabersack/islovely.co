@@ -3,6 +3,7 @@ import React from 'react'
 import A from './a'
 import Card from './card'
 import H2 from './h2'
+import Img from './img'
 import P from './p'
 import PostMeta from './post-meta'
 import Tag from './tag'
@@ -41,7 +42,7 @@ export default ({
         <a
           href={permalink}
         >
-          <img
+          <Img
             alt={heroAlt}
             className="width-full"
             src={`/assets/heroes/${slug}--teaser.jpg`}

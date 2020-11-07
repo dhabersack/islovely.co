@@ -1,6 +1,7 @@
 import React from 'react'
 
 import A from './a'
+import Img from './img'
 import Navigation from './navigation'
 
 export default () => (
@@ -21,7 +22,7 @@ export default () => (
       `}
       href="/"
     >
-      <img
+      <Img
         alt="islovely"
         src="/assets/logo.svg"
       />

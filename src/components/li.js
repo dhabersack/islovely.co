@@ -1,13 +1,19 @@
 import React from 'react'
 
-import getClassnamesForType from '../utils/get-classnames-for-type'
+import mergeClassnames from '../utils/merge-classnames'
 
 export default ({
   children,
+  className,
   ...props
 }) => (
   <li
-    className={getClassnamesForType('listItem')}
+    className={mergeClassnames(`
+      font-size-16-medium
+      padding-0
+      margin-bottom-xs
+      m:font-size-18-medium
+    `, className)}
     {...props}
   >
     {children}

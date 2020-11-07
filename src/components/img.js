@@ -3,20 +3,16 @@ import React from 'react'
 import mergeClassnames from '../utils/merge-classnames'
 
 export default ({
-  children,
+  alt,
   className,
   ...props
 }) => (
-  <a
+  <img
+    alt={alt ?? ''}
     className={mergeClassnames(`
-      color-blue-500
-      no-decoration
-      focus:outline
-      hover:underline
-      visited:color-blue-500
+      max-width-full
+      vertical-align-middle
     `, className)}
     {...props}
-  >
-    {children}
-  </a>
+  />
 )

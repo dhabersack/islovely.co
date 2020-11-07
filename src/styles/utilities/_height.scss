@@ -1,10 +1,12 @@
 $_height: (
   0:    0,
+  1:    0.1rem,
   9:    0.9rem,
   12:   1.2rem,
   15:   1.5rem,
   24:   2.4rem,
   27:   2.7rem,
+  42:   4.2rem,
   60:   6rem,
   192:  19.2rem,
   full: 100%
@@ -14,7 +16,7 @@ $_height: (
   height: map-get($_height, $size);
 }
 
-@each $size in (0, 12, 15, 24, 27, 60, 192, full) {
+@each $size in (0, 1, 9, 12, 15, 24, 27, 42, 60, 192, full) {
   .height-#{$size} {
     @include _at-breakpoints {
       @include _height($size);

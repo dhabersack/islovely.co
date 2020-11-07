@@ -7,16 +7,11 @@ export default ({
   className,
   ...props
 }) => (
-  <a
+  <em
     className={mergeClassnames(`
-      color-blue-500
-      no-decoration
-      focus:outline
-      hover:underline
-      visited:color-blue-500
     `, className)}
     {...props}
   >
     {children}
-  </a>
+  </em>
 )

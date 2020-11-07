@@ -7,16 +7,17 @@ export default ({
   className,
   ...props
 }) => (
-  <a
+  <table
     className={mergeClassnames(`
-      color-blue-500
-      no-decoration
-      focus:outline
-      hover:underline
-      visited:color-blue-500
+      background-color-gray-200
+      border-collapse
+      font-weight-400
+      margin-0
+      margin-bottom-m
+      width-full
     `, className)}
     {...props}
   >
     {children}
-  </a>
+  </table>
 )

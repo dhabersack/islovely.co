@@ -5,7 +5,9 @@ import A from '../components/a'
 import ConvertkitForm from '../components/convertkit-form'
 import H1 from '../components/h1'
 import H2 from '../components/h2'
+import Img from '../components/img'
 import Layout from '../components/layout'
+import Li from '../components/li'
 import MetaTags from '../components/meta-tags'
 import NewsletterTeaser from '../components/newsletter-teaser'
 import P from '../components/p'
@@ -64,14 +66,14 @@ export default ({
           `}
         >
           {listItems.map(listItem => (
-            <li
+            <Li
               className={`
                 flex
                 margin-bottom-s
               `}
               key={`newsletter-benefit-${listItem}`}
             >
-              <img
+              <Img
                 alt=""
                 className={`
                   flex-no-shrink
@@ -92,7 +94,7 @@ export default ({
               >
                 {listItem}
               </span>
-            </li>
+            </Li>
           ))}
         </ul>
 

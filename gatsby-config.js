@@ -35,9 +35,6 @@ module.exports = {
         extensions: [`.mdx`, `.md`],
         gatsbyRemarkPlugins: [
           `gatsby-remark-prismjs`,
-          {
-            resolve: require.resolve(`./src/gatsby-plugins/remark-utility-classnames`),
-          },
         ]
       }
     }, {

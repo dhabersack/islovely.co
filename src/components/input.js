@@ -1,6 +1,5 @@
 import React from 'react'
 
-import getClassnamesForType from '../utils/get-classnames-for-type'
 import mergeClassnames from '../utils/merge-classnames'
 
 export default ({
@@ -8,7 +7,23 @@ export default ({
   ...props
 }) => (
   <input
-    className={mergeClassnames(getClassnamesForType('input'), className)}
+    className={mergeClassnames(`
+      appearance-none
+      background-color-white
+      border-color-gray-300
+      border-radius-xs
+      border-style-solid
+      border-width-s
+      color-gray-700
+      font-size-16-medium
+      font-weight-400
+      margin-0
+      outline-none
+      padding-horizontal-xs-minus-border
+      padding-vertical-s-minus-border
+      width-full
+      focus:border-color-blue-400
+    `, className)}
     {...props}
   />
 )

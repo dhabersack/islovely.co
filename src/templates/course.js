@@ -5,6 +5,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import ConvertkitForm from '../components/convertkit-form'
 import H1 from '../components/h1'
 import H4 from '../components/h4'
+import Img from '../components/img'
 import Layout from '../components/layout'
 import MetaTags from '../components/meta-tags'
 import RichPreview from '../components/rich-preview'
@@ -83,7 +84,7 @@ export default ({
                 margin-right-s
               `}
             >
-              <img
+              <Img
                 alt=""
                 className="margin-right-xxs"
                 src="/assets/icons/email-with-letter.svg"
@@ -103,7 +104,7 @@ export default ({
                 margin-right-s
               `}
             >
-              <img
+              <Img
                 alt=""
                 className="margin-right-xxs"
                 src="/assets/icons/video.svg"
@@ -123,7 +124,7 @@ export default ({
                 margin-right-s
               `}
             >
-              <img
+              <Img
                 alt=""
                 className="margin-right-xxs"
                 src="/assets/icons/clock.svg"
@@ -143,7 +144,7 @@ export default ({
                 margin-right-s
               `}
             >
-              <img
+              <Img
                 alt=""
                 className="margin-right-xxs"
                 src="/assets/icons/calendar.svg"
@@ -156,7 +157,7 @@ export default ({
           )}
         </aside>
 
-        <img
+        <Img
           alt={title}
           className="height-192"
           src={`/assets/courses/${slug}.png`}

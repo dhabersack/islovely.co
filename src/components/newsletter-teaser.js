@@ -10,12 +10,12 @@ export default ({
 }) => {
   const {
     fields,
-    frontmatter
+    frontmatter,
   } = newsletter
 
   const {
     date,
-    permalink
+    permalink,
   } = fields
 
   const {
@@ -32,7 +32,10 @@ export default ({
         `}
       >
         <Strong
-          className="margin-right-xxs"
+          className={`
+            font-weight-500
+            margin-right-xxs
+          `}
         >#{edition}</Strong>
 
         {formatDate(date)}

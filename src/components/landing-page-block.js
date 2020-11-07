@@ -1,6 +1,7 @@
 import React from 'react'
 
 import H2 from './h2'
+import Img from './img'
 
 export default ({
   children,
@@ -25,7 +26,7 @@ export default ({
         s:columns-3
         l:columns-4
     `}>
-      <img
+      <Img
         alt=""
         src={imageUrl}
       />
@@ -41,7 +42,7 @@ export default ({
         className={`
           font-size-24-medium
           margin-bottom-s
-          s:margin-top-0
+          margin-top-0
         `}
       >
         {heading}

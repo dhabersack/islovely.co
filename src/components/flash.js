@@ -4,7 +4,7 @@ import P from './p'
 
 export default ({
   children,
-  type
+  type,
 }) => {
   const backgroundColor = ({
     'error': 'red-100',
@@ -27,11 +27,13 @@ export default ({
         border-style-solid
         border-width-s
         font-size-14-medium
+        margin-bottom-m
         padding-horizontal-s
         padding-vertical-s
         m:font-size-16-medium
       `}
-      dangerouslySetInnerHTML={{ __html: children }}
-    />
+    >
+      {children}
+    </P>
   )
 }

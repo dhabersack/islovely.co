@@ -5,11 +5,13 @@ const PREFIXES = [
   'font-weight-',
   'margin-bottom-',
   'margin-top-',
+  'width-',
   'visited:color-'
 ]
 
 const FULL_OVERRIDES = {
   'margin-0': 'margin-',
+  'width-full': 'columns-'
 }
 
 const hasElementThatStartsWith = (array, prefix) => array.some(element => element.startsWith(prefix))

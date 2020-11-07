@@ -11,6 +11,10 @@ export default ({
   preBodyComponents
 }) => (
   <html
+    className={`
+      height-full
+      sans-serif
+    `}
     lang="en-US"
     prefix="og: http://ogp.me/ns#"
     {...htmlAttributes}
