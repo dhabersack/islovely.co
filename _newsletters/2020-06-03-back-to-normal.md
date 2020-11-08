@@ -1,7 +1,7 @@
 ---
 title: "Back to normal?"
 excerpt: "Let’s reconsider how we work instead of urgently wanting to go “back to normal”."
-edition: 39
+issue: 39
 ---
 Three months into the pandemic, being stuck at home is getting to people. As restrictions are starting to lift, some cannot wait to go “back to normal”. Others feel very uncomfortable with that thought.
 

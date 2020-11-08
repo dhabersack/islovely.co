@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import mergeClassnames from '../utils/merge-classnames'
+
 const Button = ({
   category,
   children,
@@ -29,7 +31,7 @@ const Button = ({
 
   return (
     <button
-      className={`
+      className={mergeClassnames(`
         border-width-0
         border-radius-xxs
         cursor-pointer
@@ -43,8 +45,7 @@ const Button = ({
         disabled:cursor-not-allowed
 
         ${stylesForCategory}
-        ${className ?? ''}
-      `}
+      `, className)}
       {...props}
     >
       {children}

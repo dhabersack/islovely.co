@@ -1,7 +1,7 @@
 ---
 title: "Free alternatives to FontAwesome"
 excerpt: ""
-edition: 49
+issue: 49
 ---
 Icons can enhance an interface by guiding the eye and giving more context. They also help us add personality to our products. An interface that uses angular icons has a very different feel than one that uses rounded icons. The same goes for icons that use different line widths, or different levels of detail.
 

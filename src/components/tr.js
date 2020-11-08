@@ -8,8 +8,7 @@ export default ({
   ...props
 }) => (
   <tr
-    className={mergeClassnames(`
-    `, className)}
+    className={mergeClassnames(``, className)}
     {...props}
   >
     {children}

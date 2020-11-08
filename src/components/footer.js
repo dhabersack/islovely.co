@@ -50,11 +50,11 @@ export default () => (
 
       <A
         className={`
-          iubenda-nostyle
-          no-brand
-          iubenda-embed
           block
+          iubenda-embed
+          iubenda-nostyle
           margin-horizontal-xs
+          no-brand
         `}
         href="https://www.iubenda.com/privacy-policy/31487586"
       >
@@ -63,11 +63,11 @@ export default () => (
 
       <A
         className={`
-          iubenda-nostyle
-          no-brand
-          iubenda-embed
           block
+          iubenda-embed
+          iubenda-nostyle
           margin-horizontal-xs
+          no-brand
         `}
         href="https://www.iubenda.com/privacy-policy/31487586/cookie-policy"
       >

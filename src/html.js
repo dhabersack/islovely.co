@@ -8,7 +8,7 @@ export default ({
   headComponents,
   htmlAttributes,
   postBodyComponents,
-  preBodyComponents
+  preBodyComponents,
 }) => (
   <html
     className={`

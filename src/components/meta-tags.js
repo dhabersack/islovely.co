@@ -4,7 +4,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 
 export default ({
   description,
-  title
+  title,
 }) => {
   const data = useStaticQuery(graphql`
     query {

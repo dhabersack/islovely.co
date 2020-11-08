@@ -1,7 +1,7 @@
 ---
 title: "JavaScript sorts arrays weird"
 excerpt: "By default, an array of numbers will not be sorted numerically."
-edition: 45
+issue: 45
 isFeatured: true
 ---
 You don’t have to dig deep to find something strange in JavaScript. Any language created in 10 days would have quirks. While it has seen a lot of improvement in the last few years, some weirdness will always remain. One headscratcher is the default way it sorts arrays.

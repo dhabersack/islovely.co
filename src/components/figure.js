@@ -8,6 +8,7 @@ export default ({
   caption,
   className,
   src,
+  ...props
 }) => (
   <figure
     className={mergeClassnames(`
@@ -17,6 +18,7 @@ export default ({
       l:margin-bottom-l
       l:margin-top-l
     `, className)}
+    {...props}
   >
     <Img
       alt={alt}

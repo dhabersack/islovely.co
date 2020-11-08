@@ -2,7 +2,9 @@ import React from 'react'
 
 import CourseTeaser from './course-teaser'
 
-export default ({ courses }) => (
+export default ({
+  courses,
+}) => (
   <div
     className={`
       grid

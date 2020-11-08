@@ -3,7 +3,7 @@ import React from 'react'
 import PostTeaser from './post-teaser'
 
 export default ({
-  posts
+  posts,
 }) => (
   <div
     className={`

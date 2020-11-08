@@ -8,8 +8,7 @@ export default ({
   ...props
 }) => (
   <tfoot
-    className={mergeClassnames(`
-    `, className)}
+    className={mergeClassnames(``, className)}
     {...props}
   >
     {children}

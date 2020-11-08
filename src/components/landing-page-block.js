@@ -20,11 +20,11 @@ export default ({
   >
     <div
       className={`
-        columns-8
+        columns-8-of-12
         margin-bottom-xs
-        xs:columns-6
-        s:columns-3
-        l:columns-4
+        xs:columns-6-of-12
+        s:columns-3-of-12
+        l:columns-4-of-12
     `}>
       <Img
         alt=""
@@ -34,8 +34,8 @@ export default ({
 
     <div
       className={`
-        s:columns-9
-        l:columns-8
+        s:columns-9-of-12
+        l:columns-8-of-12
       `}
     >
       <H2

@@ -69,8 +69,8 @@ export default () => (
     >
       <div
         className={`
-          s:columns-8
-          m:columns-7
+          s:columns-8-of-12
+          m:columns-7-of-12
         `}
       >
         <H1
@@ -93,11 +93,11 @@ export default () => (
 
       <div
         className={`
-          columns-8
+          columns-8-of-12
           margin-bottom-s
-          xs:columns-6
-          s:columns-4
-          m:columns-5
+          xs:columns-6-of-12
+          s:columns-4-of-12
+          m:columns-5-of-12
         `}
       >
         <Img

@@ -8,8 +8,8 @@ import P from '../components/p'
 import Tag from '../components/tag'
 import slugify from '../utils/slugify'
 
-export default ({ 
-  firetip
+export default ({
+  firetip,
 }) => {
   const {
     body,
@@ -23,7 +23,7 @@ export default ({
   } = frontmatter
 
   const {
-    slug
+    slug,
   } = fields
 
   return (

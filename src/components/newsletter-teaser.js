@@ -19,7 +19,7 @@ export default ({
   } = fields
 
   const {
-    edition,
+    issue,
     title,
   } = frontmatter
 
@@ -36,7 +36,9 @@ export default ({
             font-weight-500
             margin-right-xxs
           `}
-        >#{edition}</Strong>
+        >
+          #{issue}
+        </Strong>
 
         {formatDate(date)}
       </footer>

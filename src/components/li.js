@@ -10,8 +10,8 @@ export default ({
   <li
     className={mergeClassnames(`
       font-size-16-medium
-      padding-0
       margin-bottom-xs
+      padding-0
       m:font-size-18-medium
     `, className)}
     {...props}

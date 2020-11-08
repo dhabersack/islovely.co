@@ -1,7 +1,7 @@
 ---
 title: "These tips are fire."
 excerpt: "I started posting “fire tips” on Twitter."
-edition: 42
+issue: 42
 ---
 A few weeks ago, I started posting my own “fire tips” on Twitter. Following the trend started by Wes Bos, I am sharing bite-sized tips on how to write better code.
 

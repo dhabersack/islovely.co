@@ -78,7 +78,7 @@ export default ({
         >
           {emails && (
             <div
-              className={`u
+              className={`
                 align-items-center
                 inline-flex
                 margin-right-s

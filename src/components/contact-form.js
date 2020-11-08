@@ -14,7 +14,7 @@ export default () => {
   const [{
     errors,
     submitting,
-    succeeded
+    succeeded,
   }, handleSubmit] = useForm('contact')
 
   const [isDataProcessingConsentGiven, setIsDataProcessingConsentGiven] = useState(false)

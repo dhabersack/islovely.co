@@ -80,7 +80,7 @@ export default ({
                   height-24
                   margin-right-xs
                   width-24
-                  m:height-24
+                  m:height-27
                   m:width-27
                 `}
                 src="/assets/icons/checkmark.svg"
@@ -136,9 +136,9 @@ export default ({
             background-color-yellow-400
             border-radius-xxs
             color-gray-900
-            inline-block
             font-size-14-short
             font-weight-500
+            inline-block
             padding-horizontal-m
             padding-vertical-s
             visited:color-gray-900
@@ -179,7 +179,7 @@ export const pageQuery = graphql`
             permalink
           }
           frontmatter {
-            edition
+            issue
             title
           }
           id

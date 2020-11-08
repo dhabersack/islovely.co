@@ -1,7 +1,7 @@
 ---
 title: "How to understand any codebase"
 excerpt: "Treat existing codebases as a blackbox and write tests for it to understand its inner workings."
-edition: 30
+issue: 30
 isFeatured: true
 ---
 I used to freak out whenever I joined a new client. To be productive fast, I have to figure out how their sometimes massive codebase works in a few days. It’s a humbling situation, but one we can speed up with a neat trick.

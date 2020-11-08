@@ -27,7 +27,7 @@ export default ({
 
   const {
     title: siteTitle,
-    siteUrl
+    siteUrl,
   } = data.site.siteMetadata
 
   const isArticle = type === 'article'

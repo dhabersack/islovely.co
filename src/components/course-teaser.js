@@ -7,15 +7,17 @@ import Img from './img'
 import P from './p'
 import Strong from './strong'
 
-export default ({ course }) => {
+export default ({
+  course,
+}) => {
   const {
     fields,
-    frontmatter
+    frontmatter,
   } = course
 
   const {
     permalink,
-    slug
+    slug,
   } = fields
 
   const {
@@ -24,7 +26,7 @@ export default ({ course }) => {
     hours,
     title,
     videos,
-    weeks
+    weeks,
   } = frontmatter
 
   return (

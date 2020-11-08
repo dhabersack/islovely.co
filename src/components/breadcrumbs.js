@@ -2,7 +2,9 @@ import React from 'react'
 
 import A from './a'
 
-export default ({ breadcrumbs }) => breadcrumbs ? (
+export default ({
+  breadcrumbs,
+}) => breadcrumbs ? (
   <nav
     className={`
       font-size-14-medium

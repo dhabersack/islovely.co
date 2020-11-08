@@ -85,7 +85,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            edition
+            issue
             title
           }
         }

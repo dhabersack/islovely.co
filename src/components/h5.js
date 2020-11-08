@@ -9,6 +9,7 @@ export default ({
 }) => (
   <h5
     className={mergeClassnames(`
+      font-size-16-short
       font-weight-700
       margin-0
     `, className)}
