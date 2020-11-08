@@ -5,15 +5,24 @@ $_width: (
   15:   1.5rem,
   24:   2.4rem,
   27:   2.7rem,
+  42:   4.2rem,
   120:  12.0rem,
   full: 100%
 );
+
+@mixin _max-width($size) {
+  max-width: map-get($_width, $size);
+}
 
 @mixin _width($size) {
   width: map-get($_width, $size);
 }
 
-@each $size in (0, 9, 12, 15, 24, 27, 120, full) {
+@each $size in (0, 9, 12, 15, 24, 27, 42, 120, full) {
+  .max-width-#{$size} {
+    @include _max-width($size);
+  }
+
   .width-#{$size} {
     @include _at-breakpoints {
       @include _width($size);

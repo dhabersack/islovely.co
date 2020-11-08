@@ -1,26 +1,31 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 import ConvertkitForm from '../components/convertkit-form'
+import H1 from '../components/h1'
+import H4 from '../components/h4'
+import Img from '../components/img'
 import Layout from '../components/layout'
 import MetaTags from '../components/meta-tags'
 import RichPreview from '../components/rich-preview'
+import Strong from '../components/strong'
 import Taper from '../components/taper'
 import Video from '../components/video'
 
 export default ({
   data,
-  location
+  location,
 }) => {
   const {
+    body,
     fields,
     frontmatter,
-    html
-  } = data.markdownRemark
+  } = data.mdx
 
   const {
     permalink,
-    slug
+    slug,
   } = fields
 
   const {
@@ -33,7 +38,7 @@ export default ({
     playlist,
     uid,
     videos,
-    weeks
+    weeks,
   } = frontmatter
 
   return (
@@ -59,84 +64,163 @@ export default ({
       />
 
       <Taper>
-        <h1>
+        <H1>
           {title}
-        </h1>
+        </H1>
 
-        <aside className="flex flex-wrap font-size-12-medium margin-bottom-s">
+        <aside
+          className={`
+            flex
+            flex-wrap
+            font-size-12-medium
+            margin-bottom-s
+          `}
+        >
           {emails && (
-            <div className="align-items-center inline-flex margin-right-s">
-              <img alt="" className="margin-right-xxs" src="/assets/icons/email-with-letter.svg" />
+            <div
+              className={`
+                align-items-center
+                inline-flex
+                margin-right-s
+              `}
+            >
+              <Img
+                alt=""
+                className="margin-right-xxs"
+                src="/assets/icons/email-with-letter.svg"
+              />
 
               <span>
-                <strong>{emails}</strong>
-                {' '}
-                emails
+                <Strong>{emails}</Strong> emails
               </span>
             </div>
           )}
 
           {videos && (
-            <div className="align-items-center inline-flex margin-right-s">
-              <img alt="" className="margin-right-xxs" src="/assets/icons/video.svg" />
+            <div
+              className={`
+                align-items-center
+                inline-flex
+                margin-right-s
+              `}
+            >
+              <Img
+                alt=""
+                className="margin-right-xxs"
+                src="/assets/icons/video.svg"
+              />
 
               <span>
-                <strong>{videos}</strong>
-                {' '}
-                videos
+                <Strong>{videos}</Strong> videos
               </span>
             </div>
           )}
 
           {hours && (
-            <div className="align-items-center inline-flex margin-right-s">
-              <img alt="" className="margin-right-xxs" src="/assets/icons/clock.svg" />
+            <div
+              className={`
+                align-items-center
+                inline-flex
+                margin-right-s
+              `}
+            >
+              <Img
+                alt=""
+                className="margin-right-xxs"
+                src="/assets/icons/clock.svg"
+              />
 
               <span>
-                <strong>{hours}</strong>
-                {' '}
-                hours
+                <Strong>{hours}</Strong> hours
               </span>
             </div>
           )}
 
           {weeks && (
-            <div className="align-items-center inline-flex margin-right-s">
-              <img alt="" className="margin-right-xxs" src="/assets/icons/calendar.svg" />
+            <div
+              className={`
+                align-items-center
+                inline-flex
+                margin-right-s
+              `}
+            >
+              <Img
+                alt=""
+                className="margin-right-xxs"
+                src="/assets/icons/calendar.svg"
+              />
 
               <span>
-                <strong>{weeks}</strong>
-                {' '}
-                weeks
+                <Strong>{weeks}</Strong> weeks
               </span>
             </div>
           )}
         </aside>
 
-        <img alt={title} className="height-192" src={`/assets/courses/${slug}.png`} />
+        <Img
+          alt={title}
+          className="height-192"
+          src={`/assets/courses/${slug}.png`}
+        />
 
-        <div dangerouslySetInnerHTML={{ __html: html }} />
+        <MDXRenderer>
+          {body}
+        </MDXRenderer>
 
-        <div className="margin-bottom-xl">
-          <ConvertkitForm svForm={svForm} uid={uid} cta={cta} sourceUrl={location.href} />
+        <div
+          className="margin-bottom-xl"
+        >
+          <ConvertkitForm
+            cta={cta}
+            sourceUrl={location.href}
+            svForm={svForm}
+            uid={uid}
+          />
         </div>
       </Taper>
 
       {playlist && (
-        <div className="grid grid-columns-1 grid-column-gap grid-row-gap-l xs:grid-columns-2 xs:grid-row-gap-xs m:grid-columns-3 m:grid-row-gap-m l:grid-row-gap-l">
+        <div
+          className={`
+            grid
+            grid-columns-1
+            grid-column-gap
+            grid-row-gap-l
+            xs:grid-columns-2
+            xs:grid-row-gap-xs
+            m:grid-columns-3
+            m:grid-row-gap-m
+            l:grid-row-gap-l
+          `}
+        >
           {playlist.map(({
             duration,
             title,
             vimeoId,
-            youtubeId
+            youtubeId,
           }, index) => (
-            <div key={`video-${title}`}>
-              <div className="margin-bottom-xxs">
-                <Video title={title} vimeoId={vimeoId} youtubeId={youtubeId} />
+            <div
+              key={`video-${title}`}
+            >
+              <div
+                className="margin-bottom-xxs"
+              >
+                <Video
+                  title={title}
+                  vimeoId={vimeoId}
+                  youtubeId={youtubeId}
+                />
               </div>
 
-              <h4 className="font-size-16 font-weight-400">
-                <span className="color-gray-500">
+              <H4
+                className={`
+                  font-size-16-short
+                  font-weight-400
+                `}
+              >
+                <span
+                  className="color-gray-500"
+                >
                   #{index + 1}
                 </span>
 
@@ -146,10 +230,12 @@ export default ({
 
                 {' '}
 
-                <span className="color-gray-500">
+                <span
+                  className="color-gray-500"
+                >
                   ({duration})
                 </span>
-              </h4>
+              </H4>
             </div>
           ))}
         </div>
@@ -160,18 +246,18 @@ export default ({
 
 export const pageQuery = graphql`
   query($slug: String!) {
-    markdownRemark(
+    mdx(
       fields: {
         slug: {
           eq: $slug
         }
       }
     ) {
+      body
       fields {
         permalink
         slug
       }
-      html
       frontmatter {
         cta
         emails

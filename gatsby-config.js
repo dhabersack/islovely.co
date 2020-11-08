@@ -30,14 +30,11 @@ module.exports = {
         path: `${__dirname}/_${name}`,
       }
     })), {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-prismjs`,
-            options: {
-            }
-          }
+        extensions: [`.mdx`, `.md`],
+        gatsbyRemarkPlugins: [
+          `gatsby-remark-prismjs`,
         ]
       }
     }, {

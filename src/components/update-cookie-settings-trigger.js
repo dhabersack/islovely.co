@@ -1,12 +1,25 @@
 import React from 'react'
 
 import Button from './button'
-import CookieIcon from '../icons/cookie';
+import CookieIcon from '../icons/cookie'
 
 export default () => (
-  <Button className="iubenda-cs-preferences-link">
-    <div className="align-items-center flex">
-      <div className="height-24 width-24 margin-right-xxs">
+  <Button
+    className="iubenda-cs-preferences-link"
+  >
+    <div
+      className={`
+        align-items-center
+        flex
+      `}
+    >
+      <div
+        className={`
+          height-24
+          margin-right-xxs
+          width-24
+        `}
+      >
         <CookieIcon />
       </div>
 

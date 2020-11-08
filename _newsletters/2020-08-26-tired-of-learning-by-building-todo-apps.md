@@ -1,6 +1,7 @@
 ---
 title: "Tired of learning by building todo-apps?"
 excerpt: ""
+issue: 51
 ---
 When picking up new tools, some learn best by building something with them. That applies to both frameworks and design tools. Tutorials encourage you to explore the thing, not just read about it in theory. Like driving, theory is important, but you have to follow it up with experience to really know it well.
 

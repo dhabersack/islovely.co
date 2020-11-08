@@ -1,6 +1,7 @@
 ---
 title: "How to understand any codebase"
 excerpt: "Treat existing codebases as a blackbox and write tests for it to understand its inner workings."
+issue: 30
 isFeatured: true
 ---
 I used to freak out whenever I joined a new client. To be productive fast, I have to figure out how their sometimes massive codebase works in a few days. It’s a humbling situation, but one we can speed up with a neat trick.
@@ -17,9 +18,9 @@ it('slugifies', () => {
 
 It is possible but unlikely that this function would return a number. I **want** my test to fail at this stage, because that tells me what the function _really_ returns:
 
-```
-> expected: 5
-> actual: 'hello-code'
+```diff
++> expected: 5
+-> actual:   'hello-code'
 ```
 
 Nice! So this call returns `'hello-code'` instead. I can now try another input:

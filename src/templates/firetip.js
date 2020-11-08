@@ -1,6 +1,8 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
 
+import H1 from '../components/h1'
 import Layout from '../components/layout'
 import MailingListSignup from '../components/mailing-list-signup'
 import MetaTags from '../components/meta-tags'
@@ -14,17 +16,19 @@ export default ({
   location,
 }) => {
   const {
+    body,
     fields,
     frontmatter,
-    html
-  } = data.markdownRemark
+  } = data.mdx
 
-  const { permalink } = fields
+  const {
+    permalink,
+  } = fields
 
   const {
     tags,
     excerpt,
-    title
+    title,
   } = frontmatter
 
   return (
@@ -50,19 +54,32 @@ export default ({
       />
 
       <Taper>
-        <h1>
+        <H1>
           {title}
-        </h1>
+        </H1>
 
-        <div dangerouslySetInnerHTML={{ __html: html }} />
+        <MDXRenderer>
+          {body}
+        </MDXRenderer>
 
-        <div className="flex flex-wrap margin-bottom-xl">
+        <div
+          className={`
+            flex
+            flex-wrap
+            margin-bottom-xl
+          `}
+        >
           {tags.map(tag => (
             <div
-              className="margin-bottom-xxs margin-right-xxs"
+              className={`
+                margin-bottom-xxs
+                margin-right-xxs
+              `}
               key={`tag-${tag}`}
             >
-              <Tag href={`/firetips/tags/${slugify(tag)}`}>
+              <Tag
+                href={`/firetips/tags/${slugify(tag)}`}
+              >
                 {tag}
               </Tag>
             </div>
@@ -79,13 +96,14 @@ export default ({
 
 export const pageQuery = graphql`
   query($slug: String!) {
-    markdownRemark(
+    mdx(
       fields: {
         slug: {
           eq: $slug
         }
       }
     ) {
+      body
       fields {
         permalink
       }
@@ -94,7 +112,6 @@ export const pageQuery = graphql`
         tags
         title
       }
-      html
     }
   }
 `

@@ -1,14 +1,18 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
+import H1 from '../components/h1'
+import H2 from '../components/h2'
 import Layout from '../components/layout'
 import MetaTags from '../components/meta-tags'
 import PostTeasers from '../components/post-teasers'
 import RichPreview from '../components/rich-preview'
 import Taper from '../components/taper'
 
-export default ({ data }) => {
-  const posts = data.allMarkdownRemark.edges.map(({ node }) => node)
+export default ({
+  data,
+}) => {
+  const posts = data.allMdx.edges.map(({ node }) => node)
 
   const categories = [
     ...new Set(posts.map(({ frontmatter }) => frontmatter.categories).flat())
@@ -37,18 +41,24 @@ export default ({ data }) => {
       />
 
       <Taper>
-        <h1>Categories</h1>
+        <H1>
+          Categories
+        </H1>
       </Taper>
 
       {categories.map(category => (
-        <React.Fragment key={`category-${category}`}>
+        <React.Fragment
+          key={`category-${category}`}
+        >
           <Taper>
-            <h2>
+            <H2>
               {category} &times; {postsByCategory[category].length}
-            </h2>
+            </H2>
           </Taper>
 
-          <PostTeasers posts={postsByCategory[category]} />
+          <PostTeasers
+            posts={postsByCategory[category]}
+          />
         </React.Fragment>
       ))}
     </Layout>
@@ -57,7 +67,7 @@ export default ({ data }) => {
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark(
+    allMdx(
       filter: {
         fields: {
           type: {

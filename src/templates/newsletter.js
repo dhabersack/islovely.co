@@ -1,31 +1,34 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
 
+import H1 from '../components/h1'
 import Layout from '../components/layout'
 import MailingListSignup from '../components/mailing-list-signup'
 import MetaTags from '../components/meta-tags'
 import RichPreview from '../components/rich-preview'
+import P from '../components/p'
 import Taper from '../components/taper'
 import formatDate from '../utils/format-date'
 
 export default ({
   data,
-  location
+  location,
 }) => {
   const {
+    body,
     fields,
     frontmatter,
-    html
-  } = data.markdownRemark
+  } = data.mdx
 
   const {
     date,
-    permalink
+    permalink,
   } = fields
 
   const {
     excerpt,
-    title
+    title,
   } = frontmatter
 
   return (
@@ -54,17 +57,33 @@ export default ({
       />
 
       <Taper>
-        <h1>
+        <H1
+          className='margin-bottom-xxs'
+        >
           {title}
-        </h1>
+        </H1>
 
-        <p className="color-gray-500 font-size-12-short margin-bottom-s">
+        <P
+          className={`
+            color-gray-500
+            font-size-12-short
+            margin-bottom-s
+          `}
+        >
           {formatDate(date)}
-        </p>
+        </P>
 
-        <div className="margin-bottom-xl" dangerouslySetInnerHTML={{ __html: html }} />
+        <div
+          className="margin-bottom-xl"
+        >
+          <MDXRenderer>
+            {body}
+          </MDXRenderer>
+        </div>
 
-        <MailingListSignup sourceUrl={location.href} />
+        <MailingListSignup
+          sourceUrl={location.href}
+        />
       </Taper>
     </Layout>
   )
@@ -72,18 +91,18 @@ export default ({
 
 export const pageQuery = graphql`
   query($slug: String!) {
-    markdownRemark(
+    mdx(
       fields: {
         slug: {
           eq: $slug
         }
       }
     ) {
+      body
       fields {
         date
         permalink
       }
-      html
       frontmatter {
         excerpt
         title

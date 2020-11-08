@@ -1,16 +1,23 @@
 import React from 'react'
 
+import A from './a'
 import Card from './card'
+import H2 from './h2'
+import Img from './img'
+import P from './p'
+import Strong from './strong'
 
-export default ({ course }) => {
+export default ({
+  course,
+}) => {
   const {
     fields,
-    frontmatter
+    frontmatter,
   } = course
 
   const {
     permalink,
-    slug
+    slug,
   } = fields
 
   const {
@@ -19,38 +26,100 @@ export default ({ course }) => {
     hours,
     title,
     videos,
-    weeks
+    weeks,
   } = frontmatter
-
 
   return (
     <Card>
-      <article className="flex flex-column height-full">
-        <a className="background-color-gray-100 block intrinsic-ratio-16-by-9" href={permalink}>
-          <div className="align-items-center flex justify-center">
-            <img alt={title} className="height-full" src={`/assets/courses/${slug}.png`} />
+      <article
+        className={`
+          flex
+          flex-column
+          height-full
+        `}
+      >
+        <a
+          className={`
+            background-color-gray-100
+            block
+            intrinsic-ratio-16-by-9
+          `}
+          href={permalink}
+        >
+          <div
+            className={`
+              align-items-center
+              flex
+              justify-center
+            `}
+          >
+            <Img
+              alt={title}
+              className="height-full"
+              src={`/assets/courses/${slug}.png`}
+            />
           </div>
         </a>
 
-        <div className="flex-grow padding-horizontal-s padding-vertical-s">
-          <h2 className="font-size-16-short margin-0 margin-bottom-xs">
-            <a href={permalink}>
+        <div
+          className={`
+            flex-grow
+            padding-horizontal-s
+            padding-vertical-s
+          `}
+        >
+          <H2
+            className={`
+              font-size-16-short
+              margin-0
+              margin-bottom-xs
+            `}
+          >
+            <A
+              href={permalink}
+            >
               {title}
-            </a>
-          </h2>
+            </A>
+          </H2>
 
-          <p className="font-size-16-medium margin-0">
+          <P
+            className={`
+              font-size-16-medium
+              margin-0
+            `}
+          >
             {excerpt}
-          </p>
+          </P>
         </div>
 
-        <footer className="background-color-gray-100 border-bottom-radius-xs color-gray-600 flex flex-wrap font-size-12-medium padding-horizontal-s padding-vertical-s">
+        <footer
+          className={`
+            background-color-gray-100
+            border-bottom-radius-xs
+            color-gray-600
+            flex
+            flex-wrap
+            font-size-12-medium
+            padding-horizontal-s
+            padding-vertical-s
+          `}
+        >
           {emails && (
-            <div className="align-items-center inline-flex margin-right-s">
-              <img alt="" className="margin-right-xxs" src="/assets/icons/email-with-letter.svg" />
+            <div
+              className={`
+                align-items-center
+                inline-flex
+                margin-right-s
+              `}
+            >
+              <Img
+                alt=""
+                className="margin-right-xxs"
+                src="/assets/icons/email-with-letter.svg"
+              />
 
               <span>
-                <strong>{emails}</strong>
+                <Strong>{emails}</Strong>
                 {' '}
                 emails
               </span>
@@ -58,11 +127,21 @@ export default ({ course }) => {
           )}
 
           {videos && (
-            <div className="align-items-center inline-flex margin-right-s">
-              <img alt="" className="margin-right-xxs" src="/assets/icons/video.svg" />
+            <div
+              className={`
+                align-items-center
+                inline-flex
+                margin-right-s
+              `}
+            >
+              <Img
+                alt=""
+                className="margin-right-xxs"
+                src="/assets/icons/video.svg"
+              />
 
               <span>
-                <strong>{videos}</strong>
+                <Strong>{videos}</Strong>
                 {' '}
                 videos
               </span>
@@ -70,11 +149,21 @@ export default ({ course }) => {
           )}
 
           {hours && (
-            <div className="align-items-center inline-flex margin-right-s">
-              <img alt="" className="margin-right-xxs" src="/assets/icons/clock.svg" />
+            <div
+              className={`
+                align-items-center
+                inline-flex
+                margin-right-s
+              `}
+            >
+              <Img
+                alt=""
+                className="margin-right-xxs"
+                src="/assets/icons/clock.svg"
+              />
 
               <span>
-                <strong>{hours}</strong>
+                <Strong>{hours}</Strong>
                 {' '}
                 hours
               </span>
@@ -82,11 +171,21 @@ export default ({ course }) => {
           )}
 
           {weeks && (
-            <div className="align-items-center inline-flex margin-right-s">
-              <img alt="" className="margin-right-xxs" src="/assets/icons/calendar.svg" />
+            <div
+              className={`
+                align-items-center
+                inline-flex
+                margin-right-s
+              `}
+            >
+              <Img
+                alt=""
+                className="margin-right-xxs"
+                src="/assets/icons/calendar.svg"
+              />
 
               <span>
-                <strong>{weeks}</strong>
+                <Strong>{weeks}</Strong>
                 {' '}
                 weeks
               </span>

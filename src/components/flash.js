@@ -1,6 +1,11 @@
 import React from 'react'
 
-export default ({ children, type }) => {
+import P from './p'
+
+export default ({
+  children,
+  type,
+}) => {
   const backgroundColor = ({
     'error': 'red-100',
     'info': 'blue-100',
@@ -14,6 +19,21 @@ export default ({ children, type }) => {
   }[type] || 'gray-400');
 
   return (
-    <p className={`background-color-${backgroundColor} border-color-${borderColor} border-radius-xs border-style-solid border-width-s font-size-14-medium padding-horizontal-s padding-vertical-s m:font-size-16-medium`} dangerouslySetInnerHTML={{ __html: children }} />
+    <P
+      className={`
+        background-color-${backgroundColor}
+        border-color-${borderColor}
+        border-radius-xs
+        border-style-solid
+        border-width-s
+        font-size-14-medium
+        margin-bottom-m
+        padding-horizontal-s
+        padding-vertical-s
+        m:font-size-16-medium
+      `}
+    >
+      {children}
+    </P>
   )
 }

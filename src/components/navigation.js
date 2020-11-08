@@ -1,43 +1,139 @@
 import React from 'react'
 
+import A from './a'
+import Li from './li'
+import Ul from './ul'
+
 export default () => (
   <nav>
-    <ul className="flex flex-wrap font-size-16-short font-weight-500 list-style-none margin-0 padding-0">
-      <li className="margin-right-xs xs:margin-right-s">
-        <a className="inline-block padding-vertical-xs" href="/courses">
+    <Ul
+      className={`
+        flex
+        flex-wrap
+        list-style-none
+        margin-0
+        padding-0
+        width-full
+      `}
+    >
+      <Li
+        className={`
+          font-size-16-short
+          font-weight-500
+          margin-bottom-0
+          margin-right-xs
+          xs:margin-right-s
+        `}
+      >
+        <A
+          className={`
+            inline-block
+            padding-vertical-xs
+          `}
+          href="/courses"
+        >
           Courses
-        </a>
-      </li>
+        </A>
+      </Li>
 
-      <li className="margin-right-xs xs:margin-right-s">
-        <a className="inline-block padding-vertical-xs" href="/posts">
+      <Li
+        className={`
+          font-size-16-short
+          font-weight-500
+          margin-bottom-0
+          margin-right-xs
+          xs:margin-right-s
+        `}
+      >
+        <A
+          className={`
+            inline-block
+            padding-vertical-xs
+          `}
+          href="/posts"
+        >
           Blog
-        </a>
-      </li>
+        </A>
+      </Li>
 
-      <li className="margin-right-xs xs:margin-right-s">
-        <a className="inline-block padding-vertical-xs" href="/firetips">
+      <Li
+        className={`
+          font-size-16-short
+          font-weight-500
+          margin-bottom-0
+          margin-right-xs
+          xs:margin-right-s
+        `}
+      >
+        <A
+          className={`
+            inline-block
+            padding-vertical-xs
+          `}
+          href="/firetips"
+        >
           Fire tips
-        </a>
-      </li>
+        </A>
+      </Li>
 
-      <li className="margin-right-xs xs:margin-right-s">
-        <a className="inline-block padding-vertical-xs" href="/newsletter">
+      <Li
+        className={`
+          font-size-16-short
+          font-weight-500
+          margin-bottom-0
+          margin-right-xs
+          xs:margin-right-s
+        `}
+      >
+        <A
+          className={`
+            inline-block
+            padding-vertical-xs
+          `}
+          href="/newsletter"
+        >
           Newsletter
-        </a>
-      </li>
+        </A>
+      </Li>
 
-      <li className="margin-right-xs xs:margin-right-s">
-        <a className="inline-block padding-vertical-xs" href="/about">
+      <Li
+        className={`
+          font-size-16-short
+          font-weight-500
+          margin-bottom-0
+          margin-right-xs
+          xs:margin-right-s
+        `}
+      >
+        <A
+          className={`
+            inline-block
+            padding-vertical-xs
+          `}
+          href="/about"
+        >
           About
-        </a>
-      </li>
+        </A>
+      </Li>
 
-      <li>
-        <a className="inline-block padding-vertical-xs" href="/contact">
+      <Li
+        className={`
+          font-size-16-short
+          font-weight-500
+          margin-bottom-0
+        `}
+      >
+        <A
+          className={`
+            inline-block
+            margin-bottom-0
+            padding-vertical-xs
+          `}
+          href="/contact"
+        >
           Contact
-        </a>
-      </li>
-    </ul>
+        </A>
+      </Li>
+    </Ul>
   </nav>
 )

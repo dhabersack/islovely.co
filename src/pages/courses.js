@@ -1,14 +1,20 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
+import A from '../components/a'
 import CourseTeasers from '../components/course-teasers'
+import H1 from '../components/h1'
 import Layout from '../components/layout'
 import MetaTags from '../components/meta-tags'
+import P from '../components/p'
 import RichPreview from '../components/rich-preview'
+import Strong from '../components/strong'
 import Taper from '../components/taper'
 
-export default ({ data }) => {
-  const courses = data.allMarkdownRemark.edges.map(({ node }) => node)
+export default ({
+  data,
+}) => {
+  const courses = data.allMdx.edges.map(({ node }) => node)
 
   return (
     <Layout
@@ -28,19 +34,25 @@ export default ({ data }) => {
       />
 
       <Taper>
-        <h1>Courses</h1>
+        <H1>
+          Courses
+        </H1>
 
-        <p>
-          I offer <strong>email- and video-courses</strong> for designers and developers of any skill level. Email-courses land in your inbox over a few weeks, video-courses are binge-ready now. They are all <strong>completely free</strong>.
-        </p>
+        <P>
+          I offer <Strong>email- and video-courses</Strong> for designers and developers of any skill level. Email-courses land in your inbox over a few weeks, video-courses are binge-ready now. They are all <Strong>completely free</Strong>.
+        </P>
 
-        <p>
-          I am always working on new content. Sign up to any course or <a href="/newsletter">join my newsletter</a> to catch announcements of upcoming material. If you want to learn about something in particular, tweet me at <a href="https://twitter.com/domhabersack">@domhabersack</a> and I’ll put it on my list!
-        </p>
+        <P>
+          I am always working on new content. Sign up to any course or <A href="/newsletter">join my newsletter</A> to catch announcements of upcoming material. If you want to learn about something in particular, tweet me at <A href="https://twitter.com/domhabersack">@domhabersack</A> and I’ll put it on my list!
+        </P>
       </Taper>
 
-      <div className="margin-bottom-xl">
-        <CourseTeasers courses={courses} />
+      <div
+        className="margin-bottom-xl"
+      >
+        <CourseTeasers
+          courses={courses}
+        />
       </div>
     </Layout>
   )
@@ -48,7 +60,7 @@ export default ({ data }) => {
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark(
+    allMdx(
       filter: {
         fields: {
           type: {

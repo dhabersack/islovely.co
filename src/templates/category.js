@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
+import H1 from '../components/h1'
 import Layout from '../components/layout'
 import MetaTags from '../components/meta-tags'
 import PostTeasers from '../components/post-teasers'
@@ -10,10 +11,13 @@ import slugify from '../utils/slugify'
 
 export default ({
   data,
-  pageContext
+  pageContext,
 }) => {
-  const posts = data.allMarkdownRemark.edges.map(({ node }) => node)
-  const { category } = pageContext
+  const posts = data.allMdx.edges.map(({ node }) => node)
+
+  const {
+    category,
+  } = pageContext
 
   return (
     <Layout
@@ -36,17 +40,21 @@ export default ({
       />
 
       <Taper>
-        <h1>Posts in “{category}”</h1>
+        <H1>
+          Posts in “{category}”
+        </H1>
       </Taper>
 
-      <PostTeasers posts={posts} />
+      <PostTeasers
+        posts={posts}
+      />
     </Layout>
   )
 }
 
 export const pageQuery = graphql`
   query($category: [String]) {
-    allMarkdownRemark(
+    allMdx(
       filter: {
         frontmatter: {
           categories: {

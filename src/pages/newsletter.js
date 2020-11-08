@@ -1,15 +1,24 @@
 import React from 'react'
 import { graphql } from 'gatsby';
 
+import A from '../components/a'
 import ConvertkitForm from '../components/convertkit-form'
+import H1 from '../components/h1'
+import H2 from '../components/h2'
+import Img from '../components/img'
 import Layout from '../components/layout'
+import Li from '../components/li'
 import MetaTags from '../components/meta-tags'
 import NewsletterTeaser from '../components/newsletter-teaser'
+import P from '../components/p'
 import RichPreview from '../components/rich-preview'
 import Taper from '../components/taper'
 
-export default ({ data, location }) => {
-  const newsletters = data.allMarkdownRemark.edges.map(({ node }) => node)
+export default ({
+  data,
+  location,
+}) => {
+  const newsletters = data.allMdx.edges.map(({ node }) => node)
 
   const listItems = [
     'tips on design and development you can use immediately',
@@ -37,40 +46,65 @@ export default ({ data, location }) => {
       />
 
       <Taper>
-        <h1>More tips, straight to your inbox</h1>
+        <H1>
+          More tips, straight to your inbox
+        </H1>
 
-        <p>
+        <P>
           In addition to what I share on this site, I send out a weekly newsletter with tips to help you work smarter. By signing up, you get access to:
-        </p>
+        </P>
 
         <ul
-          className="list-style-none margin-bottom-m padding-0 xs:columns-10 xs:margin-horizontal-auto m:columns-8-of-10 l:columns-6-of-8"
+          className={`
+            list-style-none
+            margin-bottom-m
+            padding-0
+            s:columns-10-of-12
+            s:margin-horizontal-auto
+            m:columns-8-of-10
+            l:columns-6-of-8
+          `}
         >
           {listItems.map(listItem => (
-            <li
-              className="flex margin-bottom-s"
+            <Li
+              className={`
+                flex
+                margin-bottom-s
+              `}
               key={`newsletter-benefit-${listItem}`}
             >
-              <img
+              <Img
                 alt=""
-                className="flex-no-shrink height-24 margin-right-xs width-24 m:height-24 m:width-27"
+                className={`
+                  flex-no-shrink
+                  height-24
+                  margin-right-xs
+                  width-24
+                  m:height-27
+                  m:width-27
+                `}
                 src="/assets/icons/checkmark.svg"
               />
 
               <span
-                className="font-size-16-medium m:font-size-18-medium"
+                className={`
+                  font-size-16-medium
+                  m:font-size-18-medium
+                `}
               >
                 {listItem}
               </span>
-            </li>
+            </Li>
           ))}
         </ul>
 
-        <p>
-          You can find <a href="/newsletter/archive">all previous newsletters</a> in the archive. Get this bonus content before everybody else!
-        </p>
+        <P>
+          You can find <A href="/newsletter/archive">all previous newsletters</A> in the archive. Get this bonus content before everybody else!
+        </P>
 
-        <div className="margin-bottom-l">
+        <div
+          className="margin-bottom-l"
+        >
           <ConvertkitForm
             sourceUrl={location.href}
             svForm="1067424"
@@ -78,9 +112,9 @@ export default ({ data, location }) => {
           />
         </div>
 
-        <h2>
+        <H2>
           Featured newsletters
-        </h2>
+        </H2>
 
         <div
           className="margin-bottom-l"
@@ -98,7 +132,17 @@ export default ({ data, location }) => {
         </div>
 
         <a
-          className="background-color-yellow-400 border-radius-xxs color-gray-900 inline-block font-size-14-short font-weight-500 padding-horizontal-m padding-vertical-s visited:color-gray-900"
+          className={`
+            background-color-yellow-400
+            border-radius-xxs
+            color-gray-900
+            font-size-14-short
+            font-weight-500
+            inline-block
+            padding-horizontal-m
+            padding-vertical-s
+            visited:color-gray-900
+          `}
           href="/newsletter/archive"
         >
           Read all newsletters →
@@ -110,7 +154,7 @@ export default ({ data, location }) => {
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark(
+    allMdx(
       filter: {
         fields: {
           type: {
@@ -130,14 +174,15 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          id
           fields {
             date
             permalink
           }
           frontmatter {
+            issue
             title
           }
+          id
         }
       }
     }

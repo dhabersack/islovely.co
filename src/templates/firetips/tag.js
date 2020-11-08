@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import Firetip from '../../components/firetip'
+import H1 from '../../components/h1'
 import Layout from '../../components/layout'
 import MetaTags from '../../components/meta-tags'
 import RichPreview from '../../components/rich-preview'
@@ -12,8 +13,11 @@ export default ({
   data,
   pageContext,
 }) => {
-  const firetips = data.allMarkdownRemark.edges.map(({ node }) => node)
-  const { tag } = pageContext
+  const firetips = data.allMdx.edges.map(({ node }) => node)
+
+  const {
+    tag,
+  } = pageContext
 
   return (
     <Layout
@@ -22,7 +26,7 @@ export default ({
           label: 'Fire tips',
           url: '/firetips'
         }, {
-          label: 'by tag',
+          label: 'By tag',
           url: '/firetips/tags'
         }, {
           label: tag
@@ -39,7 +43,9 @@ export default ({
       />
 
       <Taper>
-        <h1>Fire tips tagged “{tag}”</h1>
+        <H1>
+          Fire tips tagged “{tag}”
+        </H1>
 
         {firetips.map(firetip => (
           <div
@@ -58,7 +64,7 @@ export default ({
 
 export const pageQuery = graphql`
   query($tag: [String]) {
-    allMarkdownRemark(
+    allMdx(
       filter: {
         fields: {
           type: {
@@ -78,6 +84,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
+          body
           fields {
             slug
           }
@@ -85,7 +92,6 @@ export const pageQuery = graphql`
             tags
             title
           }
-          html
         }
       }
     }

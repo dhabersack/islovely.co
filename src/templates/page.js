@@ -1,23 +1,29 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
 
+import H1 from '../components/h1'
 import Layout from '../components/layout'
 import MetaTags from '../components/meta-tags'
 import RichPreview from '../components/rich-preview'
 import Taper from '../components/taper'
 
-export default ({ data }) => {
+export default ({
+  data,
+}) => {
   const {
+    body,
     fields,
     frontmatter,
-    html
-  } = data.markdownRemark
+  } = data.mdx
 
-  const { permalink } = fields
+  const {
+    permalink,
+  } = fields
 
   const {
     description,
-    title
+    title,
   } = frontmatter
 
   return (
@@ -40,9 +46,13 @@ export default ({ data }) => {
       />
 
       <Taper>
-        <h1>{title}</h1>
+        <H1>
+          {title}
+        </H1>
 
-        <div dangerouslySetInnerHTML={{ __html: html }} />
+        <MDXRenderer>
+          {body}
+        </MDXRenderer>
       </Taper>
     </Layout>
   )
@@ -50,18 +60,18 @@ export default ({ data }) => {
 
 export const pageQuery = graphql`
   query($slug: String!) {
-    markdownRemark(
+    mdx(
       fields: {
         slug: {
           eq: $slug
         }
       }
     ) {
+      body
       fields {
         permalink
         slug
       }
-      html
       frontmatter {
         description
         title

@@ -2,7 +2,7 @@
   list-style: $style;
 }
 
-@each $style in (none) {
+@each $style in (decimal, disk, none) {
   .list-style-#{$style} {
     @include _list-style($style);
   }

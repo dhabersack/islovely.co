@@ -1,6 +1,7 @@
 ---
 title: "Offsetting a low salary"
 excerpt: "A good job is not defined by salary alone. There are other things you can look for in a potential position."
+issue: 40
 ---
 A comfortable salary can give you peace of mind, but it is not the only quality that can make job a good fit for you. If a job offer pays below your expectation, other benefits can offset that difference. While salary is one aspect, other attributes go into making a position a great choice for you.
 

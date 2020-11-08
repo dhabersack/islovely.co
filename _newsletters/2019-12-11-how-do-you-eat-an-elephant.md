@@ -1,6 +1,7 @@
 ---
 title: "How do you eat an elephant?"
 excerpt: "When setting goals, we tend to underestimate how long it takes to achieve them."
+issue: 14
 ---
 When setting goals, we tend to underestimate how long it takes to achieve them. We imagine a future in which all our wishes have come true, and we want to jump straight to that state. We want to be able to play the guitar, but we don’t want to spend any time learning how to.
 

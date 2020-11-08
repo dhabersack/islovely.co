@@ -1,13 +1,19 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
+import A from '../components/a'
+import H1 from '../components/h1'
+import H2 from '../components/h2'
 import Layout from '../components/layout'
 import MetaTags from '../components/meta-tags'
+import P from '../components/p'
 import RichPreview from '../components/rich-preview'
 import Taper from '../components/taper'
 
-export default ({ data }) => {
-  const projects = data.allMarkdownRemark.edges.map(({ node }) => node)
+export default ({
+  data,
+}) => {
+  const projects = data.allMdx.edges.map(({ node }) => node)
 
   return (
     <Layout
@@ -27,31 +33,39 @@ export default ({ data }) => {
       />
 
       <Taper>
-        <h1>Projects</h1>
+        <H1>
+          Projects
+        </H1>
 
         {projects.map(({
           fields,
           frontmatter,
-          id
+          id,
         }) => {
-          const { permalink } = fields
+          const {
+            permalink,
+          } = fields
 
           const {
             excerpt,
-            title
+            title,
           } = frontmatter
 
           return (
-            <React.Fragment key={`project-${id}`} >
-              <h2>
-                <a href={permalink}>
+            <React.Fragment
+              key={`project-${id}`}
+            >
+              <H2>
+                <A
+                  href={permalink}
+                >
                   {title}
-                </a>
-              </h2>
+                </A>
+              </H2>
 
-              <p>
+              <P>
                 {excerpt}
-              </p>
+              </P>
             </React.Fragment>
           )
         })}
@@ -62,7 +76,7 @@ export default ({ data }) => {
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark(
+    allMdx(
       filter: {
         fields: {
           type: {

@@ -22,7 +22,7 @@ const buildCreatePages = (createPage, graphql) => async sourceInstanceName => {
       }) {
         edges {
           node {
-            childMarkdownRemark {
+            childMdx {
               fields {
                 permalink
                 slug
@@ -41,7 +41,7 @@ const buildCreatePages = (createPage, graphql) => async sourceInstanceName => {
   }
 
   response.data.allFile.edges.forEach(({ node }) => {
-    const { permalink, slug, type } = node.childMarkdownRemark.fields
+    const { permalink, slug, type } = node.childMdx.fields
 
     createPage({
       component: path.resolve(`src/templates/${type}.js`),
@@ -76,7 +76,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       ) {
         edges {
           node {
-            childMarkdownRemark {
+            childMdx {
               frontmatter {
                 categories
               }
@@ -87,7 +87,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     }
   `)
 
-  const getCategoriesForEdge = ({ node }) => node.childMarkdownRemark.frontmatter.categories
+  const getCategoriesForEdge = ({ node }) => node.childMdx.frontmatter.categories
   const allCategories = posts.data.allFile.edges.map(getCategoriesForEdge).flat()
   const uniqueCategories = [...new Set(allCategories)]
 
@@ -117,7 +117,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       ) {
         edges {
           node {
-            childMarkdownRemark {
+            childMdx {
               frontmatter {
                 tags
               }
@@ -128,7 +128,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     }
   `)
 
-  const getTagsForEdge = ({ node }) => node.childMarkdownRemark.frontmatter.tags
+  const getTagsForEdge = ({ node }) => node.childMdx.frontmatter.tags
   const allTags = firetips.data.allFile.edges.map(getTagsForEdge).flat()
   const uniqueTags = [...new Set(allTags)]
 

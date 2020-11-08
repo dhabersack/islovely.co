@@ -1,8 +1,9 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import { MDXRenderer} from 'gatsby-plugin-mdx'
 
-import slugify from '../utils/slugify'
-import Flash from '../components/flash'
+import Figure from '../components/figure'
+import H1 from '../components/h1'
 import Layout from '../components/layout'
 import MailingListSignup from '../components/mailing-list-signup'
 import MetaTags from '../components/meta-tags'
@@ -10,30 +11,30 @@ import PostMeta from '../components/post-meta'
 import RichPreview from '../components/rich-preview'
 import Tag from '../components/tag'
 import Taper from '../components/taper'
+import slugify from '../utils/slugify'
 
 export default ({
   data,
-  location
+  location,
 }) => {
   const {
+    body,
     fields,
     frontmatter,
-    html
-  } = data.markdownRemark
+  } = data.mdx
 
   const {
     date,
     slug,
-    permalink
+    permalink,
   } = fields
 
   const {
     categories,
     excerpt,
-    flash,
     heroAlt,
     heroCaption,
-    title
+    title,
   } = frontmatter
 
   return (
@@ -64,55 +65,68 @@ export default ({
       />
 
       <Taper>
-        <h1>{title}</h1>
+        <H1>
+          {title}
+        </H1>
 
-        <div className="margin-bottom-m">
-          <PostMeta date={date} />
+        <div
+          className="margin-bottom-m"
+        >
+          <PostMeta
+            date={date}
+          />
         </div>
       </Taper>
 
-      <figure className="l-post__hero">
-        <img alt={heroAlt} src={`/assets/heroes/${slug}.jpg`} />
-
-        {heroCaption && (
-          <figcaption>
-            {heroCaption}
-          </figcaption>
-        )}
-      </figure>
+      <Figure
+        alt={heroAlt}
+        caption={heroCaption}
+        className={`
+          margin-0
+          margin-bottom-m
+        `}
+        src={`/assets/heroes/${slug}.jpg`}
+      />
 
       <Taper>
-        {flash && (
-          <div className="margin-bottom-m">
-            <Flash type="info">
-              {flash}
-            </Flash>
-          </div>
-        )}
-
-        <div className="break-words margin-bottom-xl template--post__content" dangerouslySetInnerHTML={{ __html: html }} />
-
-        <div className="flex margin-bottom-xl">
-          <p className="color-gray-700 font-size-12-medium margin-0 margin-bottom-xs margin-right-xxs padding-vertical-xs">
-            Tags:
-          </p>
-
-          <div className="align-items-center flex flex-wrap">
-            {categories.map(category => (
-              <div className="margin-bottom-xxs margin-right-xxs" key={`category-${category}`}>
-                <Tag
-                  href={`/categories/${slugify(category)}`}
-                >
-                  {category}
-                </Tag>
-              </div>
-            ))}
-          </div>
+        <div
+          className={`
+            break-words
+            margin-bottom-xl
+          `}
+        >
+          <MDXRenderer>
+            {body}
+          </MDXRenderer>
         </div>
 
-        <div className="l-post__mailing-list-signup">
-          <MailingListSignup sourceUrl={location.href} />
+        <div
+          className={`
+            flex
+            flex-wrap
+            margin-bottom-xl
+          `}
+        >
+          {categories.map(category => (
+            <div
+              className={`
+                margin-bottom-xxs
+                margin-right-xxs
+              `}
+              key={`category-${category}`}
+            >
+              <Tag
+                href={`/categories/${slugify(category)}`}
+              >
+                {category}
+              </Tag>
+            </div>
+          ))}
         </div>
+
+        <MailingListSignup
+          sourceUrl={location.href}
+        />
       </Taper>
     </Layout>
   )
@@ -120,23 +134,22 @@ export default ({
 
 export const pageQuery = graphql`
   query($slug: String!) {
-    markdownRemark(
+    mdx(
       fields: {
         slug: {
           eq: $slug
         }
       }
     ) {
+      body
       fields {
         date
         permalink
         slug
       }
-      html
       frontmatter {
         categories
         excerpt
-        flash
         heroAlt
         heroCaption
         title

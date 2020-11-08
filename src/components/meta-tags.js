@@ -4,7 +4,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 
 export default ({
   description,
-  title
+  title,
 }) => {
   const data = useStaticQuery(graphql`
     query {
@@ -21,7 +21,10 @@ export default ({
   return (
     <Helmet>
       {description && (
-        <meta name="description" content={description} />
+        <meta
+          name="description"
+          content={description}
+        />
       )}
 
       {title ? (

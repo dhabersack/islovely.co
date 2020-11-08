@@ -1,11 +1,13 @@
 import React from 'react'
 
+import mergeClassnames from '../utils/merge-classnames'
+
 export default ({
   className,
   ...props
 }) => (
   <input
-    className={`
+    className={mergeClassnames(`
       appearance-none
       background-color-white
       border-color-gray-300
@@ -20,11 +22,8 @@ export default ({
       padding-horizontal-xs-minus-border
       padding-vertical-s-minus-border
       width-full
-
       focus:border-color-blue-400
-
-      ${className ?? ''}
-    `}
+    `, className)}
     {...props}
   />
 )

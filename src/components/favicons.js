@@ -2,8 +2,20 @@ import React from 'react'
 
 export default () => (
   <>
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <link rel="mask-icon" href="/mask-icon.svg" color="#f45a5a" />
-    <link rel="shortcut icon" href="/favicon.ico" />
+    <link
+      href="/apple-touch-icon.png"
+      rel="apple-touch-icon"
+    />
+
+    <link
+      color="#f45a5a"
+      href="/mask-icon.svg"
+      rel="mask-icon"
+    />
+
+    <link
+      href="/favicon.ico"
+      rel="shortcut icon"
+    />
   </>
 )

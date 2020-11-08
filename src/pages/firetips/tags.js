@@ -1,15 +1,20 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
+import A from '../../components/a'
 import Firetip from '../../components/firetip'
+import H1 from '../../components/h1'
+import H2 from '../../components/h2'
 import Layout from '../../components/layout'
 import MetaTags from '../../components/meta-tags'
 import RichPreview from '../../components/rich-preview'
 import Taper from '../../components/taper'
 import slugify from '../../utils/slugify'
 
-export default ({ data }) => {
-  const firetips = data.allMarkdownRemark.edges.map(({ node }) => node)
+export default ({
+  data,
+}) => {
+  const firetips = data.allMdx.edges.map(({ node }) => node)
 
   const tags = [
     ...new Set(firetips.map(({ frontmatter }) => frontmatter.tags).flat())
@@ -27,7 +32,7 @@ export default ({ data }) => {
           label: 'Fire tips',
           url: '/firetips'
         }, {
-          label: 'by tag'
+          label: 'By tag'
         }
       ]}
     >
@@ -41,19 +46,21 @@ export default ({ data }) => {
       />
 
       <Taper>
-        <h1>Fire tips by tag</h1>
+        <H1>
+          Fire tips by tag
+        </H1>
 
         {tags.map(tag => (
           <React.Fragment
             key={`tag-${tag}`}
           >
-            <h2>
-              <a
+            <H2>
+              <A
                 href={`/firetips/tags/${slugify(tag)}`}
               >
                 Fire tips tagged “{tag}”
-              </a>
-            </h2>
+              </A>
+            </H2>
 
             {firetipsByTag[tag].map(firetip => (
               <div
@@ -74,7 +81,7 @@ export default ({ data }) => {
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark(
+    allMdx(
       filter: {
         fields: {
           type: {
@@ -89,6 +96,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
+          body
           fields {
             date
             slug
@@ -97,7 +105,6 @@ export const pageQuery = graphql`
             tags
             title
           }
-          html
         }
       }
     }
