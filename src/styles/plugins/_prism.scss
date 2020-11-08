@@ -2,7 +2,7 @@ pre[class*="language-"] {
   @include _bg("gray", "800");
   border-radius: 0.6rem;
   @include _color("gray", "100");
-  @include _font-weight(300);
+  font-weight: 300;
   margin: 0;
   margin-bottom: 2.4rem;
   @include _monospace;
