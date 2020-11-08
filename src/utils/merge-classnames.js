@@ -10,12 +10,13 @@ const PREFIXES = [
 ]
 
 const FULL_OVERRIDES = {
-  'm-0': 'm-',
-  'width-full': 'columns-'
+  'm-0': ['mt-', 'mr-', 'mb-', 'ml-', 'mx-', 'my-'],
+  'width-full': ['columns-']
 }
 
 const hasElementThatStartsWith = (array, prefix) => array.some(element => element.startsWith(prefix))
 const getPrefixAtBreakpointsRegExp = prefix => new RegExp(`^((xxs|xs|s|m|l|xl|xxl):)?${prefix}`)
+const getPrefixesAtBreakpointsRegExp = prefixes => new RegExp(`^((xxs|xs|s|m|l|xl|xxl):)?(${prefixes.join('|')})`)
 const multilineToSinglelineString = string => string.split(/\n/).join('').replace(/ +/g, ' ').trim()
 
 export default (base, overrides) => {
@@ -23,8 +24,8 @@ export default (base, overrides) => {
   const overrideClassnames = multilineToSinglelineString(overrides ?? '').split(' ')
 
   const baseClassnamesWithoutFullOverrides = baseClassnames.filter(classname => {
-    return Object.entries(FULL_OVERRIDES).reduce((override, [key, prefix]) => {
-      return override && !(overrideClassnames.includes(key) && getPrefixAtBreakpointsRegExp(prefix).test(classname))
+    return Object.entries(FULL_OVERRIDES).reduce((override, [key, prefixes]) => {
+      return override && !(overrideClassnames.includes(key) && getPrefixesAtBreakpointsRegExp(prefixes).test(classname))
     }, true)
   })
 
