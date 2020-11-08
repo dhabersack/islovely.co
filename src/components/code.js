@@ -10,7 +10,7 @@ export default ({
   <code
     className={mergeClassnames(`
       bg-gray-300
-      border-radius-xxs
+      rounded-3
       color-gray-800
       font-weight-300
       monospace

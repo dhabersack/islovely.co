@@ -1,4 +1,4 @@
-@mixin _bg($color, $shade: 0) {
+@mixin _bg($color, $shade: "0") {
   background-color: map-get(map-get($_colors, $color), $shade);
 }
 

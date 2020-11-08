@@ -15,7 +15,7 @@ export default ({
     <Img
       alt="Dom Habersack"
       className={`
-        border-radius-round
+        rounded-round
         mr-10
         h-42
         w-42

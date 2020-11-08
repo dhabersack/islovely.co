@@ -7,7 +7,7 @@ export default ({
     className={`
       bg-gray-300
       border-width-0
-      border-radius-round
+      rounded-round
       h-1
       mx-20
       my-24

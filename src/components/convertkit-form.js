@@ -47,10 +47,11 @@ export default ({
         >
           <Input
             className={`
-              border-right-radius-0
               border-right-width-0
               flex-basis
               flex-grow
+              rounded-0
+              rounded-l-3
             `}
             name="email_address"
             placeholder="Enter your email"
@@ -67,7 +68,10 @@ export default ({
 
           <Button
             category="primary"
-            className="border-left-radius-0"
+            className={`
+              rounded-0
+              rounded-r-3
+            `}
             data-element="submit"
           >
             {cta || 'Get me early access!'}

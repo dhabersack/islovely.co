@@ -6,9 +6,9 @@ export default ({
   <div
     className={`
       bg-white
-      border-radius-xs
-      box-shadow-s
       overflow-hidden
+      rounded-6
+      shadow-s
     `}
   >
     {children}

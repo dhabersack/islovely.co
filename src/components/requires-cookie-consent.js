@@ -17,7 +17,7 @@ export default ({
       className={mergeClassnames(`
         bg-gray-100
         border-gray-500
-        border-radius-xs
+        rounded-6
         border-style-dashed
         border-width-m
       `, className)}

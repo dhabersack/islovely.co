@@ -8,7 +8,7 @@ export default ({
       appearance-none
       bg-white
       border-gray-300
-      border-radius-xs
+      rounded-6
       border-style-solid
       border-width-s
       color-blue-500

@@ -17,12 +17,12 @@ const cta = (
     className={`
       align-items-center
       bg-yellow-400
-      border-radius-xl
-      box-shadow-xs
       color-gray-900
       inline-flex
       padding-horizontal-l
       padding-vertical-s
+      rounded-24
+      shadow-xs
       visited:color-gray-900
     `}
     href="/courses"
@@ -220,7 +220,7 @@ export default () => (
     <div
       className={`
         bg-gray-200
-        border-radius-xs
+        rounded-6
         mb-24
         padding-horizontal-s
         padding-vertical-m
@@ -234,10 +234,10 @@ export default () => (
         alt="Dom Habersack"
         className={`
           block
-          border-radius-round
-          box-shadow-s
           mb-24
           mx-auto
+          rounded-round
+          shadow-s
           w-120
           m:ml-0
           m:mr-15

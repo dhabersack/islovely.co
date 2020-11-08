@@ -1,9 +1,9 @@
 html.debug {
   body::after {
-    @include _bg("gray", 300);
-    border-top-left-radius: 0.25em; /* 3px */
+    @include _bg("gray", "300");
+    border-top-left-radius: 0.3rem;
     bottom: 0;
-    @include _color("gray", 600);
+    @include _color("gray", "600");
     content: 'no breakpoint';
     display: block;
     @include _font-size(12, medium);

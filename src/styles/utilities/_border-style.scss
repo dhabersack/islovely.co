@@ -1,9 +1,5 @@
-@mixin _border-style($style) {
-  border-style: $style;
-}
-
-@each $style in (solid, dashed) {
-  .border-style-#{$style} {
-    @include _border-style($style);
+@each $element in (solid, dashed) {
+  .border-style-#{$element} {
+    border-style: $element;
   }
 }

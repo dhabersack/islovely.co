@@ -13,7 +13,7 @@ export default ({
       bg-white
       block
       border-gray-300
-      border-radius-xxs
+      rounded-3
       border-style-solid
       border-width-s
       color-gray-700

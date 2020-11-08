@@ -95,7 +95,6 @@ export default ({
         <footer
           className={`
             bg-gray-100
-            border-bottom-radius-xs
             color-gray-600
             flex
             flex-wrap

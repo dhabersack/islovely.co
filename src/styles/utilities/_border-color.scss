@@ -1,4 +1,4 @@
-@mixin _border-color($color, $shade: 0) {
+@mixin _border-color($color, $shade: "0") {
   border-color: map-get(map-get($_colors, $color), $shade);
 }
 

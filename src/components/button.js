@@ -33,7 +33,7 @@ const Button = ({
     <button
       className={mergeClassnames(`
         border-width-0
-        border-radius-xxs
+        rounded-3
         cursor-pointer
         m-0
         outline-none

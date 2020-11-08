@@ -11,7 +11,7 @@ export default ({
   <div
     className={`
       bg-gray-200
-      border-radius-xs
+      rounded-6
       padding-horizontal-s
       padding-vertical-s
     `}

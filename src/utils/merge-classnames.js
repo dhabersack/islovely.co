@@ -10,8 +10,20 @@ const PREFIXES = [
 ]
 
 const FULL_OVERRIDES = {
-  'm-0': ['mt-', 'mr-', 'mb-', 'ml-', 'mx-', 'my-'],
-  'w-full': ['columns-']
+  'm-0': [
+    'mt-',
+    'mr-',
+    'mb-',
+    'ml-',
+    'mx-',
+    'my-'
+  ],
+  'rounded-0': [
+    'rounded-'
+  ],
+  'w-full': [
+    'columns-'
+  ]
 }
 
 const hasElementThatStartsWith = (array, prefix) => array.some(element => element.startsWith(prefix))

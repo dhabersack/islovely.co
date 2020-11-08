@@ -12,7 +12,7 @@ export default ({
     <HtmlTag
       className={`
         bg-gray-200
-        border-radius-xxs
+        rounded-3
         color-gray-700
         font-size-12-medium
         inline-block

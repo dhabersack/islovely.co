@@ -23,7 +23,7 @@ export default ({
       className={`
         bg-${backgroundColor}
         border-${borderColor}
-        border-radius-xs
+        rounded-6
         border-style-solid
         border-width-s
         font-size-14-medium
