@@ -11,7 +11,7 @@ export default ({
   return (
     <HtmlTag
       className={`
-        background-color-gray-200
+        bg-gray-200
         border-radius-xxs
         color-gray-700
         font-size-12-medium

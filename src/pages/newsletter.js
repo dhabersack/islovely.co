@@ -133,7 +133,7 @@ export default ({
 
         <a
           className={`
-            background-color-yellow-400
+            bg-yellow-400
             border-radius-xxs
             color-gray-900
             font-size-14-short

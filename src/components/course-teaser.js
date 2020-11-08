@@ -40,7 +40,7 @@ export default ({
       >
         <a
           className={`
-            background-color-gray-100
+            bg-gray-100
             block
             intrinsic-ratio-16-by-9
           `}
@@ -94,7 +94,7 @@ export default ({
 
         <footer
           className={`
-            background-color-gray-100
+            bg-gray-100
             border-bottom-radius-xs
             color-gray-600
             flex

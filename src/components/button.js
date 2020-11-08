@@ -11,21 +11,21 @@ const Button = ({
 }) => {
   const stylesForCategory = {
     primary: `
-      background-color-blue-500
+      bg-blue-500
       color-gray-100
       font-size-16-medium
       padding-horizontal-m
       padding-vertical-s
 
-      hover:background-color-blue-600
+      hover:bg-blue-600
     `,
     regular: `
-      background-color-gray-300
+      bg-gray-300
       color-gray-700
       font-size-14-medium
       padding-xs
 
-      hover:background-color-gray-400
+      hover:bg-gray-400
     `
   }[category]
 
@@ -40,7 +40,7 @@ const Button = ({
 
         focus:outline
 
-        disabled:background-color-gray-500
+        disabled:bg-gray-500
         disabled:color-gray-200
         disabled:cursor-not-allowed
 

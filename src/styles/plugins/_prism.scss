@@ -1,7 +1,7 @@
 pre[class*="language-"] {
-  @include _background-color(gray, 800);
+  @include _bg("gray", 800);
   @include _border-radius(xs);
-  @include _color(gray, 100);
+  @include _color("gray", 100);
   @include _font-weight(300);
   margin: 0;
   margin-bottom: 2.4rem;
@@ -25,33 +25,33 @@ pre[class*="language-"] code[class*="language-"] {
 }
 
 .token.atrule {
-  @include _color(red, 400);
+  @include _color("red", 400);
 }
 
 .token.attr-name {
-  @include _color(yellow, 400);
+  @include _color("yellow", 400);
 }
 
 .token.attr-value {
-  @include _color(gray, 100);
+  @include _color("gray", 100);
 }
 
 .token.boolean {
-  @include _color(purple, 400);
+  @include _color("purple", 400);
 }
 
 .token.builtin {}
 
 .token.comment {
-  @include _color(blue, 400);
+  @include _color("blue", 400);
 }
 
 .token.constant {
-  @include _color(cyan, 300);
+  @include _color("cyan", 300);
 }
 
 .token.deleted {
-  @include _color(red, 400);
+  @include _color("red", 400);
 
   .prefix {
     display: none;
@@ -59,15 +59,15 @@ pre[class*="language-"] code[class*="language-"] {
 }
 
 .token.function {
-  @include _color(cyan, 300);
+  @include _color("cyan", 300);
 }
 
 .token.important {
-  @include _color(purple, 400);
+  @include _color("purple", 400);
 }
 
 .token.inserted {
-  @include _color(green, 400);
+  @include _color("green", 400);
 
   .prefix {
     display: none;
@@ -75,37 +75,37 @@ pre[class*="language-"] code[class*="language-"] {
 }
 
 .token.keyword {
-  @include _color(yellow, 400);
+  @include _color("yellow", 400);
 }
 
 .token.number {
-  @include _color(red, 400);
+  @include _color("red", 400);
 }
 
 .token.operator {}
 
 .token.property {
-  @include _color(yellow, 400);
+  @include _color("yellow", 400);
 }
 
 .token.regex {
-  @include _color(purple, 300);
+  @include _color("purple", 300);
 }
 
 .token.selector {
-  @include _color(cyan, 300);
+  @include _color("cyan", 300);
 }
 
 .token.string {
-  @include _color(yellow, 400);
+  @include _color("yellow", 400);
 }
 
 .token.tag {
-  @include _color(cyan, 300);
+  @include _color("cyan", 300);
 }
 
 .token.variable {
-  @include _color(cyan, 300);
+  @include _color("cyan", 300);
 }
 
 

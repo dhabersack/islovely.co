@@ -9,7 +9,7 @@ export default ({
 }) => (
   <code
     className={mergeClassnames(`
-      background-color-gray-300
+      bg-gray-300
       border-radius-xxs
       color-gray-800
       font-weight-300

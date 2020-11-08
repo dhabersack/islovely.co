@@ -83,7 +83,7 @@ export default ({
 
       <footer
         className={`
-          background-color-gray-100
+          bg-gray-100
           padding-horizontal-s
           padding-vertical-s
         `}

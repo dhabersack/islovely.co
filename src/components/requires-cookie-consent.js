@@ -15,7 +15,7 @@ export default ({
   return isCookieConsentGiven ? children : (
     <div
       className={mergeClassnames(`
-        background-color-gray-100
+        bg-gray-100
         border-color-gray-500
         border-radius-xs
         border-style-dashed

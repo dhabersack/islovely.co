@@ -109,7 +109,7 @@ export default ({
 
         <div
           className={`
-            background-color-gray-100
+            bg-gray-100
             flex-none
             padding-horizontal-span
           `}

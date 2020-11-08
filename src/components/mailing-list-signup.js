@@ -10,7 +10,7 @@ export default ({
 }) => (
   <div
     className={`
-      background-color-gray-200
+      bg-gray-200
       border-radius-xs
       padding-horizontal-s
       padding-vertical-s

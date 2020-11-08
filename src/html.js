@@ -41,7 +41,7 @@ export default ({
 
     <body
       className={`
-        background-color-white
+        bg-white
         color-gray-700
         height-full
         m-0

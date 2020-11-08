@@ -5,7 +5,7 @@ export default ({
 }) => (
   <div
     className={`
-      background-color-white
+      bg-white
       border-radius-xs
       box-shadow-s
       overflow-hidden

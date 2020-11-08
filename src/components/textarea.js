@@ -10,7 +10,7 @@ export default ({
   <textarea
     className={mergeClassnames(`
       appearance-none
-      background-color-white
+      bg-white
       block
       border-color-gray-300
       border-radius-xxs

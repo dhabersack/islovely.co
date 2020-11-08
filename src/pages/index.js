@@ -16,7 +16,7 @@ const cta = (
   <A
     className={`
       align-items-center
-      background-color-yellow-400
+      bg-yellow-400
       border-radius-xl
       box-shadow-xs
       color-gray-900
@@ -219,7 +219,7 @@ export default () => (
 
     <div
       className={`
-        background-color-gray-200
+        bg-gray-200
         border-radius-xs
         mb-24
         padding-horizontal-s

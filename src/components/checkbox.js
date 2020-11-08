@@ -6,7 +6,7 @@ export default ({
   <input
     className={`
       appearance-none
-      background-color-white
+      bg-white
       border-color-gray-300
       border-radius-xs
       border-style-solid
