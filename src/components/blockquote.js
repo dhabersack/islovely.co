@@ -9,7 +9,7 @@ export default ({
 }) => (
   <blockquote
     className={mergeClassnames(`
-      border-color-gray-600
+      border-gray-600
       border-left-width-l
       border-style-solid
       border-width-0

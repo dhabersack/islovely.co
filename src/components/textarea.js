@@ -12,7 +12,7 @@ export default ({
       appearance-none
       bg-white
       block
-      border-color-gray-300
+      border-gray-300
       border-radius-xxs
       border-style-solid
       border-width-s
@@ -24,7 +24,7 @@ export default ({
       padding-horizontal-xs-minus-border
       padding-vertical-s-minus-border
       w-full
-      focus:border-color-blue-400
+      focus:border-blue-400
     `, className)}
     {...props}
   >

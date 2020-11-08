@@ -7,7 +7,7 @@ export default ({
     className={`
       appearance-none
       bg-white
-      border-color-gray-300
+      border-gray-300
       border-radius-xs
       border-style-solid
       border-width-s

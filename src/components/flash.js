@@ -22,7 +22,7 @@ export default ({
     <P
       className={`
         bg-${backgroundColor}
-        border-color-${borderColor}
+        border-${borderColor}
         border-radius-xs
         border-style-solid
         border-width-s

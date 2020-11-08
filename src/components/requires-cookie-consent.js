@@ -16,7 +16,7 @@ export default ({
     <div
       className={mergeClassnames(`
         bg-gray-100
-        border-color-gray-500
+        border-gray-500
         border-radius-xs
         border-style-dashed
         border-width-m

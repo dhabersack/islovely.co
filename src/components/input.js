@@ -10,7 +10,7 @@ export default ({
     className={mergeClassnames(`
       appearance-none
       bg-white
-      border-color-gray-300
+      border-gray-300
       border-radius-xs
       border-style-solid
       border-width-s
@@ -22,7 +22,7 @@ export default ({
       padding-horizontal-xs-minus-border
       padding-vertical-s-minus-border
       w-full
-      focus:border-color-blue-400
+      focus:border-blue-400
     `, className)}
     {...props}
   />
