@@ -13,7 +13,7 @@ export default () => (
         list-style-none
         m-0
         padding-0
-        width-full
+        w-full
       `}
     >
       <Li

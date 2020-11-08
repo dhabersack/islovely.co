@@ -8,7 +8,7 @@ pre[class*="language-"] {
   @include _monospace;
   @include _padding-horizontal(xs);
   @include _padding-vertical(s);
-  @include _width(full);
+  width: 100%;
   overflow-x: auto;
   position: relative;
 }

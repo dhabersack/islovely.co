@@ -23,7 +23,7 @@ export default ({
       outline-none
       padding-horizontal-xs-minus-border
       padding-vertical-s-minus-border
-      width-full
+      w-full
       focus:border-color-blue-400
     `, className)}
     {...props}

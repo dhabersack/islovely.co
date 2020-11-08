@@ -17,7 +17,7 @@ export default () => (
         className={`
           height-24
           mr-5
-          width-24
+          w-24
         `}
       >
         <CookieIcon />

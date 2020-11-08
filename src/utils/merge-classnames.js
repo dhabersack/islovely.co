@@ -5,13 +5,13 @@ const PREFIXES = [
   'font-weight-',
   'mb-',
   'mt-',
-  'width-',
+  'w-',
   'visited:color-'
 ]
 
 const FULL_OVERRIDES = {
   'm-0': ['mt-', 'mr-', 'mb-', 'ml-', 'mx-', 'my-'],
-  'width-full': ['columns-']
+  'w-full': ['columns-']
 }
 
 const hasElementThatStartsWith = (array, prefix) => array.some(element => element.startsWith(prefix))

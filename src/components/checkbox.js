@@ -17,7 +17,7 @@ export default ({
       height-24
       m-0
       outline-none
-      width-24
+      w-24
 
       checked:background-image-checkbox
 

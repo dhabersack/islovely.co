@@ -238,7 +238,7 @@ export default () => (
           box-shadow-s
           mb-24
           mx-auto
-          width-120
+          w-120
           m:ml-0
           m:mr-15
         `}

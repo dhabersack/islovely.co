@@ -79,9 +79,9 @@ export default ({
                   flex-no-shrink
                   height-24
                   mr-10
-                  width-24
+                  w-24
                   m:height-27
-                  m:width-27
+                  m:w-27
                 `}
                 src="/assets/icons/checkmark.svg"
               />

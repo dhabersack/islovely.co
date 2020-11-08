@@ -14,7 +14,7 @@ export default ({
     className={mergeClassnames(`
       mx-auto
       my-24
-      width-full
+      w-full
       l:mb-48
       l:mt-48
     `, className)}
@@ -22,7 +22,7 @@ export default ({
   >
     <Img
       alt={alt}
-      className="width-full"
+      className="w-full"
       src={src}
     />
 

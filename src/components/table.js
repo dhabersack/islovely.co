@@ -13,7 +13,7 @@ export default ({
       font-weight-400
       m-0
       mb-24
-      width-full
+      w-full
     `, className)}
     {...props}
   >

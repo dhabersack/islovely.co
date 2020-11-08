@@ -18,7 +18,7 @@ export default ({
         border-radius-round
         mr-10
         height-42
-        width-42
+        w-42
       `}
       height="42"
       src="/assets/dom.jpg"

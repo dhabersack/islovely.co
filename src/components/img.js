@@ -10,7 +10,7 @@ export default ({
   <img
     alt={alt ?? ''}
     className={mergeClassnames(`
-      max-width-full
+      max-w-full
       vertical-align-middle
     `, className)}
     {...props}

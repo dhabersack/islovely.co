@@ -44,7 +44,7 @@ export default ({
         >
           <Img
             alt={heroAlt}
-            className="width-full"
+            className="w-full"
             src={`/assets/heroes/${slug}--teaser.jpg`}
           />
         </a>
