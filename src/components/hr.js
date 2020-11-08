@@ -8,7 +8,7 @@ export default ({
       bg-gray-300
       border-width-0
       border-radius-round
-      height-1
+      h-1
       mx-20
       my-24
     `}

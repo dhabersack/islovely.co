@@ -159,7 +159,7 @@ export default ({
 
         <Img
           alt={title}
-          className="height-192"
+          className="h-192"
           src={`/assets/courses/${slug}.png`}
         />
 

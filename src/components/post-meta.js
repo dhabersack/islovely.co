@@ -17,7 +17,7 @@ export default ({
       className={`
         border-radius-round
         mr-10
-        height-42
+        h-42
         w-42
       `}
       height="42"

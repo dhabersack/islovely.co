@@ -36,7 +36,7 @@ export default ({
         className={`
           flex
           flex-column
-          height-full
+          h-full
         `}
       >
         <a
@@ -53,7 +53,7 @@ export default ({
           className={`
             flex
             flex-column
-            height-full
+            h-full
             padding-horizontal-s
             padding-vertical-s
           `}

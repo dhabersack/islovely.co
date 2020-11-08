@@ -14,7 +14,7 @@ export default ({
       color-blue-500
       cursor-pointer
       block
-      height-24
+      h-24
       m-0
       outline-none
       w-24

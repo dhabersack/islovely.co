@@ -76,7 +76,7 @@ export default ({
         className={`
           flex
           flex-column
-          height-full
+          h-full
         `}
       >
         <div

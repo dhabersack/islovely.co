@@ -15,7 +15,7 @@ export default () => (
     >
       <div
         className={`
-          height-24
+          h-24
           mr-5
           w-24
         `}

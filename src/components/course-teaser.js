@@ -35,7 +35,7 @@ export default ({
         className={`
           flex
           flex-column
-          height-full
+          h-full
         `}
       >
         <a
@@ -55,7 +55,7 @@ export default ({
           >
             <Img
               alt={title}
-              className="height-full"
+              className="h-full"
               src={`/assets/courses/${slug}.png`}
             />
           </div>

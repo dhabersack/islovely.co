@@ -12,7 +12,7 @@ export default ({
 }) => (
   <html
     className={`
-      height-full
+      h-full
       sans-serif
     `}
     lang="en-US"
@@ -43,7 +43,7 @@ export default ({
       className={`
         bg-white
         color-gray-700
-        height-full
+        h-full
         m-0
         padding-0
       `}

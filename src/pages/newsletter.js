@@ -77,10 +77,10 @@ export default ({
                 alt=""
                 className={`
                   flex-no-shrink
-                  height-24
+                  h-24
                   mr-10
                   w-24
-                  m:height-27
+                  m:h-27
                   m:w-27
                 `}
                 src="/assets/icons/checkmark.svg"
