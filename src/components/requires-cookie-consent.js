@@ -37,8 +37,8 @@ export default ({
           className={`
             font-size-14
             italic
-            margin-0
-            margin-bottom-s
+            m-0
+            mb-12
           `}
         >
           Cannot show {target ?? 'content'} because cookie consent was not given.

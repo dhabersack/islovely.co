@@ -3,14 +3,14 @@ const PREFIXES = [
   'columns-',
   'font-size-',
   'font-weight-',
-  'margin-bottom-',
-  'margin-top-',
+  'mb-',
+  'mt-',
   'width-',
   'visited:color-'
 ]
 
 const FULL_OVERRIDES = {
-  'margin-0': 'margin-',
+  'm-0': 'm-',
   'width-full': 'columns-'
 }
 

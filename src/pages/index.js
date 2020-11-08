@@ -29,7 +29,7 @@ const cta = (
   >
     <Img
       alt=""
-      className="margin-right-xxs"
+      className="mr-5"
       src="/assets/icons/desktop.svg"
     />
 
@@ -63,7 +63,7 @@ export default () => (
         flex
         flex-column-reverse
         justify-between
-        margin-bottom-xxl
+        mb-96
         s:flex-row
       `}
     >
@@ -76,8 +76,8 @@ export default () => (
         <H1
           className={`
             font-size-30-short
-            margin-0
-            margin-bottom-s
+            m-0
+            mb-12
             xl:font-size-36-medium
           `}
         >
@@ -94,7 +94,7 @@ export default () => (
       <div
         className={`
           columns-8-of-12
-          margin-bottom-s
+          mb-12
           xs:columns-6-of-12
           s:columns-4-of-12
           m:columns-5-of-12
@@ -108,7 +108,7 @@ export default () => (
     </div>
 
     <div
-      className="margin-bottom-xxl"
+      className="mb-96"
     >
       <LandingPageBlock
         heading="Progress from novice to advanced to senior developer."
@@ -125,7 +125,7 @@ export default () => (
     </div>
 
     <div
-      className="margin-bottom-xxl"
+      className="mb-96"
     >
       <LandingPageBlock
         heading="Stop getting frustrated by complicated documentation."
@@ -140,7 +140,7 @@ export default () => (
         </P>
 
         <div
-          className="margin-bottom-m"
+          className="mb-24"
         >
           <Video
             vimeoId="372044005"
@@ -150,7 +150,7 @@ export default () => (
     </div>
 
     <div
-      className="margin-bottom-xxl"
+      className="mb-96"
     >
       <LandingPageBlock
         heading="Learn how to build your ideas yourself."
@@ -167,7 +167,7 @@ export default () => (
     </div>
 
     <div
-      className="margin-bottom-xxl"
+      className="mb-96"
     >
       <LandingPageBlock
         heading="Go from “changing random stuff until it works” to knowing what you are doing."
@@ -184,7 +184,7 @@ export default () => (
     </div>
 
     <div
-      className="margin-bottom-xxl"
+      className="mb-96"
     >
       <LandingPageBlock
         heading="Get your CV ready for the job you always wanted."
@@ -201,7 +201,7 @@ export default () => (
     </div>
 
     <div
-      className="margin-bottom-xxl"
+      className="mb-96"
     >
       <LandingPageBlock
         heading="You learn something or you get your money back."
@@ -221,7 +221,7 @@ export default () => (
       className={`
         background-color-gray-200
         border-radius-xs
-        margin-bottom-m
+        mb-24
         padding-horizontal-s
         padding-vertical-m
         xs:padding-vertical-m
@@ -232,7 +232,16 @@ export default () => (
     >
       <Img
         alt="Dom Habersack"
-        className="block border-radius-round box-shadow-s margin-bottom-m margin-horizontal-auto width-120 m:margin-left-0 m:margin-right-s"
+        className={`
+          block
+          border-radius-round
+          box-shadow-s
+          mb-24
+          mx-auto
+          width-120
+          m:ml-0
+          m:mr-15
+        `}
         src="/assets/dom.jpg"
       />
 
@@ -240,7 +249,7 @@ export default () => (
         <H2
           className={`
             font-size-18-medium
-            margin-top-0
+            mt-0
             l:font-size-20-medium
           `}
         >
@@ -260,7 +269,7 @@ export default () => (
           className={`
             font-size-14-medium
             l:font-size-16-medium
-            margin-bottom-0
+            mb-0
           `}
         >
           I started my professional career in development and now consulting over 15 years ago. My heart beats for teaching everything I know. Helping others get better at what they do is what motivates me every single day.

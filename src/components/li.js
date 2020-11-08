@@ -10,7 +10,7 @@ export default ({
   <li
     className={mergeClassnames(`
       font-size-16-medium
-      margin-bottom-xs
+      mb-6
       padding-0
       m:font-size-18-medium
     `, className)}

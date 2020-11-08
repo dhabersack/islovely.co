@@ -15,7 +15,7 @@ export default ({
       cursor-pointer
       block
       height-24
-      margin-0
+      m-0
       outline-none
       width-24
 

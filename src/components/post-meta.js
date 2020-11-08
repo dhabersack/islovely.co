@@ -16,7 +16,7 @@ export default ({
       alt="Dom Habersack"
       className={`
         border-radius-round
-        margin-right-xs
+        mr-10
         height-42
         width-42
       `}
@@ -36,7 +36,7 @@ export default ({
         className={`
           color-gray-700
           font-weight-700
-          margin-bottom-xxs
+          mb-3
         `}
       >
         Dom Habersack

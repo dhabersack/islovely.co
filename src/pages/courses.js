@@ -48,7 +48,7 @@ export default ({
       </Taper>
 
       <div
-        className="margin-bottom-xl"
+        className="mb-60"
       >
         <CourseTeasers
           courses={courses}

@@ -66,14 +66,14 @@ export default ({
           className={`
             flex
             flex-wrap
-            margin-bottom-xl
+            mb-60
           `}
         >
           {tags.map(tag => (
             <div
               className={`
-                margin-bottom-xxs
-                margin-right-xxs
+                mb-3
+                mr-5
               `}
               key={`tag-${tag}`}
             >

@@ -17,7 +17,7 @@ export default () => (
     <A
       className={`
         flex-no-shrink
-        margin-right-m
+        mr-20
         padding-vertical-xs
       `}
       href="/"

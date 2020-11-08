@@ -11,7 +11,7 @@ export default () => (
         flex
         flex-wrap
         list-style-none
-        margin-0
+        m-0
         padding-0
         width-full
       `}
@@ -20,9 +20,9 @@ export default () => (
         className={`
           font-size-16-short
           font-weight-500
-          margin-bottom-0
-          margin-right-xs
-          xs:margin-right-s
+          mb-0
+          mr-10
+          xs:mr-15
         `}
       >
         <A
@@ -40,9 +40,9 @@ export default () => (
         className={`
           font-size-16-short
           font-weight-500
-          margin-bottom-0
-          margin-right-xs
-          xs:margin-right-s
+          mb-0
+          mr-10
+          xs:mr-15
         `}
       >
         <A
@@ -60,9 +60,9 @@ export default () => (
         className={`
           font-size-16-short
           font-weight-500
-          margin-bottom-0
-          margin-right-xs
-          xs:margin-right-s
+          mb-0
+          mr-10
+          xs:mr-15
         `}
       >
         <A
@@ -80,9 +80,9 @@ export default () => (
         className={`
           font-size-16-short
           font-weight-500
-          margin-bottom-0
-          margin-right-xs
-          xs:margin-right-s
+          mb-0
+          mr-10
+          xs:mr-15
         `}
       >
         <A
@@ -100,9 +100,9 @@ export default () => (
         className={`
           font-size-16-short
           font-weight-500
-          margin-bottom-0
-          margin-right-xs
-          xs:margin-right-s
+          mb-0
+          mr-10
+          xs:mr-15
         `}
       >
         <A
@@ -120,13 +120,13 @@ export default () => (
         className={`
           font-size-16-short
           font-weight-500
-          margin-bottom-0
+          mb-0
         `}
       >
         <A
           className={`
             inline-block
-            margin-bottom-0
+            mb-0
             padding-vertical-xs
           `}
           href="/contact"

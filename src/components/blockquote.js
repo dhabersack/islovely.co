@@ -15,13 +15,13 @@ export default ({
       border-width-0
       columns-10-of-12
       italic
-      margin-horizontal-auto
-      margin-vertical-m
+      mx-auto
+      my-24
       padding-left-xs
       relative
       m:columns-8-of-10
       l:columns-6-of-8
-      l:margin-vertical-l
+      l:my-48
     `, className)}
     {...props}
   >

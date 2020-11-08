@@ -35,7 +35,7 @@ const Button = ({
         border-width-0
         border-radius-xxs
         cursor-pointer
-        margin-0
+        m-0
         outline-none
 
         focus:outline

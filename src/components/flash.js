@@ -27,7 +27,7 @@ export default ({
         border-style-solid
         border-width-s
         font-size-14-medium
-        margin-bottom-m
+        mb-24
         padding-horizontal-s
         padding-vertical-s
         m:font-size-16-medium

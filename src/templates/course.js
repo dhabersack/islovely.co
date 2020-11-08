@@ -73,7 +73,7 @@ export default ({
             flex
             flex-wrap
             font-size-12-medium
-            margin-bottom-s
+            mb-12
           `}
         >
           {emails && (
@@ -81,12 +81,12 @@ export default ({
               className={`
                 align-items-center
                 inline-flex
-                margin-right-s
+                mr-15
               `}
             >
               <Img
                 alt=""
-                className="margin-right-xxs"
+                className="mr-5"
                 src="/assets/icons/email-with-letter.svg"
               />
 
@@ -101,12 +101,12 @@ export default ({
               className={`
                 align-items-center
                 inline-flex
-                margin-right-s
+                mr-15
               `}
             >
               <Img
                 alt=""
-                className="margin-right-xxs"
+                className="mr-5"
                 src="/assets/icons/video.svg"
               />
 
@@ -121,12 +121,12 @@ export default ({
               className={`
                 align-items-center
                 inline-flex
-                margin-right-s
+                mr-15
               `}
             >
               <Img
                 alt=""
-                className="margin-right-xxs"
+                className="mr-5"
                 src="/assets/icons/clock.svg"
               />
 
@@ -141,12 +141,12 @@ export default ({
               className={`
                 align-items-center
                 inline-flex
-                margin-right-s
+                mr-15
               `}
             >
               <Img
                 alt=""
-                className="margin-right-xxs"
+                className="mr-5"
                 src="/assets/icons/calendar.svg"
               />
 
@@ -168,7 +168,7 @@ export default ({
         </MDXRenderer>
 
         <div
-          className="margin-bottom-xl"
+          className="mb-60"
         >
           <ConvertkitForm
             cta={cta}
@@ -203,7 +203,7 @@ export default ({
               key={`video-${title}`}
             >
               <div
-                className="margin-bottom-xxs"
+                className="mb-3"
               >
                 <Video
                   title={title}

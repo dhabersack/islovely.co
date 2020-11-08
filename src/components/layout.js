@@ -82,7 +82,7 @@ export default ({
         <div
           className={`
             flex-noshrink
-            margin-horizontal-m
+            mx-20
           `}
         >
           <Header />

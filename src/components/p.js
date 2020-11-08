@@ -10,10 +10,10 @@ export default ({
   <p
     className={mergeClassnames(`
       font-size-16-medium
-      margin-0
-      margin-bottom-s
+      m-0
+      mb-12
       m:font-size-18-medium
-      m:margin-bottom-m
+      m:mb-24
     `, className)}
     {...props}
   >

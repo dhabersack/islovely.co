@@ -15,31 +15,30 @@ describe('mergeClassnames', () => {
   it('overrides font-size in first parameter with later declaration', () => {
     expect(mergeClassnames(`
       font-size-16-medium
-      margin-s
-    `, 'font-size-14-medium')).toBe('margin-s font-size-14-medium')
+      mb-12
+    `, 'font-size-14-medium')).toBe('mb-12 font-size-14-medium')
   })
 
   it('removes duplicates', () => {
-    expect(mergeClassnames('margin-0', 'margin-0')).toBe('margin-0')
+    expect(mergeClassnames('m-0', 'm-0')).toBe('m-0')
   })
 
   it('removes breakpoint-declarations in base if override contains non-breakpoint version', () => {
     expect(mergeClassnames(`
-      margin-bottom-m
-      m:margin-bottom-l
-      xl:margin-bottom-xxl
-    `, 'margin-bottom-s')).toBe('margin-bottom-s')
+      mb-24
+      m:mb-48
+      xl:mb-96
+    `, 'mb-12')).toBe('mb-12')
   })
 
-  it('removes all margins in base classnames if `margin-0` is set in overrides', () => {
+  it('removes all margins in base classnames if `m-0` is set in overrides', () => {
     expect(mergeClassnames(`
-      margin-m
-      margin-horizontal-s
-      margin-vertical-m
-      margin-bottom-l
-      margin-top-xl
-      margin-left-xxs
-      margin-right-l
-    `, 'margin-0')).toBe('margin-0')
+      mx-15
+      my-24
+      mb-48
+      mt-60
+      ml-5
+      mr-25
+    `, 'm-0')).toBe('m-0')
   })
 })

@@ -71,8 +71,8 @@ export default ({
           <H2
             className={`
               font-size-16-short
-              margin-0
-              margin-bottom-xs
+              m-0
+              mb-6
             `}
           >
             <A
@@ -85,7 +85,7 @@ export default ({
           <P
             className={`
               font-size-16-medium
-              margin-0
+              m-0
             `}
           >
             {excerpt}
@@ -109,12 +109,12 @@ export default ({
               className={`
                 align-items-center
                 inline-flex
-                margin-right-s
+                mr-15
               `}
             >
               <Img
                 alt=""
-                className="margin-right-xxs"
+                className="mr-5"
                 src="/assets/icons/email-with-letter.svg"
               />
 
@@ -131,12 +131,12 @@ export default ({
               className={`
                 align-items-center
                 inline-flex
-                margin-right-s
+                mr-15
               `}
             >
               <Img
                 alt=""
-                className="margin-right-xxs"
+                className="mr-5"
                 src="/assets/icons/video.svg"
               />
 
@@ -153,12 +153,12 @@ export default ({
               className={`
                 align-items-center
                 inline-flex
-                margin-right-s
+                mr-15
               `}
             >
               <Img
                 alt=""
-                className="margin-right-xxs"
+                className="mr-5"
                 src="/assets/icons/clock.svg"
               />
 
@@ -175,12 +175,12 @@ export default ({
               className={`
                 align-items-center
                 inline-flex
-                margin-right-s
+                mr-15
               `}
             >
               <Img
                 alt=""
-                className="margin-right-xxs"
+                className="mr-5"
                 src="/assets/icons/calendar.svg"
               />
 

@@ -51,7 +51,7 @@ export default () => {
         onSubmit={handleSubmit}
       >
         <div
-          className="margin-bottom-s"
+          className="mb-12"
         >
           <Label
             htmlFor="email"
@@ -82,7 +82,7 @@ export default () => {
               font-size-12-short
               font-weight-500
               italic
-              margin-vertical-xs
+              my-6
             `}
             errors={errors}
             field="email"
@@ -91,7 +91,7 @@ export default () => {
         </div>
 
         <div
-          className="margin-bottom-s"
+          className="mb-12"
         >
           <Label
             htmlFor="message"
@@ -113,7 +113,7 @@ export default () => {
               font-size-12-short
               font-weight-500
               italic
-              margin-vertical-xs
+              my-6
             `}
             errors={errors}
             field="message"
@@ -123,12 +123,12 @@ export default () => {
 
         <div
           className={`
-            margin-bottom-s
+            mb-12
             flex
           `}
         >
           <div
-            className="margin-right-xs"
+            className="mr-10"
           >
             <Checkbox
               id="data-processing-consent"

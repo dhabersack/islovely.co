@@ -19,9 +19,9 @@ export default ({
     <H1
       className={`
         font-size-24-short
-        margin-0
-        margin-bottom-xs
-        margin-top-0
+        m-0
+        mb-6
+        mt-0
       `}
     >
       There is more to learn

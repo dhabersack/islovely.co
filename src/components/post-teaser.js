@@ -62,8 +62,8 @@ export default ({
             className={`
               font-size-16-short
               font-weight-700
-              margin-0
-              margin-bottom-xs
+              m-0
+              mb-6
             `}
           >
             <A
@@ -78,7 +78,7 @@ export default ({
               color-gray-700
               flex-grow
               font-size-14-medium
-              margin-bottom-m
+              mb-24
               m:font-size-14-medium
             `}
           >
@@ -89,14 +89,14 @@ export default ({
             className={`
               flex
               flex-wrap
-              margin-bottom-xs
+              mb-6
             `}
           >
             {categories.map(category => (
               <div
                 className={`
-                  margin-bottom-xxs
-                  margin-right-xxs
+                  mb-3
+                  mr-5
                 `}
                 key={category}
               >

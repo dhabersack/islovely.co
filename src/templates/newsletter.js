@@ -58,7 +58,7 @@ export default ({
 
       <Taper>
         <H1
-          className='margin-bottom-xxs'
+          className='mb-3'
         >
           {title}
         </H1>
@@ -67,14 +67,14 @@ export default ({
           className={`
             color-gray-500
             font-size-12-short
-            margin-bottom-s
+            mb-12
           `}
         >
           {formatDate(date)}
         </P>
 
         <div
-          className="margin-bottom-xl"
+          className="mb-60"
         >
           <MDXRenderer>
             {body}

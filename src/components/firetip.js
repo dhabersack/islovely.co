@@ -38,8 +38,8 @@ export default ({
           className={`
             font-size-16-short
             font-weight-600
-            margin-0
-            margin-bottom-s
+            m-0
+            mb-12
           `}
         >
           <A
@@ -66,8 +66,8 @@ export default ({
           {tags.map(tag => (
             <div
               className={`
-                margin-bottom-xxs
-                margin-right-xxs
+                mb-3
+                mr-5
               `}
               key={`tag-${tag}`}
             >
@@ -92,11 +92,11 @@ export default ({
           className={`
             color-gray-600
             font-size-12-medium
-            margin-0
+            m-0
           `}
         >
           <span
-            className="margin-right-xxs"
+            className="mr-5"
           >
             Permalink:
           </span>

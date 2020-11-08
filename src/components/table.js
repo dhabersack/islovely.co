@@ -11,8 +11,8 @@ export default ({
     className={mergeClassnames(`
       border-collapse
       font-weight-400
-      margin-0
-      margin-bottom-m
+      m-0
+      mb-24
       width-full
     `, className)}
     {...props}

@@ -16,7 +16,7 @@ export default () => (
       <div
         className={`
           height-24
-          margin-right-xxs
+          mr-5
           width-24
         `}
       >

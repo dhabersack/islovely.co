@@ -21,7 +21,7 @@ export default ({
     <div
       className={`
         columns-8-of-12
-        margin-bottom-xs
+        mb-6
         xs:columns-6-of-12
         s:columns-3-of-12
         l:columns-4-of-12
@@ -41,8 +41,8 @@ export default ({
       <H2
         className={`
           font-size-24-medium
-          margin-bottom-s
-          margin-top-0
+          mb-12
+          mt-0
         `}
       >
         {heading}

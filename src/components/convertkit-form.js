@@ -80,7 +80,7 @@ export default ({
           color-gray-600
           font-size-14-medium
           italic
-          margin-0
+          m-0
         `}
       >
         I respect your email privacy. Unsubscribe anytime.

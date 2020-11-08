@@ -57,10 +57,10 @@ export default ({
         <ul
           className={`
             list-style-none
-            margin-bottom-m
+            mb-24
             padding-0
             s:columns-10-of-12
-            s:margin-horizontal-auto
+            s:mx-auto
             m:columns-8-of-10
             l:columns-6-of-8
           `}
@@ -69,7 +69,7 @@ export default ({
             <Li
               className={`
                 flex
-                margin-bottom-s
+                mb-12
               `}
               key={`newsletter-benefit-${listItem}`}
             >
@@ -78,7 +78,7 @@ export default ({
                 className={`
                   flex-no-shrink
                   height-24
-                  margin-right-xs
+                  mr-10
                   width-24
                   m:height-27
                   m:width-27
@@ -103,7 +103,7 @@ export default ({
         </P>
 
         <div
-          className="margin-bottom-l"
+          className="mb-48"
         >
           <ConvertkitForm
             sourceUrl={location.href}
@@ -117,11 +117,11 @@ export default ({
         </H2>
 
         <div
-          className="margin-bottom-l"
+          className="mb-48"
         >
           {newsletters.map(newsletter => (
             <div
-              className="margin-bottom-m"
+              className="mb-24"
               key={`newsletter-${newsletter.id}`}
             >
               <NewsletterTeaser

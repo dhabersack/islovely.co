@@ -9,7 +9,7 @@ export default ({
     className={`
       font-size-14-medium
       font-weight-500
-      margin-bottom-m
+      mb-24
     `}
   >
     {[
@@ -35,7 +35,7 @@ export default ({
         <span
           className={`
             color-gray-600
-            margin-horizontal-xxs
+            mx-5
           `}
         >
           &raquo;

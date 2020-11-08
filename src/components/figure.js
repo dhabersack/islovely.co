@@ -12,11 +12,11 @@ export default ({
 }) => (
   <figure
     className={mergeClassnames(`
-      margin-horizontal-auto
-      margin-vertical-m
+      mx-auto
+      my-24
       width-full
-      l:margin-bottom-l
-      l:margin-top-l
+      l:mb-48
+      l:mt-48
     `, className)}
     {...props}
   >
@@ -32,8 +32,8 @@ export default ({
           color-gray-500
           font-size-12-short
           italic
-          margin-0
-          margin-top-xs
+          m-0
+          mt-6
           text-align-center
         `}
       >

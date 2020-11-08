@@ -17,7 +17,7 @@ export default ({
       color-gray-700
       font-size-16-medium
       font-weight-400
-      margin-0
+      m-0
       outline-none
       padding-horizontal-xs-minus-border
       padding-vertical-s-minus-border

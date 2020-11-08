@@ -9,8 +9,8 @@ export default ({
       border-width-0
       border-radius-round
       height-1
-      margin-horizontal-m
-      margin-vertical-m
+      mx-20
+      my-24
     `}
     {...props}
   />

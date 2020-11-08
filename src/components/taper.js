@@ -5,7 +5,7 @@ export default ({
 }) => (
   <div
     className={`
-      margin-horizontal-auto
+      mx-auto
       m:columns-10-of-12
       l:columns-8-of-12
     `}
