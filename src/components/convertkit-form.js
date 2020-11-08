@@ -81,10 +81,10 @@ export default ({
 
       <P
         className={`
-          color-gray-600
           font-size-14-medium
           italic
           m-0
+          text-gray-600
         `}
       >
         I respect your email privacy. Unsubscribe anytime.

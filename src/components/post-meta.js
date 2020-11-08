@@ -34,9 +34,9 @@ export default ({
     >
       <span
         className={`
-          color-gray-700
           font-weight-700
           mb-3
+          text-gray-700
         `}
       >
         Dom Habersack
@@ -44,8 +44,8 @@ export default ({
 
       <span
         className={`
-          color-gray-500
           font-weight-400
+          text-gray-500
         `}
       >
         {formatDate(date)}

@@ -9,10 +9,10 @@ export default () => (
   <footer
     className={`
       align-items-center
-      color-gray-600
       flex
       flex-column
       padding-vertical-m
+      text-gray-600
     `}
   >
     <div

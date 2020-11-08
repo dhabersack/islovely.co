@@ -219,7 +219,7 @@ export default ({
                 `}
               >
                 <span
-                  className="color-gray-500"
+                  className="text-gray-500"
                 >
                   #{index + 1}
                 </span>
@@ -231,7 +231,7 @@ export default ({
                 {' '}
 
                 <span
-                  className="color-gray-500"
+                  className="text-gray-500"
                 >
                   ({duration})
                 </span>

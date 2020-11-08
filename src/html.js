@@ -42,10 +42,10 @@ export default ({
     <body
       className={`
         bg-white
-        color-gray-700
         h-full
         m-0
         padding-0
+        text-gray-700
       `}
       {...bodyAttributes}
     >

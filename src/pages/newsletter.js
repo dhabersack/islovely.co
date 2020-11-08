@@ -135,13 +135,13 @@ export default ({
           className={`
             bg-yellow-400
             rounded-3
-            color-gray-900
+            text-gray-900
             font-size-14-short
             font-weight-500
             inline-block
             padding-horizontal-m
             padding-vertical-s
-            visited:color-gray-900
+            visited:text-gray-900
           `}
           href="/newsletter/archive"
         >

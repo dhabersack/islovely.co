@@ -78,11 +78,11 @@ export default () => {
           <ValidationError
             className={`
               block
-              color-red-500
               font-size-12-short
               font-weight-500
               italic
               my-6
+              text-red-500
             `}
             errors={errors}
             field="email"
@@ -109,11 +109,11 @@ export default () => {
           <ValidationError
             className={`
               block
-              color-red-500
               font-size-12-short
               font-weight-500
               italic
               my-6
+              text-red-500
             `}
             errors={errors}
             field="message"

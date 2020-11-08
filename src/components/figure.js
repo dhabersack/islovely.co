@@ -29,12 +29,12 @@ export default ({
     {caption != null ? (
       <figcaption
         className={`
-          color-gray-500
           font-size-12-short
           italic
           m-0
           mt-6
           text-align-center
+          text-gray-500
         `}
       >
         {caption}

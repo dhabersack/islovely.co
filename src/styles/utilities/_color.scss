@@ -2,40 +2,28 @@
   color: map-get(map-get($_colors, $color), $shade);
 }
 
+@function qualifier($key, $value) {
+  @if $key != 0 {
+    @return -#{$key}
+  }
+}
+
 @each $color, $list in $_colors {
-  @each $label, $value in $list {
-    @if $label == 0 {
-      .color-#{"" + $color} {
-        color: $value;
-      }
+  @each $key, $value in $list {
+    .text-#{$color}#{qualifier($key, $value)} {
+      color: $value;
+    }
 
-      .disabled\:color-#{"" + $color}:disabled {
-        color: $value;
-      }
+    .disabled\:text-#{$color}#{qualifier($key, $value)}:disabled {
+      color: $value;
+    }
 
-      .hover\:color-#{"" + $color}:hover {
-        color: $value;
-      }
+    .hover\:text-#{$color}#{qualifier($key, $value)}:hover {
+      color: $value;
+    }
 
-      .visited\:color-#{"" + $color}:visited {
-        color: $value;
-      }
-    } @else {
-      .color-#{"" + $color}-#{$label} {
-        color: $value;
-      }
-
-      .disabled\:color-#{"" + $color}-#{$label}:disabled {
-        color: $value;
-      }
-
-      .hover\:color-#{"" + $color}-#{$label}:hover {
-        color: $value;
-      }
-
-      .visited\:color-#{"" + $color}-#{$label}:visited {
-        color: $value;
-      }
+    .visited\:text-#{$color}#{qualifier($key, $value)}:visited {
+      color: $value;
     }
   }
 }

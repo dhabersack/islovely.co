@@ -17,13 +17,13 @@ const cta = (
     className={`
       align-items-center
       bg-yellow-400
-      color-gray-900
       inline-flex
       padding-horizontal-l
       padding-vertical-s
       rounded-24
       shadow-xs
-      visited:color-gray-900
+      text-gray-900
+      visited:text-gray-900
     `}
     href="/courses"
   >

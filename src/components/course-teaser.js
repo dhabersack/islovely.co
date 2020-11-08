@@ -95,12 +95,12 @@ export default ({
         <footer
           className={`
             bg-gray-100
-            color-gray-600
             flex
             flex-wrap
             font-size-12-medium
             padding-horizontal-s
             padding-vertical-s
+            text-gray-600
           `}
         >
           {emails && (

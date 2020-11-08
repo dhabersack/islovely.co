@@ -11,12 +11,12 @@ export default ({
       rounded-6
       border-style-solid
       border-width-s
-      color-blue-500
       cursor-pointer
       block
       h-24
       m-0
       outline-none
+      text-blue-500
       w-24
 
       checked:background-image-checkbox

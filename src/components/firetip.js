@@ -44,8 +44,8 @@ export default ({
         >
           <A
             className={`
-              color-gray-900
-              visited:color-gray-900
+              text-gray-900
+              visited:text-gray-900
             `}
             href={`/firetips/${slug}`}
           >
@@ -90,9 +90,9 @@ export default ({
       >
         <P
           className={`
-            color-gray-600
             font-size-12-medium
             m-0
+            text-gray-600
           `}
         >
           <span

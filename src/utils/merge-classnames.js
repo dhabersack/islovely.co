@@ -1,12 +1,12 @@
 const PREFIXES = [
-  'color-',
   'columns-',
   'font-size-',
   'font-weight-',
   'mb-',
   'mt-',
+  'text-',
   'w-',
-  'visited:color-'
+  'visited:text-'
 ]
 
 const FULL_OVERRIDES = {

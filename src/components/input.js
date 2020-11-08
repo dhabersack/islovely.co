@@ -14,13 +14,13 @@ export default ({
       rounded-6
       border-style-solid
       border-width-s
-      color-gray-700
       font-size-16-medium
       font-weight-400
       m-0
       outline-none
       padding-horizontal-xs-minus-border
       padding-vertical-s-minus-border
+      text-gray-700
       w-full
       focus:border-blue-400
     `, className)}

@@ -25,12 +25,12 @@ export default ({
       <div
         className={`
           align-items-center
-          color-gray-600
           flex
           flex-column
           justify-center
           padding-s
           text-align-center
+          text-gray-600
         `}
       >
         <P

@@ -65,9 +65,9 @@ export default ({
 
         <P
           className={`
-            color-gray-500
             font-size-12-short
             mb-12
+            text-gray-500
           `}
         >
           {formatDate(date)}

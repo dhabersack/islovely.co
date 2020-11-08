@@ -27,8 +27,8 @@ export default ({
     <>
       <footer
         className={`
-          color-gray-600
           font-size-12-short
+          text-gray-600
         `}
       >
         <Strong

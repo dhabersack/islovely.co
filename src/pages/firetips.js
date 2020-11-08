@@ -67,8 +67,8 @@ export default ({
                 {tag}
               </Tag>&nbsp;<span
                 className={`
-                  color-gray-600
                   font-size-12-medium
+                  text-gray-600
                 `}
               >
                 &times; {tagCounts[tag]}

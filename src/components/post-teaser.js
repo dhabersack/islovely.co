@@ -75,10 +75,10 @@ export default ({
 
           <P
             className={`
-              color-gray-700
               flex-grow
               font-size-14-medium
               mb-24
+              text-gray-700
               m:font-size-14-medium
             `}
           >

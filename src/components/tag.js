@@ -13,12 +13,12 @@ export default ({
       className={`
         bg-gray-200
         rounded-3
-        color-gray-700
         font-size-12-medium
         inline-block
         nowrap
         padding-xs
-        visited:color-gray-700
+        text-gray-700
+        visited:text-gray-700
       `}
       href={href}
     >
