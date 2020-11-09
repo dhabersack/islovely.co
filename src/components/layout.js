@@ -26,6 +26,7 @@ import Pre from './pre'
 import Strong from './strong'
 import Table from './table'
 import Taper from './taper'
+import Tbody from './tbody'
 import Td from './td'
 import Th from './th'
 import Tr from './tr'
@@ -53,6 +54,7 @@ const MDX_COMPONENT_MAPPING = {
   pre: Pre,
   strong: Strong,
   table: Table,
+  tbody: Tbody,
   td: Td,
   th: Th,
   tr: Tr,
