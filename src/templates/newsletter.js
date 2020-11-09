@@ -58,7 +58,7 @@ export default ({
 
       <Taper>
         <H1
-          className='mb-3'
+          className="mb-3"
         >
           {title}
         </H1>

@@ -4,7 +4,7 @@
 
 @mixin _outline {
   outline: 0.2rem solid;
-  outline-color: map-get(map-get($_colors, "blue"), 500);
+  outline-color: map-get(map-get($_colors, "blue"), "500");
   outline-offset: 0.2rem;
 }
 

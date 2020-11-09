@@ -12,8 +12,8 @@ export default ({
       col-10/12
       list-disc
       mb-12
-      mx-auto
       mt-0
+      mx-auto
       p-0
       m:col-8/10
       m:mb-24

@@ -1,7 +1,3 @@
-.border-0 {
-  border-width: 0;
-}
-
 @each $key, $value in (
   "0": 0,
   "1": 0.1rem,

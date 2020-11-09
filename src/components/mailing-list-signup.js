@@ -21,7 +21,6 @@ export default ({
         font-size-24-short
         m-0
         mb-6
-        mt-0
       `}
     >
       There is more to learn

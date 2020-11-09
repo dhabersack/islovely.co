@@ -134,13 +134,13 @@ export default ({
         <a
           className={`
             bg-yellow-400
-            rounded-3
-            text-gray-900
             font-size-14-short
             font-weight-500
             inline-block
             px-20
             py-12
+            rounded-3
+            text-gray-900
             visited:text-gray-900
           `}
           href="/newsletter/archive"

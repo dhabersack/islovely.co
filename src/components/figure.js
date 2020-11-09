@@ -15,8 +15,7 @@ export default ({
       mx-auto
       my-24
       w-full
-      l:mb-48
-      l:mt-48
+      l:my-48
     `, className)}
     {...props}
   >
