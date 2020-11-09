@@ -25,7 +25,7 @@ export default ({
         border-${borderColor}
         rounded-6
         border-style-solid
-        border-width-s
+        border-1
         font-size-14-medium
         mb-24
         px-15

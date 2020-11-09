@@ -32,7 +32,7 @@ const Button = ({
     <button
       className={mergeClassnames(`
         border-transparent
-        border-width-s
+        border-1
         rounded-3
         cursor-pointer
         m-0

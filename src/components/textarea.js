@@ -15,7 +15,7 @@ export default ({
       border-gray-300
       rounded-3
       border-style-solid
-      border-width-s
+      border-1
       font-size-16-medium
       font-weight-400
       m-0

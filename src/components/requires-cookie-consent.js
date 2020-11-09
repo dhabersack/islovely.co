@@ -19,7 +19,7 @@ export default ({
         border-gray-500
         rounded-6
         border-style-dashed
-        border-width-m
+        border-2
       `, className)}
     >
       <div

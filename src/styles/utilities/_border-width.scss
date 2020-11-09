@@ -1,57 +1,31 @@
-$_border-width: (
-  '0':  0,
-  's':  0.1rem,
-  'm':  0.2rem,
-  'l':  0.3rem,
-  'xl': 0.6rem
-);
-
-@mixin _border-width($size) {
-  border-width: map-get($_border-width, $size);
+.border-0 {
+  border-width: 0;
 }
 
-@mixin _border-top-width($size) {
-  border-top-width: map-get($_border-width, $size);
-}
-
-@mixin _border-right-width($size) {
-  border-right-width: map-get($_border-width, $size);
-}
-
-@mixin _border-bottom-width($size) {
-  border-bottom-width: map-get($_border-width, $size);
-}
-
-@mixin _border-left-width($size) {
-  border-left-width: map-get($_border-width, $size);
-}
-
-@each $size, $value in $_border-width {
-  .border-width-#{$size} {
-    @include _border-width($size);
+@each $key, $value in (
+  "0": 0,
+  "1": 0.1rem,
+  "2": 0.2rem,
+  "3": 0.3rem,
+  "6": 0.6rem
+) {
+  .border-#{$key} {
+    border-width: $value;
   }
-}
 
-@each $size, $value in $_border-width {
-  .border-top-width-#{$size} {
-    @include _border-top-width($size);
+  .border-t-#{$key} {
+    border-top-width: $value;
   }
-}
 
-@each $size, $value in $_border-width {
-  .border-right-width-#{$size} {
-    @include _border-right-width($size);
+  .border-r-#{$key} {
+    border-right-width: $value;
   }
-}
 
-@each $size, $value in $_border-width {
-  .border-bottom-width-#{$size} {
-    @include _border-bottom-width($size);
+  .border-b-#{$key} {
+    border-bottom-width: $value;
   }
-}
 
-@each $size, $value in $_border-width {
-  .border-left-width-#{$size} {
-    @include _border-left-width($size);
+  .border-l-#{$key} {
+    border-left-width: $value;
   }
 }

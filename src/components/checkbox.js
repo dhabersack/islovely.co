@@ -10,7 +10,7 @@ export default ({
       border-gray-300
       rounded-6
       border-style-solid
-      border-width-s
+      border-1
       cursor-pointer
       block
       h-24

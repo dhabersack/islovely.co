@@ -6,7 +6,7 @@ export default ({
   <hr
     className={`
       bg-gray-300
-      border-width-0
+      border-0
       rounded-round
       h-1
       mx-20
