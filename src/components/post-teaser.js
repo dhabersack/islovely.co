@@ -79,7 +79,6 @@ export default ({
               font-size-14-medium
               mb-24
               text-gray-700
-              m:font-size-14-medium
             `}
           >
             {excerpt}

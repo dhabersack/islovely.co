@@ -1,6 +1,6 @@
 ---
 title: "Join me for Hacktoberfest"
-excerpt: ""
+excerpt: "Every October, DigitalOcean celebrates the open source community by running Hacktoberfest."
 issue: 56
 ---
 Every October, DigitalOcean celebrates the open source community by running Hacktoberfest. They encourage everybody to contribute to projects, for which you can earn swag or plant a tree. The type and size of your contributions doesn’t matter. Whether you are a programmer, designer, or expert typo-finder: all contributions are welcome.

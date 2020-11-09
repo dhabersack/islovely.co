@@ -2,6 +2,7 @@ import React from 'react'
 
 import A from './a'
 import H2 from './h2'
+import P from './p'
 import Strong from './strong'
 import formatDate from '../utils/format-date'
 
@@ -19,6 +20,7 @@ export default ({
   } = fields
 
   const {
+    excerpt,
     issue,
     title,
   } = frontmatter
@@ -55,6 +57,12 @@ export default ({
           {title}
         </A>
       </H2>
+
+      <P
+        className="font-size-16-medium"
+      >
+        {excerpt}
+      </P>
     </>
   )
 }

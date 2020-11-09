@@ -42,13 +42,15 @@ export default ({
           Newsletter archive
         </H1>
 
-        <P>
+        <P
+          className="mb-48"
+        >
           These are some of my previous newsletters. <A href="/newsletter">Sign up</A> if you want to get them delivered straight to your inbox.
         </P>
 
         {newsletters.map(newsletter => (
           <div
-            className="mb-24"
+            className="mb-36"
             key={`newsletter-${newsletter.id}`}
           >
             <NewsletterTeaser
@@ -85,6 +87,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
+            excerpt
             issue
             title
           }

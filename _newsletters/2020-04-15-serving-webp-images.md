@@ -1,6 +1,6 @@
 ---
 title: "Serving WebP images"
-excerpt: "We can use the more performant WebP-format for pictures even though not all browsers support it yet."
+excerpt: "We can start using the performant WebP-format for pictures before all browsers support it."
 issue: 32
 ---
 If you run a [Lighthouse Audit](https://developers.google.com/speed/pagespeed/insights/) on your website, it’ll probably ask you to “Serve images in next-gen formats”. While most pictures are JPEGs or PNGs, there are more space-efficient formats available. WebP-files are about 25% smaller, with a higher quality than their older counterparts.

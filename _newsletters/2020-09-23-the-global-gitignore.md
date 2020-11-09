@@ -1,6 +1,6 @@
 ---
 title: "The global .gitignore"
-excerpt: ""
+excerpt: "Instead of ignoring the same files specific to your machine in every project, exclude them globally once for all your projects."
 issue: 55
 isFeatured: true
 ---

@@ -116,20 +116,16 @@ export default ({
           Featured newsletters
         </H2>
 
-        <div
-          className="mb-48"
-        >
-          {newsletters.map(newsletter => (
-            <div
-              className="mb-24"
-              key={`newsletter-${newsletter.id}`}
-            >
-              <NewsletterTeaser
-                newsletter={newsletter}
-              />
-            </div>
-          ))}
-        </div>
+        {newsletters.map(newsletter => (
+          <div
+            className="mb-36"
+            key={`newsletter-${newsletter.id}`}
+          >
+            <NewsletterTeaser
+              newsletter={newsletter}
+            />
+          </div>
+        ))}
 
         <a
           className={`
@@ -179,6 +175,7 @@ export const pageQuery = graphql`
             permalink
           }
           frontmatter {
+            excerpt
             issue
             title
           }
