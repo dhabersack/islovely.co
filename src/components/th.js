@@ -12,8 +12,8 @@ export default ({
       ${children != null ? 'bg-gray-300' : ''}
       font-size-16-medium
       font-weight-700
-      padding-horizontal-xs
-      padding-vertical-xs
+      px-10
+      py-6
       text-align-left
     `, className)}
     {...props}

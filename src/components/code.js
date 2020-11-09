@@ -13,8 +13,8 @@ export default ({
       rounded-3
       font-weight-300
       monospace
-      padding-horizontal-xxs
-      padding-vertical-xxs
+      px-5
+      py-3
       text-gray-800
     `, className)}
     {...props}

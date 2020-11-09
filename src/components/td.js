@@ -10,8 +10,8 @@ export default ({
   <td
     className={mergeClassnames(`
       font-size-16-medium
-      padding-horizontal-xs
-      padding-vertical-xs
+      px-10
+      py-6
     `, className)}
     {...props}
   >

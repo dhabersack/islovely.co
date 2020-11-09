@@ -93,9 +93,9 @@ export default ({
             l-default__main
             flex-grow
             flex-no-shrink
-            padding-bottom-xl
-            padding-horizontal-span
-            padding-top-l
+            pb-60
+            pt-48
+            px-span
           `}
         >
           <Taper>
@@ -111,7 +111,7 @@ export default ({
           className={`
             bg-gray-100
             flex-none
-            padding-horizontal-span
+            px-span
           `}
         >
           <Footer />

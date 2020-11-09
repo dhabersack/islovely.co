@@ -11,7 +11,7 @@ export default () => (
       align-items-center
       flex
       flex-column
-      padding-vertical-m
+      py-24
       text-gray-600
     `}
   >
@@ -20,7 +20,7 @@ export default () => (
         font-size-16-short
         m-0
         mb-24
-        padding-vertical-xxs
+        py-3
       `}
     >
       &copy; Dom Habersack, 2020
@@ -35,7 +35,7 @@ export default () => (
         list-style-none
         m-0
         mb-6
-        padding-0
+        p-0
       `}
     >
       <A
@@ -89,7 +89,7 @@ export default () => (
         list-style-none
         m-0
         mb-24
-        padding-0
+        p-0
       `}
     >
       <A
@@ -97,7 +97,7 @@ export default () => (
           flex
           font-size-16
           mx-10
-          padding-vertical-xxs
+          py-3
         `}
         href="https://github.com/domhabersack"
       >
@@ -117,7 +117,7 @@ export default () => (
           flex
           font-size-16
           mx-10
-          padding-vertical-xxs
+          py-3
         `}
         href="https://twitter.com/domhabersack"
       >
@@ -137,7 +137,7 @@ export default () => (
           flex
           font-size-16
           mx-10
-          padding-vertical-xxs
+          py-3
         `}
         href="https://dribbble.com/domhabersack"
       >
@@ -157,7 +157,7 @@ export default () => (
           flex
           font-size-16
           mx-10
-          padding-vertical-xxs
+          py-3
         `}
         href="https://mastodon.social/@domhabersack"
       >

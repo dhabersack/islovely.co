@@ -13,15 +13,16 @@ const Button = ({
     primary: `
       bg-blue-500
       font-size-16-medium
-      padding-horizontal-m
-      padding-vertical-s
+      px-20
+      py-12
       text-gray-100
       hover:bg-blue-600
     `,
     regular: `
       bg-gray-300
       font-size-14-medium
-      padding-xs
+      px-10
+      py-6
       text-gray-700
       hover:bg-gray-400
     `
@@ -30,7 +31,8 @@ const Button = ({
   return (
     <button
       className={mergeClassnames(`
-        border-width-0
+        border-transparent
+        border-width-s
         rounded-3
         cursor-pointer
         m-0

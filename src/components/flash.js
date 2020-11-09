@@ -28,8 +28,8 @@ export default ({
         border-width-s
         font-size-14-medium
         mb-24
-        padding-horizontal-s
-        padding-vertical-s
+        px-15
+        py-12
         m:font-size-16-medium
       `}
     >

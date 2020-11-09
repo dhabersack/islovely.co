@@ -44,7 +44,7 @@ export default ({
         bg-white
         h-full
         m-0
-        padding-0
+        p-0
         text-gray-700
       `}
       {...bodyAttributes}

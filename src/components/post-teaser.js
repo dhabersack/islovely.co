@@ -54,8 +54,8 @@ export default ({
             flex
             flex-column
             h-full
-            padding-horizontal-s
-            padding-vertical-s
+            px-15
+            py-12
           `}
         >
           <H2

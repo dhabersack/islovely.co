@@ -58,7 +58,7 @@ export default ({
           className={`
             list-style-none
             mb-24
-            padding-0
+            p-0
             s:columns-10-of-12
             s:mx-auto
             m:columns-8-of-10
@@ -139,8 +139,8 @@ export default ({
             font-size-14-short
             font-weight-500
             inline-block
-            padding-horizontal-m
-            padding-vertical-s
+            px-20
+            py-12
             visited:text-gray-900
           `}
           href="/newsletter/archive"

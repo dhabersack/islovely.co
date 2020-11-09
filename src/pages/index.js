@@ -18,8 +18,8 @@ const cta = (
       align-items-center
       bg-yellow-400
       inline-flex
-      padding-horizontal-l
-      padding-vertical-s
+      px-25
+      py-12
       rounded-24
       shadow-xs
       text-gray-900
@@ -222,9 +222,8 @@ export default () => (
         bg-gray-200
         rounded-6
         mb-24
-        padding-horizontal-s
-        padding-vertical-m
-        xs:padding-vertical-m
+        px-15
+        py-24
         m:align-items-start
         m:flex
         m:justify-between

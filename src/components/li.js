@@ -11,7 +11,7 @@ export default ({
     className={mergeClassnames(`
       font-size-16-medium
       mb-6
-      padding-0
+      p-0
       m:font-size-18-medium
     `, className)}
     {...props}

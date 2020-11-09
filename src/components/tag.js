@@ -16,7 +16,8 @@ export default ({
         font-size-12-medium
         inline-block
         nowrap
-        padding-xs
+        px-10
+        py-6
         text-gray-700
         visited:text-gray-700
       `}

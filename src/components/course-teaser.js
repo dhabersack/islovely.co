@@ -64,8 +64,8 @@ export default ({
         <div
           className={`
             flex-grow
-            padding-horizontal-s
-            padding-vertical-s
+            px-15
+            py-12
           `}
         >
           <H2
@@ -98,8 +98,8 @@ export default ({
             flex
             flex-wrap
             font-size-12-medium
-            padding-horizontal-s
-            padding-vertical-s
+            px-15
+            py-12
             text-gray-600
           `}
         >

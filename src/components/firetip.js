@@ -30,8 +30,8 @@ export default ({
     <Card>
       <div
         className={`
-          padding-horizontal-s
-          padding-vertical-s
+          px-15
+          py-12
         `}
       >
         <H2
@@ -84,8 +84,8 @@ export default ({
       <footer
         className={`
           bg-gray-100
-          padding-horizontal-s
-          padding-vertical-s
+          px-15
+          py-12
         `}
       >
         <P

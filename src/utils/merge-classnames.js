@@ -18,6 +18,14 @@ const FULL_OVERRIDES = {
     'mx-',
     'my-'
   ],
+  'p-0': [
+    'pt-',
+    'pr-',
+    'pb-',
+    'pl-',
+    'px-',
+    'py-'
+  ],
   'rounded-0': [
     'rounded-'
   ],

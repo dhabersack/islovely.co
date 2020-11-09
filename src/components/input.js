@@ -18,8 +18,8 @@ export default ({
       font-weight-400
       m-0
       outline-none
-      padding-horizontal-xs-minus-border
-      padding-vertical-s-minus-border
+      px-10
+      py-12
       text-gray-700
       w-full
       focus:border-blue-400

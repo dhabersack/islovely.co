@@ -3,9 +3,11 @@
 }
 
 @function qualifier($key, $value) {
-  @if $key != 0 {
+  @if $key != "0" {
     @return -#{$key}
   }
+
+  @return ""
 }
 
 @each $color, $list in $_colors {

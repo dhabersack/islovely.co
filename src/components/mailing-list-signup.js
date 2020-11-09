@@ -12,8 +12,8 @@ export default ({
     className={`
       bg-gray-200
       rounded-6
-      padding-horizontal-s
-      padding-vertical-s
+      px-15
+      py-12
     `}
   >
     <H1

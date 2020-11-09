@@ -28,7 +28,8 @@ export default ({
           flex
           flex-column
           justify-center
-          padding-s
+          px-15
+          py-12
           text-align-center
           text-gray-600
         `}

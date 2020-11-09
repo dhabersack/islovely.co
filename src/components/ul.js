@@ -14,7 +14,7 @@ export default ({
       mb-12
       mx-auto
       mt-0
-      padding-0
+      p-0
       m:columns-8-of-10
       m:mb-24
       l:columns-6-of-8

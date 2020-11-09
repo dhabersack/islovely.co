@@ -17,7 +17,7 @@ export default ({
       italic
       mx-auto
       my-24
-      padding-left-xs
+      pl-10
       relative
       m:columns-8-of-10
       l:columns-6-of-8

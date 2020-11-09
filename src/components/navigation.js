@@ -12,7 +12,7 @@ export default () => (
         flex-wrap
         list-style-none
         m-0
-        padding-0
+        p-0
         w-full
       `}
     >
@@ -28,7 +28,7 @@ export default () => (
         <A
           className={`
             inline-block
-            padding-vertical-xs
+            py-6
           `}
           href="/courses"
         >
@@ -48,7 +48,7 @@ export default () => (
         <A
           className={`
             inline-block
-            padding-vertical-xs
+            py-6
           `}
           href="/posts"
         >
@@ -68,7 +68,7 @@ export default () => (
         <A
           className={`
             inline-block
-            padding-vertical-xs
+            py-6
           `}
           href="/firetips"
         >
@@ -88,7 +88,7 @@ export default () => (
         <A
           className={`
             inline-block
-            padding-vertical-xs
+            py-6
           `}
           href="/newsletter"
         >
@@ -108,7 +108,7 @@ export default () => (
         <A
           className={`
             inline-block
-            padding-vertical-xs
+            py-6
           `}
           href="/about"
         >
@@ -127,7 +127,7 @@ export default () => (
           className={`
             inline-block
             mb-0
-            padding-vertical-xs
+            py-6
           `}
           href="/contact"
         >
