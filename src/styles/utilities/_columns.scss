@@ -1,12 +1,8 @@
-@mixin _columns($columns, $total_columns) {
-  width: calc((100% - #{($total-columns - 1)} * var(--grid-gutter)) / #{$total-columns} * #{$columns} + #{($columns - 1)} * var(--grid-gutter));
-}
-
-@each $total_columns in (8, 10, 12) {
+@each $total-columns in (8, 10, 12) {
   @for $columns from 1 through $total-columns {
-    .columns-#{$columns}-of-#{$total_columns} {
+    .col-#{$columns}\/#{$total-columns} {
       @include _at-breakpoints {
-        @include _columns($columns, $total_columns);
+        width: calc((100% - #{($total-columns - 1)} * var(--grid-gutter)) / #{$total-columns} * #{$columns} + #{($columns - 1)} * var(--grid-gutter));
       }
     }
   }

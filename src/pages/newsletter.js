@@ -59,10 +59,10 @@ export default ({
             list-style-none
             mb-24
             p-0
-            s:columns-10-of-12
+            s:col-10/12
             s:mx-auto
-            m:columns-8-of-10
-            l:columns-6-of-8
+            m:col-8/10
+            l:col-6/8
           `}
         >
           {listItems.map(listItem => (

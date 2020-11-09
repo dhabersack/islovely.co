@@ -13,14 +13,14 @@ export default ({
       border-gray-600
       border-l-3
       border-solid
-      columns-10-of-12
+      col-10/12
       italic
       mx-auto
       my-24
       pl-10
       relative
-      m:columns-8-of-10
-      l:columns-6-of-8
+      m:col-8/10
+      l:col-6/8
       l:my-48
     `, className)}
     {...props}

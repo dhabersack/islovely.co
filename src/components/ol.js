@@ -9,15 +9,15 @@ export default ({
 }) => (
   <ol
     className={mergeClassnames(`
-      columns-10-of-12
+      col-10/12
       list-style-decimal
       mb-12
       mx-auto
       mt-0
       p-0
-      m:columns-8-of-10
+      m:col-8/10
       m:mb-24
-      l:columns-6-of-8
+      l:col-6/8
     `, className)}
     {...props}
   >

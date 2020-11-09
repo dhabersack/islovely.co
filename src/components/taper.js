@@ -6,8 +6,8 @@ export default ({
   <div
     className={`
       mx-auto
-      m:columns-10-of-12
-      l:columns-8-of-12
+      m:col-10/12
+      l:col-8/12
     `}
   >
     {children}

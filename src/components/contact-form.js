@@ -61,10 +61,10 @@ export default () => {
 
           <div
             className={`
-              s:columns-8-of-12
-              m:columns-6-of-10
-              l:columns-5-of-8
-              xl:columns-4-of-8
+              s:col-8/12
+              m:col-6/10
+              l:col-5/8
+              xl:col-4/8
             `}
           >
             <Input
