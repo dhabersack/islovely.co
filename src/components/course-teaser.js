@@ -42,7 +42,7 @@ export default ({
           className={`
             bg-gray-100
             block
-            intrinsic-ratio-16-by-9
+            intrinsic-ratio-16/9
           `}
           href={permalink}
         >
