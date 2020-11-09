@@ -12,16 +12,16 @@ export default ({
       appearance-none
       bg-white
       block
-      border-gray-300
-      rounded-3
-      border-style-solid
       border-1
+      border-gray-300
+      border-solid
       font-size-16-medium
       font-weight-400
       m-0
       outline-none
       px-10
       py-12
+      rounded-3
       text-gray-700
       w-full
       focus:border-blue-400

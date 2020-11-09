@@ -23,13 +23,13 @@ export default ({
       className={`
         bg-${backgroundColor}
         border-${borderColor}
-        rounded-6
-        border-style-solid
         border-1
+        border-solid
         font-size-14-medium
         mb-24
         px-15
         py-12
+        rounded-6
         m:font-size-16-medium
       `}
     >

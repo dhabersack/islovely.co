@@ -16,10 +16,10 @@ export default ({
     <div
       className={mergeClassnames(`
         bg-gray-100
+        border-2
+        border-dashed
         border-gray-500
         rounded-6
-        border-style-dashed
-        border-2
       `, className)}
     >
       <div

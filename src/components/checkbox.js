@@ -7,15 +7,15 @@ export default ({
     className={`
       appearance-none
       bg-white
-      border-gray-300
-      rounded-6
-      border-style-solid
       border-1
+      border-gray-300
+      border-solid
       cursor-pointer
       block
       h-24
       m-0
       outline-none
+      rounded-6
       text-blue-500
       w-24
 
