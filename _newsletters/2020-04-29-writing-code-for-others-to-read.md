@@ -1,6 +1,6 @@
 ---
 title: "Writing code for others to read"
-excerpt: "The latest version of islovely.co is an improvement over the previous one, not a completely different thing."
+excerpt: "Clever code isn’t always the most readable. When working in teams, readability comes first."
 issue: 34
 isFeatured: true
 ---

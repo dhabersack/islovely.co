@@ -1,6 +1,6 @@
 ---
 title: "Dealing with broken streaks"
-excerpt: "As motivating as a streak can be, it limits us to short-term thinking. The real progress is in the long-term effects, the ones we can only see in retrospect."
+excerpt: "Streaks limit us to short-term thinking. We can only see long-term effects in retrospect."
 issue: 22
 ---
 As of today, I have a 2200 day streak on Duolingo. For over six years, I have spent a few minutes **every day** learning languages. I don’t speak them fluently, but I could survive a vacation or two with what I learned.

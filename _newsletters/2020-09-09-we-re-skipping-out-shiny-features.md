@@ -1,6 +1,6 @@
 ---
 title: "We’re skipping our shiny features"
-excerpt: ""
+excerpt: "“Being busy” is not a good measure of progress. By focusing on what creates real value, we can make good use of our limited time."
 issue: 53
 ---
 This has been a pretty good week at work so far. A lot of projects are kicking off, the mood is good, and the possibilities endless. As we are about to build things, we are figuring out where to start. Of all the steps we could take, which is the first one?

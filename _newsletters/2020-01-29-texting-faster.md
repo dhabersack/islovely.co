@@ -1,6 +1,6 @@
 ---
 title: "Texting faster"
-excerpt: "Under the name “QuickPath”, iOS 13 now has a built-in swipe keyboard. I was skeptical at first, but it has won me over."
+excerpt: "Under the name “QuickPath”, iOS 13 now has a built-in swipe keyboard."
 issue: 21
 ---
 I am way late to this party, but I have to tell you about a cool feature I didn’t know my phone had. I only discovered it a few weeks ago, and it has already saved me hours at this point.
