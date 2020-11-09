@@ -11,13 +11,13 @@ export default ({
     className={mergeClassnames(`
       font-size-24-medium
       font-weight-700
-      margin-0
-      margin-bottom-s
-      margin-top-m
+      m-0
+      mb-12
+      mt-24
       xs:font-size-30-medium
       l:font-size-36-medium
-      l:margin-bottom-m
-      l:margin-top-l
+      l:mb-24
+      l:mt-48
     `, className)}
     {...props}
   >

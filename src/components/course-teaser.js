@@ -35,14 +35,14 @@ export default ({
         className={`
           flex
           flex-column
-          height-full
+          h-full
         `}
       >
         <a
           className={`
-            background-color-gray-100
+            bg-gray-100
             block
-            intrinsic-ratio-16-by-9
+            intrinsic-ratio-16/9
           `}
           href={permalink}
         >
@@ -55,7 +55,7 @@ export default ({
           >
             <Img
               alt={title}
-              className="height-full"
+              className="h-full"
               src={`/assets/courses/${slug}.png`}
             />
           </div>
@@ -64,15 +64,15 @@ export default ({
         <div
           className={`
             flex-grow
-            padding-horizontal-s
-            padding-vertical-s
+            px-15
+            py-12
           `}
         >
           <H2
             className={`
               font-size-16-short
-              margin-0
-              margin-bottom-xs
+              m-0
+              mb-6
             `}
           >
             <A
@@ -85,7 +85,7 @@ export default ({
           <P
             className={`
               font-size-16-medium
-              margin-0
+              m-0
             `}
           >
             {excerpt}
@@ -94,14 +94,13 @@ export default ({
 
         <footer
           className={`
-            background-color-gray-100
-            border-bottom-radius-xs
-            color-gray-600
+            bg-gray-100
             flex
             flex-wrap
             font-size-12-medium
-            padding-horizontal-s
-            padding-vertical-s
+            px-15
+            py-12
+            text-gray-600
           `}
         >
           {emails && (
@@ -109,12 +108,12 @@ export default ({
               className={`
                 align-items-center
                 inline-flex
-                margin-right-s
+                mr-15
               `}
             >
               <Img
                 alt=""
-                className="margin-right-xxs"
+                className="mr-5"
                 src="/assets/icons/email-with-letter.svg"
               />
 
@@ -131,12 +130,12 @@ export default ({
               className={`
                 align-items-center
                 inline-flex
-                margin-right-s
+                mr-15
               `}
             >
               <Img
                 alt=""
-                className="margin-right-xxs"
+                className="mr-5"
                 src="/assets/icons/video.svg"
               />
 
@@ -153,12 +152,12 @@ export default ({
               className={`
                 align-items-center
                 inline-flex
-                margin-right-s
+                mr-15
               `}
             >
               <Img
                 alt=""
-                className="margin-right-xxs"
+                className="mr-5"
                 src="/assets/icons/clock.svg"
               />
 
@@ -175,12 +174,12 @@ export default ({
               className={`
                 align-items-center
                 inline-flex
-                margin-right-s
+                mr-15
               `}
             >
               <Img
                 alt=""
-                className="margin-right-xxs"
+                className="mr-5"
                 src="/assets/icons/calendar.svg"
               />
 

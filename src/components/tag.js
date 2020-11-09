@@ -11,14 +11,15 @@ export default ({
   return (
     <HtmlTag
       className={`
-        background-color-gray-200
-        border-radius-xxs
-        color-gray-700
+        bg-gray-200
+        rounded-3
         font-size-12-medium
         inline-block
         nowrap
-        padding-xs
-        visited:color-gray-700
+        px-10
+        py-6
+        text-gray-700
+        visited:text-gray-700
       `}
       href={href}
     >

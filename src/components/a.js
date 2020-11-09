@@ -9,11 +9,11 @@ export default ({
 }) => (
   <a
     className={mergeClassnames(`
-      color-blue-500
       no-decoration
+      text-blue-500
       focus:outline
       hover:underline
-      visited:color-blue-500
+      visited:text-blue-500
     `, className)}
     {...props}
   >

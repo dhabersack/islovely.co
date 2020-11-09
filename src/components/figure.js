@@ -12,29 +12,28 @@ export default ({
 }) => (
   <figure
     className={mergeClassnames(`
-      margin-horizontal-auto
-      margin-vertical-m
-      width-full
-      l:margin-bottom-l
-      l:margin-top-l
+      mx-auto
+      my-24
+      w-full
+      l:my-48
     `, className)}
     {...props}
   >
     <Img
       alt={alt}
-      className="width-full"
+      className="w-full"
       src={src}
     />
 
     {caption != null ? (
       <figcaption
         className={`
-          color-gray-500
           font-size-12-short
           italic
-          margin-0
-          margin-top-xs
+          m-0
+          mt-6
           text-align-center
+          text-gray-500
         `}
       >
         {caption}

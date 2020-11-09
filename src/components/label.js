@@ -12,7 +12,7 @@ export default ({
       block
       font-size-16-medium
       font-weight-500
-      margin-bottom-xxs
+      mb-3
     `, className)}
     {...props}
   >

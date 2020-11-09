@@ -9,7 +9,7 @@ export default ({
     className={`
       font-size-14-medium
       font-weight-500
-      margin-bottom-m
+      mb-24
     `}
   >
     {[
@@ -34,8 +34,8 @@ export default ({
 
         <span
           className={`
-            color-gray-600
-            margin-horizontal-xxs
+            mx-5
+            text-gray-600
           `}
         >
           &raquo;
@@ -43,7 +43,7 @@ export default ({
       </React.Fragment>
     ) : (
       <span
-        className="color-gray-500"
+        className="text-gray-500"
         key={`breadcrumb-${label}`}
       >
         {label}

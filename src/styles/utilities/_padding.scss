@@ -1,153 +1,68 @@
-$_padding: (
-  horizontal: (
-    0:                 0,
-    auto:              auto,
-    xxs:               0.5rem,
-    xxs-minus-border:  0.4rem,
-    xs:                1rem,
-    xs-minus-border:   0.9rem,
-    s:                 1.5rem,
-    s-minus-border:    1.4rem,
-    m:                 2rem,
-    m-minus-border:    1.9rem,
-    l:                 2.5rem,
-    l-minus-border:    2.4rem,
-    xl:                3rem,
-    xl-minus-border:   2.9rem,
-    xxl:               3.5rem,
-    xxl-minus-border:  3.4rem,
-    span: var(--content-horizontal-padding)
-  ),
-  vertical: (
-    0:                 0,
-    auto:              auto,
-    xxs:               0.3rem,
-    xxs-minus-border:  0.2rem,
-    xs:                0.6rem,
-    xs-minus-border:   0.5rem,
-    s:                 1.2rem,
-    s-minus-border:    1.1rem,
-    m:                 2.4rem,
-    m-minus-border:    2.3rem,
-    l:                 4.8rem,
-    l-minus-border:    4.7rem,
-    xl:                6.0rem,
-    xl-minus-border:   5.9rem,
-    xxl:               9.6rem,
-    xxl-minus-border:  9.5rem
-  )
-);
-
-$sizes: (
-  0,
-  auto,
-  xxs,
-  xxs-minus-border,
-  xs,
-  xs-minus-border,
-  s,
-  s-minus-border,
-  m,
-  m-minus-border,
-  l,
-  l-minus-border,
-  xl,
-  xl-minus-border,
-  xxl,
-  xxl-minus-border,
-  span
-);
-
-@function get-horizontal-padding($size) {
-  @return map-get(map-get($_padding, horizontal), $size);
+.p-0 {
+  @include _at-breakpoints {
+    padding: 0;
+  }
 }
 
-@function get-vertical-padding($size) {
-  @return map-get(map-get($_padding, vertical), $size);
-}
-
-@mixin _padding($size) {
-  padding: get-vertical-padding($size) get-horizontal-padding($size);
-}
-
-@mixin _padding-top($size) {
-  padding-top: get-vertical-padding($size);
-}
-
-@mixin _padding-right($size) {
-  padding-right: get-horizontal-padding($size);
-}
-
-@mixin _padding-bottom($size) {
-  padding-bottom: get-vertical-padding($size);
-}
-
-@mixin _padding-left($size) {
-  padding-left: get-horizontal-padding($size);
-}
-
-@mixin _padding-vertical($size) {
-  @include _padding-top($size);
-  @include _padding-bottom($size);
-}
-
-@mixin _padding-horizontal($size) {
-  @include _padding-left($size);
-  @include _padding-right($size);
-}
-
-@each $size in $sizes {
-  .padding-#{$size} {
+@each $key, $value in (
+  "0":    0,
+  "5":    0.5rem,
+  "10":   1rem,
+  "15":   1.5rem,
+  "20":   2rem,
+  "25":   2.5rem,
+  "30":   3rem,
+  "35":   3.5rem,
+  "auto": auto,
+  "span": var(--content-horizontal-padding)
+) {
+  .pl-#{$key} {
     @include _at-breakpoints {
-      @include _padding($size);
+      padding-left: $value;
+    }
+  }
+
+  .pr-#{$key} {
+    @include _at-breakpoints {
+      padding-right: $value;
+    }
+  }
+
+  .px-#{$key} {
+    @include _at-breakpoints {
+      padding-left: $value;
+      padding-right: $value;
     }
   }
 }
 
-@each $size in $sizes {
-  .padding-top-#{$size} {
+@each $key, $value in (
+  "0":    0,
+  "3":    0.3rem,
+  "6":    0.6rem,
+  "12":   1.2rem,
+  "24":   2.4rem,
+  "48":   4.8rem,
+  "60":   6rem,
+  "96":   9.6rem,
+  "auto": auto,
+) {
+  .pb-#{$key} {
     @include _at-breakpoints {
-      @include _padding-top($size);
+      padding-bottom: $value;
     }
   }
-}
 
-@each $size in $sizes {
-  .padding-right-#{$size} {
+  .pt-#{$key} {
     @include _at-breakpoints {
-      @include _padding-right($size);
+      padding-top: $value;
     }
   }
-}
 
-@each $size in $sizes {
-  .padding-bottom-#{$size} {
+  .py-#{$key} {
     @include _at-breakpoints {
-      @include _padding-bottom($size);
-    }
-  }
-}
-
-@each $size in $sizes {
-  .padding-left-#{$size} {
-    @include _at-breakpoints {
-      @include _padding-left($size);
-    }
-  }
-}
-
-@each $size in $sizes {
-  .padding-vertical-#{$size} {
-    @include _at-breakpoints {
-      @include _padding-vertical($size);
-    }
-  }
-}
-
-@each $size in $sizes {
-  .padding-horizontal-#{$size} {
-    @include _at-breakpoints {
-      @include _padding-horizontal($size);
+      padding-bottom: $value;
+      padding-top: $value;
     }
   }
 }

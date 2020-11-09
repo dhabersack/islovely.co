@@ -10,25 +10,25 @@ export default () => (
       className={`
         flex
         flex-wrap
-        list-style-none
-        margin-0
-        padding-0
-        width-full
+        list-none
+        m-0
+        p-0
+        w-full
       `}
     >
       <Li
         className={`
           font-size-16-short
           font-weight-500
-          margin-bottom-0
-          margin-right-xs
-          xs:margin-right-s
+          mb-0
+          mr-10
+          xs:mr-15
         `}
       >
         <A
           className={`
             inline-block
-            padding-vertical-xs
+            py-6
           `}
           href="/courses"
         >
@@ -40,15 +40,15 @@ export default () => (
         className={`
           font-size-16-short
           font-weight-500
-          margin-bottom-0
-          margin-right-xs
-          xs:margin-right-s
+          mb-0
+          mr-10
+          xs:mr-15
         `}
       >
         <A
           className={`
             inline-block
-            padding-vertical-xs
+            py-6
           `}
           href="/posts"
         >
@@ -60,15 +60,15 @@ export default () => (
         className={`
           font-size-16-short
           font-weight-500
-          margin-bottom-0
-          margin-right-xs
-          xs:margin-right-s
+          mb-0
+          mr-10
+          xs:mr-15
         `}
       >
         <A
           className={`
             inline-block
-            padding-vertical-xs
+            py-6
           `}
           href="/firetips"
         >
@@ -80,15 +80,15 @@ export default () => (
         className={`
           font-size-16-short
           font-weight-500
-          margin-bottom-0
-          margin-right-xs
-          xs:margin-right-s
+          mb-0
+          mr-10
+          xs:mr-15
         `}
       >
         <A
           className={`
             inline-block
-            padding-vertical-xs
+            py-6
           `}
           href="/newsletter"
         >
@@ -100,15 +100,15 @@ export default () => (
         className={`
           font-size-16-short
           font-weight-500
-          margin-bottom-0
-          margin-right-xs
-          xs:margin-right-s
+          mb-0
+          mr-10
+          xs:mr-15
         `}
       >
         <A
           className={`
             inline-block
-            padding-vertical-xs
+            py-6
           `}
           href="/about"
         >
@@ -120,14 +120,14 @@ export default () => (
         className={`
           font-size-16-short
           font-weight-500
-          margin-bottom-0
+          mb-0
         `}
       >
         <A
           className={`
             inline-block
-            margin-bottom-0
-            padding-vertical-xs
+            mb-0
+            py-6
           `}
           href="/contact"
         >

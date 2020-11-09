@@ -15,9 +15,9 @@ export default () => (
     >
       <div
         className={`
-          height-24
-          margin-right-xxs
-          width-24
+          h-24
+          mr-5
+          w-24
         `}
       >
         <CookieIcon />

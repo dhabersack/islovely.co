@@ -6,18 +6,18 @@ export default ({
   <input
     className={`
       appearance-none
-      background-color-white
-      border-color-gray-300
-      border-radius-xs
-      border-style-solid
-      border-width-s
-      color-blue-500
+      bg-white
+      border-1
+      border-gray-300
+      border-solid
       cursor-pointer
       block
-      height-24
-      margin-0
+      h-24
+      m-0
       outline-none
-      width-24
+      rounded-6
+      text-blue-500
+      w-24
 
       checked:background-image-checkbox
 

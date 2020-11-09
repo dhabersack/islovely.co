@@ -27,14 +27,14 @@ export default ({
     <>
       <footer
         className={`
-          color-gray-600
           font-size-12-short
+          text-gray-600
         `}
       >
         <Strong
           className={`
             font-weight-500
-            margin-right-xxs
+            mr-5
           `}
         >
           #{issue}
@@ -46,7 +46,7 @@ export default ({
       <H2
         className={`
           font-size-20-medium
-          margin-0
+          m-0
         `}
       >
         <A

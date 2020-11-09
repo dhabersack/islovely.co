@@ -51,7 +51,7 @@ export default () => {
         onSubmit={handleSubmit}
       >
         <div
-          className="margin-bottom-s"
+          className="mb-12"
         >
           <Label
             htmlFor="email"
@@ -61,10 +61,10 @@ export default () => {
 
           <div
             className={`
-              s:columns-8-of-12
-              m:columns-6-of-10
-              l:columns-5-of-8
-              xl:columns-4-of-8
+              s:col-8/12
+              m:col-6/10
+              l:col-5/8
+              xl:col-4/8
             `}
           >
             <Input
@@ -78,11 +78,11 @@ export default () => {
           <ValidationError
             className={`
               block
-              color-red-500
               font-size-12-short
               font-weight-500
               italic
-              margin-vertical-xs
+              my-6
+              text-red-500
             `}
             errors={errors}
             field="email"
@@ -91,7 +91,7 @@ export default () => {
         </div>
 
         <div
-          className="margin-bottom-s"
+          className="mb-12"
         >
           <Label
             htmlFor="message"
@@ -109,11 +109,11 @@ export default () => {
           <ValidationError
             className={`
               block
-              color-red-500
               font-size-12-short
               font-weight-500
               italic
-              margin-vertical-xs
+              my-6
+              text-red-500
             `}
             errors={errors}
             field="message"
@@ -123,12 +123,12 @@ export default () => {
 
         <div
           className={`
-            margin-bottom-s
+            mb-12
             flex
           `}
         >
           <div
-            className="margin-right-xs"
+            className="mr-10"
           >
             <Checkbox
               id="data-processing-consent"

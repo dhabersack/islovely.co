@@ -48,7 +48,7 @@ export default ({
 
         {newsletters.map(newsletter => (
           <div
-            className="margin-bottom-m"
+            className="mb-24"
             key={`newsletter-${newsletter.id}`}
           >
             <NewsletterTeaser

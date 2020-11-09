@@ -5,10 +5,10 @@ export default ({
 }) => (
   <div
     className={`
-      background-color-white
-      border-radius-xs
-      box-shadow-s
+      bg-white
       overflow-hidden
+      rounded-6
+      shadow-s
     `}
   >
     {children}

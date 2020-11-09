@@ -56,20 +56,20 @@ export default ({
 
         <ul
           className={`
-            list-style-none
-            margin-bottom-m
-            padding-0
-            s:columns-10-of-12
-            s:margin-horizontal-auto
-            m:columns-8-of-10
-            l:columns-6-of-8
+            list-none
+            mb-24
+            p-0
+            s:col-10/12
+            s:mx-auto
+            m:col-8/10
+            l:col-6/8
           `}
         >
           {listItems.map(listItem => (
             <Li
               className={`
                 flex
-                margin-bottom-s
+                mb-12
               `}
               key={`newsletter-benefit-${listItem}`}
             >
@@ -77,11 +77,11 @@ export default ({
                 alt=""
                 className={`
                   flex-no-shrink
-                  height-24
-                  margin-right-xs
-                  width-24
-                  m:height-27
-                  m:width-27
+                  h-24
+                  mr-10
+                  w-24
+                  m:h-27
+                  m:w-27
                 `}
                 src="/assets/icons/checkmark.svg"
               />
@@ -103,7 +103,7 @@ export default ({
         </P>
 
         <div
-          className="margin-bottom-l"
+          className="mb-48"
         >
           <ConvertkitForm
             sourceUrl={location.href}
@@ -117,11 +117,11 @@ export default ({
         </H2>
 
         <div
-          className="margin-bottom-l"
+          className="mb-48"
         >
           {newsletters.map(newsletter => (
             <div
-              className="margin-bottom-m"
+              className="mb-24"
               key={`newsletter-${newsletter.id}`}
             >
               <NewsletterTeaser
@@ -133,15 +133,15 @@ export default ({
 
         <a
           className={`
-            background-color-yellow-400
-            border-radius-xxs
-            color-gray-900
+            bg-yellow-400
             font-size-14-short
             font-weight-500
             inline-block
-            padding-horizontal-m
-            padding-vertical-s
-            visited:color-gray-900
+            px-20
+            py-12
+            rounded-3
+            text-gray-900
+            visited:text-gray-900
           `}
           href="/newsletter/archive"
         >

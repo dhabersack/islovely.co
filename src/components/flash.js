@@ -21,15 +21,15 @@ export default ({
   return (
     <P
       className={`
-        background-color-${backgroundColor}
-        border-color-${borderColor}
-        border-radius-xs
-        border-style-solid
-        border-width-s
+        bg-${backgroundColor}
+        border-${borderColor}
+        border-1
+        border-solid
         font-size-14-medium
-        margin-bottom-m
-        padding-horizontal-s
-        padding-vertical-s
+        mb-24
+        px-15
+        py-12
+        rounded-6
         m:font-size-16-medium
       `}
     >

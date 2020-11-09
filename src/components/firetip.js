@@ -30,22 +30,22 @@ export default ({
     <Card>
       <div
         className={`
-          padding-horizontal-s
-          padding-vertical-s
+          px-15
+          py-12
         `}
       >
         <H2
           className={`
             font-size-16-short
             font-weight-600
-            margin-0
-            margin-bottom-s
+            m-0
+            mb-12
           `}
         >
           <A
             className={`
-              color-gray-900
-              visited:color-gray-900
+              text-gray-900
+              visited:text-gray-900
             `}
             href={`/firetips/${slug}`}
           >
@@ -66,8 +66,8 @@ export default ({
           {tags.map(tag => (
             <div
               className={`
-                margin-bottom-xxs
-                margin-right-xxs
+                mb-3
+                mr-5
               `}
               key={`tag-${tag}`}
             >
@@ -83,20 +83,20 @@ export default ({
 
       <footer
         className={`
-          background-color-gray-100
-          padding-horizontal-s
-          padding-vertical-s
+          bg-gray-100
+          px-15
+          py-12
         `}
       >
         <P
           className={`
-            color-gray-600
             font-size-12-medium
-            margin-0
+            m-0
+            text-gray-600
           `}
         >
           <span
-            className="margin-right-xxs"
+            className="mr-5"
           >
             Permalink:
           </span>

@@ -48,7 +48,7 @@ export default ({
           className={`
             flex
             flex-wrap
-            margin-bottom-m
+            mb-24
           `}
         >
           {tagsSortedByCount.map(tag => (
@@ -56,8 +56,8 @@ export default ({
               className={`
                 flex
                 align-items-center
-                margin-bottom-xs
-                margin-right-xs
+                mb-6
+                mr-10
               `}
               key={`tag-${tag}`}
             >
@@ -67,8 +67,8 @@ export default ({
                 {tag}
               </Tag>&nbsp;<span
                 className={`
-                  color-gray-600
                   font-size-12-medium
+                  text-gray-600
                 `}
               >
                 &times; {tagCounts[tag]}
@@ -79,7 +79,7 @@ export default ({
 
         {firetips.map(firetip => (
           <div
-            className="margin-bottom-xl"
+            className="mb-60"
             key={`firetip-${firetip.fields.slug}`}
           >
             <Firetip

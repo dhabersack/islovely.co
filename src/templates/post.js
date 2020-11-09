@@ -70,7 +70,7 @@ export default ({
         </H1>
 
         <div
-          className="margin-bottom-m"
+          className="mb-24"
         >
           <PostMeta
             date={date}
@@ -82,8 +82,8 @@ export default ({
         alt={heroAlt}
         caption={heroCaption}
         className={`
-          margin-0
-          margin-bottom-m
+          m-0
+          mb-24
         `}
         src={`/assets/heroes/${slug}.jpg`}
       />
@@ -92,7 +92,7 @@ export default ({
         <div
           className={`
             break-words
-            margin-bottom-xl
+            mb-60
           `}
         >
           <MDXRenderer>
@@ -104,14 +104,14 @@ export default ({
           className={`
             flex
             flex-wrap
-            margin-bottom-xl
+            mb-60
           `}
         >
           {categories.map(category => (
             <div
               className={`
-                margin-bottom-xxs
-                margin-right-xxs
+                mb-3
+                mr-5
               `}
               key={`category-${category}`}
             >

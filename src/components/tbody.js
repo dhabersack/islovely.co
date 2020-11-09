@@ -9,7 +9,7 @@ export default ({
 }) => (
   <tbody
     className={mergeClassnames(`
-      background-color-gray-200
+      bg-gray-200
     `, className)}
     {...props}
   >

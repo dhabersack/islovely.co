@@ -49,7 +49,7 @@ export default ({
 
         {firetips.map(firetip => (
           <div
-            className="margin-bottom-xl"
+            className="mb-60"
             key={`firetip-${firetip.fields.slug}`}
           >
             <Firetip

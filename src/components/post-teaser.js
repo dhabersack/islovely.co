@@ -36,7 +36,7 @@ export default ({
         className={`
           flex
           flex-column
-          height-full
+          h-full
         `}
       >
         <a
@@ -44,7 +44,7 @@ export default ({
         >
           <Img
             alt={heroAlt}
-            className="width-full"
+            className="w-full"
             src={`/assets/heroes/${slug}--teaser.jpg`}
           />
         </a>
@@ -53,17 +53,17 @@ export default ({
           className={`
             flex
             flex-column
-            height-full
-            padding-horizontal-s
-            padding-vertical-s
+            h-full
+            px-15
+            py-12
           `}
         >
           <H2
             className={`
               font-size-16-short
               font-weight-700
-              margin-0
-              margin-bottom-xs
+              m-0
+              mb-6
             `}
           >
             <A
@@ -75,10 +75,10 @@ export default ({
 
           <P
             className={`
-              color-gray-700
               flex-grow
               font-size-14-medium
-              margin-bottom-m
+              mb-24
+              text-gray-700
               m:font-size-14-medium
             `}
           >
@@ -89,14 +89,14 @@ export default ({
             className={`
               flex
               flex-wrap
-              margin-bottom-xs
+              mb-6
             `}
           >
             {categories.map(category => (
               <div
                 className={`
-                  margin-bottom-xxs
-                  margin-right-xxs
+                  mb-3
+                  mr-5
                 `}
                 key={category}
               >

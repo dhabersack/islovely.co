@@ -9,18 +9,18 @@ export default () => (
   <footer
     className={`
       align-items-center
-      color-gray-600
       flex
       flex-column
-      padding-vertical-m
+      py-24
+      text-gray-600
     `}
   >
     <div
       className={`
         font-size-16-short
-        margin-0
-        margin-bottom-m
-        padding-vertical-xxs
+        m-0
+        mb-24
+        py-3
       `}
     >
       &copy; Dom Habersack, 2020
@@ -32,16 +32,16 @@ export default () => (
         flex-wrap
         font-size-16-medium
         justify-center
-        list-style-none
-        margin-0
-        margin-bottom-xs
-        padding-0
+        list-none
+        m-0
+        mb-6
+        p-0
       `}
     >
       <A
         className={`
           block
-          margin-horizontal-xs
+          mx-10
         `}
         href="/legal-notice"
       >
@@ -53,7 +53,7 @@ export default () => (
           block
           iubenda-embed
           iubenda-nostyle
-          margin-horizontal-xs
+          mx-10
           no-brand
         `}
         href="https://www.iubenda.com/privacy-policy/31487586"
@@ -66,7 +66,7 @@ export default () => (
           block
           iubenda-embed
           iubenda-nostyle
-          margin-horizontal-xs
+          mx-10
           no-brand
         `}
         href="https://www.iubenda.com/privacy-policy/31487586/cookie-policy"
@@ -76,7 +76,7 @@ export default () => (
     </div>
 
     <div
-      className="margin-bottom-m"
+      className="mb-24"
     >
       <UpdateCookieSettingsTrigger />
     </div>
@@ -86,24 +86,24 @@ export default () => (
         flex
         flex-wrap
         justify-center
-        list-style-none
-        margin-0
-        margin-bottom-m
-        padding-0
+        list-none
+        m-0
+        mb-24
+        p-0
       `}
     >
       <A
         className={`
           flex
           font-size-16
-          margin-horizontal-xs
-          padding-vertical-xxs
+          mx-10
+          py-3
         `}
         href="https://github.com/domhabersack"
       >
         <Img
           alt="domhabersack on GitHub"
-          className="margin-right-xxs"
+          className="mr-5"
           src="/icons/github.svg"
         />
 
@@ -116,14 +116,14 @@ export default () => (
         className={`
           flex
           font-size-16
-          margin-horizontal-xs
-          padding-vertical-xxs
+          mx-10
+          py-3
         `}
         href="https://twitter.com/domhabersack"
       >
         <Img
           alt="domhabersack on Twitter"
-          className="margin-right-xxs"
+          className="mr-5"
           src="/icons/twitter.svg"
         />
 
@@ -136,14 +136,14 @@ export default () => (
         className={`
           flex
           font-size-16
-          margin-horizontal-xs
-          padding-vertical-xxs
+          mx-10
+          py-3
         `}
         href="https://dribbble.com/domhabersack"
       >
         <Img
           alt="domhabersack on dribbble"
-          className="margin-right-xxs"
+          className="mr-5"
           src="/icons/dribbble.svg"
         />
 
@@ -156,14 +156,14 @@ export default () => (
         className={`
           flex
           font-size-16
-          margin-horizontal-xs
-          padding-vertical-xxs
+          mx-10
+          py-3
         `}
         href="https://mastodon.social/@domhabersack"
       >
         <Img
           alt="@domhabersack on Mastodon"
-          className="margin-right-xxs"
+          className="mr-5"
           src="/icons/mastodon.svg"
         />
 
@@ -177,7 +177,7 @@ export default () => (
       className={`
         font-size-14
         gray-600
-        margin-0
+        m-0
       `}
     >
       Illustrations by <A href="https://icons8.com">Icons8</A>.

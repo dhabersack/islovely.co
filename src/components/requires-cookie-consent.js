@@ -15,30 +15,31 @@ export default ({
   return isCookieConsentGiven ? children : (
     <div
       className={mergeClassnames(`
-        background-color-gray-100
-        border-color-gray-500
-        border-radius-xs
-        border-style-dashed
-        border-width-m
+        bg-gray-100
+        border-2
+        border-dashed
+        border-gray-500
+        rounded-6
       `, className)}
     >
       <div
         className={`
           align-items-center
-          color-gray-600
           flex
           flex-column
           justify-center
-          padding-s
+          px-15
+          py-12
           text-align-center
+          text-gray-600
         `}
       >
         <P
           className={`
             font-size-14
             italic
-            margin-0
-            margin-bottom-s
+            m-0
+            mb-12
           `}
         >
           Cannot show {target ?? 'content'} because cookie consent was not given.

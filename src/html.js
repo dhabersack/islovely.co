@@ -12,7 +12,7 @@ export default ({
 }) => (
   <html
     className={`
-      height-full
+      h-full
       sans-serif
     `}
     lang="en-US"
@@ -41,11 +41,11 @@ export default ({
 
     <body
       className={`
-        background-color-white
-        color-gray-700
-        height-full
-        margin-0
-        padding-0
+        bg-white
+        h-full
+        m-0
+        p-0
+        text-gray-700
       `}
       {...bodyAttributes}
     >

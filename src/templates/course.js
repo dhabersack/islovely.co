@@ -73,7 +73,7 @@ export default ({
             flex
             flex-wrap
             font-size-12-medium
-            margin-bottom-s
+            mb-12
           `}
         >
           {emails && (
@@ -81,12 +81,12 @@ export default ({
               className={`
                 align-items-center
                 inline-flex
-                margin-right-s
+                mr-15
               `}
             >
               <Img
                 alt=""
-                className="margin-right-xxs"
+                className="mr-5"
                 src="/assets/icons/email-with-letter.svg"
               />
 
@@ -101,12 +101,12 @@ export default ({
               className={`
                 align-items-center
                 inline-flex
-                margin-right-s
+                mr-15
               `}
             >
               <Img
                 alt=""
-                className="margin-right-xxs"
+                className="mr-5"
                 src="/assets/icons/video.svg"
               />
 
@@ -121,12 +121,12 @@ export default ({
               className={`
                 align-items-center
                 inline-flex
-                margin-right-s
+                mr-15
               `}
             >
               <Img
                 alt=""
-                className="margin-right-xxs"
+                className="mr-5"
                 src="/assets/icons/clock.svg"
               />
 
@@ -141,12 +141,12 @@ export default ({
               className={`
                 align-items-center
                 inline-flex
-                margin-right-s
+                mr-15
               `}
             >
               <Img
                 alt=""
-                className="margin-right-xxs"
+                className="mr-5"
                 src="/assets/icons/calendar.svg"
               />
 
@@ -159,7 +159,7 @@ export default ({
 
         <Img
           alt={title}
-          className="height-192"
+          className="h-192"
           src={`/assets/courses/${slug}.png`}
         />
 
@@ -168,7 +168,7 @@ export default ({
         </MDXRenderer>
 
         <div
-          className="margin-bottom-xl"
+          className="mb-60"
         >
           <ConvertkitForm
             cta={cta}
@@ -185,12 +185,12 @@ export default ({
             grid
             grid-columns-1
             grid-column-gap
-            grid-row-gap-l
+            grid-row-gap-25
             xs:grid-columns-2
-            xs:grid-row-gap-xs
+            xs:grid-row-gap-10
             m:grid-columns-3
-            m:grid-row-gap-m
-            l:grid-row-gap-l
+            m:grid-row-gap-20
+            l:grid-row-gap-25
           `}
         >
           {playlist.map(({
@@ -203,7 +203,7 @@ export default ({
               key={`video-${title}`}
             >
               <div
-                className="margin-bottom-xxs"
+                className="mb-3"
               >
                 <Video
                   title={title}
@@ -219,7 +219,7 @@ export default ({
                 `}
               >
                 <span
-                  className="color-gray-500"
+                  className="text-gray-500"
                 >
                   #{index + 1}
                 </span>
@@ -231,7 +231,7 @@ export default ({
                 {' '}
 
                 <span
-                  className="color-gray-500"
+                  className="text-gray-500"
                 >
                   ({duration})
                 </span>

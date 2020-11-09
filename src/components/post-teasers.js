@@ -10,11 +10,11 @@ export default ({
       grid
       grid-columns-1
       grid-column-gap
-      grid-row-gap-l
+      grid-row-gap-25
       s:grid-columns-2
-      s:grid-row-gap-s
+      s:grid-row-gap-15
       m:grid-columns-3
-      m:grid-row-gap-m
+      m:grid-row-gap-20
       l:grid-columns-4
     `}
   >

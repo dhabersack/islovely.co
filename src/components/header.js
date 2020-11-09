@@ -11,14 +11,14 @@ export default () => (
       flex
       flex-wrap
       justify-between
-      padding-vertical-s
+      py-12
     `}
   >
     <A
       className={`
         flex-no-shrink
-        margin-right-m
-        padding-vertical-xs
+        mr-20
+        py-6
       `}
       href="/"
     >

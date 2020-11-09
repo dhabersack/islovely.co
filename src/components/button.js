@@ -11,38 +11,36 @@ const Button = ({
 }) => {
   const stylesForCategory = {
     primary: `
-      background-color-blue-500
-      color-gray-100
+      bg-blue-500
       font-size-16-medium
-      padding-horizontal-m
-      padding-vertical-s
-
-      hover:background-color-blue-600
+      px-20
+      py-12
+      text-gray-100
+      hover:bg-blue-600
     `,
     regular: `
-      background-color-gray-300
-      color-gray-700
+      bg-gray-300
       font-size-14-medium
-      padding-xs
-
-      hover:background-color-gray-400
+      px-10
+      py-6
+      text-gray-700
+      hover:bg-gray-400
     `
   }[category]
 
   return (
     <button
       className={mergeClassnames(`
-        border-width-0
-        border-radius-xxs
+        border-transparent
+        border-1
+        rounded-3
         cursor-pointer
-        margin-0
+        m-0
         outline-none
-
         focus:outline
-
-        disabled:background-color-gray-500
-        disabled:color-gray-200
+        disabled:bg-gray-500
         disabled:cursor-not-allowed
+        disabled:text-gray-200
 
         ${stylesForCategory}
       `, className)}

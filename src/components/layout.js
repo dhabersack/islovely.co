@@ -26,6 +26,7 @@ import Pre from './pre'
 import Strong from './strong'
 import Table from './table'
 import Taper from './taper'
+import Tbody from './tbody'
 import Td from './td'
 import Th from './th'
 import Tr from './tr'
@@ -53,6 +54,7 @@ const MDX_COMPONENT_MAPPING = {
   pre: Pre,
   strong: Strong,
   table: Table,
+  tbody: Tbody,
   td: Td,
   th: Th,
   tr: Tr,
@@ -76,13 +78,13 @@ export default ({
         className={`
           flex
           flex-column
-          height-full
+          h-full
         `}
       >
         <div
           className={`
             flex-noshrink
-            margin-horizontal-m
+            mx-20
           `}
         >
           <Header />
@@ -93,9 +95,9 @@ export default ({
             l-default__main
             flex-grow
             flex-no-shrink
-            padding-bottom-xl
-            padding-horizontal-span
-            padding-top-l
+            pb-60
+            pt-48
+            px-span
           `}
         >
           <Taper>
@@ -109,9 +111,9 @@ export default ({
 
         <div
           className={`
-            background-color-gray-100
+            bg-gray-100
             flex-none
-            padding-horizontal-span
+            px-span
           `}
         >
           <Footer />

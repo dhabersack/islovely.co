@@ -9,19 +9,19 @@ export default ({
 }) => (
   <blockquote
     className={mergeClassnames(`
-      border-color-gray-600
-      border-left-width-l
-      border-style-solid
-      border-width-0
-      columns-10-of-12
+      border-0
+      border-gray-600
+      border-l-3
+      border-solid
+      col-10/12
       italic
-      margin-horizontal-auto
-      margin-vertical-m
-      padding-left-xs
+      mx-auto
+      my-24
+      pl-10
       relative
-      m:columns-8-of-10
-      l:columns-6-of-8
-      l:margin-vertical-l
+      m:col-8/10
+      l:col-6/8
+      l:my-48
     `, className)}
     {...props}
   >

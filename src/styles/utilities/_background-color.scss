@@ -1,69 +1,35 @@
-@mixin _background-color($color, $shade: 0) {
+@mixin _bg($color, $shade: "0") {
   background-color: map-get(map-get($_colors, $color), $shade);
 }
 
+@function qualifier($key, $value) {
+  @if $key != "0" {
+    @return -#{$key}
+  }
+
+  @return ""
+}
+
 @each $color, $list in $_colors {
-  @each $label, $value in $list {
-    @if $label == 0 {
-      .background-color-#{"" + $color} {
-        @include _at-breakpoints {
-          background-color: $value;
-        }
-      }
+  @each $key, $value in $list {
+    .bg-#{$color}#{qualifier($key, $value)} {
+      background-color: $value;
+    }
 
-      .checked\:background-color-#{"" + $color}:checked {
-        @include _at-breakpoints {
-          background-color: $value;
-        }
-      }
+    .checked\:bg-#{$color}#{qualifier($key, $value)}:checked {
+      background-color: $value;
+    }
 
-      .disabled\:background-color-#{"" + $color}:disabled {
-        @include _at-breakpoints {
-          background-color: $value;
-        }
-      }
+    .disabled\:bg-#{$color}#{qualifier($key, $value)}:disabled {
+      background-color: $value;
+    }
 
-      .hover\:background-color-#{"" + $color}:hover {
-        @include _at-breakpoints {
-          background-color: $value;
-        }
-      }
+    .hover\:bg-#{$color}#{qualifier($key, $value)}:hover {
+      background-color: $value;
+    }
 
-      .visited\:background-color-#{"" + $color}:visited {
-        @include _at-breakpoints {
-          background-color: $value;
-        }
-      }
-    } @else {
-      .background-color-#{"" + $color}-#{$label} {
-        @include _at-breakpoints {
-          background-color: $value;
-        }
-      }
-
-      .checked\:background-color-#{"" + $color}-#{$label}:checked {
-        @include _at-breakpoints {
-          background-color: $value;
-        }
-      }
-
-      .disabled\:background-color-#{"" + $color}-#{$label}:disabled {
-        @include _at-breakpoints {
-          background-color: $value;
-        }
-      }
-
-      .hover\:background-color-#{"" + $color}-#{$label}:hover {
-        @include _at-breakpoints {
-          background-color: $value;
-        }
-      }
-
-      .visited\:background-color-#{"" + $color}-#{$label}:visited {
-        @include _at-breakpoints {
-          background-color: $value;
-        }
-      }
+    .visited\:bg-#{$color}#{qualifier($key, $value)}:visited {
+      background-color: $value;
     }
   }
 }

@@ -8,11 +8,11 @@ export default ({
   youtubeId,
 }) => (
   <RequiresCookieConsent
-    className="intrinsic-ratio-16-by-10"
+    className="intrinsic-ratio-16/10"
     target="video"
   >
     <div
-      className="intrinsic-ratio-16-by-10"
+      className="intrinsic-ratio-16/10"
     >
       {vimeoId && (
         <iframe

@@ -10,21 +10,21 @@ export default ({
   <textarea
     className={mergeClassnames(`
       appearance-none
-      background-color-white
+      bg-white
       block
-      border-color-gray-300
-      border-radius-xxs
-      border-style-solid
-      border-width-s
-      color-gray-700
+      border-1
+      border-gray-300
+      border-solid
       font-size-16-medium
       font-weight-400
-      margin-0
+      m-0
       outline-none
-      padding-horizontal-xs-minus-border
-      padding-vertical-s-minus-border
-      width-full
-      focus:border-color-blue-400
+      px-10
+      py-12
+      rounded-3
+      text-gray-700
+      w-full
+      focus:border-blue-400
     `, className)}
     {...props}
   >

@@ -9,13 +9,13 @@ export default ({
 }) => (
   <code
     className={mergeClassnames(`
-      background-color-gray-300
-      border-radius-xxs
-      color-gray-800
+      bg-gray-300
+      rounded-3
       font-weight-300
       monospace
-      padding-horizontal-xxs
-      padding-vertical-xxs
+      px-5
+      py-3
+      text-gray-800
     `, className)}
     {...props}
   >

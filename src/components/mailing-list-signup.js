@@ -10,18 +10,17 @@ export default ({
 }) => (
   <div
     className={`
-      background-color-gray-200
-      border-radius-xs
-      padding-horizontal-s
-      padding-vertical-s
+      bg-gray-200
+      rounded-6
+      px-15
+      py-12
     `}
   >
     <H1
       className={`
         font-size-24-short
-        margin-0
-        margin-bottom-xs
-        margin-top-0
+        m-0
+        mb-6
       `}
     >
       There is more to learn
