@@ -185,12 +185,12 @@ export default ({
             grid
             grid-columns-1
             grid-column-gap
-            grid-row-gap-l
+            grid-row-gap-25
             xs:grid-columns-2
-            xs:grid-row-gap-xs
+            xs:grid-row-gap-10
             m:grid-columns-3
-            m:grid-row-gap-m
-            l:grid-row-gap-l
+            m:grid-row-gap-20
+            l:grid-row-gap-25
           `}
         >
           {playlist.map(({

@@ -1,25 +1,22 @@
-$_grid-row-gap: (
-  xxs: 0.5rem,
-  xs:  1rem,
-  s:   1.5rem,
-  m:   2rem,
-  l:   2.5rem,
-  xl:  3rem,
-  xxl: 3.5rem
-);
-
 .grid-column-gap {
   grid-column-gap: var(--grid-gutter);
 }
 
-@each $size in (xxs, xs, s, m, l, xl, xxl) {
+@each $key, $value in (
+  "5":  0.5rem,
+  "10": 1rem,
+  "15": 1.5rem,
+  "20": 2rem,
+  "25": 2.5rem,
+  "30": 3rem,
+  "35": 3.5rem
+) {
   .grid-row-gap-#{$size} {
     @include _at-breakpoints {
-      grid-row-gap: map-get($_grid-row-gap, $size);
+      grid-row-gap: $value;
     }
   }
 }
-
 
 @for $columns from 1 through 4 {
   .grid-columns-#{$columns} {
