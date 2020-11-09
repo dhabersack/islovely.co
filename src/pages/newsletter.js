@@ -56,7 +56,7 @@ export default ({
 
         <ul
           className={`
-            list-style-none
+            list-none
             mb-24
             p-0
             s:col-10/12

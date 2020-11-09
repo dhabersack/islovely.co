@@ -32,7 +32,7 @@ export default () => (
         flex-wrap
         font-size-16-medium
         justify-center
-        list-style-none
+        list-none
         m-0
         mb-6
         p-0
@@ -86,7 +86,7 @@ export default () => (
         flex
         flex-wrap
         justify-center
-        list-style-none
+        list-none
         m-0
         mb-24
         p-0

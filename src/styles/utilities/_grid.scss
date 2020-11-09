@@ -11,7 +11,7 @@
   "30": 3rem,
   "35": 3.5rem
 ) {
-  .grid-row-gap-#{$size} {
+  .grid-row-gap-#{$key} {
     @include _at-breakpoints {
       grid-row-gap: $value;
     }

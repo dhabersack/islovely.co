@@ -10,7 +10,7 @@ export default () => (
       className={`
         flex
         flex-wrap
-        list-style-none
+        list-none
         m-0
         p-0
         w-full

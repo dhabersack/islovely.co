@@ -10,7 +10,7 @@ export default ({
   <ol
     className={mergeClassnames(`
       col-10/12
-      list-style-decimal
+      list-decimal
       mb-12
       mx-auto
       mt-0

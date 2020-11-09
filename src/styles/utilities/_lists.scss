@@ -1,9 +1,5 @@
-@mixin _list-style($style) {
-  list-style: $style;
-}
-
 @each $style in (decimal, disk, none) {
-  .list-style-#{$style} {
-    @include _list-style($style);
+  .list-#{$style} {
+    list-style: $style;
   }
 }

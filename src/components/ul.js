@@ -10,7 +10,7 @@ export default ({
   <ul
     className={mergeClassnames(`
       col-10/12
-      list-style-disc
+      list-disc
       mb-12
       mx-auto
       mt-0

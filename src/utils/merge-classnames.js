@@ -1,5 +1,5 @@
 const PREFIXES = [
-  'columns-',
+  'col-',
   'font-size-',
   'font-weight-',
   'mb-',
@@ -10,13 +10,17 @@ const PREFIXES = [
 ]
 
 const FULL_OVERRIDES = {
+  'list-none': [
+    'list-disc',
+    'list-decimal',
+  ],
   'm-0': [
     'mt-',
     'mr-',
     'mb-',
     'ml-',
     'mx-',
-    'my-'
+    'my-',
   ],
   'p-0': [
     'pt-',
@@ -24,13 +28,13 @@ const FULL_OVERRIDES = {
     'pb-',
     'pl-',
     'px-',
-    'py-'
+    'py-',
   ],
   'rounded-0': [
-    'rounded-'
+    'rounded-',
   ],
   'w-full': [
-    'columns-'
+    'col-',
   ]
 }
 
