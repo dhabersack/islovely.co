@@ -74,7 +74,7 @@ export default ({
       />
 
       <meta
-        content={title ? `${title} · ${siteTitle}` : siteTitle}
+        content={title ?? siteTitle}
         property="og:title"
       />
 
