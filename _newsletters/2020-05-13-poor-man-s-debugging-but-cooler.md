@@ -1,6 +1,6 @@
 ---
 title: "Poor man’s debugging, but cooler"
-excerpt: "We can access the variables logged to the browser’s Dev Tools to do more with them."
+excerpt: "Annoyed with how browsers log variables to the console? We can access and do more useful things with them."
 issue: 36
 ---
 As far as debugging methods go, good old `console.log` does not get enough love. While full debugger-sessions are nice, sometimes a boring log message is all you need. Browsers have a neat feature that makes those messages much more helpful when we’re trying to fix bugs.

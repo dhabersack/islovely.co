@@ -1,6 +1,6 @@
 ---
 title: "Start building an audience today"
-excerpt: "ConvertKit’s new free tier just made it easier to get started building an audience."
+excerpt: "ConvertKit recently introduced a new free tier that makes it easier than ever to get started building an audience."
 issue: 19
 ---
 Last year, I started using [ConvertKit](https://convertkit.com) for my newsletters and email courses. Email is still the best medium to share what you are working on. Posts on social media might show up in your audience’s feed, or algorithms could hide them from others. Through newsletters, we can follow what each other are up to and find inspiration for our own work.

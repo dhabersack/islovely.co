@@ -1,6 +1,6 @@
 ---
 title: "Staying sane in the homeoffice"
-excerpt: "Separate “work” and “home” when working from home to not go crazy during quarantine."
+excerpt: "Separate “work” and “home” when working from home to not go crazy during quarantine. Take breaks and talk to other people, as you would in an office."
 issue: 28
 ---
 Many of us find ourselves working from home right now. I am one week into this experiment, which might last another two months or more. I have worked from home before, but usually no more than a day at a time. Working with a fully distributed team for several weeks feels very different already.

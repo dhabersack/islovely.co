@@ -1,6 +1,6 @@
 ---
 title: "Do Not Track, maybe"
-excerpt: "To opt out of tracking scripts on websites, you can set the “Do Not Track”-setting available in some browsers. Unfortunately, third parties are not required to honor it."
+excerpt: "To opt out of tracking scripts on websites, you can set the “Do Not Track”-setting in your browser. Unfortunately, websites are not required to honor it."
 issue: 2
 ---
 To opt out of tracking scripts on websites, you can set the [“Do Not Track”](https://www.eff.org/issues/do-not-track)-setting available in some browsers. Activating it adds a “please do not track me”-signal to all your HTTP-requests. Unfortunately, third parties are not required to honor that wish. They don’t _have_ to stop collecting data about you. Some might, many will not.

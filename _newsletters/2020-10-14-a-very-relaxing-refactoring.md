@@ -1,6 +1,6 @@
 ---
 title: "A very relaxing refactoring"
-excerpt: "Refactoring old code shows you how much you have grown since you wrote it."
+excerpt: "Refactoring old code shows you how much you have grown since you wrote it. Sometimes, that’s just the boost you need to unlock creativity."
 issue: 58
 ---
 After several days of legalese and paperwork, I took a few hours last week to write some code again. I shared a lot of short code snippets on Twitter recently, which are hard to find on there now. Twitter is not a medium made for later reference. To make these tips more useful, I wanted to add them to my own site. On there, I have full control over the presentation and can make them searchable.

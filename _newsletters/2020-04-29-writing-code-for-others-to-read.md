@@ -1,6 +1,6 @@
 ---
 title: "Writing code for others to read"
-excerpt: "Clever code isn’t always the most readable. When working in teams, readability comes first."
+excerpt: "Clever code isn’t always the most readable. Especially when working in teams, readability has to come first."
 issue: 34
 isFeatured: true
 ---

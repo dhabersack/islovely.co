@@ -1,6 +1,6 @@
 ---
 title: "How to understand any codebase"
-excerpt: "Treat existing codebases as a blackbox and write tests for it to understand its inner workings."
+excerpt: "Treat existing codebases as a blackbox. Take small pieces and write tests for them to understand a project’s inner workings step by step."
 issue: 30
 isFeatured: true
 ---

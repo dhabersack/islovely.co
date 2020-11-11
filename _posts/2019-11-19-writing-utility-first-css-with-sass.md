@@ -1,9 +1,9 @@
 ---
-title: Writing utility-first CSS with Sass
+title: "Writing utility-first CSS with Sass"
 categories: ["CSS", "Sass"]
-excerpt: We can use maps and loops in Sass to auto-generate many classes used in utility-first CSS.
-heroAlt: Three potted plants vertically aligned in a row. They look almost identical and only differ in their color.
-heroCaption: These look almost identical. It’ll make sense in a bit.
+excerpt: "In utility-first CSS, many classes are very similar. We can auto-generate many of them using maps and loops in Sass."
+heroAlt: "Three potted plants vertically aligned in a row. They look almost identical and only differ in their color."
+heroCaption: "These look almost identical. It’ll make sense in a bit."
 ---
 Utility-first CSS uses many small utility classes that each have a very specific job. You can tell what they do by their descriptive names. `.color-red` colors text red, `.font-size-l` gives it a large font-size, and `.margin-s` gives it a small margin. [Tailwind CSS](https://tailwindcss.com) is a utility-first framework that is growing in popularity. If you want to build your own Tailwind, you’ll need to write a lot of small rules. We can use Sass to reduce the manual work required for this by a lot.
 

@@ -1,6 +1,6 @@
 ---
 title: "Delete your backlog"
-excerpt: "It’s okay to say no to things, because it allows us to focus on what is important."
+excerpt: "A backlog full of tasks you don’t ever intend to do only weighs you down. Saying no to tasks allows us to focus on what is important."
 issue: 37
 ---
 Too often, Scrum turns into a rigid schedule of meetings and processes that few people enjoy. Stakeholders tell us what they want, and we tell them how long that takes to build. Team members have little say over what they work on. What promises efficiency takes a lot of autonomy out of our job.

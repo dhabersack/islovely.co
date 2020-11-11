@@ -1,6 +1,6 @@
 ---
 title: "Enthusiasm does not mean priority"
-excerpt: "One of the harder parts of product development is knowing what to focus on."
+excerpt: "One of the harder parts of product development is knowing what to focus on. Your latest cool idea might not need immediate attention."
 issue: 41
 isFeatured: true
 ---

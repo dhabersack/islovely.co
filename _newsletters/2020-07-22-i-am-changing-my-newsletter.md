@@ -1,6 +1,6 @@
 ---
 title: "I am changing my newsletter"
-excerpt: "I’ll try a few different formats to see which one works best for you readers."
+excerpt: "I have not found the best format for this newsletter yet. I’ll try a few different ones to see what works best for my readers."
 issue: 46
 ---
 Hey friends! This week, the newsletter is a little more personal than usual.

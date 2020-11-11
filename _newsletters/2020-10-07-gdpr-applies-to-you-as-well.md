@@ -1,6 +1,6 @@
 ---
 title: "GDPR applies to you as well"
-excerpt: "There are a lot of things beyond running Google Analytics that you need your visitors’ consent for."
+excerpt: "Running Google Analytics is the most obvious reason for showing a consent form to visitors. There are many less obvious ones you also need consent for."
 issue: 57
 ---
 The General Data Protection Regulation has been in effect since May 2018. While its effects weren’t very clear before that, we now have a better understanding of what it requires. Pretty much every website now asks you to accept their cookie policy before letting you in. It is as annoying as it is necessary.

@@ -1,9 +1,9 @@
 ---
-title: Insights of a new screencaster
+title: "Insights of a new screencaster"
 categories: ["Education"]
-excerpt: Publishing screencasts taught me what to look out for when creating infoproducts.
-heroAlt: A cup of coffee with the word “begin” printed on it.
-heroCaption: What goes into making a good screencast?
+excerpt: "I recently published my first screencasts on programming. In the process, I learned a few first things about creating info products."
+heroAlt: "A cup of coffee with the word “begin” printed on it."
+heroCaption: "What goes into making a good screencast?"
 ---
 I recently created a series of screencasts for students having to resit an exam after six months of not having any contact with the subject. I wrote about these videos [in another post](/posts/screencasts-on-standard-ml-in-german).
 

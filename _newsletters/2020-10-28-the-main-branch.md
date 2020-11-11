@@ -1,6 +1,6 @@
 ---
 title: "The main branch"
-excerpt: "You can rename your master branch to “main” in five quick steps."
+excerpt: "There was never a technical reason for us to call the source of truth “master” in Git. We can rename it to “main” or any other term in a few minutes."
 issue: 60
 ---
 Hey friends! As I am deep in business and financial planning, I missed that GitHub’s renaming efforts are now in place. If you, like me, are looking for a quick code-related distraction, this tip is for you.

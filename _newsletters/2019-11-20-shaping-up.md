@@ -1,6 +1,6 @@
 ---
 title: "Shaping up"
-excerpt: "Scrum is often sold as a magic bullet that will help teams be more efficient when “done right”. One size doesn’t fit all, and Shape Up by Basecamp is a breath of fresh air."
+excerpt: "While Scrum works well for many teams, it’s not for everybody. Basecamp’s Shape Up is an alternative that might work better for you."
 issue: 11
 ---
 In the era of Agile Transformations and Agile Coaches, Scrum is often sold as a magic bullet. Expensive coaches are quick to suggest that “Scrum done right” will help a team be more efficient. Some turn the [twelve principles of the Agile Manifesto](http://agilemanifesto.org/principles.html) into a series of meetings and call it a day. It is bizarre to believe this leads to repeatable success every time.

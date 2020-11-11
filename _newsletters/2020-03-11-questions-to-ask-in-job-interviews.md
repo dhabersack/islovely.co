@@ -1,6 +1,6 @@
 ---
 title: "Questions to ask in job interviews"
-excerpt: "Use job interviews to figure out if the company you are applying to is a place you want to work at."
+excerpt: "Job interviews are tests for both sides. Use them to figure out if the company you are applying to is a place you really want to work at."
 issue: 27
 isFeatured: true
 ---

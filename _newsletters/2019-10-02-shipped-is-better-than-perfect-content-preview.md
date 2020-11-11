@@ -1,6 +1,6 @@
 ---
 title: "Shipped is better than perfect [content preview]"
-excerpt: "This week, I am sharing an early draft of what will soon become a full post."
+excerpt: "Don’t let perfectionism keep you from shipping things. Release (too) early, then clean it up after you got some real feedback on it."
 issue: 4
 ---
 This week, I’m sharing an early draft of what will soon become a full post. I’d love to hear if you agree (or disagree!) with it so I can round it off:

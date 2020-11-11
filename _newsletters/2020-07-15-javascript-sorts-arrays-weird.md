@@ -1,6 +1,6 @@
 ---
 title: "JavaScript sorts arrays weird"
-excerpt: "By default, an array of numbers will not be sorted numerically."
+excerpt: "By default, an array of numbers will not be sorted numerically. To avoid unexpected results, we can tell it how to sort an array."
 issue: 45
 isFeatured: true
 ---

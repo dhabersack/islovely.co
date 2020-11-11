@@ -1,10 +1,10 @@
 ---
-title: JavaScript’s reduce, every, and some
+title: "JavaScript’s reduce, every, and some"
 categories: ["JavaScript"]
 tags: ["Array", "reduce", "every", "some"]
-excerpt: What happens when you forget to specify reduce’s second parameter?
-heroAlt: A dark spiralling staircase going down.
-heroCaption: When avoiding loops, look out for some pitfalls.
+excerpt: "The array functions are great for all kinds of problems. But what happens when you forget to specify reduce’s second parameter?"
+heroAlt: "A dark spiralling staircase going down."
+heroCaption: "When avoiding loops, look out for some pitfalls."
 ---
 To calculate the sum of all numbers in an array, you could use a `for`-loop:
 
