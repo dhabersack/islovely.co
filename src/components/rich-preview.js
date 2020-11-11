@@ -106,7 +106,7 @@ export default ({
         />
       )}
 
-      {isArticle && tags.map(tag => (
+      {isArticle && tags?.map(tag => (
         <meta
           content={tag}
           key={`tag-${tag}`}
