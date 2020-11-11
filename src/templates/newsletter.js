@@ -53,7 +53,7 @@ export default ({
 
       <RichPreview
         description={excerpt}
-        imageUrl={`/assets/rich-previews/newsletter/${slug}.jpg`}
+        imageSubpath={`newsletter/${slug}`}
         permalink={permalink}
         publishedAt={date}
         title={title}

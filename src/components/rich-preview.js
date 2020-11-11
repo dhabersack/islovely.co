@@ -6,7 +6,7 @@ export default ({
   description,
   expiredAt,
   heroAlt,
-  imageUrl = '/assets/rich-previews/islovely.jpg',
+  imageSubpath = 'default',
   permalink,
   publishedAt,
   tags,
@@ -42,7 +42,7 @@ export default ({
       )}
 
       <meta
-        content={`${siteUrl}${imageUrl}`}
+        content={`${siteUrl}/assets/rich-previews/${imageSubpath}.jpg`}
         property="og:image"
       />
 
@@ -127,6 +127,11 @@ export default ({
       <meta
         content="@domhabersack"
         name="twitter:creator"
+      />
+
+      <meta
+        content={`${siteUrl}/assets/rich-previews/${imageSubpath}--twitter.jpg`}
+        property="twitter:image"
       />
     </Helmet>
   )
