@@ -54,7 +54,7 @@ export default ({
       )}
 
       <meta
-        content="628"
+        content="314"
         property="og:image:height"
       />
 
@@ -64,7 +64,7 @@ export default ({
       />
 
       <meta
-        content="1200"
+        content="600"
         property="og:image:width"
       />
 
