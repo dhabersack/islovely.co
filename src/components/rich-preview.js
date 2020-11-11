@@ -74,7 +74,7 @@ export default ({
       />
 
       <meta
-        content={title ? `${title} · ${siteTitle}` : siteTitle}
+        content={title ?? siteTitle}
         property="og:title"
       />
 
@@ -106,7 +106,7 @@ export default ({
         />
       )}
 
-      {isArticle && tags.map(tag => (
+      {isArticle && tags?.map(tag => (
         <meta
           content={tag}
           key={`tag-${tag}`}

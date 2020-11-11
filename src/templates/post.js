@@ -56,7 +56,7 @@ export default ({
       <RichPreview
         description={excerpt}
         heroAlt={heroAlt}
-        imageUrl={`/assets/rich-previews/${slug}.jpg`}
+        imageUrl={`/assets/rich-previews/posts/${slug}.jpg`}
         permalink={permalink}
         publishedAt={date}
         tags={categories}

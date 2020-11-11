@@ -24,6 +24,7 @@ export default ({
   const {
     date,
     permalink,
+    slug,
   } = fields
 
   const {
@@ -52,8 +53,11 @@ export default ({
 
       <RichPreview
         description={excerpt}
+        imageUrl={`/assets/rich-previews/newsletter/${slug}.jpg`}
         permalink={permalink}
+        publishedAt={date}
         title={title}
+        type="article"
       />
 
       <Taper>
@@ -102,6 +106,7 @@ export const pageQuery = graphql`
       fields {
         date
         permalink
+        slug
       }
       frontmatter {
         excerpt
