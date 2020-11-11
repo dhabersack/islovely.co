@@ -54,7 +54,7 @@ export default ({
       )}
 
       <meta
-        content="360"
+        content="628"
         property="og:image:height"
       />
 
@@ -64,7 +64,7 @@ export default ({
       />
 
       <meta
-        content="640"
+        content="1200"
         property="og:image:width"
       />
 
@@ -127,11 +127,6 @@ export default ({
       <meta
         content="@domhabersack"
         name="twitter:creator"
-      />
-
-      <meta
-        content={`${siteUrl}/assets/rich-previews/${imageSubpath}--twitter.jpg`}
-        property="twitter:image"
       />
     </Helmet>
   )
