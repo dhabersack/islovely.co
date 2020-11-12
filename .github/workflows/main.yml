@@ -18,12 +18,19 @@ jobs:
       - uses: appleboy/scp-action@master
         with:
           host: ${{ secrets.HOST }}
+          port: ${{ secrets.PORT }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
-          port: ${{ secrets.PORT }}
           source: "public/*"
           target: ${{ secrets.PUBLIC_WWW }}
           rm: true
           strip_components: 1 # remove `public/` from path
-          debug: true
+      - uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          port: ${{ secrets.PORT }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          passphrase: ${{ secrets.PASSPHRASE }}
+          script: chown -R ${{ secrets.USERNAME }}:${{ secrets.USERGROUP }} ${{ secrets.PUBLIC_WWW }}
