@@ -24,5 +24,6 @@ jobs:
           port: ${{ secrets.PORT }}
           source: "public/*"
           target: ${{ secrets.PUBLIC_WWW }}
+          tar_tmp_path: "tmp"
           rm: true
           strip_components: 1 # remove `public/` from path
