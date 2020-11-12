@@ -23,7 +23,7 @@ export default () => (
         py-3
       `}
     >
-      &copy; Dom Habersack, 2020
+      &copy; Dom Habersack*, 2020
     </div>
 
     <div
