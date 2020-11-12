@@ -25,3 +25,4 @@ jobs:
           source: "public/*"
           target: "githubactionstest"
           rm: true
+          strip_components: 1 # remove `public/` from path
