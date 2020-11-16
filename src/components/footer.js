@@ -2,7 +2,6 @@ import React from 'react'
 
 import A from './a'
 import Img from './img'
-import P from './p'
 import UpdateCookieSettingsTrigger from './update-cookie-settings-trigger'
 
 export default () => (
@@ -172,15 +171,5 @@ export default () => (
         </span>
       </A>
     </div>
-
-    <P
-      className={`
-        font-size-14
-        gray-600
-        m-0
-      `}
-    >
-      Illustrations by <A href="https://icons8.com">Icons8</A>.
-    </P>
   </footer>
 )
