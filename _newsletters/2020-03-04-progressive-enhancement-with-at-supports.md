@@ -17,6 +17,36 @@ Trying to make the exact same design happen in every browser is not worth these 
 
 With [@supports](https://developer.mozilla.org/en-US/docs/Web/CSS/@supports), we can adjust the styling based on which features a browser supports. We could use a plain layout everywhere, and improve it with grid in browsers that understand it.
 
-As soon as a new browser supports a feature, the feature-gated styles will work for it. This is much more future-proof than building IE-only stylesheet like we did a few years ago. @supports is the future.
+```css
+.my-container {
+  display: block;
+}
+
+/* test if this browser supports grid */
+@supports (display: grid) {
+  .my-container {
+    display: grid;
+  }
+}
+```
+
+We can also test if a browser supports custom properties (CSS variables) and only use them when it does. For browsers that don’t support this feature yet, we define fallbacks outside of the `@supports`-block.
+
+```css
+body {
+  background-color: #f6f9fc;
+  color: #28303f;
+}
+
+/* test if this browser supports custom properties */
+@supports (--anything: red) {
+  body {
+    background-color: var(--body-background);
+    color: var(--body-text);
+  }
+}
+```
+
+As soon as a new browser supports a feature, the feature-gated styles will work for it. This is much more future-proof than building IE-only stylesheet like we did a few years ago. `@supports` is the future.
 
 – Dom
