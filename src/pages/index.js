@@ -136,14 +136,14 @@ export default () => (
         </P>
 
         <P>
-          Here is a sample from one of my courses that shows how I will walk you through what you need to know:
+          Here is a sample video that shows how I walk you through a topic and explain what you need to know:
         </P>
 
         <div
           className="mb-24"
         >
           <Video
-            vimeoId="372044005"
+            youtubeId="zqx19b1lOhc"
           />
         </div>
       </LandingPageBlock>
