@@ -20,6 +20,7 @@ import Hr from './hr'
 import Header from './header'
 import Img from './img'
 import Li from './li'
+import Mark from './mark'
 import Ol from './ol'
 import P from './p'
 import Pre from './pre'
@@ -49,6 +50,7 @@ const MDX_COMPONENT_MAPPING = {
   hr: Hr,
   img: Img,
   li: Li,
+  mark: Mark,
   ol: Ol,
   p: P,
   pre: Pre,
