@@ -143,7 +143,7 @@ export default () => (
           className="mb-24"
         >
           <Video
-            youtubeId="zqx19b1lOhc"
+            youtubeId="Yzmj7-Wy95M"
           />
         </div>
       </LandingPageBlock>
