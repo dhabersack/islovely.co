@@ -2,6 +2,7 @@
 title: Hello Together
 excerpt: This course explains common mistranslations and helps non-native speakers feel more comfortable speaking English.
 emails: 24
+highlightColor: "yellow-500"
 weeks: 8
 svForm: 1242118
 uid: d1addbb1ee

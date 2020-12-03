@@ -1,6 +1,7 @@
 ---
 title: Standard ML for Beginners
 excerpt: "Learn the concepts behind functional programming using SML/NJ. (Currently only available in German.)"
+highlightColor: "cyan-500"
 videos: 18
 hours: 9¼
 cta: More SML please!

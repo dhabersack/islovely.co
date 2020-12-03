@@ -17,12 +17,12 @@ export default ({
 
   const {
     permalink,
-    slug,
   } = fields
 
   const {
     emails,
     excerpt,
+    highlightColor,
     hours,
     title,
     videos,
@@ -33,34 +33,15 @@ export default ({
     <Card>
       <article
         className={`
+          border-${highlightColor}
+          border-solid
+          border-0
+          border-t-6
           flex
           flex-column
           h-full
         `}
       >
-        <a
-          className={`
-            bg-gray-100
-            block
-            intrinsic-ratio-16/9
-          `}
-          href={permalink}
-        >
-          <div
-            className={`
-              align-items-center
-              flex
-              justify-center
-            `}
-          >
-            <Img
-              alt={title}
-              className="h-full"
-              src={`/assets/courses/${slug}.png`}
-            />
-          </div>
-        </a>
-
         <div
           className={`
             flex-grow

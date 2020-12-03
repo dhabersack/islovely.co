@@ -25,7 +25,6 @@ export default ({
 
   const {
     permalink,
-    slug,
   } = fields
 
   const {
@@ -157,12 +156,6 @@ export default ({
           )}
         </aside>
 
-        <Img
-          alt={title}
-          className="h-192"
-          src={`/assets/courses/${slug}.png`}
-        />
-
         <MDXRenderer>
           {body}
         </MDXRenderer>
@@ -256,7 +249,6 @@ export const pageQuery = graphql`
       body
       fields {
         permalink
-        slug
       }
       frontmatter {
         cta

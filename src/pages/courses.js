@@ -78,11 +78,11 @@ export const pageQuery = graphql`
           id
           fields {
             permalink
-            slug
           }
           frontmatter {
             emails
             excerpt
+            highlightColor
             hours
             title
             videos
