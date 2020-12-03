@@ -37,10 +37,10 @@ export default ({
       breadcrumbs={[
         {
           label: 'Newsletter',
-          url: '/newsletter'
+          url: '/newsletter/'
         }, {
           label: 'Archive',
-          url: '/newsletter/archive'
+          url: '/newsletter/archive/'
         }, {
           label: title
         }

@@ -28,7 +28,7 @@ export default ({
       />
 
       <RichPreview
-        permalink="/posts"
+        permalink="/posts/"
         title="Blog"
       />
 
@@ -38,7 +38,7 @@ export default ({
         </H1>
 
         <P>
-          I write about design, development, and productivity. My <A href="/newsletter">newsletter</A> contains shorter pieces, which you can find in the <A href="/newsletter/archive">archive</A>.
+          I write about design, development, and productivity. My <A href="/newsletter/">newsletter</A> contains shorter pieces, which you can find in the <A href="/newsletter/archive/">archive</A>.
         </P>
       </Taper>
 

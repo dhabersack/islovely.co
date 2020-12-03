@@ -35,7 +35,7 @@ export default ({
       />
 
       <RichPreview
-        permalink="/fire-tips"
+        permalink="/firetips/"
         title="Fire tips"
       />
 

@@ -20,7 +20,7 @@ export default ({
       breadcrumbs={[
         {
           label: 'Newsletter',
-          url: '/newsletter'
+          url: '/newsletter/'
         }, {
           label: 'Archive',
         }
@@ -33,7 +33,7 @@ export default ({
 
       <RichPreview
         description="Read some of my previous newsletters. Sign up to get them delivered to your inbox."
-        permalink="/newsletter/archive"
+        permalink="/newsletter/archive/"
         title="Newsletter archive"
       />
 
@@ -45,7 +45,7 @@ export default ({
         <P
           className="mb-48"
         >
-          These are some of my previous newsletters. <A href="/newsletter">Sign up</A> if you want to get them delivered straight to your inbox.
+          These are some of my previous newsletters. <A href="/newsletter/">Sign up</A> if you want to get them delivered straight to your inbox.
         </P>
 
         {newsletters.map(newsletter => (

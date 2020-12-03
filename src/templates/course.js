@@ -46,7 +46,7 @@ export default ({
       breadcrumbs={[
         {
           label: 'Courses',
-          url: '/courses'
+          url: '/courses/'
         }, {
           label: title
         }

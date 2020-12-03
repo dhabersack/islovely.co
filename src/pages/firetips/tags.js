@@ -30,7 +30,7 @@ export default ({
       breadcrumbs={[
         {
           label: 'Fire tips',
-          url: '/firetips'
+          url: '/firetips/'
         }, {
           label: 'By tag'
         }
@@ -41,7 +41,7 @@ export default ({
       />
 
       <RichPreview
-        permalink="/firetips/tags"
+        permalink="/firetips/tags/"
         title="Fire tips by tag"
       />
 

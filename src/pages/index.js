@@ -25,7 +25,7 @@ const cta = (
       text-gray-900
       visited:text-gray-900
     `}
-    href="/courses"
+    href="/courses/"
   >
     <Img
       alt=""

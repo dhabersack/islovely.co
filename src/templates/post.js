@@ -42,7 +42,7 @@ export default ({
       breadcrumbs={[
         {
           label: 'Blog',
-          url: '/posts'
+          url: '/posts/'
         }, {
           label: title
         }

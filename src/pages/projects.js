@@ -28,7 +28,7 @@ export default ({
       />
 
       <RichPreview
-        permalink="/projects"
+        permalink="/projects/"
         title="Projects"
       />
 

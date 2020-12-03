@@ -29,7 +29,7 @@ export default ({
     <P
       className="font-size-16-medium"
     >
-      Get free previews of my upcoming course materials and other bonus content to help you work smarter. I share tips straight to your inbox once a week. You can read previous mails in the <A href="/newsletter/archive">newsletter archive</A>.
+      Get free previews of my upcoming course materials and other bonus content to help you work smarter. I share tips straight to your inbox once a week. You can read previous mails in the <A href="/newsletter/archive/">newsletter archive</A>.
     </P>
 
     <ConvertkitForm

@@ -24,10 +24,10 @@ export default ({
       breadcrumbs={[
         {
           label: 'Fire tips',
-          url: '/firetips'
+          url: '/firetips/'
         }, {
           label: 'By tag',
-          url: '/firetips/tags'
+          url: '/firetips/tags/'
         }, {
           label: tag
         }

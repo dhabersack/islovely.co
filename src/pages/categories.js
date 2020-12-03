@@ -36,7 +36,7 @@ export default ({
       />
 
       <RichPreview
-        permalink="/categories"
+        permalink="/categories/"
         title="Categories"
       />
 

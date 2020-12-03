@@ -24,7 +24,7 @@ export default ({
       breadcrumbs={[
         {
           label: 'Categories',
-          url: '/categories'
+          url: '/categories/'
         }, {
           label: category
         }

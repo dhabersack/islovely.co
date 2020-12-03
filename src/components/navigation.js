@@ -30,7 +30,7 @@ export default () => (
             inline-block
             py-6
           `}
-          href="/courses"
+          href="/courses/"
         >
           Courses
         </A>
@@ -50,7 +50,7 @@ export default () => (
             inline-block
             py-6
           `}
-          href="/posts"
+          href="/posts/"
         >
           Blog
         </A>
@@ -70,7 +70,7 @@ export default () => (
             inline-block
             py-6
           `}
-          href="/firetips"
+          href="/firetips/"
         >
           Fire tips
         </A>
@@ -90,7 +90,7 @@ export default () => (
             inline-block
             py-6
           `}
-          href="/newsletter"
+          href="/newsletter/"
         >
           Newsletter
         </A>
@@ -129,7 +129,7 @@ export default () => (
             mb-0
             py-6
           `}
-          href="/contact"
+          href="/contact/"
         >
           Contact
         </A>
