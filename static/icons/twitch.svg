@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Assets/Logos/Twitch</title>
+    <g id="Assets/Logos/Twitch" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="TwitchGlitchPurple" transform="translate(4.000000, 2.000000)" fill-rule="nonzero">
+            <polygon id="Path" fill="#FFFFFF" points="15.7142857 9.28571429 12.8571429 12.1428571 10 12.1428571 7.5 14.6428571 7.5 12.1428571 4.28571429 12.1428571 4.28571429 1.42857143 15.7142857 1.42857143"></polygon>
+            <g id="Layer_1-2" fill="#9146FF">
+                <path d="M3.57142857,0 L0,3.57142857 L0,16.4285714 L4.28571429,16.4285714 L4.28571429,20 L7.85714286,16.4285714 L10.7142857,16.4285714 L17.1428571,10 L17.1428571,0 L3.57142857,0 Z M15.7142857,9.28571429 L12.8571429,12.1428571 L10,12.1428571 L7.5,14.6428571 L7.5,12.1428571 L4.28571429,12.1428571 L4.28571429,1.42857143 L15.7142857,1.42857143 L15.7142857,9.28571429 Z" id="Shape"></path>
+                <rect id="Rectangle" x="12.1428571" y="3.92857143" width="1.42857143" height="4.28571429"></rect>
+                <rect id="Rectangle" x="8.21428571" y="3.92857143" width="1.42857143" height="4.28571429"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

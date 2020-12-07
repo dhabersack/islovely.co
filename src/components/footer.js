@@ -98,30 +98,10 @@ export default () => (
           mx-10
           py-3
         `}
-        href="https://github.com/domhabersack"
-      >
-        <Img
-          alt="domhabersack on GitHub"
-          className="mr-5"
-          src="/icons/github.svg"
-        />
-
-        <span>
-          GitHub
-        </span>
-      </A>
-
-      <A
-        className={`
-          flex
-          font-size-16
-          mx-10
-          py-3
-        `}
         href="https://twitter.com/domhabersack"
       >
         <Img
-          alt="domhabersack on Twitter"
+          alt="Dom Habersack on Twitter"
           className="mr-5"
           src="/icons/twitter.svg"
         />
@@ -138,16 +118,16 @@ export default () => (
           mx-10
           py-3
         `}
-        href="https://dribbble.com/domhabersack"
+        href="https://youtube.com/channel/UCi_V66TGKpeSHV_4DYCFbjw"
       >
         <Img
-          alt="domhabersack on dribbble"
+          alt="Dom Habersack on YouTube"
           className="mr-5"
-          src="/icons/dribbble.svg"
+          src="/icons/youtube.svg"
         />
 
         <span>
-          Dribbble
+          YouTube
         </span>
       </A>
 
@@ -158,16 +138,96 @@ export default () => (
           mx-10
           py-3
         `}
-        href="https://mastodon.social/@domhabersack"
+        href="https://twitch.tv/domhabersack"
       >
         <Img
-          alt="@domhabersack on Mastodon"
+          alt="Dom Habersack on Twitch"
           className="mr-5"
-          src="/icons/mastodon.svg"
+          src="/icons/twitch.svg"
         />
 
         <span>
-          Mastodon
+          Twitch
+        </span>
+      </A>
+
+      <A
+        className={`
+          flex
+          font-size-16
+          mx-10
+          py-3
+        `}
+        href="https://github.com/domhabersack"
+      >
+        <Img
+          alt="Dom Habersack on GitHub"
+          className="mr-5"
+          src="/icons/github.svg"
+        />
+
+        <span>
+          GitHub
+        </span>
+      </A>
+
+      <A
+        className={`
+          flex
+          font-size-16
+          mx-10
+          py-3
+        `}
+        href="https://codepen.io/domhabersack"
+      >
+        <Img
+          alt="Dom Habersack on CodePen"
+          className="mr-5"
+          src="/icons/codepen.svg"
+        />
+
+        <span>
+          CodePen
+        </span>
+      </A>
+
+      <A
+        className={`
+          flex
+          font-size-16
+          mx-10
+          py-3
+        `}
+        href="https://linkedin.com/in/domhabersack"
+      >
+        <Img
+          alt="Dom Habersack on LinkedIn"
+          className="mr-5"
+          src="/icons/linkedin.svg"
+        />
+
+        <span>
+          LinkedIn
+        </span>
+      </A>
+
+      <A
+        className={`
+          flex
+          font-size-16
+          mx-10
+          py-3
+        `}
+        href="https://dribbble.com/domhabersack"
+      >
+        <Img
+          alt="Dom Habersack on dribbble"
+          className="mr-5"
+          src="/icons/dribbble.svg"
+        />
+
+        <span>
+          Dribbble
         </span>
       </A>
     </div>
