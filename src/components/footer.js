@@ -93,8 +93,6 @@ export default () => (
     >
       <A
         className={`
-          flex
-          font-size-16
           mx-10
           py-3
         `}
@@ -102,19 +100,12 @@ export default () => (
       >
         <Img
           alt="Dom Habersack on Twitter"
-          className="mr-5"
           src="/icons/twitter.svg"
         />
-
-        <span>
-          Twitter
-        </span>
       </A>
 
       <A
         className={`
-          flex
-          font-size-16
           mx-10
           py-3
         `}
@@ -122,19 +113,12 @@ export default () => (
       >
         <Img
           alt="Dom Habersack on YouTube"
-          className="mr-5"
           src="/icons/youtube.svg"
         />
-
-        <span>
-          YouTube
-        </span>
       </A>
 
       <A
         className={`
-          flex
-          font-size-16
           mx-10
           py-3
         `}
@@ -142,19 +126,12 @@ export default () => (
       >
         <Img
           alt="Dom Habersack on Twitch"
-          className="mr-5"
           src="/icons/twitch.svg"
         />
-
-        <span>
-          Twitch
-        </span>
       </A>
 
       <A
         className={`
-          flex
-          font-size-16
           mx-10
           py-3
         `}
@@ -162,19 +139,12 @@ export default () => (
       >
         <Img
           alt="Dom Habersack on GitHub"
-          className="mr-5"
           src="/icons/github.svg"
         />
-
-        <span>
-          GitHub
-        </span>
       </A>
 
       <A
         className={`
-          flex
-          font-size-16
           mx-10
           py-3
         `}
@@ -182,19 +152,12 @@ export default () => (
       >
         <Img
           alt="Dom Habersack on CodePen"
-          className="mr-5"
           src="/icons/codepen.svg"
         />
-
-        <span>
-          CodePen
-        </span>
       </A>
 
       <A
         className={`
-          flex
-          font-size-16
           mx-10
           py-3
         `}
@@ -202,19 +165,12 @@ export default () => (
       >
         <Img
           alt="Dom Habersack on LinkedIn"
-          className="mr-5"
           src="/icons/linkedin.svg"
         />
-
-        <span>
-          LinkedIn
-        </span>
       </A>
 
       <A
         className={`
-          flex
-          font-size-16
           mx-10
           py-3
         `}
@@ -222,13 +178,8 @@ export default () => (
       >
         <Img
           alt="Dom Habersack on dribbble"
-          className="mr-5"
           src="/icons/dribbble.svg"
         />
-
-        <span>
-          Dribbble
-        </span>
       </A>
     </div>
   </footer>
