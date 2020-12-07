@@ -40,6 +40,8 @@ export default ({
     weeks,
   } = frontmatter
 
+  const isSignupPossible = svForm !== null && uid !== null
+
   return (
     <Layout
       breadcrumbs={[
@@ -160,16 +162,18 @@ export default ({
           {body}
         </MDXRenderer>
 
-        <div
-          className="mb-60"
-        >
-          <ConvertkitForm
-            cta={cta}
-            sourceUrl={location.href}
-            svForm={svForm}
-            uid={uid}
-          />
-        </div>
+        {isSignupPossible && (
+          <div
+            className="mb-60"
+          >
+            <ConvertkitForm
+              cta={cta}
+              sourceUrl={location.href}
+              svForm={svForm}
+              uid={uid}
+            />
+          </div>
+        )}
       </Taper>
 
       {playlist && (
