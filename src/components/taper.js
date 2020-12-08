@@ -1,13 +1,15 @@
 import React from 'react'
 
 export default ({
+  className,
   children,
 }) => (
   <div
     className={`
       mx-auto
-      m:col-10/12
-      l:col-8/12
+      md:w-10/12
+      lg:w-8/12
+      ${className}
     `}
   >
     {children}

@@ -12,8 +12,9 @@ export default ({
 }) => (
   <html
     className={`
-      h-full
-      sans-serif
+      antialiased
+      bg-gray-50
+      text-gray-600
     `}
     lang="en-US"
     prefix="og: http://ogp.me/ns#"
@@ -34,19 +35,18 @@ export default ({
         name="viewport"
       />
 
+      <link
+        rel="stylesheet"
+        src="/iubenda.css"
+      />
+
       <Favicons />
 
       {headComponents}
     </head>
 
     <body
-      className={`
-        bg-white
-        h-full
-        m-0
-        p-0
-        text-gray-700
-      `}
+      className={``}
       {...bodyAttributes}
     >
       {preBodyComponents}
@@ -83,3 +83,11 @@ export default ({
     </body>
   </html>
 )
+
+// body classnames
+      // classname={`
+      //   h-full
+      //   m-0
+      //   p-0
+      //   text-gray-700
+      // `}

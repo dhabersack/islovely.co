@@ -1,25 +1,23 @@
 import React from 'react'
 
-import A from './a'
-import Img from './img'
 import UpdateCookieSettingsTrigger from './update-cookie-settings-trigger'
 
 export default () => (
   <footer
     className={`
-      align-items-center
       flex
-      flex-column
-      py-24
+      flex-col
+      items-center
+      py-6
       text-gray-600
     `}
   >
     <div
       className={`
-        font-size-16-short
+        text-base
         m-0
-        mb-24
-        py-3
+        mb-6
+        py-1
       `}
     >
       &copy; Dom Habersack, 2020
@@ -29,53 +27,50 @@ export default () => (
       className={`
         flex
         flex-wrap
-        font-size-16-medium
+        text-base
         justify-center
-        list-none
-        m-0
-        mb-6
-        p-0
+        mb-1.5
       `}
     >
-      <A
+      <a
         className={`
           block
-          mx-10
+          mx-2.5
         `}
         href="/legal-notice"
       >
         Legal notice
-      </A>
+      </a>
 
-      <A
+      <a
         className={`
           block
           iubenda-embed
           iubenda-nostyle
-          mx-10
+          mx-2.5
           no-brand
         `}
         href="https://www.iubenda.com/privacy-policy/31487586"
       >
         Privacy Policy
-      </A>
+      </a>
 
-      <A
+      <a
         className={`
           block
           iubenda-embed
           iubenda-nostyle
-          mx-10
+          mx-2.5
           no-brand
         `}
         href="https://www.iubenda.com/privacy-policy/31487586/cookie-policy"
       >
         Cookie Policy
-      </A>
+      </a>
     </div>
 
     <div
-      className="mb-24"
+      className="mb-6"
     >
       <UpdateCookieSettingsTrigger />
     </div>
@@ -87,100 +82,100 @@ export default () => (
         justify-center
         list-none
         m-0
-        mb-24
+        mb-6
         p-0
       `}
     >
-      <A
+      <a
         className={`
-          mx-10
-          py-3
+          mx-2.5
+          py-1
         `}
         href="https://twitter.com/domhabersack"
       >
-        <Img
+        <img
           alt="Dom Habersack on Twitter"
           src="/icons/twitter.svg"
         />
-      </A>
+      </a>
 
-      <A
+      <a
         className={`
-          mx-10
-          py-3
+          mx-2.5
+          py-1
         `}
         href="https://youtube.com/channel/UCi_V66TGKpeSHV_4DYCFbjw"
       >
-        <Img
+        <img
           alt="Dom Habersack on YouTube"
           src="/icons/youtube.svg"
         />
-      </A>
+      </a>
 
-      <A
+      <a
         className={`
-          mx-10
-          py-3
+          mx-2.5
+          py-1
         `}
         href="https://twitch.tv/domhabersack"
       >
-        <Img
+        <img
           alt="Dom Habersack on Twitch"
           src="/icons/twitch.svg"
         />
-      </A>
+      </a>
 
-      <A
+      <a
         className={`
-          mx-10
-          py-3
+          mx-2.5
+          py-1
         `}
         href="https://github.com/domhabersack"
       >
-        <Img
+        <img
           alt="Dom Habersack on GitHub"
           src="/icons/github.svg"
         />
-      </A>
+      </a>
 
-      <A
+      <a
         className={`
-          mx-10
-          py-3
+          mx-2.5
+          py-1
         `}
         href="https://codepen.io/domhabersack"
       >
-        <Img
+        <img
           alt="Dom Habersack on CodePen"
           src="/icons/codepen.svg"
         />
-      </A>
+      </a>
 
-      <A
+      <a
         className={`
-          mx-10
-          py-3
+          mx-2.5
+          py-1
         `}
         href="https://linkedin.com/in/domhabersack"
       >
-        <Img
+        <img
           alt="Dom Habersack on LinkedIn"
           src="/icons/linkedin.svg"
         />
-      </A>
+      </a>
 
-      <A
+      <a
         className={`
-          mx-10
-          py-3
+          mx-2.5
+          py-1
         `}
         href="https://dribbble.com/domhabersack"
       >
-        <Img
+        <img
           alt="Dom Habersack on dribbble"
           src="/icons/dribbble.svg"
         />
-      </A>
+      </a>
     </div>
   </footer>
 )

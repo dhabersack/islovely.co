@@ -3,13 +3,9 @@ import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 import ConvertkitForm from '../components/convertkit-form'
-import H1 from '../components/h1'
-import H4 from '../components/h4'
-import Img from '../components/img'
 import Layout from '../components/layout'
 import MetaTags from '../components/meta-tags'
 import RichPreview from '../components/rich-preview'
-import Strong from '../components/strong'
 import Taper from '../components/taper'
 import Video from '../components/video'
 
@@ -65,9 +61,9 @@ export default ({
       />
 
       <Taper>
-        <H1>
+        <h1>
           {title}
-        </H1>
+        </h1>
 
         <aside
           className={`
@@ -85,14 +81,14 @@ export default ({
                 mr-15
               `}
             >
-              <Img
+              <img
                 alt=""
                 className="mr-5"
                 src="/assets/icons/email-with-letter.svg"
               />
 
               <span>
-                <Strong>{emails}</Strong> emails
+                <strong>{emails}</strong> emails
               </span>
             </div>
           )}
@@ -105,14 +101,14 @@ export default ({
                 mr-15
               `}
             >
-              <Img
+              <img
                 alt=""
                 className="mr-5"
                 src="/assets/icons/video.svg"
               />
 
               <span>
-                <Strong>{videos}</Strong> videos
+                <strong>{videos}</strong> videos
               </span>
             </div>
           )}
@@ -125,14 +121,14 @@ export default ({
                 mr-15
               `}
             >
-              <Img
+              <img
                 alt=""
                 className="mr-5"
                 src="/assets/icons/clock.svg"
               />
 
               <span>
-                <Strong>{hours}</Strong> hours
+                <strong>{hours}</strong> hours
               </span>
             </div>
           )}
@@ -145,14 +141,14 @@ export default ({
                 mr-15
               `}
             >
-              <Img
+              <img
                 alt=""
                 className="mr-5"
                 src="/assets/icons/calendar.svg"
               />
 
               <span>
-                <Strong>{weeks}</Strong> weeks
+                <strong>{weeks}</strong> weeks
               </span>
             </div>
           )}
@@ -180,14 +176,14 @@ export default ({
         <div
           className={`
             grid
-            grid-columns-1
+            grid-cols-1
             grid-column-gap
             grid-row-gap-25
-            xs:grid-columns-2
-            xs:grid-row-gap-10
-            m:grid-columns-3
-            m:grid-row-gap-20
-            l:grid-row-gap-25
+            sm:grid-columns-2
+            sm:grid-row-gap-10
+            md:grid-columns-3
+            md:grid-row-gap-20
+            lg:grid-row-gap-25
           `}
         >
           {playlist.map(({
@@ -209,7 +205,7 @@ export default ({
                 />
               </div>
 
-              <H4
+              <h4
                 className={`
                   font-size-16-short
                   font-weight-400
@@ -232,7 +228,7 @@ export default ({
                 >
                   ({duration})
                 </span>
-              </H4>
+              </h4>
             </div>
           ))}
         </div>

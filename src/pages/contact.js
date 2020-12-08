@@ -1,11 +1,8 @@
 import React from 'react'
 
-import A from '../components/a'
 import ContactForm from '../components/contact-form'
-import H1 from '../components/h1'
 import Layout from '../components/layout'
 import MetaTags from '../components/meta-tags'
-import P from '../components/p'
 import Taper from '../components/taper'
 
 export default () => (
@@ -22,13 +19,13 @@ export default () => (
     />
 
     <Taper>
-      <H1>
+      <h1>
         Contact
-      </H1>
+      </h1>
 
-      <P>
-        Use this form to get in touch or reach me directly at <A href="mailto:dom@islovely.co">dom@islovely.co</A>. I will get back to you as soon as I can.
-      </P>
+      <p>
+        Use this form to get in touch or reach me directly at <a href="mailto:dom@islovely.co">dom@islovely.co</a>. I will get back to you as soon as I can.
+      </p>
 
       <ContactForm />
     </Taper>

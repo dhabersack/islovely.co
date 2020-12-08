@@ -1,10 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import A from '../../components/a'
 import Firetip from '../../components/firetip'
-import H1 from '../../components/h1'
-import H2 from '../../components/h2'
 import Layout from '../../components/layout'
 import MetaTags from '../../components/meta-tags'
 import RichPreview from '../../components/rich-preview'
@@ -46,21 +43,21 @@ export default ({
       />
 
       <Taper>
-        <H1>
+        <h1>
           Fire tips by tag
-        </H1>
+        </h1>
 
         {tags.map(tag => (
           <React.Fragment
             key={`tag-${tag}`}
           >
-            <H2>
-              <A
+            <h2>
+              <a
                 href={`/firetips/tags/${slugify(tag)}`}
               >
                 Fire tips tagged “{tag}”
-              </A>
-            </H2>
+              </a>
+            </h2>
 
             {firetipsByTag[tag].map(firetip => (
               <div

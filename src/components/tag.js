@@ -1,25 +1,23 @@
 import React from 'react'
 
-import A from './a'
-
 export default ({
   children,
   href,
 }) => {
-  const HtmlTag = href != null ? A : 'span'
+  const HtmlTag = href != null ? 'a' : 'span'
 
   return (
     <HtmlTag
       className={`
         bg-gray-200
-        rounded-3
-        font-size-12-medium
         inline-block
-        nowrap
-        px-10
-        py-6
-        text-gray-700
-        visited:text-gray-700
+        px-2
+        py-1.5
+        rounded
+        text-gray-600
+        text-xs
+        whitespace-nowrap
+        visited:text-gray-600
       `}
       href={href}
     >

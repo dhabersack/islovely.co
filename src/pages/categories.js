@@ -1,8 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import H1 from '../components/h1'
-import H2 from '../components/h2'
 import Layout from '../components/layout'
 import MetaTags from '../components/meta-tags'
 import PostTeasers from '../components/post-teasers'
@@ -41,9 +39,9 @@ export default ({
       />
 
       <Taper>
-        <H1>
+        <h1>
           Categories
-        </H1>
+        </h1>
       </Taper>
 
       {categories.map(category => (
@@ -51,9 +49,9 @@ export default ({
           key={`category-${category}`}
         >
           <Taper>
-            <H2>
+            <h2>
               {category} &times; {postsByCategory[category].length}
-            </H2>
+            </h2>
           </Taper>
 
           <PostTeasers

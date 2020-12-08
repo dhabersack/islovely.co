@@ -1,12 +1,8 @@
 import React from 'react'
 
-import A from './a'
-import Li from './li'
-import Ul from './ul'
-
 export default () => (
   <nav>
-    <Ul
+    <ul
       className={`
         flex
         flex-wrap
@@ -16,124 +12,124 @@ export default () => (
         w-full
       `}
     >
-      <Li
+      <li
         className={`
-          font-size-16-short
-          font-weight-500
+          font-medium
           mb-0
-          mr-10
-          xs:mr-15
+          mr-2.5
+          text-base
+          sm:mr-4
         `}
       >
-        <A
+        <a
           className={`
             inline-block
-            py-6
+            py-1.5
           `}
           href="/courses/"
         >
           Courses
-        </A>
-      </Li>
+        </a>
+      </li>
 
-      <Li
+      <li
         className={`
-          font-size-16-short
-          font-weight-500
+          font-medium
           mb-0
-          mr-10
-          xs:mr-15
+          mr-2.5
+          text-base
+          sm:mr-4
         `}
       >
-        <A
+        <a
           className={`
             inline-block
-            py-6
+            py-1.5
           `}
           href="/posts/"
         >
           Blog
-        </A>
-      </Li>
+        </a>
+      </li>
 
-      <Li
+      <li
         className={`
-          font-size-16-short
-          font-weight-500
+          font-medium
           mb-0
-          mr-10
-          xs:mr-15
+          mr-2.5
+          text-base
+          sm:mr-4
         `}
       >
-        <A
+        <a
           className={`
             inline-block
-            py-6
+            py-1.5
           `}
           href="/firetips/"
         >
           Fire tips
-        </A>
-      </Li>
+        </a>
+      </li>
 
-      <Li
+      <li
         className={`
-          font-size-16-short
-          font-weight-500
+          font-medium
           mb-0
-          mr-10
-          xs:mr-15
+          mr-2.5
+          text-base
+          sm:mr-4
         `}
       >
-        <A
+        <a
           className={`
             inline-block
-            py-6
+            py-1.5
           `}
           href="/newsletter/"
         >
           Newsletter
-        </A>
-      </Li>
+        </a>
+      </li>
 
-      <Li
+      <li
         className={`
-          font-size-16-short
-          font-weight-500
+          font-medium
           mb-0
-          mr-10
-          xs:mr-15
+          mr-2.5
+          text-base
+          sm:mr-4
         `}
       >
-        <A
+        <a
           className={`
             inline-block
-            py-6
+            py-1.5
           `}
           href="/about"
         >
           About
-        </A>
-      </Li>
+        </a>
+      </li>
 
-      <Li
+      <li
         className={`
-          font-size-16-short
-          font-weight-500
+          font-medium
           mb-0
+          text-base
         `}
       >
-        <A
+        <a
           className={`
             inline-block
             mb-0
-            py-6
+            py-1.5
           `}
           href="/contact/"
         >
           Contact
-        </A>
-      </Li>
-    </Ul>
+        </a>
+      </li>
+    </ul>
   </nav>
 )

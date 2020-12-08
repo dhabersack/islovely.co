@@ -1,11 +1,8 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import A from '../components/a'
-import H1 from '../components/h1'
 import Layout from '../components/layout'
 import MetaTags from '../components/meta-tags'
-import P from '../components/p'
 import PostTeasers from '../components/post-teasers'
 import RichPreview from '../components/rich-preview'
 import Taper from '../components/taper'
@@ -32,14 +29,16 @@ export default ({
         title="Blog"
       />
 
-      <Taper>
-        <H1>
+      <Taper
+        className="mb-12"
+      >
+        <h1>
           Blog
-        </H1>
+        </h1>
 
-        <P>
-          I write about design, development, and productivity. My <A href="/newsletter/">newsletter</A> contains shorter pieces, which you can find in the <A href="/newsletter/archive/">archive</A>.
-        </P>
+        <p>
+          I write about design, development, and productivity. My <a href="/newsletter/">newsletter</a> contains shorter pieces, which you can find in the <a href="/newsletter/archive/">archive</a>.
+        </p>
       </Taper>
 
       <PostTeasers

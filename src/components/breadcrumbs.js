@@ -1,15 +1,12 @@
 import React from 'react'
 
-import A from './a'
-
 export default ({
   breadcrumbs,
 }) => breadcrumbs ? (
   <nav
     className={`
-      font-size-14-medium
-      font-weight-500
-      mb-24
+      font-medium
+      text-sm
     `}
   >
     {[
@@ -25,17 +22,17 @@ export default ({
       <React.Fragment
         key={`breadcrumb-${label}`}
       >
-        <A
+        <a
           className="inline-block"
           href={url}
         >
           {label}
-        </A>
+        </a>
 
         <span
           className={`
-            mx-5
-            text-gray-600
+            mx-1
+            text-gray-500
           `}
         >
           &raquo;
@@ -43,7 +40,7 @@ export default ({
       </React.Fragment>
     ) : (
       <span
-        className="text-gray-500"
+        className="text-gray-400"
         key={`breadcrumb-${label}`}
       >
         {label}

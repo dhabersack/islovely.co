@@ -1,12 +1,8 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import A from '../components/a'
-import H1 from '../components/h1'
-import H2 from '../components/h2'
 import Layout from '../components/layout'
 import MetaTags from '../components/meta-tags'
-import P from '../components/p'
 import RichPreview from '../components/rich-preview'
 import Taper from '../components/taper'
 
@@ -33,9 +29,9 @@ export default ({
       />
 
       <Taper>
-        <H1>
+        <h1>
           Projects
-        </H1>
+        </h1>
 
         {projects.map(({
           fields,
@@ -55,17 +51,17 @@ export default ({
             <React.Fragment
               key={`project-${id}`}
             >
-              <H2>
-                <A
+              <h2>
+                <a
                   href={permalink}
                 >
                   {title}
-                </A>
-              </H2>
+                </a>
+              </h2>
 
-              <P>
+              <p>
                 {excerpt}
-              </P>
+              </p>
             </React.Fragment>
           )
         })}

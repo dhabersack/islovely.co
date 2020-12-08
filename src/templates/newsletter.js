@@ -2,12 +2,10 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
-import H1 from '../components/h1'
 import Layout from '../components/layout'
 import MailingListSignup from '../components/mailing-list-signup'
 import MetaTags from '../components/meta-tags'
 import RichPreview from '../components/rich-preview'
-import P from '../components/p'
 import Taper from '../components/taper'
 import formatDate from '../utils/format-date'
 
@@ -61,21 +59,21 @@ export default ({
       />
 
       <Taper>
-        <H1
+        <h1
           className="mb-3"
         >
           {title}
-        </H1>
+        </h1>
 
-        <P
+        <p
           className={`
-            font-size-12-short
             mb-12
             text-gray-500
+            text-xs
           `}
         >
           {formatDate(date)}
-        </P>
+        </p>
 
         <div
           className="mb-60"

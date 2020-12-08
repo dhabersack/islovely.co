@@ -24,21 +24,6 @@
   @include _color("red", "500");
 }
 
-.convertkit-form__fields {
-  align-items: flex-start;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.convertkit-form__form {
-  margin-bottom: 0.6em;
-}
-
-.convertkit-form__input[type="email"] {
-  flex-grow: 1;
-  width: 1px;
-}
-
 .formkit-alert.formkit-alert-success {
   @include _bg("green", "100");
   border: 1px solid _color("green", "200");

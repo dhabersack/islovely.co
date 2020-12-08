@@ -1,7 +1,5 @@
 import React from 'react'
 
-import P from './p'
-
 export default ({
   children,
   type,
@@ -19,21 +17,21 @@ export default ({
   }[type] || 'gray-400');
 
   return (
-    <P
+    <p
       className={`
         bg-${backgroundColor}
         border-${borderColor}
         border-1
         border-solid
-        font-size-14-medium
-        mb-24
-        px-15
-        py-12
-        rounded-6
-        m:font-size-16-medium
+        mb-6
+        px-2.5
+        py-3
+        rounded-lg
+        text-sm
+        md:text-base
       `}
     >
       {children}
-    </P>
+    </p>
   )
 }

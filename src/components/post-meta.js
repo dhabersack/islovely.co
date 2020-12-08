@@ -1,6 +1,5 @@
 import React from 'react'
 
-import Img from './img'
 import formatDate from '../utils/format-date'
 
 export default ({
@@ -8,48 +7,44 @@ export default ({
 }) => (
   <div
     className={`
-      align-items-center
       flex
+      items-center
     `}
   >
-    <Img
+    <img
       alt="Dom Habersack"
       className={`
-        rounded-round
-        mr-10
-        h-42
-        w-42
+        h-10
+        mr-2.5
+        rounded-full
+        w-10
       `}
-      height="42"
+      height="40"
       src="/assets/dom.jpg"
-      width="42"
+      width="40"
     />
 
-    <div
-      className={`
-        flex
-        flex-column
-        font-size-12-short
-      `}
-    >
-      <span
+    <div>
+      <p
         className={`
-          font-weight-700
-          mb-3
-          text-gray-700
+          font-bold
+          mb-0.5
+          text-gray-600
+          text-xs
         `}
       >
         Dom Habersack
-      </span>
+      </p>
 
-      <span
+      <p
         className={`
-          font-weight-400
+          m-0
           text-gray-500
+          text-xs
         `}
       >
         {formatDate(date)}
-      </span>
+      </p>
     </div>
   </div>
 )

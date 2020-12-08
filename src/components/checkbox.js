@@ -7,20 +7,18 @@ export default ({
     className={`
       appearance-none
       bg-white
-      border-1
+      border
       border-gray-300
       border-solid
       cursor-pointer
       block
-      h-24
+      h-6
       m-0
       outline-none
-      rounded-6
+      rounded-lg
       text-blue-500
-      w-24
-
+      w-6
       checked:background-image-checkbox
-
       focus:outline
     `}
     type="checkbox"

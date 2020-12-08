@@ -1,7 +1,5 @@
 import React from 'react'
 
-import A from './a'
-import Img from './img'
 import Navigation from './navigation'
 
 export default () => (
@@ -11,22 +9,22 @@ export default () => (
       flex
       flex-wrap
       justify-between
-      py-12
+      py-3
     `}
   >
-    <A
+    <a
       className={`
         flex-no-shrink
-        mr-20
-        py-6
+        mr-5
+        py-1.5
       `}
       href="/"
     >
-      <Img
+      <img
         alt="islovely"
         src="/assets/logo.svg"
       />
-    </A>
+    </a>
 
     <Navigation />
   </header>

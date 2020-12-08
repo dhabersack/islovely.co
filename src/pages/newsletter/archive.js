@@ -1,12 +1,9 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import A from '../../components/a'
-import H1 from '../../components/h1'
 import Layout from '../../components/layout'
 import MetaTags from '../../components/meta-tags'
 import NewsletterTeaser from '../../components/newsletter-teaser'
-import P from '../../components/p'
 import RichPreview from '../../components/rich-preview'
 import Taper from '../../components/taper'
 
@@ -38,19 +35,19 @@ export default ({
       />
 
       <Taper>
-        <H1>
+        <h1>
           Newsletter archive
-        </H1>
+        </h1>
 
-        <P
-          className="mb-48"
+        <p
+          className="mb-12"
         >
-          These are some of my previous newsletters. <A href="/newsletter/">Sign up</A> if you want to get them delivered straight to your inbox.
-        </P>
+          These are some of my previous newsletters. <a href="/newsletter/">Sign up</a> if you want to get them delivered straight to your inbox.
+        </p>
 
         {newsletters.map(newsletter => (
           <div
-            className="mb-36"
+            className="mb-12"
             key={`newsletter-${newsletter.id}`}
           >
             <NewsletterTeaser

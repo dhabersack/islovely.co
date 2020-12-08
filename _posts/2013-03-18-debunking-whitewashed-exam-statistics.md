@@ -7,14 +7,6 @@ heroAlt: "Laundry hanging out to dry over a road in a small country town."
 heroCaption: "If we look into the numbers, an exam’s performance record is less positive than it is being sold as."
 ---
 import Figure from '../src/components/figure'
-import Strong from '../src/components/strong'
-import Table from '../src/components/table'
-import Tbody from '../src/components/tbody'
-import Td from '../src/components/td'
-import Tfoot from '../src/components/tfoot'
-import Th from '../src/components/th'
-import Thead from '../src/components/thead'
-import Tr from '../src/components/tr'
 
 **Edit (March 19, 2013):** I updated my calculations at the end to no longer include phantom students. While their inclusion was meant to highlight a disregard of their needs, I inadvertently and unfairly ended up distorting the numbers in favor of my argument.
 
@@ -36,110 +28,110 @@ These statistics leave a lot to be desired, with important pieces of information
 
 The officials combined the statistics of both exams in one contingency table. In the following representation, the y-axis describes the first exam while the x-axis describes the resit:
 
-<Table>
-  <Thead>
-    <Th></Th>
-    <Th>not registered</Th>
-    <Th>no-shows</Th>
-    <Th>not graded</Th>
-    <Th>failed</Th>
-    <Th>passed</Th>
-    <Th>Sum</Th>
-  </Thead>
-  <Tfoot>
-    <Tr>
-      <Th>Sum</Th>
-      <Th>197</Th>
-      <Th>42</Th>
-      <Th>72</Th>
-      <Th>46</Th>
-      <Th>46</Th>
-      <Th>403</Th>
-    </Tr>
-  </Tfoot>
-  <Tbody>
-    <Tr>
-      <Th>not registered</Th>
-      <Td>&mdash;</Td>
-      <Td>9</Td>
-      <Td>17</Td>
-      <Td>8</Td>
-      <Td>5</Td>
-      <Th>39</Th>
-    </Tr>
-    <Tr>
-      <Th>no-shows</Th>
-      <Td>65</Td>
-      <Td>14</Td>
-      <Td>17</Td>
-      <Td>9</Td>
-      <Td>4</Td>
-      <Th>109</Th>
-    </Tr>
-    <Tr>
-      <Th>not graded</Th>
-      <Td>17</Td>
-      <Td>3</Td>
-      <Td>14</Td>
-      <Td>2</Td>
-      <Td>4</Td>
-      <Th>40</Th>
-    </Tr>
-    <Tr>
-      <Th>failed</Th>
-      <Td>45</Td>
-      <Td>16</Td>
-      <Td>24</Td>
-      <Td>27</Td>
-      <Td>28</Td>
-      <Th>140</Th>
-    </Tr>
-    <Tr>
-      <Th>passed</Th>
-      <Td>70</Td>
-      <Td>0</Td>
-      <Td>0</Td>
-      <Td>0</Td>
-      <Td>5</Td>
-      <Th>75</Th>
-    </Tr>
-  </Tbody>
-</Table>
+<table>
+  <thead>
+    <th></th>
+    <th>not registered</th>
+    <th>no-shows</th>
+    <th>not graded</th>
+    <th>failed</th>
+    <th>passed</th>
+    <th>Sum</th>
+  </thead>
+  <tfoot>
+    <tr>
+      <th>Sum</th>
+      <th>197</th>
+      <th>42</th>
+      <th>72</th>
+      <th>46</th>
+      <th>46</th>
+      <th>403</th>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <th>not registered</th>
+      <td>&mdash;</td>
+      <td>9</td>
+      <td>17</td>
+      <td>8</td>
+      <td>5</td>
+      <th>39</th>
+    </tr>
+    <tr>
+      <th>no-shows</th>
+      <td>65</td>
+      <td>14</td>
+      <td>17</td>
+      <td>9</td>
+      <td>4</td>
+      <th>109</th>
+    </tr>
+    <tr>
+      <th>not graded</th>
+      <td>17</td>
+      <td>3</td>
+      <td>14</td>
+      <td>2</td>
+      <td>4</td>
+      <th>40</th>
+    </tr>
+    <tr>
+      <th>failed</th>
+      <td>45</td>
+      <td>16</td>
+      <td>24</td>
+      <td>27</td>
+      <td>28</td>
+      <th>140</th>
+    </tr>
+    <tr>
+      <th>passed</th>
+      <td>70</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>5</td>
+      <th>75</th>
+    </tr>
+  </tbody>
+</table>
 
 From this, the following conclusion has been drawn:
 
-<Table>
-  <Thead>
-    <Tr>
-      <Th></Th>
-      <Th>First exam</Th>
-      <Th>Second exam</Th>
-      <Th>After both</Th>
-    </Tr>
-  </Thead>
-  <Tfoot>
-    <Tr>
-      <Th>graded</Th>
-      <Th>100% (215)</Th>
-      <Th>100% (92)</Th>
-      <Th>100% (247)</Th>
-    </Tr>
-  </Tfoot>
-  <Tbody>
-    <Tr>
-      <Th>failed</Th>
-      <Td>65% (140)</Td>
-      <Td>50% (46)</Td>
-      <Td>53% (131)</Td>
-    </Tr>
-    <Tr>
-      <Th>passed</Th>
-      <Td>35% (75)</Td>
-      <Td>50% (46)</Td>
-      <Td><Strong>47%</Strong> (116)</Td>
-    </Tr>
-  </Tbody>
-</Table>
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>First exam</th>
+      <th>Second exam</th>
+      <th>After both</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <th>graded</th>
+      <th>100% (215)</th>
+      <th>100% (92)</th>
+      <th>100% (247)</th>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <th>failed</th>
+      <td>65% (140)</td>
+      <td>50% (46)</td>
+      <td>53% (131)</td>
+    </tr>
+    <tr>
+      <th>passed</th>
+      <td>35% (75)</td>
+      <td>50% (46)</td>
+      <td><strong>47%</strong> (116)</td>
+    </tr>
+  </tbody>
+</table>
 
 This table is meant to highlight one thing: 116 out of 247 students passed the exam. A quota of 47% is unexpectedly high, considering how “advanced” the topic is for many beginners attending the lecture.
 

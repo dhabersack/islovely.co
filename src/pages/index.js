@@ -1,50 +1,47 @@
 import React from 'react'
 
-import A from '../components/a'
-import H1 from '../components/h1'
-import H2 from '../components/h2'
-import Img from '../components/img'
 import Layout from '../components/layout'
 import MetaTags from '../components/meta-tags'
-import P from '../components/p'
 import RichPreview from '../components/rich-preview'
-import Strong from '../components/strong'
 import Taper from '../components/taper'
 import Video from '../components/video'
 
 const cta = (
   <div
-    className="flex justify-center"
+    className={`
+      flex
+      justify-center
+    `}
   >
-    <A
+    <a
       className={`
         align-items-center
-        bg-yellow-400
+        bg-yellow-300
         inline-flex
-        px-25
-        py-12
-        rounded-24
-        shadow-xs
+        px-5
+        py-3
+        rounded-lg
+        shadow-sm
         text-gray-900
         visited:text-gray-900
       `}
       href="/courses/"
     >
-      <Img
+      <img
         alt=""
-        className="mr-5"
+        className="mr-1"
         src="/assets/icons/desktop.svg"
       />
 
       <span
         className={`
-          font-size-16
-          font-weight-500
+          text-base
+          font-medium
         `}
       >
         See all courses
       </span>
-    </A>
+    </a>
   </div>
 )
 
@@ -64,10 +61,10 @@ export default () => (
     <Taper>
       <div
         className={`
-          mb-96
+          mb-24
         `}
       >
-        <H1
+        <h1
           className={`
             font-size-30-short
             m-0
@@ -76,62 +73,62 @@ export default () => (
           `}
         >
           Get a better job. Learn web development skills that sell.
-        </H1>
+        </h1>
 
-        <P>
+        <p>
           Level up from basic to advanced with videos on JavaScript, testing, design, and more.
-        </P>
+        </p>
 
         {cta}
       </div>
 
       <div
-        className="mb-96"
+        className="mb-24"
       >
-        <H2
+        <h2
           className={`
-            font-size-24-medium
-            mb-12
+            text-2xl
+            mb-3
             mt-0
           `}
         >
           Progress from novice to advanced to senior developer.
-        </H2>
+        </h2>
 
-        <P>
+        <p>
           Start here when you want to get into web development. I will take you from your first steps to being productive with modern technologies. You will gain the skills you need to get started and learn how to continue from there.
-        </P>
+        </p>
 
-        <P>
+        <p>
           If you already know the basics of a technology, I will show you how to unlock its full potential. Together, we’ll dive into their advanced features so you can get more work done both better and faster.
-        </P>
+        </p>
       </div>
 
       <div
-        className="mb-24"
+        className="mb-1.5"
       >
-        <H2
+        <h2
           className={`
-            font-size-24-medium
-            mb-12
+            text-2xl
+            mb-3
             mt-0
           `}
         >
           Stop getting frustrated by complicated documentation.
-        </H2>
+        </h2>
 
-        <P>
+        <p>
           Documentation often throws many unfamiliar terms at you and expects you to “get it”. Abstract explanations and examples make everything seem more complicated than it is. Programming does not have to be hard, and I am going to make it all make sense to you.
-        </P>
+        </p>
 
-        <P>
+        <p>
           Here is a sample video that shows how I walk you through a topic and explain what you need to know:
-        </P>
+        </p>
       </div>
     </Taper>
 
     <div
-      className="mb-96"
+      className="mb-24"
     >
       <Video
         youtubeId="Yzmj7-Wy95M"
@@ -140,150 +137,152 @@ export default () => (
 
     <Taper>
       <div
-        className="mb-96"
+        className="mb-24"
       >
-        <H2
+        <h2
           className={`
-            font-size-24-medium
-            mb-12
+            text-2xl
+            mb-3
             mt-0
           `}
         >
           Learn how to build your ideas yourself.
-        </H2>
+        </h2>
 
-        <P>
+        <p>
           Reading books and tutorials can only get you so far. You learn best from seeing someone build something, and then rebuilding it yourself. As we build projects taken from the real world together, you learn why and how they work.
-        </P>
+        </p>
 
-        <P>
-          Following along with these courses gives you the tools you need to bring your own ideas to life. You will be able to make any change you want and adjust them to what <Strong>you</Strong> want to build.
-        </P>
+        <p>
+          Following along with these courses gives you the tools you need to bring your own ideas to life. You will be able to make any change you want and adjust them to what <strong>you</strong> want to build.
+        </p>
       </div>
 
       <div
-        className="mb-96"
+        className="mb-24"
       >
-        <H2
+        <h2
           className={`
-            font-size-24-medium
-            mb-12
+            text-2xl
+            mb-3
             mt-0
           `}
         >
           Go from “changing random stuff until it works” to knowing what you are doing.
-        </H2>
+        </h2>
 
-        <P>
+        <p>
           Knowing “just enough to be dangerous” is, well, dangerous. You will encounter bugs that you don’t really understand. If you fix them by throwing more code at them, those bugs will come back later. Next time, they will be a lot harder to solve.
-        </P>
+        </p>
 
-        <P>
+        <p>
           We will learn how to find the causes of different problems and learn to solve them methodically. This gives you the skills necessary to tackle any unforeseen challenges with ease. Those bugs won’t know what hit them!
-        </P>
+        </p>
       </div>
 
       <div
-        className="mb-96"
+        className="mb-24"
       >
-        <H2
+        <h2
           className={`
-            font-size-24-medium
-            mb-12
+            text-2xl
+            mb-3
             mt-0
           `}
         >
           Get your CV ready for the job you always wanted.
-        </H2>
+        </h2>
 
-        <P>
+        <p>
           Job descriptions read like impossible checklists. They can be frustrating, whether you want to get your first development job or find a new one. You don’t have to miss out on job opportunities because you lack experience with a technology.
-        </P>
+        </p>
 
-        <P>
+        <p>
           My courses help you fix gaps in your CV with skills companies look for in their candidates. We start with the basics and get you fluent in the technologies you need to get that dream job!
-        </P>
+        </p>
       </div>
 
       <div
-        className="mb-96"
+        className="mb-24"
       >
-        <H2
+        <h2
           className={`
-            font-size-24-medium
-            mb-12
+            text-2xl
+            mb-3
             mt-0
           `}
         >
           You learn something or you get your money back.
-        </H2>
+        </h2>
 
-        <P>
+        <p>
           My only goal is for you to learn something. In case my teaching style does not work for you, I offer a 30 day money back guarantee. You get a full refund if you are unhappy with one of my courses during your first month with it, no questions asked.
-        </P>
+        </p>
 
-        <P>
+        <p>
           In case of a refund, you get to keep all materials you purchased. That way, you can try again in case you want to give it another chance later. The only thing you lose is access to any future updates I might make to the course.
-        </P>
+        </p>
       </div>
     </Taper>
 
     <div
       className={`
-        bg-gray-200
-        rounded-6
-        mb-24
-        px-15
-        py-24
-        m:align-items-start
-        m:flex
-        m:justify-between
+        bg-gray-100
+        rounded-lg
+        mb-6
+        px-8
+        py-6
+        shadow
+        md:items-start
+        md:flex
+        md:justify-between
       `}
     >
-      <Img
+      <img
         alt="Dom Habersack"
         className={`
           block
-          mb-24
+          mb-6
           mx-auto
-          rounded-round
-          shadow-s
-          w-120
-          m:ml-0
-          m:mr-15
+          rounded-full
+          shadow-sm
+          w-32
+          md:ml-0
+          md:mr-5
         `}
         src="/assets/dom.jpg"
       />
 
       <div>
-        <H2
+        <h2
           className={`
-            font-size-18-medium
-            mt-0
-            l:font-size-20-medium
+            text-lg
+            m-0
+            mb-1.5
+            lg:text-xl
           `}
         >
           Hey, I am Dom. I love helping others get better at what they do.
-        </H2>
+        </h2>
 
-        <P
+        <p
           className={`
-            font-size-14-medium
-            l:font-size-16-medium
+            text-sm
+            lg:text-base
           `}
         >
           I started learning HTML, CSS, and JavaScript on my own in seventh grade. You could often see me scribble what I thought was valid code on paper between periods. My love for working on the web has grown ever since those early days.
-        </P>
+        </p>
 
-        <P
+        <p
           className={`
-            font-size-14-medium
-            l:font-size-16-medium
             mb-0
+            text-sm
+            lg:text-base
           `}
         >
           I started my professional career in development and now consulting over 15 years ago. My heart beats for teaching everything I know. Helping others get better at what they do is what motivates me every single day.
-        </P>
+        </p>
       </div>
     </div>
 

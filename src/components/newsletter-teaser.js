@@ -1,9 +1,5 @@
 import React from 'react'
 
-import A from './a'
-import H2 from './h2'
-import P from './p'
-import Strong from './strong'
 import formatDate from '../utils/format-date'
 
 export default ({
@@ -29,40 +25,40 @@ export default ({
     <>
       <footer
         className={`
-          font-size-12-short
           text-gray-600
+          text-sm
         `}
       >
-        <Strong
+        <strong
           className={`
-            font-weight-500
-            mr-5
+            font-medium
+            mr-1
           `}
         >
           #{issue}
-        </Strong>
+        </strong>
 
         {formatDate(date)}
       </footer>
 
-      <H2
+      <h2
         className={`
-          font-size-20-medium
           m-0
+          text-xl
         `}
       >
-        <A
+        <a
           href={permalink}
         >
           {title}
-        </A>
-      </H2>
+        </a>
+      </h2>
 
-      <P
-        className="font-size-16-medium"
+      <p
+        className="text-base"
       >
         {excerpt}
-      </P>
+      </p>
     </>
   )
 }

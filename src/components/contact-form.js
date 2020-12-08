@@ -1,14 +1,9 @@
 import React, { useState } from 'react'
 import { useForm, ValidationError } from '@statickit/react'
 
-import A from './a'
-import Button from './button'
 import Checkbox from './checkbox'
 import Flash from './flash'
-import Input from './input'
-import Label from './label'
 import RequiresCookieConsent from './requires-cookie-consent'
-import Textarea from './textarea'
 
 export default () => {
   const [{
@@ -53,11 +48,11 @@ export default () => {
         <div
           className="mb-12"
         >
-          <Label
+          <label
             htmlFor="email"
           >
             Email address
-          </Label>
+          </label>
 
           <div
             className={`
@@ -67,7 +62,7 @@ export default () => {
               xl:col-4/8
             `}
           >
-            <Input
+            <input
               id="email"
               name="email"
               placeholder="your.best@email.com"
@@ -93,13 +88,13 @@ export default () => {
         <div
           className="mb-12"
         >
-          <Label
+          <label
             htmlFor="message"
           >
             Message
-          </Label>
+          </label>
 
-          <Textarea
+          <textarea
             id="message"
             name="message"
             placeholder="What do you want to say?"
@@ -128,7 +123,7 @@ export default () => {
           `}
         >
           <div
-            className="mr-10"
+            className="mr-2.5"
           >
             <Checkbox
               id="data-processing-consent"
@@ -138,23 +133,23 @@ export default () => {
             />
           </div>
 
-          <Label
+          <label
             className={`
               cursor-pointer
               flex-shrink
             `}
             htmlFor="data-processing-consent"
           >
-            I understand that the information provided by me is subject to the <A href="https://www.iubenda.com/privacy-policy/31487586" className="iubenda-nostyle no-brand iubenda-embed">Privacy Policy</A>.
-          </Label>
+            I understand that the information provided by me is subject to the <a href="https://www.iubenda.com/privacy-policy/31487586" className="iubenda-nostyle no-brand iubenda-embed">Privacy Policy</a>.
+          </label>
         </div>
 
-        <Button
+        <button
           disabled={!canSubmit}
           type="submit"
         >
           Send your message
-        </Button>
+        </button>
       </form>
     </RequiresCookieConsent>
   )

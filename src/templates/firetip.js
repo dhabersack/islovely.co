@@ -2,7 +2,6 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
-import H1 from '../components/h1'
 import Layout from '../components/layout'
 import MailingListSignup from '../components/mailing-list-signup'
 import MetaTags from '../components/meta-tags'
@@ -54,9 +53,9 @@ export default ({
       />
 
       <Taper>
-        <H1>
+        <h1>
           {title}
-        </H1>
+        </h1>
 
         <MDXRenderer>
           {body}

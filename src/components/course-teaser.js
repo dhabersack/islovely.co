@@ -1,11 +1,6 @@
 import React from 'react'
 
-import A from './a'
 import Card from './card'
-import H2 from './h2'
-import Img from './img'
-import P from './p'
-import Strong from './strong'
 
 export default ({
   course,
@@ -36,41 +31,41 @@ export default ({
           border-${highlightColor}
           border-solid
           border-0
-          border-t-6
+          border-t-8
           flex
-          flex-column
+          flex-col
           h-full
         `}
       >
         <div
           className={`
             flex-grow
-            px-15
-            py-12
+            px-4
+            py-2
           `}
         >
-          <H2
+          <h2
             className={`
-              font-size-16-short
+              text-base
               m-0
-              mb-6
+              mb-1.5
             `}
           >
-            <A
+            <a
               href={permalink}
             >
               {title}
-            </A>
-          </H2>
+            </a>
+          </h2>
 
-          <P
+          <p
             className={`
-              font-size-16-medium
+              text-base
               m-0
             `}
           >
             {excerpt}
-          </P>
+          </p>
         </div>
 
         <footer
@@ -78,28 +73,28 @@ export default ({
             bg-gray-100
             flex
             flex-wrap
-            font-size-12-medium
-            px-15
-            py-12
+            px-2.5
+            py-3
             text-gray-600
+            text-xs
           `}
         >
           {emails && (
             <div
               className={`
-                align-items-center
+                items-center
                 inline-flex
-                mr-15
+                mr-2.5
               `}
             >
-              <Img
+              <img
                 alt=""
-                className="mr-5"
+                className="mr-1"
                 src="/assets/icons/email-with-letter.svg"
               />
 
               <span>
-                <Strong>{emails}</Strong>
+                <strong>{emails}</strong>
                 {' '}
                 emails
               </span>
@@ -109,19 +104,19 @@ export default ({
           {videos && (
             <div
               className={`
-                align-items-center
+                items-center
                 inline-flex
-                mr-15
+                mr-2.5
               `}
             >
-              <Img
+              <img
                 alt=""
-                className="mr-5"
+                className="mr-1"
                 src="/assets/icons/video.svg"
               />
 
               <span>
-                <Strong>{videos}</Strong>
+                <strong>{videos}</strong>
                 {' '}
                 videos
               </span>
@@ -131,19 +126,19 @@ export default ({
           {hours && (
             <div
               className={`
-                align-items-center
+                items-center
                 inline-flex
-                mr-15
+                mr-2.5
               `}
             >
-              <Img
+              <img
                 alt=""
-                className="mr-5"
+                className="mr-1"
                 src="/assets/icons/clock.svg"
               />
 
               <span>
-                <Strong>{hours}</Strong>
+                <strong>{hours}</strong>
                 {' '}
                 hours
               </span>
@@ -153,19 +148,19 @@ export default ({
           {weeks && (
             <div
               className={`
-                align-items-center
+                items-center
                 inline-flex
-                mr-15
+                mr-2.5
               `}
             >
-              <Img
+              <img
                 alt=""
-                className="mr-5"
+                className="mr-1"
                 src="/assets/icons/calendar.svg"
               />
 
               <span>
-                <Strong>{weeks}</Strong>
+                <strong>{weeks}</strong>
                 {' '}
                 weeks
               </span>

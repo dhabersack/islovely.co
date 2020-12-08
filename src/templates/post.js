@@ -3,7 +3,6 @@ import { graphql } from 'gatsby'
 import { MDXRenderer} from 'gatsby-plugin-mdx'
 
 import Figure from '../components/figure'
-import H1 from '../components/h1'
 import Layout from '../components/layout'
 import MailingListSignup from '../components/mailing-list-signup'
 import MetaTags from '../components/meta-tags'
@@ -65,12 +64,12 @@ export default ({
       />
 
       <Taper>
-        <H1>
+        <h1>
           {title}
-        </H1>
+        </h1>
 
         <div
-          className="mb-24"
+          className="mb-6"
         >
           <PostMeta
             date={date}
@@ -83,7 +82,7 @@ export default ({
         caption={heroCaption}
         className={`
           m-0
-          mb-24
+          mb-6
         `}
         src={`/assets/heroes/${slug}.jpg`}
       />
@@ -92,7 +91,7 @@ export default ({
         <div
           className={`
             break-words
-            mb-60
+            mb-16
           `}
         >
           <MDXRenderer>
@@ -104,14 +103,14 @@ export default ({
           className={`
             flex
             flex-wrap
-            mb-60
+            mb-16
           `}
         >
           {categories.map(category => (
             <div
               className={`
                 mb-3
-                mr-5
+                mr-2.5
               `}
               key={`category-${category}`}
             >

@@ -1,0 +1,401 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-display: swap;
+    font-family: 'Inter';
+    font-style:  normal;
+    font-weight: 100;
+    src: url('/fonts/inter/thin.woff2?v=3.15') format('woff2'),
+         url('/fonts/inter/thin.woff?v=3.15') format('woff');
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 100;
+    src: url('/fonts/inter/thin-italic.woff2?v=3.15') format('woff2'),
+         url('/fonts/inter/thin-italic.woff?v=3.15') format('woff');
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: 'Inter';
+    font-style:  normal;
+    font-weight: 200;
+    src: url('/fonts/inter/extra-light.woff2?v=3.15') format('woff2'),
+         url('/fonts/inter/extra-light.woff?v=3.15') format('woff');
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 200;
+    src: url('/fonts/inter/extra-light-italic.woff2?v=3.15') format('woff2'),
+         url('/fonts/inter/extra-light-italic.woff?v=3.15') format('woff');
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: 'Inter';
+    font-style:  normal;
+    font-weight: 300;
+    src: url('/fonts/inter/light.woff2?v=3.15') format('woff2'),
+         url('/fonts/inter/light.woff?v=3.15') format('woff');
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 300;
+    src: url('/fonts/inter/light-italic.woff2?v=3.15') format('woff2'),
+         url('/fonts/inter/light-italic.woff?v=3.15') format('woff');
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: 'Inter';
+    font-style:  normal;
+    font-weight: 400;
+    src: url('/fonts/inter/regular.woff2?v=3.15') format('woff2'),
+         url('/fonts/inter/regular.woff?v=3.15') format('woff');
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 400;
+    src: url('/fonts/inter/regular-italic.woff2?v=3.15') format('woff2'),
+         url('/fonts/inter/regular-italic.woff?v=3.15') format('woff');
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: 'Inter';
+    font-style:  normal;
+    font-weight: 500;
+    src: url('/fonts/inter/medium.woff2?v=3.15') format('woff2'),
+         url('/fonts/inter/medium.woff?v=3.15') format('woff');
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 500;
+    src: url('/fonts/inter/medium-italic.woff2?v=3.15') format('woff2'),
+         url('/fonts/inter/medium-italic.woff?v=3.15') format('woff');
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: 'Inter';
+    font-style:  normal;
+    font-weight: 600;
+    src: url('/fonts/inter/semi-bold.woff2?v=3.15') format('woff2'),
+         url('/fonts/inter/semi-bold.woff?v=3.15') format('woff');
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    src: url('/fonts/inter/semi-bold-italic.woff2?v=3.15') format('woff2'),
+         url('/fonts/inter/semi-bold-italic.woff?v=3.15') format('woff');
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: 'Inter';
+    font-style:  normal;
+    font-weight: 700;
+    src: url('/fonts/inter/bold.woff2?v=3.15') format('woff2'),
+         url('/fonts/inter/bold.woff?v=3.15') format('woff');
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 700;
+    src: url('/fonts/inter/bold-italic.woff2?v=3.15') format('woff2'),
+         url('/fonts/inter/bold-italic.woff?v=3.15') format('woff');
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: 'Inter';
+    font-style:  normal;
+    font-weight: 800;
+    src: url('/fonts/inter/extra-bold.woff2?v=3.15') format('woff2'),
+         url('/fonts/inter/extra-bold.woff?v=3.15') format('woff');
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 800;
+    src: url('/fonts/inter/extra-bold-italic.woff2?v=3.15') format('woff2'),
+         url('/fonts/inter/extra-bold-italic.woff?v=3.15') format('woff');
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: 'Inter';
+    font-style:  normal;
+    font-weight: 900;
+    src: url('/fonts/inter/black.woff2?v=3.15') format('woff2'),
+         url('/fonts/inter/black.woff?v=3.15') format('woff');
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 900;
+    src: url('/fonts/inter/black-italic.woff2?v=3.15') format('woff2'),
+         url('/fonts/inter/black-italic.woff?v=3.15') format('woff');
+  }
+
+  @font-face {
+    font-family: 'Source Code Pro';
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/source-code-pro/normal.ttf.woff2') format('woff2'),
+         url('/fonts/source-code-pro/normal.otf.woff') format('woff'),
+         url('/fonts/source-code-pro/normal.otf') format('opentype'),
+         url('/fonts/source-code-pro/normal.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Source Code Pro';
+    font-stretch: normal;
+    font-style: italic;
+    font-weight: 400;
+    src: url('/fonts/source-code-pro/normal-italic.ttf.woff2') format('woff2'),
+         url('/fonts/source-code-pro/normal-italic.otf.woff') format('woff'),
+         url('/fonts/source-code-pro/normal-italic.otf') format('opentype'),
+         url('/fonts/source-code-pro/normal-italic.ttf') format('truetype');
+  }
+
+  a {
+    @apply no-underline text-blue-400 hover:underline visited:text-blue-400;
+  }
+
+  blockquote {
+    @apply border-0 border-gray-600 border-l-4 border-solid italic mx-auto my-6 pl-2.5 relative w-10/12 md:w-4/5 lg:my-12 lg:w-3/4;
+  }
+
+  button {
+    @apply bg-gray-200 border-transparent border cursor-pointer m-0 px-2.5 py-2 rounded text-gray-700 text-sm disabled:bg-gray-500 disabled:cursor-not-allowed disabled:text-gray-200 hover:bg-gray-300;
+  }
+
+  code {
+    @apply bg-gray-200 font-normal font-mono px-1.5 py-1 rounded text-gray-600;
+  }
+
+  figcaption {
+    @apply italic m-0 mt-1.5 text-center text-gray-500 text-sm;
+  }
+
+  figure {
+    @apply mx-auto my-6 w-full lg:my-12;
+  }
+
+  h1 {
+    @apply text-2xl font-bold mb-3 mt-6 sm:text-3xl lg:text-4xl lg:mb-6 lg:mt-12;
+  }
+
+  h2 {
+    @apply text-xl font-bold mb-3 mt-6 sm:text-2xl lg:text-3xl lg:mb-6 lg:mt-12;
+  }
+
+  h3 {
+    @apply text-base font-bold mb-1.5 mt-6 sm:text-xl lg:text-2xl lg:mb-12;
+  }
+
+  h4 {
+    @apply text-base font-bold;
+  }
+
+  h5 {
+    @apply text-base font-bold;
+  }
+
+  h6 {
+    @apply text-base font-bold;
+  }
+
+  hr {
+    @apply bg-gray-300 border-0 rounded-full h-px mx-5 my-6;
+  }
+
+  img {
+    @apply max-w-full;
+  }
+
+  input {
+    @apply appearance-none bg-white border-gray-300 border border-solid font-normal m-0 px-2.5 py-3 rounded-md text-base text-gray-700 w-full;
+  }
+
+  label {
+    @apply block font-medium mb-0.5 text-base;
+  }
+
+  li {
+    @apply mb-1.5 p-0 text-base md:text-lg;
+  }
+
+  mark {
+    @apply bg-yellow-200 px-1.5 py-1 rounded text-gray-600;
+  }
+
+  ol {
+    @apply list-decimal mb-3 mx-auto w-10/12 md:mb-6 md:w-4/5 lg:w-3/4;
+  }
+
+  p {
+    @apply text-base mb-3;
+  }
+
+  pre {
+    @apply break-normal;
+  }
+
+  strong {
+    @apply font-semibold;
+  }
+
+  table {
+    @apply border-collapse font-normal m-0 mb-6 w-full;
+  }
+
+  tbody {
+    @apply bg-gray-200;
+  }
+
+  textarea {
+    @apply appearance-none bg-white block border border-gray-300 border-solid font-normal m-0 outline-none px-2.5 py-12 rounded-md text-base text-gray-700 w-full;
+  }
+
+  td {
+    @apply text-base px-2.5 py-1.5;
+  }
+
+  th {
+    @apply bg-gray-300 font-bold px-2.5 py-1.5 text-base text-left;
+  }
+
+  ul {
+    @apply list-disc mb-3 mx-auto w-10/12 md:mb-6 md:w-4/5 lg:w-3/4;
+  }
+
+  pre[class*="language-"] {
+    @apply bg-gray-800 font-mono m-0 mb-3 overflow-x-auto px-4 py-3 rounded-lg text-gray-100 w-full;
+  }
+
+  pre[class*="language-"] code[class*="language-"] {
+    @apply bg-transparent font-normal p-0 text-current text-sm;
+  }
+
+  .token.atrule,
+  .token.deleted,
+  .token.number {
+    @apply text-red-400;
+  }
+
+  .token.attr-name,
+  .token.keyword,
+  .token.property,
+  .token.string {
+    @apply text-yellow-300;
+  }
+
+  .token.attr-value {
+    @apply text-gray-100;
+  }
+
+  .token.boolean,
+  .token.important,
+  .token.regex {
+    @apply text-purple-300;
+  }
+
+  .token.comment {
+    @apply text-blue-400;
+  }
+
+  .token.constant,
+  .token.function,
+  .token.selector,
+  .token.tag,
+  .token.variable {
+    @apply text-indigo-400;
+  }
+
+  .token.inserted {
+    @apply text-green-400;
+  }
+
+  .token.deleted .prefix,
+  .token.inserted .prefix {
+    @apply hidden;
+  }
+
+  .token.builtin,
+  .token.operator {}
+
+  .language-css .token.string,
+  .namespace,
+  .style .token.string,
+  .token.bold,
+  .token.cdata,
+  .token.char,
+  .token.doctype,
+  .token.entity,
+  .token.italic,
+  .token.prolog,
+  .token.symbol,
+  .token.url {
+    @apply bg-red-500;
+  }
+}
+
+@layer utilities {
+  .aspect-ratio-4\/3 {
+    height: 0;
+    padding-bottom: 75%;
+    position: relative;
+  }
+
+  .aspect-ratio-16\/9 {
+    height: 0;
+    padding-bottom: 56.25%;
+    position: relative;
+  }
+
+  .aspect-ratio-16\/10 {
+    height: 0;
+    padding-bottom: 62.5%;
+    position: relative;
+  }
+
+ .aspect-ratio-4\/3 > *,
+ .aspect-ratio-16\/9 > *,
+ .aspect-ratio-16\/10 > * {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
