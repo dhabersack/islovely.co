@@ -212,7 +212,7 @@
   }
 
   h1 {
-    @apply text-2xl font-bold mb-3 mt-6 sm:text-3xl lg:text-4xl lg:mb-6 lg:mt-12;
+    @apply text-2xl font-bold my-3 sm:text-3xl lg:text-4xl lg:my-6;
   }
 
   h2 {
@@ -339,7 +339,7 @@
   .token.selector,
   .token.tag,
   .token.variable {
-    @apply text-indigo-400;
+    @apply text-cyan-400;
   }
 
   .token.inserted {

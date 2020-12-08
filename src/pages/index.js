@@ -66,10 +66,10 @@ export default () => (
       >
         <h1
           className={`
-            font-size-30-short
-            m-0
-            mb-12
-            xl:font-size-36-medium
+            text-3xl
+            mb-6
+            mt-12
+            xl:text-4xl
           `}
         >
           Get a better job. Learn web development skills that sell.

@@ -1,9 +1,0 @@
-@each $total in (8, 10, 12) {
-  @for $col from 1 through $total {
-    .col-#{$col}\/#{$total} {
-      @include _at-breakpoints {
-        width: calc((100% - #{($total - 1)} * var(--grid-gutter)) / #{$total} * #{$col} + #{($col - 1)} * var(--grid-gutter));
-      }
-    }
-  }
-}

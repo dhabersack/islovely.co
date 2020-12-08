@@ -7,6 +7,7 @@ export default ({
     className={`
       font-medium
       text-sm
+      w-full
     `}
   >
     {[

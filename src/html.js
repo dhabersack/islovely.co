@@ -46,7 +46,6 @@ export default ({
     </head>
 
     <body
-      className={``}
       {...bodyAttributes}
     >
       {preBodyComponents}
@@ -83,11 +82,3 @@ export default ({
     </body>
   </html>
 )
-
-// body classnames
-      // classname={`
-      //   h-full
-      //   m-0
-      //   p-0
-      //   text-gray-700
-      // `}

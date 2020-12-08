@@ -1,8 +1,0 @@
-@mixin _responsive-container {
-  padding-left: var(--content-horizontal-padding);
-  padding-right: var(--content-horizontal-padding);
-}
-
-.responsive-container {
-  @include _responsive-container;
-}

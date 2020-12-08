@@ -47,7 +47,7 @@ export default ({
           className={`
             flex
             flex-wrap
-            mb-12
+            mb-6
           `}
         >
           {tagsSortedByCount.map(tag => (
