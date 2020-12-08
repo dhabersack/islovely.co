@@ -60,7 +60,9 @@ export default ({
         title={title}
       />
 
-      <Taper>
+      <Taper
+        className="mb-12"
+      >
         <h1>
           {title}
         </h1>
@@ -69,21 +71,21 @@ export default ({
           className={`
             flex
             flex-wrap
-            font-size-12-medium
-            mb-12
+            mb-3
+            text-xs
           `}
         >
           {emails && (
             <div
               className={`
-                align-items-center
                 inline-flex
-                mr-15
+                items-center
+                mr-2.5
               `}
             >
               <img
                 alt=""
-                className="mr-5"
+                className="mr-1"
                 src="/assets/icons/email-with-letter.svg"
               />
 
@@ -96,14 +98,14 @@ export default ({
           {videos && (
             <div
               className={`
-                align-items-center
                 inline-flex
-                mr-15
+                items-center
+                mr-2.5
               `}
             >
               <img
                 alt=""
-                className="mr-5"
+                className="mr-1"
                 src="/assets/icons/video.svg"
               />
 
@@ -116,14 +118,14 @@ export default ({
           {hours && (
             <div
               className={`
-                align-items-center
                 inline-flex
-                mr-15
+                items-center
+                mr-2.5
               `}
             >
               <img
                 alt=""
-                className="mr-5"
+                className="mr-1"
                 src="/assets/icons/clock.svg"
               />
 
@@ -136,14 +138,14 @@ export default ({
           {weeks && (
             <div
               className={`
-                align-items-center
                 inline-flex
-                mr-15
+                items-center
+                mr-2.5
               `}
             >
               <img
                 alt=""
-                className="mr-5"
+                className="mr-1"
                 src="/assets/icons/calendar.svg"
               />
 
@@ -159,16 +161,12 @@ export default ({
         </MDXRenderer>
 
         {isSignupPossible && (
-          <div
-            className="mb-60"
-          >
-            <ConvertkitForm
-              cta={cta}
-              sourceUrl={location.href}
-              svForm={svForm}
-              uid={uid}
-            />
-          </div>
+          <ConvertkitForm
+            cta={cta}
+            sourceUrl={location.href}
+            svForm={svForm}
+            uid={uid}
+          />
         )}
       </Taper>
 
@@ -176,14 +174,10 @@ export default ({
         <div
           className={`
             grid
+            gap-6
             grid-cols-1
-            grid-column-gap
-            grid-row-gap-25
-            sm:grid-columns-2
-            sm:grid-row-gap-10
-            md:grid-columns-3
-            md:grid-row-gap-20
-            lg:grid-row-gap-25
+            sm:grid-cols-2
+            md:grid-cols-3
           `}
         >
           {playlist.map(({
@@ -196,7 +190,7 @@ export default ({
               key={`video-${title}`}
             >
               <div
-                className="mb-3"
+                className="mb-1"
               >
                 <Video
                   title={title}
@@ -207,8 +201,9 @@ export default ({
 
               <h4
                 className={`
-                  font-size-16-short
-                  font-weight-400
+                  font-normal
+                  leading-snug
+                  text-base
                 `}
               >
                 <span

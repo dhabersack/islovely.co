@@ -9,8 +9,8 @@ export default ({
     className={`
       bg-gray-100
       rounded-lg
-      px-8
-      py-6
+      px-4
+      py-3
       shadow
     `}
   >
@@ -29,7 +29,6 @@ export default ({
       className={`
         mb-0
         text-sm
-        lg:text-base
       `}
     >
       Get free previews of my upcoming course materials and other bonus content to help you work smarter. I share tips straight to your inbox once a week. You can read previous mails in the <a href="/newsletter/archive/">newsletter archive</a>.

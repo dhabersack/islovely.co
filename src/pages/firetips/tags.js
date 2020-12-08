@@ -59,16 +59,19 @@ export default ({
               </a>
             </h2>
 
-            {firetipsByTag[tag].map(firetip => (
-              <div
-                className="mb-60"
-                key={`firetip-${firetip.fields.slug}`}
-              >
+            <div
+              className={`
+                grid
+                gap-6
+              `}
+            >
+              {firetipsByTag[tag].map(firetip => (
                 <Firetip
                   firetip={firetip}
+                  key={`firetip-${firetip.fields.slug}`}
                 />
-              </div>
-            ))}
+              ))}
+            </div>
           </React.Fragment>
         ))}
       </Taper>

@@ -228,13 +228,13 @@ export default () => (
     <div
       className={`
         bg-gray-100
-        rounded-lg
         mb-6
-        px-8
-        py-6
+        px-4
+        py-3
+        rounded-lg
         shadow
-        md:items-start
         md:flex
+        md:items-start
         md:justify-between
       `}
     >

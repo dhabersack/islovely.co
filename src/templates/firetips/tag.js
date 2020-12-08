@@ -46,16 +46,19 @@ export default ({
           Fire tips tagged “{tag}”
         </h1>
 
-        {firetips.map(firetip => (
-          <div
-            className="mb-60"
-            key={`firetip-${firetip.fields.slug}`}
-          >
+        <div
+          className={`
+            grid
+            gap-6
+          `}
+        >
+          {firetips.map(firetip => (
             <Firetip
               firetip={firetip}
+              key={`firetip-${firetip.fields.slug}`}
             />
-          </div>
-        ))}
+          ))}
+        </div>
       </Taper>
     </Layout>
   )

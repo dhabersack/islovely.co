@@ -109,16 +109,21 @@ export default ({
           Featured newsletters
         </h2>
 
-        {newsletters.map(newsletter => (
-          <div
-            className="mb-12"
-            key={`newsletter-${newsletter.id}`}
-          >
+        <div
+          className={`
+            grid
+            gap-10
+            grid-cols-1
+            mb-8
+          `}
+        >
+          {newsletters.map(newsletter => (
             <NewsletterTeaser
+              key={`newsletter-${newsletter.id}`}
               newsletter={newsletter}
             />
-          </div>
-        ))}
+          ))}
+        </div>
 
         <a
           className={`

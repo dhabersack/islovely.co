@@ -15,7 +15,7 @@ export default ({
         bg-gray-100
         border-2
         border-dashed
-        border-gray-500
+        border-gray-400
         rounded-lg
       `}
     >
@@ -23,12 +23,13 @@ export default ({
         className={`
           flex
           flex-col
+          h-full
           items-center
           justify-center
-          px-2.5
+          px-4
           py-3
           text-center
-          text-gray-600
+          text-gray-500
         `}
       >
         <p

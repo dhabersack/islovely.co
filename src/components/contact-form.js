@@ -46,7 +46,7 @@ export default () => {
         onSubmit={handleSubmit}
       >
         <div
-          className="mb-12"
+          className="mb-3"
         >
           <label
             htmlFor="email"
@@ -56,10 +56,9 @@ export default () => {
 
           <div
             className={`
-              s:col-8/12
-              m:col-6/10
-              l:col-5/8
-              xl:col-4/8
+              sm:w-8/12
+              md:w-3/5
+              xl:w-6/12
             `}
           >
             <input
@@ -73,11 +72,11 @@ export default () => {
           <ValidationError
             className={`
               block
-              font-size-12-short
-              font-weight-500
+              font-medium
               italic
-              my-6
+              my-1.5
               text-red-500
+              text-sm
             `}
             errors={errors}
             field="email"
@@ -86,7 +85,7 @@ export default () => {
         </div>
 
         <div
-          className="mb-12"
+          className="mb-3"
         >
           <label
             htmlFor="message"
@@ -104,11 +103,11 @@ export default () => {
           <ValidationError
             className={`
               block
-              font-size-12-short
-              font-weight-500
+              font-medium
               italic
-              my-6
+              my-1.5
               text-red-500
+              text-sm
             `}
             errors={errors}
             field="message"
@@ -118,7 +117,7 @@ export default () => {
 
         <div
           className={`
-            mb-12
+            mb-3
             flex
           `}
         >

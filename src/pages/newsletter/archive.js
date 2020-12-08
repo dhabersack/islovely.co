@@ -45,16 +45,20 @@ export default ({
           These are some of my previous newsletters. <a href="/newsletter/">Sign up</a> if you want to get them delivered straight to your inbox.
         </p>
 
-        {newsletters.map(newsletter => (
-          <div
-            className="mb-12"
-            key={`newsletter-${newsletter.id}`}
-          >
+        <div
+          className={`
+            grid
+            gap-10
+            grid-cols-1
+          `}
+        >
+          {newsletters.map(newsletter => (
             <NewsletterTeaser
+              key={`newsletter-${newsletter.id}`}
               newsletter={newsletter}
             />
-          </div>
-        ))}
+          ))}
+        </div>
       </Taper>
     </Layout>
   )

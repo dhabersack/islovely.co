@@ -23,6 +23,9 @@ export default ({
       <div
         className={`
           container
+          flex
+          flex-col
+          min-h-screen
           mx-auto
           px-4
         `}
@@ -40,7 +43,10 @@ export default ({
         </Taper>
 
         <main
-          className="mb-24"
+          className={`
+            flex-grow
+            mb-24
+          `}
         >
           {children}
         </main>

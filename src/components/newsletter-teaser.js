@@ -22,11 +22,11 @@ export default ({
   } = frontmatter
 
   return (
-    <>
+    <div>
       <footer
         className={`
-          text-gray-600
-          text-sm
+          text-gray-500
+          text-xs
         `}
       >
         <strong
@@ -43,8 +43,10 @@ export default ({
 
       <h2
         className={`
+          leading-snug
           m-0
-          text-xl
+          mb-1
+          text-base
         `}
       >
         <a
@@ -55,10 +57,13 @@ export default ({
       </h2>
 
       <p
-        className="text-base"
+        className={`
+          m-0
+          text-sm
+        `}
       >
         {excerpt}
       </p>
-    </>
+    </div>
   )
 }

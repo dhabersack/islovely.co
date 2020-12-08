@@ -284,7 +284,7 @@
   }
 
   textarea {
-    @apply appearance-none bg-white block border border-gray-300 border-solid font-normal m-0 outline-none px-2.5 py-12 rounded-md text-base text-gray-700 w-full;
+    @apply appearance-none bg-white block border border-gray-300 border-solid font-normal m-0 outline-none px-2.5 py-3 rounded-md text-base text-gray-700 w-full;
   }
 
   td {

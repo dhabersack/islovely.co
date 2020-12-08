@@ -29,7 +29,9 @@ export default ({
         title="Courses"
       />
 
-      <Taper>
+      <Taper
+        className="mb-12"
+      >
         <h1>
           Courses
         </h1>
@@ -43,13 +45,9 @@ export default ({
         </p>
       </Taper>
 
-      <div
-        className="mb-60"
-      >
-        <CourseTeasers
-          courses={courses}
-        />
-      </div>
+      <CourseTeasers
+        courses={courses}
+      />
     </Layout>
   )
 }

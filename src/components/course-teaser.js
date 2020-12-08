@@ -40,15 +40,17 @@ export default ({
         <div
           className={`
             flex-grow
+            pb-3
             px-4
-            py-2
+            pt-2
           `}
         >
           <h2
             className={`
-              text-base
+              leading-snug
               m-0
               mb-1.5
+              text-base
             `}
           >
             <a
@@ -60,8 +62,9 @@ export default ({
 
           <p
             className={`
-              text-base
               m-0
+              text-base
+              text-gray-600
             `}
           >
             {excerpt}
@@ -73,17 +76,17 @@ export default ({
             bg-gray-100
             flex
             flex-wrap
-            px-2.5
+            px-4
             py-3
-            text-gray-600
+            text-gray-500
             text-xs
           `}
         >
           {emails && (
             <div
               className={`
-                items-center
                 inline-flex
+                items-center
                 mr-2.5
               `}
             >
@@ -94,9 +97,7 @@ export default ({
               />
 
               <span>
-                <strong>{emails}</strong>
-                {' '}
-                emails
+                <strong>{emails}</strong> emails
               </span>
             </div>
           )}
@@ -104,8 +105,8 @@ export default ({
           {videos && (
             <div
               className={`
-                items-center
                 inline-flex
+                items-center
                 mr-2.5
               `}
             >
@@ -116,9 +117,7 @@ export default ({
               />
 
               <span>
-                <strong>{videos}</strong>
-                {' '}
-                videos
+                <strong>{videos}</strong> videos
               </span>
             </div>
           )}
@@ -126,8 +125,8 @@ export default ({
           {hours && (
             <div
               className={`
-                items-center
                 inline-flex
+                items-center
                 mr-2.5
               `}
             >
@@ -138,9 +137,7 @@ export default ({
               />
 
               <span>
-                <strong>{hours}</strong>
-                {' '}
-                hours
+                <strong>{hours}</strong> hours
               </span>
             </div>
           )}
@@ -148,8 +145,8 @@ export default ({
           {weeks && (
             <div
               className={`
-                items-center
                 inline-flex
+                items-center
                 mr-2.5
               `}
             >
@@ -160,9 +157,7 @@ export default ({
               />
 
               <span>
-                <strong>{weeks}</strong>
-                {' '}
-                weeks
+                <strong>{weeks}</strong> weeks
               </span>
             </div>
           )}

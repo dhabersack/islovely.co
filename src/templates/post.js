@@ -91,7 +91,7 @@ export default ({
         <div
           className={`
             break-words
-            mb-16
+            mb-8
           `}
         >
           <MDXRenderer>

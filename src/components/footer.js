@@ -9,15 +9,15 @@ export default () => (
       flex-col
       items-center
       py-6
-      text-gray-600
+      text-gray-500
     `}
   >
     <div
       className={`
-        text-base
         m-0
         mb-6
         py-1
+        text-base
       `}
     >
       &copy; Dom Habersack, 2020
@@ -27,9 +27,9 @@ export default () => (
       className={`
         flex
         flex-wrap
-        text-base
         justify-center
         mb-1.5
+        text-base
       `}
     >
       <a
@@ -80,10 +80,7 @@ export default () => (
         flex
         flex-wrap
         justify-center
-        list-none
-        m-0
         mb-6
-        p-0
       `}
     >
       <a

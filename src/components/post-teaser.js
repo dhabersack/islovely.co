@@ -57,9 +57,9 @@ export default ({
           <h2
             className={`
               leading-snug
-              text-base
               m-0
               mb-1.5
+              text-base
             `}
           >
             <a
@@ -74,7 +74,7 @@ export default ({
               flex-grow
               text-sm
               mb-6
-              text-gray-700
+              text-gray-600
             `}
           >
             {excerpt}

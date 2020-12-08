@@ -8,8 +8,8 @@ export default () => (
   >
     <div
       className={`
-        items-center
         flex
+        items-center
       `}
     >
       <div

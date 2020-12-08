@@ -47,7 +47,7 @@ export default ({
           className={`
             flex
             flex-wrap
-            mb-6
+            mb-12
           `}
         >
           {tagsSortedByCount.map(tag => (
@@ -76,16 +76,19 @@ export default ({
           ))}
         </div>
 
-        {firetips.map(firetip => (
-          <div
-            className="mb-16"
-            key={`firetip-${firetip.fields.slug}`}
-          >
+        <div
+          className={`
+            grid
+            gap-6
+          `}
+        >
+          {firetips.map(firetip => (
             <Firetip
               firetip={firetip}
+              key={`firetip-${firetip.fields.slug}`}
             />
-          </div>
-        ))}
+          ))}
+        </div>
       </Taper>
     </Layout>
   )

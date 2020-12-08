@@ -59,15 +59,13 @@ export default ({
       />
 
       <Taper>
-        <h1
-          className="mb-3"
-        >
+        <h1>
           {title}
         </h1>
 
         <p
           className={`
-            mb-12
+            mb-3
             text-gray-500
             text-xs
           `}
@@ -76,7 +74,7 @@ export default ({
         </p>
 
         <div
-          className="mb-60"
+          className="mb-16"
         >
           <MDXRenderer>
             {body}

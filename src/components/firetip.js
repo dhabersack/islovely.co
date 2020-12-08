@@ -33,17 +33,13 @@ export default ({
       >
         <h2
           className={`
-            text-base
-            font-semibold
+            leading-snug
             m-0
-            mb-3
+            mb-1.5
+            text-base
           `}
         >
           <a
-            className={`
-              text-gray-900
-              visited:text-gray-900
-            `}
             href={`/firetips/${slug}`}
           >
             {title}

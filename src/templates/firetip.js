@@ -65,14 +65,14 @@ export default ({
           className={`
             flex
             flex-wrap
-            mb-60
+            mb-16
           `}
         >
           {tags.map(tag => (
             <div
               className={`
                 mb-3
-                mr-5
+                mr-2.5
               `}
               key={`tag-${tag}`}
             >

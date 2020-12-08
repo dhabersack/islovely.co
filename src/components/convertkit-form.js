@@ -84,8 +84,8 @@ export default ({
         className={`
           italic
           m-0
-          text-gray-600
-          text-sm
+          text-gray-500
+          text-xs
         `}
       >
         I respect your email privacy. Unsubscribe anytime.
