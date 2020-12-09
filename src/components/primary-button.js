@@ -13,6 +13,9 @@ const PrimaryButton = ({
         py-3
         text-gray-100
         text-base
+        focus:ring
+        focus:ring-indigo-200
+        focus:ring-opacity-50
         hover:bg-blue-600
         ${className}
       `}

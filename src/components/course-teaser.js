@@ -63,8 +63,8 @@ export default ({
           <p
             className={`
               m-0
-              text-base
               text-gray-600
+              text-sm
             `}
           >
             {excerpt}

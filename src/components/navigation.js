@@ -1,7 +1,12 @@
 import React from 'react'
 
 export default () => (
-  <nav>
+  <nav
+    className={`
+      flex
+      items-center
+    `}
+  >
     <ul
       className={`
         flex
@@ -24,7 +29,7 @@ export default () => (
         <a
           className={`
             inline-block
-            py-1.5
+            py-0.5
           `}
           href="/courses/"
         >
@@ -44,7 +49,7 @@ export default () => (
         <a
           className={`
             inline-block
-            py-1.5
+            py-0.5
           `}
           href="/posts/"
         >
@@ -64,7 +69,7 @@ export default () => (
         <a
           className={`
             inline-block
-            py-1.5
+            py-0.5
           `}
           href="/firetips/"
         >
@@ -84,7 +89,7 @@ export default () => (
         <a
           className={`
             inline-block
-            py-1.5
+            py-0.5
           `}
           href="/newsletter/"
         >
@@ -104,7 +109,7 @@ export default () => (
         <a
           className={`
             inline-block
-            py-1.5
+            py-0.5
           `}
           href="/about"
         >
@@ -123,7 +128,7 @@ export default () => (
           className={`
             inline-block
             mb-0
-            py-1.5
+            py-0.5
           `}
           href="/contact/"
         >

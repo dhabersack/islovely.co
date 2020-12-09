@@ -53,10 +53,6 @@ export default ({
             list-none
             my-6
             p-0
-            sm:cols-10/12
-            sm:mx-auto
-            md:cols-4/5
-            lg:cols-3/4
           `}
         >
           {listItems.map(listItem => (
@@ -127,14 +123,18 @@ export default ({
 
         <a
           className={`
-            bg-yellow-400
+            bg-yellow-300
             text-sm
             font-medium
             inline-block
             px-5
             py-3
             rounded-lg
+            shadow-sm
             text-gray-900
+            focus:ring
+            focus:ring-yellow-600
+            focus:ring-opacity-50
             visited:text-gray-900
           `}
           href="/newsletter/archive/"

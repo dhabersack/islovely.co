@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { useForm, ValidationError } from '@statickit/react'
 
-import Checkbox from './checkbox'
 import Flash from './flash'
 import RequiresCookieConsent from './requires-cookie-consent'
 
@@ -62,6 +61,16 @@ export default () => {
             `}
           >
             <input
+              className={`
+                border-gray-300
+                px-2.5
+                py-3
+                rounded
+                focus:border-indigo-300
+                focus:ring
+                focus:ring-indigo-200
+                focus:ring-opacity-50
+              `}
               id="email"
               name="email"
               placeholder="your.best@email.com"
@@ -94,6 +103,19 @@ export default () => {
           </label>
 
           <textarea
+            className={`
+              block
+              border-gray-300
+              m-0
+              px-2.5
+              py-3
+              rounded
+              w-full
+              focus:border-indigo-300
+              focus:ring
+              focus:ring-indigo-200
+              focus:ring-opacity-50
+            `}
             id="message"
             name="message"
             placeholder="What do you want to say?"
@@ -124,10 +146,25 @@ export default () => {
           <div
             className="mr-2.5"
           >
-            <Checkbox
+            <input
+              className={`
+                border-gray-300
+                cursor-pointer
+                block
+                h-6
+                m-0
+                rounded
+                text-indigo-500
+                w-6
+                focus:border-indigo-300
+                focus:ring
+                focus:ring-indigo-200
+                focus:ring-opacity-50
+              `}
               id="data-processing-consent"
               name="data-processing-consent"
               onChange={toggleIsDataProcessingConsentGiven}
+              type="checkbox"
               value={isDataProcessingConsentGiven}
             />
           </div>

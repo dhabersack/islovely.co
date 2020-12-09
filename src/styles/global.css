@@ -188,7 +188,7 @@
   }
 
   a {
-    @apply no-underline text-blue-400 hover:underline visited:text-blue-400;
+    @apply no-underline text-blue-400 focus:outline-none focus:ring focus:ring-indigo-200 focus:ring-opacity-50 hover:underline visited:text-blue-400;
   }
 
   blockquote {
@@ -196,11 +196,11 @@
   }
 
   button {
-    @apply bg-gray-200 border-transparent border cursor-pointer m-0 px-2.5 py-2 rounded text-gray-700 text-sm disabled:bg-gray-500 disabled:cursor-not-allowed disabled:text-gray-200 hover:bg-gray-300;
+    @apply bg-gray-200 border-transparent border cursor-pointer m-0 px-2.5 py-2 rounded text-gray-700 text-sm disabled:cursor-not-allowed disabled:opacity-50 focus:outline-none focus:ring focus:ring-gray-400 focus:ring-opacity-50 hover:bg-gray-300;
   }
 
   code {
-    @apply bg-gray-200 font-normal font-mono px-1.5 py-1 rounded text-gray-600;
+    @apply bg-gray-200 font-normal font-mono px-1.5 py-1 rounded subpixel-antialiased text-gray-600;
   }
 
   figcaption {
@@ -243,9 +243,10 @@
     @apply max-w-full;
   }
 
-  input {
-    @apply appearance-none bg-white border-gray-300 border border-solid font-normal m-0 px-2.5 py-3 rounded-md text-base text-gray-700 w-full;
-  }
+  /* input[type="email"], */
+  /* input[type="text"] { */
+  /*   @apply appearance-none bg-white border-gray-300 border border-solid font-normal m-0 px-2.5 py-3 rounded-md text-base text-gray-700 w-full; */
+  /* } */
 
   label {
     @apply block font-medium mb-0.5 text-base;
@@ -283,10 +284,6 @@
     @apply bg-gray-200;
   }
 
-  textarea {
-    @apply appearance-none bg-white block border border-gray-300 border-solid font-normal m-0 outline-none px-2.5 py-3 rounded-md text-base text-gray-700 w-full;
-  }
-
   td {
     @apply text-base px-2.5 py-1.5;
   }
@@ -300,7 +297,7 @@
   }
 
   pre[class*="language-"] {
-    @apply bg-gray-800 font-mono m-0 mb-3 overflow-x-auto px-4 py-3 rounded-lg text-gray-100 w-full;
+    @apply bg-gray-800 font-mono m-0 mb-3 overflow-x-auto px-4 py-3 rounded-lg subpixel-antialiased text-gray-100 w-full;
   }
 
   pre[class*="language-"] code[class*="language-"] {
@@ -397,5 +394,37 @@
     position: absolute;
     top: 0;
     width: 100%;
+  }
+
+  .inter-font-features {
+    font-feature-settings:
+      "dlig" 0,
+      "numr" 0,
+      "dnom" 0,
+      "tnum" 0,
+      "case" 0,
+      "zero" 0,
+      "frac" 0,
+      "sups" 0,
+      "subs" 0,
+      "cpsp" 0,
+      "salt" 0,
+      "ss01" 0,
+      "ss02" 0,
+      "ss03" 0,
+      "cv01" 0,
+      "cv02" 0,
+      "cv03" 0,
+      "cv04" 0,
+      "cv05" 0,
+      "cv06" 0,
+      "cv07" 0,
+      "cv08" 0,
+      "cv09" 0,
+      "cv10" 0,
+      "cv11" 0,
+      "calt",
+      "liga",
+      "kern";
   }
 }

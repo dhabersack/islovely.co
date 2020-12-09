@@ -14,6 +14,8 @@ export default ({
     className={`
       antialiased
       bg-gray-50
+      font-sans
+      inter-font-features
       text-gray-600
     `}
     lang="en-US"

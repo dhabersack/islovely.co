@@ -23,6 +23,9 @@ const cta = (
         rounded-lg
         shadow-sm
         text-gray-900
+        focus:ring
+        focus:ring-yellow-600
+        focus:ring-opacity-50
         visited:text-gray-900
       `}
       href="/courses/"
@@ -223,70 +226,68 @@ export default () => (
           In case of a refund, you get to keep all materials you purchased. That way, you can try again in case you want to give it another chance later. The only thing you lose is access to any future updates I might make to the course.
         </p>
       </div>
-    </Taper>
 
-    <div
-      className={`
-        bg-gray-100
-        mb-6
-        px-4
-        py-3
-        rounded-lg
-        shadow
-        md:flex
-        md:items-start
-        md:justify-between
-      `}
-    >
-      <img
-        alt="Dom Habersack"
+      <div
         className={`
-          block
+          bg-gray-100
           mb-6
-          mx-auto
-          rounded-full
-          shadow-sm
-          w-32
-          md:ml-0
-          md:mr-5
+          px-4
+          py-3
+          rounded-lg
+          shadow
+          md:flex
+          md:items-start
+          md:justify-between
         `}
-        src="/assets/dom.jpg"
-      />
-
-      <div>
-        <h2
+      >
+        <img
+          alt="Dom Habersack"
           className={`
-            text-lg
-            m-0
-            mb-1.5
-            lg:text-xl
+            block
+            mb-6
+            mx-auto
+            rounded-full
+            shadow-sm
+            w-32
+            md:ml-0
+            md:mr-5
           `}
-        >
-          Hey, I am Dom. I love helping others get better at what they do.
-        </h2>
+          src="/assets/dom.jpg"
+        />
 
-        <p
-          className={`
-            text-sm
-            lg:text-base
-          `}
-        >
-          I started learning HTML, CSS, and JavaScript on my own in seventh grade. You could often see me scribble what I thought was valid code on paper between periods. My love for working on the web has grown ever since those early days.
-        </p>
+        <div>
+          <h2
+            className={`
+              text-lg
+              m-0
+              mb-1.5
+              lg:text-xl
+            `}
+          >
+            Hey, I am Dom. I love helping others get better at what they do.
+          </h2>
 
-        <p
-          className={`
-            mb-0
-            text-sm
-            lg:text-base
-          `}
-        >
-          I started my professional career in development and now consulting over 15 years ago. My heart beats for teaching everything I know. Helping others get better at what they do is what motivates me every single day.
-        </p>
+          <p
+            className={`
+              text-sm
+              lg:text-base
+            `}
+          >
+            I started learning HTML, CSS, and JavaScript on my own in seventh grade. You could often see me scribble what I thought was valid code on paper between periods. My love for working on the web has grown ever since those early days.
+          </p>
+
+          <p
+            className={`
+              mb-0
+              text-sm
+              lg:text-base
+            `}
+          >
+            I started my professional career in development and now consulting over 15 years ago. My heart beats for teaching everything I know. Helping others get better at what they do is what motivates me every single day.
+          </p>
+        </div>
       </div>
-    </div>
 
-    <Taper>
       {cta}
     </Taper>
   </Layout>

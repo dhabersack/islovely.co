@@ -49,11 +49,18 @@ export default ({
         >
           <input
             className={`
+              border-gray-300
               border-r-0
               flex-grow
+              px-2.5
+              py-3
               rounded-none
-              rounded-l-lg
+              rounded-l
               w-px
+              focus:border-indigo-300
+              focus:ring
+              focus:ring-indigo-200
+              focus:ring-opacity-50
             `}
             name="email_address"
             placeholder="Enter your email"

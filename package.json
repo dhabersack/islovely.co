@@ -10,6 +10,7 @@
     "@statickit/cli": "0.9.0",
     "@statickit/functions": "github:unstacked/statickit-functions#15fd3fee-201e-4560-8bd5-8f46c42e6969",
     "@statickit/react": "2.1.1",
+    "@tailwindcss/forms": "^0.2.1",
     "autoprefixer": "10.0.4",
     "gatsby": "2.28.0",
     "gatsby-plugin-mdx": "1.6.0",
