@@ -22,7 +22,6 @@ export default ({
         bg-${backgroundColor}
         border-${borderColor}
         border
-        border-solid
         mb-6
         px-4
         py-3

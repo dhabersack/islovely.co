@@ -16,6 +16,7 @@ export default ({
       bg-gray-50
       font-sans
       inter-font-features
+      kerning-auto
       text-gray-600
     `}
     lang="en-US"

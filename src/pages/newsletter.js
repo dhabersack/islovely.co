@@ -68,10 +68,8 @@ export default ({
                 className={`
                   flex-no-shrink
                   h-6
-                  mr-2.5
+                  mr-1.5
                   w-6
-                  m:h-27
-                  m:w-27
                 `}
                 src="/assets/icons/checkmark.svg"
               />

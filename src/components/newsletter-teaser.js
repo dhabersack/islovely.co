@@ -25,6 +25,7 @@ export default ({
     <div>
       <footer
         className={`
+          mb-0.5
           text-gray-500
           text-xs
         `}

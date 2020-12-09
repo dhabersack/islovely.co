@@ -33,8 +33,16 @@ export default ({
       >
         <ul
           className={`
-            convertkit-form__alert
-            convertkit-form__alert--error
+            bg-red-50
+            border
+            border-red-200
+            list-none
+            mb-1.5
+            px-4
+            py-3
+            rounded-lg
+            text-red-500
+            w-full
           `}
           data-element="errors"
           data-group="alert"
