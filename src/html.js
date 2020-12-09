@@ -40,7 +40,7 @@ export default ({
 
       <link
         rel="stylesheet"
-        src="/iubenda.css"
+        href="/iubenda.css"
       />
 
       <Favicons />
