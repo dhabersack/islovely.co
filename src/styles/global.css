@@ -298,80 +298,6 @@
   ul:empty {
     @apply hidden;
   }
-
-  pre[class*="language-"] {
-    @apply bg-gray-800 font-mono m-0 mb-3 overflow-x-auto px-4 py-3 rounded-lg subpixel-antialiased text-gray-100 w-full;
-  }
-
-  pre[class*="language-"] code[class*="language-"] {
-    @apply bg-transparent font-normal p-0 text-current text-sm;
-  }
-
-  .token.atrule,
-  .token.deleted,
-  .token.number {
-    @apply text-red-400;
-  }
-
-  .token.attr-name,
-  .token.keyword,
-  .token.property,
-  .token.string {
-    @apply text-yellow-300;
-  }
-
-  .token.attr-value {
-    @apply text-gray-100;
-  }
-
-  .token.boolean,
-  .token.important,
-  .token.regex {
-    @apply text-purple-300;
-  }
-
-  .token.comment {
-    @apply text-blue-400;
-  }
-
-  .token.constant,
-  .token.function,
-  .token.selector,
-  .token.tag,
-  .token.variable {
-    @apply text-cyan-400;
-  }
-
-  .token.inserted {
-    @apply text-green-400;
-  }
-
-  .token.deleted .prefix,
-  .token.inserted .prefix {
-    @apply hidden;
-  }
-
-  .token.builtin,
-  .token.operator {}
-
-  .language-css .token.string,
-  .namespace,
-  .style .token.string,
-  .token.bold,
-  .token.cdata,
-  .token.char,
-  .token.doctype,
-  .token.entity,
-  .token.italic,
-  .token.prolog,
-  .token.symbol,
-  .token.url {
-    @apply bg-red-500;
-  }
-
-  .formkit-alert.formkit-alert-success {
-    @apply bg-green-50 border border-green-200 list-none m-0 mb-1.5 px-4 py-3 rounded-lg text-base text-green-500 w-full;
-  }
 }
 
 @layer utilities {
@@ -438,4 +364,78 @@
   .kerning-auto {
     font-kerning: auto;
   }
+}
+
+pre[class*="language-"] {
+  @apply bg-gray-800 font-mono m-0 mb-3 overflow-x-auto px-4 py-3 rounded-lg subpixel-antialiased text-gray-100 w-full;
+}
+
+pre[class*="language-"] code[class*="language-"] {
+  @apply bg-transparent font-normal p-0 text-current text-sm;
+}
+
+.token.atrule,
+.token.deleted,
+.token.number {
+  @apply text-red-400;
+}
+
+.token.attr-name,
+.token.keyword,
+.token.property,
+.token.string {
+  @apply text-yellow-300;
+}
+
+.token.attr-value {
+  @apply text-gray-100;
+}
+
+.token.boolean,
+.token.important,
+.token.regex {
+  @apply text-purple-300;
+}
+
+.token.comment {
+  @apply text-blue-400;
+}
+
+.token.constant,
+.token.function,
+.token.selector,
+.token.tag,
+.token.variable {
+  @apply text-cyan-400;
+}
+
+.token.inserted {
+  @apply text-green-400;
+}
+
+.token.deleted .prefix,
+.token.inserted .prefix {
+  @apply hidden;
+}
+
+.token.builtin,
+.token.operator {}
+
+.language-css .token.string,
+.namespace,
+.style .token.string,
+.token.bold,
+.token.cdata,
+.token.char,
+.token.doctype,
+.token.entity,
+.token.italic,
+.token.prolog,
+.token.symbol,
+.token.url {
+  @apply bg-red-500;
+}
+
+.formkit-alert.formkit-alert-success {
+  @apply bg-green-50 border border-green-200 list-none m-0 mb-1.5 px-4 py-3 rounded-lg text-base text-green-500 w-full;
 }
