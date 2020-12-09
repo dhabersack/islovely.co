@@ -38,11 +38,6 @@ export default ({
         name="viewport"
       />
 
-      <link
-        rel="stylesheet"
-        href="/iubenda.css"
-      />
-
       <Favicons />
 
       {headComponents}

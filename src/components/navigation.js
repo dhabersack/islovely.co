@@ -69,9 +69,9 @@ export default () => {
           >
             <path
               d="M4 6h16M4 12h16M4 18h16"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
             />
           </svg>
         </button>
@@ -94,6 +94,7 @@ export default () => {
                 visited:text-gray-700
               `}
               href={href}
+              key={href}
             >
               {name}
             </a>
@@ -174,9 +175,9 @@ export default () => {
                 >
                   <path
                     d="M6 18L18 6M6 6l12 12"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                   />
                 </svg>
               </button>
@@ -209,6 +210,7 @@ export default () => {
                     visited:text-gray-700
                   `}
                   href={href}
+                  key={href}
                   role="menuitem"
                 >
                   {name}
