@@ -63,15 +63,13 @@ export default () => (
 
     <Taper>
       <div
-        className={`
-          mb-24
-        `}
+        className="mb-24"
       >
         <h1
           className={`
-            text-3xl
             mb-6
             mt-12
+            text-3xl
             xl:text-4xl
           `}
         >
@@ -90,9 +88,9 @@ export default () => (
       >
         <h2
           className={`
-            text-2xl
             mb-3
             mt-0
+            text-2xl
           `}
         >
           Progress from novice to advanced to senior developer.
@@ -112,9 +110,9 @@ export default () => (
       >
         <h2
           className={`
-            text-2xl
             mb-3
             mt-0
+            text-2xl
           `}
         >
           Stop getting frustrated by complicated documentation.
@@ -144,9 +142,9 @@ export default () => (
       >
         <h2
           className={`
-            text-2xl
             mb-3
             mt-0
+            text-2xl
           `}
         >
           Learn how to build your ideas yourself.
@@ -166,9 +164,9 @@ export default () => (
       >
         <h2
           className={`
-            text-2xl
             mb-3
             mt-0
+            text-2xl
           `}
         >
           Go from “changing random stuff until it works” to knowing what you are doing.
@@ -188,9 +186,9 @@ export default () => (
       >
         <h2
           className={`
-            text-2xl
             mb-3
             mt-0
+            text-2xl
           `}
         >
           Get your CV ready for the job you always wanted.
@@ -210,9 +208,9 @@ export default () => (
       >
         <h2
           className={`
-            text-2xl
             mb-3
             mt-0
+            text-2xl
           `}
         >
           You learn something or you get your money back.
@@ -258,9 +256,9 @@ export default () => (
         <div>
           <h2
             className={`
-              text-lg
               m-0
               mb-1.5
+              text-lg
               lg:text-xl
             `}
           >

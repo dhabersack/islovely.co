@@ -53,13 +53,14 @@ export default ({
             list-none
             my-6
             p-0
+            space-y-3
           `}
         >
           {listItems.map(listItem => (
             <li
               className={`
                 flex
-                mb-3
+                m-0
               `}
               key={`newsletter-benefit-${listItem}`}
             >

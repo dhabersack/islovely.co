@@ -11,8 +11,8 @@ const PrimaryButton = ({
         bg-blue-500
         px-5
         py-3
-        text-gray-100
         text-base
+        text-gray-100
         focus:ring
         focus:ring-indigo-200
         focus:ring-opacity-50

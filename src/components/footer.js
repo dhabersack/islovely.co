@@ -81,10 +81,10 @@ export default () => (
         flex-wrap
         justify-center
         mb-6
+        space-x-2.5
       `}
     >
       <a
-        className="mx-2.5"
         href="https://twitter.com/domhabersack"
       >
         <img
@@ -94,7 +94,6 @@ export default () => (
       </a>
 
       <a
-        className="mx-2.5"
         href="https://youtube.com/channel/UCi_V66TGKpeSHV_4DYCFbjw"
       >
         <img
@@ -104,7 +103,6 @@ export default () => (
       </a>
 
       <a
-        className="mx-2.5"
         href="https://twitch.tv/domhabersack"
       >
         <img
@@ -114,7 +112,6 @@ export default () => (
       </a>
 
       <a
-        className="mx-2.5"
         href="https://github.com/domhabersack"
       >
         <img
@@ -124,7 +121,6 @@ export default () => (
       </a>
 
       <a
-        className="mx-2.5"
         href="https://codepen.io/domhabersack"
       >
         <img
@@ -134,7 +130,6 @@ export default () => (
       </a>
 
       <a
-        className="mx-2.5"
         href="https://linkedin.com/in/domhabersack"
       >
         <img
@@ -144,7 +139,6 @@ export default () => (
       </a>
 
       <a
-        className="mx-2.5"
         href="https://dribbble.com/domhabersack"
       >
         <img

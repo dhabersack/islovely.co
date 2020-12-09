@@ -8,9 +8,9 @@ export default ({
   <div
     className={`
       bg-gray-100
-      rounded-lg
       px-4
       py-3
+      rounded-lg
       shadow
     `}
   >

@@ -29,7 +29,6 @@ export default ({
       <article
         className={`
           border-${highlightColor}
-          border-solid
           border-0
           border-t-8
           flex
@@ -41,8 +40,8 @@ export default ({
           className={`
             flex-grow
             pb-3
-            px-4
             pt-2
+            px-4
           `}
         >
           <h2
