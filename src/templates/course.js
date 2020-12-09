@@ -3,13 +3,9 @@ import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 import ConvertkitForm from '../components/convertkit-form'
-import H1 from '../components/h1'
-import H4 from '../components/h4'
-import Img from '../components/img'
 import Layout from '../components/layout'
 import MetaTags from '../components/meta-tags'
 import RichPreview from '../components/rich-preview'
-import Strong from '../components/strong'
 import Taper from '../components/taper'
 import Video from '../components/video'
 
@@ -64,35 +60,37 @@ export default ({
         title={title}
       />
 
-      <Taper>
-        <H1>
+      <Taper
+        className="mb-12"
+      >
+        <h1>
           {title}
-        </H1>
+        </h1>
 
         <aside
           className={`
             flex
             flex-wrap
-            font-size-12-medium
-            mb-12
+            mb-3
+            text-xs
           `}
         >
           {emails && (
             <div
               className={`
-                align-items-center
                 inline-flex
-                mr-15
+                items-center
+                mr-2.5
               `}
             >
-              <Img
+              <img
                 alt=""
-                className="mr-5"
+                className="mr-1"
                 src="/assets/icons/email-with-letter.svg"
               />
 
               <span>
-                <Strong>{emails}</Strong> emails
+                <strong>{emails}</strong> emails
               </span>
             </div>
           )}
@@ -100,19 +98,19 @@ export default ({
           {videos && (
             <div
               className={`
-                align-items-center
                 inline-flex
-                mr-15
+                items-center
+                mr-2.5
               `}
             >
-              <Img
+              <img
                 alt=""
-                className="mr-5"
+                className="mr-1"
                 src="/assets/icons/video.svg"
               />
 
               <span>
-                <Strong>{videos}</Strong> videos
+                <strong>{videos}</strong> videos
               </span>
             </div>
           )}
@@ -120,19 +118,19 @@ export default ({
           {hours && (
             <div
               className={`
-                align-items-center
                 inline-flex
-                mr-15
+                items-center
+                mr-2.5
               `}
             >
-              <Img
+              <img
                 alt=""
-                className="mr-5"
+                className="mr-1"
                 src="/assets/icons/clock.svg"
               />
 
               <span>
-                <Strong>{hours}</Strong> hours
+                <strong>{hours}</strong> hours
               </span>
             </div>
           )}
@@ -140,19 +138,19 @@ export default ({
           {weeks && (
             <div
               className={`
-                align-items-center
                 inline-flex
-                mr-15
+                items-center
+                mr-2.5
               `}
             >
-              <Img
+              <img
                 alt=""
-                className="mr-5"
+                className="mr-1"
                 src="/assets/icons/calendar.svg"
               />
 
               <span>
-                <Strong>{weeks}</Strong> weeks
+                <strong>{weeks}</strong> weeks
               </span>
             </div>
           )}
@@ -163,16 +161,12 @@ export default ({
         </MDXRenderer>
 
         {isSignupPossible && (
-          <div
-            className="mb-60"
-          >
-            <ConvertkitForm
-              cta={cta}
-              sourceUrl={location.href}
-              svForm={svForm}
-              uid={uid}
-            />
-          </div>
+          <ConvertkitForm
+            cta={cta}
+            sourceUrl={location.href}
+            svForm={svForm}
+            uid={uid}
+          />
         )}
       </Taper>
 
@@ -180,14 +174,10 @@ export default ({
         <div
           className={`
             grid
-            grid-columns-1
-            grid-column-gap
-            grid-row-gap-25
-            xs:grid-columns-2
-            xs:grid-row-gap-10
-            m:grid-columns-3
-            m:grid-row-gap-20
-            l:grid-row-gap-25
+            gap-6
+            grid-cols-1
+            sm:grid-cols-2
+            md:grid-cols-3
           `}
         >
           {playlist.map(({
@@ -200,7 +190,7 @@ export default ({
               key={`video-${title}`}
             >
               <div
-                className="mb-3"
+                className="mb-1"
               >
                 <Video
                   title={title}
@@ -209,10 +199,11 @@ export default ({
                 />
               </div>
 
-              <H4
+              <h4
                 className={`
-                  font-size-16-short
-                  font-weight-400
+                  font-normal
+                  leading-snug
+                  text-base
                 `}
               >
                 <span
@@ -232,7 +223,7 @@ export default ({
                 >
                   ({duration})
                 </span>
-              </H4>
+              </h4>
             </div>
           ))}
         </div>

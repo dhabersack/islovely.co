@@ -1,10 +1,7 @@
 import React from 'react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
-import A from '../components/a'
 import Card from '../components/card'
-import H2 from '../components/h2'
-import P from '../components/p'
 import Tag from '../components/tag'
 import slugify from '../utils/slugify'
 
@@ -30,28 +27,24 @@ export default ({
     <Card>
       <div
         className={`
-          px-15
-          py-12
+          px-4
+          py-3
         `}
       >
-        <H2
+        <h2
           className={`
-            font-size-16-short
-            font-weight-600
+            leading-snug
             m-0
-            mb-12
+            mb-1.5
+            text-base
           `}
         >
-          <A
-            className={`
-              text-gray-900
-              visited:text-gray-900
-            `}
+          <a
             href={`/firetips/${slug}`}
           >
             {title}
-          </A>
-        </H2>
+          </a>
+        </h2>
 
         <MDXRenderer>
           {body}
@@ -66,8 +59,8 @@ export default ({
           {tags.map(tag => (
             <div
               className={`
-                mb-3
-                mr-5
+                mb-1
+                mr-2.5
               `}
               key={`tag-${tag}`}
             >
@@ -84,29 +77,29 @@ export default ({
       <footer
         className={`
           bg-gray-100
-          px-15
-          py-12
+          px-4
+          py-3
         `}
       >
-        <P
+        <p
           className={`
-            font-size-12-medium
             m-0
-            text-gray-600
+            text-gray-500
+            text-xs
           `}
         >
           <span
-            className="mr-5"
+            className="mr-1"
           >
             Permalink:
           </span>
 
-          <A
+          <a
             href={`/firetips/${slug}`}
           >
             islovely.co/firetips/{slug}
-          </A>
-        </P>
+          </a>
+        </p>
       </footer>
     </Card>
   )

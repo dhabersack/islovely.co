@@ -1,36 +1,38 @@
 import React from 'react'
 
-import A from './a'
 import ConvertkitForm from './convertkit-form'
-import H1 from './h1'
-import P from './p'
 
 export default ({
   sourceUrl,
 }) => (
   <div
     className={`
-      bg-gray-200
-      rounded-6
-      px-15
-      py-12
+      bg-gray-100
+      px-4
+      py-3
+      rounded-lg
+      shadow
     `}
   >
-    <H1
+    <h1
       className={`
-        font-size-24-short
+        text-lg
         m-0
-        mb-6
+        mb-1.5
+        lg:text-xl
       `}
     >
       There is more to learn
-    </H1>
+    </h1>
 
-    <P
-      className="font-size-16-medium"
+    <p
+      className={`
+        mb-0
+        text-sm
+      `}
     >
-      Get free previews of my upcoming course materials and other bonus content to help you work smarter. I share tips straight to your inbox once a week. You can read previous mails in the <A href="/newsletter/archive/">newsletter archive</A>.
-    </P>
+      Get free previews of my upcoming course materials and other bonus content to help you work smarter. I share tips straight to your inbox once a week. You can read previous mails in the <a href="/newsletter/archive/">newsletter archive</a>.
+    </p>
 
     <ConvertkitForm
       sourceUrl={sourceUrl}

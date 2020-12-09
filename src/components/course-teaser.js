@@ -1,11 +1,6 @@
 import React from 'react'
 
-import A from './a'
 import Card from './card'
-import H2 from './h2'
-import Img from './img'
-import P from './p'
-import Strong from './strong'
 
 export default ({
   course,
@@ -34,43 +29,45 @@ export default ({
       <article
         className={`
           border-${highlightColor}
-          border-solid
           border-0
-          border-t-6
+          border-t-8
           flex
-          flex-column
+          flex-col
           h-full
         `}
       >
         <div
           className={`
             flex-grow
-            px-15
-            py-12
+            pb-3
+            pt-2
+            px-4
           `}
         >
-          <H2
+          <h2
             className={`
-              font-size-16-short
+              leading-snug
               m-0
-              mb-6
+              mb-1.5
+              text-base
             `}
           >
-            <A
+            <a
               href={permalink}
             >
               {title}
-            </A>
-          </H2>
+            </a>
+          </h2>
 
-          <P
+          <p
             className={`
-              font-size-16-medium
               m-0
+              text-gray-600
+              text-sm
             `}
           >
             {excerpt}
-          </P>
+          </p>
         </div>
 
         <footer
@@ -78,30 +75,28 @@ export default ({
             bg-gray-100
             flex
             flex-wrap
-            font-size-12-medium
-            px-15
-            py-12
-            text-gray-600
+            px-4
+            py-3
+            text-gray-500
+            text-xs
           `}
         >
           {emails && (
             <div
               className={`
-                align-items-center
                 inline-flex
-                mr-15
+                items-center
+                mr-2.5
               `}
             >
-              <Img
+              <img
                 alt=""
-                className="mr-5"
+                className="mr-1"
                 src="/assets/icons/email-with-letter.svg"
               />
 
               <span>
-                <Strong>{emails}</Strong>
-                {' '}
-                emails
+                <strong>{emails}</strong> emails
               </span>
             </div>
           )}
@@ -109,21 +104,19 @@ export default ({
           {videos && (
             <div
               className={`
-                align-items-center
                 inline-flex
-                mr-15
+                items-center
+                mr-2.5
               `}
             >
-              <Img
+              <img
                 alt=""
-                className="mr-5"
+                className="mr-1"
                 src="/assets/icons/video.svg"
               />
 
               <span>
-                <Strong>{videos}</Strong>
-                {' '}
-                videos
+                <strong>{videos}</strong> videos
               </span>
             </div>
           )}
@@ -131,21 +124,19 @@ export default ({
           {hours && (
             <div
               className={`
-                align-items-center
                 inline-flex
-                mr-15
+                items-center
+                mr-2.5
               `}
             >
-              <Img
+              <img
                 alt=""
-                className="mr-5"
+                className="mr-1"
                 src="/assets/icons/clock.svg"
               />
 
               <span>
-                <Strong>{hours}</Strong>
-                {' '}
-                hours
+                <strong>{hours}</strong> hours
               </span>
             </div>
           )}
@@ -153,21 +144,19 @@ export default ({
           {weeks && (
             <div
               className={`
-                align-items-center
                 inline-flex
-                mr-15
+                items-center
+                mr-2.5
               `}
             >
-              <Img
+              <img
                 alt=""
-                className="mr-5"
+                className="mr-1"
                 src="/assets/icons/calendar.svg"
               />
 
               <span>
-                <Strong>{weeks}</Strong>
-                {' '}
-                weeks
+                <strong>{weeks}</strong> weeks
               </span>
             </div>
           )}

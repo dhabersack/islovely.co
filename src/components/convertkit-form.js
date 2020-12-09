@@ -1,9 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 
-import Button from './button'
-import Input from './input'
-import P from './p'
+import PrimaryButton from './primary-button'
 import RequiresCookieConsent from './requires-cookie-consent'
 
 export default ({
@@ -24,7 +22,7 @@ export default ({
     <div>
       <form
         action={`https://app.convertkit.com/forms/${svForm}/subscriptions`}
-        className="convertkit-form__form"
+        className="mb-1.5"
         method="post"
         data-sv-form={svForm}
         data-uid={uid}
@@ -35,23 +33,42 @@ export default ({
       >
         <ul
           className={`
-            convertkit-form__alert
-            convertkit-form__alert--error
+            bg-red-50
+            border
+            border-red-200
+            list-none
+            mb-1.5
+            px-4
+            py-3
+            rounded-lg
+            text-red-500
+            w-full
           `}
           data-element="errors"
           data-group="alert"
         />
 
         <div
-          className="convertkit-form__fields"
+          className={`
+            flex
+            flex-wrap
+            items-start
+          `}
         >
-          <Input
+          <input
             className={`
-              border-right-width-0
-              flex-basis
+              border-gray-300
+              border-r-0
               flex-grow
-              rounded-0
-              rounded-l-3
+              px-2.5
+              py-3
+              rounded-none
+              rounded-l
+              w-px
+              focus:border-indigo-300
+              focus:ring
+              focus:ring-indigo-200
+              focus:ring-opacity-50
             `}
             name="email_address"
             placeholder="Enter your email"
@@ -66,29 +83,28 @@ export default ({
             value={sourceUrl}
           />
 
-          <Button
-            category="primary"
+          <PrimaryButton
             className={`
-              rounded-0
-              rounded-r-3
+              rounded-none
+              rounded-r
             `}
             data-element="submit"
           >
             {cta || 'Get me early access!'}
-          </Button>
+          </PrimaryButton>
         </div>
       </form>
 
-      <P
+      <p
         className={`
-          font-size-14-medium
           italic
           m-0
-          text-gray-600
+          text-gray-500
+          text-xs
         `}
       >
         I respect your email privacy. Unsubscribe anytime.
-      </P>
+      </p>
     </div>
   </RequiresCookieConsent>
 )

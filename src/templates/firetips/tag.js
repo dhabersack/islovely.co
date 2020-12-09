@@ -2,7 +2,6 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import Firetip from '../../components/firetip'
-import H1 from '../../components/h1'
 import Layout from '../../components/layout'
 import MetaTags from '../../components/meta-tags'
 import RichPreview from '../../components/rich-preview'
@@ -43,20 +42,23 @@ export default ({
       />
 
       <Taper>
-        <H1>
+        <h1>
           Fire tips tagged “{tag}”
-        </H1>
+        </h1>
 
-        {firetips.map(firetip => (
-          <div
-            className="mb-60"
-            key={`firetip-${firetip.fields.slug}`}
-          >
+        <div
+          className={`
+            grid
+            gap-6
+          `}
+        >
+          {firetips.map(firetip => (
             <Firetip
               firetip={firetip}
+              key={`firetip-${firetip.fields.slug}`}
             />
-          </div>
-        ))}
+          ))}
+        </div>
       </Taper>
     </Layout>
   )

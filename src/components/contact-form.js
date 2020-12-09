@@ -1,14 +1,8 @@
 import React, { useState } from 'react'
 import { useForm, ValidationError } from '@statickit/react'
 
-import A from './a'
-import Button from './button'
-import Checkbox from './checkbox'
 import Flash from './flash'
-import Input from './input'
-import Label from './label'
 import RequiresCookieConsent from './requires-cookie-consent'
-import Textarea from './textarea'
 
 export default () => {
   const [{
@@ -51,23 +45,32 @@ export default () => {
         onSubmit={handleSubmit}
       >
         <div
-          className="mb-12"
+          className="mb-3"
         >
-          <Label
+          <label
             htmlFor="email"
           >
             Email address
-          </Label>
+          </label>
 
           <div
             className={`
-              s:col-8/12
-              m:col-6/10
-              l:col-5/8
-              xl:col-4/8
+              sm:w-8/12
+              md:w-3/5
+              xl:w-6/12
             `}
           >
-            <Input
+            <input
+              className={`
+                border-gray-300
+                px-2.5
+                py-3
+                rounded
+                focus:border-indigo-300
+                focus:ring
+                focus:ring-indigo-200
+                focus:ring-opacity-50
+              `}
               id="email"
               name="email"
               placeholder="your.best@email.com"
@@ -78,11 +81,11 @@ export default () => {
           <ValidationError
             className={`
               block
-              font-size-12-short
-              font-weight-500
+              font-medium
               italic
-              my-6
+              my-1.5
               text-red-500
+              text-sm
             `}
             errors={errors}
             field="email"
@@ -91,15 +94,28 @@ export default () => {
         </div>
 
         <div
-          className="mb-12"
+          className="mb-3"
         >
-          <Label
+          <label
             htmlFor="message"
           >
             Message
-          </Label>
+          </label>
 
-          <Textarea
+          <textarea
+            className={`
+              block
+              border-gray-300
+              m-0
+              px-2.5
+              py-3
+              rounded
+              w-full
+              focus:border-indigo-300
+              focus:ring
+              focus:ring-indigo-200
+              focus:ring-opacity-50
+            `}
             id="message"
             name="message"
             placeholder="What do you want to say?"
@@ -109,11 +125,11 @@ export default () => {
           <ValidationError
             className={`
               block
-              font-size-12-short
-              font-weight-500
+              font-medium
               italic
-              my-6
+              my-1.5
               text-red-500
+              text-sm
             `}
             errors={errors}
             field="message"
@@ -123,38 +139,53 @@ export default () => {
 
         <div
           className={`
-            mb-12
+            mb-3
             flex
           `}
         >
           <div
-            className="mr-10"
+            className="mr-2.5"
           >
-            <Checkbox
+            <input
+              className={`
+                border-gray-300
+                cursor-pointer
+                block
+                h-6
+                m-0
+                rounded
+                text-indigo-500
+                w-6
+                focus:border-indigo-300
+                focus:ring
+                focus:ring-indigo-200
+                focus:ring-opacity-50
+              `}
               id="data-processing-consent"
               name="data-processing-consent"
               onChange={toggleIsDataProcessingConsentGiven}
+              type="checkbox"
               value={isDataProcessingConsentGiven}
             />
           </div>
 
-          <Label
+          <label
             className={`
               cursor-pointer
               flex-shrink
             `}
             htmlFor="data-processing-consent"
           >
-            I understand that the information provided by me is subject to the <A href="https://www.iubenda.com/privacy-policy/31487586" className="iubenda-nostyle no-brand iubenda-embed">Privacy Policy</A>.
-          </Label>
+            I understand that the information provided by me is subject to the <a href="https://www.iubenda.com/privacy-policy/31487586" className="iubenda-nostyle no-brand iubenda-embed">Privacy Policy</a>.
+          </label>
         </div>
 
-        <Button
+        <button
           disabled={!canSubmit}
           type="submit"
         >
           Send your message
-        </Button>
+        </button>
       </form>
     </RequiresCookieConsent>
   )

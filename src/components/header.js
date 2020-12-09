@@ -1,32 +1,31 @@
 import React from 'react'
 
-import A from './a'
-import Img from './img'
 import Navigation from './navigation'
 
 export default () => (
   <header
     className={`
-      align-items-center
       flex
       flex-wrap
+      items-center
       justify-between
-      py-12
+      py-3
+      relative
+      z-10
     `}
   >
-    <A
+    <a
       className={`
         flex-no-shrink
-        mr-20
-        py-6
+        py-1.5
       `}
       href="/"
     >
-      <Img
+      <img
         alt="islovely"
         src="/assets/logo.svg"
       />
-    </A>
+    </a>
 
     <Navigation />
   </header>

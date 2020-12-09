@@ -1,9 +1,5 @@
 import React from 'react'
 
-import A from './a'
-import H2 from './h2'
-import P from './p'
-import Strong from './strong'
 import formatDate from '../utils/format-date'
 
 export default ({
@@ -26,43 +22,49 @@ export default ({
   } = frontmatter
 
   return (
-    <>
+    <div>
       <footer
         className={`
-          font-size-12-short
-          text-gray-600
+          mb-0.5
+          text-gray-500
+          text-xs
         `}
       >
-        <Strong
+        <strong
           className={`
-            font-weight-500
-            mr-5
+            font-medium
+            mr-1
           `}
         >
           #{issue}
-        </Strong>
+        </strong>
 
         {formatDate(date)}
       </footer>
 
-      <H2
+      <h2
         className={`
-          font-size-20-medium
+          leading-snug
           m-0
+          mb-1
+          text-base
         `}
       >
-        <A
+        <a
           href={permalink}
         >
           {title}
-        </A>
-      </H2>
+        </a>
+      </h2>
 
-      <P
-        className="font-size-16-medium"
+      <p
+        className={`
+          m-0
+          text-sm
+        `}
       >
         {excerpt}
-      </P>
-    </>
+      </p>
+    </div>
   )
 }

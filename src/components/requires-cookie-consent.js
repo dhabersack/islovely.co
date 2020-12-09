@@ -1,12 +1,9 @@
 import React, { useContext } from 'react'
 
 import CookieConsentContext from '../contexts/cookie-consent'
-import P from './p'
 import UpdateCookieSettingsTrigger from './update-cookie-settings-trigger'
-import mergeClassnames from '../utils/merge-classnames'
 
 export default ({
-  className,
   children,
   target,
 }) => {
@@ -14,36 +11,37 @@ export default ({
 
   return isCookieConsentGiven ? children : (
     <div
-      className={mergeClassnames(`
+      className={`
         bg-gray-100
         border-2
         border-dashed
-        border-gray-500
-        rounded-6
-      `, className)}
+        border-gray-400
+        rounded-lg
+      `}
     >
       <div
         className={`
-          align-items-center
           flex
-          flex-column
+          flex-col
+          h-full
+          items-center
           justify-center
-          px-15
-          py-12
-          text-align-center
-          text-gray-600
+          px-4
+          py-3
+          text-center
+          text-gray-500
         `}
       >
-        <P
+        <p
           className={`
-            font-size-14
             italic
             m-0
-            mb-12
+            mb-3
+            text-sm
           `}
         >
           Cannot show {target ?? 'content'} because cookie consent was not given.
-        </P>
+        </p>
 
         <UpdateCookieSettingsTrigger />
       </div>

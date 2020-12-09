@@ -14,14 +14,6 @@ module.exports = {
     title: `islovely`
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-sass`,
-      options: {
-        postCssPlugins: [
-          require('postcss-combine-media-query')()
-        ]
-      }
-    },
     ...types.map(name => ({
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -68,6 +60,7 @@ module.exports = {
         }
       }
     },
+    `gatsby-plugin-postcss`,
     `gatsby-plugin-react-helmet`,
   ]
 }

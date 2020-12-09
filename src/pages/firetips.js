@@ -2,7 +2,6 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import Firetip from '../components/firetip'
-import H1 from '../components/h1'
 import Layout from '../components/layout'
 import MetaTags from '../components/meta-tags'
 import RichPreview from '../components/rich-preview'
@@ -40,24 +39,24 @@ export default ({
       />
 
       <Taper>
-        <H1>
+        <h1>
           Fire tips
-        </H1>
+        </h1>
 
         <div
           className={`
             flex
             flex-wrap
-            mb-24
+            mb-6
           `}
         >
           {tagsSortedByCount.map(tag => (
             <div
               className={`
                 flex
-                align-items-center
-                mb-6
-                mr-10
+                items-center
+                mb-1.5
+                mr-2.5
               `}
               key={`tag-${tag}`}
             >
@@ -67,8 +66,8 @@ export default ({
                 {tag}
               </Tag>&nbsp;<span
                 className={`
-                  font-size-12-medium
-                  text-gray-600
+                  text-gray-500
+                  text-xs
                 `}
               >
                 &times; {tagCounts[tag]}
@@ -77,16 +76,19 @@ export default ({
           ))}
         </div>
 
-        {firetips.map(firetip => (
-          <div
-            className="mb-60"
-            key={`firetip-${firetip.fields.slug}`}
-          >
+        <div
+          className={`
+            grid
+            gap-6
+          `}
+        >
+          {firetips.map(firetip => (
             <Firetip
               firetip={firetip}
+              key={`firetip-${firetip.fields.slug}`}
             />
-          </div>
-        ))}
+          ))}
+        </div>
       </Taper>
     </Layout>
   )

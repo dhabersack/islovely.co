@@ -1,5 +1,0 @@
-@each $style in (dashed, dotted, double, none, solid) {
-  .border-#{$style} {
-    border-style: $style;
-  }
-}

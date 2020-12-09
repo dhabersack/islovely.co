@@ -7,32 +7,23 @@ export default ({
   vimeoId,
   youtubeId,
 }) => (
-  <RequiresCookieConsent
-    className="intrinsic-ratio-16/10"
-    target="video"
+  <div
+    className="aspect-ratio-16/10"
   >
-    <div
-      className="intrinsic-ratio-16/10"
+    <RequiresCookieConsent
+      target="video"
     >
-      {vimeoId && (
+      <div
+        className="aspect-ratio-16/10"
+      >
         <iframe
-          allow="autoplay; fullscreen"
+          allow={(vimeoId && "autoplay; fullscreen") || (youtubeId && "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture")}
           allowFullScreen
           frameBorder="0"
-          src={`https://player.vimeo.com/video/${vimeoId}?byline=false&title=false&dnt=true`}
+          src={(vimeoId && `https://player.vimeo.com/video/${vimeoId}?byline=false&title=false&dnt=true`) || (youtubeId && `https://www.youtube.com/embed/${youtubeId}`)}
           title={title}
         />
-      )}
-
-      {youtubeId && (
-        <iframe
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-          frameBorder="0"
-          src={`https://www.youtube.com/embed/${youtubeId}`}
-          title={title}
-        />
-      )}
-    </div>
-  </RequiresCookieConsent>
+      </div>
+    </RequiresCookieConsent>
+  </div>
 )

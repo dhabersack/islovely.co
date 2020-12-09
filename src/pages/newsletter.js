@@ -1,16 +1,10 @@
 import React from 'react'
 import { graphql } from 'gatsby';
 
-import A from '../components/a'
 import ConvertkitForm from '../components/convertkit-form'
-import H1 from '../components/h1'
-import H2 from '../components/h2'
-import Img from '../components/img'
 import Layout from '../components/layout'
-import Li from '../components/li'
 import MetaTags from '../components/meta-tags'
 import NewsletterTeaser from '../components/newsletter-teaser'
-import P from '../components/p'
 import RichPreview from '../components/rich-preview'
 import Taper from '../components/taper'
 
@@ -46,64 +40,58 @@ export default ({
       />
 
       <Taper>
-        <H1>
+        <h1>
           More tips, straight to your inbox
-        </H1>
+        </h1>
 
-        <P>
+        <p>
           In addition to what I share on this site, I send out a weekly newsletter with tips to help you work smarter. By signing up, you get access to:
-        </P>
+        </p>
 
         <ul
           className={`
             list-none
-            mb-24
+            my-6
             p-0
-            s:col-10/12
-            s:mx-auto
-            m:col-8/10
-            l:col-6/8
+            space-y-3
           `}
         >
           {listItems.map(listItem => (
-            <Li
+            <li
               className={`
                 flex
-                mb-12
+                m-0
               `}
               key={`newsletter-benefit-${listItem}`}
             >
-              <Img
+              <img
                 alt=""
                 className={`
                   flex-no-shrink
-                  h-24
-                  mr-10
-                  w-24
-                  m:h-27
-                  m:w-27
+                  h-6
+                  mr-1.5
+                  w-6
                 `}
                 src="/assets/icons/checkmark.svg"
               />
 
               <span
                 className={`
-                  font-size-16-medium
-                  m:font-size-18-medium
+                  text-base
                 `}
               >
                 {listItem}
               </span>
-            </Li>
+            </li>
           ))}
         </ul>
 
-        <P>
-          You can find <A href="/newsletter/archive/">all previous newsletters</A> in the archive. Get this bonus content before everybody else!
-        </P>
+        <p>
+          You can find <a href="/newsletter/archive/">all previous newsletters</a> in the archive. Get this bonus content before everybody else!
+        </p>
 
         <div
-          className="mb-48"
+          className="mb-12"
         >
           <ConvertkitForm
             sourceUrl={location.href}
@@ -112,31 +100,40 @@ export default ({
           />
         </div>
 
-        <H2>
+        <h2>
           Featured newsletters
-        </H2>
+        </h2>
 
-        {newsletters.map(newsletter => (
-          <div
-            className="mb-36"
-            key={`newsletter-${newsletter.id}`}
-          >
+        <div
+          className={`
+            grid
+            gap-10
+            grid-cols-1
+            mb-8
+          `}
+        >
+          {newsletters.map(newsletter => (
             <NewsletterTeaser
+              key={`newsletter-${newsletter.id}`}
               newsletter={newsletter}
             />
-          </div>
-        ))}
+          ))}
+        </div>
 
         <a
           className={`
-            bg-yellow-400
-            font-size-14-short
-            font-weight-500
+            bg-yellow-300
+            text-sm
+            font-medium
             inline-block
-            px-20
-            py-12
-            rounded-3
+            px-5
+            py-3
+            rounded-lg
+            shadow-sm
             text-gray-900
+            focus:ring
+            focus:ring-yellow-600
+            focus:ring-opacity-50
             visited:text-gray-900
           `}
           href="/newsletter/archive/"

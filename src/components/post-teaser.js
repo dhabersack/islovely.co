@@ -1,10 +1,6 @@
 import React from 'react'
 
-import A from './a'
 import Card from './card'
-import H2 from './h2'
-import Img from './img'
-import P from './p'
 import PostMeta from './post-meta'
 import Tag from './tag'
 import slugify from '../utils/slugify'
@@ -35,14 +31,14 @@ export default ({
       <article
         className={`
           flex
-          flex-column
+          flex-col
           h-full
         `}
       >
         <a
           href={permalink}
         >
-          <Img
+          <img
             alt={heroAlt}
             className="w-full"
             src={`/assets/heroes/${slug}--teaser.jpg`}
@@ -52,50 +48,50 @@ export default ({
         <div
           className={`
             flex
-            flex-column
+            flex-col
             h-full
-            px-15
-            py-12
+            px-4
+            py-3
           `}
         >
-          <H2
+          <h2
             className={`
-              font-size-16-short
-              font-weight-700
+              leading-snug
               m-0
-              mb-6
+              mb-1.5
+              text-base
             `}
           >
-            <A
+            <a
               href={permalink}
             >
               {title}
-            </A>
-          </H2>
+            </a>
+          </h2>
 
-          <P
+          <p
             className={`
               flex-grow
-              font-size-14-medium
-              mb-24
-              text-gray-700
+              text-sm
+              mb-6
+              text-gray-600
             `}
           >
             {excerpt}
-          </P>
+          </p>
 
           <div
             className={`
               flex
               flex-wrap
-              mb-6
+              mb-1.5
             `}
           >
             {categories.map(category => (
               <div
                 className={`
-                  mb-3
-                  mr-5
+                  mb-1
+                  mr-1.5
                 `}
                 key={category}
               >

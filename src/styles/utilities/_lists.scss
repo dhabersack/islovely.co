@@ -1,5 +1,0 @@
-@each $style in (decimal, disk, none) {
-  .list-#{$style} {
-    list-style: $style;
-  }
-}

@@ -7,8 +7,8 @@ export default ({
     className={`
       bg-white
       overflow-hidden
-      rounded-6
-      shadow-s
+      rounded-md
+      shadow-md
     `}
   >
     {children}
