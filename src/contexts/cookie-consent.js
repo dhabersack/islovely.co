@@ -1,6 +1,6 @@
 import React from 'react'
 
 export default React.createContext({
-  isCookieConsentGiven: true,
+  isCookieConsentGiven: false,
   setIsCookieConsentGiven: () => {}
 })

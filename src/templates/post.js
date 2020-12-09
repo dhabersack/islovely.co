@@ -109,8 +109,8 @@ export default ({
           {categories.map(category => (
             <div
               className={`
-                mb-3
-                mr-2.5
+                mb-1
+                mr-1.5
               `}
               key={`category-${category}`}
             >

@@ -5,17 +5,18 @@ import Navigation from './navigation'
 export default () => (
   <header
     className={`
-      align-items-center
       flex
       flex-wrap
+      items-center
       justify-between
       py-3
+      relative
+      z-10
     `}
   >
     <a
       className={`
         flex-no-shrink
-        mr-5
         py-1.5
       `}
       href="/"
