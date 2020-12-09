@@ -31,7 +31,7 @@ export default ({
         `}
       >
         <div
-          className="mb-12"
+          className="mb-6"
         >
           <Header />
         </div>

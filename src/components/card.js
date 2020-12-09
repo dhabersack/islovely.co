@@ -9,6 +9,7 @@ export default ({
       overflow-hidden
       rounded-md
       shadow-md
+      dark:bg-gray-900
     `}
   >
     {children}

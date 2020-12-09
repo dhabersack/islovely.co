@@ -62,7 +62,6 @@ export default ({
           <p
             className={`
               m-0
-              text-gray-600
               text-sm
             `}
           >
@@ -79,6 +78,8 @@ export default ({
             py-3
             text-gray-500
             text-xs
+            dark:bg-black
+            dark:text-gray-300
           `}
         >
           {emails && (

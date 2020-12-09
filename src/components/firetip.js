@@ -79,6 +79,7 @@ export default ({
           bg-gray-100
           px-4
           py-3
+          dark:bg-black
         `}
       >
         <p
@@ -86,6 +87,7 @@ export default ({
             m-0
             text-gray-500
             text-xs
+            dark:text-gray-300
           `}
         >
           <span

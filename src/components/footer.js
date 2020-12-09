@@ -10,6 +10,7 @@ export default () => (
       items-center
       py-6
       text-gray-500
+      dark:text-gray-400
     `}
   >
     <div

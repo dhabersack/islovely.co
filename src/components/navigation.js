@@ -46,6 +46,10 @@ export default () => {
             focus:ring-indigo-200
             focus:ring-opacity-50
             md:hidden
+            dark:bg-black
+            dark:text-gray-400
+            dark:hover:bg-gray-900
+            dark:hover:text-gray-200
           `}
           onClick={openMenu}
           type="button"
@@ -92,6 +96,9 @@ export default () => {
                 hover:text-gray-900
                 hover:no-underline
                 visited:text-gray-700
+                dark:text-gray-200
+                dark:hover:text-gray-50
+                dark:visited:text-gray-200
               `}
               href={href}
               key={href}
@@ -125,6 +132,8 @@ export default () => {
               ring-
               ring-black
               ring-opacity-5
+              dark:bg-gray-900
+              dark:ring-white
             `}
           >
             <div
@@ -144,6 +153,7 @@ export default () => {
                   inline-flex
                   items-center
                   justify-center
+                  -mr-2
                   p-2
                   rounded-lg
                   text-gray-500
@@ -153,7 +163,10 @@ export default () => {
                   focus:ring
                   focus:ring-indigo-200
                   focus:ring-opacity-50
-                  -mr-2
+                  dark:bg-black
+                  dark:text-gray-400
+                  dark:hover:bg-gray-900
+                  dark:hover:text-gray-200
                 `}
               >
                 <span
@@ -208,6 +221,11 @@ export default () => {
                     hover:bg-gray-50
                     hover:no-underline
                     visited:text-gray-700
+                    dark:text-gray-200
+                    dark:focus:bg-gray-800
+                    dark:hover:text-gray-50
+                    dark:hover:bg-gray-800
+                    dark:visited:text-gray-200
                   `}
                   href={href}
                   key={href}

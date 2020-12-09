@@ -135,6 +135,8 @@ export default ({
             focus:ring-yellow-600
             focus:ring-opacity-50
             visited:text-gray-900
+            dark:text-gray-900
+            dark:visited:text-gray-900
           `}
           href="/newsletter/archive/"
         >

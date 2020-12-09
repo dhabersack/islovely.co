@@ -70,6 +70,8 @@ export default () => {
                 focus:ring
                 focus:ring-indigo-200
                 focus:ring-opacity-50
+                dark:bg-black
+                dark:border-gray-600
               `}
               id="email"
               name="email"
@@ -115,6 +117,8 @@ export default () => {
               focus:ring
               focus:ring-indigo-200
               focus:ring-opacity-50
+              dark:bg-black
+              dark:border-gray-600
             `}
             id="message"
             name="message"
@@ -160,6 +164,9 @@ export default () => {
                 focus:ring
                 focus:ring-indigo-200
                 focus:ring-opacity-50
+                dark:bg-black
+                dark:border-gray-600
+                dark:text-indigo-400
               `}
               id="data-processing-consent"
               name="data-processing-consent"

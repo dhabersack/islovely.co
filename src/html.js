@@ -13,11 +13,9 @@ export default ({
   <html
     className={`
       antialiased
-      bg-gray-50
       font-sans
       inter-font-features
       kerning-auto
-      text-gray-600
     `}
     lang="en-US"
     prefix="og: http://ogp.me/ns#"
@@ -44,6 +42,12 @@ export default ({
     </head>
 
     <body
+      className={`
+        bg-gray-50
+        text-gray-600
+        dark:bg-gray-800
+        dark:text-gray-300
+      `}
       {...bodyAttributes}
     >
       {preBodyComponents}

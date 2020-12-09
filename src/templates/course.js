@@ -207,7 +207,10 @@ export default ({
                 `}
               >
                 <span
-                  className="text-gray-500"
+                  className={`
+                    text-gray-500
+                    dark:text-gray-400
+                  `}
                 >
                   #{index + 1}
                 </span>
@@ -219,7 +222,10 @@ export default ({
                 {' '}
 
                 <span
-                  className="text-gray-500"
+                  className={`
+                    text-gray-500
+                    dark:text-gray-400
+                  `}
                 >
                   ({duration})
                 </span>

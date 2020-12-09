@@ -27,6 +27,8 @@ const cta = (
         focus:ring-yellow-600
         focus:ring-opacity-50
         visited:text-gray-900
+        dark:text-gray-900
+        dark:visited:text-gray-900
       `}
       href="/courses/"
     >
@@ -236,6 +238,7 @@ export default () => (
           md:flex
           md:items-start
           md:justify-between
+          dark:bg-gray-900
         `}
       >
         <img
@@ -256,10 +259,10 @@ export default () => (
         <div>
           <h2
             className={`
+              leading-snug
               m-0
               mb-1.5
               text-lg
-              lg:text-xl
             `}
           >
             Hey, I am Dom. I love helping others get better at what they do.
@@ -268,7 +271,6 @@ export default () => (
           <p
             className={`
               text-sm
-              lg:text-base
             `}
           >
             I started learning HTML, CSS, and JavaScript on my own in seventh grade. You could often see me scribble what I thought was valid code on paper between periods. My love for working on the web has grown ever since those early days.
@@ -278,7 +280,6 @@ export default () => (
             className={`
               mb-0
               text-sm
-              lg:text-base
             `}
           >
             I started my professional career in development and now consulting over 15 years ago. My heart beats for teaching everything I know. Helping others get better at what they do is what motivates me every single day.

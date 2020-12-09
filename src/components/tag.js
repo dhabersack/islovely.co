@@ -18,6 +18,9 @@ export default ({
         text-xs
         whitespace-nowrap
         visited:text-gray-600
+        dark:bg-gray-700
+        dark:text-gray-300
+        dark:visited:text-gray-300
       `}
       href={href}
     >

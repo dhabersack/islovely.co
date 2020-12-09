@@ -68,6 +68,7 @@ export default ({
                 className={`
                   text-gray-500
                   text-xs
+                  dark:text-gray-400
                 `}
               >
                 &times; {tagCounts[tag]}

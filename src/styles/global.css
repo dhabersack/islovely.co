@@ -188,7 +188,7 @@
   }
 
   a {
-    @apply no-underline text-blue-400 focus:outline-none focus:ring focus:ring-indigo-200 focus:ring-opacity-50 hover:underline visited:text-blue-400;
+    @apply no-underline text-blue-400 focus:outline-none focus:ring focus:ring-indigo-200 focus:ring-opacity-50 hover:underline visited:text-blue-400 dark:text-red-500 dark:visited:text-red-500;
   }
 
   blockquote {
@@ -196,11 +196,11 @@
   }
 
   button {
-    @apply bg-gray-200 border-transparent border cursor-pointer m-0 px-2.5 py-2 rounded text-gray-700 text-sm disabled:cursor-not-allowed disabled:opacity-50 focus:outline-none focus:ring focus:ring-gray-400 focus:ring-opacity-50 hover:bg-gray-300;
+    @apply bg-gray-200 border-transparent border cursor-pointer m-0 px-2.5 py-2 rounded text-gray-700 text-sm disabled:cursor-not-allowed disabled:opacity-50 focus:outline-none focus:ring focus:ring-gray-400 focus:ring-opacity-50 hover:bg-gray-300 dark:bg-gray-900 dark:text-gray-400 dark:hover:bg-gray-900;
   }
 
   code {
-    @apply bg-gray-200 font-normal font-mono px-1.5 py-1 rounded subpixel-antialiased text-gray-600;
+    @apply bg-gray-200 font-normal font-mono px-1.5 py-1 rounded subpixel-antialiased text-gray-600 dark:bg-gray-900 dark:text-gray-300;
   }
 
   figcaption {
@@ -248,7 +248,7 @@
   }
 
   li {
-    @apply mb-1.5 p-0 text-base md:text-lg;
+    @apply mb-1.5 p-0 text-base;
   }
 
   mark {
@@ -367,7 +367,7 @@
 }
 
 pre[class*="language-"] {
-  @apply bg-gray-800 font-mono m-0 mb-3 overflow-x-auto px-4 py-3 rounded-lg subpixel-antialiased text-gray-100 w-full;
+  @apply bg-gray-800 font-mono m-0 mb-3 overflow-x-auto px-4 py-3 rounded-lg subpixel-antialiased text-gray-100 w-full dark:bg-black;
 }
 
 pre[class*="language-"] code[class*="language-"] {
