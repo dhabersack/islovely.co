@@ -21,7 +21,9 @@ export default () => (
         h-6
         text-black
         w-14
+        visited:text-black
         dark:text-white
+        dark:visited:text-white
       `}
       href="/"
     >
