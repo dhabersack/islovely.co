@@ -17,7 +17,10 @@ const PrimaryButton = ({
         focus:ring-indigo-200
         focus:ring-opacity-50
         hover:bg-blue-600
-        ${className}
+        dark:bg-red-600
+        dark:hover:bg-red-600
+        dark:focus:ring-blue-500
+        ${className ?? ''}
       `}
       {...props}
     >

@@ -69,6 +69,10 @@ export default ({
               focus:ring
               focus:ring-indigo-200
               focus:ring-opacity-50
+              dark:bg-black
+              dark:border-gray-700
+              dark:focus:border-blue-600
+              dark:focus:ring-blue-500
             `}
             name="email_address"
             placeholder="Enter your email"
@@ -101,6 +105,7 @@ export default ({
           m-0
           text-gray-500
           text-xs
+          dark:text-gray-400
         `}
       >
         I respect your email privacy. Unsubscribe anytime.

@@ -68,6 +68,7 @@ export default ({
             mb-3
             text-gray-500
             text-xs
+            dark:text-gray-400
           `}
         >
           {formatDate(date)}

@@ -12,6 +12,7 @@ export default ({
       py-3
       rounded-lg
       shadow
+      dark:bg-gray-900
     `}
   >
     <h1
@@ -27,7 +28,7 @@ export default ({
 
     <p
       className={`
-        mb-0
+        mb-3
         text-sm
       `}
     >

@@ -74,7 +74,6 @@ export default ({
               flex-grow
               text-sm
               mb-6
-              text-gray-600
             `}
           >
             {excerpt}

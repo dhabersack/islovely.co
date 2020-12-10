@@ -1,6 +1,10 @@
 import React from 'react'
 
 import Card from './card'
+import CalendarIcon from '../icons/calendar'
+import ClockIcon from '../icons/clock'
+import EmailWithLetterIcon from '../icons/email-with-letter'
+import VideoIcon from '../icons/video'
 
 export default ({
   course,
@@ -28,7 +32,7 @@ export default ({
     <Card>
       <article
         className={`
-          border-${highlightColor}
+          ${highlightColor}
           border-0
           border-t-8
           flex
@@ -62,7 +66,6 @@ export default ({
           <p
             className={`
               m-0
-              text-gray-600
               text-sm
             `}
           >
@@ -79,6 +82,8 @@ export default ({
             py-3
             text-gray-500
             text-xs
+            dark:bg-black
+            dark:text-gray-300
           `}
         >
           {emails && (
@@ -89,11 +94,16 @@ export default ({
                 mr-2.5
               `}
             >
-              <img
-                alt=""
-                className="mr-1"
-                src="/assets/icons/email-with-letter.svg"
-              />
+              <div
+                className={`
+                  h-6
+                  mr-1
+                  w-6
+                  dark:text-gray-400
+                `}
+              >
+                <EmailWithLetterIcon />
+              </div>
 
               <span>
                 <strong>{emails}</strong> emails
@@ -109,11 +119,16 @@ export default ({
                 mr-2.5
               `}
             >
-              <img
-                alt=""
-                className="mr-1"
-                src="/assets/icons/video.svg"
-              />
+              <div
+                className={`
+                  h-6
+                  mr-1
+                  w-6
+                  dark:text-gray-400
+                `}
+              >
+                <VideoIcon />
+              </div>
 
               <span>
                 <strong>{videos}</strong> videos
@@ -129,11 +144,16 @@ export default ({
                 mr-2.5
               `}
             >
-              <img
-                alt=""
-                className="mr-1"
-                src="/assets/icons/clock.svg"
-              />
+              <div
+                className={`
+                  h-6
+                  mr-1
+                  w-6
+                  dark:text-gray-400
+                `}
+              >
+                <ClockIcon />
+              </div>
 
               <span>
                 <strong>{hours}</strong> hours
@@ -149,11 +169,16 @@ export default ({
                 mr-2.5
               `}
             >
-              <img
-                alt=""
-                className="mr-1"
-                src="/assets/icons/calendar.svg"
-              />
+              <div
+                className={`
+                  h-6
+                  mr-1
+                  w-6
+                  dark:text-gray-400
+                `}
+              >
+                <CalendarIcon />
+              </div>
 
               <span>
                 <strong>{weeks}</strong> weeks

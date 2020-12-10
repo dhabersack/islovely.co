@@ -28,6 +28,7 @@ export default ({
           mb-0.5
           text-gray-500
           text-xs
+          dark:text-gray-400
         `}
       >
         <strong

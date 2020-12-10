@@ -70,6 +70,10 @@ export default () => {
                 focus:ring
                 focus:ring-indigo-200
                 focus:ring-opacity-50
+                dark:bg-black
+                dark:border-gray-700
+                dark:focus:border-blue-600
+                dark:focus:ring-blue-500
               `}
               id="email"
               name="email"
@@ -115,7 +119,11 @@ export default () => {
               focus:ring
               focus:ring-indigo-200
               focus:ring-opacity-50
-            `}
+              dark:bg-black
+              dark:border-gray-700
+              dark:focus:border-blue-600
+              dark:focus:ring-blue-500
+          `}
             id="message"
             name="message"
             placeholder="What do you want to say?"
@@ -159,7 +167,12 @@ export default () => {
                 focus:border-indigo-300
                 focus:ring
                 focus:ring-indigo-200
+                focus:ring-offset-transparent
                 focus:ring-opacity-50
+                dark:bg-black
+                dark:border-gray-700
+                dark:focus:border-blue-600
+                dark:focus:ring-blue-500
               `}
               id="data-processing-consent"
               name="data-processing-consent"

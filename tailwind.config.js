@@ -1,8 +1,12 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-  purge: ['./src/**/*.js'],
-  darkMode: false, // or 'media' or 'class'
+  purge: [
+    './src/**/*.js',
+    './_courses/**/*.md',
+    './_courses/**/*.mdx',
+  ],
+  darkMode: 'media',
   theme: {
     fontFamily: {
       mono: ['Source Code Pro', 'monospace'],

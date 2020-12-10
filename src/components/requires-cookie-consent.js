@@ -17,6 +17,8 @@ export default ({
         border-dashed
         border-gray-400
         rounded-lg
+        dark:bg-gray-800
+        dark:border-gray-500
       `}
     >
       <div
@@ -30,6 +32,7 @@ export default ({
           py-3
           text-center
           text-gray-500
+          dark:text-gray-400
         `}
       >
         <p
