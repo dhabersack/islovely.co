@@ -1,5 +1,6 @@
 import React from 'react'
 
+import DesktopIcon from '../icons/desktop'
 import Layout from '../components/layout'
 import MetaTags from '../components/meta-tags'
 import RichPreview from '../components/rich-preview'
@@ -28,15 +29,21 @@ const cta = (
         focus:ring-opacity-50
         visited:text-gray-900
         dark:text-gray-900
+        dark:focus:bg-yellow-200
+        dark:focus:ring-blue-500
         dark:visited:text-gray-900
       `}
       href="/courses/"
     >
-      <img
-        alt=""
-        className="mr-1"
-        src="/assets/icons/desktop.svg"
-      />
+      <div
+        className={`
+          h-6
+          mr-1
+          w-6
+        `}
+      >
+        <DesktopIcon />
+      </div>
 
       <span
         className={`

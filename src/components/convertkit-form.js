@@ -70,7 +70,9 @@ export default ({
               focus:ring-indigo-200
               focus:ring-opacity-50
               dark:bg-black
-              dark:border-gray-600
+              dark:border-gray-700
+              dark:focus:border-blue-600
+              dark:focus:ring-blue-500
             `}
             name="email_address"
             placeholder="Enter your email"

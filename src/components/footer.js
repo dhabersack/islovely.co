@@ -1,6 +1,49 @@
 import React from 'react'
 
+import CodePen from '../icons/codepen-logo'
+import Dribbble from '../icons/dribbble-logo'
+import GitHub from '../icons/github-logo'
+import LinkedIn from '../icons/linkedin-logo'
+import Mastodon from '../icons/mastodon-logo'
+import Twitch from '../icons/twitch-logo'
+import Twitter from '../icons/twitter-logo'
 import UpdateCookieSettingsTrigger from './update-cookie-settings-trigger'
+import YouTube from '../icons/youtube-logo'
+
+const SOCIAL_PROFILES = {
+  'Twitter': {
+    href: 'https://twitter.com/domhabersack',
+    Logo: Twitter,
+  },
+  'YouTube': {
+    href: 'https://youtube.com/channel/UCi_V66TGKpeSHV_4DYCFbjw',
+    Logo: YouTube,
+  },
+  'Twitch': {
+    href: 'https://twitch.tv/domhabersack',
+    Logo: Twitch,
+  },
+  'GitHub': {
+    href: 'https://github.com/domhabersack',
+    Logo: GitHub,
+  },
+  'CodePen': {
+    href: 'https://codepen.io/domhabersack',
+    Logo: CodePen,
+  },
+  'LinkedIn': {
+    href: 'https://linkedin.com/in/domhabersack',
+    Logo: LinkedIn,
+  },
+  'dribbble': {
+    href: 'https://dribbble.com/domhabersack',
+    Logo: Dribbble,
+  },
+  'Mastodon': {
+    href: 'https://mastodon.social/@domhabersack',
+    Logo: Mastodon,
+  },
+}
 
 export default () => (
   <footer
@@ -85,68 +128,20 @@ export default () => (
         space-x-2.5
       `}
     >
-      <a
-        href="https://twitter.com/domhabersack"
-      >
-        <img
-          alt="Dom Habersack on Twitter"
-          src="/icons/twitter.svg"
-        />
-      </a>
-
-      <a
-        href="https://youtube.com/channel/UCi_V66TGKpeSHV_4DYCFbjw"
-      >
-        <img
-          alt="Dom Habersack on YouTube"
-          src="/icons/youtube.svg"
-        />
-      </a>
-
-      <a
-        href="https://twitch.tv/domhabersack"
-      >
-        <img
-          alt="Dom Habersack on Twitch"
-          src="/icons/twitch.svg"
-        />
-      </a>
-
-      <a
-        href="https://github.com/domhabersack"
-      >
-        <img
-          alt="Dom Habersack on GitHub"
-          src="/icons/github.svg"
-        />
-      </a>
-
-      <a
-        href="https://codepen.io/domhabersack"
-      >
-        <img
-          alt="Dom Habersack on CodePen"
-          src="/icons/codepen.svg"
-        />
-      </a>
-
-      <a
-        href="https://linkedin.com/in/domhabersack"
-      >
-        <img
-          alt="Dom Habersack on LinkedIn"
-          src="/icons/linkedin.svg"
-        />
-      </a>
-
-      <a
-        href="https://dribbble.com/domhabersack"
-      >
-        <img
-          alt="Dom Habersack on dribbble"
-          src="/icons/dribbble.svg"
-        />
-      </a>
+      {Object.entries(SOCIAL_PROFILES).map(([name, { href, Logo }]) => (
+        <a
+          className={`
+            h-6
+            w-6
+            text-gray-600
+            dark:text-gray-300
+          `}
+          href={href}
+          title={`Dom Habersack on ${name}`}
+        >
+          <Logo />
+        </a>
+      ))}
     </div>
   </footer>
 )

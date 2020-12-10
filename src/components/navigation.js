@@ -46,9 +46,9 @@ export default () => {
             focus:ring-indigo-200
             focus:ring-opacity-50
             md:hidden
-            dark:bg-black
+            dark:bg-gray-900
             dark:text-gray-400
-            dark:hover:bg-gray-900
+            dark:hover:bg-black
             dark:hover:text-gray-200
           `}
           onClick={openMenu}
@@ -129,11 +129,7 @@ export default () => {
               overflow-hidden
               rounded-lg
               shadow-md
-              ring-
-              ring-black
-              ring-opacity-5
               dark:bg-gray-900
-              dark:ring-white
             `}
           >
             <div
@@ -165,7 +161,7 @@ export default () => {
                   focus:ring-opacity-50
                   dark:bg-black
                   dark:text-gray-400
-                  dark:hover:bg-gray-900
+                  dark:hover:bg-gray-800
                   dark:hover:text-gray-200
                 `}
               >

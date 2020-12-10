@@ -2,12 +2,16 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
+import CalendarIcon from '../icons/calendar'
+import ClockIcon from '../icons/clock'
 import ConvertkitForm from '../components/convertkit-form'
+import EmailWithLetterIcon from '../icons/email-with-letter'
 import Layout from '../components/layout'
 import MetaTags from '../components/meta-tags'
 import RichPreview from '../components/rich-preview'
 import Taper from '../components/taper'
 import Video from '../components/video'
+import VideoIcon from '../icons/video'
 
 export default ({
   data,
@@ -83,11 +87,16 @@ export default ({
                 mr-2.5
               `}
             >
-              <img
-                alt=""
-                className="mr-1"
-                src="/assets/icons/email-with-letter.svg"
-              />
+              <div
+                className={`
+                  h-6
+                  mr-1
+                  w-6
+                  dark:text-gray-400
+                `}
+              >
+                <EmailWithLetterIcon />
+              </div>
 
               <span>
                 <strong>{emails}</strong> emails
@@ -103,11 +112,16 @@ export default ({
                 mr-2.5
               `}
             >
-              <img
-                alt=""
-                className="mr-1"
-                src="/assets/icons/video.svg"
-              />
+              <div
+                className={`
+                  h-6
+                  mr-1
+                  w-6
+                  dark:text-gray-400
+                `}
+              >
+                <VideoIcon />
+              </div>
 
               <span>
                 <strong>{videos}</strong> videos
@@ -123,11 +137,16 @@ export default ({
                 mr-2.5
               `}
             >
-              <img
-                alt=""
-                className="mr-1"
-                src="/assets/icons/clock.svg"
-              />
+              <div
+                className={`
+                  h-6
+                  mr-1
+                  w-6
+                  dark:text-gray-400
+                `}
+              >
+                <ClockIcon />
+              </div>
 
               <span>
                 <strong>{hours}</strong> hours
@@ -143,11 +162,16 @@ export default ({
                 mr-2.5
               `}
             >
-              <img
-                alt=""
-                className="mr-1"
-                src="/assets/icons/calendar.svg"
-              />
+              <div
+                className={`
+                  h-6
+                  mr-1
+                  w-6
+                  dark:text-gray-400
+                `}
+              >
+                <CalendarIcon />
+              </div>
 
               <span>
                 <strong>{weeks}</strong> weeks
@@ -203,7 +227,7 @@ export default ({
                 className={`
                   font-normal
                   leading-snug
-                  text-base
+                  text-sm
                 `}
               >
                 <span

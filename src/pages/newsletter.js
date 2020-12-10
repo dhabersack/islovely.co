@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby';
 
+import CircledCheckmark from '../icons/circled-checkmark'
 import ConvertkitForm from '../components/convertkit-form'
 import Layout from '../components/layout'
 import MetaTags from '../components/meta-tags'
@@ -8,19 +9,19 @@ import NewsletterTeaser from '../components/newsletter-teaser'
 import RichPreview from '../components/rich-preview'
 import Taper from '../components/taper'
 
+const BENEFITS = [
+  'tips on design and development you can use immediately',
+  'free previews of my upcoming course materials',
+  'discount codes for my courses and products',
+  'announcements of events I am going to speak at',
+  'access to video recordings of past speaking gigs'
+]
+
 export default ({
   data,
   location,
 }) => {
   const newsletters = data.allMdx.edges.map(({ node }) => node)
-
-  const listItems = [
-    'tips on design and development you can use immediately',
-    'free previews of my upcoming course materials',
-    'discount codes for my courses and products',
-    'announcements of events I am going to speak at',
-    'access to video recordings of past speaking gigs'
-  ]
 
   return (
     <Layout
@@ -56,7 +57,7 @@ export default ({
             space-y-3
           `}
         >
-          {listItems.map(listItem => (
+          {BENEFITS.map(listItem => (
             <li
               className={`
                 flex
@@ -64,21 +65,21 @@ export default ({
               `}
               key={`newsletter-benefit-${listItem}`}
             >
-              <img
-                alt=""
+              <div
                 className={`
-                  flex-no-shrink
+                  flex-shrink-0
                   h-6
-                  mr-1.5
+                  mr-1
+                  text-green-300
                   w-6
+                  dark:text-green-500
                 `}
-                src="/assets/icons/checkmark.svg"
-              />
+              >
+                <CircledCheckmark />
+              </div>
 
               <span
-                className={`
-                  text-base
-                `}
+                className="text-base"
               >
                 {listItem}
               </span>

@@ -19,7 +19,8 @@ const PrimaryButton = ({
         hover:bg-blue-600
         dark:bg-red-600
         dark:hover:bg-red-600
-        ${className}
+        dark:focus:ring-blue-500
+        ${className ?? ''}
       `}
       {...props}
     >
