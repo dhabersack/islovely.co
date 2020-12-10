@@ -26,6 +26,7 @@ export default () => (
         dark:visited:text-white
       `}
       href="/"
+      title="islovely"
     >
       <Logo />
     </a>
