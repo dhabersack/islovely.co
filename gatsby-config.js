@@ -1,4 +1,5 @@
 const types = [
+  'authors',
   'courses',
   'firetips',
   'newsletters',

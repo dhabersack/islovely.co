@@ -10,7 +10,7 @@ import Taper from '../components/taper'
 export default ({
   data,
 }) => {
-  const courses = data.allMdx.edges.map(({ node }) => node)
+  const courses = data.allCourse.edges.map(({ node }) => node)
 
   return (
     <Layout
@@ -54,25 +54,14 @@ export default ({
 
 export const pageQuery = graphql`
   query {
-    allMdx(
-      filter: {
-        fields: {
-          type: {
-            eq: "course"
-          }
-        }
-      },
+    allCourse(
       sort: {
-        fields: fields___slug,
+        fields: slug,
         order: ASC
       }
     ) {
       edges {
         node {
-          id
-          fields {
-            permalink
-          }
           frontmatter {
             emails
             excerpt
@@ -82,6 +71,8 @@ export const pageQuery = graphql`
             videos
             weeks
           }
+          id
+          permalink
         }
       }
     }

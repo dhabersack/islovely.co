@@ -10,7 +10,7 @@ import Taper from '../components/taper'
 export default ({
   data,
 }) => {
-  const posts = data.allMdx.edges.map(({ node }) => node)
+  const posts = data.allPost.edges.map(({ node }) => node)
 
   const categories = [
     ...new Set(posts.map(({ frontmatter }) => frontmatter.categories).flat())
@@ -65,22 +65,10 @@ export default ({
 
 export const pageQuery = graphql`
   query {
-    allMdx(
-      filter: {
-        fields: {
-          type: {
-            eq: "post"
-          }
-        }
-      }
-    ) {
+    allPost {
       edges {
         node {
-          fields {
-            date
-            permalink
-            slug
-          }
+          date
           frontmatter {
             categories
             excerpt
@@ -88,6 +76,8 @@ export const pageQuery = graphql`
             heroCaption
             title
           }
+          permalink
+          slug
         }
       }
     }

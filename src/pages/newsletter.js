@@ -21,7 +21,7 @@ export default ({
   data,
   location,
 }) => {
-  const newsletters = data.allMdx.edges.map(({ node }) => node)
+  const newsletters = data.allNewsletter.edges.map(({ node }) => node)
 
   return (
     <Layout
@@ -150,13 +150,8 @@ export default ({
 
 export const pageQuery = graphql`
   query {
-    allMdx(
+    allNewsletter(
       filter: {
-        fields: {
-          type: {
-            eq: "newsletter"
-          }
-        },
         frontmatter: {
           isFeatured: {
             eq: true
@@ -164,22 +159,20 @@ export const pageQuery = graphql`
         }
       },
       sort: {
-        fields: fields___date,
+        fields: date,
         order: DESC
       }
     ) {
       edges {
         node {
-          fields {
-            date
-            permalink
-          }
+          date
           frontmatter {
             excerpt
             issue
             title
           }
           id
+          permalink
         }
       }
     }

@@ -12,7 +12,7 @@ export default ({
   data,
   pageContext,
 }) => {
-  const posts = data.allMdx.edges.map(({ node }) => node)
+  const posts = data.allPost.edges.map(({ node }) => node)
 
   const {
     category,
@@ -53,7 +53,7 @@ export default ({
 
 export const pageQuery = graphql`
   query($category: [String]) {
-    allMdx(
+    allPost(
       filter: {
         frontmatter: {
           categories: {
@@ -64,17 +64,15 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          id
-          fields {
-            date
-            permalink
-            slug
-          }
+          date
           frontmatter {
             categories
             excerpt
             title
           }
+          id
+          permalink
+          slug
         }
       }
     }

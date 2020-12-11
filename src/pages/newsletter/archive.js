@@ -10,7 +10,7 @@ import Taper from '../../components/taper'
 export default ({
   data,
 }) => {
-  const newsletters = data.allMdx.edges.map(({ node }) => node)
+  const newsletters = data.allNewsletter.edges.map(({ node }) => node)
 
   return (
     <Layout
@@ -66,33 +66,24 @@ export default ({
 
 export const pageQuery = graphql`
   query {
-    allMdx(
-      filter: {
-        fields: {
-          type: {
-            eq: "newsletter"
-          }
-        }
-      },
+    allNewsletter(
       sort: {
-        fields: fields___date,
+        fields: date,
         order: DESC
       }
     ) {
       edges {
         node {
-          id
-          fields {
-            date
-            permalink
-            slug
-          }
+          date
           frontmatter {
             excerpt
             issue
             title
           }
-        }
+          id
+          permalink
+          slug
+      }
       }
     }
   }

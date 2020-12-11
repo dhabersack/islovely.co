@@ -10,7 +10,7 @@ import Taper from '../components/taper'
 export default ({
   data,
 }) => {
-  const posts = data.allMdx.edges.map(({ node }) => node)
+  const posts = data.allPost.edges.map(({ node }) => node)
 
   return (
     <Layout
@@ -50,39 +50,30 @@ export default ({
 
 export const pageQuery = graphql`
   query {
-    allMdx(
-      filter: {
-        fields: {
-          type: {
-            eq: "post"
-          }
-        }
-      },
+    allPost(
       sort: {
-        fields: fields___date,
+        fields: date,
         order: DESC
       }
     ) {
       edges {
         node {
-          id
-          fields {
-            date
-            hero {
-              childImageSharp {
-                fluid(maxWidth: 640) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
-              }
-            }
-            permalink
-          }
+          date
           frontmatter {
             categories
             excerpt
             heroAlt
             title
           }
+          hero {
+            childImageSharp {
+              fluid(maxWidth: 640) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
+          id
+          permalink
         }
       }
     }

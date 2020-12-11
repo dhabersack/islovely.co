@@ -6,7 +6,6 @@ import Layout from '../components/layout'
 import MetaTags from '../components/meta-tags'
 import RichPreview from '../components/rich-preview'
 import Taper from '../components/taper'
-import mapAttachmentsToNamedObject from '../utils/map-attachments-to-named-object'
 import mapFiguresToNamedObject from '../utils/map-figures-to-named-object'
 
 export default ({
@@ -14,16 +13,11 @@ export default ({
 }) => {
   const {
     body,
-    fields,
     frontmatter,
-  } = data.mdx
-
-  const {
     permalink,
-  } = fields
+  } = data.page
 
   const {
-    attachments,
     description,
     figures,
     title,
@@ -54,7 +48,6 @@ export default ({
         </h1>
 
         <MDXRenderer
-          attachments={mapAttachmentsToNamedObject(attachments)}
           figures={mapFiguresToNamedObject(figures)}
         >
           {body}
@@ -66,23 +59,13 @@ export default ({
 
 export const pageQuery = graphql`
   query($slug: String!) {
-    mdx(
-      fields: {
-        slug: {
-          eq: $slug
-        }
+    page(
+      slug: {
+        eq: $slug
       }
     ) {
       body
-      fields {
-        permalink
-        slug
-      }
       frontmatter {
-        attachments {
-          name
-          publicURL
-        }
         description
         figures {
           name
@@ -94,6 +77,8 @@ export const pageQuery = graphql`
         }
         title
       }
+      permalink
+      slug
     }
   }
 `

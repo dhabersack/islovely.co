@@ -20,16 +20,12 @@ export default ({
 }) => {
   const {
     body,
-    fields,
-    frontmatter,
-  } = data.mdx
-
-  const {
     date,
+    frontmatter,
     hero,
     slug,
     permalink,
-  } = fields
+  } = data.post
 
   const {
     attachments,
@@ -141,26 +137,13 @@ export default ({
 
 export const pageQuery = graphql`
   query($slug: String!) {
-    mdx(
-      fields: {
-        slug: {
-          eq: $slug
-        }
+    post(
+      slug: {
+        eq: $slug
       }
     ) {
       body
-      fields {
-        date
-        hero {
-          childImageSharp {
-            fluid(maxWidth: 1504) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
-        permalink
-        slug
-      }
+      date
       frontmatter {
         attachments {
           name
@@ -180,6 +163,15 @@ export const pageQuery = graphql`
         heroCaption
         title
       }
+      hero {
+        childImageSharp {
+          fluid(maxWidth: 1504) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      permalink
+      slug
     }
   }
 `

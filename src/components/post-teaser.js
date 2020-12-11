@@ -10,15 +10,11 @@ export default ({
   post,
 }) => {
   const {
-    fields,
-    frontmatter,
-  } = post
-
-  const {
     date,
+    frontmatter,
     hero,
     permalink,
-  } = fields
+  } = post
 
   const {
     categories,

@@ -10,13 +10,9 @@ export default ({
   course,
 }) => {
   const {
-    fields,
     frontmatter,
-  } = course
-
-  const {
     permalink,
-  } = fields
+  } = course
 
   const {
     emails,

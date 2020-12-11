@@ -8,7 +8,6 @@ import MetaTags from '../components/meta-tags'
 import RichPreview from '../components/rich-preview'
 import Taper from '../components/taper'
 import formatDate from '../utils/format-date'
-import mapAttachmentsToNamedObject from '../utils/map-attachments-to-named-object'
 import mapFiguresToNamedObject from '../utils/map-figures-to-named-object'
 
 export default ({
@@ -17,18 +16,13 @@ export default ({
 }) => {
   const {
     body,
-    fields,
-    frontmatter,
-  } = data.mdx
-
-  const {
     date,
+    frontmatter,
     permalink,
     slug,
-  } = fields
+  } = data.newsletter
 
   const {
-    attachments,
     excerpt,
     figures,
     title,
@@ -82,7 +76,6 @@ export default ({
           className="mb-16"
         >
           <MDXRenderer
-            attachments={mapAttachmentsToNamedObject(attachments)}
             figures={mapFiguresToNamedObject(figures)}
           >
             {body}
@@ -99,24 +92,14 @@ export default ({
 
 export const pageQuery = graphql`
   query($slug: String!) {
-    mdx(
-      fields: {
-        slug: {
-          eq: $slug
-        }
+    newsletter(
+      slug: {
+        eq: $slug
       }
     ) {
       body
-      fields {
-        date
-        permalink
-        slug
-      }
+      date
       frontmatter {
-        attachments {
-          name
-          publicURL
-        }
         excerpt
         figures {
           name
@@ -128,6 +111,8 @@ export const pageQuery = graphql`
         }
         title
       }
+      permalink
+      slug
     }
   }
 `
