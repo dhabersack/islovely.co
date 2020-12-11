@@ -17,11 +17,15 @@ export default ({
   } = post
 
   const {
+    author,
     categories,
     excerpt,
     heroAlt,
     title,
   } = frontmatter
+
+  const authorName = author.frontmatter.name
+  const avatarFluid = author.avatar.childImageSharp.fluid
 
   return (
     <Card>
@@ -100,6 +104,8 @@ export default ({
           </div>
 
           <PostMeta
+            author={authorName}
+            avatarFluid={avatarFluid}
             date={date}
           />
         </div>

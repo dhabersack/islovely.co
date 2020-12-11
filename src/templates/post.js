@@ -29,6 +29,7 @@ export default ({
 
   const {
     attachments,
+    author,
     categories,
     excerpt,
     figures,
@@ -36,6 +37,9 @@ export default ({
     heroCaption,
     title,
   } = frontmatter
+
+  const authorName = author.frontmatter.name
+  const avatarFluid = author.avatar.childImageSharp.fluid
 
   return (
     <Layout
@@ -73,6 +77,8 @@ export default ({
           className="mb-6"
         >
           <PostMeta
+            author={authorName}
+            avatarFluid={avatarFluid}
             date={date}
           />
         </div>
@@ -148,6 +154,18 @@ export const pageQuery = graphql`
         attachments {
           name
           publicURL
+        }
+        author {
+          avatar {
+            childImageSharp {
+              fluid(maxWidth: 40) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
+          frontmatter {
+            name
+          }
         }
         categories
         excerpt

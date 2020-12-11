@@ -4,6 +4,7 @@ categories: ["CSS"]
 excerpt: "The current versions of Node.js and grunt-contrib-sass don’t work together. Downgrade Node.js to an earlier version to avoid the issue."
 heroAlt: "Two foxes screaming at each other."
 heroCaption: "Unexpected disruptions to your development workflow are no fun."
+author: dom-habersack
 ---
 Over the last few weeks, I have become a massive fan of [Grunt](http://gruntjs.com/). Amongst other things, it makes development with [Sass](http://sass-lang.com/) and [CoffeeScript](http://coffeescript.org/) much easier by running their compile-processes automatically and reloading the browser via LiveReload. It basically gives you frontend-superpowers.
 

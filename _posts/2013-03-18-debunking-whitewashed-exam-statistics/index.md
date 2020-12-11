@@ -13,6 +13,7 @@ figures:
   - "./stacked-graph.png"
   - "./stacked-graph-grouped.png"
   - "./stacked-graph-classes.png"
+author: dom-habersack
 ---
 import Figure from '../../src/components/figure'
 

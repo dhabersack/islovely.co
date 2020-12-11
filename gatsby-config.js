@@ -14,6 +14,9 @@ module.exports = {
     siteUrl: `https://islovely.co`,
     title: `islovely`
   },
+  mapping: {
+    'Post.frontmatter.author': `Author`,
+  },
   plugins: [
     ...types.map(name => ({
       resolve: `gatsby-source-filesystem`,

@@ -172,7 +172,6 @@ exports.onCreateNode = ({ actions, createNodeId, getNode, node }) => {
   const parent = getNode(node.parent)
 
   if (node.internal.type === `Mdx`) {
-    // const createNodeFields = buildCreateNodeFields(node, actions.createNodeField)
     const [,, date, slug] = createFilePath({ node, getNode }).match(/^\/((\d{4}-\d{2}-\d{2})-)?(.*?)\/?$/)
 
     const fields = ({
@@ -180,7 +179,8 @@ exports.onCreateNode = ({ actions, createNodeId, getNode, node }) => {
       slug,
       ...({
         authors: {
-          avatar: `avatar.jpg`,
+          avatar: `${slug}.jpg`,
+          id: slug,
           permalink: `/authors/${slug}`,
         },
         courses: {
@@ -219,7 +219,6 @@ exports.onCreateNode = ({ actions, createNodeId, getNode, node }) => {
 
     actions.createNode({
       ...node,
-      ...fields,
       id: createNodeId(`${node.id} >>> ${type}`),
       parent: node.id,
       children: [],
@@ -227,6 +226,7 @@ exports.onCreateNode = ({ actions, createNodeId, getNode, node }) => {
         type,
         contentDigest: node.internal.contentDigest,
       },
+      ...fields,
     })
 
     actions.createParentChildLink({

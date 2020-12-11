@@ -5,6 +5,7 @@ tags: ["Seniority"]
 excerpt: In software development, seniority has nothing to do with age. When can someone be considered “senior”?
 heroAlt: A mountain under a bright sky that is free of clouds.
 heroCaption: The most “on the nose”-picture I could find for this.
+author: dom-habersack
 ---
 In software development, seniority has **nothing** to do with age. Seniority does not happen to you automatically as the years go by. You do not become a senior developer in the same way you become a senior citizen. Unfortunately, many people I work with equate gray hair with seniority and authority. Let’s look at what makes a person a “Senior Developer” so you can work towards that goal.
 

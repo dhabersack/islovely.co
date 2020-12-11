@@ -5,6 +5,7 @@ tags: ["Array", "reduce", "every", "some"]
 excerpt: "The array functions are great for all kinds of problems. But what happens when you forget to specify reduce’s second parameter?"
 heroAlt: "A dark spiralling staircase going down."
 heroCaption: "When avoiding loops, look out for some pitfalls."
+author: dom-habersack
 ---
 To calculate the sum of all numbers in an array, you could use a `for`-loop:
 
