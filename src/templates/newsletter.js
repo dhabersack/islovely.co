@@ -8,6 +8,8 @@ import MetaTags from '../components/meta-tags'
 import RichPreview from '../components/rich-preview'
 import Taper from '../components/taper'
 import formatDate from '../utils/format-date'
+import mapAttachmentsToNamedObject from '../utils/map-attachments-to-named-object'
+import mapFiguresToNamedObject from '../utils/map-figures-to-named-object'
 
 export default ({
   data,
@@ -26,7 +28,9 @@ export default ({
   } = fields
 
   const {
+    attachments,
     excerpt,
+    figures,
     title,
   } = frontmatter
 
@@ -77,7 +81,10 @@ export default ({
         <div
           className="mb-16"
         >
-          <MDXRenderer>
+          <MDXRenderer
+            attachments={mapAttachmentsToNamedObject(attachments)}
+            figures={mapFiguresToNamedObject(figures)}
+          >
             {body}
           </MDXRenderer>
         </div>
@@ -106,7 +113,19 @@ export const pageQuery = graphql`
         slug
       }
       frontmatter {
+        attachments {
+          name
+          publicURL
+        }
         excerpt
+        figures {
+          name
+          childImageSharp {
+            fluid(maxWidth: 1008) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
         title
       }
     }

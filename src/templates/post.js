@@ -10,6 +10,8 @@ import PostMeta from '../components/post-meta'
 import RichPreview from '../components/rich-preview'
 import Tag from '../components/tag'
 import Taper from '../components/taper'
+import mapAttachmentsToNamedObject from '../utils/map-attachments-to-named-object'
+import mapFiguresToNamedObject from '../utils/map-figures-to-named-object'
 import slugify from '../utils/slugify'
 
 export default ({
@@ -24,13 +26,16 @@ export default ({
 
   const {
     date,
+    hero,
     slug,
     permalink,
   } = fields
 
   const {
+    attachments,
     categories,
     excerpt,
+    figures,
     heroAlt,
     heroCaption,
     title,
@@ -84,7 +89,7 @@ export default ({
           m-0
           mb-6
         `}
-        src={`/assets/heroes/${slug}.jpg`}
+        fluid={hero.childImageSharp.fluid}
       />
 
       <Taper>
@@ -94,7 +99,10 @@ export default ({
             mb-8
           `}
         >
-          <MDXRenderer>
+          <MDXRenderer
+            attachments={mapAttachmentsToNamedObject(attachments)}
+            figures={mapFiguresToNamedObject(figures)}
+          >
             {body}
           </MDXRenderer>
         </div>
@@ -143,12 +151,31 @@ export const pageQuery = graphql`
       body
       fields {
         date
+        hero {
+          childImageSharp {
+            fluid(maxWidth: 1504) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
         permalink
         slug
       }
       frontmatter {
+        attachments {
+          name
+          publicURL
+        }
         categories
         excerpt
+        figures {
+          name
+          childImageSharp {
+            fluid(maxWidth: 1008) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
         heroAlt
         heroCaption
         title

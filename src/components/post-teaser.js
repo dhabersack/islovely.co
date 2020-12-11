@@ -1,4 +1,5 @@
 import React from 'react'
+import Img from 'gatsby-image'
 
 import Card from './card'
 import PostMeta from './post-meta'
@@ -15,8 +16,8 @@ export default ({
 
   const {
     date,
+    hero,
     permalink,
-    slug,
   } = fields
 
   const {
@@ -38,10 +39,9 @@ export default ({
         <a
           href={permalink}
         >
-          <img
+          <Img
             alt={heroAlt}
-            className="w-full"
-            src={`/assets/heroes/${slug}--teaser.jpg`}
+            fluid={hero.childImageSharp.fluid}
           />
         </a>
 

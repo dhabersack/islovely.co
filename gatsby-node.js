@@ -1,4 +1,5 @@
 const path = require(`path`)
+const { createFilePath } = require(`gatsby-source-filesystem`)
 
 const slugify = text => text.toLowerCase().replace(/ /g, '-')
 
@@ -15,19 +16,19 @@ const buildCreateNodeFields = (node, createNodeField) => fields => {
 const buildCreatePages = (createPage, graphql) => async sourceInstanceName => {
   const response = await graphql(`
     {
-      allFile(filter: {
-        sourceInstanceName: {
-          eq: "${sourceInstanceName}"
+      allMdx(filter: {
+        fields: {
+          type: {
+            eq: "${sourceInstanceName}"
+          }
         }
       }) {
         edges {
           node {
-            childMdx {
-              fields {
-                permalink
-                slug
-                type
-              }
+            fields {
+              permalink
+              slug
+              type
             }
           }
         }
@@ -40,8 +41,8 @@ const buildCreatePages = (createPage, graphql) => async sourceInstanceName => {
     return
   }
 
-  response.data.allFile.edges.forEach(({ node }) => {
-    const { permalink, slug, type } = node.childMdx.fields
+  response.data.allMdx.edges.forEach(({ node }) => {
+    const { permalink, slug, type } = node.fields
 
     createPage({
       component: path.resolve(`src/templates/${type}.js`),
@@ -58,28 +59,26 @@ const buildCreatePages = (createPage, graphql) => async sourceInstanceName => {
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const createPages = buildCreatePages(actions.createPage, graphql)
 
-  await createPages('courses')
-  await createPages('firetips')
-  await createPages('newsletters')
-  await createPages('pages')
-  await createPages('posts')
-  await createPages('projects')
+  await createPages('course')
+  await createPages('firetip')
+  await createPages('newsletter')
+  await createPages('page')
+  await createPages('post')
+  await createPages('project')
 
   const posts = await graphql(`
     {
-      allFile(
-        filter: {
-          sourceInstanceName: {
-            eq: "posts"
+      allMdx(filter: {
+        fields: {
+          type: {
+            eq: "post"
           }
         }
-      ) {
+      }) {
         edges {
           node {
-            childMdx {
-              frontmatter {
-                categories
-              }
+            frontmatter {
+              categories
             }
           }
         }
@@ -87,8 +86,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     }
   `)
 
-  const getCategoriesForEdge = ({ node }) => node.childMdx.frontmatter.categories
-  const allCategories = posts.data.allFile.edges.map(getCategoriesForEdge).flat()
+  const getCategoriesForEdge = ({ node }) => node.frontmatter.categories
+  const allCategories = posts.data.allMdx.edges.map(getCategoriesForEdge).flat()
   const uniqueCategories = [...new Set(allCategories)]
 
   uniqueCategories.forEach(category => {
@@ -108,19 +107,17 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const firetips = await graphql(`
     {
-      allFile(
-        filter: {
-          sourceInstanceName: {
-            eq: "firetips"
+      allMdx(filter: {
+        fields: {
+          type: {
+            eq: "firetip"
           }
         }
-      ) {
+      }) {
         edges {
           node {
-            childMdx {
-              frontmatter {
-                tags
-              }
+            frontmatter {
+              tags
             }
           }
         }
@@ -128,8 +125,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     }
   `)
 
-  const getTagsForEdge = ({ node }) => node.childMdx.frontmatter.tags
-  const allTags = firetips.data.allFile.edges.map(getTagsForEdge).flat()
+  const getTagsForEdge = ({ node }) => node.frontmatter.tags
+  const allTags = firetips.data.allMdx.edges.map(getTagsForEdge).flat()
   const uniqueTags = [...new Set(allTags)]
 
   uniqueTags.forEach(tag => {
@@ -150,9 +147,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 exports.onCreateNode = ({ actions, getNode, node }) => {
   const parent = getNode(node.parent)
 
-  if (parent) {
+  if (node.internal.type === `Mdx`) {
     const createNodeFields = buildCreateNodeFields(node, actions.createNodeField)
-    const [,, date, slug] = parent.name.match(/^((\d{4}-\d{2}-\d{2})-)?(.*)/)
+    const [,, date, slug] = createFilePath({ node, getNode }).match(/^\/((\d{4}-\d{2}-\d{2})-)?(.*?)\/?$/)
 
     createNodeFields({
       date,
@@ -175,6 +172,7 @@ exports.onCreateNode = ({ actions, getNode, node }) => {
           type: `page`,
         },
         posts: {
+          hero: `hero.jpg`,
           permalink: `/posts/${slug}`,
           type: `post`,
         },

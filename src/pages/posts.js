@@ -68,8 +68,14 @@ export const pageQuery = graphql`
           id
           fields {
             date
+            hero {
+              childImageSharp {
+                fluid(maxWidth: 640) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
             permalink
-            slug
           }
           frontmatter {
             categories
