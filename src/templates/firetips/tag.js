@@ -12,7 +12,7 @@ export default ({
   data,
   pageContext,
 }) => {
-  const firetips = data.allMdx.edges.map(({ node }) => node)
+  const firetips = data.allFiretip.edges.map(({ node }) => node)
 
   const {
     tag,
@@ -23,10 +23,10 @@ export default ({
       breadcrumbs={[
         {
           label: 'Fire tips',
-          url: '/firetips/'
+          url: '/firetips'
         }, {
           label: 'By tag',
-          url: '/firetips/tags/'
+          url: '/firetips/tags'
         }, {
           label: tag
         }
@@ -55,7 +55,7 @@ export default ({
           {firetips.map(firetip => (
             <Firetip
               firetip={firetip}
-              key={`firetip-${firetip.fields.slug}`}
+              key={`firetip-${firetip.slug}`}
             />
           ))}
         </div>
@@ -66,13 +66,8 @@ export default ({
 
 export const pageQuery = graphql`
   query($tag: [String]) {
-    allMdx(
+    allFiretip(
       filter: {
-        fields: {
-          type: {
-            eq: "firetip"
-          }
-        }
         frontmatter: {
           tags: {
             in: $tag
@@ -80,16 +75,14 @@ export const pageQuery = graphql`
         }
       },
       sort: {
-        fields: fields___date,
+        fields: date,
         order: DESC
       }
     ) {
       edges {
         node {
           body
-          fields {
-            slug
-          }
+          slug
           frontmatter {
             tags
             title

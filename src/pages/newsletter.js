@@ -21,7 +21,7 @@ export default ({
   data,
   location,
 }) => {
-  const newsletters = data.allMdx.edges.map(({ node }) => node)
+  const newsletters = data.allNewsletter.edges.map(({ node }) => node)
 
   return (
     <Layout
@@ -36,7 +36,7 @@ export default ({
       />
 
       <RichPreview
-        permalink="/newsletter/"
+        permalink="/newsletter"
         title="Newsletter"
       />
 
@@ -88,7 +88,7 @@ export default ({
         </ul>
 
         <p>
-          You can find <a href="/newsletter/archive/">all previous newsletters</a> in the archive. Get this bonus content before everybody else!
+          You can find <a href="/newsletter/archive">all previous newsletters</a> in the archive. Get this bonus content before everybody else!
         </p>
 
         <div
@@ -139,7 +139,7 @@ export default ({
             dark:text-gray-900
             dark:visited:text-gray-900
           `}
-          href="/newsletter/archive/"
+          href="/newsletter/archive"
         >
           Read all newsletters →
         </a>
@@ -150,13 +150,8 @@ export default ({
 
 export const pageQuery = graphql`
   query {
-    allMdx(
+    allNewsletter(
       filter: {
-        fields: {
-          type: {
-            eq: "newsletter"
-          }
-        },
         frontmatter: {
           isFeatured: {
             eq: true
@@ -164,22 +159,20 @@ export const pageQuery = graphql`
         }
       },
       sort: {
-        fields: fields___date,
+        fields: date,
         order: DESC
       }
     ) {
       edges {
         node {
-          fields {
-            date
-            permalink
-          }
+          date
           frontmatter {
             excerpt
             issue
             title
           }
           id
+          permalink
         }
       }
     }

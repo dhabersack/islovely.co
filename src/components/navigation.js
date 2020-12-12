@@ -2,12 +2,12 @@ import React, { useState } from 'react'
 
 const LINKS = {
   'Home': '/',
-  'Courses': '/courses/',
-  'Blog': '/posts/',
-  'Fire tips': '/firetips/',
-  'Newsletter': '/newsletter/',
+  'Courses': '/courses',
+  'Blog': '/posts',
+  'Fire tips': '/firetips',
+  'Newsletter': '/newsletter',
   'About': '/about',
-  'Contact': '/contact/',
+  'Contact': '/contact',
 }
 
 export default () => {

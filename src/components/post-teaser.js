@@ -1,4 +1,5 @@
 import React from 'react'
+import Img from 'gatsby-image'
 
 import Card from './card'
 import PostMeta from './post-meta'
@@ -9,22 +10,22 @@ export default ({
   post,
 }) => {
   const {
-    fields,
+    date,
     frontmatter,
+    hero,
+    permalink,
   } = post
 
   const {
-    date,
-    permalink,
-    slug,
-  } = fields
-
-  const {
+    author,
     categories,
     excerpt,
     heroAlt,
     title,
   } = frontmatter
+
+  const authorName = author.frontmatter.name
+  const avatarFluid = author.avatar.childImageSharp.fluid
 
   return (
     <Card>
@@ -38,10 +39,9 @@ export default ({
         <a
           href={permalink}
         >
-          <img
+          <Img
             alt={heroAlt}
-            className="w-full"
-            src={`/assets/heroes/${slug}--teaser.jpg`}
+            fluid={hero.childImageSharp.fluid}
           />
         </a>
 
@@ -104,6 +104,8 @@ export default ({
           </div>
 
           <PostMeta
+            author={authorName}
+            avatarFluid={avatarFluid}
             date={date}
           />
         </div>

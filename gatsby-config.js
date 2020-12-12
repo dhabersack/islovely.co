@@ -1,10 +1,11 @@
 const types = [
+  'authors',
   'courses',
   'firetips',
   'newsletters',
   'pages',
   'posts',
-  'projects'
+  'projects',
 ]
 
 module.exports = {
@@ -13,13 +14,16 @@ module.exports = {
     siteUrl: `https://islovely.co`,
     title: `islovely`
   },
+  mapping: {
+    'Post.frontmatter.author': `Author`,
+  },
   plugins: [
     ...types.map(name => ({
       resolve: `gatsby-source-filesystem`,
       options: {
         ignore: [`**/\.*`],
         name,
-        path: `${__dirname}/_${name}`,
+        path: `${__dirname}/_${name}/`,
       }
     })), {
       resolve: `gatsby-plugin-mdx`,
@@ -27,6 +31,12 @@ module.exports = {
         extensions: [`.mdx`, `.md`],
         gatsbyRemarkPlugins: [
           `gatsby-remark-prismjs`,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1504,
+            },
+          },
         ]
       }
     }, {
@@ -62,5 +72,8 @@ module.exports = {
     },
     `gatsby-plugin-postcss`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sharp`,
+    `gatsby-remark-images`,
+    `gatsby-transformer-sharp`,
   ]
 }

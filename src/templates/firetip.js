@@ -16,17 +16,12 @@ export default ({
 }) => {
   const {
     body,
-    fields,
     frontmatter,
-  } = data.mdx
-
-  const {
     permalink,
-  } = fields
+  } = data.firetip
 
   const {
     tags,
-    excerpt,
     title,
   } = frontmatter
 
@@ -35,19 +30,17 @@ export default ({
       breadcrumbs={[
         {
           label: 'Fire tips',
-          url: '/firetips/'
+          url: '/firetips'
         }, {
           label: title
         }
       ]}
     >
       <MetaTags
-        description={excerpt}
         title={title}
       />
 
       <RichPreview
-        description={excerpt}
         permalink={permalink}
         title={title}
       />
@@ -95,22 +88,17 @@ export default ({
 
 export const pageQuery = graphql`
   query($slug: String!) {
-    mdx(
-      fields: {
-        slug: {
-          eq: $slug
-        }
+    firetip(
+      slug: {
+        eq: $slug
       }
     ) {
       body
-      fields {
-        permalink
-      }
       frontmatter {
-        excerpt
         tags
         title
       }
+      permalink
     }
   }
 `

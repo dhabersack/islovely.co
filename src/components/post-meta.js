@@ -1,8 +1,11 @@
 import React from 'react'
+import Img from 'gatsby-image'
 
 import formatDate from '../utils/format-date'
 
 export default ({
+  author,
+  avatarFluid,
   date,
 }) => (
   <div
@@ -11,16 +14,16 @@ export default ({
       items-center
     `}
   >
-    <img
-      alt="Dom Habersack"
+    <Img
+      alt={author}
       className={`
         h-10
         mr-2.5
         rounded-full
         w-10
       `}
+      fluid={avatarFluid}
       height="40"
-      src="/assets/dom.jpg"
       width="40"
     />
 
@@ -34,7 +37,7 @@ export default ({
           dark:text-gray-300
         `}
       >
-        Dom Habersack
+        {author}
       </p>
 
       <p

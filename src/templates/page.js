@@ -6,22 +6,20 @@ import Layout from '../components/layout'
 import MetaTags from '../components/meta-tags'
 import RichPreview from '../components/rich-preview'
 import Taper from '../components/taper'
+import mapFiguresToNamedObject from '../utils/map-figures-to-named-object'
 
 export default ({
   data,
 }) => {
   const {
     body,
-    fields,
     frontmatter,
-  } = data.mdx
-
-  const {
     permalink,
-  } = fields
+  } = data.page
 
   const {
     description,
+    figures,
     title,
   } = frontmatter
 
@@ -49,7 +47,9 @@ export default ({
           {title}
         </h1>
 
-        <MDXRenderer>
+        <MDXRenderer
+          figures={mapFiguresToNamedObject(figures)}
+        >
           {body}
         </MDXRenderer>
       </Taper>
@@ -59,22 +59,26 @@ export default ({
 
 export const pageQuery = graphql`
   query($slug: String!) {
-    mdx(
-      fields: {
-        slug: {
-          eq: $slug
-        }
+    page(
+      slug: {
+        eq: $slug
       }
     ) {
       body
-      fields {
-        permalink
-        slug
-      }
       frontmatter {
         description
+        figures {
+          name
+          childImageSharp {
+            fluid(maxWidth: 1008) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
         title
       }
+      permalink
+      slug
     }
   }
 `

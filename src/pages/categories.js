@@ -10,7 +10,7 @@ import Taper from '../components/taper'
 export default ({
   data,
 }) => {
-  const posts = data.allMdx.edges.map(({ node }) => node)
+  const posts = data.allPost.edges.map(({ node }) => node)
 
   const categories = [
     ...new Set(posts.map(({ frontmatter }) => frontmatter.categories).flat())
@@ -34,7 +34,7 @@ export default ({
       />
 
       <RichPreview
-        permalink="/categories/"
+        permalink="/categories"
         title="Categories"
       />
 
@@ -65,29 +65,39 @@ export default ({
 
 export const pageQuery = graphql`
   query {
-    allMdx(
-      filter: {
-        fields: {
-          type: {
-            eq: "post"
-          }
-        }
-      }
-    ) {
+    allPost {
       edges {
         node {
-          fields {
-            date
-            permalink
-            slug
-          }
+          date
           frontmatter {
+            author {
+              avatar {
+                childImageSharp {
+                  fluid(maxWidth: 40) {
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              }
+              frontmatter {
+                name
+              }
+            }
             categories
             excerpt
             heroAlt
             heroCaption
             title
           }
+          hero {
+            childImageSharp {
+              fluid(maxWidth: 640) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
+          id
+          permalink
+          slug
         }
       }
     }

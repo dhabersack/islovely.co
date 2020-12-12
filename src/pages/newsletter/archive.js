@@ -10,14 +10,14 @@ import Taper from '../../components/taper'
 export default ({
   data,
 }) => {
-  const newsletters = data.allMdx.edges.map(({ node }) => node)
+  const newsletters = data.allNewsletter.edges.map(({ node }) => node)
 
   return (
     <Layout
       breadcrumbs={[
         {
           label: 'Newsletter',
-          url: '/newsletter/'
+          url: '/newsletter'
         }, {
           label: 'Archive',
         }
@@ -30,7 +30,7 @@ export default ({
 
       <RichPreview
         description="Read some of my previous newsletters. Sign up to get them delivered to your inbox."
-        permalink="/newsletter/archive/"
+        permalink="/newsletter/archive"
         title="Newsletter archive"
       />
 
@@ -42,7 +42,7 @@ export default ({
         <p
           className="mb-12"
         >
-          These are some of my previous newsletters. <a href="/newsletter/">Sign up</a> if you want to get them delivered straight to your inbox.
+          These are some of my previous newsletters. <a href="/newsletter">Sign up</a> if you want to get them delivered straight to your inbox.
         </p>
 
         <div
@@ -66,33 +66,24 @@ export default ({
 
 export const pageQuery = graphql`
   query {
-    allMdx(
-      filter: {
-        fields: {
-          type: {
-            eq: "newsletter"
-          }
-        }
-      },
+    allNewsletter(
       sort: {
-        fields: fields___date,
+        fields: date,
         order: DESC
       }
     ) {
       edges {
         node {
-          id
-          fields {
-            date
-            permalink
-            slug
-          }
+          date
           frontmatter {
             excerpt
             issue
             title
           }
-        }
+          id
+          permalink
+          slug
+      }
       }
     }
   }

@@ -137,6 +137,7 @@ export default () => (
             dark:text-gray-300
           `}
           href={href}
+          key={name}
           title={`Dom Habersack on ${name}`}
         >
           <Logo />

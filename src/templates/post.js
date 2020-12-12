@@ -10,6 +10,8 @@ import PostMeta from '../components/post-meta'
 import RichPreview from '../components/rich-preview'
 import Tag from '../components/tag'
 import Taper from '../components/taper'
+import mapAttachmentsToNamedObject from '../utils/map-attachments-to-named-object'
+import mapFiguresToNamedObject from '../utils/map-figures-to-named-object'
 import slugify from '../utils/slugify'
 
 export default ({
@@ -18,30 +20,33 @@ export default ({
 }) => {
   const {
     body,
-    fields,
-    frontmatter,
-  } = data.mdx
-
-  const {
     date,
+    frontmatter,
+    hero,
     slug,
     permalink,
-  } = fields
+  } = data.post
 
   const {
+    attachments,
+    author,
     categories,
     excerpt,
+    figures,
     heroAlt,
     heroCaption,
     title,
   } = frontmatter
+
+  const authorName = author.frontmatter.name
+  const avatarFluid = author.avatar.childImageSharp.fluid
 
   return (
     <Layout
       breadcrumbs={[
         {
           label: 'Blog',
-          url: '/posts/'
+          url: '/posts'
         }, {
           label: title
         }
@@ -72,6 +77,8 @@ export default ({
           className="mb-6"
         >
           <PostMeta
+            author={authorName}
+            avatarFluid={avatarFluid}
             date={date}
           />
         </div>
@@ -84,7 +91,7 @@ export default ({
           m-0
           mb-6
         `}
-        src={`/assets/heroes/${slug}.jpg`}
+        fluid={hero.childImageSharp.fluid}
       />
 
       <Taper>
@@ -94,7 +101,10 @@ export default ({
             mb-8
           `}
         >
-          <MDXRenderer>
+          <MDXRenderer
+            attachments={mapAttachmentsToNamedObject(attachments)}
+            figures={mapFiguresToNamedObject(figures)}
+          >
             {body}
           </MDXRenderer>
         </div>
@@ -133,26 +143,53 @@ export default ({
 
 export const pageQuery = graphql`
   query($slug: String!) {
-    mdx(
-      fields: {
-        slug: {
-          eq: $slug
-        }
+    post(
+      slug: {
+        eq: $slug
       }
     ) {
       body
-      fields {
-        date
-        permalink
-        slug
-      }
+      date
       frontmatter {
+        attachments {
+          name
+          publicURL
+        }
+        author {
+          avatar {
+            childImageSharp {
+              fluid(maxWidth: 40) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
+          frontmatter {
+            name
+          }
+        }
         categories
         excerpt
+        figures {
+          name
+          childImageSharp {
+            fluid(maxWidth: 1008) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
         heroAlt
         heroCaption
         title
       }
+      hero {
+        childImageSharp {
+          fluid(maxWidth: 1504) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      permalink
+      slug
     }
   }
 `

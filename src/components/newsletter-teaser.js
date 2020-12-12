@@ -6,14 +6,10 @@ export default ({
   newsletter,
 }) => {
   const {
-    fields,
-    frontmatter,
-  } = newsletter
-
-  const {
     date,
+    frontmatter,
     permalink,
-  } = fields
+  } = newsletter
 
   const {
     excerpt,

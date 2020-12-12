@@ -1,18 +1,18 @@
 import React from 'react'
+import Img from 'gatsby-image'
 
 export default ({
   alt,
   caption,
-  src,
+  fluid,
   ...props
 }) => (
   <figure
     {...props}
   >
-    <img
+    <Img
       alt={alt}
-      className="w-full"
-      src={src}
+      fluid={fluid}
     />
 
     {caption != null ? (

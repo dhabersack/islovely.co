@@ -10,18 +10,14 @@ export default ({
 }) => {
   const {
     body,
-    fields,
     frontmatter,
+    slug,
   } = firetip
 
   const {
     tags,
     title,
   } = frontmatter
-
-  const {
-    slug,
-  } = fields
 
   return (
     <Card>

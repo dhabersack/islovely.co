@@ -19,13 +19,9 @@ export default ({
 }) => {
   const {
     body,
-    fields,
     frontmatter,
-  } = data.mdx
-
-  const {
     permalink,
-  } = fields
+  } = data.course
 
   const {
     cta,
@@ -47,7 +43,7 @@ export default ({
       breadcrumbs={[
         {
           label: 'Courses',
-          url: '/courses/'
+          url: '/courses'
         }, {
           label: title
         }
@@ -264,17 +260,12 @@ export default ({
 
 export const pageQuery = graphql`
   query($slug: String!) {
-    mdx(
-      fields: {
-        slug: {
-          eq: $slug
-        }
+    course(
+      slug: {
+        eq: $slug
       }
     ) {
       body
-      fields {
-        permalink
-      }
       frontmatter {
         cta
         emails
@@ -291,6 +282,7 @@ export const pageQuery = graphql`
         videos
         weeks
       }
+      permalink
     }
   }
 `

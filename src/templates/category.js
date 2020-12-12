@@ -12,7 +12,7 @@ export default ({
   data,
   pageContext,
 }) => {
-  const posts = data.allMdx.edges.map(({ node }) => node)
+  const posts = data.allPost.edges.map(({ node }) => node)
 
   const {
     category,
@@ -23,7 +23,7 @@ export default ({
       breadcrumbs={[
         {
           label: 'Categories',
-          url: '/categories/'
+          url: '/categories'
         }, {
           label: category
         }
@@ -53,7 +53,7 @@ export default ({
 
 export const pageQuery = graphql`
   query($category: [String]) {
-    allMdx(
+    allPost(
       filter: {
         frontmatter: {
           categories: {
@@ -64,17 +64,34 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          id
-          fields {
-            date
-            permalink
-            slug
-          }
+          date
           frontmatter {
+            author {
+              avatar {
+                childImageSharp {
+                  fluid(maxWidth: 40) {
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              }
+              frontmatter {
+                name
+              }
+            }
             categories
             excerpt
             title
           }
+          hero {
+            childImageSharp {
+              fluid(maxWidth: 640) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
+          id
+          permalink
+          slug
         }
       }
     }

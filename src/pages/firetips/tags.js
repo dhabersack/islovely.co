@@ -11,7 +11,7 @@ import slugify from '../../utils/slugify'
 export default ({
   data,
 }) => {
-  const firetips = data.allMdx.edges.map(({ node }) => node)
+  const firetips = data.allFiretip.edges.map(({ node }) => node)
 
   const tags = [
     ...new Set(firetips.map(({ frontmatter }) => frontmatter.tags).flat())
@@ -27,7 +27,7 @@ export default ({
       breadcrumbs={[
         {
           label: 'Fire tips',
-          url: '/firetips/'
+          url: '/firetips'
         }, {
           label: 'By tag'
         }
@@ -38,7 +38,7 @@ export default ({
       />
 
       <RichPreview
-        permalink="/firetips/tags/"
+        permalink="/firetips/tags"
         title="Fire tips by tag"
       />
 
@@ -68,7 +68,7 @@ export default ({
               {firetipsByTag[tag].map(firetip => (
                 <Firetip
                   firetip={firetip}
-                  key={`firetip-${firetip.fields.slug}`}
+                  key={`firetip-${firetip.slug}`}
                 />
               ))}
             </div>
@@ -81,30 +81,21 @@ export default ({
 
 export const pageQuery = graphql`
   query {
-    allMdx(
-      filter: {
-        fields: {
-          type: {
-            eq: "firetip"
-          }
-        }
-      },
+    allFiretip(
       sort: {
-        fields: fields___date,
+        fields: date,
         order: DESC
       }
     ) {
       edges {
         node {
           body
-          fields {
-            date
-            slug
-          }
+          date
           frontmatter {
             tags
             title
           }
+          slug
         }
       }
     }

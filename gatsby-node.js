@@ -1,34 +1,16 @@
 const path = require(`path`)
+const { createFilePath } = require(`gatsby-source-filesystem`)
 
 const slugify = text => text.toLowerCase().replace(/ /g, '-')
 
-const buildCreateNodeFields = (node, createNodeField) => fields => {
-  Object.entries(fields).forEach(([name, value]) => {
-    createNodeField({
-      name,
-      node,
-      value,
-    })
-  })
-}
-
-const buildCreatePages = (createPage, graphql) => async sourceInstanceName => {
+const buildCreatePages = (createPage, graphql, reporter) => async type => {
   const response = await graphql(`
     {
-      allFile(filter: {
-        sourceInstanceName: {
-          eq: "${sourceInstanceName}"
-        }
-      }) {
+      all${type} {
         edges {
           node {
-            childMdx {
-              fields {
-                permalink
-                slug
-                type
-              }
-            }
+            permalink
+            slug
           }
         }
       }
@@ -36,15 +18,15 @@ const buildCreatePages = (createPage, graphql) => async sourceInstanceName => {
   `)
 
   if (response.errors) {
-    reporter.panicOnBuild(`Error while running GraphQL query for “${sourceInstanceName}”.`)
+    reporter.panicOnBuild(`Error while running GraphQL query for type “${type}”.`)
     return
   }
 
-  response.data.allFile.edges.forEach(({ node }) => {
-    const { permalink, slug, type } = node.childMdx.fields
+  response.data[`all${type}`].edges.forEach(({ node }) => {
+    const { permalink, slug } = node
 
     createPage({
-      component: path.resolve(`src/templates/${type}.js`),
+      component: path.resolve(`src/templates/${type.toLowerCase()}.js`),
       context: {
         slug
       },
@@ -56,30 +38,22 @@ const buildCreatePages = (createPage, graphql) => async sourceInstanceName => {
 }
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
-  const createPages = buildCreatePages(actions.createPage, graphql)
+  const createPages = buildCreatePages(actions.createPage, graphql, reporter)
 
-  await createPages('courses')
-  await createPages('firetips')
-  await createPages('newsletters')
-  await createPages('pages')
-  await createPages('posts')
-  await createPages('projects')
+  await createPages('Course')
+  await createPages('Firetip')
+  await createPages('Newsletter')
+  await createPages('Page')
+  await createPages('Post')
+  await createPages('Project')
 
   const posts = await graphql(`
     {
-      allFile(
-        filter: {
-          sourceInstanceName: {
-            eq: "posts"
-          }
-        }
-      ) {
+      allPost {
         edges {
           node {
-            childMdx {
-              frontmatter {
-                categories
-              }
+            frontmatter {
+              categories
             }
           }
         }
@@ -87,8 +61,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     }
   `)
 
-  const getCategoriesForEdge = ({ node }) => node.childMdx.frontmatter.categories
-  const allCategories = posts.data.allFile.edges.map(getCategoriesForEdge).flat()
+  const getCategoriesForEdge = ({ node }) => node.frontmatter.categories
+  const allCategories = posts.data.allPost.edges.map(getCategoriesForEdge).flat()
   const uniqueCategories = [...new Set(allCategories)]
 
   uniqueCategories.forEach(category => {
@@ -108,19 +82,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const firetips = await graphql(`
     {
-      allFile(
-        filter: {
-          sourceInstanceName: {
-            eq: "firetips"
-          }
-        }
-      ) {
+      allFiretip {
         edges {
           node {
-            childMdx {
-              frontmatter {
-                tags
-              }
+            frontmatter {
+              tags
             }
           }
         }
@@ -128,8 +94,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     }
   `)
 
-  const getTagsForEdge = ({ node }) => node.childMdx.frontmatter.tags
-  const allTags = firetips.data.allFile.edges.map(getTagsForEdge).flat()
+  const getTagsForEdge = ({ node }) => node.frontmatter.tags
+  const allTags = firetips.data.allFiretip.edges.map(getTagsForEdge).flat()
   const uniqueTags = [...new Set(allTags)]
 
   uniqueTags.forEach(tag => {
@@ -147,42 +113,144 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   })
 }
 
-exports.onCreateNode = ({ actions, getNode, node }) => {
+const buildResolverFor = fieldName => (source, args, context, info) => {
+  const type = info.schema.getType('Mdx');
+  const mdxFields = type.getFields();
+  const resolver = mdxFields[fieldName].resolve;
+
+  const mdxNode = context.nodeModel.getNodeById({
+    id: source.parent
+  });
+
+  return resolver(mdxNode, args, context, {
+    fieldName,
+  });
+}
+
+exports.createResolvers = ({ createResolvers }) => {
+  createResolvers({
+    Course: {
+      body: {
+        type: 'String!',
+        resolve: buildResolverFor('body'),
+      },
+    },
+    Firetip: {
+      body: {
+        type: 'String!',
+        resolve: buildResolverFor('body'),
+      },
+    },
+    Newsletter: {
+      body: {
+        type: 'String!',
+        resolve: buildResolverFor('body'),
+      },
+    },
+    Page: {
+      body: {
+        type: 'String!',
+        resolve: buildResolverFor('body'),
+      },
+    },
+    Post: {
+      body: {
+        type: 'String!',
+        resolve: buildResolverFor('body'),
+      },
+    },
+    Project: {
+      body: {
+        type: 'String!',
+        resolve: buildResolverFor('body'),
+      },
+    },
+  })
+}
+
+const replacePath = path => path === '/' ? path : path.replace(/\/$/, '')
+
+exports.onCreatePage = ({ page, actions }) => {
+  const { createPage, deletePage } = actions;
+
+  return new Promise(resolve => {
+    const oldPage = Object.assign({}, page)
+
+    page.path = replacePath(page.path)
+
+    if (page.path !== oldPage.path) {
+      deletePage(oldPage)
+      createPage(page)
+    }
+
+    resolve()
+  })
+}
+
+exports.onCreateNode = ({ actions, createNodeId, getNode, node }) => {
   const parent = getNode(node.parent)
 
-  if (parent) {
-    const createNodeFields = buildCreateNodeFields(node, actions.createNodeField)
-    const [,, date, slug] = parent.name.match(/^((\d{4}-\d{2}-\d{2})-)?(.*)/)
+  if (node.internal.type === `Mdx`) {
+    const [,, date, slug] = createFilePath({ node, getNode }).match(/^\/((\d{4}-\d{2}-\d{2})-)?(.*?)\/?$/)
 
-    createNodeFields({
+    const fields = ({
       date,
       slug,
       ...({
+        authors: {
+          avatar: `${slug}.jpg`,
+          id: slug,
+          permalink: `/authors/${slug}`,
+        },
         courses: {
           permalink: `/courses/${slug}`,
-          type: `course`,
         },
         firetips: {
           permalink: `/firetips/${slug}`,
-          type: `firetip`,
         },
         newsletters: {
           permalink: `/newsletter/archive/${slug}`,
-          type: `newsletter`,
         },
         pages: {
           permalink: `/${slug}`,
-          type: `page`,
         },
         posts: {
+          hero: `hero.jpg`,
           permalink: `/posts/${slug}`,
-          type: `post`,
         },
         projects: {
           permalink: `/projects/${slug}`,
-          type: `project`,
         },
       }[parent.sourceInstanceName]),
+    })
+
+    const TYPE_FOR_SOURCE_INSTANCE_NAME = {
+      authors: 'Author',
+      courses: 'Course',
+      firetips: 'Firetip',
+      newsletters: `Newsletter`,
+      pages: `Page`,
+      posts: `Post`,
+      projects: `Project`,
+    }
+
+    const type = TYPE_FOR_SOURCE_INSTANCE_NAME[parent.sourceInstanceName]
+
+    actions.createNode({
+      ...node,
+      id: createNodeId(`${node.id} >>> ${type}`),
+      parent: node.id,
+      children: [],
+      internal: {
+        type,
+        contentDigest: node.internal.contentDigest,
+      },
+      ...fields,
+    })
+
+    actions.createParentChildLink({
+      parent,
+      child: node
     })
   }
 }

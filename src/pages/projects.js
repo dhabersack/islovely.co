@@ -9,7 +9,7 @@ import Taper from '../components/taper'
 export default ({
   data,
 }) => {
-  const projects = data.allMdx.edges.map(({ node }) => node)
+  const projects = data.allProject.edges.map(({ node }) => node)
 
   return (
     <Layout
@@ -24,7 +24,7 @@ export default ({
       />
 
       <RichPreview
-        permalink="/projects/"
+        permalink="/projects"
         title="Projects"
       />
 
@@ -34,14 +34,10 @@ export default ({
         </h1>
 
         {projects.map(({
-          fields,
           frontmatter,
           id,
+          permalink,
         }) => {
-          const {
-            permalink,
-          } = fields
-
           const {
             excerpt,
             title,
@@ -72,30 +68,21 @@ export default ({
 
 export const pageQuery = graphql`
   query {
-    allMdx(
-      filter: {
-        fields: {
-          type: {
-            eq: "project"
-          }
-        }
-      },
+    allProject(
       sort: {
-        fields: fields___date,
+        fields: date,
         order: DESC
       }
     ) {
       edges {
         node {
-          id
-          fields {
-            permalink
-            slug
-          }
           frontmatter {
             excerpt
             title
           }
+          id
+          permalink
+          slug
         }
       }
     }

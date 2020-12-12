@@ -10,7 +10,7 @@ import Taper from '../components/taper'
 export default ({
   data,
 }) => {
-  const posts = data.allMdx.edges.map(({ node }) => node)
+  const posts = data.allPost.edges.map(({ node }) => node)
 
   return (
     <Layout
@@ -25,7 +25,7 @@ export default ({
       />
 
       <RichPreview
-        permalink="/posts/"
+        permalink="/posts"
         title="Blog"
       />
 
@@ -37,7 +37,7 @@ export default ({
         </h1>
 
         <p>
-          I write about design, development, and productivity. My <a href="/newsletter/">newsletter</a> contains shorter pieces, which you can find in the <a href="/newsletter/archive/">archive</a>.
+          I write about design, development, and productivity. My <a href="/newsletter">newsletter</a> contains shorter pieces, which you can find in the <a href="/newsletter/archive">archive</a>.
         </p>
       </Taper>
 
@@ -50,33 +50,42 @@ export default ({
 
 export const pageQuery = graphql`
   query {
-    allMdx(
-      filter: {
-        fields: {
-          type: {
-            eq: "post"
-          }
-        }
-      },
+    allPost(
       sort: {
-        fields: fields___date,
+        fields: date,
         order: DESC
       }
     ) {
       edges {
         node {
-          id
-          fields {
-            date
-            permalink
-            slug
-          }
+          date
           frontmatter {
+            author {
+              avatar {
+                childImageSharp {
+                  fluid(maxWidth: 40) {
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              }
+              frontmatter {
+                name
+              }
+            }
             categories
             excerpt
             heroAlt
             title
           }
+          hero {
+            childImageSharp {
+              fluid(maxWidth: 640) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
+          id
+          permalink
         }
       }
     }

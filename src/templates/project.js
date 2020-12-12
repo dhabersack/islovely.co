@@ -12,13 +12,9 @@ export default ({
 }) => {
   const {
     body,
-    fields,
     frontmatter,
-  } = data.mdx
-
-  const {
     permalink,
-  } = fields
+  } = data.project
 
   const {
     excerpt,
@@ -30,7 +26,7 @@ export default ({
       breadcrumbs={[
         {
           label: 'Projects',
-          url: '/projects/'
+          url: '/projects'
         }, {
           label: title
         }
@@ -62,21 +58,17 @@ export default ({
 
 export const pageQuery = graphql`
   query($slug: String!) {
-    mdx(
-      fields: {
-        slug: {
-          eq: $slug
-        }
+    project(
+      slug: {
+        eq: $slug
       }
     ) {
       body
-      fields {
-        permalink
-      }
       frontmatter {
         excerpt
         title
       }
+      permalink
     }
   }
 `

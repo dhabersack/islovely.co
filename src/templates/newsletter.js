@@ -8,6 +8,7 @@ import MetaTags from '../components/meta-tags'
 import RichPreview from '../components/rich-preview'
 import Taper from '../components/taper'
 import formatDate from '../utils/format-date'
+import mapFiguresToNamedObject from '../utils/map-figures-to-named-object'
 
 export default ({
   data,
@@ -15,18 +16,15 @@ export default ({
 }) => {
   const {
     body,
-    fields,
-    frontmatter,
-  } = data.mdx
-
-  const {
     date,
+    frontmatter,
     permalink,
     slug,
-  } = fields
+  } = data.newsletter
 
   const {
     excerpt,
+    figures,
     title,
   } = frontmatter
 
@@ -35,10 +33,10 @@ export default ({
       breadcrumbs={[
         {
           label: 'Newsletter',
-          url: '/newsletter/'
+          url: '/newsletter'
         }, {
           label: 'Archive',
-          url: '/newsletter/archive/'
+          url: '/newsletter/archive'
         }, {
           label: title
         }
@@ -77,7 +75,9 @@ export default ({
         <div
           className="mb-16"
         >
-          <MDXRenderer>
+          <MDXRenderer
+            figures={mapFiguresToNamedObject(figures)}
+          >
             {body}
           </MDXRenderer>
         </div>
@@ -92,23 +92,27 @@ export default ({
 
 export const pageQuery = graphql`
   query($slug: String!) {
-    mdx(
-      fields: {
-        slug: {
-          eq: $slug
-        }
+    newsletter(
+      slug: {
+        eq: $slug
       }
     ) {
       body
-      fields {
-        date
-        permalink
-        slug
-      }
+      date
       frontmatter {
         excerpt
+        figures {
+          name
+          childImageSharp {
+            fluid(maxWidth: 1008) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
         title
       }
+      permalink
+      slug
     }
   }
 `
