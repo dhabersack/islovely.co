@@ -65,7 +65,7 @@ module.exports = {
           const { siteUrl } = site.siteMetadata
 
           return pages.map(({ path }) => ({
-            url: `${siteUrl}${path}`
+            url: `${siteUrl}${path}`.replace(/\/$/, '')
           }))
         }
       }
