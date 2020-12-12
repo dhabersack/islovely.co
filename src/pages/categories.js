@@ -70,12 +70,32 @@ export const pageQuery = graphql`
         node {
           date
           frontmatter {
+            author {
+              avatar {
+                childImageSharp {
+                  fluid(maxWidth: 40) {
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              }
+              frontmatter {
+                name
+              }
+            }
             categories
             excerpt
             heroAlt
             heroCaption
             title
           }
+          hero {
+            childImageSharp {
+              fluid(maxWidth: 640) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
+          id
           permalink
           slug
         }
