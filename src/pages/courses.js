@@ -25,7 +25,7 @@ export default ({
       />
 
       <RichPreview
-        permalink="/courses/"
+        permalink="/courses"
         title="Courses"
       />
 
@@ -41,7 +41,7 @@ export default ({
         </p>
 
         <p>
-          I am always working on new content. Sign up to any course or <a href="/newsletter/">join my newsletter</a> to catch announcements of upcoming material. If you want to learn about something in particular, tweet me at <a href="https://twitter.com/domhabersack">@domhabersack</a> and I’ll put it on my list!
+          I am always working on new content. Sign up to any course or <a href="/newsletter">join my newsletter</a> to catch announcements of upcoming material. If you want to learn about something in particular, tweet me at <a href="https://twitter.com/domhabersack">@domhabersack</a> and I’ll put it on my list!
         </p>
       </Taper>
 

@@ -30,7 +30,7 @@ export default ({
       breadcrumbs={[
         {
           label: 'Fire tips',
-          url: '/firetips/'
+          url: '/firetips'
         }, {
           label: title
         }

@@ -36,7 +36,7 @@ export default ({
       />
 
       <RichPreview
-        permalink="/newsletter/"
+        permalink="/newsletter"
         title="Newsletter"
       />
 
@@ -88,7 +88,7 @@ export default ({
         </ul>
 
         <p>
-          You can find <a href="/newsletter/archive/">all previous newsletters</a> in the archive. Get this bonus content before everybody else!
+          You can find <a href="/newsletter/archive">all previous newsletters</a> in the archive. Get this bonus content before everybody else!
         </p>
 
         <div
@@ -139,7 +139,7 @@ export default ({
             dark:text-gray-900
             dark:visited:text-gray-900
           `}
-          href="/newsletter/archive/"
+          href="/newsletter/archive"
         >
           Read all newsletters →
         </a>

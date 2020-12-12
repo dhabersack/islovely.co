@@ -26,7 +26,7 @@ export default ({
       breadcrumbs={[
         {
           label: 'Projects',
-          url: '/projects/'
+          url: '/projects'
         }, {
           label: title
         }

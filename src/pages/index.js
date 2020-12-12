@@ -34,7 +34,7 @@ const cta = (
         dark:focus:ring-blue-500
         dark:visited:text-gray-900
       `}
-      href="/courses/"
+      href="/courses"
     >
       <div
         className={`
