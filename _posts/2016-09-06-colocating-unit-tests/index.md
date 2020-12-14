@@ -16,7 +16,7 @@ Under the modular, component-based approach to applications, we are better serve
 
 Assume our application contains a search form. Under the traditional approach, we could spread this feature out across our codebase by grouping its elements with others of the same purpose:
 
-```
+```md
 app/
 ├─ controllers/
 │  ├─ search-form-controller.js
@@ -34,7 +34,7 @@ As more features get added to our codebase, these directories will grow in size,
 
 Rather than spreading a piece of functionality out across several directories, we can instead combine all its parts in a single directory centered only around that one component:
 
-```
+```md
 app/
 └─ components/
    ├─ search-form/
@@ -52,7 +52,7 @@ What is missing from the example above is what this post is about in the first p
 
 Frequently, tests are put in a `test/`-directory in the root of our application, which would extend our directory structure to the following:
 
-```
+```md
 app/
 ├─ components/
 │  ├─ search-form/
@@ -75,7 +75,7 @@ We need to differentiate between the kinds of tests outlined in the assumed dire
 
 End-to-end and other kinds of tests potentially cover multiple “units” at the same time, so they do not follow the same pattern and have to be treated differently. While we should not get rid of the `test/`-directory entirely, it does make sense to group unit tests with the remainder of the feature-specific files, leaving all others in the dedicated directory:
 
-```
+```md
 app/
 ├─ components/
 │  ├─ search-form/
