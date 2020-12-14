@@ -2,6 +2,7 @@
 title: "Serving WebP images"
 excerpt: "Web servers can send different files to browsers based on headers in a request. Knowing this, we can send WebP-files only to browsers that support them."
 issue: 32
+author: dom-habersack
 ---
 If you run a [Lighthouse Audit](https://developers.google.com/speed/pagespeed/insights/) on your website, it’ll probably ask you to “Serve images in next-gen formats”. While most pictures are JPEGs or PNGs, there are more space-efficient formats available. WebP-files are about 25% smaller, with a higher quality than their older counterparts.
 

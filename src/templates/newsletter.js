@@ -6,8 +6,8 @@ import Layout from '../components/layout'
 import MailingListSignup from '../components/mailing-list-signup'
 import MetaTags from '../components/meta-tags'
 import RichPreview from '../components/rich-preview'
+import PostMeta from '../components/post-meta'
 import Taper from '../components/taper'
-import formatDate from '../utils/format-date'
 import mapFiguresToNamedObject from '../utils/map-figures-to-named-object'
 
 export default ({
@@ -23,10 +23,14 @@ export default ({
   } = data.newsletter
 
   const {
+    author,
     excerpt,
     figures,
     title,
   } = frontmatter
+
+  const authorName = author.frontmatter.name
+  const avatarFluid = author.avatar.childImageSharp.fluid
 
   return (
     <Layout
@@ -61,16 +65,15 @@ export default ({
           {title}
         </h1>
 
-        <p
-          className={`
-            mb-3
-            text-gray-500
-            text-xs
-            dark:text-gray-400
-          `}
+        <div
+          className="mb-6"
         >
-          {formatDate(date)}
-        </p>
+          <PostMeta
+            author={authorName}
+            avatarFluid={avatarFluid}
+            date={date}
+          />
+        </div>
 
         <div
           className="mb-16"
@@ -100,6 +103,18 @@ export const pageQuery = graphql`
       body
       date
       frontmatter {
+        author {
+          avatar {
+            childImageSharp {
+              fluid(maxWidth: 40) {
+                ...GatsbyImageSharpFluid_withWebp_tracedSVG
+              }
+            }
+          }
+          frontmatter {
+            name
+          }
+        }
         excerpt
         figures {
           name

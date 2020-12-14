@@ -2,6 +2,7 @@
 title: "Declutter those bytes"
 excerpt: "Getting rid of projects and plans that we will not get back to frees up mental space for things that excite us."
 issue: 17
+author: dom-habersack
 ---
 Before Netflix turned her into a show, Marie Kondo wrote an excellent book on tidying up. Her philosophy of “get rid of everything that does not spark joy” changed our apartment for the better. We donated, sold, and threw out so many things we kept because we felt like we had to. Don’t like how you look in that shirt? Goodbye shirt. Hate looking at that weird sculpture your aunt gave you for your wedding? Goodbye sculpture.
 

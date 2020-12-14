@@ -2,6 +2,7 @@
 title: "Memorizing a shuffled deck of cards"
 excerpt: "Distractions and the internet have conditioned us to do shallow work. To engage in Deep Work, we need to learn how to concentrate again."
 issue: 59
+author: dom-habersack
 ---
 Hey friends!
 

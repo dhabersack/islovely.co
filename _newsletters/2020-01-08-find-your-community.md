@@ -2,6 +2,7 @@
 title: "Find your community"
 excerpt: "No matter what you are passionate about, there is a vibrant community out there where you can exchange ideas with likeminded people."
 issue: 18
+author: dom-habersack
 ---
 Both sports and drinking are more fun when we do them with others. Working on a project is easier when I surround myself with others doing similar things. There are many places on the internet where people with similar interests meet, if you know where to look. The giants like Facebook, Twitter, and Instagram aren’t “about” anything specific. It is difficult to find people that share your interests on them. A community that is for everybody ends up being for nobody.
 

@@ -15,6 +15,7 @@ module.exports = {
     title: `islovely`
   },
   mapping: {
+    'Newsletter.frontmatter.author': `Author`,
     'Post.frontmatter.author': `Author`,
   },
   plugins: [

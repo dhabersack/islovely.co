@@ -2,6 +2,7 @@
 title: "This newsletter goes to 13 people"
 excerpt: "I have not done any marketing for this newsletter at all, and it shows. It’s about time I change something about that."
 issue: 62
+author: dom-habersack
 ---
 The thing I enjoy most about this newsletter is that it puts me on a regular schedule. Every week for the last 62 weeks, I had to sit down to write another issue. Whether I was sick, stressed at work, or on vacation: the newsletter always went out on time. Week after week, I had to find a new topic and write something useful about it. As a writing exercise, it has been a great motivator.
 

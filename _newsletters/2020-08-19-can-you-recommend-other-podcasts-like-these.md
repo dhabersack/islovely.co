@@ -2,6 +2,7 @@
 title: "Can you recommend other podcasts like these?"
 excerpt: "The format of “two hosts talking about what is going on in their businesses” is fascinating. Know any others like the ones in this list?"
 issue: 50
+author: dom-habersack
 ---
 Whenever I am doing chores or taking my dog for a walk, I am listening to podcasts. For the past decade, they have been a constant source of education and entertainment for me.
 

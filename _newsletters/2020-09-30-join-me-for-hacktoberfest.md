@@ -2,6 +2,7 @@
 title: "Join me for Hacktoberfest"
 excerpt: "Every October, DigitalOcean celebrates the open source community by running Hacktoberfest. Let’s code a few things together this month."
 issue: 56
+author: dom-habersack
 ---
 Every October, DigitalOcean celebrates the open source community by running Hacktoberfest. They encourage everybody to contribute to projects, for which you can earn swag or plant a tree. The type and size of your contributions doesn’t matter. Whether you are a programmer, designer, or expert typo-finder: all contributions are welcome.
 

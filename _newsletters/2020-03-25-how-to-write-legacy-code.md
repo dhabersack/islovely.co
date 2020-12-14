@@ -2,6 +2,7 @@
 title: "How to write legacy code"
 excerpt: "No code starts out as unmaintainable legacy we don’t dare to change. All codebases end up there because of a lot of small decisions like these examples."
 issue: 29
+author: dom-habersack
 ---
 “Legacy code” is what developers call code they do not want to work with. It is often old and difficult to change, because nobody knows exactly how it works anymore. Any small change can have unforeseen consequences that end up breaking something unrelated. These systems are expensive, because they slow down the development of new features.
 

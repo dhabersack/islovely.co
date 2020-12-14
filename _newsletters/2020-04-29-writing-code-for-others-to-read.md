@@ -3,6 +3,7 @@ title: "Writing code for others to read"
 excerpt: "Clever code isn’t always the most readable. Especially when working in teams, readability has to come first."
 issue: 34
 isFeatured: true
+author: dom-habersack
 ---
 Like people-languages, programming languages have a vocabulary and grammar. In both types of languages, we can phrase what we want to say in several ways and still get the same point across. Books written with unfamiliar words are difficult to follow, if thou catch mine drift. This is what reading other people’s code feels like.
 

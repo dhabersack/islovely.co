@@ -2,6 +2,7 @@
 title: "Tired of learning by building todo-apps?"
 excerpt: "Tutorials often default to todo-apps. These twists on that idea help you dig into how the framework you’re learning really works."
 issue: 51
+author: dom-habersack
 ---
 When picking up new tools, some learn best by building something with them. That applies to both frameworks and design tools. Tutorials encourage you to explore the thing, not just read about it in theory. Like driving, theory is important, but you have to follow it up with experience to really know it well.
 

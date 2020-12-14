@@ -2,6 +2,7 @@
 title: "The easiest way to build a Dark Mode"
 excerpt: "Media queries are essential for doing Responsive Design. They can test for many features beyond browser width. We can use one of them to build a dark mode."
 issue: 66
+author: dom-habersack
 ---
 Most operating systems natively support dark mode now. I have become so used to it that anything without a dark theme becomes painful in the evening.
 

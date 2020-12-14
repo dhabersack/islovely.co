@@ -2,6 +2,7 @@
 title: "Texting faster"
 excerpt: "iOS 13 now has a built-in swipe keyboard called “QuickPath” that is much faster than typing individual letters."
 issue: 21
+author: dom-habersack
 ---
 I am way late to this party, but I have to tell you about a cool feature I didn’t know my phone had. I only discovered it a few weeks ago, and it has already saved me hours at this point.
 
