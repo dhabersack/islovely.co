@@ -70,7 +70,7 @@ export const pageQuery = graphql`
               avatar {
                 childImageSharp {
                   fluid(maxWidth: 40) {
-                    ...GatsbyImageSharpFluid_withWebp
+                    ...GatsbyImageSharpFluid_withWebp_tracedSVG
                   }
                 }
               }
@@ -85,7 +85,7 @@ export const pageQuery = graphql`
           hero {
             childImageSharp {
               fluid(maxWidth: 640) {
-                ...GatsbyImageSharpFluid_withWebp
+                ...GatsbyImageSharpFluid_withWebp_tracedSVG
               }
             }
           }
