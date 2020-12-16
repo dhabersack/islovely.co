@@ -18,9 +18,9 @@ const cta = (
   >
     <a
       className={`
-        align-items-center
         bg-yellow-300
         inline-flex
+        items-center
         px-5
         py-3
         rounded-lg

@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet'
 import { MDXProvider } from '@mdx-js/react'
 
 import Application from './application'
+import Banner from './banner'
 import Breadcrumbs from './breadcrumbs'
 import Footer from './footer'
 import Header from './header'
@@ -30,6 +31,8 @@ export default ({
           px-4
         `}
       >
+        <Banner />
+
         <div
           className="mb-6"
         >
