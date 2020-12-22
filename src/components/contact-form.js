@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useForm, ValidationError } from '@statickit/react'
+import { useForm, ValidationError } from '@formspree/react'
 
 import Flash from './flash'
 import RequiresCookieConsent from './requires-cookie-consent'
