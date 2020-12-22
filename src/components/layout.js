@@ -5,6 +5,7 @@ import { MDXProvider } from '@mdx-js/react'
 import Application from './application'
 import Banner from './banner'
 import Breadcrumbs from './breadcrumbs'
+import BreakpointDebug from './breakpoint-debug'
 import Footer from './footer'
 import Header from './header'
 import Taper from './taper'
@@ -17,9 +18,9 @@ export default ({
 }) => (
   <MDXProvider>
     <Application>
-      <Helmet
-        htmlAttributes={IS_IN_DEBUG_MODE ? { 'class': 'debug' } : {}}
-      />
+      <Helmet />
+
+      <Banner />
 
       <div
         className={`
@@ -31,8 +32,6 @@ export default ({
           px-4
         `}
       >
-        <Banner />
-
         <div
           className="mb-6"
         >
@@ -56,6 +55,10 @@ export default ({
 
         <Footer />
       </div>
+
+      {IS_IN_DEBUG_MODE && (
+        <BreakpointDebug />
+      )}
     </Application>
   </MDXProvider>
 )
