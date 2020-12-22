@@ -19,8 +19,8 @@
           "required": true,
           "type": "text"
         },
-        "privacy-policy-consent": {
-          "prettyName": "Privacy policy consent",
+        "data-processing-consent": {
+          "prettyName": "Data processing consent",
           "required": true,
           "type": "text"
         }
