@@ -36,6 +36,7 @@ export default ({
       />
 
       <RichPreview
+        imageSubpath="newsletter"
         permalink="/newsletter"
         title="Newsletter"
       />
