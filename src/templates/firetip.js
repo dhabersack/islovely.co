@@ -41,6 +41,7 @@ export default ({
       />
 
       <RichPreview
+        imageSubpath="firetips"
         permalink={permalink}
         title={title}
       />
