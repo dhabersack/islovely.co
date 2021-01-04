@@ -5,7 +5,7 @@ tags: ["JavaScript"]
 `Math.max()` returns the largest of zero or more numbers passed to it. We can use the spread operator when passing an array to get the largest number from that array.
 
 ```js
-// get the largest number passed to `Math.max`
+// get the largest number from a list of numbers
 Math.max(69, 420, 108, 47)  // ⇒ 420
 
 // passing an array instead of individual numbers returns `NaN`
