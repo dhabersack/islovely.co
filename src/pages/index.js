@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
+import BuildInPublicMetrics from '../components/build-in-public-metrics'
 import DesktopIcon from '../icons/desktop'
 import Layout from '../components/layout'
 import MetaTags from '../components/meta-tags'
@@ -76,6 +77,24 @@ export default ({
         permalink=""
         title="Get a better job. Learn web development skills that sell."
       />
+
+      <Taper>
+        <h1 className="text-gray-800 text-5xl">
+          Follow my journey as I <span className="text-cyan-500">#buildinpublic</span>
+        </h1>
+
+        <p>
+          Hey there, I am Dom!
+        </p>
+
+        <p>
+          After six years as an IT consultant, I left my job to follow my passion. I love teaching others how to code.
+        </p>
+
+        <BuildInPublicMetrics />
+      </Taper>
+
+      <div className="my-96"></div>
 
       <Taper>
         <div

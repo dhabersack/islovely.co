@@ -10,7 +10,7 @@ import Footer from './footer'
 import Header from './header'
 import Taper from './taper'
 
-const IS_IN_DEBUG_MODE = false
+const IS_IN_DEBUG_MODE = true
 
 export default ({
   breadcrumbs,
