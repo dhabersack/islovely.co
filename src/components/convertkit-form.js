@@ -53,17 +53,16 @@ export default ({
             flex
             flex-wrap
             items-start
+            space-x-2.5
           `}
         >
           <input
             className={`
               border-gray-300
-              border-r-0
               flex-grow
               px-2.5
               py-3
-              rounded-none
-              rounded-l
+              rounded
               w-px
               focus:border-indigo-300
               focus:ring
@@ -88,10 +87,6 @@ export default ({
           />
 
           <PrimaryButton
-            className={`
-              rounded-none
-              rounded-r
-            `}
             data-element="submit"
           >
             {cta || 'Get me early access!'}
