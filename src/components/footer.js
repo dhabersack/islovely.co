@@ -64,7 +64,7 @@ export default () => (
         text-base
       `}
     >
-      &copy; Dom Habersack, 2020
+      &copy; Dom Habersack, 2021
     </div>
 
     <div
