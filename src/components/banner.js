@@ -6,7 +6,7 @@ export default () => {
   return (
     <div
       className={`
-        bg-red-500
+        bg-gray-900
       `}
     >
       <div
@@ -51,7 +51,7 @@ export default () => {
                 xs:hidden
               `}
             >
-              I am now on YouTube!
+              Get my icon set on <a href="https://lovelicons.com">lovelicons.com</a>!
             </span>
 
             <span
@@ -60,42 +60,11 @@ export default () => {
                 xs:block
               `}
             >
-              I am now “as seen on YouTube”!
+              Introducing Lovelicons: the loveliest icons for your next project.
             </span>
+
           </p>
         </div>
-
-        <a
-          className={`
-            bg-white
-            font-medium
-            px-2.5
-            py-2
-            rounded-md
-            shadow-sm
-            text-red-600
-            text-xs
-            visited:text-red-600
-          `}
-          href="https://youtube.com/channel/UCi_V66TGKpeSHV_4DYCFbjw"
-        >
-          <span
-            className={`
-              xs:hidden
-            `}
-          >
-            My channel
-          </span>
-
-          <span
-            className={`
-              hidden
-              xs:block
-            `}
-          >
-            Go to my channel
-          </span>
-        </a>
       </div>
     </div>
   )
