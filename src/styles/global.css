@@ -96,7 +96,7 @@
   }
 
   figcaption {
-    @apply italic m-0 mt-1.5 text-center text-gray-500 text-sm dark:text-gray-300;
+    @apply italic m-0 mt-1.5 text-center text-gray-500 text-xs dark:text-gray-300;
   }
 
   figure {
