@@ -1,12 +1,12 @@
 import React from 'react'
 
-import YouTube from '../icons/youtube-logo'
+import Sparkles from '../icons/sparkles'
 
 export default () => {
   return (
     <div
       className={`
-        bg-gray-900
+        bg-yellow-300
       `}
     >
       <div
@@ -21,7 +21,7 @@ export default () => {
           px-4
           py-3
           space-x-2.5
-          text-gray-100
+          text-gray-900
         `}
       >
         <div
@@ -32,12 +32,14 @@ export default () => {
         >
           <div
             className={`
+              flex-shrink-0
               h-6
               mr-1
+              text-gray-800
               w-6
             `}
           >
-            <YouTube />
+            <Sparkles />
           </div>
 
           <p
@@ -46,23 +48,7 @@ export default () => {
               text-sm
             `}
           >
-            <span
-              className={`
-                xs:hidden
-              `}
-            >
-              Get my icon set on <a href="https://lovelicons.com">lovelicons.com</a>!
-            </span>
-
-            <span
-              className={`
-                hidden
-                xs:block
-              `}
-            >
-              Introducing Lovelicons: the loveliest icons for your next project.
-            </span>
-
+            Get 200+ icons, free for personal use: <a href="https://lovelicons.com">lovelicons.com</a>
           </p>
         </div>
       </div>
