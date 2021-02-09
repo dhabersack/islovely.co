@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby';
 
+import Card from '../components/card'
 import CircledCheckmark from '../icons/circled-checkmark'
 import ConvertkitForm from '../components/convertkit-form'
 import Layout from '../components/layout'
@@ -92,28 +93,27 @@ export default ({
           You can find <a href="/newsletter/archive">all previous newsletters</a> in the archive. Get this bonus content before everybody else!
         </p>
 
-        <div
-          className="mb-12"
-        >
-          <ConvertkitForm
-            sourceUrl={location.href}
-            svForm="1067424"
-            uid="627637e2b6"
-          />
+        <div className="mb-12">
+          <Card>
+            <div className="bg-gray-100 p-4">
+              <ConvertkitForm
+                sourceUrl={location.href}
+                svForm="1067424"
+                uid="627637e2b6"
+              />
+
+              <p className="italic m-0 text-gray-500 text-xs dark:text-gray-400">
+                I respect your email privacy. Unsubscribe anytime.
+              </p>
+            </div>
+          </Card>
         </div>
 
         <h2>
           Featured newsletters
         </h2>
 
-        <div
-          className={`
-            grid
-            gap-10
-            grid-cols-1
-            mb-8
-          `}
-        >
+        <div className="grid gap-10 grid-cols-1 mb-8">
           {newsletters.map(newsletter => (
             <NewsletterTeaser
               key={`newsletter-${newsletter.id}`}

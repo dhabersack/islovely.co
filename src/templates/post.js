@@ -4,7 +4,6 @@ import { MDXRenderer} from 'gatsby-plugin-mdx'
 
 import Figure from '../components/figure'
 import Layout from '../components/layout'
-import MailingListSignup from '../components/mailing-list-signup'
 import MetaTags from '../components/meta-tags'
 import PostMeta from '../components/post-meta'
 import RichPreview from '../components/rich-preview'
@@ -16,7 +15,6 @@ import slugify from '../utils/slugify'
 
 export default ({
   data,
-  location,
 }) => {
   const {
     body,
@@ -113,7 +111,6 @@ export default ({
           className={`
             flex
             flex-wrap
-            mb-16
           `}
         >
           {categories.map(category => (
@@ -132,10 +129,6 @@ export default ({
             </div>
           ))}
         </div>
-
-        <MailingListSignup
-          sourceUrl={location.href}
-        />
       </Taper>
     </Layout>
   )

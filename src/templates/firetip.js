@@ -3,7 +3,6 @@ import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 import Layout from '../components/layout'
-import MailingListSignup from '../components/mailing-list-signup'
 import MetaTags from '../components/meta-tags'
 import RichPreview from '../components/rich-preview'
 import Tag from '../components/tag'
@@ -12,7 +11,6 @@ import slugify from '../utils/slugify'
 
 export default ({
   data,
-  location,
 }) => {
   const {
     body,
@@ -59,7 +57,6 @@ export default ({
           className={`
             flex
             flex-wrap
-            mb-16
           `}
         >
           {tags.map(tag => (
@@ -78,10 +75,6 @@ export default ({
             </div>
           ))}
         </div>
-
-        <MailingListSignup
-          sourceUrl={location.href}
-        />
       </Taper>
     </Layout>
   )

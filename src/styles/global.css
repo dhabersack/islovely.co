@@ -88,7 +88,7 @@
   }
 
   button {
-    @apply bg-gray-200 border-transparent border cursor-pointer m-0 px-2.5 py-2 rounded text-gray-700 text-sm disabled:cursor-not-allowed disabled:opacity-50 focus:outline-none focus:ring focus:ring-gray-400 focus:ring-opacity-50 hover:bg-gray-300 dark:bg-gray-900 dark:text-gray-400 dark:focus:ring-blue-500 dark:hover:bg-gray-900;
+    @apply bg-gray-200 cursor-pointer font-medium m-0 px-5 py-2 rounded text-gray-700 text-sm disabled:cursor-not-allowed disabled:opacity-50 focus:outline-none focus:ring focus:ring-gray-400 focus:ring-opacity-50 hover:bg-gray-300 dark:bg-gray-900 dark:text-gray-400 dark:focus:ring-blue-500 dark:hover:bg-gray-900;
   }
 
   code {

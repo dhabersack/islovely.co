@@ -22,38 +22,24 @@ export default ({
 
       <Banner />
 
-      <div
-        className={`
-          container
-          flex
-          flex-col
-          min-h-screen
-          mx-auto
-          px-4
-        `}
-      >
-        <div
-          className="mb-6"
-        >
+      <div className="flex flex-col min-h-screen">
+        <div className="container mb-6 mx-auto px-4">
           <Header />
         </div>
 
-        <Taper>
-          <Breadcrumbs
-            breadcrumbs={breadcrumbs}
-          />
-        </Taper>
+        <main className="container flex-grow mb-24 mx-auto px-4">
+          <Taper>
+            <Breadcrumbs breadcrumbs={breadcrumbs} />
+          </Taper>
 
-        <main
-          className={`
-            flex-grow
-            mb-24
-          `}
-        >
           {children}
         </main>
 
-        <Footer />
+        <div className="bg-gray-100">
+          <div className="container mx-auto px-4">
+            <Footer />
+          </div>
+        </div>
       </div>
 
       {IS_IN_DEBUG_MODE && (

@@ -3,13 +3,7 @@ import React from 'react'
 export default ({
   breadcrumbs,
 }) => breadcrumbs ? (
-  <nav
-    className={`
-      font-medium
-      text-sm
-      w-full
-    `}
-  >
+  <nav className="font-medium text-sm w-full">
     {[
       {
         label: 'Home',
@@ -30,22 +24,13 @@ export default ({
           {label}
         </a>
 
-        <span
-          className={`
-            mx-1
-            text-gray-500
-            dark:text-gray-400
-          `}
-        >
+        <span className="mx-1 text-gray-500 dark:text-gray-400">
           &raquo;
         </span>
       </React.Fragment>
     ) : (
       <span
-        className={`
-          text-gray-400
-          dark:text-gray-300
-        `}
+        className="text-gray-400 dark:text-gray-300"
         key={`breadcrumb-${label}`}
       >
         {label}

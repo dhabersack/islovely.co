@@ -5,9 +5,11 @@ import Dribbble from '../icons/dribbble-logo'
 import GitHub from '../icons/github-logo'
 import LinkedIn from '../icons/linkedin-logo'
 import Mastodon from '../icons/mastodon-logo'
+import NewsletterSignup from './newsletter-signup'
 import Twitch from '../icons/twitch-logo'
 import Twitter from '../icons/twitter-logo'
 import UpdateCookieSettingsTrigger from './update-cookie-settings-trigger'
+import UppercaseHeading from './uppercase-heading'
 import YouTube from '../icons/youtube-logo'
 
 const SOCIAL_PROFILES = {
@@ -45,104 +47,102 @@ const SOCIAL_PROFILES = {
   },
 }
 
-export default () => (
-  <footer
-    className={`
-      flex
-      flex-col
-      items-center
-      py-6
-      text-gray-500
-      dark:text-gray-400
-    `}
-  >
-    <div
-      className={`
-        m-0
-        mb-6
-        py-1
-        text-base
-      `}
-    >
-      &copy; Dom Habersack, 2021
+export default ({
+  location,
+}) => (
+  <footer className="divide-y text-gray-500 dark:text-gray-400">
+    <div className="py-8 space-y-8 sm:flex sm:flex-row sm:justify-between sm:space-y-0">
+      <div className="flex flex-grow">
+        <div className="w-1/2 sm:w-24 md:w-36">
+          <UppercaseHeading>
+            Company
+          </UppercaseHeading>
+
+          <div className="flex flex-col items-start mb-2 space-y-1.5 text-sm">
+            <a
+              className="block"
+              href="/about"
+            >
+              About
+            </a>
+
+            <a
+              className="block"
+              href="/courses"
+            >
+              Courses
+            </a>
+
+            <a
+              className="block"
+              href="/projects"
+            >
+              Projects
+            </a>
+
+            <a
+              className="block"
+              href="/contact"
+            >
+              Contact
+            </a>
+          </div>
+        </div>
+
+        <div className="w-1/2">
+          <UppercaseHeading>
+            Legal
+          </UppercaseHeading>
+
+          <div className="flex flex-col items-start mb-2 space-y-1.5 text-sm">
+            <a
+              className="block"
+              href="/legal-notice"
+            >
+              Legal Notice
+            </a>
+
+            <a
+              className="block iubenda-embed iubenda-nostyle no-brand"
+              href="https://www.iubenda.com/privacy-policy/31487586"
+            >
+              Privacy Policy
+            </a>
+
+            <a
+              className="block iubenda-embed iubenda-nostyle no-brand"
+              href="https://www.iubenda.com/privacy-policy/31487586/cookie-policy"
+            >
+              Cookie Policy
+            </a>
+          </div>
+
+          <UpdateCookieSettingsTrigger />
+        </div>
+      </div>
+
+      <div className="sm:w-80 md:w-auto md:max-w-xs lg:max-w-sm">
+        <NewsletterSignup />
+      </div>
     </div>
 
-    <div
-      className={`
-        flex
-        flex-wrap
-        justify-center
-        mb-1.5
-        text-base
-      `}
-    >
-      <a
-        className={`
-          block
-          mx-2.5
-        `}
-        href="/legal-notice"
-      >
-        Legal notice
-      </a>
+    <div className="py-8 sm:flex sm:items-center sm:justify-between">
+      <p className="m-0 mb-3 text-xs sm:mb-0">
+        &copy; 2021 Dominik Habersack. All rights reserved.
+      </p>
 
-      <a
-        className={`
-          block
-          iubenda-embed
-          iubenda-nostyle
-          mx-2.5
-          no-brand
-        `}
-        href="https://www.iubenda.com/privacy-policy/31487586"
-      >
-        Privacy Policy
-      </a>
-
-      <a
-        className={`
-          block
-          iubenda-embed
-          iubenda-nostyle
-          mx-2.5
-          no-brand
-        `}
-        href="https://www.iubenda.com/privacy-policy/31487586/cookie-policy"
-      >
-        Cookie Policy
-      </a>
-    </div>
-
-    <div
-      className="mb-6"
-    >
-      <UpdateCookieSettingsTrigger />
-    </div>
-
-    <div
-      className={`
-        flex
-        flex-wrap
-        justify-center
-        mb-6
-        space-x-2.5
-      `}
-    >
-      {Object.entries(SOCIAL_PROFILES).map(([name, { href, Logo }]) => (
-        <a
-          className={`
-            h-6
-            w-6
-            text-gray-600
-            dark:text-gray-300
-          `}
-          href={href}
-          key={name}
-          title={`Dom Habersack on ${name}`}
-        >
-          <Logo />
-        </a>
-      ))}
+      <div className="flex space-x-2.5">
+        {Object.entries(SOCIAL_PROFILES).map(([name, { href, Logo }]) => (
+          <a
+            className="block h-6 w-6 text-gray-600 dark:text-gray-300"
+            href={href}
+            key={name}
+            title={`Dom Habersack on ${name}`}
+          >
+            <Logo />
+          </a>
+        ))}
+      </div>
     </div>
   </footer>
 )

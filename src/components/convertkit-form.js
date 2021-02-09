@@ -51,28 +51,12 @@ export default ({
         <div
           className={`
             flex
-            flex-wrap
             items-start
             space-x-2.5
           `}
         >
           <input
-            className={`
-              border-gray-300
-              flex-grow
-              px-2.5
-              py-3
-              rounded
-              w-px
-              focus:border-indigo-300
-              focus:ring
-              focus:ring-indigo-200
-              focus:ring-opacity-50
-              dark:bg-black
-              dark:border-gray-700
-              dark:focus:border-blue-600
-              dark:focus:ring-blue-500
-            `}
+            className="border-0 flex-grow px-2.5 py-2 rounded text-sm w-0 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 dark:bg-black dark:border-gray-700 dark:focus:border-blue-600 dark:focus:ring-blue-500"
             name="email_address"
             placeholder="Enter your email"
             required
@@ -86,25 +70,14 @@ export default ({
             value={sourceUrl}
           />
 
-          <PrimaryButton
+          <button
+            className="bg-blue-500 text-gray-50 focus:ring-indigo-200 hover:bg-blue-600 dark:bg-red-600 dark:hover:bg-red-600 dark:focus:ring-blue-500"
             data-element="submit"
           >
             {cta || 'Get me early access!'}
-          </PrimaryButton>
+          </button>
         </div>
       </form>
-
-      <p
-        className={`
-          italic
-          m-0
-          text-gray-500
-          text-xs
-          dark:text-gray-400
-        `}
-      >
-        I respect your email privacy. Unsubscribe anytime.
-      </p>
     </div>
   </RequiresCookieConsent>
 )

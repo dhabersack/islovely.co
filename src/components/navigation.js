@@ -2,12 +2,12 @@ import React, { useState } from 'react'
 
 const LINKS = {
   'Home': '/',
-  'Courses': '/courses',
+  // 'Courses': '/courses',
   'Blog': '/posts',
   'Fire tips': '/firetips',
   'Newsletter': '/newsletter',
-  'About': '/about',
-  'Contact': '/contact',
+  // 'About': '/about',
+  // 'Contact': '/contact',
 }
 
 export default () => {
@@ -23,9 +23,7 @@ export default () => {
 
   return (
     <>
-      <nav
-        aria-label="Global"
-      >
+      <nav aria-label="Global">
         <button
           aria-haspopup="true"
           className={`
@@ -54,18 +52,13 @@ export default () => {
           onClick={openMenu}
           type="button"
         >
-          <span
-            className="sr-only"
-          >
+          <span className="sr-only">
             Open main menu
           </span>
 
           <svg
             aria-hidden="true"
-            className={`
-              h-6
-              w-6
-            `}
+            className="h-6 w-6"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -80,26 +73,10 @@ export default () => {
           </svg>
         </button>
 
-        <div
-          className={`
-            hidden
-            py-4
-            md:block
-            md:space-x-4
-          `}
-        >
+        <div className="hidden py-4 md:block md:space-x-5">
           {Object.entries(LINKS).map(([name, href]) => (
             <a
-              className={`
-                font-medium
-                text-gray-700
-                hover:text-gray-900
-                hover:no-underline
-                visited:text-gray-700
-                dark:text-gray-200
-                dark:hover:text-gray-50
-                dark:visited:text-gray-200
-              `}
+              className="font-medium text-gray-700 hover:text-gray-900 hover:no-underline visited:text-gray-700 dark:text-gray-200 dark:hover:text-gray-50 dark:visited:text-gray-200"
               href={href}
               key={href}
             >
@@ -165,18 +142,13 @@ export default () => {
                   dark:hover:text-gray-200
                 `}
               >
-                <span
-                  className="sr-only"
-                >
+                <span className="sr-only">
                   Close main menu
                 </span>
 
                 <svg
                   aria-hidden="true"
-                  className={`
-                    h-6
-                    w-6
-                  `}
+                  className="h-6 w-6"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -195,12 +167,7 @@ export default () => {
             <div
               aria-labelledby="main-menu"
               aria-orientation="vertical"
-              className={`
-                px-2
-                pt-2
-                pb-3
-                space-y-1
-              `}
+              className="px-2 pt-2 pb-3 space-y-1"
               role="menu"
             >
               {Object.entries(LINKS).map(([name, href]) => (

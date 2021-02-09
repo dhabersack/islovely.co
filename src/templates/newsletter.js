@@ -3,7 +3,6 @@ import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 import Layout from '../components/layout'
-import MailingListSignup from '../components/mailing-list-signup'
 import MetaTags from '../components/meta-tags'
 import RichPreview from '../components/rich-preview'
 import PostMeta from '../components/post-meta'
@@ -12,7 +11,6 @@ import mapFiguresToNamedObject from '../utils/map-figures-to-named-object'
 
 export default ({
   data,
-  location,
 }) => {
   const {
     body,
@@ -75,19 +73,11 @@ export default ({
           />
         </div>
 
-        <div
-          className="mb-16"
+        <MDXRenderer
+          figures={mapFiguresToNamedObject(figures)}
         >
-          <MDXRenderer
-            figures={mapFiguresToNamedObject(figures)}
-          >
-            {body}
-          </MDXRenderer>
-        </div>
-
-        <MailingListSignup
-          sourceUrl={location.href}
-        />
+          {body}
+        </MDXRenderer>
       </Taper>
     </Layout>
   )
