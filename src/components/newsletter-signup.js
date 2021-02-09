@@ -10,7 +10,7 @@ export default () => (
     </UppercaseHeading>
 
     <div className="space-y-2.5">
-      <p className="mb-0 text-gray-600 text-sm">
+      <p className="mb-0 text-gray-600 text-sm dark:text-gray-300">
         Get weekly tips, course and product previews, and more straight to your inbox. Read previous issues in the <a href="/newsletter/archive">archive</a>.
       </p>
 
