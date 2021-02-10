@@ -5,7 +5,6 @@ import Layout from '../../components/layout'
 import MetaTags from '../../components/meta-tags'
 import NewsletterTeaser from '../../components/newsletter-teaser'
 import RichPreview from '../../components/rich-preview'
-import Taper from '../../components/taper'
 
 export default ({
   data,
@@ -34,32 +33,21 @@ export default ({
         title="Newsletter archive"
       />
 
-      <Taper>
-        <h1>
-          Newsletter archive
-        </h1>
+      <h1>
+        Newsletter archive
+      </h1>
 
-        <p
-          className="mb-12"
-        >
-          These are some of my previous newsletters. <a href="/newsletter">Sign up</a> if you want to get them delivered straight to your inbox.
-        </p>
+      <p className="mb-12">
+        These are some of my previous newsletters. <a href="/newsletter">Sign up</a> if you want to get them delivered straight to your inbox.
+      </p>
 
-        <div
-          className={`
-            grid
-            gap-10
-            grid-cols-1
-          `}
-        >
-          {newsletters.map(newsletter => (
-            <NewsletterTeaser
-              key={`newsletter-${newsletter.id}`}
-              newsletter={newsletter}
-            />
-          ))}
-        </div>
-      </Taper>
+      <div className="grid gap-10 grid-cols-1">
+        {newsletters.map(newsletter => (
+          <React.Fragment key={`newsletter-${newsletter.id}`}>
+            <NewsletterTeaser newsletter={newsletter} />
+          </React.Fragment>
+        ))}
+      </div>
     </Layout>
   )
 }

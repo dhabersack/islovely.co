@@ -6,7 +6,6 @@ import Layout from '../components/layout'
 import MetaTags from '../components/meta-tags'
 import RichPreview from '../components/rich-preview'
 import Tag from '../components/tag'
-import Taper from '../components/taper'
 import slugify from '../utils/slugify'
 
 export default ({
@@ -34,9 +33,7 @@ export default ({
         }
       ]}
     >
-      <MetaTags
-        title={title}
-      />
+      <MetaTags title={title} />
 
       <RichPreview
         imageSubpath="firetips"
@@ -44,38 +41,25 @@ export default ({
         title={title}
       />
 
-      <Taper>
-        <h1>
-          {title}
-        </h1>
+      <h1>
+        {title}
+      </h1>
 
-        <MDXRenderer>
-          {body}
-        </MDXRenderer>
+      <MDXRenderer>
+        {body}
+      </MDXRenderer>
 
-        <div
-          className={`
-            flex
-            flex-wrap
-          `}
-        >
-          {tags.map(tag => (
-            <div
-              className={`
-                mb-3
-                mr-2.5
-              `}
-              key={`tag-${tag}`}
-            >
-              <Tag
-                href={`/firetips/tags/${slugify(tag)}`}
-              >
+      <div className="flex flex-wrap">
+        {tags.map(tag => (
+          <React.Fragment key={`tag-${tag}`}>
+            <div className="mb-3 mr-2.5">
+              <Tag href={`/firetips/tags/${slugify(tag)}`}>
                 {tag}
               </Tag>
             </div>
-          ))}
-        </div>
-      </Taper>
+          </React.Fragment>
+        ))}
+      </div>
     </Layout>
   )
 }

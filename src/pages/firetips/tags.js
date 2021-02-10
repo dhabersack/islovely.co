@@ -5,7 +5,6 @@ import Firetip from '../../components/firetip'
 import Layout from '../../components/layout'
 import MetaTags from '../../components/meta-tags'
 import RichPreview from '../../components/rich-preview'
-import Taper from '../../components/taper'
 import slugify from '../../utils/slugify'
 
 export default ({
@@ -33,48 +32,34 @@ export default ({
         }
       ]}
     >
-      <MetaTags
-        title="Fire tips by tag"
-      />
+      <MetaTags title="Fire tips by tag" />
 
       <RichPreview
         permalink="/firetips/tags"
         title="Fire tips by tag"
       />
 
-      <Taper>
-        <h1>
-          Fire tips by tag
-        </h1>
+      <h1>
+        Fire tips by tag
+      </h1>
 
-        {tags.map(tag => (
-          <React.Fragment
-            key={`tag-${tag}`}
-          >
-            <h2>
-              <a
-                href={`/firetips/tags/${slugify(tag)}`}
-              >
-                Fire tips tagged “{tag}”
-              </a>
-            </h2>
+      {tags.map(tag => (
+        <React.Fragment key={`tag-${tag}`}>
+          <h2>
+            <a href={`/firetips/tags/${slugify(tag)}`}>
+              Fire tips tagged “{tag}”
+            </a>
+          </h2>
 
-            <div
-              className={`
-                grid
-                gap-6
-              `}
-            >
-              {firetipsByTag[tag].map(firetip => (
-                <Firetip
-                  firetip={firetip}
-                  key={`firetip-${firetip.slug}`}
-                />
-              ))}
-            </div>
-          </React.Fragment>
-        ))}
-      </Taper>
+          <div className="grid gap-6">
+            {firetipsByTag[tag].map(firetip => (
+              <React.Fragment key={`firetip-${firetip.slug}`}>
+                <Firetip firetip={firetip} />
+              </React.Fragment>
+            ))}
+          </div>
+        </React.Fragment>
+      ))}
     </Layout>
   )
 }

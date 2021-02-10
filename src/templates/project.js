@@ -5,7 +5,6 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Layout from '../components/layout'
 import MetaTags from '../components/meta-tags'
 import RichPreview from '../components/rich-preview'
-import Taper from '../components/taper'
 
 export default ({
   data,
@@ -43,15 +42,13 @@ export default ({
         title={title}
       />
 
-      <Taper>
-        <h1>
-          {title}
-        </h1>
+      <h1>
+        {title}
+      </h1>
 
-        <MDXRenderer>
-          {body}
-        </MDXRenderer>
-      </Taper>
+      <MDXRenderer>
+        {body}
+      </MDXRenderer>
     </Layout>
   )
 }

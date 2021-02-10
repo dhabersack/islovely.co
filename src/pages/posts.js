@@ -1,11 +1,11 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
+import Breakout from '../components/breakout'
 import Layout from '../components/layout'
 import MetaTags from '../components/meta-tags'
 import PostTeasers from '../components/post-teasers'
 import RichPreview from '../components/rich-preview'
-import Taper from '../components/taper'
 
 export default ({
   data,
@@ -31,18 +31,18 @@ export default ({
       />
 
       <div className="mb-12">
-        <Taper>
-          <h1>
-            Blog
-          </h1>
+        <h1>
+          Blog
+        </h1>
 
-          <p>
-            I write about design, development, and productivity. My <a href="/newsletter">weekly newsletter</a> contains shorter pieces. Read all previous issues in the <a href="/newsletter/archive">archive</a>.
-          </p>
-        </Taper>
+        <p>
+          I write about design, development, and productivity. My <a href="/newsletter">weekly newsletter</a> contains shorter pieces. Read all previous issues in the <a href="/newsletter/archive">archive</a>.
+        </p>
       </div>
 
-      <PostTeasers posts={posts} />
+      <Breakout>
+        <PostTeasers posts={posts} />
+      </Breakout>
     </Layout>
   )
 }

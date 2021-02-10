@@ -1,11 +1,11 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
+import Breakout from '../components/breakout'
 import Layout from '../components/layout'
 import MetaTags from '../components/meta-tags'
 import PostTeasers from '../components/post-teasers'
 import RichPreview from '../components/rich-preview'
-import Taper from '../components/taper'
 import slugify from '../utils/slugify'
 
 export default ({
@@ -29,24 +29,20 @@ export default ({
         }
       ]}
     >
-      <MetaTags
-        title={`Posts in “${category}”`}
-      />
+      <MetaTags title={`Posts in “${category}”`} />
 
       <RichPreview
         permalink={`/categories/${slugify(category)}`}
         title={`Posts in “${category}”`}
       />
 
-      <Taper>
-        <h1>
-          Posts in “{category}”
-        </h1>
-      </Taper>
+      <h1>
+        Posts in “{category}”
+      </h1>
 
-      <PostTeasers
-        posts={posts}
-      />
+      <Breakout>
+        <PostTeasers posts={posts} />
+      </Breakout>
     </Layout>
   )
 }

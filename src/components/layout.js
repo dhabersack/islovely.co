@@ -9,7 +9,6 @@ import BreakpointDebug from './breakpoint-debug'
 import Container from './container'
 import Footer from './footer'
 import Header from './header'
-import Taper from './taper'
 
 const IS_IN_DEBUG_MODE = true
 
@@ -32,9 +31,7 @@ export default ({
 
         <main className="flex-grow mb-24">
           <Container>
-            <Taper>
-              <Breadcrumbs breadcrumbs={breadcrumbs} />
-            </Taper>
+            <Breadcrumbs breadcrumbs={breadcrumbs} />
 
             {children}
           </Container>

@@ -1,11 +1,11 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
+import Breakout from '../components/breakout'
 import Layout from '../components/layout'
 import MetaTags from '../components/meta-tags'
 import PostTeasers from '../components/post-teasers'
 import RichPreview from '../components/rich-preview'
-import Taper from '../components/taper'
 
 export default ({
   data,
@@ -29,34 +29,26 @@ export default ({
         }
       ]}
     >
-      <MetaTags
-        title="Categories"
-      />
+      <MetaTags title="Categories" />
 
       <RichPreview
         permalink="/categories"
         title="Categories"
       />
 
-      <Taper>
-        <h1>
-          Categories
-        </h1>
-      </Taper>
+      <h1>
+        Categories
+      </h1>
 
       {categories.map(category => (
-        <React.Fragment
-          key={`category-${category}`}
-        >
-          <Taper>
-            <h2>
-              {category} &times; {postsByCategory[category].length}
-            </h2>
-          </Taper>
+        <React.Fragment key={`category-${category}`}>
+          <h2>
+            {category} &times; {postsByCategory[category].length}
+          </h2>
 
-          <PostTeasers
-            posts={postsByCategory[category]}
-          />
+          <Breakout>
+            <PostTeasers posts={postsByCategory[category]} />
+          </Breakout>
         </React.Fragment>
       ))}
     </Layout>

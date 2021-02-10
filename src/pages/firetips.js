@@ -6,7 +6,6 @@ import Layout from '../components/layout'
 import MetaTags from '../components/meta-tags'
 import RichPreview from '../components/rich-preview'
 import Tag from '../components/tag'
-import Taper from '../components/taper'
 import slugify from '../utils/slugify'
 
 export default ({
@@ -29,9 +28,7 @@ export default ({
         }
       ]}
     >
-      <MetaTags
-        title="Fire tips"
-      />
+      <MetaTags title="Fire tips" />
 
       <RichPreview
         imageSubpath="firetips"
@@ -39,59 +36,32 @@ export default ({
         title="Fire tips"
       />
 
-      <Taper>
-        <h1>
-          Fire tips
-        </h1>
+      <h1>
+        Fire tips
+      </h1>
 
-        <div
-          className={`
-            flex
-            flex-wrap
-            mb-6
-          `}
-        >
-          {tagsSortedByCount.map(tag => (
-            <div
-              className={`
-                flex
-                items-center
-                mb-1.5
-                mr-2.5
-              `}
-              key={`tag-${tag}`}
-            >
-              <Tag
-                href={`/firetips/tags/${slugify(tag)}`}
-              >
-                {tag}
-              </Tag>&nbsp;<span
-                className={`
-                  text-gray-500
-                  text-xs
-                  dark:text-gray-400
-                `}
-              >
-                &times; {tagCounts[tag]}
-              </span>
-            </div>
-          ))}
-        </div>
+      <div className="flex flex-wrap mb-6">
+        {tagsSortedByCount.map(tag => (
+          <div
+            className="flex items-center mb-1.5 mr-2.5"
+            key={`tag-${tag}`}
+          >
+            <Tag href={`/firetips/tags/${slugify(tag)}`}>
+              {tag}
+            </Tag>&nbsp;<span className="text-gray-500 text-xs dark:text-gray-400">&times; {tagCounts[tag]}
+            </span>
+          </div>
+        ))}
+      </div>
 
-        <div
-          className={`
-            grid
-            gap-6
-          `}
-        >
-          {firetips.map(firetip => (
-            <Firetip
-              firetip={firetip}
-              key={`firetip-${firetip.slug}`}
-            />
-          ))}
-        </div>
-      </Taper>
+      <div className="grid gap-6">
+        {firetips.map(firetip => (
+          <Firetip
+            firetip={firetip}
+            key={`firetip-${firetip.slug}`}
+          />
+        ))}
+      </div>
     </Layout>
   )
 }

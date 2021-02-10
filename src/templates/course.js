@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
+import Breakout from '../components/breakout'
 import CalendarIcon from '../icons/calendar'
 import ClockIcon from '../icons/clock'
 import ConvertkitForm from '../components/convertkit-form'
@@ -9,7 +10,6 @@ import EmailWithLetterIcon from '../icons/email-with-letter'
 import Layout from '../components/layout'
 import MetaTags from '../components/meta-tags'
 import RichPreview from '../components/rich-preview'
-import Taper from '../components/taper'
 import Video from '../components/video'
 import VideoIcon from '../icons/video'
 
@@ -61,198 +61,112 @@ export default ({
       />
 
       <div className="mb-12">
-        <Taper>
-          <h1>
-            {title}
-          </h1>
+        <h1>
+          {title}
+        </h1>
 
-          <aside
-            className={`
-              flex
-              flex-wrap
-              mb-3
-              text-xs
-            `}
-          >
-            {emails && (
-              <div
-                className={`
-                  inline-flex
-                  items-center
-                  mr-2.5
-                `}
-              >
-                <div
-                  className={`
-                    h-6
-                    mr-1
-                    w-6
-                    dark:text-gray-400
-                  `}
-                >
-                  <EmailWithLetterIcon />
-                </div>
-
-                <span>
-                  <strong>{emails}</strong> emails
-                </span>
+        <aside className="flex flex-wrap mb-3 text-xs">
+          {emails && (
+            <div
+              className="inline-flex items-center mr-2.5">
+              <div className="h-6 mr-1 w-6 dark:text-gray-400">
+                <EmailWithLetterIcon />
               </div>
-            )}
 
-            {videos && (
-              <div
-                className={`
-                  inline-flex
-                  items-center
-                  mr-2.5
-                `}
-              >
-                <div
-                  className={`
-                    h-6
-                    mr-1
-                    w-6
-                    dark:text-gray-400
-                  `}
-                >
-                  <VideoIcon />
-                </div>
-
-                <span>
-                  <strong>{videos}</strong> videos
-                </span>
-              </div>
-            )}
-
-            {hours && (
-              <div
-                className={`
-                  inline-flex
-                  items-center
-                  mr-2.5
-                `}
-              >
-                <div
-                  className={`
-                    h-6
-                    mr-1
-                    w-6
-                    dark:text-gray-400
-                  `}
-                >
-                  <ClockIcon />
-                </div>
-
-                <span>
-                  <strong>{hours}</strong> hours
-                </span>
-              </div>
-            )}
-
-            {weeks && (
-              <div
-                className={`
-                  inline-flex
-                  items-center
-                  mr-2.5
-                `}
-              >
-                <div
-                  className={`
-                    h-6
-                    mr-1
-                    w-6
-                    dark:text-gray-400
-                  `}
-                >
-                  <CalendarIcon />
-                </div>
-
-                <span>
-                  <strong>{weeks}</strong> weeks
-                </span>
-              </div>
-            )}
-          </aside>
-
-          <MDXRenderer>
-            {body}
-          </MDXRenderer>
-
-          {isSignupPossible && (
-            <ConvertkitForm
-              cta={cta}
-              sourceUrl={location.href}
-              svForm={svForm}
-              uid={uid}
-            />
+              <span>
+                <strong>{emails}</strong> emails
+              </span>
+            </div>
           )}
-        </Taper>
+
+          {videos && (
+            <div className="inline-flex items-center mr-2.5">
+              <div className="h-6 mr-1 w-6 dark:text-gray-400">
+                <VideoIcon />
+              </div>
+
+              <span>
+                <strong>{videos}</strong> videos
+              </span>
+            </div>
+          )}
+
+          {hours && (
+            <div className="inline-flex items-center mr-2.5">
+              <div className="h-6 mr-1 w-6 dark:text-gray-400">
+                <ClockIcon />
+              </div>
+
+              <span>
+                <strong>{hours}</strong> hours
+              </span>
+            </div>
+          )}
+
+          {weeks && (
+            <div className="inline-flex items-center mr-2.5">
+              <div className="h-6 mr-1 w-6 dark:text-gray-400">
+                <CalendarIcon />
+              </div>
+
+              <span>
+                <strong>{weeks}</strong> weeks
+              </span>
+            </div>
+          )}
+        </aside>
+
+        <MDXRenderer>
+          {body}
+        </MDXRenderer>
+
+        {isSignupPossible && (
+          <ConvertkitForm
+            cta={cta}
+            sourceUrl={location.href}
+            svForm={svForm}
+            uid={uid}
+          />
+        )}
       </div>
 
       {playlist && (
-        <div
-          className={`
-            grid
-            gap-6
-            grid-cols-1
-            sm:grid-cols-2
-            md:grid-cols-3
-          `}
-        >
-          {playlist.map(({
-            duration,
-            title,
-            vimeoId,
-            youtubeId,
-          }, index) => (
-            <div
-              key={`video-${title}`}
-            >
-              <div
-                className="mb-1"
-              >
-                <Video
-                  title={title}
-                  vimeoId={vimeoId}
-                  youtubeId={youtubeId}
-                />
+        <Breakout>
+          <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+            {playlist.map(({
+              duration,
+              title,
+              vimeoId,
+              youtubeId,
+            }, index) => (
+              <div key={`video-${title}`}>
+                <div className="mb-1">
+                  <Video
+                    title={title}
+                    vimeoId={vimeoId}
+                    youtubeId={youtubeId}
+                  />
+                </div>
+
+                <h4 className="font-normal leading-snug text-sm">
+                  <span className="text-gray-500 dark:text-gray-400">
+                    #{index + 1}
+                  </span>
+
+                  {' '}
+
+                  {title}
+
+                  {' '}
+
+                  <span className="text-gray-500 dark:text-gray-400">
+                    ({duration})
+                  </span>
+                </h4>
               </div>
-
-              <h4
-                className={`
-                  font-normal
-                  leading-snug
-                  text-sm
-                `}
-              >
-                <span
-                  className={`
-                    text-gray-500
-                    dark:text-gray-400
-                  `}
-                >
-                  #{index + 1}
-                </span>
-
-                {' '}
-
-                {title}
-
-                {' '}
-
-                <span
-                  className={`
-                    text-gray-500
-                    dark:text-gray-400
-                  `}
-                >
-                  ({duration})
-                </span>
-              </h4>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </Breakout>
       )}
     </Layout>
   )

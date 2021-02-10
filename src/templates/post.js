@@ -2,13 +2,13 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { MDXRenderer} from 'gatsby-plugin-mdx'
 
+import Breakout from '../components/breakout'
 import Figure from '../components/figure'
 import Layout from '../components/layout'
 import MetaTags from '../components/meta-tags'
 import PostMeta from '../components/post-meta'
 import RichPreview from '../components/rich-preview'
 import Tag from '../components/tag'
-import Taper from '../components/taper'
 import mapAttachmentsToNamedObject from '../utils/map-attachments-to-named-object'
 import mapFiguresToNamedObject from '../utils/map-figures-to-named-object'
 import slugify from '../utils/slugify'
@@ -66,70 +66,47 @@ export default ({
         type="article"
       />
 
-      <Taper>
-        <h1>
-          {title}
-        </h1>
+      <h1>
+        {title}
+      </h1>
 
-        <div
-          className="mb-6"
+      <div className="mb-6">
+        <PostMeta
+          author={authorName}
+          avatarFluid={avatarFluid}
+          date={date}
+        />
+      </div>
+
+      <Breakout>
+        <Figure
+          alt={heroAlt}
+          caption={heroCaption}
+          className="m-0 mb-6"
+          fluid={hero.childImageSharp.fluid}
+        />
+      </Breakout>
+
+      <div className="break-words mb-8">
+        <MDXRenderer
+          attachments={mapAttachmentsToNamedObject(attachments)}
+          figures={mapFiguresToNamedObject(figures)}
         >
-          <PostMeta
-            author={authorName}
-            avatarFluid={avatarFluid}
-            date={date}
-          />
-        </div>
-      </Taper>
+          {body}
+        </MDXRenderer>
+      </div>
 
-      <Figure
-        alt={heroAlt}
-        caption={heroCaption}
-        className={`
-          m-0
-          mb-6
-        `}
-        fluid={hero.childImageSharp.fluid}
-      />
-
-      <Taper>
-        <div
-          className={`
-            break-words
-            mb-8
-          `}
-        >
-          <MDXRenderer
-            attachments={mapAttachmentsToNamedObject(attachments)}
-            figures={mapFiguresToNamedObject(figures)}
-          >
-            {body}
-          </MDXRenderer>
-        </div>
-
-        <div
-          className={`
-            flex
-            flex-wrap
-          `}
-        >
-          {categories.map(category => (
-            <div
-              className={`
-                mb-1
-                mr-1.5
-              `}
-              key={`category-${category}`}
-            >
-              <Tag
-                href={`/categories/${slugify(category)}`}
-              >
+      <div className="flex flex-wrap">
+        {categories.map(category => (
+          <React.Fragment key={`category-${category}`}>
+            <div className="mb-1 mr-1.5">
+              <Tag href={`/categories/${slugify(category)}`}>
                 {category}
               </Tag>
             </div>
-          ))}
-        </div>
-      </Taper>
+          </React.Fragment>
+        ))}
+      </div>
     </Layout>
   )
 }

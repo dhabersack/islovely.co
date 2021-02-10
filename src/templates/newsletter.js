@@ -6,7 +6,6 @@ import Layout from '../components/layout'
 import MetaTags from '../components/meta-tags'
 import RichPreview from '../components/rich-preview'
 import PostMeta from '../components/post-meta'
-import Taper from '../components/taper'
 import mapFiguresToNamedObject from '../utils/map-figures-to-named-object'
 
 export default ({
@@ -58,27 +57,21 @@ export default ({
         type="article"
       />
 
-      <Taper>
-        <h1>
-          {title}
-        </h1>
+      <h1>
+        {title}
+      </h1>
 
-        <div
-          className="mb-6"
-        >
-          <PostMeta
-            author={authorName}
-            avatarFluid={avatarFluid}
-            date={date}
-          />
-        </div>
+      <div className="mb-6">
+        <PostMeta
+          author={authorName}
+          avatarFluid={avatarFluid}
+          date={date}
+        />
+      </div>
 
-        <MDXRenderer
-          figures={mapFiguresToNamedObject(figures)}
-        >
-          {body}
-        </MDXRenderer>
-      </Taper>
+      <MDXRenderer figures={mapFiguresToNamedObject(figures)}>
+        {body}
+      </MDXRenderer>
     </Layout>
   )
 }
