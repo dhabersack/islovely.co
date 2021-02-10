@@ -133,14 +133,15 @@ export default ({
 
       <div className="flex space-x-2.5">
         {Object.entries(SOCIAL_PROFILES).map(([name, { href, Logo }]) => (
-          <a
-            className="block h-6 w-6 text-gray-600 dark:text-gray-300"
-            href={href}
-            key={name}
-            title={`Dom Habersack on ${name}`}
-          >
-            <Logo />
-          </a>
+          <React.Fragment key={name}>
+            <a
+              className="block h-6 w-6 text-gray-600 dark:text-gray-300"
+              href={href}
+              title={`Dom Habersack on ${name}`}
+            >
+              <Logo />
+            </a>
+          </React.Fragment>
         ))}
       </div>
     </div>

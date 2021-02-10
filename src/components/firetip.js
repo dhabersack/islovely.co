@@ -21,23 +21,9 @@ export default ({
 
   return (
     <Card>
-      <div
-        className={`
-          px-4
-          py-3
-        `}
-      >
-        <h2
-          className={`
-            leading-snug
-            m-0
-            mb-1.5
-            text-base
-          `}
-        >
-          <a
-            href={`/firetips/${slug}`}
-          >
+      <div className="px-4 py-3">
+        <h2 className="leading-snug m-0 mb-1.5 text-base">
+          <a href={`/firetips/${slug}`}>
             {title}
           </a>
         </h2>
@@ -46,26 +32,15 @@ export default ({
           {body}
         </MDXRenderer>
 
-        <div
-          className={`
-            flex
-            flex-wrap
-          `}
-        >
+        <div className="flex flex-wrap">
           {tags.map(tag => (
-            <div
-              className={`
-                mb-1
-                mr-2.5
-              `}
-              key={`tag-${tag}`}
-            >
-              <Tag
-                href={`/firetips/tags/${slugify(tag)}`}
-              >
-                {tag}
-              </Tag>
-            </div>
+            <React.Fragment key={`tag-${tag}`}>
+              <div className="mb-1 mr-2.5">
+                <Tag href={`/firetips/tags/${slugify(tag)}`}>
+                  {tag}
+                </Tag>
+              </div>
+            </React.Fragment>
           ))}
         </div>
       </div>

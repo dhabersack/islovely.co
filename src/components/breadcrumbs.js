@@ -32,12 +32,11 @@ export default function Breadcrumbs({
           </span>
         </React.Fragment>
       ) : (
-        <span
-          className="text-gray-400 dark:text-gray-300"
-          key={`breadcrumb-${label}`}
-        >
-          {label}
-        </span>
+        <React.Fragment key={`breadcrumb-${label}`}>
+          <span className="text-gray-400 dark:text-gray-300">
+            {label}
+          </span>
+        </React.Fragment>
       ))}
     </nav>
   )

@@ -11,20 +11,13 @@ export default ({
   preBodyComponents,
 }) => (
   <html
-    className={`
-      antialiased
-      font-sans
-      inter-font-features
-      kerning-auto
-    `}
+    className="antialiased font-sans inter-font-features kerning-auto"
     lang="en-US"
     prefix="og: http://ogp.me/ns#"
     {...htmlAttributes}
   >
     <head>
-      <meta
-        charSet="utf-8"
-      />
+      <meta charSet="utf-8" />
 
       <meta
         content="ie=edge"
@@ -42,12 +35,7 @@ export default ({
     </head>
 
     <body
-      className={`
-        bg-gray-50
-        text-gray-600
-        dark:bg-gray-800
-        dark:text-gray-300
-      `}
+      className="bg-gray-50 text-gray-600 dark:bg-gray-800 dark:text-gray-300"
       {...bodyAttributes}
     >
       {preBodyComponents}
