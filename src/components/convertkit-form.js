@@ -78,6 +78,10 @@ export default ({
           </button>
         </div>
       </form>
+
+      <p className="italic m-0 text-gray-500 text-xs dark:text-gray-400">
+        I respect your email privacy. Unsubscribe anytime.
+      </p>
     </div>
   </RequiresCookieConsent>
 )

@@ -6,6 +6,7 @@ import Application from './application'
 import Banner from './banner'
 import Breadcrumbs from './breadcrumbs'
 import BreakpointDebug from './breakpoint-debug'
+import Container from './container'
 import Footer from './footer'
 import Header from './header'
 import Taper from './taper'
@@ -23,22 +24,26 @@ export default ({
       <Banner />
 
       <div className="flex flex-col min-h-screen">
-        <div className="container mb-6 mx-auto px-4">
-          <Header />
+        <div className="mb-6">
+          <Container>
+            <Header />
+          </Container>
         </div>
 
-        <main className="container flex-grow mb-24 mx-auto px-4">
-          <Taper>
-            <Breadcrumbs breadcrumbs={breadcrumbs} />
-          </Taper>
+        <main className="flex-grow mb-24">
+          <Container>
+            <Taper>
+              <Breadcrumbs breadcrumbs={breadcrumbs} />
+            </Taper>
 
-          {children}
+            {children}
+          </Container>
         </main>
 
         <div className="bg-gray-100 dark:bg-gray-900">
-          <div className="container mx-auto px-4">
+          <Container>
             <Footer />
-          </div>
+          </Container>
         </div>
       </div>
 

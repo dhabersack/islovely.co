@@ -30,21 +30,19 @@ export default ({
         title="Blog"
       />
 
-      <Taper
-        className="mb-12"
-      >
-        <h1>
-          Blog
-        </h1>
+      <div className="mb-12">
+        <Taper>
+          <h1>
+            Blog
+          </h1>
 
-        <p>
-          I write about design, development, and productivity. My <a href="/newsletter">weekly newsletter</a> contains shorter pieces. Read all previous issues in the <a href="/newsletter/archive">archive</a>.
-        </p>
-      </Taper>
+          <p>
+            I write about design, development, and productivity. My <a href="/newsletter">weekly newsletter</a> contains shorter pieces. Read all previous issues in the <a href="/newsletter/archive">archive</a>.
+          </p>
+        </Taper>
+      </div>
 
-      <PostTeasers
-        posts={posts}
-      />
+      <PostTeasers posts={posts} />
     </Layout>
   )
 }

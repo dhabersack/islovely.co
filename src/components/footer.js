@@ -51,9 +51,9 @@ export default ({
   location,
 }) => (
   <footer className="divide-y text-gray-500 dark:divide-gray-700 dark:text-gray-400">
-    <div className="py-8 space-y-8 sm:flex sm:flex-row sm:justify-between sm:space-y-0">
-      <div className="flex flex-grow">
-        <div className="w-1/2 sm:w-24 md:w-36">
+    <div className="py-8 space-y-10 sm:flex sm:flex-row sm:justify-between sm:space-y-0">
+      <div className="flex sm:space-x-5 md:space-x-8 lg:space-x-12">
+        <div className="w-1/2 sm:w-auto">
           <UppercaseHeading>
             Company
           </UppercaseHeading>
@@ -89,7 +89,7 @@ export default ({
           </div>
         </div>
 
-        <div className="w-1/2">
+        <div className="w-1/2 sm:w-auto">
           <UppercaseHeading>
             Legal
           </UppercaseHeading>
@@ -121,7 +121,7 @@ export default ({
         </div>
       </div>
 
-      <div className="sm:w-80 md:w-auto md:max-w-xs lg:max-w-sm">
+      <div className="sm:w-72 md:w-80">
         <NewsletterSignup />
       </div>
     </div>

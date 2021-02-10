@@ -51,38 +51,17 @@ export default ({
           In addition to what I share on this site, I send out a weekly newsletter with tips to help you work smarter. By signing up, you get access to:
         </p>
 
-        <ul
-          className={`
-            list-none
-            my-6
-            p-0
-            space-y-3
-          `}
-        >
+        <ul className="list-none my-6 p-0 space-y-3">
           {BENEFITS.map(listItem => (
             <li
-              className={`
-                flex
-                m-0
-              `}
+              className="flex m-0"
               key={`newsletter-benefit-${listItem}`}
             >
-              <div
-                className={`
-                  flex-shrink-0
-                  h-6
-                  mr-1
-                  text-green-300
-                  w-6
-                  dark:text-green-500
-                `}
-              >
+              <div className="flex-shrink-0 h-6 mr-1 text-green-300 w-6 dark:text-green-500">
                 <CircledCheckmark />
               </div>
 
-              <span
-                className="text-base"
-              >
+              <span className="text-base">
                 {listItem}
               </span>
             </li>
@@ -101,10 +80,6 @@ export default ({
                 svForm="1067424"
                 uid="627637e2b6"
               />
-
-              <p className="italic m-0 text-gray-500 text-xs dark:text-gray-400">
-                I respect your email privacy. Unsubscribe anytime.
-              </p>
             </div>
           </Card>
         </div>
@@ -122,27 +97,8 @@ export default ({
           ))}
         </div>
 
-        <a
-          className={`
-            bg-yellow-300
-            text-sm
-            font-medium
-            inline-block
-            px-5
-            py-3
-            rounded-lg
-            shadow-sm
-            text-gray-900
-            focus:ring
-            focus:ring-yellow-600
-            focus:ring-opacity-50
-            visited:text-gray-900
-            dark:text-gray-900
-            dark:visited:text-gray-900
-          `}
-          href="/newsletter/archive"
-        >
-          Read all newsletters →
+        <a href="/newsletter/archive">
+          Read all issues &rarr;
         </a>
       </Taper>
     </Layout>

@@ -60,135 +60,135 @@ export default ({
         title={title}
       />
 
-      <Taper
-        className="mb-12"
-      >
-        <h1>
-          {title}
-        </h1>
+      <div className="mb-12">
+        <Taper>
+          <h1>
+            {title}
+          </h1>
 
-        <aside
-          className={`
-            flex
-            flex-wrap
-            mb-3
-            text-xs
-          `}
-        >
-          {emails && (
-            <div
-              className={`
-                inline-flex
-                items-center
-                mr-2.5
-              `}
-            >
+          <aside
+            className={`
+              flex
+              flex-wrap
+              mb-3
+              text-xs
+            `}
+          >
+            {emails && (
               <div
                 className={`
-                  h-6
-                  mr-1
-                  w-6
-                  dark:text-gray-400
+                  inline-flex
+                  items-center
+                  mr-2.5
                 `}
               >
-                <EmailWithLetterIcon />
+                <div
+                  className={`
+                    h-6
+                    mr-1
+                    w-6
+                    dark:text-gray-400
+                  `}
+                >
+                  <EmailWithLetterIcon />
+                </div>
+
+                <span>
+                  <strong>{emails}</strong> emails
+                </span>
               </div>
+            )}
 
-              <span>
-                <strong>{emails}</strong> emails
-              </span>
-            </div>
-          )}
-
-          {videos && (
-            <div
-              className={`
-                inline-flex
-                items-center
-                mr-2.5
-              `}
-            >
+            {videos && (
               <div
                 className={`
-                  h-6
-                  mr-1
-                  w-6
-                  dark:text-gray-400
+                  inline-flex
+                  items-center
+                  mr-2.5
                 `}
               >
-                <VideoIcon />
+                <div
+                  className={`
+                    h-6
+                    mr-1
+                    w-6
+                    dark:text-gray-400
+                  `}
+                >
+                  <VideoIcon />
+                </div>
+
+                <span>
+                  <strong>{videos}</strong> videos
+                </span>
               </div>
+            )}
 
-              <span>
-                <strong>{videos}</strong> videos
-              </span>
-            </div>
-          )}
-
-          {hours && (
-            <div
-              className={`
-                inline-flex
-                items-center
-                mr-2.5
-              `}
-            >
+            {hours && (
               <div
                 className={`
-                  h-6
-                  mr-1
-                  w-6
-                  dark:text-gray-400
+                  inline-flex
+                  items-center
+                  mr-2.5
                 `}
               >
-                <ClockIcon />
+                <div
+                  className={`
+                    h-6
+                    mr-1
+                    w-6
+                    dark:text-gray-400
+                  `}
+                >
+                  <ClockIcon />
+                </div>
+
+                <span>
+                  <strong>{hours}</strong> hours
+                </span>
               </div>
+            )}
 
-              <span>
-                <strong>{hours}</strong> hours
-              </span>
-            </div>
-          )}
-
-          {weeks && (
-            <div
-              className={`
-                inline-flex
-                items-center
-                mr-2.5
-              `}
-            >
+            {weeks && (
               <div
                 className={`
-                  h-6
-                  mr-1
-                  w-6
-                  dark:text-gray-400
+                  inline-flex
+                  items-center
+                  mr-2.5
                 `}
               >
-                <CalendarIcon />
+                <div
+                  className={`
+                    h-6
+                    mr-1
+                    w-6
+                    dark:text-gray-400
+                  `}
+                >
+                  <CalendarIcon />
+                </div>
+
+                <span>
+                  <strong>{weeks}</strong> weeks
+                </span>
               </div>
+            )}
+          </aside>
 
-              <span>
-                <strong>{weeks}</strong> weeks
-              </span>
-            </div>
+          <MDXRenderer>
+            {body}
+          </MDXRenderer>
+
+          {isSignupPossible && (
+            <ConvertkitForm
+              cta={cta}
+              sourceUrl={location.href}
+              svForm={svForm}
+              uid={uid}
+            />
           )}
-        </aside>
-
-        <MDXRenderer>
-          {body}
-        </MDXRenderer>
-
-        {isSignupPossible && (
-          <ConvertkitForm
-            cta={cta}
-            sourceUrl={location.href}
-            svForm={svForm}
-            uid={uid}
-          />
-        )}
-      </Taper>
+        </Taper>
+      </div>
 
       {playlist && (
         <div
