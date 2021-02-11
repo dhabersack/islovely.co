@@ -2,11 +2,12 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
-import BuildInPublic from '../components/build-in-public'
 import Card from '../components/card'
+import Email from '../icons/email'
 import Layout from '../components/layout'
 import LinkedIn from '../icons/linkedin-logo'
 import MetaTags from '../components/meta-tags'
+import Metrics from '../components/metrics'
 import NewsletterSignup from '../components/newsletter-signup'
 import NewsletterTeaser from '../components/newsletter-teaser'
 import PostTeaser from '../components/post-teaser'
@@ -14,18 +15,66 @@ import RichPreview from '../components/rich-preview'
 import Twitter from '../icons/twitter-logo'
 import YouTube from '../icons/youtube-logo'
 
+const METRICS_AUDIENCE = [
+  {
+    label: 'Twitter followers',
+    value: 898,
+    change: +200,
+  }, {
+    label: 'Newsletter subscribers',
+    value: 14,
+    change: +2,
+  }, {
+    label: 'YouTube subscribers',
+    value: 46,
+    change: +11,
+  },
+]
+
+const METRICS_FINANCES = [
+  {
+    label: 'US$ revenue',
+    value: 0,
+    change: +0,
+  }, {
+    label: 'US$ MRR',
+    value: 0,
+    change: +0,
+  },
+]
+
+const METRICS_CONTENT = [
+  {
+    label: 'Blog posts',
+    value: 26,
+    change: +0
+  }, {
+    label: 'Weekly newsletters',
+    value: 74,
+    change: +4
+  }, {
+    label: 'Videos published',
+    value: 5,
+    change: +2
+  },
+]
+
 const SOCIAL_PROFILES = {
-  'Twitter': {
+  '@domhabersack on Twitter': {
     href: 'https://twitter.com/domhabersack',
     Logo: Twitter,
   },
-  'YouTube': {
+  'Dom Habersack on YouTube': {
     href: 'https://youtube.com/channel/UCi_V66TGKpeSHV_4DYCFbjw',
     Logo: YouTube,
   },
-  'LinkedIn': {
+  'Dom Habersack on LinkedIn': {
     href: 'https://linkedin.com/in/domhabersack',
     Logo: LinkedIn,
+  },
+  'dom@islovely.co': {
+    href: 'mailto:dom@islovely.co',
+    Logo: Email,
   },
 }
 
@@ -70,15 +119,15 @@ export default function Index({
               </p>
 
               <div className="flex space-x-2.5">
-                {Object.entries(SOCIAL_PROFILES).map(([name, {
+                {Object.entries(SOCIAL_PROFILES).map(([title, {
                   href,
                   Logo
                 }]) => (
-                  <React.Fragment key={name}>
+                  <React.Fragment key={title}>
                     <a
                       className="block h-6 w-6 text-gray-600 dark:text-gray-300"
                       href={href}
-                      title={`Dom Habersack on ${name}`}
+                      title={title}
                     >
                       <Logo />
                     </a>
@@ -138,7 +187,44 @@ export default function Index({
           </p>
         </div>
 
-        <BuildInPublic />
+        <div>
+          <h2 className="mb-0.5">
+            Metrics (last 28 days)
+          </h2>
+
+          <p className="italic m-0 mb-3 text-gray-500 text-xs dark:text-gray-400 lg:mb-6">
+            Updated: February 9, 2021
+          </p>
+
+          <p>
+            As part of building in public, I share my metrics openly.
+          </p>
+
+          <Card>
+            <div className="divide-y">
+              <div className="p-4">
+                <Metrics
+                  label="Finances"
+                  metrics={METRICS_FINANCES}
+                />
+              </div>
+
+              <div className="p-4">
+                <Metrics
+                  label="Content"
+                  metrics={METRICS_CONTENT}
+                />
+              </div>
+
+              <div className="p-4">
+                <Metrics
+                  label="Audience"
+                  metrics={METRICS_AUDIENCE}
+                />
+              </div>
+            </div>
+          </Card>
+        </div>
       </div>
     </Layout>
   )

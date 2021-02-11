@@ -2,6 +2,7 @@ import React from 'react'
 
 import CodePen from '../icons/codepen-logo'
 import Dribbble from '../icons/dribbble-logo'
+import Email from '../icons/email'
 import GitHub from '../icons/github-logo'
 import LinkedIn from '../icons/linkedin-logo'
 import Mastodon from '../icons/mastodon-logo'
@@ -13,38 +14,42 @@ import UppercaseHeading from './uppercase-heading'
 import YouTube from '../icons/youtube-logo'
 
 const SOCIAL_PROFILES = {
-  'Twitter': {
+  '@domhabersack on Twitter': {
     href: 'https://twitter.com/domhabersack',
     Logo: Twitter,
   },
-  'YouTube': {
+  'Dom Habersack on YouTube': {
     href: 'https://youtube.com/channel/UCi_V66TGKpeSHV_4DYCFbjw',
     Logo: YouTube,
   },
-  'Twitch': {
+  'domhabersack on Twitch': {
     href: 'https://twitch.tv/domhabersack',
     Logo: Twitch,
   },
-  'GitHub': {
+  'domhabersack on GitHub': {
     href: 'https://github.com/domhabersack',
     Logo: GitHub,
   },
-  'CodePen': {
+  'domhabersack on CodePen': {
     href: 'https://codepen.io/domhabersack',
     Logo: CodePen,
   },
-  'LinkedIn': {
+  'Dom Habersack on LinkedIn': {
     href: 'https://linkedin.com/in/domhabersack',
     Logo: LinkedIn,
   },
-  'dribbble': {
+  'domhabersack on dribbble': {
     href: 'https://dribbble.com/domhabersack',
     Logo: Dribbble,
   },
-  'Mastodon': {
+  '@domhabersack on mastodon.social': {
     href: 'https://mastodon.social/@domhabersack',
     Logo: Mastodon,
   },
+  'dom@islovely.co': {
+    href: 'mailto:dom@islovely.co',
+    Logo: Email
+  }
 }
 
 export default ({
@@ -132,12 +137,15 @@ export default ({
       </p>
 
       <div className="flex space-x-2.5">
-        {Object.entries(SOCIAL_PROFILES).map(([name, { href, Logo }]) => (
-          <React.Fragment key={name}>
+        {Object.entries(SOCIAL_PROFILES).map(([title, {
+          href,
+          Logo
+        }]) => (
+          <React.Fragment key={title}>
             <a
               className="block h-6 w-6 text-gray-600 dark:text-gray-300"
               href={href}
-              title={`Dom Habersack on ${name}`}
+              title={title}
             >
               <Logo />
             </a>
