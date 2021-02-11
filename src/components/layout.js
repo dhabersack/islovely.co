@@ -11,7 +11,7 @@ import Container from './container'
 import Footer from './footer'
 import Header from './header'
 
-const IS_IN_DEBUG_MODE = true
+const IS_IN_DEBUG_MODE = false
 
 export default ({
   breadcrumbs,
