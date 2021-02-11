@@ -1,5 +1,6 @@
 import React from 'react'
 
+import Card from './card'
 import Metrics from './metrics'
 
 const METRICS_AUDIENCE = [
@@ -27,6 +28,10 @@ const METRICS_FINANCES = [
     label: 'US$ MRR',
     value: 0,
     change: +0,
+  }, {
+    label: 'US$ expenses',
+    value: 10,
+    change: +0,
   },
 ]
 
@@ -43,10 +48,6 @@ const METRICS_CONTENT = [
     label: 'Videos published',
     value: 5,
     change: +2
-  }, {
-    label: 'Live streams',
-    value: 0,
-    change: +0
   },
 ]
 
@@ -65,22 +66,30 @@ export default function BuildInPublic() {
         As part of building in public, I share my numbers openly. If there is something else you’d like me to include here, tweet me at <a href="https://twitter.com/domhabersack">@domhabersack</a>.
       </p>
 
-      <div className="mb-6 space-y-8">
-        <Metrics
-          label="Finances"
-          metrics={METRICS_FINANCES}
-        />
+      <Card>
+        <div className="divide-y">
+          <div className="p-4">
+            <Metrics
+              label="Finances"
+              metrics={METRICS_FINANCES}
+            />
+          </div>
 
-        <Metrics
-          label="Content"
-          metrics={METRICS_CONTENT}
-        />
+          <div className="p-4">
+            <Metrics
+              label="Content"
+              metrics={METRICS_CONTENT}
+            />
+          </div>
 
-        <Metrics
-          label="Audience"
-          metrics={METRICS_AUDIENCE}
-        />
-      </div>
+          <div className="p-4">
+            <Metrics
+              label="Audience"
+              metrics={METRICS_AUDIENCE}
+            />
+          </div>
+        </div>
+      </Card>
     </div>
   )
 }

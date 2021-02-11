@@ -29,77 +29,34 @@ export default ({
 
   return (
     <Card>
-      <article
-        className={`
-          flex
-          flex-col
-          h-full
-        `}
-      >
-        <a
-          href={permalink}
-        >
+      <article className="flex flex-col h-full">
+        <a href={permalink}>
           <Img
             alt={heroAlt}
             fluid={hero.childImageSharp.fluid}
           />
         </a>
 
-        <div
-          className={`
-            flex
-            flex-col
-            h-full
-            px-4
-            py-3
-          `}
-        >
-          <h2
-            className={`
-              leading-snug
-              m-0
-              mb-1.5
-              text-base
-            `}
-          >
-            <a
-              href={permalink}
-            >
+        <div className="flex flex-col h-full p-4">
+          <h2 className="leading-snug m-0 mb-1.5 text-base">
+            <a href={permalink}>
               {title}
             </a>
           </h2>
 
-          <p
-            className={`
-              flex-grow
-              text-sm
-              mb-6
-            `}
-          >
+          <p className="flex-grow text-sm mb-6">
             {excerpt}
           </p>
 
-          <div
-            className={`
-              flex
-              flex-wrap
-              mb-1.5
-            `}
-          >
+          <div className="flex flex-wrap mb-1.5">
             {categories.map(category => (
-              <div
-                className={`
-                  mb-1
-                  mr-1.5
-                `}
-                key={category}
-              >
-                <Tag
-                  href={`/categories/${slugify(category)}`}
-                >
-                  {category}
-                </Tag>
-              </div>
+              <React.Fragment key={category}>
+                <div className="mb-1 mr-1.5">
+                  <Tag href={`/categories/${slugify(category)}`}>
+                    {category}
+                  </Tag>
+                </div>
+              </React.Fragment>
             ))}
           </div>
 

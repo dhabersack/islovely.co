@@ -5,9 +5,9 @@ import Card from '../components/card'
 import Tag from '../components/tag'
 import slugify from '../utils/slugify'
 
-export default ({
+export default function FireTip({
   firetip,
-}) => {
+}) {
   const {
     body,
     frontmatter,
@@ -21,7 +21,7 @@ export default ({
 
   return (
     <Card>
-      <div className="px-4 py-3">
+      <div className="p-4">
         <h2 className="leading-snug m-0 mb-1.5 text-base">
           <a href={`/firetips/${slug}`}>
             {title}
