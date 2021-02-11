@@ -58,12 +58,8 @@ export default function BuildInPublic() {
         Metrics (last 28 days)
       </h2>
 
-      <p className="italic m-0 mb-3 text-gray-500 text-xs dark:text-gray-400">
+      <p className="italic m-0 mb-3 text-gray-500 text-xs dark:text-gray-400 lg:mb-6">
         Updated: February 9, 2021
-      </p>
-
-      <p className="mb-6">
-        As part of building in public, I share my numbers openly. If there is something else you’d like me to include here, tweet me at <a href="https://twitter.com/domhabersack">@domhabersack</a>.
       </p>
 
       <Card>

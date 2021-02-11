@@ -2,7 +2,6 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
-import Breakout from '../components/breakout'
 import BuildInPublic from '../components/build-in-public'
 import Card from '../components/card'
 import Layout from '../components/layout'
@@ -10,7 +9,7 @@ import LinkedIn from '../icons/linkedin-logo'
 import MetaTags from '../components/meta-tags'
 import NewsletterSignup from '../components/newsletter-signup'
 import NewsletterTeaser from '../components/newsletter-teaser'
-import PostTeasers from '../components/post-teasers'
+import PostTeaser from '../components/post-teaser'
 import RichPreview from '../components/rich-preview'
 import Twitter from '../icons/twitter-logo'
 import YouTube from '../icons/youtube-logo'
@@ -124,10 +123,12 @@ export default function Index({
             Latest blog posts
           </h2>
 
-          <div className="mb-8">
-            <Breakout>
-              <PostTeasers posts={posts} />
-            </Breakout>
+          <div className="grid gap-8 grid-cols-1 mb-8 sm:gap-4 sm:grid-cols-2">
+            {posts.map(post => (
+              <React.Fragment key={`post-teaser-${post.id}`}>
+                <PostTeaser post={post} />
+              </React.Fragment>
+            ))}
           </div>
 
           <p>
@@ -146,7 +147,7 @@ export default function Index({
 export const pageQuery = graphql`
   query {
     allNewsletter(
-      limit: 5,
+      limit: 4,
       sort: {
         fields: date,
         order: DESC
@@ -166,7 +167,7 @@ export const pageQuery = graphql`
       }
     }
     allPost(
-      limit: 6,
+      limit: 4,
       sort: {
         fields: date,
         order: DESC

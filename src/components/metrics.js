@@ -10,7 +10,7 @@ export default function Metrics({
         {label}
       </h3>
 
-      <div className="gap-6 grid xs:gap-x-6 gap-y-4 xs:grid-cols-2 lg:grid-cols-3">
+      <div className="gap-6 grid xs:gap-4 xs:grid-cols-2 lg:grid-cols-3">
         {metrics.map(({
           change,
           label,
