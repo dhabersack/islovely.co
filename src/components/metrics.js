@@ -28,13 +28,13 @@ export default function Metrics({
 
                   <span
                     className={`
-                      ${trend > 0 ? 'bg-green-200' : 'bg-red-200'}
+                      ${trend > 0 ? 'bg-green-200 dark:bg-green-600' : 'bg-red-200 dark:bg-red-600'}
                       font-medium
                       inline-block
                       px-2
                       py-0.5
                       rounded-full
-                      ${trend > 0 ? 'text-green-700' : 'text-red-700'}
+                      ${trend > 0 ? 'text-green-700 dark:text-gray-50' : 'text-red-700 dark:text-gray-50'}
                       text-xs
                     `}
                   >
