@@ -1,13 +1,15 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
+import Breakout from '../components/breakout'
 import Layout from '../components/layout'
 import MetaTags from '../components/meta-tags'
+import ProjectTeasers from '../components/project-teasers'
 import RichPreview from '../components/rich-preview'
 
-export default ({
+export default function Projects({
   data,
-}) => {
+}) {
   const projects = data.allProject.edges.map(({ node }) => node)
 
   return (
@@ -25,34 +27,15 @@ export default ({
         title="Projects"
       />
 
-      <h1>
-        Projects
-      </h1>
+      <div className="mb-12">
+        <h1>
+          Projects
+        </h1>
+      </div>
 
-      {projects.map(({
-        frontmatter,
-        id,
-        permalink,
-      }) => {
-        const {
-          excerpt,
-          title,
-        } = frontmatter
-
-        return (
-          <React.Fragment key={`project-${id}`}>
-            <h2>
-              <a href={permalink}>
-                {title}
-              </a>
-            </h2>
-
-            <p>
-              {excerpt}
-            </p>
-          </React.Fragment>
-        )
-      })}
+      <Breakout>
+        <ProjectTeasers projects={projects} />
+      </Breakout>
     </Layout>
   )
 }

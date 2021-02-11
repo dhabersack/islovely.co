@@ -44,7 +44,7 @@ export default function PostTeaser({
             </a>
           </h2>
 
-          <p className="flex-grow text-sm mb-6">
+          <p className="flex-grow mb-6 text-sm">
             {excerpt}
           </p>
 
