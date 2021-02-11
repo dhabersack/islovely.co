@@ -1,7 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 
-import PrimaryButton from './primary-button'
 import RequiresCookieConsent from './requires-cookie-consent'
 
 export default ({

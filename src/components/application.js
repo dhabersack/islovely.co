@@ -4,9 +4,9 @@ import { FormspreeProvider } from '@formspree/react'
 import CookieConsentContext from '../contexts/cookie-consent'
 import CookieConsent from './cookie-consent'
 
-export default ({
+export default function Application({
   children,
-}) => {
+}) {
   const [isCookieConsentGiven, setIsCookieConsentGiven] = useState(false)
 
   return (

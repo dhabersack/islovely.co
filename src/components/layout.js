@@ -5,6 +5,7 @@ import { MDXProvider } from '@mdx-js/react'
 import Application from './application'
 import Banner from './banner'
 import Breadcrumbs from './breadcrumbs'
+import Breakout from './breakout'
 import BreakpointDebug from './breakpoint-debug'
 import Container from './container'
 import Footer from './footer'
@@ -25,7 +26,9 @@ export default ({
       <div className="flex flex-col min-h-screen">
         <div className="mb-6">
           <Container>
-            <Header />
+            <Breakout>
+              <Header />
+            </Breakout>
           </Container>
         </div>
 
@@ -39,7 +42,9 @@ export default ({
 
         <div className="bg-gray-100 dark:bg-gray-900">
           <Container>
-            <Footer />
+            <Breakout>
+              <Footer />
+            </Breakout>
           </Container>
         </div>
       </div>
