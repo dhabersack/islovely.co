@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import { Helmet } from 'react-helmet'
 
-export default ({
+export default function RichPreview({
   description,
   expiredAt,
   heroAlt,
@@ -13,7 +13,7 @@ export default ({
   title,
   type,
   updatedAt,
-}) => {
+}) {
   const data = useStaticQuery(graphql`
     query {
       site {

@@ -13,45 +13,47 @@ import Header from './header'
 
 const IS_IN_DEBUG_MODE = false
 
-export default ({
+export default function Layout ({
   breadcrumbs,
   children,
-}) => (
-  <MDXProvider>
-    <Application>
-      <Helmet />
+}) {
+  return (
+    <MDXProvider>
+      <Application>
+        <Helmet />
 
-      <Banner />
+        <Banner />
 
-      <div className="flex flex-col min-h-screen">
-        <div className="mb-6">
-          <Container>
-            <Breakout>
-              <Header />
-            </Breakout>
-          </Container>
+        <div className="flex flex-col min-h-screen">
+          <div className="mb-6">
+            <Container>
+              <Breakout>
+                <Header />
+              </Breakout>
+            </Container>
+          </div>
+
+          <main className="flex-grow mb-24">
+            <Container>
+              <Breadcrumbs breadcrumbs={breadcrumbs} />
+
+              {children}
+            </Container>
+          </main>
+
+          <div className="bg-gray-100 dark:bg-gray-900">
+            <Container>
+              <Breakout>
+                <Footer />
+              </Breakout>
+            </Container>
+          </div>
         </div>
 
-        <main className="flex-grow mb-24">
-          <Container>
-            <Breadcrumbs breadcrumbs={breadcrumbs} />
-
-            {children}
-          </Container>
-        </main>
-
-        <div className="bg-gray-100 dark:bg-gray-900">
-          <Container>
-            <Breakout>
-              <Footer />
-            </Breakout>
-          </Container>
-        </div>
-      </div>
-
-      {IS_IN_DEBUG_MODE && (
-        <BreakpointDebug />
-      )}
-    </Application>
-  </MDXProvider>
-)
+        {IS_IN_DEBUG_MODE && (
+          <BreakpointDebug />
+        )}
+      </Application>
+    </MDXProvider>
+  )
+}

@@ -6,9 +6,9 @@ import ClockIcon from '../icons/clock'
 import EmailWithLetterIcon from '../icons/email-with-letter'
 import VideoIcon from '../icons/video'
 
-export default ({
+export default function CourseTeaser({
   course,
-}) => {
+}) {
   const {
     frontmatter,
     permalink,
@@ -36,68 +36,22 @@ export default ({
           h-full
         `}
       >
-        <div
-          className={`
-            flex-grow
-            pb-3
-            pt-2
-            px-4
-          `}
-        >
-          <h2
-            className={`
-              leading-snug
-              m-0
-              mb-1.5
-              text-base
-            `}
-          >
-            <a
-              href={permalink}
-            >
+        <div className="flex-grow pb-3 pt-2 px-4">
+          <h2 className="leading-snug m-0 mb-1.5 text-base">
+            <a href={permalink}>
               {title}
             </a>
           </h2>
 
-          <p
-            className={`
-              m-0
-              text-sm
-            `}
-          >
+          <p className="m-0 text-sm">
             {excerpt}
           </p>
         </div>
 
-        <footer
-          className={`
-            bg-gray-100
-            flex
-            flex-wrap
-            px-4
-            py-3
-            text-gray-500
-            text-xs
-            dark:bg-black
-            dark:text-gray-300
-          `}
-        >
+        <footer className="bg-gray-100 flex flex-wrap px-4 py-3 space-x-2.5 text-gray-500 text-xs dark:bg-black dark:text-gray-300">
           {emails && (
-            <div
-              className={`
-                inline-flex
-                items-center
-                mr-2.5
-              `}
-            >
-              <div
-                className={`
-                  h-6
-                  mr-1
-                  w-6
-                  dark:text-gray-400
-                `}
-              >
+            <div className="inline-flex items-center">
+              <div className="h-6 mr-1 w-6 dark:text-gray-400">
                 <EmailWithLetterIcon />
               </div>
 
@@ -108,21 +62,8 @@ export default ({
           )}
 
           {videos && (
-            <div
-              className={`
-                inline-flex
-                items-center
-                mr-2.5
-              `}
-            >
-              <div
-                className={`
-                  h-6
-                  mr-1
-                  w-6
-                  dark:text-gray-400
-                `}
-              >
+            <div className="inline-flex items-center">
+              <div className="h-6 mr-1 w-6 dark:text-gray-400">
                 <VideoIcon />
               </div>
 
@@ -133,21 +74,8 @@ export default ({
           )}
 
           {hours && (
-            <div
-              className={`
-                inline-flex
-                items-center
-                mr-2.5
-              `}
-            >
-              <div
-                className={`
-                  h-6
-                  mr-1
-                  w-6
-                  dark:text-gray-400
-                `}
-              >
+            <div className="inline-flex items-center">
+              <div className="h-6 mr-1 w-6 dark:text-gray-400">
                 <ClockIcon />
               </div>
 
@@ -158,21 +86,8 @@ export default ({
           )}
 
           {weeks && (
-            <div
-              className={`
-                inline-flex
-                items-center
-                mr-2.5
-              `}
-            >
-              <div
-                className={`
-                  h-6
-                  mr-1
-                  w-6
-                  dark:text-gray-400
-                `}
-              >
+            <div className="inline-flex items-center">
+              <div className="h-6 mr-1 w-6 dark:text-gray-400">
                 <CalendarIcon />
               </div>
 

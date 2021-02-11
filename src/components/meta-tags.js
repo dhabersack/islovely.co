@@ -2,10 +2,10 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import { graphql, useStaticQuery } from 'gatsby'
 
-export default ({
+export default function MetaTags({
   description,
   title,
-}) => {
+}) {
   const data = useStaticQuery(graphql`
     query {
       site {

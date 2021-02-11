@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default ({
+export default function Flash({
   children,
   type,
-}) => {
+}) {
   const backgroundColor = ({
     'error': 'bg-red-50 dark:bg-red-900',
     'info': 'bg-blue-50 dark:bg-blue-900',

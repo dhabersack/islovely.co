@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet'
 
 import CookieConsentContext from '../contexts/cookie-consent'
 
-export default () => {
+export default function CookieConsent() {
   const { setIsCookieConsentGiven } = useContext(CookieConsentContext)
 
   const [isCookieSolutionConfigured, setIsCookieSolutionConfigured] = useState(false)

@@ -1,24 +1,24 @@
 import React from 'react'
 import Img from 'gatsby-image'
 
-export default ({
+export default function Figure({
   alt,
   caption,
   fluid,
   ...props
-}) => (
-  <figure
-    {...props}
-  >
-    <Img
-      alt={alt}
-      fluid={fluid}
-    />
+}) {
+  return (
+    <figure {...props}>
+      <Img
+        alt={alt}
+        fluid={fluid}
+      />
 
-    {caption != null ? (
-      <figcaption>
-        {caption}
-      </figcaption>
-    ) : null}
-  </figure>
-)
+      {caption != null ? (
+        <figcaption>
+          {caption}
+        </figcaption>
+      ) : null}
+    </figure>
+  )
+}
