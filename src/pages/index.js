@@ -201,7 +201,7 @@ export default function Index({
           </p>
 
           <Card>
-            <div className="divide-y">
+            <div className="divide-y dark:divide-gray-700">
               <div className="p-4">
                 <Metrics
                   label="Finances"
