@@ -23,6 +23,10 @@ const METRICS_FINANCES = [
     label: 'US$ revenue',
     value: 0,
     change: +0,
+  }, {
+    label: 'US$ MRR',
+    value: 0,
+    change: +0,
   },
 ]
 
@@ -50,7 +54,7 @@ export default function BuildInPublic() {
   return (
     <div>
       <h2 className="mb-0.5">
-        Last 28 days
+        Metrics (last 28 days)
       </h2>
 
       <p className="italic m-0 mb-3 text-gray-500 text-xs dark:text-gray-400">

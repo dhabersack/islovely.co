@@ -103,6 +103,15 @@
     @apply mx-auto my-6 w-full;
   }
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-gray-700 dark:text-gray-200;
+  }
+
   h1 {
     @apply text-2xl font-bold my-3 sm:text-3xl lg:text-4xl lg:my-6;
   }

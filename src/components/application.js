@@ -10,9 +10,7 @@ export default function Application({
   const [isCookieConsentGiven, setIsCookieConsentGiven] = useState(false)
 
   return (
-    <FormspreeProvider
-      project="1574261538980626222"
-    >
+    <FormspreeProvider project="1574261538980626222">
       <CookieConsentContext.Provider
         value={{
           isCookieConsentGiven,

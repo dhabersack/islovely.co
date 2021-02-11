@@ -2,19 +2,40 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
+import Breakout from '../components/breakout'
 import BuildInPublic from '../components/build-in-public'
 import Card from '../components/card'
 import Layout from '../components/layout'
+import LinkedIn from '../icons/linkedin-logo'
 import MetaTags from '../components/meta-tags'
 import NewsletterSignup from '../components/newsletter-signup'
 import NewsletterTeaser from '../components/newsletter-teaser'
+import PostTeasers from '../components/post-teasers'
 import RichPreview from '../components/rich-preview'
+import Twitter from '../icons/twitter-logo'
+import YouTube from '../icons/youtube-logo'
 
-export default ({
+const SOCIAL_PROFILES = {
+  'Twitter': {
+    href: 'https://twitter.com/domhabersack',
+    Logo: Twitter,
+  },
+  'YouTube': {
+    href: 'https://youtube.com/channel/UCi_V66TGKpeSHV_4DYCFbjw',
+    Logo: YouTube,
+  },
+  'LinkedIn': {
+    href: 'https://linkedin.com/in/domhabersack',
+    Logo: LinkedIn,
+  },
+}
+
+export default function Index({
   data,
-}) => {
+}) {
   const avatarFluid = data.author.avatar.childImageSharp.fluid
   const newsletters = data.allNewsletter.edges.map(({ node }) => node)
+  const posts = data.allPost.edges.map(({ node }) => node)
 
   return (
     <Layout>
@@ -30,30 +51,43 @@ export default ({
       />
 
       <div className="space-y-24">
-        <div>
-          <div className="flex items-center mb-4 space-x-5">
+        <div className="space-y-8">
+          <div className="flex flex-col items-center space-y-6 lg:flex-row lg:space-x-8 lg:space-y-0">
             <Img
               alt="Dom Habersack"
-              className="block flex-shrink-0 h-20 rounded-full w-20"
+              className="block flex-shrink-0 h-56 rounded-full w-56"
               fluid={avatarFluid}
-              height="80"
-              width="80"
+              height="224"
+              width="224"
             />
 
             <div>
-              <p className="block font-bold mb-0.5 text-sm text-gray-700 uppercase dark:text-gray-300">
-                Hi, I am Dom.
+              <h1 className="flex-grow m-0 mb-2 text-3xl">
+                Hi, I am Dom!
+              </h1>
+
+              <p>
+                I am a software developer, IT consultant, and content creator with 15+ years of professional experience. I am currently learning how to make money online. Follow along as I build my company in public.
               </p>
 
-              <h1 className="flex-grow m-0 text-3xl text-gray-800 dark:text-gray-200">
-                Follow along as I <span className="text-blue-600 dark:text-red-500">build my company in public</span>.
-              </h1>
+              <div className="flex space-x-2.5">
+                {Object.entries(SOCIAL_PROFILES).map(([name, {
+                  href,
+                  Logo
+                }]) => (
+                  <React.Fragment key={name}>
+                    <a
+                      className="block h-6 w-6 text-gray-600 dark:text-gray-300"
+                      href={href}
+                      title={`Dom Habersack on ${name}`}
+                    >
+                      <Logo />
+                    </a>
+                  </React.Fragment>
+                ))}
+              </div>
             </div>
           </div>
-
-          <p className="mb-6">
-            I left my job as an IT consultant to pursue my passion. Newly independent, I am learning how to make money online. You can follow my journey as I build projects in public.
-          </p>
 
           <div>
             <Card>
@@ -63,8 +97,6 @@ export default ({
             </Card>
           </div>
         </div>
-
-        <BuildInPublic />
 
         <div>
           <h2>
@@ -86,6 +118,26 @@ export default ({
             </a>
           </p>
         </div>
+
+        <div>
+          <h2>
+            Latest blog posts
+          </h2>
+
+          <div className="mb-8">
+            <Breakout>
+              <PostTeasers posts={posts} />
+            </Breakout>
+          </div>
+
+          <p>
+            <a href="/posts">
+              Read all posts &rarr;
+            </a>
+          </p>
+        </div>
+
+        <BuildInPublic />
       </div>
     </Layout>
   )
@@ -107,6 +159,46 @@ export const pageQuery = graphql`
             excerpt
             issue
             title
+          }
+          id
+          permalink
+        }
+      }
+    }
+    allPost(
+      limit: 6,
+      sort: {
+        fields: date,
+        order: DESC
+      }
+    ) {
+      edges {
+        node {
+          date
+          frontmatter {
+            author {
+              avatar {
+                childImageSharp {
+                  fluid(maxWidth: 40) {
+                    ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                  }
+                }
+              }
+              frontmatter {
+                name
+              }
+            }
+            categories
+            excerpt
+            heroAlt
+            title
+          }
+          hero {
+            childImageSharp {
+              fluid(maxWidth: 640) {
+                ...GatsbyImageSharpFluid_withWebp_tracedSVG
+              }
+            }
           }
           id
           permalink
