@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default Favicons() {
+export default function Favicons() {
   return (
     <React.Fragment>
       <link
