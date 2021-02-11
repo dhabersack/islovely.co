@@ -88,14 +88,14 @@ export default function Index({
   return (
     <Layout>
       <MetaTags
-        description="Level up from basic to advanced with videos on JavaScript, testing, design, and more."
-        title="Get a better job. Learn web development skills that sell."
+        description="I am a software developer, IT consultant, and content creator with 15+ years of professional experience. Follow along as I build my company in public."
+        title="Dom Habersack · Content Creator & IndieHacker"
       />
 
       <RichPreview
-        description="Level up from basic to advanced with videos on JavaScript, testing, design, and more."
+        description="I am a software developer, IT consultant, and content creator with 15+ years of professional experience. Follow along as I build my company in public."
         permalink=""
-        title="Get a better job. Learn web development skills that sell."
+        title="Dom Habersack · Content Creator & IndieHacker"
       />
 
       <div className="space-y-24">
