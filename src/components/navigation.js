@@ -10,7 +10,7 @@ const LINKS = {
   // 'Contact': '/contact',
 }
 
-export default () => {
+export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const openMenu = () => {
@@ -43,7 +43,7 @@ export default () => {
             focus:ring
             focus:ring-indigo-200
             focus:ring-opacity-50
-            md:hidden
+            xs:hidden
             dark:bg-gray-900
             dark:text-gray-400
             dark:hover:bg-black
@@ -73,7 +73,7 @@ export default () => {
           </svg>
         </button>
 
-        <div className="hidden py-4 md:block md:space-x-5">
+        <div className="hidden py-4 xs:block xs:space-x-4 sm:space-x-5">
           {Object.entries(LINKS).map(([name, href]) => (
             <a
               className="font-medium text-gray-700 hover:text-gray-900 hover:no-underline visited:text-gray-700 dark:text-gray-200 dark:hover:text-gray-50 dark:visited:text-gray-200"
@@ -97,7 +97,7 @@ export default () => {
             origin-top-right
             w-60
             -right-4
-            md:hidden
+            xs:hidden
           `}
         >
           <div

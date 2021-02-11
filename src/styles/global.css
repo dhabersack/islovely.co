@@ -100,7 +100,7 @@
   }
 
   figure {
-    @apply mx-auto my-6 w-full lg:my-12;
+    @apply mx-auto my-6 w-full;
   }
 
   h1 {
