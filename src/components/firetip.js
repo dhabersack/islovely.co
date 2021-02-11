@@ -21,7 +21,7 @@ export default function FireTip({
 
   return (
     <Card>
-      <div className="p-4">
+      <div className="px-4 py-3">
         <h2 className="leading-snug m-0 mb-1.5 text-base">
           <a href={`/firetips/${slug}`}>
             {title}

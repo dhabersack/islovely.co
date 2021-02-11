@@ -70,7 +70,7 @@ export default ({
 
       <div className="mb-12">
         <Card>
-          <div className="bg-gray-100 p-4 dark:bg-gray-900">
+          <div className="bg-gray-100 px-4 py-3 dark:bg-gray-900">
             <ConvertkitForm
               sourceUrl={location.href}
               svForm="1067424"

@@ -9,11 +9,11 @@ export default function ProjectTeaser({
 }) {
   return (
     <Card>
-      <div className="p-4">
+      <div className="px-4 py-3">
         {name}
       </div>
 
-      <footer className="bg-gray-100 p-4">
+      <footer className="bg-gray-100 px-4 py-3">
         <div>
           Revenue: {revenue}
         </div>

@@ -6,9 +6,9 @@ import PostMeta from './post-meta'
 import Tag from './tag'
 import slugify from '../utils/slugify'
 
-export default ({
+export default function PostTeaser({
   post,
-}) => {
+}) {
   const {
     date,
     frontmatter,
@@ -37,7 +37,7 @@ export default ({
           />
         </a>
 
-        <div className="flex flex-col h-full p-4">
+        <div className="flex flex-col h-full px-4 py-3">
           <h2 className="leading-snug m-0 mb-1.5 text-base">
             <a href={permalink}>
               {title}
