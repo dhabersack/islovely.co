@@ -154,7 +154,7 @@ export default function Index({
           </h2>
 
           <p>
-            As my first attempt to sell something online, I am turning some of my icons into a product. Many of the 200+ icons will be free for personal use. Commercial use will be possible with the purchase of a license.
+            As my first attempt to sell something online, I am turning some of my icons into a product. Many of them will be free for personal use. Commercial use will require a paid license, which also unlocks additional features.
           </p>
 
           <div className="mb-8">

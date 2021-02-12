@@ -30,13 +30,13 @@ export default function Posts({
         title="Blog"
       />
 
-      <div className="mb-12">
+      <div className="mb-8">
         <h1>
           Blog
         </h1>
 
         <p>
-          I write about design, development, and productivity. My <a href="/newsletter">weekly newsletter</a> contains shorter pieces. Read all previous issues in the <a href="/newsletter/archive">archive</a>.
+          I write about design, development, and productivity. My <a href="/newsletter">weekly newsletter</a> contains many more and usually shorter pieces. Read all previous issues in the <a href="/newsletter/archive">archive</a>.
         </p>
       </div>
 

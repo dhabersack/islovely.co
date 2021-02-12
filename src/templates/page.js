@@ -9,7 +9,7 @@ import mapFiguresToNamedObject from '../utils/map-figures-to-named-object'
 
 export default function Page({
   data,
-}) => {
+}) {
   const {
     body,
     frontmatter,
