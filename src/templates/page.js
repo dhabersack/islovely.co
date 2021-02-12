@@ -7,9 +7,9 @@ import MetaTags from '../components/meta-tags'
 import RichPreview from '../components/rich-preview'
 import mapFiguresToNamedObject from '../utils/map-figures-to-named-object'
 
-export default ({
+export default function Page({
   data,
-}) => {
+}) {
   const {
     body,
     frontmatter,

@@ -17,10 +17,10 @@ const BENEFITS = [
   'access to video recordings of past speaking gigs'
 ]
 
-export default ({
+export default function Newsletter({
   data,
   location,
-}) => {
+}) {
   const newsletters = data.allNewsletter.edges.map(({ node }) => node)
 
   return (
@@ -49,18 +49,17 @@ export default ({
 
       <ul className="list-none my-6 p-0 space-y-3">
         {BENEFITS.map(listItem => (
-          <li
-            className="flex m-0"
-            key={`newsletter-benefit-${listItem}`}
-          >
-            <div className="flex-shrink-0 h-6 mr-1 text-green-300 w-6 dark:text-green-500">
-              <CircledCheckmark />
-            </div>
+          <React.Fragment key={`newsletter-benefit-${listItem}`}>
+            <li className="flex m-0">
+              <div className="flex-shrink-0 h-6 mr-1 text-green-300 w-6 dark:text-green-500">
+                <CircledCheckmark />
+              </div>
 
-            <span className="text-base">
-              {listItem}
-            </span>
-          </li>
+              <span className="text-base">
+                {listItem}
+              </span>
+            </li>
+          </React.Fragment>
         ))}
       </ul>
 
@@ -86,10 +85,9 @@ export default ({
 
       <div className="grid gap-10 grid-cols-1 mb-8">
         {newsletters.map(newsletter => (
-          <NewsletterTeaser
-            key={`newsletter-${newsletter.id}`}
-            newsletter={newsletter}
-          />
+          <React.Fragment key={`newsletter-${newsletter.id}`}>
+            <NewsletterTeaser newsletter={newsletter} />
+          </React.Fragment>
         ))}
       </div>
 

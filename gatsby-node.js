@@ -219,6 +219,7 @@ exports.onCreateNode = ({ actions, createNodeId, getNode, node }) => {
           permalink: `/posts/${slug}`,
         },
         projects: {
+          hero: `hero.png`,
           permalink: `/projects/${slug}`,
         },
       }[parent.sourceInstanceName]),

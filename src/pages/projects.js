@@ -1,13 +1,15 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
+import Breakout from '../components/breakout'
 import Layout from '../components/layout'
 import MetaTags from '../components/meta-tags'
+import ProjectTeasers from '../components/project-teasers'
 import RichPreview from '../components/rich-preview'
 
-export default ({
+export default function Projects({
   data,
-}) => {
+}) {
   const projects = data.allProject.edges.map(({ node }) => node)
 
   return (
@@ -25,34 +27,19 @@ export default ({
         title="Projects"
       />
 
-      <h1>
-        Projects
-      </h1>
+      <div className="mb-8">
+        <h1>
+          Projects
+        </h1>
 
-      {projects.map(({
-        frontmatter,
-        id,
-        permalink,
-      }) => {
-        const {
-          excerpt,
-          title,
-        } = frontmatter
+        <p>
+          I am working on a few free and paid products, trying to earn an income with them over time. This catalog will expand as I add new experiments and try new venues.
+        </p>
+      </div>
 
-        return (
-          <React.Fragment key={`project-${id}`}>
-            <h2>
-              <a href={permalink}>
-                {title}
-              </a>
-            </h2>
-
-            <p>
-              {excerpt}
-            </p>
-          </React.Fragment>
-        )
-      })}
+      <Breakout>
+        <ProjectTeasers projects={projects} />
+      </Breakout>
     </Layout>
   )
 }
@@ -69,11 +56,20 @@ export const pageQuery = graphql`
         node {
           frontmatter {
             excerpt
+            heroAlt
             title
+            revenue
+            url
+          }
+          hero {
+            childImageSharp {
+              fluid(maxWidth: 640) {
+                ...GatsbyImageSharpFluid_withWebp_tracedSVG
+              }
+            }
           }
           id
           permalink
-          slug
         }
       }
     }

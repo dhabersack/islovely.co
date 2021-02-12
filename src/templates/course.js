@@ -13,10 +13,10 @@ import RichPreview from '../components/rich-preview'
 import Video from '../components/video'
 import VideoIcon from '../icons/video'
 
-export default ({
+export default function Course({
   data,
   location,
-}) => {
+}) {
   const {
     body,
     frontmatter,
@@ -35,6 +35,25 @@ export default ({
     videos,
     weeks,
   } = frontmatter
+
+  const meta = {
+    emails: {
+      value: emails,
+      Icon: EmailWithLetterIcon,
+    },
+    videos: {
+      value: videos,
+      Icon: VideoIcon,
+    },
+    hours: {
+      value: hours,
+      Icon: ClockIcon,
+    },
+    weeks: {
+      value: weeks,
+      Icon: CalendarIcon,
+    },
+  }
 
   const isSignupPossible = svForm !== null && uid !== null
 
@@ -65,55 +84,23 @@ export default ({
           {title}
         </h1>
 
-        <aside className="flex flex-wrap mb-3 text-xs">
-          {emails && (
-            <div
-              className="inline-flex items-center mr-2.5">
-              <div className="h-6 mr-1 w-6 dark:text-gray-400">
-                <EmailWithLetterIcon />
+        <aside className="bg-gray-100 flex flex-wrap mb-6 px-4 py-3 space-x-5 rounded-lg shadow-sm text-gray-600 text-xs dark:bg-black dark:text-gray-300">
+          {Object.entries(meta).map(([type, {
+            Icon,
+            value,
+          }]) => value && (
+            <React.Fragment key={`meta-${type}`}>
+              <div className="flex items-center space-x-1">
+                <div className="h-6 w-6 dark:text-gray-400">
+                  <Icon />
+                </div>
+
+                <span>
+                  <strong>{value}</strong> {type}
+                </span>
               </div>
-
-              <span>
-                <strong>{emails}</strong> emails
-              </span>
-            </div>
-          )}
-
-          {videos && (
-            <div className="inline-flex items-center mr-2.5">
-              <div className="h-6 mr-1 w-6 dark:text-gray-400">
-                <VideoIcon />
-              </div>
-
-              <span>
-                <strong>{videos}</strong> videos
-              </span>
-            </div>
-          )}
-
-          {hours && (
-            <div className="inline-flex items-center mr-2.5">
-              <div className="h-6 mr-1 w-6 dark:text-gray-400">
-                <ClockIcon />
-              </div>
-
-              <span>
-                <strong>{hours}</strong> hours
-              </span>
-            </div>
-          )}
-
-          {weeks && (
-            <div className="inline-flex items-center mr-2.5">
-              <div className="h-6 mr-1 w-6 dark:text-gray-400">
-                <CalendarIcon />
-              </div>
-
-              <span>
-                <strong>{weeks}</strong> weeks
-              </span>
-            </div>
-          )}
+            </React.Fragment>
+          ))}
         </aside>
 
         <MDXRenderer>

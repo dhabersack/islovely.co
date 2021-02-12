@@ -7,9 +7,9 @@ import MetaTags from '../components/meta-tags'
 import PostTeasers from '../components/post-teasers'
 import RichPreview from '../components/rich-preview'
 
-export default ({
+export default function Categories({
   data,
-}) => {
+}) {
   const posts = data.allPost.edges.map(({ node }) => node)
 
   const categories = [

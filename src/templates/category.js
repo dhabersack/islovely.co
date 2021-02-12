@@ -8,10 +8,10 @@ import PostTeasers from '../components/post-teasers'
 import RichPreview from '../components/rich-preview'
 import slugify from '../utils/slugify'
 
-export default ({
+export default function Category({
   data,
   pageContext,
-}) => {
+}) {
   const posts = data.allPost.edges.map(({ node }) => node)
 
   const {

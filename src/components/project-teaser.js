@@ -1,27 +1,74 @@
 import React from 'react'
+import Img from 'gatsby-image'
 
 import Card from './card'
+import CoinsIcon from '../icons/coins'
+import LinkIcon from '../icons/link'
 
 export default function ProjectTeaser({
-  name,
-  revenue,
-  url,
+  project,
 }) {
+  const {
+    frontmatter,
+    hero,
+    permalink,
+  } = project
+
+  const {
+    excerpt,
+    heroAlt,
+    revenue,
+    title,
+    url,
+  } = frontmatter
+
   return (
     <Card>
-      <div className="px-4 py-3">
-        {name}
-      </div>
+      <article className="flex flex-col h-full">
+        <a href={permalink}>
+          <Img
+            alt={heroAlt}
+            fluid={hero.childImageSharp.fluid}
+          />
+        </a>
 
-      <footer className="bg-gray-100 px-4 py-3">
-        <div>
-          Revenue: {revenue}
+        <div className="flex flex-col h-full px-4 py-3">
+          <h2 className="leading-snug m-0 mb-1.5 text-base">
+            <a href={permalink}>
+              {title}
+            </a>
+          </h2>
+
+          <p className="flex-grow mb-0 text-sm">
+            {excerpt}
+          </p>
         </div>
 
-        <div>
-          URL: {url}
-        </div>
-      </footer>
+        <footer className="bg-gray-100 flex flex-wrap justify-between px-4 py-3 text-gray-600 text-xs dark:bg-black dark:text-gray-300">
+          <div className="flex items-center space-x-1">
+            <div className="h-6 w-6 dark:text-gray-400">
+              <CoinsIcon />
+            </div>
+
+            <span>
+              Revenue: <strong>${revenue}</strong>/month
+            </span>
+          </div>
+
+          <a
+            className="flex items-center"
+            href={url}
+          >
+            <div className="h-6 w-6">
+              <LinkIcon />
+            </div>
+
+            <span>
+              Website
+            </span>
+          </a>
+        </footer>
+      </article>
     </Card>
   )
 }

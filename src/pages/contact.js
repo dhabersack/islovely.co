@@ -4,27 +4,29 @@ import ContactForm from '../components/contact-form'
 import Layout from '../components/layout'
 import MetaTags from '../components/meta-tags'
 
-export default () => (
-  <Layout
-    breadcrumbs={[
-      {
-        label: 'Contact'
-      }
-    ]}
-  >
-  <MetaTags
-    description="Get in touch if you have a project you need help with!"
-    title="Contact"
-  />
+export default function Contact() {
+  return (
+    <Layout
+      breadcrumbs={[
+        {
+          label: 'Contact'
+        }
+      ]}
+    >
+    <MetaTags
+      description="Get in touch if you have a project you need help with!"
+      title="Contact"
+    />
 
-    <h1>
-      Contact
-    </h1>
+      <h1>
+        Contact
+      </h1>
 
-    <p>
-      Use this form to get in touch or reach me directly at <a href="mailto:dom@islovely.co">dom@islovely.co</a>. I will get back to you as soon as I can.
-    </p>
+      <p>
+        Use this form to get in touch or reach me directly at <a href="mailto:dom@islovely.co">dom@islovely.co</a>. I will get back to you as soon as I can.
+      </p>
 
-    <ContactForm />
-  </Layout>
-)
+      <ContactForm />
+    </Layout>
+  )
+}

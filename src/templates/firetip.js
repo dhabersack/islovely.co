@@ -8,9 +8,9 @@ import RichPreview from '../components/rich-preview'
 import Tag from '../components/tag'
 import slugify from '../utils/slugify'
 
-export default ({
+export default function Firetip({
   data,
-}) => {
+}) {
   const {
     body,
     frontmatter,
