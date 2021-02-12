@@ -8,9 +8,9 @@ import RichPreview from '../components/rich-preview'
 import Tag from '../components/tag'
 import slugify from '../utils/slugify'
 
-export default ({
+export default function Firetips({
   data,
-}) => {
+}) {
   const firetips = data.allFiretip.edges.map(({ node }) => node)
 
   const tagCounts = firetips.map(firetip => firetip.frontmatter.tags).flat(1).reduce((dictionary, tag) => ({
@@ -42,24 +42,21 @@ export default ({
 
       <div className="flex flex-wrap mb-6">
         {tagsSortedByCount.map(tag => (
-          <div
-            className="flex items-center mb-1.5 mr-2.5"
-            key={`tag-${tag}`}
-          >
-            <Tag href={`/firetips/tags/${slugify(tag)}`}>
-              {tag}
-            </Tag>&nbsp;<span className="text-gray-500 text-xs dark:text-gray-400">&times; {tagCounts[tag]}
-            </span>
-          </div>
+          <React.Fragment key={`tag-${tag}`}>
+            <div className="flex items-center mb-1.5 mr-2.5">
+              <Tag href={`/firetips/tags/${slugify(tag)}`}>
+                {tag}
+              </Tag>&nbsp;<span className="text-gray-500 text-xs dark:text-gray-400">&times; {tagCounts[tag]}</span>
+            </div>
+          </React.Fragment>
         ))}
       </div>
 
       <div className="grid gap-6">
         {firetips.map(firetip => (
-          <Firetip
-            firetip={firetip}
-            key={`firetip-${firetip.slug}`}
-          />
+          <React.Fragment key={`firetip-${firetip.slug}`}>
+            <Firetip firetip={firetip} />
+          </React.Fragment>
         ))}
       </div>
     </Layout>

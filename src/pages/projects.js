@@ -52,11 +52,20 @@ export const pageQuery = graphql`
         node {
           frontmatter {
             excerpt
+            heroAlt
             title
+            revenue
+            url
+          }
+          hero {
+            childImageSharp {
+              fluid(maxWidth: 640) {
+                ...GatsbyImageSharpFluid_withWebp_tracedSVG
+              }
+            }
           }
           id
           permalink
-          slug
         }
       }
     }

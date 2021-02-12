@@ -13,9 +13,9 @@ import mapAttachmentsToNamedObject from '../utils/map-attachments-to-named-objec
 import mapFiguresToNamedObject from '../utils/map-figures-to-named-object'
 import slugify from '../utils/slugify'
 
-export default ({
+export default function Post({
   data,
-}) => {
+}) {
   const {
     body,
     date,

@@ -11,6 +11,7 @@ import Metrics from '../components/metrics'
 import NewsletterSignup from '../components/newsletter-signup'
 import NewsletterTeaser from '../components/newsletter-teaser'
 import PostTeaser from '../components/post-teaser'
+import ProjectTeaser from '../components/project-teaser'
 import RichPreview from '../components/rich-preview'
 import Twitter from '../icons/twitter-logo'
 import YouTube from '../icons/youtube-logo'
@@ -82,6 +83,7 @@ export default function Index({
   data,
 }) {
   const avatarFluid = data.author.avatar.childImageSharp.fluid
+  const featuredProject = data.project
   const newsletters = data.allNewsletter.edges.map(({ node }) => node)
   const posts = data.allPost.edges.map(({ node }) => node)
 
@@ -115,7 +117,7 @@ export default function Index({
               </h1>
 
               <p>
-                I am a software developer, IT consultant, and content creator with 15+ years of professional experience. I am currently learning how to make money online. Follow along as I build my company in public.
+                I am a software developer, content creator, and IndieHacker with over 15 years of professional experience. I am currently learning how to make money online. Follow along as I build my company in public.
               </p>
 
               <div className="flex space-x-2.5">
@@ -144,6 +146,26 @@ export default function Index({
               </div>
             </Card>
           </div>
+        </div>
+
+        <div>
+          <h2>
+            Featured project
+          </h2>
+
+          <p>
+            As my first attempt to sell something online, I am turning some of my icons into a product. Many of the 200+ icons will be free for personal use. Commercial use will be possible with the purchase of a license.
+          </p>
+
+          <div className="mb-8">
+            <ProjectTeaser project={featuredProject} />
+          </div>
+
+          <p>
+            <a href="/projects">
+              See all projects &rarr;
+            </a>
+          </p>
         </div>
 
         <div>
@@ -197,7 +219,7 @@ export default function Index({
           </p>
 
           <p>
-            As part of building in public, I share my metrics openly.
+            As part of building in public, I share my numbers openly. If there’s anything else you’d like me to include here, tweet me at <a href="https://twitter.com/domhabersack">@domhabersack</a>.
           </p>
 
           <Card>
@@ -304,6 +326,28 @@ export const pageQuery = graphql`
           }
         }
       }
+    }
+    project(
+      slug: {
+        eq: "lovelicons"
+      }
+    ) {
+      frontmatter {
+        excerpt
+        heroAlt
+        title
+        revenue
+        url
+      }
+      hero {
+        childImageSharp {
+          fluid(maxWidth: 640) {
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          }
+        }
+      }
+      id
+      permalink
     }
   }
 `

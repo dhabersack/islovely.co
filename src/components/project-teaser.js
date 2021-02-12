@@ -1,4 +1,5 @@
 import React from 'react'
+import Img from 'gatsby-image'
 
 import Card from './card'
 
@@ -7,11 +8,13 @@ export default function ProjectTeaser({
 }) {
   const {
     frontmatter,
+    hero,
     permalink,
   } = project
 
   const {
     excerpt,
+    heroAlt,
     revenue,
     title,
     url,
@@ -19,27 +22,38 @@ export default function ProjectTeaser({
 
   return (
     <Card>
-      <div className="flex flex-col h-full px-4 py-3">
-        <h2 className="leading-snug m-0 mb-1.5 text-base">
-          <a href={permalink}>
-            {title}
-          </a>
-        </h2>
+      <article className="flex flex-col h-full">
+        <a href={permalink}>
+          <Img
+            alt={heroAlt}
+            fluid={hero.childImageSharp.fluid}
+          />
+        </a>
 
-        <p className="flex-grow mb-0 text-sm">
-          {excerpt}
-        </p>
-      </div>
+        <div className="flex flex-col h-full px-4 py-3">
+          <h2 className="leading-snug m-0 mb-1.5 text-base">
+            <a href={permalink}>
+              {title}
+            </a>
+          </h2>
 
-      <footer className="bg-gray-100 px-4 py-3">
-        <div>
-          Revenue: {revenue}
+          <p className="flex-grow mb-0 text-sm">
+            {excerpt}
+          </p>
         </div>
 
-        <div>
-          URL: {url}
-        </div>
-      </footer>
+        <footer className="bg-gray-100 flex flex-wrap px-4 py-3 space-x-2.5 text-gray-500 text-xs dark:bg-black dark:text-gray-300">
+          <div>
+            Revenue: <strong>${revenue}</strong>/month
+          </div>
+
+          <div>
+            <a href={url}>
+              Website
+            </a>
+          </div>
+        </footer>
+      </article>
     </Card>
   )
 }

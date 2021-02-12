@@ -8,9 +8,9 @@ import RichPreview from '../components/rich-preview'
 import PostMeta from '../components/post-meta'
 import mapFiguresToNamedObject from '../utils/map-figures-to-named-object'
 
-export default ({
+export default function Newsletter({
   data,
-}) => {
+}) {
   const {
     body,
     date,

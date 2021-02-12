@@ -13,10 +13,10 @@ import RichPreview from '../components/rich-preview'
 import Video from '../components/video'
 import VideoIcon from '../icons/video'
 
-export default ({
+export default function Course({
   data,
   location,
-}) => {
+}) {
   const {
     body,
     frontmatter,

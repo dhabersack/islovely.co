@@ -7,10 +7,10 @@ import MetaTags from '../../components/meta-tags'
 import RichPreview from '../../components/rich-preview'
 import slugify from '../../utils/slugify'
 
-export default ({
+export default function Tag({
   data,
   pageContext,
-}) => {
+}) {
   const firetips = data.allFiretip.edges.map(({ node }) => node)
 
   const {

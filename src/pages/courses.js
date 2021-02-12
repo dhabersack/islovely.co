@@ -7,9 +7,9 @@ import Layout from '../components/layout'
 import MetaTags from '../components/meta-tags'
 import RichPreview from '../components/rich-preview'
 
-export default ({
+export default function Courses({
   data,
-}) => {
+}) {
   const courses = data.allCourse.edges.map(({ node }) => node)
 
   return (
