@@ -2,6 +2,8 @@ import React from 'react'
 import Img from 'gatsby-image'
 
 import Card from './card'
+import CoinsIcon from '../icons/coins'
+import LinkIcon from '../icons/link'
 
 export default function ProjectTeaser({
   project,
@@ -42,16 +44,32 @@ export default function ProjectTeaser({
           </p>
         </div>
 
-        <footer className="bg-gray-100 flex flex-wrap px-4 py-3 space-x-2.5 text-gray-500 text-xs dark:bg-black dark:text-gray-300">
-          <div>
-            Revenue: <strong>${revenue}</strong>/month
+        <footer className="bg-gray-100 flex flex-wrap justify-between px-4 py-3 text-gray-600 text-xs dark:bg-black dark:text-gray-300">
+          <div
+            className="flex items-center space-x-1"
+            title={`Revenue: $${revenue}/month`}
+          >
+            <div className="h-6 w-6 dark:text-gray-400">
+              <CoinsIcon />
+            </div>
+
+            <span>
+              Revenue: <strong>${revenue}</strong>/month
+            </span>
           </div>
 
-          <div>
-            <a href={url}>
+          <a
+            className="flex items-center space-x-1"
+            href={url}
+          >
+            <div className="h-6 w-6">
+              <LinkIcon />
+            </div>
+
+            <span>
               Website
-            </a>
-          </div>
+            </span>
+          </a>
         </footer>
       </article>
     </Card>

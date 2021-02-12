@@ -74,6 +74,13 @@ export default function Footer({
 
               <a
                 className="block"
+                href="/posts"
+              >
+                Blog
+              </a>
+
+              <a
+                className="block"
                 href="/courses"
               >
                 Courses

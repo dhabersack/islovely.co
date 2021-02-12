@@ -90,12 +90,12 @@ export default function Index({
   return (
     <Layout>
       <MetaTags
-        description="I am a software developer, IT consultant, and content creator with 15+ years of professional experience. Follow along as I build my company in public."
+        description="I am a software developer, IT consultant, and content creator with 12+ years of professional experience. Follow along as I build my company in public."
         title="Dom Habersack · Content Creator & IndieHacker"
       />
 
       <RichPreview
-        description="I am a software developer, IT consultant, and content creator with 15+ years of professional experience. Follow along as I build my company in public."
+        description="I am a software developer, IT consultant, and content creator with 12+ years of professional experience. Follow along as I build my company in public."
         permalink=""
         title="Dom Habersack · Content Creator & IndieHacker"
       />
@@ -117,7 +117,7 @@ export default function Index({
               </h1>
 
               <p>
-                I am a software developer, content creator, and IndieHacker with over 15 years of professional experience. I am currently learning how to make money online. Follow along as I build my company in public.
+                I am a software developer, content creator, and IndieHacker with over 12 years of professional experience. I am currently learning how to make money online. Follow along as I build my company in public.
               </p>
 
               <div className="flex space-x-2.5">

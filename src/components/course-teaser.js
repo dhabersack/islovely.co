@@ -48,10 +48,10 @@ export default function CourseTeaser({
           </p>
         </div>
 
-        <footer className="bg-gray-100 flex flex-wrap px-4 py-3 space-x-2.5 text-gray-500 text-xs dark:bg-black dark:text-gray-300">
+        <footer className="bg-gray-100 flex flex-wrap px-4 py-3 space-x-2.5 text-gray-600 text-xs dark:bg-black dark:text-gray-300">
           {emails && (
-            <div className="inline-flex items-center">
-              <div className="h-6 mr-1 w-6 dark:text-gray-400">
+            <div className="flex items-center space-x-1">
+              <div className="h-6 w-6 dark:text-gray-400">
                 <EmailWithLetterIcon />
               </div>
 
@@ -62,8 +62,8 @@ export default function CourseTeaser({
           )}
 
           {videos && (
-            <div className="inline-flex items-center">
-              <div className="h-6 mr-1 w-6 dark:text-gray-400">
+            <div className="flex items-center space-x-1">
+              <div className="h-6 w-6 dark:text-gray-400">
                 <VideoIcon />
               </div>
 
@@ -74,7 +74,7 @@ export default function CourseTeaser({
           )}
 
           {hours && (
-            <div className="inline-flex items-center">
+            <div className="flex items-center space-x-1">
               <div className="h-6 mr-1 w-6 dark:text-gray-400">
                 <ClockIcon />
               </div>
@@ -86,8 +86,8 @@ export default function CourseTeaser({
           )}
 
           {weeks && (
-            <div className="inline-flex items-center">
-              <div className="h-6 mr-1 w-6 dark:text-gray-400">
+            <div className="flex items-center space-x-1">
+              <div className="h-6 w-6 dark:text-gray-400">
                 <CalendarIcon />
               </div>
 
