@@ -45,10 +45,7 @@ export default function ProjectTeaser({
         </div>
 
         <footer className="bg-gray-100 flex flex-wrap justify-between px-4 py-3 text-gray-600 text-xs dark:bg-black dark:text-gray-300">
-          <div
-            className="flex items-center space-x-1"
-            title={`Revenue: $${revenue}/month`}
-          >
+          <div className="flex items-center space-x-1">
             <div className="h-6 w-6 dark:text-gray-400">
               <CoinsIcon />
             </div>
@@ -59,7 +56,7 @@ export default function ProjectTeaser({
           </div>
 
           <a
-            className="flex items-center space-x-1"
+            className="flex items-center"
             href={url}
           >
             <div className="h-6 w-6">
