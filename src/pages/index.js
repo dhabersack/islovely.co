@@ -8,6 +8,7 @@ import Layout from '../components/layout'
 import LinkedIn from '../icons/linkedin-logo'
 import MetaTags from '../components/meta-tags'
 import Metrics from '../components/metrics'
+import MyStack from '../components/my-stack'
 import NewsletterSignup from '../components/newsletter-signup'
 import NewsletterTeaser from '../components/newsletter-teaser'
 import PostTeaser from '../components/post-teaser'
@@ -146,6 +147,18 @@ export default function Index({
               </div>
             </Card>
           </div>
+        </div>
+
+        <div>
+          <h2>
+            My stack
+          </h2>
+
+          <p>
+            These are the tools and technologies I use to build projects, both for myself and my clients.
+          </p>
+
+          <MyStack />
         </div>
 
         <div>
@@ -337,6 +350,7 @@ export const pageQuery = graphql`
         heroAlt
         title
         revenue
+        stack
         url
       }
       hero {

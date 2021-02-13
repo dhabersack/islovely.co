@@ -19,11 +19,11 @@ export default function Logo() {
       >
         <stop
           offset="0"
-          stopColor="#f45a5a"
+          stopColor="#EF4444"
         />
         <stop
           offset="1"
-          stopColor="#e13636"
+          stopColor="#DC2626"
         />
       </linearGradient>
 

@@ -59,6 +59,7 @@ export const pageQuery = graphql`
             heroAlt
             title
             revenue
+            stack
             url
           }
           hero {

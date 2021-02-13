@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Logo from './logo'
+import IslovelyLogo from './islovely-logo'
 import Navigation from './navigation'
 
 export default function Header() {
@@ -11,7 +11,7 @@ export default function Header() {
         href="/"
         title="islovely"
       >
-        <Logo />
+        <IslovelyLogo />
       </a>
 
       <Navigation />

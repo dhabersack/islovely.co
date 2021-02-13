@@ -4,6 +4,7 @@ import Img from 'gatsby-image'
 import Card from './card'
 import CoinsIcon from '../icons/coins'
 import LinkIcon from '../icons/link'
+import Stack from './stack'
 
 export default function ProjectTeaser({
   project,
@@ -18,6 +19,7 @@ export default function ProjectTeaser({
     excerpt,
     heroAlt,
     revenue,
+    stack,
     title,
     url,
   } = frontmatter
@@ -39,9 +41,11 @@ export default function ProjectTeaser({
             </a>
           </h2>
 
-          <p className="flex-grow mb-0 text-sm">
+          <p className="flex-grow mb-6 text-sm">
             {excerpt}
           </p>
+
+          <Stack stack={stack} />
         </div>
 
         <footer className="bg-gray-100 flex flex-wrap justify-between px-4 py-3 text-gray-600 text-xs dark:bg-black dark:text-gray-300">
