@@ -81,9 +81,9 @@ export default function Footer({
 
               <a
                 className="block"
-                href="/courses"
+                href="/firetips"
               >
-                Courses
+                Fire tips
               </a>
 
               <a

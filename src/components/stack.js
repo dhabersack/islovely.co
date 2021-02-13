@@ -1,19 +1,17 @@
 import React from 'react'
 
-import getLogo from '../utils/get-logo'
+import Logo from './logo'
 
 export default function Stack({
   stack,
 }) {
   return (
-    <div className="flex flex-wrap space-x-2.5">
+    <div className="flex flex-wrap space-x-1.5">
       {stack.map(tool => (
         <React.Fragment key={`tool-${tool}`}>
-          <img
-            alt={tool}
-            className="h-6 w-6"
-            src={getLogo(tool)}
-          />
+          <div className="h-6 w-6">
+            <Logo name={tool} />
+          </div>
         </React.Fragment>
       ))}
     </div>

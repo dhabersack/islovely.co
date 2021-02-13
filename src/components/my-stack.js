@@ -1,19 +1,24 @@
 import React from 'react'
 
-import getLogo from '../utils/get-logo'
+import Logo from './logo'
 
 const STACK = [
-  'Tailwind CSS',
-  'Next',
-  'Gatsby',
+  'JavaScript',
   'React.js',
+  'Next.js',
+  'Gatsby',
+  'Jest',
+  'Tailwind CSS',
   'Sketch',
   'Figma',
   'Airtable',
-  'ConvertKit',
+  'Contentful',
   'Netlify',
+  'Vercel',
   'DigitalOcean',
-  'Gumroad'
+  'ConvertKit',
+  'Gumroad',
+  'Notion'
 ]
 
 export default function MyStack() {
@@ -21,11 +26,9 @@ export default function MyStack() {
     <div className="flex flex-wrap justify-center">
       {STACK.map(tool => (
         <React.Fragment key={`tool-${tool}`}>
-          <img
-            alt={tool}
-            className="h-9 m-3 w-9"
-            src={getLogo(tool)}
-          />
+          <div className="h-9 m-2 w-9">
+            <Logo name={tool} />
+          </div>
         </React.Fragment>
       ))}
     </div>

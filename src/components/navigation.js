@@ -2,12 +2,9 @@ import React, { useState } from 'react'
 
 const LINKS = {
   'Home': '/',
-  // 'Courses': '/courses',
+  'Projects': '/projects',
   'Blog': '/posts',
-  'Fire tips': '/firetips',
   'Newsletter': '/newsletter',
-  // 'About': '/about',
-  // 'Contact': '/contact',
 }
 
 export default function Navigation() {

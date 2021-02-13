@@ -30,6 +30,7 @@ module.exports = {
     extend: {
       backgroundColor: ['disabled'],
       cursor: ['disabled'],
+      display: ['dark'],
       opacity: ['disabled'],
       textColor: ['disabled', 'visited'],
     },

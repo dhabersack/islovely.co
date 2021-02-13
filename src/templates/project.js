@@ -9,6 +9,7 @@ import Layout from '../components/layout'
 import LinkIcon from '../icons/link'
 import MetaTags from '../components/meta-tags'
 import RichPreview from '../components/rich-preview'
+import Stack from '../components/stack'
 import mapFiguresToNamedObject from '../utils/map-figures-to-named-object'
 
 export default function Project({
@@ -27,6 +28,7 @@ export default function Project({
     heroAlt,
     heroCaption,
     revenue,
+    stack,
     title,
     url,
   } = frontmatter
@@ -94,6 +96,10 @@ export default function Project({
       <MDXRenderer figures={mapFiguresToNamedObject(figures)}>
         {body}
       </MDXRenderer>
+
+      <div className="mt-8">
+        <Stack stack={stack} />
+      </div>
     </Layout>
   )
 }
@@ -119,6 +125,7 @@ export const pageQuery = graphql`
         heroAlt
         heroCaption
         revenue
+        stack
         title
         url
       }
