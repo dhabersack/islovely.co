@@ -97,6 +97,7 @@ export default function Index({
 
       <RichPreview
         description="I am a software developer, IT consultant, and content creator with 12+ years of professional experience. Follow along as I build my company in public."
+        imageSubpath="home"
         permalink=""
         title="Dom Habersack · Content Creator & IndieHacker"
       />
