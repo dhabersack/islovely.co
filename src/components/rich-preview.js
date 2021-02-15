@@ -48,25 +48,14 @@ export default function RichPreview({
 
       {heroAlt && (
         <meta
-          content={heroAlt}
           property="og:image:alt"
+          content={heroAlt}
         />
       )}
 
-      <meta
-        content="314"
-        property="og:image:height"
-      />
-
-      <meta
-        content="image/jpeg"
-        property="og:image:type"
-      />
-
-      <meta
-        content="600"
-        property="og:image:width"
-      />
+      <meta property="og:image:type" content="image/jpeg" />
+      <meta property="og:image:height" content="314" />
+      <meta property="og:image:width" content="600" />
 
       <meta
         content={siteTitle}
