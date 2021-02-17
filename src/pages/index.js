@@ -4,7 +4,6 @@ import Img from 'gatsby-image'
 
 import Card from '../components/card'
 import Email from '../icons/email'
-import Fullbleed from '../components/fullbleed'
 import Layout from '../components/layout'
 import LinkedIn from '../icons/linkedin-logo'
 import MetaTags from '../components/meta-tags'
@@ -15,7 +14,6 @@ import NewsletterTeaser from '../components/newsletter-teaser'
 import PostTeaser from '../components/post-teaser'
 import ProjectTeaser from '../components/project-teaser'
 import RichPreview from '../components/rich-preview'
-import Testimonials from '../components/testimonials'
 import Twitter from '../icons/twitter-logo'
 import YouTube from '../icons/youtube-logo'
 
@@ -89,7 +87,6 @@ export default function Index({
   const featuredProject = data.project
   const newsletters = data.allNewsletter.edges.map(({ node }) => node)
   const posts = data.allPost.edges.map(({ node }) => node)
-  const testimonials = data.allTestimonial.edges.map(({ node }) => node)
 
   return (
     <Layout>
@@ -226,14 +223,6 @@ export default function Index({
           </p>
         </div>
 
-        <Fullbleed className="bg-pink-600">
-          <h2>
-            Testimonials
-          </h2>
-
-          <Testimonials testimonials={testimonials} />
-        </Fullbleed>
-
         <div>
           <h2 className="mb-0.5">
             Metrics (last 28 days)
@@ -336,29 +325,6 @@ export const pageQuery = graphql`
           }
           id
           permalink
-        }
-      }
-    }
-    allTestimonial(
-      sort: {
-        fields: date,
-        order: DESC
-      }
-    ) {
-      edges {
-        node {
-          date
-          frontmatter {
-            name
-          }
-          avatar {
-            childImageSharp {
-              fluid(maxWidth: 640) {
-                ...GatsbyImageSharpFluid_withWebp_tracedSVG
-              }
-            }
-          }
-          id
         }
       }
     }
