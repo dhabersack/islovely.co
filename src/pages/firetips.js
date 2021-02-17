@@ -28,10 +28,14 @@ export default function Firetips({
         }
       ]}
     >
-      <MetaTags title="Fire tips" />
+      <MetaTags
+        description="Snack-sized snippets that help you write better HTML, CSS, and JavaScript."
+        title="Fire tips"
+      />
 
       <RichPreview
-        imageSubpath="firetips"
+        description="Snack-sized snippets that help you write better HTML, CSS, and JavaScript."
+        imageSubpath="pages/firetips"
         permalink="/firetips"
         title="Fire tips"
       />

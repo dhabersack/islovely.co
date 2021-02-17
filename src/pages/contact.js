@@ -3,6 +3,7 @@ import React from 'react'
 import ContactForm from '../components/contact-form'
 import Layout from '../components/layout'
 import MetaTags from '../components/meta-tags'
+import RichPreview from '../components/rich-preview'
 
 export default function Contact() {
   return (
@@ -13,10 +14,17 @@ export default function Contact() {
         }
       ]}
     >
-    <MetaTags
-      description="Get in touch if you have a project you need help with!"
-      title="Contact"
-    />
+      <MetaTags
+        description="Get in touch if you have a project you need help with!"
+        title="Contact"
+      />
+
+      <RichPreview
+        description="Get in touch if you have a project you need help with!"
+        imageSubpath="pages/contact"
+        permalink="/contact"
+        title="Contact"
+      />
 
       <h1>
         Contact

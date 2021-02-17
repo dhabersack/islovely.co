@@ -26,6 +26,8 @@ export default function Posts({
       />
 
       <RichPreview
+        description="I write about design, development, and productivity."
+        imageSubpath="pages/posts"
         permalink="/posts"
         title="Blog"
       />

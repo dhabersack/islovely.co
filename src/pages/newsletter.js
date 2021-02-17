@@ -31,10 +31,14 @@ export default function Newsletter({
         }
       ]}
     >
-      <MetaTags title="Newsletter" />
+      <MetaTags
+        description="Weekly tips on design, development, and working smarter."
+        title="Newsletter"
+      />
 
       <RichPreview
-        imageSubpath="newsletter"
+        description="Weekly tips on design, development, and working smarter."
+        imageSubpath="pages/newsletter"
         permalink="/newsletter"
         title="Newsletter"
       />
