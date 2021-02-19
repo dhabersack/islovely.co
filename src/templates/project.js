@@ -20,6 +20,7 @@ export default function Project({
     frontmatter,
     hero,
     permalink,
+    slug,
   } = data.project
 
   const {
@@ -51,6 +52,7 @@ export default function Project({
 
       <RichPreview
         description={excerpt}
+        imageSubpath={`projects/${slug}`}
         permalink={permalink}
         title={title}
       />
@@ -137,6 +139,7 @@ export const pageQuery = graphql`
         }
       }
       permalink
+      slug
     }
   }
 `
