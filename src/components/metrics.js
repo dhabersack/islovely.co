@@ -42,7 +42,7 @@ export default function Metrics({
                   </span>
                 </div>
 
-                <h4 className="font-medium mb-0.5 text-gray-600 text-sm dark:text-gray-300">
+                <h4 className="font-medium m-0 text-gray-600 text-sm dark:text-gray-300">
                   {label}
                 </h4>
               </div>
