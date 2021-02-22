@@ -1,4 +1,5 @@
 import React from 'react'
+import Img from 'gatsby-image'
 
 import formatDate from '../utils/format-date'
 
@@ -8,6 +9,7 @@ export default function NewsletterTeaser({
   const {
     date,
     frontmatter,
+    hero,
     permalink,
   } = newsletter
 
@@ -18,24 +20,32 @@ export default function NewsletterTeaser({
   } = frontmatter
 
   return (
-    <div>
-      <footer className="mb-0.5 text-gray-500 text-xs dark:text-gray-400">
-        <strong className="font-medium mr-1">
-          #{issue}
-        </strong>
+    <div class="flex space-x-2.5">
+      <Img
+        alt=""
+        className="h-20 w-96 mt-0.5"
+        fluid={hero.childImageSharp.fluid}
+      />
 
-        {formatDate(date)}
-      </footer>
+      <div>
+        <footer className="mb-0.5 text-gray-500 text-xs dark:text-gray-400">
+          <strong className="font-medium mr-1">
+            #{issue}
+          </strong>
 
-      <h2 className="leading-snug m-0 mb-1 text-base">
-        <a href={permalink}>
-          {title}
-        </a>
-      </h2>
+          {formatDate(date)}
+        </footer>
 
-      <p className="m-0 text-sm">
-        {excerpt}
-      </p>
+        <h2 className="leading-snug m-0 mb-1 text-base">
+          <a href={permalink}>
+            {title}
+          </a>
+        </h2>
+
+        <p className="m-0 text-sm">
+          {excerpt}
+        </p>
+      </div>
     </div>
   )
 }

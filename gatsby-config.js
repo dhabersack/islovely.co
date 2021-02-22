@@ -16,6 +16,7 @@ module.exports = {
   },
   mapping: {
     'Newsletter.frontmatter.author': `Author`,
+    'Newsletter.frontmatter.related': `Newsletter`,
     'Post.frontmatter.author': `Author`,
   },
   plugins: [

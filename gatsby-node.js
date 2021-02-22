@@ -209,6 +209,8 @@ exports.onCreateNode = ({ actions, createNodeId, getNode, node }) => {
           permalink: `/firetips/${slug}`,
         },
         newsletters: {
+          hero: `hero.jpg`,
+          id: slug,
           permalink: `/newsletter/archive/${slug}`,
         },
         pages: {
