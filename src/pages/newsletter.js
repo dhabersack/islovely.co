@@ -125,6 +125,13 @@ export const pageQuery = graphql`
             issue
             title
           }
+          hero {
+            childImageSharp {
+              fluid(maxWidth: 240) {
+                ...GatsbyImageSharpFluid_withWebp_tracedSVG
+              }
+            }
+          }
           id
           permalink
         }

@@ -4,6 +4,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 import Layout from '../components/layout'
 import MetaTags from '../components/meta-tags'
+import NewsletterTeaser from '../components/newsletter-teaser'
 import RichPreview from '../components/rich-preview'
 import PostMeta from '../components/post-meta'
 import mapFiguresToNamedObject from '../utils/map-figures-to-named-object'
@@ -23,11 +24,13 @@ export default function Newsletter({
     author,
     excerpt,
     figures,
+    related,
     title,
   } = frontmatter
 
   const authorName = author.frontmatter.name
   const avatarFluid = author.avatar.childImageSharp.fluid
+  const hasRelatedIssues = related?.length > 0
 
   return (
     <Layout
@@ -72,6 +75,22 @@ export default function Newsletter({
       <MDXRenderer figures={mapFiguresToNamedObject(figures)}>
         {body}
       </MDXRenderer>
+
+      {hasRelatedIssues && (
+        <div className="mt-24">
+          <h2 className="m-0 mb-3 text-xl">
+            Related issues
+          </h2>
+
+          <div className="grid gap-10 grid-cols-1">
+            {related.map(newsletter => (
+              <React.Fragment key={`newsletter-${newsletter.id}`}>
+                <NewsletterTeaser newsletter={newsletter} />
+              </React.Fragment>
+            ))}
+          </div>
+        </div>
+      )}
     </Layout>
   )
 }
@@ -107,8 +126,27 @@ export const pageQuery = graphql`
             }
           }
         }
+        related {
+          date
+          frontmatter {
+            excerpt
+            issue
+            title
+          }
+          hero {
+            childImageSharp {
+              fluid(maxWidth: 240) {
+                ...GatsbyImageSharpFluid_withWebp_tracedSVG
+              }
+            }
+          }
+          id
+          permalink
+          slug
+        }
         title
       }
+      id
       permalink
       slug
     }
