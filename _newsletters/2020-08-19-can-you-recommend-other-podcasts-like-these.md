@@ -1,6 +1,7 @@
 ---
 title: "Can you recommend other podcasts like these?"
 excerpt: "The format of “two hosts talking about what is going on in their businesses” is fascinating. Know any others like the ones in this list?"
+updatedAt: 2021-02-23
 issue: 50
 author: dom-habersack
 ---
@@ -26,6 +27,8 @@ Unfortunately, I am now all caught up on these podcasts and don’t have any mor
   by Justin Jackson and Jon Buda
 - [Rogue Startups](https://roguestartups.com)  
   by Dave Rodenbaugh and Craig Hewitt
+- [Software Social](https://softwaresocial.dev)  
+  by Michele Hansen and Colleen Schnettler
 
 If you are not subscribed to any of them, give them a try. If you know some of them, do you know any others like them that I missed?
 
