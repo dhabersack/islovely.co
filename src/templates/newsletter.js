@@ -2,6 +2,8 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
+import Breakout from '../components/breakout'
+import Figure from '../components/figure'
 import Layout from '../components/layout'
 import MetaTags from '../components/meta-tags'
 import NewsletterTeaser from '../components/newsletter-teaser'
@@ -16,6 +18,7 @@ export default function Newsletter({
     body,
     date,
     frontmatter,
+    hero,
     permalink,
     slug,
   } = data.newsletter
@@ -24,6 +27,8 @@ export default function Newsletter({
     author,
     excerpt,
     figures,
+    heroAlt,
+    heroCaption,
     related,
     title,
   } = frontmatter
@@ -72,6 +77,15 @@ export default function Newsletter({
         />
       </div>
 
+      <Breakout>
+        <Figure
+          alt={heroAlt}
+          caption={heroCaption}
+          className="m-0 mb-6"
+          fluid={hero.childImageSharp.fluid}
+        />
+      </Breakout>
+
       <MDXRenderer figures={mapFiguresToNamedObject(figures)}>
         {body}
       </MDXRenderer>
@@ -82,7 +96,7 @@ export default function Newsletter({
             Related issues
           </h2>
 
-          <div className="grid gap-10 grid-cols-1">
+          <div className="grid gap-12 grid-cols-1">
             {related.map(newsletter => (
               <React.Fragment key={`newsletter-${newsletter.id}`}>
                 <NewsletterTeaser newsletter={newsletter} />
@@ -126,6 +140,8 @@ export const pageQuery = graphql`
             }
           }
         }
+        heroAlt
+        heroCaption
         related {
           date
           frontmatter {
@@ -145,6 +161,13 @@ export const pageQuery = graphql`
           slug
         }
         title
+      }
+      hero {
+        childImageSharp {
+          fluid(maxWidth: 1504) {
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          }
+        }
       }
       id
       permalink

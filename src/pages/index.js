@@ -187,7 +187,7 @@ export default function Index({
             Latest newsletter issues
           </h2>
 
-          <div className="grid gap-10 grid-cols-1 mb-8">
+          <div className="grid gap-12 grid-cols-1 mb-8">
             {newsletters.map(newsletter => (
               <NewsletterTeaser
                 key={`newsletter-${newsletter.id}`}
