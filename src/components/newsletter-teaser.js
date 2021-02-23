@@ -23,7 +23,7 @@ export default function NewsletterTeaser({
     <div class="flex space-x-2.5">
       <Img
         alt=""
-        className="h-20 w-96 mt-0.5"
+        className="flex-shrink-0 w-32 mt-0.5"
         fluid={hero.childImageSharp.fluid}
       />
 
