@@ -21,11 +21,14 @@ export default function NewsletterTeaser({
 
   return (
     <div class="flex space-x-2.5">
-      <Img
-        alt=""
-        className="flex-shrink-0 w-32 mt-0.5"
-        fluid={hero.childImageSharp.fluid}
-      />
+      <div className="flex-shrink-0 w-32 mt-0.5">
+        <a href={permalink}>
+          <Img
+            alt=""
+            fluid={hero.childImageSharp.fluid}
+          />
+        </a>
+      </div>
 
       <div>
         <footer className="mb-0.5 text-gray-500 text-xs dark:text-gray-400">

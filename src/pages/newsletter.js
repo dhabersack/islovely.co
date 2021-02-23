@@ -87,7 +87,7 @@ export default function Newsletter({
         Featured newsletters
       </h2>
 
-      <div className="grid gap-10 grid-cols-1 mb-8">
+      <div className="grid gap-12 grid-cols-1 mb-8">
         {newsletters.map(newsletter => (
           <React.Fragment key={`newsletter-${newsletter.id}`}>
             <NewsletterTeaser newsletter={newsletter} />

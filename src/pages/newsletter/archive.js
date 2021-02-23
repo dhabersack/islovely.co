@@ -41,10 +41,13 @@ export default ({
         These are some of my previous newsletters. <a href="/newsletter">Sign up</a> if you want to get them delivered straight to your inbox.
       </p>
 
-      <div className="grid gap-10 grid-cols-1">
+      <div className="grid gap-12 grid-cols-1">
         {newsletters.map(newsletter => (
           <React.Fragment key={`newsletter-${newsletter.id}`}>
+            <div>
+            <span className="bg-pink-500 text-gray-100 inline-block px-2 py-0.5 text-xs rounded-full">{newsletter.frontmatter.related?.length ?? 0}</span>
             <NewsletterTeaser newsletter={newsletter} />
+          </div>
           </React.Fragment>
         ))}
       </div>
@@ -67,6 +70,13 @@ export const pageQuery = graphql`
             excerpt
             issue
             title
+
+
+            related {
+              slug
+            }
+
+
           }
           hero {
             childImageSharp {
