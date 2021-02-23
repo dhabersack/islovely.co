@@ -29,6 +29,10 @@ Unfortunately, I am now all caught up on these podcasts and don’t have any mor
   by Dave Rodenbaugh and Craig Hewitt
 - [Software Social](https://softwaresocial.dev)  
   by Michele Hansen and Colleen Schnettler
+- [Hammerstone](https://hammerstone.dev)  
+  by Sean Fioritto and Aaron Francis
+- [Default Alive](https://defaultalive.fm)  
+  by Corey Haines and Chris Spags
 
 If you are not subscribed to any of them, give them a try. If you know some of them, do you know any others like them that I missed?
 
