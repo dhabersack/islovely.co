@@ -93,7 +93,7 @@ export default function Newsletter({
       {hasRelatedIssues && (
         <div className="mt-24">
           <h2 className="m-0 mb-3 text-xl">
-            Related issues
+            Continue reading
           </h2>
 
           <div className="grid gap-12 grid-cols-1">
