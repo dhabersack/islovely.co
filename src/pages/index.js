@@ -189,10 +189,9 @@ export default function Index({
 
           <div className="grid gap-12 grid-cols-1 mb-8">
             {newsletters.map(newsletter => (
-              <NewsletterTeaser
-                key={`newsletter-${newsletter.id}`}
-                newsletter={newsletter}
-              />
+              <React.Fragment key={`newsletter-${newsletter.id}`}>
+                <NewsletterTeaser newsletter={newsletter} />
+              </React.Fragment>
             ))}
           </div>
 
@@ -280,6 +279,7 @@ export const pageQuery = graphql`
           date
           frontmatter {
             excerpt
+            heroAlt
             issue
             title
           }

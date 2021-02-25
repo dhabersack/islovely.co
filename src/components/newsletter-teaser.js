@@ -15,6 +15,7 @@ export default function NewsletterTeaser({
 
   const {
     excerpt,
+    heroAlt,
     issue,
     title,
   } = frontmatter
@@ -24,7 +25,7 @@ export default function NewsletterTeaser({
       <div className="flex-shrink-0 w-32 mt-0.5">
         <a href={permalink}>
           <Img
-            alt=""
+            alt={heroAlt}
             fluid={hero.childImageSharp.fluid}
           />
         </a>

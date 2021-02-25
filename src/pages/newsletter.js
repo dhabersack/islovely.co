@@ -122,6 +122,7 @@ export const pageQuery = graphql`
           date
           frontmatter {
             excerpt
+            heroAlt
             issue
             title
           }
