@@ -20,16 +20,16 @@ import YouTube from '../icons/youtube-logo'
 const METRICS_AUDIENCE = [
   {
     label: 'Twitter followers',
-    value: 910,
-    change: +212,
+    value: 951,
+    change: +93,
   }, {
     label: 'Newsletter subscribers',
     value: 16,
-    change: +4,
+    change: +3,
   }, {
     label: 'YouTube subscribers',
     value: 47,
-    change: +8,
+    change: +4,
   },
 ]
 
@@ -52,7 +52,7 @@ const METRICS_CONTENT = [
     change: +0
   }, {
     label: 'Weekly newsletters',
-    value: 74,
+    value: 77,
     change: +4
   }, {
     label: 'Videos published',
@@ -228,7 +228,7 @@ export default function Index({
           </h2>
 
           <p className="italic m-0 mb-3 text-gray-500 text-xs dark:text-gray-400 lg:mb-6">
-            Updated: February 11, 2021
+            Updated: February 26, 2021
           </p>
 
           <p>
