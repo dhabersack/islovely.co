@@ -1,7 +1,7 @@
 ---
 title: "Debunking whitewashed exam statistics"
 categories: ["Education"]
-date_updated: 2013-03-19
+updatedAt: "2013-03-19"
 excerpt: "Looking at the official statistics of a recent exam, the numbers aren’t as positive as they are made out to be."
 heroAlt: "Laundry hanging out to dry over a road in a small country town."
 heroCaption: "If we look into the numbers, an exam’s performance record is less positive than it is being sold as."

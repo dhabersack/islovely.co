@@ -73,7 +73,7 @@ export default function Post({
       <div className="mb-6">
         <PostMeta
           author={authorName}
-          avatarFluid={avatarFluid}
+          avatar={avatarFluid}
           date={date}
         />
       </div>

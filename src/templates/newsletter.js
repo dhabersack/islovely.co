@@ -72,7 +72,7 @@ export default function Newsletter({
       <div className="mb-6">
         <PostMeta
           author={authorName}
-          avatarFluid={avatarFluid}
+          avatar={avatarFluid}
           date={date}
         />
       </div>
@@ -98,7 +98,7 @@ export default function Newsletter({
 
           <div className="grid gap-12 grid-cols-1">
             {related.map(newsletter => (
-              <React.Fragment key={`newsletter-${newsletter.id}`}>
+              <React.Fragment key={`newsletter-${newsletter.slug}`}>
                 <NewsletterTeaser newsletter={newsletter} />
               </React.Fragment>
             ))}

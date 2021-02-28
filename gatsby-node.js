@@ -210,8 +210,6 @@ exports.onCreateNode = ({ actions, createNodeId, getNode, node }) => {
         },
         newsletters: {
           hero: `hero.jpg`,
-          id: slug,
-          permalink: `/newsletter/archive/${slug}`,
         },
         pages: {
           permalink: `/${slug}`,
