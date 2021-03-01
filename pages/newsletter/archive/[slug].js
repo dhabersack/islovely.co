@@ -29,8 +29,6 @@ export default function Newsletter({
     title,
   } = newsletter
 
-  const authorName = author.name
-  const avatar = author.avatar
   const hasRelatedIssues = related?.length > 0
 
   const body = hydrate(source, {
@@ -133,7 +131,7 @@ export async function getStaticPaths() {
   const newsletters = await getAllNewsletters()
 
   return {
-    paths: newsletters.map(({ slug }) => `/newsletter/archive/${slug}`),
+    paths: newsletters.map(({ permalink }) => permalink),
     fallback: true,
   }
 }

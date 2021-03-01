@@ -5,15 +5,13 @@ issue: 43
 heroAlt: "Markers being dropped on a chair."
 heroCaption: "Markers, please have a seat. We need to talk. Your mom and I are very proud of you."
 figures:
-  - "./example.jpeg"
+  - "example.jpeg"
 author: dom-habersack
 related:
   - use-dad-jokes-to-get-better-at-design
   - my-design-turned-out-worse-than-i-thought
   - the-constraints-behind-consistent-icons
 ---
-import Figure from '../../src/components/figure'
-
 We are about to begin work on a completely new version of our product. Before we can start building, we need to figure out what it is that we want to do. Previously, we would have picked a random idea and started designing every last detail of it. We often skipped the exploration of other ideas, and instead went all in on the first one that sounded okay.
 
 The “mockups” we came up with looked almost like a finished product. Every corner was round, every margin pixel-perfect, every word proof-read. In design reviews, people would focus on the visuals much more than the concepts behind them. The feedback we got was about sizes and colors instead of the underlying ideas.
@@ -23,7 +21,7 @@ If we show people too much design, telling them “ignore what this looks like�
 <Figure
   alt="A sketch of an application in fullscreen as well as horizontal and vertical split view modes."
   caption="A sketch of an application in fullscreen as well as horizontal and vertical split view modes."
-  fluid={props.figures['example']}
+  src={figures['example']}
 />
 
 By their nature, fat marker sketches cannot contain a lot of detail. They focus on explaining a concept, with no visual design at all. A fat marker sketch shows just enough for us to explore if an idea would work.

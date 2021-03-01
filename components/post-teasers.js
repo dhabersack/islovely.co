@@ -9,7 +9,7 @@ export default function PostTeasers({
   return (
     <Grid>
       {posts.map(post => (
-        <React.Fragment key={`post-teaser-${post.id}`}>
+        <React.Fragment key={`post-teaser-${post.slug}`}>
           <PostTeaser post={post} />
         </React.Fragment>
       ))}

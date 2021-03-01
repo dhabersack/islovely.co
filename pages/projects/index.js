@@ -1,17 +1,15 @@
 import React from 'react'
-import { graphql } from 'gatsby'
 
-import Breakout from '../components/breakout'
-import Layout from '../components/layout'
-import MetaTags from '../components/meta-tags'
-import ProjectTeasers from '../components/project-teasers'
-import RichPreview from '../components/rich-preview'
+import Breakout from '../../components/breakout'
+import Layout from '../../components/layout'
+import MetaTags from '../../components/meta-tags'
+import ProjectTeasers from '../../components/project-teasers'
+import RichPreview from '../../components/rich-preview'
+import { getAllProjects } from '../../lib/api/projects'
 
 export default function Projects({
-  data,
+  projects,
 }) {
-  const projects = data.allProject.edges.map(({ node }) => node)
-
   return (
     <Layout
       breadcrumbs={[
@@ -49,35 +47,12 @@ export default function Projects({
   )
 }
 
-export const pageQuery = graphql`
-  query {
-    allProject(
-      sort: {
-        fields: date,
-        order: DESC
-      }
-    ) {
-      edges {
-        node {
-          frontmatter {
-            excerpt
-            heroAlt
-            title
-            revenue
-            stack
-            url
-          }
-          hero {
-            childImageSharp {
-              fluid(maxWidth: 640) {
-                ...GatsbyImageSharpFluid_withWebp_tracedSVG
-              }
-            }
-          }
-          id
-          permalink
-        }
-      }
-    }
+export async function getStaticProps() {
+  const projects = await getAllProjects()
+
+  return {
+    props: {
+      projects,
+    },
   }
-`
+}

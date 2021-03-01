@@ -15,7 +15,10 @@ import ProjectTeaser from '../components/project-teaser'
 import RichPreview from '../components/rich-preview'
 import Twitter from '../components/icons/twitter-logo'
 import YouTube from '../components/icons/youtube-logo'
+import { getAuthorBySlug } from '../lib/api/authors'
 import { getFeaturedProject } from '../lib/api/projects'
+import { getLatestNewsletters } from '../lib/api/newsletters'
+import { getLatestPosts } from '../lib/api/posts'
 
 const METRICS_AUDIENCE = [
   {
@@ -86,7 +89,6 @@ export default function Index({
   newsletters,
   posts,
 }) {
-
   return (
     <Layout>
       <MetaTags
@@ -104,13 +106,15 @@ export default function Index({
       <div className="space-y-24">
         <div className="space-y-8">
           <div className="flex flex-col items-center space-y-6 lg:flex-row lg:space-x-8 lg:space-y-0">
-            <Image
-              alt="Dom Habersack"
-              className="block flex-shrink-0 h-56 rounded-full w-56"
-              height="224"
-              src="http://www.fillmurray.com/448/448"
-              width="224"
-            />
+            <div className="block flex-shrink-0 h-56 w-56">
+              <Image
+                alt="Dom Habersack"
+                className="rounded-full"
+                height="224"
+                src={avatar}
+                width="224"
+              />
+            </div>
 
             <div>
               <h1 className="flex-grow m-0 mb-2 text-3xl">
@@ -208,7 +212,7 @@ export default function Index({
 
           <div className="grid gap-8 grid-cols-1 mb-8 sm:gap-4 sm:grid-cols-2">
             {posts.map(post => (
-              <React.Fragment key={`post-teaser-${post.id}`}>
+              <React.Fragment key={`post-teaser-${post.slug}`}>
                 <PostTeaser post={post} />
               </React.Fragment>
             ))}
@@ -264,126 +268,18 @@ export default function Index({
   )
 }
 
-export const getStaticProps = async context => {
+export async function getStaticProps() {
+  const dom = await getAuthorBySlug('dom-habersack')
+  const featuredProject = await getFeaturedProject()
+  const latestNewsletters = await getLatestNewsletters({ limit: 4 })
+  const latestPosts = await getLatestPosts({ limit: 4 })
+
   return {
     props: {
-      avatar: null,
-      featuredProject: getFeaturedProject(),
-      newsletters: [],
-      posts: []
+      avatar: dom.avatar,
+      featuredProject,
+      newsletters: latestNewsletters,
+      posts: latestPosts,
     }
   }
-  // const avatarFluid = data.author.avatar.childImageSharp.fluid
-  // const featuredProject = data.project
-  // const newsletters = data.allNewsletter.edges.map(({ node }) => node)
-  // const posts = data.allPost.edges.map(({ node }) => node)
 }
-
-    //export const pageQuery = graphql`
-    //  query {
-    //    allNewsletter(
-    //      limit: 4,
-    //      sort: {
-    //        fields: date,
-    //        order: DESC
-    //      }
-    //    ) {
-    //      edges {
-    //        node {
-    //          date
-    //          frontmatter {
-    //            excerpt
-    //            heroAlt
-    //            issue
-    //            title
-    //          }
-    //          hero {
-    //            childImageSharp {
-    //              fluid(maxWidth: 240) {
-    //                ...GatsbyImageSharpFluid_withWebp_tracedSVG
-    //              }
-    //            }
-    //          }
-    //          id
-    //          permalink
-    //        }
-    //      }
-    //    }
-    //    allPost(
-    //      limit: 4,
-    //      sort: {
-    //        fields: date,
-    //        order: DESC
-    //      }
-    //    ) {
-    //      edges {
-    //        node {
-    //          date
-    //          frontmatter {
-    //            author {
-    //              avatar {
-    //                childImageSharp {
-    //                  fluid(maxWidth: 40) {
-    //                    ...GatsbyImageSharpFluid_withWebp_tracedSVG
-    //                  }
-    //                }
-    //              }
-    //              frontmatter {
-    //                name
-    //              }
-    //            }
-    //            categories
-    //            excerpt
-    //            heroAlt
-    //            title
-    //          }
-    //          hero {
-    //            childImageSharp {
-    //              fluid(maxWidth: 640) {
-    //                ...GatsbyImageSharpFluid_withWebp_tracedSVG
-    //              }
-    //            }
-    //          }
-    //          id
-    //          permalink
-    //        }
-    //      }
-    //    }
-    //    author(
-    //      slug: {
-    //        eq: "dom-habersack"
-    //      }
-    //    ) {
-    //      avatar {
-    //        childImageSharp {
-    //          fluid(maxWidth: 160) {
-    //            ...GatsbyImageSharpFluid_withWebp_tracedSVG
-    //          }
-    //        }
-    //      }
-    //    }
-    //    project(
-    //      slug: {
-    //        eq: "lovelicons"
-    //      }
-    //    ) {
-    //      frontmatter {
-    //        excerpt
-    //        heroAlt
-    //        title
-    //        revenue
-    //        stack
-    //        url
-    //      }
-    //      hero {
-    //        childImageSharp {
-    //          fluid(maxWidth: 640) {
-    //            ...GatsbyImageSharpFluid_withWebp_tracedSVG
-    //          }
-    //        }
-    //      }
-    //      id
-    //      permalink
-    //    }
-    //  }
-    //`

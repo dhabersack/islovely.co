@@ -5,16 +5,14 @@ issue: 63
 heroAlt: "A row of colored crayons."
 heroCaption: "They all looks so good, but which one is best for what we’re trying to color?"
 figures:
-  - "./projects-on-matrix.png"
-  - "./quadrant-meanings.png"
+  - "projects-on-matrix.png"
+  - "quadrant-meanings.png"
 author: dom-habersack
 related:
   - delete-your-backlog
   - how-do-you-eat-an-elephant
   - tired-of-learning-by-building-todo-apps
 ---
-import Figure from '../../src/components/figure'
-
 I am a huge fan of todo lists for organizing my tasks. Lately, those lists are growing a lot faster than I can work on them. While lists are great for leading me through each project, they don’t help me pick what project to work on next.
 
 Todo lists are great when tasks are small and the order we do them in doesn’t matter. Take weekend chores as an example. We need to mow the lawn, take out the trash, and do the dishes. The order we do them in makes no difference. They all take about the same time, and we can get them all done on the same day. Instead of spending energy on picking the next task, we can put them on a list and work through it from top to bottom. Choosing the next step happens automatically, thanks to the list.
@@ -26,7 +24,7 @@ Instead of looking at our projects as a single list, we can chart them along two
 <Figure
   alt="The projects on a two-dimensional chart, with the x-axis representing effort and the y-axis representing impact."
   caption="Organizing projects on two dimensions helps us visualize the difference in their importance."
-  fluid={props.figures['projects-on-matrix']}
+  src={figures['projects-on-matrix']}
 />
 
 If we chart our projects like this, we can see each project’s importance in relation to the others. Where on the matrix a project ends up shows us how good an idea it is. Each quadrant represents a different category of importance.
@@ -34,7 +32,7 @@ If we chart our projects like this, we can see each project’s importance in re
 <Figure
   alt="The same chart as before, with the quadrants named. Low effort and low impact: minor improvements. Low effort and high impact: quick fillers. High effort and high impact: potential winners. High effort and low impact: money wasters."
   caption="Their location on the chart helps us pick the most promising project."
-  fluid={props.figures['quadrant-meanings']}
+  src={figures['quadrant-meanings']}
 />
 
 This is not an exact science, because we are bad at estimating both impact and effort. We can still use it as a rough guideline to help us decide.

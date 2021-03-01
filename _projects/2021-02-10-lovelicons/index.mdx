@@ -7,12 +7,10 @@ revenue: "0"
 stack: ["Sketch", "Next.js", "Tailwind CSS", "Vercel", "ConvertKit", "Gumroad"]
 url: "https://lovelicons.com"
 figures:
-  - "./1x-2x-3x.png"
-  - "./svg-styles.png"
-  - "./lovelicons-react.png"
+  - "1x-2x-3x.png"
+  - "svg-styles.png"
+  - "lovelicons-react.png"
 ---
-import Figure from '../../src/components/figure'
-
 Over the years, I have drawn many icons in Sketch and Figma that never saw the light of day. Some of the projects were abandoned, while others went in a different artistic direction. Instead of abandoning all that work, I am extending the icons into a full set. To venture into the world of selling things online, I am turning the set into my first paid product.
 
 ## Features
@@ -22,7 +20,7 @@ The icons all use the same underlying 24&times;24px canvas. The free set offers 
 <Figure
   alt="The desktop icon at 1x, 2x, and 3x"
   caption="The sizes included in the free version"
-  fluid={props.figures['1x-2x-3x']}
+  src={figures['1x-2x-3x']}
 />
 
 With a purchase, customers get all icons in PNG and SVG formats. The SVGs can be resized and recolored, making them more versatile than their free counterpart.
@@ -30,7 +28,7 @@ With a purchase, customers get all icons in PNG and SVG formats. The SVGs can be
 <Figure
   alt="The desktop icon in four different colors"
   caption="Only the SVGs can be colored freely."
-  fluid={props.figures['svg-styles']}
+  src={figures['svg-styles']}
 />
 
 An additional Pro tier offers libraries for React, Vue, Sketch, Figma, and IconJar. While optional for most people, this package offers a more convenient way to work with the icons.
@@ -38,7 +36,7 @@ An additional Pro tier offers libraries for React, Vue, Sketch, Figma, and IconJ
 <Figure
   alt="An example of how the Lovelicons React library can be used"
   caption="Working with the icons is a lot easier with the libraries."
-  fluid={props.figures['lovelicons-react']}
+  src={figures['lovelicons-react']}
 />
 
 All versions come with free lifetime updates. The set is slowly going to grow over time, potentially even gaining new styles and features.

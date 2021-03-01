@@ -4,7 +4,7 @@ import Image from 'next/image'
 export default function Figure({
   alt,
   caption,
-  fluid,
+  src,
   ...props
 }) {
   return (
@@ -12,7 +12,7 @@ export default function Figure({
       <Image
         alt={alt}
         height="810"
-        src="http://www.fillmurray.com/1400/810"
+        src={src}
         width="1440"
       />
 

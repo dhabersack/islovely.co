@@ -6,35 +6,32 @@ export default function Logo({
   name,
 }) {
   const {
-    dark,
-    light,
-    regular,
+    Dark,
+    Light,
+    Regular,
   } = getLogoForName(name)
 
   return (
     <React.Fragment>
-      {regular && (
-        <img
+      {Regular && (
+        <Regular
           alt={name}
-          src={regular}
           title={name}
         />
       )}
 
-      {light && (
-        <img
+      {Light && (
+        <Light
           alt={name}
           className="hidden dark:block"
-          src={light}
           title={name}
         />
       )}
 
-      {dark && (
-        <img
+      {Dark && (
+        <Dark
           alt={name}
           className="block dark:hidden"
-          src={dark}
           title={name}
         />
       )}

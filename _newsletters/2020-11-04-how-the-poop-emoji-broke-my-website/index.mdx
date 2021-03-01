@@ -6,15 +6,13 @@ heroAlt: "A person holding up a cookie shaped like the poop emoji."
 heroCaption: "It looks so harmless, yet it can have such annoying side effects."
 isFeatured: true
 figures:
-  - "./source-code-pro-firefox-de.png"
+  - "source-code-pro-firefox-de.png"
 author: dom-habersack
 related:
   - get-better-at-design-by-breaking-some-designs
   - stress-test-your-layouts-in-disco-mode
   - use-dad-jokes-to-get-better-at-design
 ---
-import Figure from '../../src/components/figure'
-
 I finally put all the fire tips I shared on social media [up on my website](/firetips) this week. Finding an old tip on Twitter was almost impossible. It’s just not a medium made for later reference. With this move, I can always access them quickly and have full control over how I display them.
 
 Then a friend told me about a bug with these tips.
@@ -24,7 +22,7 @@ Firefox Developer Edition on macOS does not show any syntax highlighting on the 
 <Figure
   alt="The code snippet is highlighted as expected in Safari. In Firefox, the same snippet is unreadable."
   caption="The code snippet is highlighted as expected in Safari. In Firefox, the same snippet is unreadable."
-  fluid={props.figures['source-code-pro-firefox-de']}
+  src={figures['source-code-pro-firefox-de']}
 />
 
 Turns out this is [a known bug with Source Code Pro](https://bugzilla.mozilla.org/show_bug.cgi?id=1520157), the font I use for monospace text. Firefox treats it a little differently than most other browsers.

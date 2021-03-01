@@ -1,10 +1,10 @@
 import React from 'react'
 
-import Layout from '../../components/layout'
-import MetaTags from '../../components/meta-tags'
-import NewsletterTeaser from '../../components/newsletter-teaser'
-import RichPreview from '../../components/rich-preview'
-import { getAllNewsletters } from '../../lib/api/newsletters'
+import Layout from '../../../components/layout'
+import MetaTags from '../../../components/meta-tags'
+import NewsletterTeaser from '../../../components/newsletter-teaser'
+import RichPreview from '../../../components/rich-preview'
+import { getAllNewsletters } from '../../../lib/api/newsletters'
 
 export default function Archive({
   newsletters,
@@ -50,42 +50,12 @@ export default function Archive({
   )
 }
 
-export const getStaticProps = async () => {
+export async function getStaticProps() {
+  const newsletters = await getAllNewsletters()
+
   return {
     props: {
-      newsletters: await getAllNewsletters()
-    }
+      newsletters,
+    },
   }
 }
-
-// export const pageQuery = graphql`
-//   query {
-//     allNewsletter(
-//       sort: {
-//         fields: date,
-//         order: DESC
-//       }
-//     ) {
-//       edges {
-//         node {
-//           date
-//           frontmatter {
-//             excerpt
-//             heroAlt
-//             issue
-//             title
-//           }
-//           hero {
-//             childImageSharp {
-//               fluid(maxWidth: 240) {
-//                 ...GatsbyImageSharpFluid_withWebp_tracedSVG
-//               }
-//             }
-//           }
-//           permalink
-//           slug
-//       }
-//       }
-//     }
-//   }
-// `

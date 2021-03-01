@@ -5,27 +5,25 @@ issue: 75
 heroAlt: "A destroyed computer monitor."
 heroCaption: "Not a loss if we learn something along the way."
 figures:
-  - "./intercom-our-solution.png"
-  - "./text-bottom-margin-styles.png"
-  - "./text-no-bottom-margin-styles.png"
-  - "./text-no-bottom-margin.png"
-  - "./text-10px-bottom-margin.png"
-  - "./text-10px-bottom-margin-styles.png"
-  - "./padding-around-content-styles.png"
-  - "./no-padding-around-content.png"
-  - "./no-padding-around-content-styles.png"
-  - "./10px-padding-around-content-styles.png"
-  - "./10px-padding-around-content.png"
-  - "./smile-off-styles.png"
-  - "./smile-off.png"
+  - "intercom-our-solution.png"
+  - "text-bottom-margin-styles.png"
+  - "text-no-bottom-margin-styles.png"
+  - "text-no-bottom-margin.png"
+  - "text-10px-bottom-margin.png"
+  - "text-10px-bottom-margin-styles.png"
+  - "padding-around-content-styles.png"
+  - "no-padding-around-content.png"
+  - "no-padding-around-content-styles.png"
+  - "10px-padding-around-content-styles.png"
+  - "10px-padding-around-content.png"
+  - "smile-off-styles.png"
+  - "smile-off.png"
 author: dom-habersack
 related:
   - how-the-poop-emoji-broke-my-website
   - fonts-that-make-you-go-agh!iIl1
   - evolution-not-revolution
 ---
-import Figure from '../../src/components/figure'
-
 “Wow, that website is so pretty! I could never design something as pretty as this!”
 
 Design can feel like a talent you’re either born with, or you’re not. Only a select few can make something look good, while we normal folk are doomed to make people’s eyes bleed forever.
@@ -43,7 +41,7 @@ Let’s look at this section from Intercom’s homepage:
 <Figure
   alt="The “Our solutions” section from Intercom’s homepage"
   caption="Intercom’s take on the cards metaphor"
-  fluid={props.figures['intercom-our-solution']}
+  src={figures['intercom-our-solution']}
 />
 
 The cards have a very Intercom feel to them. They feel “designed”, but how? Why do they work? Let’s start by looking at this giant margin between the text and the button.
@@ -51,7 +49,7 @@ The cards have a very Intercom feel to them. They feel “designed”, but how? 
 <Figure
   alt="The styles that define the .card-body."
   caption="That’s a lot of margin-bottom."
-  fluid={props.figures['text-bottom-margin-styles']}
+  src={figures['text-bottom-margin-styles']}
 />
 
 Those 48 pixels sound like a lot. Let’s remove them.
@@ -59,13 +57,13 @@ Those 48 pixels sound like a lot. Let’s remove them.
 <Figure
   alt="The card-body styles with the margin turned off."
   caption="Let’s remove the bottom margin entirely."
-  fluid={props.figures['text-no-bottom-margin-styles']}
+  src={figures['text-no-bottom-margin-styles']}
 />
 
 <Figure
   alt="The card with no space between text and button."
   caption="I’m not a fan."
-  fluid={props.figures['text-no-bottom-margin']}
+  src={figures['text-no-bottom-margin']}
 />
 
 Much worse. How about 10 pixels instead?
@@ -73,13 +71,13 @@ Much worse. How about 10 pixels instead?
 <Figure
   alt="The styles with a bottom-margin of 10px."
   caption="The dev tools let us use any value."
-  fluid={props.figures['text-10px-bottom-margin-styles']}
+  src={figures['text-10px-bottom-margin-styles']}
 />
 
 <Figure
   alt="The card with that 10px space between text and button."
   caption="It’s better, but not as good as the original."
-  fluid={props.figures['text-10px-bottom-margin']}
+  src={figures['text-10px-bottom-margin']}
 />
 
 That’s not very good either. Now that we know what it looks like without this large margin, we can see that it was a good idea in the first place. Let’s look at all this padding around the content next.
@@ -87,7 +85,7 @@ That’s not very good either. Now that we know what it looks like without this 
 <Figure
   alt="The styles of the wrapper around the entire content."
   caption="We’ll only look at the padding here."
-  fluid={props.figures['padding-around-content-styles']}
+  src={figures['padding-around-content-styles']}
 />
 
 Why do they use 34px on the vertical and 36px on the horizontal axis? Why not use 35px for both? I don’t know, but isn’t that interesting. Assuming this wasn’t an accident, someone made this choice intentionally. Huh.
@@ -97,13 +95,13 @@ Let’s remove it.
 <Figure
   alt="The body wrapper styles without the padding."
   caption="Everything else stays as it is."
-  fluid={props.figures['no-padding-around-content-styles']}
+  src={figures['no-padding-around-content-styles']}
 />
 
 <Figure
   alt="The card with no padding around the content."
   caption="This is terrible."
-  fluid={props.figures['no-padding-around-content']}
+  src={figures['no-padding-around-content']}
 />
 
 That’s not good at all. Let’s try 10 pixel instead.
@@ -111,13 +109,13 @@ That’s not good at all. Let’s try 10 pixel instead.
 <Figure
   alt="The padding on the wrapper set to 10px."
   caption="I doubt this’ll be very good."
-  fluid={props.figures['10px-padding-around-content-styles']}
+  src={figures['10px-padding-around-content-styles']}
 />
 
 <Figure
   alt="The card with 10px around the content."
   caption="See, told ya."
-  fluid={props.figures['10px-padding-around-content']}
+  src={figures['10px-padding-around-content']}
 />
 
 Next, how about that part of the heading that says “Conversational”? If uses the typeface Smile Script. Let’s turn that off.
@@ -125,13 +123,13 @@ Next, how about that part of the heading that says “Conversational”? If uses
 <Figure
   alt="The styles of the cursive heading, with the font-family turned off."
   caption="Take a break from smiling, buddy."
-  fluid={props.figures['smile-off-styles']}
+  src={figures['smile-off-styles']}
 />
 
 <Figure
   alt="The card with a sans-serif heading instead of a script looking one."
   caption="I liked it better when it was smiling."
-  fluid={props.figures['smile-off']}
+  src={figures['smile-off']}
 />
 
 Wow, that is **much** worse. Turns out the typeface was essential for giving the cards their tone.

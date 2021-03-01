@@ -5,14 +5,12 @@ excerpt: "Many mockups break when we replace their lorem ipsum with real data. B
 heroAlt: "An overripe banana that is presented with an origami butterfly and flower petals."
 heroCaption: "Make sure your design looks good even with unexpected and unusual content."
 figures:
-  - "./mockup-empty.png"
-  - "./mockup-with-content.png"
-  - "./mockup-with-all-content-visible.png"
-  - "./mockup-with-cleaned-up-content.png"
+  - "mockup-empty.png"
+  - "mockup-with-content.png"
+  - "mockup-with-all-content-visible.png"
+  - "mockup-with-cleaned-up-content.png"
 author: dom-habersack
 ---
-import Figure from '../../src/components/figure'
-
 There is no shortage of beautiful, pixel-perfect design mockups on the web. [dribbble](https://dribbble.com) is full of designs so good it’s intimidating. If a mockup seems _too_ perfect to you, you might be right. Designs built only with “ideal content” in mind could break when faced with real texts and images. By designing with ugly data from the start, we can design more robust layouts.
 
 You can spot an “unrealistically perfect” design if everything in it seems a little too neat. The name of every event shown in a mockup fits into exactly one line of text. Every photo shows a beautiful landscape and is well-lit. Authors have short names like “Jane Doe” and “Henry Smith”. Avatars show attractive people, never anime characters or a person’s black BMW. Comments and reviews begin with “Lorem ipsum”. Addresses are in cities with short names like Sydney or New York, never in [San Pedro y San Pablo Tequixtepec](https://en.wikipedia.org/wiki/San_Pedro_y_San_Pablo_Tequixtepec), [Pfaffenschlag bei Waidhofen an der Thaya](https://en.wikipedia.org/wiki/Pfaffenschlag_bei_Waidhofen), or [Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu](https://en.wikipedia.org/wiki/Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu).
@@ -30,7 +28,7 @@ Let’s assume we wanted to create a theme we could use for conferences. To keep
 <Figure
   alt="Mockup of a page that could be used for conferences"
   caption="Placeholders paint an unrealistic picture of what this could look like later."
-  fluid={props.figures['mockup-empty']}
+  src={figures['mockup-empty']}
 />
 
 This empty layout looks modern and clean. Everything is in its place, and it has a bit of an Apple-y vibe to it. It breaks as soon as we add real, “ugly” data to it:
@@ -38,7 +36,7 @@ This empty layout looks modern and clean. Everything is in its place, and it has
 <Figure
   alt="The previous mockup with realistic data"
   caption="Our mockup breaks when we add realistic content to it."
-  fluid={props.figures['mockup-with-content']}
+  src={figures['mockup-with-content']}
 />
 
 While the first one looks fine, everything else is terrible. Text is overlapping, to the point where many details become unreadable and inaccessible. This design does not work with real data. Now that we know what the content will look like, we can move it around a little to avoid those problems:
@@ -46,7 +44,7 @@ While the first one looks fine, everything else is terrible. Text is overlapping
 <Figure
   alt="An iteration of the broken design"
   caption="We can now move elements around so our design no longer breaks."
-  fluid={props.figures['mockup-with-all-content-visible']}
+  src={figures['mockup-with-all-content-visible']}
 />
 
 Only now that we use real data do we notice more flaws in our design. See how we show the same date on every card? Assuming this is about a multi-day conference, we can turn the date into a subheading. We still need the time of each talk, which we can now combine with the room attendees need to go to:
@@ -54,7 +52,7 @@ Only now that we use real data do we notice more flaws in our design. See how we
 <Figure
   alt="An improvement on the previous iteration"
   caption="We can only fix our design when we know what “real data” looks like."
-  fluid={props.figures['mockup-with-cleaned-up-content']}
+  src={figures['mockup-with-cleaned-up-content']}
 />
 
 There is still more we could do. The point is that we can only tell what changes we need to make if we know what we want to achieve. Ugly data helps us see where our design could break and fix it.

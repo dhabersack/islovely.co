@@ -5,21 +5,19 @@ issue: 52
 heroAlt: "A printed color palette with an eye piece."
 heroCaption: "All this careful planning, and it wasn’t as pretty as I thought it would be."
 figures:
-  - "./button-documentation.png"
+  - "button-documentation.png"
 author: dom-habersack
 related:
   - fat-marker-sketches-are-the-better-mockups
   - stress-test-your-layouts-in-disco-mode
   - fonts-that-make-you-go-agh!iIl1
 ---
-import Figure from '../../src/components/figure'
-
 Now that we know what we want the next version of our product to look like, we can finally start implementing it. Trying to make our lives easier, I am compiling a styleguide we can follow to build the components. The guides look something like this:
 
 <Figure
   alt="An excerpt from our style documentation, detailing  the dimensions, colors, and other attributes of a button."
   caption="An excerpt from our style documentation, detailing  the dimensions, colors, and other attributes of a button."
-  fluid={props.figures['button-documentation']}
+  src={figures['button-documentation']}
 />
 
 The guides show all values that are necessary for the components to look as intended. I was pretty proud of how they came out. Developers won’t have to dig through layers in Figma, possibly missing one or two of these values. It seemed pretty ideal.

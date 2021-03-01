@@ -10,22 +10,15 @@ export default function PostTeaser({
   post,
 }) {
   const {
-    date,
-    frontmatter,
-    hero,
-    permalink,
-  } = post
-
-  const {
     author,
     categories,
+    date,
     excerpt,
+    hero,
     heroAlt,
+    permalink,
     title,
-  } = frontmatter
-
-  const authorName = author.frontmatter.name
-  const avatarFluid = author.avatar.childImageSharp.fluid
+  } = post
 
   return (
     <Card>
@@ -34,7 +27,7 @@ export default function PostTeaser({
           <Image
             alt={heroAlt}
             height="360"
-            src="http://www.fillmurray.com/640/360"
+            src={hero}
             width="640"
           />
         </a>
@@ -63,8 +56,8 @@ export default function PostTeaser({
           </div>
 
           <PostMeta
-            author={authorName}
-            avatar={avatarFluid}
+            author={author.name}
+            avatar={author.avatar}
             date={date}
           />
         </div>

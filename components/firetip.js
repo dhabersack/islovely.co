@@ -1,23 +1,20 @@
 import React from 'react'
-import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 import Card from '../components/card'
 import Tag from '../components/tag'
-import slugify from '../utils/slugify'
+import slugify from '../lib/slugify'
 
-export default function FireTip({
+export default function Firetip({
   firetip,
 }) {
   const {
-    body,
-    frontmatter,
+    content,
     slug,
+    tags,
+    title
   } = firetip
 
-  const {
-    tags,
-    title,
-  } = frontmatter
+  const body = content
 
   return (
     <Card>
@@ -28,9 +25,7 @@ export default function FireTip({
           </a>
         </h2>
 
-        <MDXRenderer>
-          {body}
-        </MDXRenderer>
+        {body}
 
         <div className="flex flex-wrap">
           {tags.map(tag => (

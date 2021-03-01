@@ -10,19 +10,15 @@ export default function ProjectTeaser({
   project,
 }) {
   const {
-    frontmatter,
-    hero,
-    permalink,
-  } = project
-
-  const {
     excerpt,
+    hero,
     heroAlt,
+    permalink,
     revenue,
     stack,
     title,
     url,
-  } = frontmatter
+  } = project
 
   return (
     <Card>
@@ -30,9 +26,9 @@ export default function ProjectTeaser({
         <a href={permalink}>
           <Image
             alt={heroAlt}
-            height="180"
-            src="http://www.fillmurray.com/320/180"
-            width="320"
+            height="360"
+            src={hero}
+            width="640"
           />
         </a>
 

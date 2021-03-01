@@ -1,38 +1,40 @@
 import React from 'react'
-import { graphql } from 'gatsby'
-import { MDXRenderer } from 'gatsby-plugin-mdx'
+import hydrate from 'next-mdx-remote/hydrate'
+import renderToString from 'next-mdx-remote/render-to-string'
 
-import Breakout from '../components/breakout'
-import CoinsIcon from '../icons/coins'
-import Figure from '../components/figure'
-import Layout from '../components/layout'
-import LinkIcon from '../icons/link'
-import MetaTags from '../components/meta-tags'
-import RichPreview from '../components/rich-preview'
-import Stack from '../components/stack'
-import mapFiguresToNamedObject from '../utils/map-figures-to-named-object'
+import Breakout from '../../components/breakout'
+import CoinsIcon from '../../components/icons/coins'
+import Figure from '../../components/figure'
+import Layout from '../../components/layout'
+import LinkIcon from '../../components/icons/link'
+import MetaTags from '../../components/meta-tags'
+import RichPreview from '../../components/rich-preview'
+import Stack from '../../components/stack'
+import { getAllProjects, getProjectBySlug } from '../../lib/api/projects'
 
 export default function Project({
-  data,
+  project,
+  source,
 }) {
-  const {
-    body,
-    frontmatter,
-    hero,
-    permalink,
-    slug,
-  } = data.project
-
   const {
     excerpt,
     figures,
+    hero,
     heroAlt,
     heroCaption,
+    permalink,
     revenue,
+    slug,
     stack,
     title,
     url,
-  } = frontmatter
+  } = project
+
+  const body = hydrate(source, {
+    components: {
+      Figure,
+    }
+  })
 
   return (
     <Layout
@@ -91,13 +93,11 @@ export default function Project({
           alt={heroAlt}
           caption={heroCaption}
           className="m-0 mb-6"
-          fluid={hero.childImageSharp.fluid}
+          src={hero}
         />
       </Breakout>
 
-      <MDXRenderer figures={mapFiguresToNamedObject(figures)}>
-        {body}
-      </MDXRenderer>
+      {body}
 
       <div className="mt-8">
         <Stack stack={stack} />
@@ -106,40 +106,31 @@ export default function Project({
   )
 }
 
-export const pageQuery = graphql`
-  query($slug: String!) {
-    project(
-      slug: {
-        eq: $slug
-      }
-    ) {
-      body
-      frontmatter {
-        excerpt
-        figures {
-          name
-          childImageSharp {
-            fluid(maxWidth: 1008) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
-            }
-          }
-        }
-        heroAlt
-        heroCaption
-        revenue
-        stack
-        title
-        url
-      }
-      hero {
-        childImageSharp {
-          fluid(maxWidth: 1504) {
-            ...GatsbyImageSharpFluid_withWebp_tracedSVG
-          }
-        }
-      }
-      permalink
-      slug
-    }
+export async function getStaticProps({ params }) {
+  const project = await getProjectBySlug(params.slug)
+
+  const source = await renderToString(project.content, {
+    components: {
+      Figure,
+    },
+    scope: {
+      figures: project.figures,
+    },
+  })
+
+  return {
+    props: {
+      project,
+      source,
+    },
   }
-`
+}
+
+export async function getStaticPaths() {
+  const projects = await getAllProjects()
+
+  return {
+    paths: projects.map(({ permalink }) => permalink),
+    fallback: true,
+  }
+}

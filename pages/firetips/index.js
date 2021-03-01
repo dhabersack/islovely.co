@@ -1,19 +1,17 @@
 import React from 'react'
-import { graphql } from 'gatsby'
 
-import Firetip from '../components/firetip'
-import Layout from '../components/layout'
-import MetaTags from '../components/meta-tags'
-import RichPreview from '../components/rich-preview'
-import Tag from '../components/tag'
-import slugify from '../utils/slugify'
+import Firetip from '../../components/firetip'
+import Layout from '../../components/layout'
+import MetaTags from '../../components/meta-tags'
+import RichPreview from '../../components/rich-preview'
+import Tag from '../../components/tag'
+import slugify from '../../lib/slugify'
+import { getAllFiretips } from '../../lib/api/firetips'
 
 export default function Firetips({
-  data,
+  firetips,
 }) {
-  const firetips = data.allFiretip.edges.map(({ node }) => node)
-
-  const tagCounts = firetips.map(firetip => firetip.frontmatter.tags).flat(1).reduce((dictionary, tag) => ({
+  const tagCounts = firetips.map(firetip => firetip.tags).flat(1).reduce((dictionary, tag) => ({
     ...dictionary,
     [tag]: (dictionary[tag] || 0) + 1
   }), {})
@@ -67,24 +65,12 @@ export default function Firetips({
   )
 }
 
-export const pageQuery = graphql`
-  query {
-    allFiretip(
-      sort: {
-        fields: date,
-        order: DESC
-      }
-    ) {
-      edges {
-        node {
-          body
-          frontmatter {
-            tags
-            title
-          }
-          slug
-        }
-      }
-    }
+export async function getStaticProps() {
+  const firetips = await getAllFiretips()
+
+  return {
+    props: {
+      firetips,
+    },
   }
-`
+}

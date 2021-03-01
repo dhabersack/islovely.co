@@ -23,7 +23,7 @@ export default function NewsletterTeaser({
           <Image
             alt={heroAlt}
             height="72"
-            src="http://www.fillmurray.com/180/90"
+            src={hero}
             width="128"
           />
         </a>

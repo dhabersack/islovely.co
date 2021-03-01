@@ -9,7 +9,7 @@ export default function ProjectTeasers({
   return (
     <Grid>
       {projects.map(project => (
-        <React.Fragment key={`project-teaser-${project.id}`}>
+        <React.Fragment key={`project-teaser-${project.slug}`}>
           <ProjectTeaser project={project} />
         </React.Fragment>
       ))}
