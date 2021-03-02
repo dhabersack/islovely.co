@@ -1,11 +1,11 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import Breakout from '../components/breakout'
-import CourseTeasers from '../components/course-teasers'
-import Layout from '../components/layout'
-import MetaTags from '../components/meta-tags'
-import RichPreview from '../components/rich-preview'
+import Breakout from '@/components/breakout'
+import CourseTeasers from '@/components/course-teasers'
+import Layout from '@/components/layout'
+import MetaTags from '@/components/meta-tags'
+import RichPreview from '@/components/rich-preview'
 
 export default function Courses({
   data,

@@ -2,11 +2,11 @@ import React from 'react'
 import hydrate from 'next-mdx-remote/hydrate'
 import renderToString from 'next-mdx-remote/render-to-string'
 
-import Figure from '../components/figure'
-import Layout from '../components/layout'
-import MetaTags from '../components/meta-tags'
-import RichPreview from '../components/rich-preview'
-import { getAllPages, getPageBySlug } from '../lib/api/pages'
+import Figure from '@/components/figure'
+import Layout from '@/components/layout'
+import MetaTags from '@/components/meta-tags'
+import RichPreview from '@/components/rich-preview'
+import { getAllPages, getPageBySlug } from '@/lib/api/pages'
 
 export default function Page({
   page,

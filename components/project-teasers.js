@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Grid from './grid'
-import ProjectTeaser from './project-teaser'
+import Grid from '@/components/grid'
+import ProjectTeaser from '@/components/project-teaser'
 
 export default function ProjectTeasers({
   projects,

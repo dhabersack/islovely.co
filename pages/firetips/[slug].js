@@ -2,12 +2,12 @@ import React from 'react'
 import hydrate from 'next-mdx-remote/hydrate'
 import renderToString from 'next-mdx-remote/render-to-string'
 
-import Layout from '../../components/layout'
-import MetaTags from '../../components/meta-tags'
-import RichPreview from '../../components/rich-preview'
-import Tag from '../../components/tag'
-import slugify from '../../lib/slugify'
-import { getAllFiretips, getFiretipBySlug } from '../../lib/api/firetips'
+import Layout from '@/components/layout'
+import MetaTags from '@/components/meta-tags'
+import RichPreview from '@/components/rich-preview'
+import Tag from '@/components/tag'
+import slugify from '@/lib/slugify'
+import { getAllFiretips, getFiretipBySlug } from '@/lib/api/firetips'
 
 export default function Firetip({
   firetip,

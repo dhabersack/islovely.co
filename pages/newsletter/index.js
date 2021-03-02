@@ -1,13 +1,13 @@
 import React from 'react'
 
-import Card from '../components/card'
-import CircledCheckmark from '../components/icons/circled-checkmark'
-import ConvertkitForm from '../components/convertkit-form'
-import Layout from '../components/layout'
-import MetaTags from '../components/meta-tags'
-import NewsletterTeaser from '../components/newsletter-teaser'
-import RichPreview from '../components/rich-preview'
-import { getFeaturedNewsletters } from '../lib/api/newsletters'
+import Card from '@/components/card'
+import CircledCheckmark from '@/components/icons/circled-checkmark'
+import ConvertkitForm from '@/components/convertkit-form'
+import Layout from '@/components/layout'
+import MetaTags from '@/components/meta-tags'
+import NewsletterTeaser from '@/components/newsletter-teaser'
+import RichPreview from '@/components/rich-preview'
+import { getFeaturedNewsletters } from '@/lib/api/newsletters'
 
 const BENEFITS = [
   'tips on design and development you can use immediately',

@@ -1,10 +1,10 @@
 import React from 'react'
 
-import Layout from '../../../components/layout'
-import MetaTags from '../../../components/meta-tags'
-import NewsletterTeaser from '../../../components/newsletter-teaser'
-import RichPreview from '../../../components/rich-preview'
-import { getAllNewsletters } from '../../../lib/api/newsletters'
+import Layout from '@/components/layout'
+import MetaTags from '@/components/meta-tags'
+import NewsletterTeaser from '@/components/newsletter-teaser'
+import RichPreview from '@/components/rich-preview'
+import { getAllNewsletters } from '@/lib/api/newsletters'
 
 export default function Archive({
   newsletters,

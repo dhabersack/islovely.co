@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { FormspreeProvider } from '@formspree/react'
 
 import CookieConsentContext from '../src/contexts/cookie-consent'
-import CookieConsent from './cookie-consent'
+import CookieConsent from '@/components/cookie-consent'
 
 export default function Application({
   children,

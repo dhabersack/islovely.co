@@ -1,9 +1,9 @@
 import React from 'react'
 
-import ContactForm from '../components/contact-form'
-import Layout from '../components/layout'
-import MetaTags from '../components/meta-tags'
-import RichPreview from '../components/rich-preview'
+import ContactForm from '@/components/contact-form'
+import Layout from '@/components/layout'
+import MetaTags from '@/components/meta-tags'
+import RichPreview from '@/components/rich-preview'
 
 export default function Contact() {
   return (

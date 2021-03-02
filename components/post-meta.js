@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-import formatDate from '../lib/format-date'
+import formatDate from '@/lib/format-date'
 
 export default function PostMeta({
   author,

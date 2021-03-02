@@ -1,11 +1,11 @@
 import React from 'react'
 
-import Breakout from '../../components/breakout'
-import Layout from '../../components/layout'
-import MetaTags from '../../components/meta-tags'
-import ProjectTeasers from '../../components/project-teasers'
-import RichPreview from '../../components/rich-preview'
-import { getAllProjects } from '../../lib/api/projects'
+import Breakout from '@/components/breakout'
+import Layout from '@/components/layout'
+import MetaTags from '@/components/meta-tags'
+import ProjectTeasers from '@/components/project-teasers'
+import RichPreview from '@/components/rich-preview'
+import { getAllProjects } from '@/lib/api/projects'
 
 export default function Projects({
   projects,

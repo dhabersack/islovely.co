@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Grid from './grid'
-import PostTeaser from './post-teaser'
+import Grid from '@/components/grid'
+import PostTeaser from '@/components/post-teaser'
 
 export default function PostTeasers({
   posts,

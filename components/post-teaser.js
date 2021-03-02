@@ -1,10 +1,10 @@
 import React from 'react'
 import Image from 'next/image'
 
-import Card from './card'
-import PostMeta from './post-meta'
-import Tag from './tag'
-import slugify from '../lib/slugify'
+import Card from '@/components/card'
+import PostMeta from '@/components/post-meta'
+import Tag from '@/components/tag'
+import slugify from '@/lib/slugify'
 
 export default function PostTeaser({
   post,

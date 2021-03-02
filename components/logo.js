@@ -1,6 +1,6 @@
 import React from 'react'
 
-import getLogoForName from '../lib/get-logo-for-name'
+import getLogoForName from '@/lib/get-logo-for-name'
 
 export default function Logo({
   name,

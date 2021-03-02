@@ -1,12 +1,12 @@
 import React from 'react'
 
-import Firetip from '../../components/firetip'
-import Layout from '../../components/layout'
-import MetaTags from '../../components/meta-tags'
-import RichPreview from '../../components/rich-preview'
-import Tag from '../../components/tag'
-import slugify from '../../lib/slugify'
-import { getAllFiretips } from '../../lib/api/firetips'
+import Firetip from '@/components/firetip'
+import Layout from '@/components/layout'
+import MetaTags from '@/components/meta-tags'
+import RichPreview from '@/components/rich-preview'
+import Tag from '@/components/tag'
+import slugify from '@/lib/slugify'
+import { getAllFiretips } from '@/lib/api/firetips'
 
 export default function Firetips({
   firetips,

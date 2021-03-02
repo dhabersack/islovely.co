@@ -1,8 +1,8 @@
 import React from 'react'
 
-import Card from '../components/card'
-import Tag from '../components/tag'
-import slugify from '../lib/slugify'
+import Card from '@/components/card'
+import Tag from '@/components/tag'
+import slugify from '@/lib/slugify'
 
 export default function Firetip({
   firetip,

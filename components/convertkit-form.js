@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 
-import RequiresCookieConsent from './requires-cookie-consent'
+import RequiresCookieConsent from '@/components/requires-cookie-consent'
 
 export default function ConvertkitForm({
   cta,

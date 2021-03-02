@@ -1,7 +1,7 @@
 import React from 'react'
 
-import CourseTeaser from './course-teaser'
-import Grid from './grid'
+import CourseTeaser from '@/components/course-teaser'
+import Grid from '@/components/grid'
 
 export default function CourseTeasers({
   courses,

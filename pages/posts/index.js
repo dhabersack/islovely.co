@@ -1,11 +1,11 @@
 import React from 'react'
 
-import Breakout from '../../components/breakout'
-import Layout from '../../components/layout'
-import MetaTags from '../../components/meta-tags'
-import PostTeasers from '../../components/post-teasers'
-import RichPreview from '../../components/rich-preview'
-import { getAllPosts } from '../../lib/api/posts'
+import Breakout from '@/components/breakout'
+import Layout from '@/components/layout'
+import MetaTags from '@/components/meta-tags'
+import PostTeasers from '@/components/post-teasers'
+import RichPreview from '@/components/rich-preview'
+import { getAllPosts } from '@/lib/api/posts'
 
 export default function Posts({
   posts,

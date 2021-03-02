@@ -2,15 +2,14 @@ import React from 'react'
 import hydrate from 'next-mdx-remote/hydrate'
 import renderToString from 'next-mdx-remote/render-to-string'
 
-import Breakout from '../../../components/breakout'
-import Figure from '../../../components/figure'
-import Layout from '../../../components/layout'
-import MetaTags from '../../../components/meta-tags'
-import NewsletterTeaser from '../../../components/newsletter-teaser'
-import RichPreview from '../../../components/rich-preview'
-import PostMeta from '../../../components/post-meta'
-import mapFiguresToNamedObject from '../../../lib/map-figures-to-named-object'
-import { getAllNewsletters, getNewsletterBySlug } from '../../../lib/api/newsletters'
+import Breakout from '@/components/breakout'
+import Figure from '@/components/figure'
+import Layout from '@/components/layout'
+import MetaTags from '@/components/meta-tags'
+import NewsletterTeaser from '@/components/newsletter-teaser'
+import RichPreview from '@/components/rich-preview'
+import PostMeta from '@/components/post-meta'
+import { getAllNewsletters, getNewsletterBySlug } from '@/lib/api/newsletters'
 
 export default function Newsletter({
   newsletter,
