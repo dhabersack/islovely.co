@@ -1,6 +1,7 @@
 import React from 'react'
 import hydrate from 'next-mdx-remote/hydrate'
 import renderToString from 'next-mdx-remote/render-to-string'
+import prism from 'remark-prism'
 
 import Breakout from '../../components/breakout'
 import Figure from '../../components/figure'
@@ -114,6 +115,9 @@ export async function getStaticProps({ params }) {
     scope: {
       attachments: post.attachments,
       figures: post.figures,
+    },
+    mdxOptions: {
+      remarkPlugins: [prism],
     },
   })
 

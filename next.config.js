@@ -3,7 +3,9 @@ const images = require('remark-images')
 const withMDX = require('@next/mdx')({
   extensions: /\.mdx?$/,
   options: {
-    remarkPlugins: [images],
+    remarkPlugins: [
+      images,
+    ],
   },
 })
 
