@@ -1,52 +1,39 @@
-import React from 'react'
-import hydrate from 'next-mdx-remote/hydrate'
-import renderToString from 'next-mdx-remote/render-to-string'
-
 import Breakout from '@/components/breakout'
 import CoinsIcon from '@/components/icons/coins'
-import Figure from '@/components/figure'
 import Layout from '@/components/layout'
 import LinkIcon from '@/components/icons/link'
 import MetaTags from '@/components/meta-tags'
 import RichPreview from '@/components/rich-preview'
 import Stack from '@/components/stack'
 import { getAllProjects, getProjectBySlug } from '@/lib/api/projects'
+import hydrateMDXSource from '@/lib/hydrate-mdx-source'
 
 export default function Project({
-  project,
-  source,
+  excerpt,
+  hero,
+  heroAlt,
+  heroCaption,
+  mdxSource,
+  permalink,
+  revenue,
+  slug,
+  stack,
+  title,
+  url,
 }) {
-  const {
-    excerpt,
-    figures,
-    hero,
-    heroAlt,
-    heroCaption,
-    permalink,
-    revenue,
-    slug,
-    stack,
-    title,
-    url,
-  } = project
+  const body = hydrateMDXSource(mdxSource)
 
-  const body = hydrate(source, {
-    components: {
-      Figure,
+  const breadcrumbs = [
+    {
+      label: 'Projects',
+      url: '/projects'
+    }, {
+      label: title
     }
-  })
+  ]
 
   return (
-    <Layout
-      breadcrumbs={[
-        {
-          label: 'Projects',
-          url: '/projects'
-        }, {
-          label: title
-        }
-      ]}
-    >
+    <Layout breadcrumbs={breadcrumbs}>
       <MetaTags
         description={excerpt}
         title={title}
@@ -109,20 +96,8 @@ export default function Project({
 export async function getStaticProps({ params }) {
   const project = await getProjectBySlug(params.slug)
 
-  const source = await renderToString(project.content, {
-    components: {
-      Figure,
-    },
-    scope: {
-      figures: project.figures,
-    },
-  })
-
   return {
-    props: {
-      project,
-      source,
-    },
+    props: project,
   }
 }
 
@@ -130,7 +105,11 @@ export async function getStaticPaths() {
   const projects = await getAllProjects()
 
   return {
-    paths: projects.map(({ permalink }) => permalink),
-    fallback: true,
+    fallback: false,
+    paths: projects.map(({ slug }) => ({
+      params: {
+        slug,
+      },
+    })),
   }
 }

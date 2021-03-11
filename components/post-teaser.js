@@ -4,7 +4,6 @@ import Image from 'next/image'
 import Card from '@/components/card'
 import PostMeta from '@/components/post-meta'
 import Tag from '@/components/tag'
-import slugify from '@/lib/slugify'
 
 export default function PostTeaser({
   post,
@@ -27,6 +26,7 @@ export default function PostTeaser({
           <Image
             alt={heroAlt}
             height="360"
+            layout="responsive"
             src={hero}
             width="640"
           />
@@ -44,11 +44,14 @@ export default function PostTeaser({
           </p>
 
           <div className="flex flex-wrap mb-1.5">
-            {categories.map(category => (
-              <React.Fragment key={category}>
+            {categories.map(({
+              permalink,
+              title,
+            }) => (
+              <React.Fragment key={`category-${title}`}>
                 <div className="mb-1 mr-1.5">
-                  <Tag href={`/categories/${slugify(category)}`}>
-                    {category}
+                  <Tag href={permalink}>
+                    {title}
                   </Tag>
                 </div>
               </React.Fragment>

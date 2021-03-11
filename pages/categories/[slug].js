@@ -5,29 +5,28 @@ import Layout from '@/components/layout'
 import MetaTags from '@/components/meta-tags'
 import PostTeasers from '@/components/post-teasers'
 import RichPreview from '@/components/rich-preview'
-import slugify from '@/lib/slugify'
 import { getPostsByCategory } from '@/lib/api/posts'
 
 export default function Category({
   category,
   posts,
 }) {
+  const breadcrumbs = [
+    {
+      label: 'Categories',
+      url: '/categories'
+    }, {
+      label: category
+    }
+  ]
+
   return (
-    <Layout
-      breadcrumbs={[
-        {
-          label: 'Categories',
-          url: '/categories'
-        }, {
-          label: category
-        }
-      ]}
-    >
-      <MetaTags title={`Posts in “${category}”`} />
+    <Layout breadcrumbs={breadcrumbs}>
+      <MetaTags title={`Posts in “${category.title}”`} />
 
       <RichPreview
-        permalink={`/categories/${slugify(category)}`}
-        title={`Posts in “${category}”`}
+        permalink={category.permalink}
+        title={`Posts in “${category.title}”`}
       />
 
       <h1>
@@ -42,7 +41,7 @@ export default function Category({
 }
 
 export async function getStaticProps({ params }) {
-  const posts = getPostsByCategory(params.category)
+  const posts = await getPostsByCategory(params.category)
 
   return {
     props: {

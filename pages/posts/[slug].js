@@ -1,8 +1,3 @@
-import React from 'react'
-import hydrate from 'next-mdx-remote/hydrate'
-import renderToString from 'next-mdx-remote/render-to-string'
-import prism from 'remark-prism'
-
 import Breakout from '@/components/breakout'
 import Figure from '@/components/figure'
 import Layout from '@/components/layout'
@@ -11,44 +6,34 @@ import PostMeta from '@/components/post-meta'
 import RichPreview from '@/components/rich-preview'
 import Tag from '@/components/tag'
 import { getAllPosts, getPostBySlug } from '@/lib/api/posts'
-import slugify from '@/lib/slugify'
+import hydrateMDXSource from '@/lib/hydrate-mdx-source'
 
 export default function Post({
-  post,
-  source,
+  author,
+  categories,
+  date,
+  excerpt,
+  hero,
+  heroAlt,
+  heroCaption,
+  mdxSource,
+  title,
+  slug,
+  permalink,
 }) {
-  const {
-    attachments,
-    author,
-    categories,
-    date,
-    excerpt,
-    figures,
-    hero,
-    heroAlt,
-    heroCaption,
-    title,
-    slug,
-    permalink,
-  } = post
+  const body = hydrateMDXSource(mdxSource)
 
-  const body = hydrate(source, {
-    components: {
-      Figure,
+  const breadcrumbs = [
+    {
+      label: 'Blog',
+      url: '/posts'
+    }, {
+      label: title
     }
-  })
+  ]
 
   return (
-    <Layout
-      breadcrumbs={[
-        {
-          label: 'Blog',
-          url: '/posts'
-        }, {
-          label: title
-        }
-      ]}
-    >
+    <Layout breadcrumbs={breadcrumbs}>
       <MetaTags
         description={excerpt}
         title={title}
@@ -91,14 +76,18 @@ export default function Post({
       </div>
 
       <div className="flex flex-wrap">
-        {categories.map(category => (
-          <React.Fragment key={`category-${category}`}>
-            <div className="mb-1 mr-1.5">
-              <Tag href={`/categories/${slugify(category)}`}>
-                {category}
-              </Tag>
-            </div>
-          </React.Fragment>
+        {categories.map(({
+          permalink,
+          title,
+        }) => (
+          <div
+            className="mb-1 mr-1.5"
+            key={`category-${title}`}
+          >
+            <Tag href={permalink}>
+              {title}
+            </Tag>
+          </div>
         ))}
       </div>
     </Layout>
@@ -108,24 +97,8 @@ export default function Post({
 export async function getStaticProps({ params }) {
   const post = await getPostBySlug(params.slug)
 
-  const source = await renderToString(post.content, {
-    components: {
-      Figure,
-    },
-    scope: {
-      attachments: post.attachments,
-      figures: post.figures,
-    },
-    mdxOptions: {
-      remarkPlugins: [prism],
-    },
-  })
-
   return {
-    props: {
-      post,
-      source,
-    },
+    props: post,
   }
 }
 
@@ -133,7 +106,11 @@ export async function getStaticPaths() {
   const posts = await getAllPosts()
 
   return {
-    paths: posts.map(({ permalink }) => permalink),
-    fallback: true,
+    fallback: false,
+    paths: posts.map(({ slug }) => ({
+      params: {
+        slug,
+      },
+    })),
   }
 }

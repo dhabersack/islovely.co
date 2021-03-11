@@ -1,5 +1,3 @@
-import React from 'react'
-
 import Layout from '@/components/layout'
 import MetaTags from '@/components/meta-tags'
 import NewsletterTeaser from '@/components/newsletter-teaser'
@@ -9,17 +7,17 @@ import { getAllNewsletters } from '@/lib/api/newsletters'
 export default function Archive({
   newsletters,
 }) {
+  const breadcrumbs = [
+    {
+      label: 'Newsletter',
+      url: '/newsletter'
+    }, {
+      label: 'Archive',
+    }
+  ]
+
   return (
-    <Layout
-      breadcrumbs={[
-        {
-          label: 'Newsletter',
-          url: '/newsletter'
-        }, {
-          label: 'Archive',
-        }
-      ]}
-    >
+    <Layout breadcrumbs={breadcrumbs}>
       <MetaTags
         description="Read some of my previous newsletters. Sign up to get them delivered to your inbox."
         title="Newsletter archive"
@@ -41,9 +39,10 @@ export default function Archive({
 
       <div className="grid gap-12 grid-cols-1">
         {newsletters.map(newsletter => (
-          <React.Fragment key={`newsletter-${newsletter.slug}`}>
-            <NewsletterTeaser newsletter={newsletter} />
-          </React.Fragment>
+          <NewsletterTeaser
+            key={`newsletter-${newsletter.slug}`}
+            newsletter={newsletter}
+          />
         ))}
       </div>
     </Layout>

@@ -1,5 +1,3 @@
-import React from 'react'
-
 import Breakout from '@/components/breakout'
 import Layout from '@/components/layout'
 import MetaTags from '@/components/meta-tags'
@@ -10,14 +8,14 @@ import { getAllPosts } from '@/lib/api/posts'
 export default function Posts({
   posts,
 }) {
+  const breadcrumbs = [
+    {
+      label: 'Blog'
+    }
+  ]
+
   return (
-    <Layout
-      breadcrumbs={[
-        {
-          label: 'Blog'
-        }
-      ]}
-    >
+    <Layout breadcrumbs={breadcrumbs}>
       <MetaTags
         title="Blog"
         description="I write about design, development, and productivity. My weekly newsletter contains shorter pieces. Read all previous issues in the archive."

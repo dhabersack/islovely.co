@@ -27,6 +27,7 @@ export default function ProjectTeaser({
           <Image
             alt={heroAlt}
             height="360"
+            layout="responsive"
             src={hero}
             width="640"
           />

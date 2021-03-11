@@ -1,5 +1,3 @@
-import React from 'react'
-
 import Firetip from '@/components/firetip'
 import Layout from '@/components/layout'
 import MetaTags from '@/components/meta-tags'
@@ -11,20 +9,20 @@ export default function Tag({
   firetips,
   tag,
 }) {
+  const breadcrumbs = [
+    {
+      label: 'Fire tips',
+      url: '/firetips'
+    }, {
+      label: 'By tag',
+      url: '/firetips/tags'
+    }, {
+      label: tag
+    }
+  ]
+
   return (
-    <Layout
-      breadcrumbs={[
-        {
-          label: 'Fire tips',
-          url: '/firetips'
-        }, {
-          label: 'By tag',
-          url: '/firetips/tags'
-        }, {
-          label: tag
-        }
-      ]}
-    >
+    <Layout breadcrumbs={breadcrumbs}>
       <MetaTags title={`Fire tips tagged “${tag}”`} />
 
       <RichPreview
@@ -38,9 +36,10 @@ export default function Tag({
 
       <div className="grid gap-6">
         {firetips.map(firetip => (
-          <React.Fragment key={`firetip-${firetip.slug}`}>
-            <Firetip firetip={firetip} />
-          </React.Fragment>
+          <Firetip
+            firetip={firetip}
+            key={`firetip-${firetip.slug}`}
+          />
         ))}
       </div>
     </Layout>
@@ -64,7 +63,11 @@ export async function getStaticPaths() {
   const tags = [...new Set(firetips.map(firetip => firetip.tags).flat(1))]
 
   return {
-    paths: tags.map(tag => `/firetips/tags/${slugify(tag)}`),
+    paths: tags.map(({ slug }) => ({
+      params: {
+        slug,
+      },
+    })),
     fallback: true,
   }
 }

@@ -6,14 +6,14 @@ import MetaTags from '@/components/meta-tags'
 import RichPreview from '@/components/rich-preview'
 
 export default function Contact() {
+  const breadcrumbs = [
+    {
+      label: 'Contact'
+    }
+  ]
+
   return (
-    <Layout
-      breadcrumbs={[
-        {
-          label: 'Contact'
-        }
-      ]}
-    >
+    <Layout breadcrumbs={breadcrumbs}>
       <MetaTags
         description="Get in touch if you have a project you need help with!"
         title="Contact"

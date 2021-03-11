@@ -12,6 +12,7 @@ export default function Figure({
       <Image
         alt={alt}
         height="810"
+        layout="responsive"
         src={src}
         width="1440"
       />

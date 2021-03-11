@@ -8,10 +8,8 @@ import RichPreview from '@/components/rich-preview'
 import slugify from '@/utils/slugify'
 
 export default ({
-  data,
+  firetips,
 }) => {
-  const firetips = data.allFiretip.edges.map(({ node }) => node)
-
   const tags = [
     ...new Set(firetips.map(({ frontmatter }) => frontmatter.tags).flat())
   ].sort((a, b) => a.toLowerCase() > b.toLowerCase())
@@ -62,6 +60,16 @@ export default ({
       ))}
     </Layout>
   )
+}
+
+export async function getStaticProps() {
+  const firetips = getFiretipsGroupedByTag()
+
+  return {
+    props: {
+      firetips,
+    }
+  }
 }
 
 export const pageQuery = graphql`

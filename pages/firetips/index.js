@@ -5,7 +5,6 @@ import Layout from '@/components/layout'
 import MetaTags from '@/components/meta-tags'
 import RichPreview from '@/components/rich-preview'
 import Tag from '@/components/tag'
-import slugify from '@/lib/slugify'
 import { getAllFiretips } from '@/lib/api/firetips'
 
 export default function Firetips({
@@ -43,11 +42,14 @@ export default function Firetips({
       </h1>
 
       <div className="flex flex-wrap mb-6">
-        {tagsSortedByCount.map(tag => (
+        {tagsSortedByCount.map(({
+          permalink,
+          title,
+        }) => (
           <React.Fragment key={`tag-${tag}`}>
             <div className="flex items-center mb-1.5 mr-2.5">
-              <Tag href={`/firetips/tags/${slugify(tag)}`}>
-                {tag}
+              <Tag href={permalink}>
+                {title}
               </Tag>&nbsp;<span className="text-gray-500 text-xs dark:text-gray-400">&times; {tagCounts[tag]}</span>
             </div>
           </React.Fragment>

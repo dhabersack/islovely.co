@@ -1,7 +1,3 @@
-import React from 'react'
-import hydrate from 'next-mdx-remote/hydrate'
-import renderToString from 'next-mdx-remote/render-to-string'
-
 import Breakout from '@/components/breakout'
 import Figure from '@/components/figure'
 import Layout from '@/components/layout'
@@ -10,46 +6,39 @@ import NewsletterTeaser from '@/components/newsletter-teaser'
 import RichPreview from '@/components/rich-preview'
 import PostMeta from '@/components/post-meta'
 import { getAllNewsletters, getNewsletterBySlug } from '@/lib/api/newsletters'
+import hydrateMDXSource from '@/lib/hydrate-mdx-source'
 
 export default function Newsletter({
-  newsletter,
-  source,
+  author,
+  date,
+  excerpt,
+  hero,
+  heroAlt,
+  heroCaption,
+  mdxSource,
+  permalink,
+  related,
+  slug,
+  title,
 }) {
-  const {
-    author,
-    date,
-    excerpt,
-    hero,
-    heroAlt,
-    heroCaption,
-    permalink,
-    related,
-    slug,
-    title,
-  } = newsletter
+  const body = hydrateMDXSource(mdxSource)
+
+  const breadcrumbs = [
+    {
+      label: 'Newsletter',
+      url: '/newsletter'
+    }, {
+      label: 'Archive',
+      url: '/newsletter/archive'
+    }, {
+      label: title
+    }
+  ]
 
   const hasRelatedIssues = related?.length > 0
 
-  const body = hydrate(source, {
-    components: {
-      Figure,
-    }
-  })
-
   return (
-    <Layout
-      breadcrumbs={[
-        {
-          label: 'Newsletter',
-          url: '/newsletter'
-        }, {
-          label: 'Archive',
-          url: '/newsletter/archive'
-        }, {
-          label: title
-        }
-      ]}
-    >
+    <Layout breadcrumbs={breadcrumbs}>
       <MetaTags
         description={excerpt}
         title={title}
@@ -95,9 +84,10 @@ export default function Newsletter({
 
           <div className="grid gap-12 grid-cols-1">
             {related.map(newsletter => (
-              <React.Fragment key={`newsletter-${newsletter.slug}`}>
-                <NewsletterTeaser newsletter={newsletter} />
-              </React.Fragment>
+              <NewsletterTeaser
+                key={`newsletter-${newsletter.slug}`}
+                newsletter={newsletter}
+              />
             ))}
           </div>
         </div>
@@ -109,20 +99,8 @@ export default function Newsletter({
 export async function getStaticProps({ params }) {
   const newsletter = await getNewsletterBySlug(params.slug)
 
-  const source = await renderToString(newsletter.content, {
-    components: {
-      Figure,
-    },
-    scope: {
-      figures: newsletter.figures,
-    },
-  })
-
   return {
-    props: {
-      newsletter,
-      source,
-    },
+    props: newsletter,
   }
 }
 
@@ -130,7 +108,11 @@ export async function getStaticPaths() {
   const newsletters = await getAllNewsletters()
 
   return {
-    paths: newsletters.map(({ permalink }) => permalink),
-    fallback: true,
+    fallback: false,
+    paths: newsletters.map(({ slug }) => ({
+      params: {
+        slug,
+      },
+    })),
   }
 }

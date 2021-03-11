@@ -1,5 +1,3 @@
-import React from 'react'
-
 import Card from '@/components/card'
 import CircledCheckmark from '@/components/icons/circled-checkmark'
 import ConvertkitForm from '@/components/convertkit-form'
@@ -18,16 +16,16 @@ const BENEFITS = [
 ]
 
 export default function Newsletter({
-  newsletters,
+  featuredNewsletters,
 }) {
+  const breadcrumbs = [
+    {
+      label: 'Newsletter'
+    }
+  ]
+
   return (
-    <Layout
-      breadcrumbs={[
-        {
-          label: 'Newsletter'
-        }
-      ]}
-    >
+    <Layout breadcrumbs={breadcrumbs}>
       <MetaTags
         description="Weekly tips on design, development, and working smarter."
         title="Newsletter"
@@ -50,17 +48,18 @@ export default function Newsletter({
 
       <ul className="list-none my-6 p-0 space-y-3">
         {BENEFITS.map(listItem => (
-          <React.Fragment key={`newsletter-benefit-${listItem}`}>
-            <li className="flex m-0">
-              <div className="flex-shrink-0 h-6 mr-1 text-green-300 w-6 dark:text-green-500">
-                <CircledCheckmark />
-              </div>
+          <li
+            className="flex m-0"
+            key={`newsletter-benefit-${listItem}`}
+          >
+            <div className="flex-shrink-0 h-6 mr-1 text-green-300 w-6 dark:text-green-500">
+              <CircledCheckmark />
+            </div>
 
-              <span className="text-base">
-                {listItem}
-              </span>
-            </li>
-          </React.Fragment>
+            <span className="text-base">
+              {listItem}
+            </span>
+          </li>
         ))}
       </ul>
 
@@ -85,10 +84,11 @@ export default function Newsletter({
       </h2>
 
       <div className="grid gap-12 grid-cols-1 mb-8">
-        {newsletters.map(newsletter => (
-          <React.Fragment key={`newsletter-${newsletter.slug}`}>
-            <NewsletterTeaser newsletter={newsletter} />
-          </React.Fragment>
+        {featuredNewsletters.map(newsletter => (
+          <NewsletterTeaser
+            key={`newsletter-${newsletter.slug}`}
+            newsletter={newsletter}
+          />
         ))}
       </div>
 
@@ -99,10 +99,12 @@ export default function Newsletter({
   )
 }
 
-export const getStaticProps = async () => {
+export async function getStaticProps() {
+  const featuredNewsletters = await getFeaturedNewsletters()
+
   return {
     props: {
-      newsletters: await getFeaturedNewsletters(),
+      featuredNewsletters,
     },
   }
 }

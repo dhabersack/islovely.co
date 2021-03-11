@@ -1,38 +1,25 @@
-import React from 'react'
-import hydrate from 'next-mdx-remote/hydrate'
-import renderToString from 'next-mdx-remote/render-to-string'
-
-import Figure from '@/components/figure'
 import Layout from '@/components/layout'
 import MetaTags from '@/components/meta-tags'
 import RichPreview from '@/components/rich-preview'
 import { getAllPages, getPageBySlug } from '@/lib/api/pages'
+import hydrateMDXSource from '@/lib/hydrate-mdx-source'
 
 export default function Page({
-  page,
-  source,
+  description,
+  mdxSource,
+  permalink,
+  title,
 }) {
-  const {
-    description,
-    figures,
-    permalink,
-    title,
-  } = page
+  const body = hydrateMDXSource(mdxSource)
 
-  const body = hydrate(source, {
-    components: {
-      Figure,
+  const breadcrumbs = [
+    {
+      label: title
     }
-  })
+  ]
 
   return (
-    <Layout
-      breadcrumbs={[
-        {
-          label: title
-        }
-      ]}
-    >
+    <Layout breadcrumbs={breadcrumbs}>
       <MetaTags
         description={description}
         title={title}
@@ -56,28 +43,20 @@ export default function Page({
 export async function getStaticProps({ params }) {
   const page = await getPageBySlug(params.slug)
 
-  const source = await renderToString(page.content, {
-    components: {
-      Figure,
-    },
-    scope: {
-      figures: page.figures,
-    }
-  })
-
   return {
-    props: {
-      page,
-      source,
-    },
+    props: page,
   }
 }
 
 export async function getStaticPaths() {
-  const allPages = await getAllPages()
+  const pages = await getAllPages()
 
   return {
-    paths: allPages.map(page => page.permalink),
-    fallback: true,
+    fallback: false,
+    paths: pages.map(({ slug }) => ({
+      params: {
+        slug,
+      },
+    })),
   }
 }

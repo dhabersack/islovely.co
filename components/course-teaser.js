@@ -72,17 +72,18 @@ export default function CourseTeaser({
             Icon,
             value,
           }]) => value && (
-            <React.Fragment key={`meta-${type}`}>
-              <div className="flex items-center space-x-1">
-                <div className="h-6 w-6 dark:text-gray-400">
-                  <Icon />
-                </div>
-
-                <span>
-                  <strong>{value}</strong> {type}
-                </span>
+            <div
+              className="flex items-center space-x-1"
+              key={`meta-${type}`}
+            >
+              <div className="h-6 w-6 dark:text-gray-400">
+                <Icon />
               </div>
-            </React.Fragment>
+
+              <span>
+                <strong>{value}</strong> {type}
+              </span>
+            </div>
           ))}
         </footer>
       </article>
