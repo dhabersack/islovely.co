@@ -1,36 +1,35 @@
-import React from 'react'
-
 import Breakout from '@/components/breakout'
 import Layout from '@/components/layout'
 import MetaTags from '@/components/meta-tags'
 import PostTeasers from '@/components/post-teasers'
 import RichPreview from '@/components/rich-preview'
-import { getPostsByCategory } from '@/lib/api/posts'
+import { getAllCategories, getCategoryWithPostsBySlug } from '@/lib/api/post-categories'
 
 export default function Category({
-  category,
+  permalink,
   posts,
+  title,
 }) {
   const breadcrumbs = [
     {
       label: 'Categories',
       url: '/categories'
     }, {
-      label: category
+      label: title,
     }
   ]
 
   return (
     <Layout breadcrumbs={breadcrumbs}>
-      <MetaTags title={`Posts in “${category.title}”`} />
+      <MetaTags title={`Posts in “${title}”`} />
 
       <RichPreview
-        permalink={category.permalink}
-        title={`Posts in “${category.title}”`}
+        permalink={permalink}
+        title={`Posts in “${title}”`}
       />
 
       <h1>
-        Posts in “{category}”
+        Posts in “{title}”
       </h1>
 
       <Breakout>
@@ -41,19 +40,22 @@ export default function Category({
 }
 
 export async function getStaticProps({ params }) {
-  const posts = await getPostsByCategory(params.category)
+  const category = await getCategoryWithPostsBySlug(params.slug)
 
   return {
-    props: {
-      category,
-      posts,
-    },
+    props: category,
   }
 }
 
 export async function getStaticPaths() {
+  const categories = await getAllCategories()
+
   return {
-    paths: [],
-    fallback: true,
+    fallback: false,
+    paths: categories.map(({ slug }) => ({
+      params: {
+        slug,
+      },
+    })),
   }
 }

@@ -1,5 +1,6 @@
 import Breakout from '@/components/breakout'
 import CoinsIcon from '@/components/icons/coins'
+import Figure from '@/components/figure'
 import Layout from '@/components/layout'
 import LinkIcon from '@/components/icons/link'
 import MetaTags from '@/components/meta-tags'

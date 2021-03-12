@@ -1,25 +1,23 @@
 import React from 'react'
-import { graphql } from 'gatsby'
 
 import Breakout from '@/components/breakout'
 import CourseTeasers from '@/components/course-teasers'
 import Layout from '@/components/layout'
 import MetaTags from '@/components/meta-tags'
 import RichPreview from '@/components/rich-preview'
+import { getAllCourses } from '@/lib/api/courses'
 
 export default function Courses({
-  data,
+  courses,
 }) {
-  const courses = data.allCourse.edges.map(({ node }) => node)
+  const breadcrumbs = [
+    {
+      label: 'Courses'
+    }
+  ]
 
   return (
-    <Layout
-      breadcrumbs={[
-        {
-          label: 'Courses'
-        }
-      ]}
-    >
+    <Layout breadcrumbs={breadcrumbs}>
       <MetaTags title="Courses" />
 
       <RichPreview
@@ -48,29 +46,12 @@ export default function Courses({
   )
 }
 
-export const pageQuery = graphql`
-  query {
-    allCourse(
-      sort: {
-        fields: slug,
-        order: ASC
-      }
-    ) {
-      edges {
-        node {
-          frontmatter {
-            emails
-            excerpt
-            highlightColor
-            hours
-            title
-            videos
-            weeks
-          }
-          id
-          permalink
-        }
-      }
-    }
+export async function getStaticProps() {
+  const courses = await getAllCourses()
+
+  return {
+    props: {
+      courses,
+    },
   }
-`
+}

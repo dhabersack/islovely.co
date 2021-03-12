@@ -6,25 +6,20 @@ import MetaTags from '@/components/meta-tags'
 import RichPreview from '@/components/rich-preview'
 import Tag from '@/components/tag'
 import { getAllFiretips } from '@/lib/api/firetips'
+import { getAllTagsWithFiretips } from '@/lib/api/firetip-tags'
 
 export default function Firetips({
   firetips,
+  tags,
 }) {
-  const tagCounts = firetips.map(firetip => firetip.tags).flat(1).reduce((dictionary, tag) => ({
-    ...dictionary,
-    [tag]: (dictionary[tag] || 0) + 1
-  }), {})
-
-  const tagsSortedByCount = Object.keys(tagCounts).sort((a, b) => tagCounts[b] - tagCounts[a])
+  const breadcrumbs = [
+    {
+      label: 'Fire tips',
+    },
+  ]
 
   return (
-    <Layout
-      breadcrumbs={[
-        {
-          label: 'Fire tips'
-        }
-      ]}
-    >
+    <Layout breadcrumbs={breadcrumbs}>
       <MetaTags
         description="Snack-sized snippets that help you write better HTML, CSS, and JavaScript."
         title="Fire tips"
@@ -42,15 +37,12 @@ export default function Firetips({
       </h1>
 
       <div className="flex flex-wrap mb-6">
-        {tagsSortedByCount.map(({
-          permalink,
-          title,
-        }) => (
-          <React.Fragment key={`tag-${tag}`}>
+        {tags.map(tag => (
+          <React.Fragment key={`tag-${tag.slug}`}>
             <div className="flex items-center mb-1.5 mr-2.5">
-              <Tag href={permalink}>
-                {title}
-              </Tag>&nbsp;<span className="text-gray-500 text-xs dark:text-gray-400">&times; {tagCounts[tag]}</span>
+              <Tag href={tag.permalink}>
+                {tag.title}
+              </Tag>&nbsp;<span className="text-gray-500 text-xs dark:text-gray-400">&times; {tag.firetips.length}</span>
             </div>
           </React.Fragment>
         ))}
@@ -69,10 +61,12 @@ export default function Firetips({
 
 export async function getStaticProps() {
   const firetips = await getAllFiretips()
+  const tags = await getAllTagsWithFiretips()
 
   return {
     props: {
       firetips,
+      tags,
     },
   }
 }

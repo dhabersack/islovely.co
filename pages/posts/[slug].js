@@ -26,10 +26,10 @@ export default function Post({
   const breadcrumbs = [
     {
       label: 'Blog',
-      url: '/posts'
+      url: '/posts',
     }, {
-      label: title
-    }
+      label: title,
+    },
   ]
 
   return (

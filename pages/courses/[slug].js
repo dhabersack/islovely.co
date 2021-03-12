@@ -1,6 +1,4 @@
 import React from 'react'
-import { graphql } from 'gatsby'
-import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 import Breakout from '@/components/breakout'
 import CalendarIcon from '@/components/icons/calendar'
@@ -12,29 +10,24 @@ import MetaTags from '@/components/meta-tags'
 import RichPreview from '@/components/rich-preview'
 import Video from '@/components/video'
 import VideoIcon from '@/components/icons/video'
+import { getAllCourses, getCourseBySlug } from '@/lib/api/courses'
+import hydrateMDXSource from '@/lib/hydrate-mdx-source'
 
 export default function Course({
-  data,
-  location,
+  cta,
+  emails,
+  excerpt,
+  hours,
+  mdxSource,
+  permalink,
+  playlist,
+  svForm,
+  title,
+  uid,
+  videos,
+  weeks,
 }) {
-  const {
-    body,
-    frontmatter,
-    permalink,
-  } = data.course
-
-  const {
-    cta,
-    emails,
-    excerpt,
-    hours,
-    title,
-    svForm,
-    playlist,
-    uid,
-    videos,
-    weeks,
-  } = frontmatter
+  const body = hydrateMDXSource(mdxSource)
 
   const meta = {
     emails: {
@@ -57,17 +50,17 @@ export default function Course({
 
   const isSignupPossible = svForm !== null && uid !== null
 
+  const breadcrumbs = [
+    {
+      label: 'Courses',
+      url: '/courses',
+    }, {
+      label: title,
+    },
+  ]
+
   return (
-    <Layout
-      breadcrumbs={[
-        {
-          label: 'Courses',
-          url: '/courses'
-        }, {
-          label: title
-        }
-      ]}
-    >
+    <Layout breadcrumbs={breadcrumbs}>
       <MetaTags
         description={excerpt}
         title={title}
@@ -103,14 +96,12 @@ export default function Course({
           ))}
         </aside>
 
-        <MDXRenderer>
-          {body}
-        </MDXRenderer>
+        {body}
 
         {isSignupPossible && (
           <ConvertkitForm
             cta={cta}
-            sourceUrl={location.href}
+            sourceUrl={permalink}
             svForm={svForm}
             uid={uid}
           />
@@ -159,31 +150,23 @@ export default function Course({
   )
 }
 
-export const pageQuery = graphql`
-  query($slug: String!) {
-    course(
-      slug: {
-        eq: $slug
-      }
-    ) {
-      body
-      frontmatter {
-        cta
-        emails
-        excerpt
-        hours
-        playlist {
-          duration
-          title
-          vimeoId
-        }
-        svForm
-        title
-        uid
-        videos
-        weeks
-      }
-      permalink
-    }
+export async function getStaticProps({ params }) {
+  const course = await getCourseBySlug(params.slug)
+
+  return {
+    props: course,
   }
-`
+}
+
+export async function getStaticPaths() {
+  const courses = await getAllCourses()
+
+  return {
+    fallback: false,
+    paths: courses.map(({ slug }) => ({
+      params: {
+        slug,
+      },
+    })),
+  }
+}

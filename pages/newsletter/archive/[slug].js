@@ -26,13 +26,13 @@ export default function Newsletter({
   const breadcrumbs = [
     {
       label: 'Newsletter',
-      url: '/newsletter'
+      url: '/newsletter',
     }, {
       label: 'Archive',
-      url: '/newsletter/archive'
+      url: '/newsletter/archive',
     }, {
-      label: title
-    }
+      label: title,
+    },
   ]
 
   const hasRelatedIssues = related?.length > 0

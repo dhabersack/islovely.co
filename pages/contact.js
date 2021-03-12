@@ -1,5 +1,3 @@
-import React from 'react'
-
 import ContactForm from '@/components/contact-form'
 import Layout from '@/components/layout'
 import MetaTags from '@/components/meta-tags'

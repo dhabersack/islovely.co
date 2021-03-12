@@ -3,35 +3,36 @@ import Layout from '@/components/layout'
 import MetaTags from '@/components/meta-tags'
 import RichPreview from '@/components/rich-preview'
 import slugify from '@/lib/slugify'
-import { getAllFiretips, getFiretipsByTag } from '@/lib/api/firetips'
+import { getAllTags, getTagWithFiretipsBySlug } from '@/lib/api/firetip-tags'
 
 export default function Tag({
   firetips,
-  tag,
+  permalink,
+  title,
 }) {
   const breadcrumbs = [
     {
       label: 'Fire tips',
-      url: '/firetips'
+      url: '/firetips',
     }, {
       label: 'By tag',
-      url: '/firetips/tags'
+      url: '/firetips/tags',
     }, {
-      label: tag
+      label: title,
     }
   ]
 
   return (
     <Layout breadcrumbs={breadcrumbs}>
-      <MetaTags title={`Fire tips tagged “${tag}”`} />
+      <MetaTags title={`Fire tips tagged “${title}”`} />
 
       <RichPreview
-        permalink={`/firetips/tags/${slugify(tag)}`}
-        title={`Fire tips tagged “${tag}”`}
+        permalink={permalink}
+        title={`Fire tips tagged “${title}”`}
       />
 
       <h1>
-        Fire tips tagged “{tag}”
+        Fire tips tagged “{title}”
       </h1>
 
       <div className="grid gap-6">
@@ -47,27 +48,22 @@ export default function Tag({
 }
 
 export async function getStaticProps({ params }) {
-  const firetips = await getFiretipsByTag(params.slug)
+  const tag = await getTagWithFiretipsBySlug(params.slug)
 
   return {
-    props: {
-      firetips,
-      tag: params.slug,
-    },
+    props: tag,
   }
 }
 
 export async function getStaticPaths() {
-  const firetips = await getAllFiretips()
-
-  const tags = [...new Set(firetips.map(firetip => firetip.tags).flat(1))]
+  const tags = await getAllTags()
 
   return {
+    fallback: false,
     paths: tags.map(({ slug }) => ({
       params: {
         slug,
       },
     })),
-    fallback: true,
   }
 }

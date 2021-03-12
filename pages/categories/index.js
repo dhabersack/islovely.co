@@ -5,23 +5,11 @@ import Layout from '@/components/layout'
 import MetaTags from '@/components/meta-tags'
 import PostTeasers from '@/components/post-teasers'
 import RichPreview from '@/components/rich-preview'
-import { getPostsGroupedByCategory } from '@/lib/api/posts'
+import { getAllCategoriesWithPosts } from '@/lib/api/post-categories'
 
 export default function Categories({
-  postsGroupedByCategory,
-  // posts,
+  categories,
 }) {
-  // const categories = [
-  //   ...new Set(posts.map(({ frontmatter }) => frontmatter.categories).flat())
-  // ].sort((a, b) => a.toLowerCase() > b.toLowerCase())
-  //
-  // const postsByCategory = categories.reduce((object, category) => ({
-  //   ...object,
-  //   [category]: posts.filter(({ frontmatter }) => frontmatter.categories.includes(category))
-  // }), {})
-
-  console.log({ postsGroupedByCategory })
-
   const breadcrumbs = [
     {
       label: 'Categories'
@@ -41,26 +29,27 @@ export default function Categories({
         Categories
       </h1>
 
-      {Object.entries(postsGroupedByCategory).map(([ categoryTitle, posts ]) => (
-        <React.Fragment key={`category-${categoryTitle}`}>
+      {categories.map(category => (
+        <React.Fragment key={`category-${category.slug}`}>
           <h2>
-            {categoryTitle} &times; {posts.length}
+            {category.title} &times; {category.posts.length}
           </h2>
 
           <Breakout>
-            <PostTeasers posts={posts} />
+            <PostTeasers posts={category.posts} />
           </Breakout>
         </React.Fragment>
       ))}
     </Layout>
   )
 }
+
 export async function getStaticProps() {
-  const postsGroupedByCategory = await getPostsGroupedByCategory()
+  const categories = await getAllCategoriesWithPosts()
 
   return {
     props: {
-      postsGroupedByCategory,
+      categories,
     },
   }
 }

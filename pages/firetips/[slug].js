@@ -1,5 +1,3 @@
-import React from 'react'
-
 import Layout from '@/components/layout'
 import MetaTags from '@/components/meta-tags'
 import RichPreview from '@/components/rich-preview'
@@ -15,17 +13,17 @@ export default function Firetip({
 }) {
   const body = hydrateMDXSource(mdxSource)
 
+  const breadcrumbs = [
+    {
+      label: 'Fire tips',
+      url: '/firetips',
+    }, {
+      label: title,
+    },
+  ]
+
   return (
-    <Layout
-      breadcrumbs={[
-        {
-          label: 'Fire tips',
-          url: '/firetips'
-        }, {
-          label: title
-        }
-      ]}
-    >
+    <Layout breadcrumbs={breadcrumbs}>
       <MetaTags title={title} />
 
       <RichPreview
@@ -41,17 +39,15 @@ export default function Firetip({
       {body}
 
       <div className="flex flex-wrap">
-        {tags.map(({
-          permalink,
-          title,
-        }) => (
-          <React.Fragment key={`tag-${title}`}>
-            <div className="mb-3 mr-2.5">
-              <Tag href={permalink}>
-                {title}
-              </Tag>
-            </div>
-          </React.Fragment>
+        {tags.map(tag => (
+          <div
+            className="mb-3 mr-2.5"
+            key={`tag-${tag.slug}`}
+          >
+            <Tag href={tag.permalink}>
+              {tag.title}
+            </Tag>
+          </div>
         ))}
       </div>
     </Layout>

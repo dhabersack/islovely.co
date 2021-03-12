@@ -1,5 +1,3 @@
-import React from 'react'
-
 import Card from '@/components/card'
 import CalendarIcon from '@/components/icons/calendar'
 import ClockIcon from '@/components/icons/clock'
@@ -10,19 +8,15 @@ export default function CourseTeaser({
   course,
 }) {
   const {
-    frontmatter,
-    permalink,
-  } = course
-
-  const {
     emails,
     excerpt,
     highlightColor,
     hours,
+    permalink,
     title,
     videos,
     weeks,
-  } = frontmatter
+  } = course
 
   const meta = {
     emails: {
