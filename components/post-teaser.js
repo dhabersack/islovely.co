@@ -44,14 +44,11 @@ export default function PostTeaser({
           </p>
 
           <div className="flex flex-wrap mb-1.5">
-            {categories.map(({
-              permalink,
-              title,
-            }) => (
-              <React.Fragment key={`category-${title}`}>
+            {categories.map(category => (
+              <React.Fragment key={`category-${category.slug}`}>
                 <div className="mb-1 mr-1.5">
-                  <Tag href={permalink}>
-                    {title}
+                  <Tag href={category.permalink}>
+                    {category.title}
                   </Tag>
                 </div>
               </React.Fragment>

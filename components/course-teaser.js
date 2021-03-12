@@ -1,8 +1,10 @@
+import React from 'react'
+
 import Card from '@/components/card'
-import CalendarIcon from '@/components/icons/calendar'
-import ClockIcon from '@/components/icons/clock'
-import EmailWithLetterIcon from '@/components/icons/email-with-letter'
-import VideoIcon from '@/components/icons/video'
+import CalendarIcon from '@/icons/calendar'
+import ClockIcon from '@/icons/clock'
+import EmailWithLetterIcon from '@/icons/email-with-letter'
+import VideoIcon from '@/icons/video'
 
 export default function CourseTeaser({
   course,
@@ -66,18 +68,17 @@ export default function CourseTeaser({
             Icon,
             value,
           }]) => value && (
-            <div
-              className="flex items-center space-x-1"
-              key={`meta-${type}`}
-            >
-              <div className="h-6 w-6 dark:text-gray-400">
-                <Icon />
-              </div>
+            <React.Fragment key={`meta-${type}`}>
+              <div className="flex items-center space-x-1">
+                <div className="h-6 w-6 dark:text-gray-400">
+                  <Icon />
+                </div>
 
-              <span>
-                <strong>{value}</strong> {type}
-              </span>
-            </div>
+                <span>
+                  <strong>{value}</strong> {type}
+                </span>
+              </div>
+            </React.Fragment>
           ))}
         </footer>
       </article>

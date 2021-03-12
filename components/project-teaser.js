@@ -2,8 +2,8 @@ import React from 'react'
 import Image from 'next/image'
 
 import Card from '@/components/card'
-import CoinsIcon from '@/components/icons/coins'
-import LinkIcon from '@/components/icons/link'
+import CoinsIcon from '@/icons/coins'
+import LinkIcon from '@/icons/link'
 import Stack from '@/components/stack'
 
 export default function ProjectTeaser({

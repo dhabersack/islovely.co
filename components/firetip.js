@@ -29,14 +29,11 @@ export default function Firetip({
         {body}
 
         <div className="flex flex-wrap">
-          {tags.map(({
-            permalink,
-            title,
-          }) => (
-            <React.Fragment key={`tag-${title}`}>
+          {tags.map(tag => (
+            <React.Fragment key={`tag-${tag.slug}`}>
               <div className="mb-1 mr-2.5">
-                <Tag href={permalink}>
-                  {title}
+                <Tag href={tag.permalink}>
+                  {tag.title}
                 </Tag>
               </div>
             </React.Fragment>

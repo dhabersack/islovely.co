@@ -1,3 +1,5 @@
+import React from 'react'
+
 import Layout from '@/components/layout'
 import MetaTags from '@/components/meta-tags'
 import RichPreview from '@/components/rich-preview'
@@ -40,14 +42,13 @@ export default function Firetip({
 
       <div className="flex flex-wrap">
         {tags.map(tag => (
-          <div
-            className="mb-3 mr-2.5"
-            key={`tag-${tag.slug}`}
-          >
-            <Tag href={tag.permalink}>
-              {tag.title}
-            </Tag>
-          </div>
+          <React.Fragment key={`tag-${tag.slug}`}>
+            <div className="mb-3 mr-2.5">
+              <Tag href={tag.permalink}>
+                {tag.title}
+              </Tag>
+            </div>
+          </React.Fragment>
         ))}
       </div>
     </Layout>
@@ -66,7 +67,11 @@ export async function getStaticPaths() {
   const firetips = await getAllFiretips()
 
   return {
-    paths: firetips.map(({ permalink }) => permalink),
-    fallback: true,
+    fallback: false,
+    paths: firetips.map(({ slug }) => ({
+      params: {
+        slug,
+      },
+    })),
   }
 }

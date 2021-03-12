@@ -1,15 +1,15 @@
 import React from 'react'
 
 import Breakout from '@/components/breakout'
-import CalendarIcon from '@/components/icons/calendar'
-import ClockIcon from '@/components/icons/clock'
+import CalendarIcon from '@/icons/calendar'
+import ClockIcon from '@/icons/clock'
 import ConvertkitForm from '@/components/convertkit-form'
-import EmailWithLetterIcon from '@/components/icons/email-with-letter'
+import EmailWithLetterIcon from '@/icons/email-with-letter'
 import Layout from '@/components/layout'
 import MetaTags from '@/components/meta-tags'
 import RichPreview from '@/components/rich-preview'
 import Video from '@/components/video'
-import VideoIcon from '@/components/icons/video'
+import VideoIcon from '@/icons/video'
 import { getAllCourses, getCourseBySlug } from '@/lib/api/courses'
 import hydrateMDXSource from '@/lib/hydrate-mdx-source'
 
@@ -117,31 +117,33 @@ export default function Course({
               vimeoId,
               youtubeId,
             }, index) => (
-              <div key={`video-${title}`}>
-                <div className="mb-1">
-                  <Video
-                    title={title}
-                    vimeoId={vimeoId}
-                    youtubeId={youtubeId}
-                  />
+              <React.Fragment key={`video-${title}`}>
+                <div>
+                  <div className="mb-1">
+                    <Video
+                      title={title}
+                      vimeoId={vimeoId}
+                      youtubeId={youtubeId}
+                    />
+                  </div>
+
+                  <h4 className="font-normal leading-snug text-sm">
+                    <span className="text-gray-500 dark:text-gray-400">
+                      #{index + 1}
+                    </span>
+
+                    {' '}
+
+                    {title}
+
+                    {' '}
+
+                    <span className="text-gray-500 dark:text-gray-400">
+                      ({duration})
+                    </span>
+                  </h4>
                 </div>
-
-                <h4 className="font-normal leading-snug text-sm">
-                  <span className="text-gray-500 dark:text-gray-400">
-                    #{index + 1}
-                  </span>
-
-                  {' '}
-
-                  {title}
-
-                  {' '}
-
-                  <span className="text-gray-500 dark:text-gray-400">
-                    ({duration})
-                  </span>
-                </h4>
-              </div>
+              </React.Fragment>
             ))}
           </div>
         </Breakout>

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import CookieIcon from '@/components/icons/cookie'
+import CookieIcon from '@/icons/cookie'
 
 export default function UpdateCookieSettingsTrigger() {
   return (

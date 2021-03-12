@@ -61,7 +61,7 @@ export default function RichPreview({
 
       <meta
         content={siteTitle}
-g       property="og:site_name"
+        property="og:site_name"
       />
 
       <meta
@@ -98,11 +98,12 @@ g       property="og:site_name"
       )}
 
       {isArticle && tags?.map(tag => (
-        <meta
-          content={tag}
-          key={`tag-${tag}`}
-          property="article:tag"
-        />
+        <React.Fragment key={`tag-${tag.slug}`}>
+          <meta
+            content={tag.title}
+            property="article:tag"
+          />
+        </React.Fragment>
       ))}
 
       <meta

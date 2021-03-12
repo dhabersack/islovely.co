@@ -1,3 +1,5 @@
+import React from 'react'
+
 import Breakout from '@/components/breakout'
 import Figure from '@/components/figure'
 import Layout from '@/components/layout'
@@ -76,18 +78,14 @@ export default function Post({
       </div>
 
       <div className="flex flex-wrap">
-        {categories.map(({
-          permalink,
-          title,
-        }) => (
-          <div
-            className="mb-1 mr-1.5"
-            key={`category-${title}`}
-          >
-            <Tag href={permalink}>
-              {title}
-            </Tag>
-          </div>
+        {categories.map(category => (
+          <React.Fragment key={`category-${category.slug}`}>
+            <div className="mb-1 mr-1.5">
+              <Tag href={category.permalink}>
+                {category.title}
+              </Tag>
+            </div>
+          </React.Fragment>
         ))}
       </div>
     </Layout>

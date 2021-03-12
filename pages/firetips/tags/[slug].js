@@ -1,8 +1,9 @@
+import React from 'react'
+
 import Firetip from '@/components/firetip'
 import Layout from '@/components/layout'
 import MetaTags from '@/components/meta-tags'
 import RichPreview from '@/components/rich-preview'
-import slugify from '@/lib/slugify'
 import { getAllTags, getTagWithFiretipsBySlug } from '@/lib/api/firetip-tags'
 
 export default function Tag({
@@ -37,10 +38,9 @@ export default function Tag({
 
       <div className="grid gap-6">
         {firetips.map(firetip => (
-          <Firetip
-            firetip={firetip}
-            key={`firetip-${firetip.slug}`}
-          />
+          <React.Fragment key={`firetip-${firetip.slug}`}>
+            <Firetip firetip={firetip} />
+          </React.Fragment>
         ))}
       </div>
     </Layout>

@@ -31,7 +31,7 @@ export default function Tags({
         Fire tips by tag
       </h1>
 
-      {allTags.map(tag => (
+      {tags.map(tag => (
         <React.Fragment key={`tag-${tag.slug}`}>
           <h2>
             <a href={tag.permalink}>
@@ -41,10 +41,9 @@ export default function Tags({
 
           <div className="grid gap-6">
             {tag.firetips.map(firetip => (
-              <Firetip
-                firetip={firetip}
-                key={`firetip-${firetip.slug}`}
-              />
+              <React.Fragment key={`firetip-${firetip.slug}`}>
+                <Firetip firetip={firetip} />
+              </React.Fragment>
             ))}
           </div>
         </React.Fragment>

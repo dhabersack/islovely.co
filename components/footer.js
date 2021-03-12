@@ -1,17 +1,16 @@
-import React from 'react'
-
-import CodePen from '@/components/icons/codepen-logo'
-import Dribbble from '@/components/icons/dribbble-logo'
-import Email from '@/components/icons/email'
-import GitHub from '@/components/icons/github-logo'
-import LinkedIn from '@/components/icons/linkedin-logo'
-import Mastodon from '@/components/icons/mastodon-logo'
+import CodePen from '@/icons/codepen-logo'
+import Dribbble from '@/icons/dribbble-logo'
+import Email from '@/icons/email'
+import GitHub from '@/icons/github-logo'
+import LinkedIn from '@/icons/linkedin-logo'
+import Mastodon from '@/icons/mastodon-logo'
 import NewsletterSignup from '@/components/newsletter-signup'
-import Twitch from '@/components/icons/twitch-logo'
-import Twitter from '@/components/icons/twitter-logo'
+import Twitch from '@/icons/twitch-logo'
+import Twitter from '@/icons/twitter-logo'
 import UpdateCookieSettingsTrigger from '@/components/update-cookie-settings-trigger'
 import UppercaseHeading from '@/components/uppercase-heading'
-import YouTube from '@/components/icons/youtube-logo'
+import YouTube from '@/icons/youtube-logo'
+import React from 'react'
 
 const SOCIAL_PROFILES = {
   '@domhabersack on Twitter': {
@@ -52,9 +51,7 @@ const SOCIAL_PROFILES = {
   }
 }
 
-export default function Footer({
-  location,
-}) {
+export default function Footer() {
   return (
     <footer className="divide-y text-gray-500 dark:divide-gray-700 dark:text-gray-400">
       <div className="py-8 space-y-10 sm:flex sm:flex-row sm:justify-between sm:space-y-0">
